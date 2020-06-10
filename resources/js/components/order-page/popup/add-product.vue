@@ -10,6 +10,8 @@
                 <h4>Description</h4>
                 <p>{{list.description}}</p>
 
+                <h4>Allergy Information</h4>
+                <p>lorem ipsume lorem ipsume lorem ipsume lorem ipsume lorem ipsume lorem ipsume lorem ipsume lorem ipsume lorem ipsume lorem ipsume lorem ipsume lorem ipsume lorem ipsume lorem ipsume lorem ipsume lorem ipsume lorem ipsume lorem ipsume lorem ipsume lorem ipsume lorem ipsume lorem ipsume </p>
 
 
                 <form action="" method="">

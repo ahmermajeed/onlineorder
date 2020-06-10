@@ -4,146 +4,158 @@
         <div class="loading" v-if="loading">Loading&#8230;</div>
         <div class="container-fluid">
             <div class="row full">
-                <div class="col-sm-12 full business col-lg-9 col-md-8 col-sm-8">
+                <div class="col-sm-12 business checkoutpage col-lg-9 col-md-8 col-sm-8">
+                    <div class="row">
+                        <div class="col-sm-12 offset-sm-0 col-md-10 offset-md-1">
+                            <div class="row  mt-4 box-shad p-3 mb-5 rounded">
+                                <div class="col-12">
+                                    <h2>Order</h2>
+                                </div>
+                                <div class="col-sm-6">
+                                    <label class="customradiobutton radioiconed radio-inline mr-3">
+                                        <input type="radio" value="pickup" @change.prevent="showOrderType(false)"  v-model="form.order_type"><i class="fa fa-sign-language"></i> Pick up
 
-                    <div class="col-sm-10 offset-1  mt-4  box-shad p-3 mb-5  rounded" >
-                        <ul id="error">
-                            <li  v-for="(errorMessage) in errorMessage" style="color: red;">{{errorMessage}}</li>
-                        </ul>
-                        <h2> Delivery Details</h2>
-                        <div class="container"  >
-                            <div class="row">
-                                <div class="col-sm-1">
-                                    <label  class="col-form-label"> Address </label>
+                                    </label>
                                 </div>
-                                <div class="col-sm-5">
-                                    <input type="text"  name="address" required   v-model="form.address" class="form-control" placeholder="Address">
+                                <div class="col-sm-6">
+                                    <label class="customradiobutton radioiconed radio-inline mr-3">
+                                        <input type="radio" value="delivery" v-model="form.order_type" @change.prevent="showOrderType(true)" ><i class="fa fa-truck"></i> Delivery
+
+                                    </label>
                                 </div>
 
-                                <div class="col-sm-1">
-                                    <label  class="col-form-label">Street *</label>
-                                </div>
-                                <div class="col-sm-5">
-                                    <input type="text"  v-model="form.street" class="form-control" placeholder="street">
+                                <div class="col-12">
+                                    <div class="row" v-show="order_card">
+                                        <div class="col-sm-6">
+                                            <label>Date</label>
+                                            <b-form-datepicker id="example-datepicker" v-model="value" class="mb-2"></b-form-datepicker>
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <label>Time</label>
+                                            <b-form-timepicker v-model="value" locale="en"></b-form-timepicker>
+                                        </div>
+                                    </div>
+
+                                    <div class="row" v-show="order_card">
+                                        <div class="col-12">
+                                            <ul id="error">
+                                                <li  v-for="(errorMessage) in errorMessage" style="color: red;">{{errorMessage}}</li>
+                                            </ul>
+                                            <h2> Delivery Details</h2>
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <label>Address </label>
+                                            <input type="text"  name="address" required   v-model="form.address" class="form-control" placeholder="Address">
+                                        </div>
+
+                                        <div class="col-sm-6">
+                                            <label>Street *</label>
+                                            <input type="text"  v-model="form.street" class="form-control" placeholder="street">
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <label  class="col-form-label">Town *</label>
+                                            <input type="text"  v-model="form.town" class="form-control" placeholder="abc town">
+                                        </div>
+
+                                        <div class="col-sm-6">
+                                            <label  class="col-form-label">Postal Code *</label>
+                                            <input type="text"   v-model="form.postal_code" class="form-control" placeholder="wc2h 9ah">
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
-                            <div class="row mt-4" >
-                                <div class="col-sm-1">
-                                    <label  class="col-form-label">Town *</label>
-                                </div>
-                                <div class="col-sm-5">
-                                    <input type="text"  v-model="form.town" class="form-control" placeholder="abc town">
-                                </div>
 
-                                <div class="col-sm-2">
-                                    <label  class="col-form-label">Postal Code *</label>
-                                </div>
-                                <div class="col-sm-4">
-                                    <input type="text"   v-model="form.postal_code" class="form-control" placeholder="wc2h 9ah">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
 
-                    <div class="col-sm-10 offset-1  mt-4  box-shad p-3 mb-5  rounded" >
-                        <h2> Personal Details</h2>
-                        <div class="container">
-                            <div class="row">
-                                <div class="col-sm-1">
+
+
+                            <div class="row  mt-4  box-shad p-3 mb-5  rounded">
+                                <div class="col-12">
+                                    <h2> Personal Details</h2>
+                                </div>
+                                <div class="col-sm-6">
                                     <label  class="col-form-label">Email</label>
-                                </div>
-                                <div class="col-sm-5">
                                     <input type="text" class="form-control"  v-model="form.email" placeholder="abc@example.com">
                                 </div>
 
-                                <div class="col-sm-1">
+                                <div class="col-sm-6">
                                     <label  class="col-form-label">Number</label>
-                                </div>
-                                <div class="col-sm-5">
                                     <input type="text" class="form-control"  v-model="form.number" placeholder="">
                                 </div>
-                            </div>
-                            <div class="row mt-4" >
-                                <div class="col-sm-1">
+
+                                <div class="col-sm-6">
                                     <label  class="col-form-label">Name</label>
-                                </div>
-                                <div class="col-sm-5">
                                     <input type="text" class="form-control" placeholder="" v-model="form.name">
                                 </div>
-
                             </div>
-                        </div>
-                    </div>
 
-                    <div class="col-sm-10 offset-1  mt-4  box-shad p-3 mb-5  rounded">
-                        <h2> Payment</h2>
-                        <div class="container">
-                            <div class="row">
-                                <div class="col-sm-7">
-                                    <label class="col-form-label mr-3">Payment Type</label>
-                                    <label class="radio-inline mr-3">
-                                        <input type="radio" value="COD"  @change.prevent="showCard(false)"  v-model="form.payment_type" >Cash on Delivery
-                                    </label>
-                                    <label class="radio-inline mr-3">
-                                        <input type="radio" value="Credit/Debit Card" v-model="form.payment_type" @change.prevent="showCard(true)" >Credit/Debit Card
-                                    </label>
-
+                            <div class="row mt-4  box-shad p-3 mb-5  rounded">
+                                <div class="col-12">
+                                    <h2>Payment</h2>
                                 </div>
-                            </div>
+                                <div class="col-sm-6">
+                                    <label class="customradiobutton radioiconed radio-inline mr-3">
+                                        <input type="radio" value="COD"  @change.prevent="showCard(false)"  v-model="form.payment_type" ><i class="fa fa-money"></i> Cash on Delivery
+                                    </label>
+                                </div>
+                                <div class="col-sm-6">
+                                    <label class="customradiobutton radioiconed radio-inline mr-3">
+                                        <input type="radio" value="Credit/Debit Card" v-model="form.payment_type" @change.prevent="showCard(true)" ><i class="fa fa-credit-card-alt"></i> Credit/Debit Card
+                                    </label>
+                                </div>
 
-                            <div class="row" v-show="card">
-                                <div class="col-sm-7">
-                                    <form role="form">
-                                        <div class="form-group">
-                                            <label>Full name (on the card)</label>
-                                            <input type="text" class="form-control" name="username" placeholder="" required="" v-model="form.card_holder_name">
-                                        </div> <!-- form-group.// -->
-
-                                        <div class="form-group">
-                                            <label>Card number</label>
-                                            <div class="input-group">
-                                                <input type="text" class="form-control" name="cardNumber" placeholder="" v-model="form.card_number">
-                                                <div class="input-group-append">
-                                            <span class="input-group-text text-muted">
-
-                                            </span>
-                                                </div>
-                                            </div>
-                                        </div> <!-- form-group.// -->
-
-                                        <div class="row">
-                                            <div class="col-sm-8">
+                                <div class="col-12">
+                                    <div class="row" v-show="card">
+                                        <div class="col-sm-7">
+                                            <form role="form">
                                                 <div class="form-group">
-                                                    <label><span class="hidden-xs">Expiration</span> </label>
-                                                    <div class="input-group">
-                                                        <input type="number" class="form-control"    min="0"  placeholder="MM" name="" v-model="form.expiration_month">
-                                                        <input type="number" class="form-control"   min="0"  placeholder="YY" name="" v-model="form.expiration_year">
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="col-sm-4">
-                                                <div class="form-group">
-                                                    <label data-toggle="tooltip" title="" data-original-title="3 digits code on back side of the card">CVV <i class="fa fa-question-circle"></i></label>
-                                                    <input type="number"  min="0" class="form-control" required="" v-model="form.cvc">
+                                                    <label>Full name (on the card)</label>
+                                                    <input type="text" class="form-control" name="username" placeholder="" required="" v-model="form.card_holder_name">
                                                 </div> <!-- form-group.// -->
-                                            </div>
-                                        </div> <!-- row.// -->
 
-                                    </form>
+                                                <div class="form-group">
+                                                    <label>Card number</label>
+                                                    <div class="input-group">
+                                                        <input type="text" class="form-control" name="cardNumber" placeholder="" v-model="form.card_number">
+                                                        <div class="input-group-append">
+                                                    <span class="input-group-text text-muted">
+
+                                                    </span>
+                                                        </div>
+                                                    </div>
+                                                </div> <!-- form-group.// -->
+
+                                                <div class="row">
+                                                    <div class="col-sm-8">
+                                                        <div class="form-group">
+                                                            <label><span class="hidden-xs">Expiration</span> </label>
+                                                            <div class="input-group">
+                                                                <input type="number" class="form-control"    min="0"  placeholder="MM" name="" v-model="form.expiration_month">
+                                                                <input type="number" class="form-control"   min="0"  placeholder="YY" name="" v-model="form.expiration_year">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-sm-4">
+                                                        <div class="form-group">
+                                                            <label data-toggle="tooltip" title="" data-original-title="3 digits code on back side of the card">CVV <i class="fa fa-question-circle"></i></label>
+                                                            <input type="number"  min="0" class="form-control" required="" v-model="form.cvc">
+                                                        </div> <!-- form-group.// -->
+                                                    </div>
+                                                </div> <!-- row.// -->
+                                            </form>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-sm-4">
+                                            <button class="subscribe btn btn-primary btn-block" type="button" @click="placeOrder()"> Confirm  </button>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
-
-
-
-                            <div class="row">   <button class="subscribe btn btn-primary btn-block" type="button" @click="placeOrder()"> Confirm  </button></div>
-
                         </div>
                     </div>
-
-
-
-
                 </div>
+
+
                 <div class="col-xs-12 full cart col-lg-3 col-md-4 col-sm-4"   v-if="getAllCartArray.length > 1"  >
                     <div class="order" id="cart-stiky">
                         <h2>Your Order </h2>
@@ -164,7 +176,7 @@
                                     </td>
 
                                     <td  v-if="!cart.extras">Price:</br>£ {{priceFormat(cart.price * cart.quantity) }}</td>
-                                    <td  v-if="cart.extras">Price:</br>£{{priceFormat(cart.single_product_total_amount)}} </td>
+                                    <td  v-if="cart.extras">Price:</br> £{{priceFormat(cart.single_product_total_amount)}} </td>
 
 
                                 <tr class="fees">
@@ -178,6 +190,8 @@
                         </div>
                     </div>
                 </div>
+
+
             </div>
         </div>
 
@@ -193,6 +207,7 @@
                 cat_count: false,
                 total_amount:0,
                 card : false,
+                order_card : false,
                 form: {
                     address: '',
                     street: '',
@@ -203,6 +218,7 @@
                     number:'',
                     name:'',
                     payment_type:'',
+                    order_type:'',
                     card_holder_name:'',
                     card_number:'',
                     expiration_month:'',
@@ -234,6 +250,9 @@
             showCard(val){
                 this.card = val;
             },
+            showOrderType(val){
+                this.order_card = val;
+            },
             scrollToTop() {
                 let element = document.getElementById("error");
                 element.scrollIntoView({behavior: "smooth", block: "end"});
@@ -254,7 +273,8 @@
                             this.errorMessage = this.errorBag.all();
 
 
-                        }if(this.form.street === "") {
+                        }
+                        if(this.form.street === "") {
                             this.errorBag.add({
                                 msg: 'The Street is Required',
                                 rule: 'required',

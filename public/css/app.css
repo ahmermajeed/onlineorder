@@ -13014,6 +13014,7 @@ font-family: 'Montserrat', sans-serif;
 }
 .header{
     text-align: center;
+    padding-top: 20px;
 }
 .header .online-order{
     position: absolute;
@@ -13191,13 +13192,19 @@ font-family: 'Montserrat', sans-serif;
     background-size: 100%;
     background-repeat: no-repeat;
 }
-h3 {
+h3,
+.aboutus-section h3,
+.menu-section h3,
+.deals-section h3 {
     font-family: 'Bernadette Rough';
     font-size: 50px;
     color: #ffca14;
     margin-bottom: 20px;
 }
-h3:after{
+h3:after,
+.aboutus-section h3:after,
+.menu-section h3:after,
+.deals-section h3:after{
     content: "";
     display: block;
     height: 30px;
@@ -13207,8 +13214,7 @@ h3:after{
     text-align: right;
     background-repeat: no-repeat;
     background-position: center;
-    margin: -20px auto 0;
-    display: none;
+    margin: -18px auto 0;
 }
 .aboutus-section p{
     font-family: 'Montserrat', sans-serif;
@@ -13216,7 +13222,7 @@ h3:after{
     line-height: 30px;
     word-spacing: 1px;
     margin: 12px auto;
-    font-weight:100;
+    font-weight: 300;
 }
 .bottom-section{
     background-image: url(/images/mainbg.webp?c79df1b475000e24d312572ed8d0647a);
@@ -13295,7 +13301,7 @@ h3:after{
 }
 .menu-banner-holder .banner-links a:hover {
     box-shadow: rgba(0, 0, 0, 0.64) 0px 0px 32px;
-    color: #0d1b2a;
+    color: #0d1b2a !important;
     border-radius: 4px;
     background: none;
 }
@@ -13339,12 +13345,12 @@ h3:after{
     color: #333333;
 }
 .deals-slider .per-deal:hover .deal-detail{
-    color: rgb(255, 255, 255);
+    color: #fff !important;
     transform: scale(1.1, 1.1);
     right: -6px;
     bottom: -6px;
     box-shadow: rgba(0, 0, 0, 0.64) 0px 0px 32px;
-    background: #ffca14
+    background: #ffca14;
 }
 
 
@@ -13387,7 +13393,7 @@ h3:after{
 }
 .deals-slider .per-deal .text-holder h5 a,
 .deals-slider .per-deal .text-holder p a{
-    color: #222222;
+    color: #222222 !important;
 }
 .deals-slider .per-deal .text-holder h5 a:hover,
 .deals-slider .per-deal .text-holder p a:hover{
@@ -13697,7 +13703,7 @@ h3:after{
 
 }
 .aboutuspage .about-content .image-holder img{
-    max-width: 100%;
+
 }
 .aboutuspage .about-content h2{
     font-size: 36px;
@@ -13928,6 +13934,88 @@ h3:after{
 }
 .contactus-form textarea.form-control{
     height: auto;
+    border-color: #facc48;
+}
+.checkoutpage { }
+.checkoutpage.business h2 {
+    padding-left: 0;
+}
+.customradiobutton {
+    position: relative;
+    padding-left: 20px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+.customradiobutton.radioiconed {
+    padding-left: 0;
+}
+.customradiobutton input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+}
+.customradiobutton i{
+    font-size: 20px;
+    margin-right: 5px;
+}
+.customradiobutton .checkmark {
+    position: absolute;
+    top: 3px;
+    left: 0px;
+    height: 16px;
+    width: 16px;
+    background-color: #ddd;
+    border-radius: 50%;
+}
+.customradiobutton:hover input ~ .checkmark {
+    background-color: #ccc;
+}
+.customradiobutton input:checked ~ .checkmark {
+    background-color: #ffca14;
+}
+.customradiobutton input:checked ~ i {
+    color: #ffca14;
+}
+.customradiobutton .checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+.customradiobutton input:checked ~ .checkmark:after {
+    display: block;
+}
+.customradiobutton .checkmark:after {
+    top: 4px;
+    left: 4px;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: white;
+}
+.checkoutpage .b-form-btn-label-control.form-control{
+    display: block;
+    width: 100%;
+    height: calc(1.6em + 0.75rem + 2px);
+    padding: 0.075rem 0.75rem;
+    font-size: 0.9rem;
+    font-weight: 400;
+    line-height: 1.6;
+    color: #495057;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #facc48;
+    border-radius: 0.25rem;
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+.checkoutpage label{
+    font-size: 16px;
+}
+.checkoutpage .form-control{
     border-color: #facc48;
 }
 @media only screen and (max-width: 1480px) {
