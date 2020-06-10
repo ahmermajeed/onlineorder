@@ -14,7 +14,9 @@
                                             <h2>We Know</h2>
                                             <h3>How to Make Your<br> Life Awesome<span class="pulse"></span></h3>
 
-                                            <a href="#" class="anima-btn move-eff"><span>Order Now</span></a>
+                                            <router-link :to="{ path: 'postal-code'}" class="anima-btn move-eff">
+                                             <span>Order Now</span>
+                                            </router-link>
                                         </div>
                                     </div>
                                 </div>
@@ -35,7 +37,7 @@
                                     cillum doore eu fgiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.<br><br>Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                                     Ut enim anim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum doore eu fgiat nulla pariatur. Excepteur sint occaecat
                                     cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                                <a href="#" class="anima-btn move-eff"><span>Order NOw</span></a>
+                                <router-link :to="{ path: 'postal-code'}" class="anima-btn move-eff"><span>Order NOw</span></router-link>
                             </div>
                         </div>
                     </div>
