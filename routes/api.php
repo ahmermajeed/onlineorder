@@ -49,6 +49,11 @@ Route::resource('products', 'Api\ProductController');
 /** Place Order */
 Route::post('placeOrder', 'Api\OrderController@placeOrder');
 
+Route::post('get-total-sales', 'Api\OrderController@getTotalSales');
+
+/** CMS Pages */
+Route::get('cms/{slug}', 'Api\CmsController@getCMSPage');
+
 /** Get All Orders */
 Route::get('getAllOrders', 'Api\OrderController@getAllOrders');
 

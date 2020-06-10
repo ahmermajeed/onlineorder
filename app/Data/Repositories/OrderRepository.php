@@ -86,4 +86,9 @@ class OrderRepository
         return $placed;
     }
 
+    public function getTotalSales($data) {
+
+        $totalSale = $this->model->where('status', 'delivered')->sum('total_amount_with_fee');
+        return $totalSale;
+    }
 }

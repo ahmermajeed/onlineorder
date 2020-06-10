@@ -109,4 +109,25 @@ class OrderController extends Controller
 
         $response = $push->getFeedback();
     }
+
+    public function getTotalSales(Request $request)
+    {
+        $requestData = $request->all();
+
+        $validator =  Validator::make($requestData, [
+            'start_date' => 'required',
+            'end_date' => 'required'
+        ]);
+
+        if ($validator->fails()) {
+            $code = 401;
+            $output = ['error' => ['code' => $code, 'message' => $validator->errors()->first()]];
+            return response()->json($output, $code);
+        }
+
+        $data = $this->_repository->getTotalSales($requestData);
+
+        $output = ['data' => ['total_sales' => $data], 'message' => "your order has been placed successfully "];
+        return response()->json($output, Response::HTTP_OK);
+    }
 }
