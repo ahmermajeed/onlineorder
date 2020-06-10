@@ -1,0 +1,59 @@
+<?php
+
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Route;
+
+/*
+|--------------------------------------------------------------------------
+| API Routes
+|--------------------------------------------------------------------------
+|
+| Here is where you can register API routes for your application. These
+| routes are loaded by the RouteServiceProvider within a group which
+| is assigned the "api" middleware group. Enjoy building your API!
+|
+*/
+
+Route::middleware('auth:api')->get('/user', function (Request $request) {
+    return $request->user();
+});
+
+Route::group(['prefix' => 'auth'], function () {
+    Route::post('login', 'Auth\LoginController@login');
+});
+
+/** Slider Routes */
+Route::resource('slider', 'Api\SliderController');
+
+/** Gallery Routes */
+Route::resource('gallery', 'Api\GalleryController');
+
+/** Delivery Check Postal Code Routes */
+Route::post('check-postal', 'Api\DeliveryChargesController@checkPostalCode');
+
+/** Categories Routes */
+Route::resource('categories', 'Api\CategoryController');
+
+/** Stories Routes */
+Route::resource('our-story', 'Api\OurStoryController');
+
+/** Restaurant Information */
+Route::get('restaurant_info', 'Api\RestaurantController@getRestaurantInfo');
+
+/** Choices Groups Routes */
+Route::resource('choices-group', 'Api\ChoicesGroupController');
+
+/** Products Routes */
+Route::resource('products', 'Api\ProductController');
+
+/** Place Order */
+Route::post('placeOrder', 'Api\OrderController@placeOrder');
+
+/** Get All Orders */
+Route::get('getAllOrders', 'Api\OrderController@getAllOrders');
+
+/** Update Order Status */
+Route::put('update-order/{id}', 'Api\OrderController@updateOrderStatus');
+
+/** Update General Settings */
+Route::post('update-general-setting', 'Api\GeneralSettingController@updateGeneralSettings');

@@ -1,0 +1,14 @@
+@font-face {
+    font-family: 'Bernadette Rough';
+    src: url('../../fonts/BernadetteRough.eot');
+    src: url('../../fonts/BernadetteRough.eot?#iefix') format('embedded-opentype'),
+        url('../../fonts/BernadetteRough.woff2') format('woff2'),
+        url('../../fonts/BernadetteRough.woff') format('woff'),
+        url('../../fonts/BernadetteRough.ttf') format('truetype'),
+        url('../../fonts/BernadetteRough.svg#BernadetteRough') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+

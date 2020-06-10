@@ -1,0 +1,35 @@
+<?php
+
+namespace App\Data\Models;
+
+use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\Facades\Storage;
+
+class Products extends Model
+{
+    protected $table = 'products';
+
+    protected $hidden = ['pivot'];
+
+    protected $with= ['sizes'];
+
+    protected $fillable = ['name', 'price', 'description', 'image', 'status'];
+
+    public function groups()
+    {
+        return $this->belongsToMany(ChoicesGroup::class,'product_groups','id_product','id_group');
+    }
+
+    public function sizes()
+    {
+        return $this->hasMany(ProductSizes::class,'id_product','id');
+    }
+
+    protected $appends = ['image_url'];
+
+    public function getImageUrlAttribute()
+    {
+        $url = "https://placeimg.com/640/480/any";
+        return $url;
+    }
+}

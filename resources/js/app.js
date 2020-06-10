@@ -1,0 +1,96 @@
+require('./bootstrap');
+window.Vue = require('vue');
+
+import Vue from 'vue'
+import VueRouter from 'vue-router'
+import Vuex from 'vuex';
+import store from './store.js'
+
+Vue.use(VueRouter);
+
+import BootstrapVue from 'bootstrap-vue';
+import { ModalPlugin } from 'bootstrap-vue'
+
+
+import VeeValidate from 'vee-validate';
+const config = {
+    errorBagName: 'errorBag',
+    events: 'input'
+};
+Vue.use(VeeValidate, config);
+
+Vue.use(ModalPlugin);
+Vue.use(BootstrapVue);
+
+Vue.use(Vuex);
+require('./components-tags');
+const router = new VueRouter({
+    mode: 'history',
+    routes: [
+        {
+            path: '/',
+            name: 'home',
+            component: require('./components/Home.vue').default,
+        },
+        {
+            path: '/reservation',
+            name: 'reservation',
+            component: require('./components/Reservation.vue').default,
+        },
+        {
+            path: '/postal-code',
+            name: 'postal-code',
+            component: require('./components/Postcode.vue').default,
+        },
+        {
+            path: '/check-out',
+            name: 'check-out',
+            component: require('./components/Checkout.vue').default,
+        },
+        {
+            path: '/thankyou',
+            name: 'thankyou',
+            component: require('./components/Thankyou.vue').default,
+        },
+
+        {
+            path: '/contact-us',
+            name: 'contact-us',
+            component: require('./components/Contactus.vue').default,
+        },
+
+        {
+            path: '/about-us',
+            name: 'about-us',
+            component: require('./components/Aboutus.vue').default,
+        },
+
+        {
+            path: '/online-order/:id',
+            name: 'online-order',
+            component: require('./components/order-page/main.vue').default,
+        },
+    ],
+});
+
+new Vue({
+    el: '#app',
+    components: { },
+    router,
+    store,
+    data() {
+        return {
+            loading: true
+        }
+    },
+    created() {
+        setTimeout(() => {
+            this.loading = false
+        }, 1000);
+    }
+});
+
+
+
+
+
