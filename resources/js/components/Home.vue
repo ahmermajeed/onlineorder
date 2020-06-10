@@ -101,7 +101,7 @@
                                     <div class="col-3">
                                         <div class="per-deal">
                                             <div class="image-holder">
-                                                <router-link :to="{ path: 'onlineordering'}">
+                                                <router-link :to="{ path: 'postal-code'}">
                                                     <img src="../../images/image00009.jpeg" alt="deal img">
                                                 </router-link>
                                             </div>
@@ -117,7 +117,7 @@
                                     <div class="col-3">
                                         <div class="per-deal">
                                             <div class="image-holder">
-                                                <router-link :to="{ path: 'onlineordering'}">
+                                                <router-link :to="{ path: 'postal-code'}">
                                                     <img src="../../images/image00010.jpeg" alt="deal img">
                                                 </router-link>
                                             </div>
@@ -127,13 +127,13 @@
                                                  </a></p>
                                                 <i class="fa fa-long-arrow"></i>
                                             </div>
-                                            <router-link :to="{ path: 'onlineordering'}"  class="deal-detail"><i class="fa fa-long-arrow-right"></i></router-link>
+                                            <router-link :to="{ path: 'postal-code'}"  class="deal-detail"><i class="fa fa-long-arrow-right"></i></router-link>
                                         </div>
                                     </div><!--//col-3-->
                                     <div class="col-3">
                                         <div class="per-deal">
                                             <div class="image-holder">
-                                                <router-link :to="{ path: 'onlineordering'}">
+                                                <router-link :to="{ path: 'postal-code'}">
                                                     <img src="../../images/image00004.jpeg" alt="deal img">
                                                 </router-link>>
                                             </div>
@@ -143,13 +143,13 @@
                                                     apply.</a></p>
                                                 <i class="fa fa-long-arrow"></i>
                                             </div>
-                                            <router-link :to="{ path: 'onlineordering'}"  class="deal-detail"><i class="fa fa-long-arrow-right"></i></router-link>
+                                            <router-link :to="{ path: 'postal-code'}"  class="deal-detail"><i class="fa fa-long-arrow-right"></i></router-link>
                                         </div>
                                     </div><!--//col-3-->
                                     <div class="col-3">
                                         <div class="per-deal">
                                             <div class="image-holder">
-                                                <router-link :to="{ path: 'onlineordering'}">
+                                                <router-link :to="{ path: 'postal-code'}">
                                                     <img src="../../images/image00003.jpeg" alt="deal img"></router-link>
 
                                             </div>
@@ -159,7 +159,7 @@
                                                    </a></p>
                                                 <i class="fa fa-long-arrow"></i>
                                             </div>
-                                            <router-link :to="{ path: 'onlineordering'}"  class="deal-detail">
+                                            <router-link :to="{ path: 'postal-code'}"  class="deal-detail">
                                                <i class="fa fa-long-arrow-right"></i>
                                             </router-link>
                                         </div>

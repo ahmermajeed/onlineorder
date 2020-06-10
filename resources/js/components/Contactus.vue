@@ -15,23 +15,21 @@
                                     <div class="contact-info-box">
                                         <i class="fa fa-phone-square"></i>
                                         <h5 itemprop="headline">PHONE</h5>
-                                        <p itemprop="description">Phone 01: (0091) 8547 632521</p>
-                                        <p itemprop="description">Phone 02: (084) 965 4788</p>
+                                        <p itemprop="description">Phone +44 121 242 2020</p>
                                     </div>
                                 </div>
                                 <div class="col-md-4 col-sm-4 col-lg-4">
                                     <div class="contact-info-box">
                                         <i class="fa fa-map-marker"></i>
                                         <h5 itemprop="headline">ADDRESS</h5>
-                                        <p itemprop="description">5Tth Floor, AH Building, 756 New St Melbourne, Australia.</p>
+                                        <p itemprop="description">888a Washwood Heath Rd, Ward End, Birmingham B8 2NB, United Kingdom</p>
                                     </div>
                                 </div>
                                 <div class="col-md-4 col-sm-4 col-lg-4">
                                     <div class="contact-info-box">
                                         <i class="fa fa-envelope"></i>
                                         <h5 itemprop="headline">EMAIL</h5>
-                                        <p itemprop="description">support@yourdomain.com</p>
-                                        <p itemprop="description">hello@yourdomain.com</p>
+                                        <p itemprop="description">support@papages.com</p>
                                     </div>
                                 </div>
                             </div>
