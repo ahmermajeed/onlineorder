@@ -98,7 +98,7 @@
                             <div class="col-md-12">
                                 <h3>Deals</h3>
                                 <div class="deals-slider row">
-                                    <div class="col-3">
+                                    <div class="col-lg-3 col-md-6 col-sm-12">
                                         <div class="per-deal">
                                             <div class="image-holder">
                                                 <router-link :to="{ path: 'postal-code'}">
@@ -114,7 +114,7 @@
                                             <router-link :to="{ path: 'onlineordering'}"  class="deal-detail"><i class="fa fa-long-arrow-right"></i></router-link>
                                         </div>
                                     </div><!--//col-3-->
-                                    <div class="col-3">
+                                    <div class="col-lg-3 col-md-6 col-sm-12">
                                         <div class="per-deal">
                                             <div class="image-holder">
                                                 <router-link :to="{ path: 'postal-code'}">
@@ -130,12 +130,12 @@
                                             <router-link :to="{ path: 'postal-code'}"  class="deal-detail"><i class="fa fa-long-arrow-right"></i></router-link>
                                         </div>
                                     </div><!--//col-3-->
-                                    <div class="col-3">
+                                    <div class="col-lg-3 col-md-6 col-sm-12">
                                         <div class="per-deal">
                                             <div class="image-holder">
                                                 <router-link :to="{ path: 'postal-code'}">
                                                     <img src="../../images/image00004.jpeg" alt="deal img">
-                                                </router-link>>
+                                                </router-link>
                                             </div>
                                             <div class="text-holder">
                                                 <h5><a href="#">Deal 1 for £ 2</a></h5>
@@ -146,7 +146,7 @@
                                             <router-link :to="{ path: 'postal-code'}"  class="deal-detail"><i class="fa fa-long-arrow-right"></i></router-link>
                                         </div>
                                     </div><!--//col-3-->
-                                    <div class="col-3">
+                                    <div class="col-lg-3 col-md-6 col-sm-12">
                                         <div class="per-deal">
                                             <div class="image-holder">
                                                 <router-link :to="{ path: 'postal-code'}">
@@ -176,14 +176,14 @@
                             <div class="row">
                                 <div class="col-md-5 footer-left">
                                     <p>&copy; 2020 <span>All rights reserved</span></p>
-                                    <p><span>Site by</span> <a href="#">SoftechWeb</a></p>
+                                    <p><span>Site by</span> <a href="#">PapaGes</a></p>
                                 </div>
                                 <div class="col-md-2 footer-logo">
                                     <img src="../../images/mainlogo.webp" alt="logo">
                                 </div>
                                 <div class="col-md-5 footer-right">
-                                    <p><span>Email:</span> <a href="#">iinfo@softechweb.co.uk</a></p>
-                                    <p><span>Phone:</span> 03301330247</p>
+                                    <p><span>Email:</span> <a href="#">support@papages.com</a></p>
+                                    <p><span>Phone:</span> +44 121 242 2020</p>
                                     <div class="footer-social">
                                         <a href="#"><i class="fa fa-facebook-f"></i></a>
                                         <a href="#"><i class="fa fa-twitter"></i></a>

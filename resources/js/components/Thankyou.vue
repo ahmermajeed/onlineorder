@@ -10,7 +10,29 @@
             </div>
             </div>
             <div class="clear-fix"></div>
-        <div class="row"><div class="col-12"><div class="footer"><div class="row"><div class="col-md-5 footer-left"><p>© 2020 <span>All rights reserved</span></p> <p><span>Site by</span> <a href="#">SoftechWeb</a></p></div> <div class="col-md-2 footer-logo"><img src="/images/mainlogo.webp?555cacad6fdf5e0098c65e66fe7955a0" alt="logo"></div> <div class="col-md-5 footer-right"><p><span>Email:</span> <a href="#">iinfo@softechweb.co.uk</a></p> <p><span>Phone:</span> 03301330247</p> <div class="footer-social"><a href="#"><i class="fa fa-facebook-f"></i></a> <a href="#"><i class="fa fa-twitter"></i></a></div></div></div></div></div></div>
+        <div class="row">
+            <div class="col-12">
+                <div class="footer">
+                    <div class="row">
+                        <div class="col-md-5 footer-left">
+                            <p>&copy; 2020 <span>All rights reserved</span></p>
+                            <p><span>Site by</span> <a href="#">PapaGes</a></p>
+                        </div>
+                        <div class="col-md-2 footer-logo">
+                            <img src="../../images/mainlogo.webp" alt="logo">
+                        </div>
+                        <div class="col-md-5 footer-right">
+                            <p><span>Email:</span> <a href="#">support@papages.com</a></p>
+                            <p><span>Phone:</span> +44 121 242 2020</p>
+                            <div class="footer-social">
+                                <a href="#"><i class="fa fa-facebook-f"></i></a>
+                                <a href="#"><i class="fa fa-twitter"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
 
 
     </div>

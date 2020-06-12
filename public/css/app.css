@@ -9852,7 +9852,8 @@ a.text-dark:hover, a.text-dark:focus {
   text-align: center;
   overflow: visible;
   position: relative;
-  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
+ box-shadow 0.15s ease-in-out;
 }
 
 .b-avatar:focus {
@@ -12677,7 +12678,8 @@ label.error {
 
 .reservation-form .alert {
     margin-top: 25px;
-    margin-bottom: 0px; }
+    margin-bottom: 0px;
+}
 
 .description {
     font-family: "Raleway";
@@ -13007,7 +13009,7 @@ font-family: 'Montserrat', sans-serif;
     position: relative;
 }
 .main-top{
-    background-image: url(/images/mainbg.webp?c79df1b475000e24d312572ed8d0647a);
+    background-image: url(/images/mainbg.jpg?c79df1b475000e24d312572ed8d0647a);
     background-size: cover;
     background-repeat: repeat;
     padding-bottom: 220px;
@@ -13225,7 +13227,7 @@ h3:after,
     font-weight: 300;
 }
 .bottom-section{
-    background-image: url(/images/mainbg.webp?c79df1b475000e24d312572ed8d0647a);
+    background-image: url(/images/mainbg.jpg?c79df1b475000e24d312572ed8d0647a);
     background-size: cover;
     background-repeat: repeat;
     position: relative;
@@ -13574,6 +13576,10 @@ h3:after,
     margin-top: 30px;
     position: relative;
 }
+.aboutuspage .main_banner h3:after,
+.aboutuspage .about-content h3:after{
+    display: none;
+}
 .aboutuspage .main_banner h3 span {
     width: 15px;
     height: 15px;
@@ -13703,7 +13709,7 @@ h3:after,
 
 }
 .aboutuspage .about-content .image-holder img{
-
+    max-width: 100%;
 }
 .aboutuspage .about-content h2{
     font-size: 36px;
@@ -13751,12 +13757,12 @@ h3:after,
     width: 100%;
 }
 .postalcodepage .main_banner {
-    background-image: url(/images/postalcodebg.jpg?3047c85a33561f5457a945e854415f49);
+    background-image: url(/images/postalcodebg.jpg?77625b073131b3a070de3aa90e8d9dcb);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
     overflow: hidden;
-    min-height:100vh;
+    min-height:85vh;
     background-attachment: fixed;
 }
 .postalcodepage .restaurant-searching-inner > h2 {
@@ -13779,9 +13785,14 @@ h3:after,
     padding: 0 100px 100px;
 }
 .restaurant-searching-inner {
-    display: inline-block;
     max-width: 992px;
-    width: 100%;
+    width: 80%;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: auto;
+    top: 50%;
+    transform: translateY(-50%);
 }
 .restaurant-searching-inner > h2 span {
     font-family: 'Bernadette Rough';
@@ -13796,6 +13807,15 @@ h3:after,
     -o-box-shadow: 0 5px 0 rgba(0,0,0,0.38);
     box-shadow: 0 5px 0 rgba(0,0,0,0.38);
     background-color: #ffbe00;
+    position: relative;
+}
+.restaurant-search-form h1,
+.restaurant-search-form .error-message{
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    font-size: 14px;
+    right: 0;
 }
 .restaurant-search-form .input-field{
     width: 100%;
@@ -14642,6 +14662,31 @@ label.error {
         max-width: 660px;
     }
 }
+@media (max-width: 991px) {
+    .deals-slider .per-deal {
+        margin-bottom: 20px;
+    }
+}
+@media (max-width: 767px) {
+    .postalcodepage .restaurant-searching-inner > h2 {
+        font-size: 30px;
+        line-height: 35px;
+    }
+    .postalcodepage .restaurant-searching-inner > h2 span{
+        font-size: 30px;
+    }
+    .restaurant-search-form .input-field{
+        margin-bottom: 20px;
+    }
+    .left-deliveryguy {
+        display: none;
+    }
+    .aboutuspage .main_banner {
+        min-height: 0;
+        padding-bottom: 50px;
+    }
+}
+
 @font-face {
     font-family: 'Bernadette Rough';
     src: url(/fonts/BernadetteRough.eot?15b923811392bf591226a5132801540e);
