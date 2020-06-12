@@ -565,7 +565,7 @@ font-family: 'Montserrat', sans-serif;
     position: relative;
 }
 .main-top{
-    background-image: url(../images/mainbg.jpg);
+    background-image: url(../images/mainbg.png);
     background-size: cover;
     background-repeat: repeat;
     padding-bottom: 220px;
@@ -783,7 +783,7 @@ h3:after,
     font-weight: 300;
 }
 .bottom-section{
-    background-image: url(../images/mainbg.jpg);
+    background-image: url(../images/mainbg.png);
     background-size: cover;
     background-repeat: repeat;
     position: relative;

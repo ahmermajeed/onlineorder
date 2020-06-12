@@ -9852,8 +9852,7 @@ a.text-dark:hover, a.text-dark:focus {
   text-align: center;
   overflow: visible;
   position: relative;
-  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
- box-shadow 0.15s ease-in-out;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
 
 .b-avatar:focus {
@@ -13009,7 +13008,7 @@ font-family: 'Montserrat', sans-serif;
     position: relative;
 }
 .main-top{
-    background-image: url(/images/mainbg.jpg?c79df1b475000e24d312572ed8d0647a);
+    background-image: url(/images/mainbg.png?51b76ec7cef361ccbcd261b89689dd90);
     background-size: cover;
     background-repeat: repeat;
     padding-bottom: 220px;
@@ -13227,7 +13226,7 @@ h3:after,
     font-weight: 300;
 }
 .bottom-section{
-    background-image: url(/images/mainbg.jpg?c79df1b475000e24d312572ed8d0647a);
+    background-image: url(/images/mainbg.png?51b76ec7cef361ccbcd261b89689dd90);
     background-size: cover;
     background-repeat: repeat;
     position: relative;
