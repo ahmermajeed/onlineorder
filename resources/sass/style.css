@@ -759,7 +759,6 @@ h3,
     color: #ffca14;
     margin-bottom: 20px;
 }
-h3:after,
 .aboutus-section h3:after,
 .menu-section h3:after,
 .deals-section h3:after{
@@ -2232,6 +2231,12 @@ label.error {
 #cart-stiky h2{
     color: #facc48;
 }
+.navbar-toggler.home-navbar-toggler {
+    display: none;
+}
+.navigation-bar.navbar-collapse.home-navbar {
+    display: block;
+}
 @media (min-width: 576px) {
     .modal .modal-dialog {
         max-width: 521px;
@@ -2265,6 +2270,47 @@ label.error {
     .aboutuspage .main_banner {
         min-height: 0;
         padding-bottom: 50px;
+    }
+    .navbar-toggler.home-navbar-toggler {
+        border: 1px solid #facc48;
+        color: #facc48;
+        margin: 10px auto;
+        display: block;
+    }
+    .navbar-toggler.home-navbar-toggler span{
+        color: #facc48;
+    }
+    .navigation-bar.navbar-collapse.home-navbar{
+        position: absolute;
+        z-index: 1000;
+        left: 0;
+        margin: 15px;
+        right: 0;
+        background:#010101;
+        margin-top: 0px;
+        height: 0;
+        overflow: hidden;
+    }
+    .navigation-bar.navbar-collapse.home-navbar.show{
+        height: auto;
+    }
+    .navigation-bar.navbar-collapse.home-navbar ul li {
+        display: block;
+    }
+    .navigation-bar.navbar-collapse.home-navbar ul li a {
+        padding: 5px 8px;
+    }
+    .aboutuspage .main_banner h3 {
+        font-size: 36px;
+    }
+    .aboutuspage .main_banner {
+        background-position: left center;
+    }
+    .contactus-form .text-right {
+        text-align: center !important;
+    }
+    .modal .add-count-button {
+        min-width: 180px;
     }
 }
 
