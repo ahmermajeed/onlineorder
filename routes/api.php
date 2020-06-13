@@ -46,6 +46,9 @@ Route::resource('choices-group', 'Api\ChoicesGroupController');
 /** Products Routes */
 Route::resource('products', 'Api\ProductController');
 
+/** Products Routes */
+Route::resource('deals', 'Api\DealController');
+
 /** Place Order */
 Route::post('placeOrder', 'Api\OrderController@placeOrder');
 

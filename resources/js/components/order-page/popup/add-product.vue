@@ -13,7 +13,6 @@
                 <h4>Allergy Information</h4>
                 <p>lorem ipsume lorem ipsume lorem ipsume lorem ipsume lorem ipsume lorem ipsume lorem ipsume lorem ipsume lorem ipsume lorem ipsume lorem ipsume lorem ipsume lorem ipsume lorem ipsume lorem ipsume lorem ipsume lorem ipsume lorem ipsume lorem ipsume lorem ipsume lorem ipsume lorem ipsume </p>
 
-
                 <form action="" method="">
 
 <!--                    <div>-->
