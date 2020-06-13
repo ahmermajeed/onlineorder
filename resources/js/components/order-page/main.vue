@@ -66,7 +66,7 @@
 
                 </div>
 
-                <div class="col-xs-12 full cart col-lg-3 col-md-4 col-sm-4 cart-right-desktop"   v-if="getAllCartArray.length > 1"  >
+                <div class="col-xs-12 full cart col-lg-3 col-md-4 col-sm-12 cart-right-desktop"   v-if="getAllCartArray.length > 1"  >
                     <div class="order" id="cart-stiky">
                         <h2> Your Order </h2>
                         <div>
@@ -1740,12 +1740,21 @@
     }
 
     .desktop-tabs{
-        width:100%;
+        max-width:100%;
         overflow-x:scroll !important;
         margin-bottom:5px;
     }
     .desktop-tabs ul.nav.nav-tabs{
-        flex-wrap:nowrap;
+        flex-wrap: nowrap;
+        overflow: visible;
+        width: auto;
+    }
+    .nav-tabs > li.dropdown > a, .nav-tabs > li{
+        display: inline-block;
+        flex: 0 0 auto;
+    }
+    .nav-tabs > li.dropdown > a, .nav-tabs > li{
+        display:block;
     }
     .desktop-tabs::-webkit-scrollbar {
         height: 5px;
@@ -1807,6 +1816,25 @@
         .mobile-cart-button .inner span{
             color: #000;
         }
+        .mobile-cart-button .inner span.text:after{
+            margin-left:5px;
+            content: "\f105";
+            display: inline-block;
+            font: normal normal normal 14px/1 FontAwesome;
+            font-size: inherit;
+            text-rendering: auto;
+            -webkit-font-smoothing: antialiased;
+        }
+        .mobile-cart-button.cartheight .inner span.text:after{
+            margin-left:5px;
+            content: "\f107";
+            display: inline-block;
+            font: normal normal normal 14px/1 FontAwesome;
+            font-size: inherit;
+            text-rendering: auto;
+            -webkit-font-smoothing: antialiased;
+        }
+        
         .mobile-cart-button svg{
             filter: brightness(0);
             display: inline-block;
@@ -1829,11 +1857,10 @@
             align-items: center;
             position: fixed;
             bottom: 0;
-            width: 100%;
-            left: 0;
-            background: #ccc;
+            left: 10px;
             padding: 10px 0;
-            background:#343a40;
+            background: #343a40;
+            right: 10px;
         }
         #add-product.modal .count-footer h3{
             display:none;
@@ -1921,6 +1948,10 @@
         .cartheight .confirm-btn .anima-btn:focus{
             outline:0;
             box-shadow:none;
+        }
+        .cartheight .confirm-btn .move-eff span{
+            top: 3px;
+            left: 0;
         }
 
     }

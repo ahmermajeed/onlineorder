@@ -476,12 +476,12 @@ label.error {
 .modal .increment-buttons button{
     width: 30px;
     height: 30px;
-    line-height: 30px;
+    line-height: 36px;
     padding: 0;
     background: none;
     border: 0;
     cursor: pointer;
-    font-size: 30px;
+    font-size: 24px;
 }
 .modal .increment-buttons button:focus,
 .modal .increment-buttons button:hover{
@@ -489,18 +489,19 @@ label.error {
     box-shadow: none;
 }
 .modal .increment-buttons button.btn-minus{
-    color: #a1a1a1;
+    /* color: #a1a1a1; */
+    color: #facc48;
 }
 .modal .increment-buttons button.btn-plus{
     /* color: #facc48; */
-    color: #a1a1a1;
+    color: #facc48;
 }
 .modal .increment-buttons .btn-badge-count{
     display: inline-block;
     width: 30px;
     height: 30px;
     line-height: 30px;
-    background-color: #b49334;
+    background-color:#facc48;
     color: #fff;
     font-size: 14px;
     font-weight: 400;
@@ -2211,12 +2212,7 @@ label.error {
     outline: 0;
     box-shadow: none;
 }
-.modal .increment-buttons button.btn-minus{
-    color: #a1a1a1;
-}
-.modal .increment-buttons button.btn-plus{
-    color: #facc48;
-}
+
 .modal .count-footer{
     justify-content: end;
     align-items: flex-end;
@@ -2330,6 +2326,13 @@ label.error {
     }
     .modal .add-count-button {
         min-width: 180px;
+    }
+    .checkout-cart-desktop {
+        order: 1;
+        margin-top: 30px;
+    }
+    .checkout-cart-form {
+        order: 2;
     }
 }
 

@@ -79,7 +79,7 @@
                         <h4>Special instructions <span class="required-text"> *</span></h4>
                         <textarea class="form-control" rows="3" cols="12"  v-model="productData['special_instruction']"></textarea>
                     </div>
-                    <div class="row count-footer no-gutters">
+                    <div class="row count-footer">
                         <div class="col increment-buttons">
                             <button type="button" class="btn-minus" @click.prevent="minusQuantity()">
                                <i class="fa fa-minus-square-o"></i>
