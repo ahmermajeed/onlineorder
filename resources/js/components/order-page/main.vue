@@ -16,13 +16,22 @@
 
                     <div class="offset-categories">
                         <div id="categories-tabs">
-                            <ul class="nav nav-tabs" style=overflow:inherit>
+                            <ul class="nav nav-tabs desktop-tabs" style=overflow:inherit>
                                 <li><a href="#"  @click.prevent="getProductAgainstCategories(false)" >All</a></li>
                                 <li  v-for="(item, index) in categories"  v-if="index  <= 4"><a href="#" @click.prevent="getProductAgainstCategories(item.id)">{{item.name}}</a></li>
                                 <li class="dropdown" v-if="cat_count">
-                                    <a data-toggle="dropdown" id="dropdownMenu1" v-if="cat_count">More <span class="caret"></span></a>
+                                    <a data-toggle="dropdown" id="dropdownMenu1" v-if="cat_count">MORE <span class="caret fa fa-angle-down"></span></a>
                                     <ul class="dropdown-menu dropdown-menu-right" id="dropdown-more" v-if="cat_count">
                                         <li class="active"  v-for="(item, index) in categories"   v-if="index  > 4" ><a href="#"   @click.prevent="getProductAgainstCategories(item.id)">{{item.name}}</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                            <ul class="nav nav-tabs mobile-tabs" style=overflow:inherit>
+                                <li><a href="#"  @click.prevent="getProductAgainstCategories(false)" >All</a></li>
+                                <li class="dropdown" v-if="cat_count">
+                                    <a data-toggle="dropdown" id="dropdownMenu1" v-if="cat_count">MORE <span class="caret fa fa-angle-down"></span></a>
+                                    <ul class="dropdown-menu dropdown-menu-right" id="dropdown-more" v-if="cat_count">
+                                        <li class="active"  v-for="(item, index) in categories"><a href="#"   @click.prevent="getProductAgainstCategories(item.id)">{{item.name}}</a></li>
                                     </ul>
                                 </li>
                             </ul>
@@ -64,7 +73,7 @@
 
                 </div>
 
-                <div class="col-xs-12 full cart col-lg-3 col-md-4 col-sm-4"   v-if="getAllCartArray.length > 1"  >
+                <div class="col-xs-12 full cart col-lg-3 col-md-4 col-sm-4 cart-right-desktop"   v-if="getAllCartArray.length > 1"  >
                     <div class="order" id="cart-stiky">
                         <h2> Your Order </h2>
                         <div>
@@ -75,7 +84,11 @@
                                 <tr v-for="(cart, product_index) in getAllCartArray"  v-if="product_index  > 0">
                                     <td class=highlighted>
                                     </td>
-                                    <td>{{ cart.quantity}}  X</td>
+                                    <td>
+                                        <i class="fa fa-angle-up"></i>
+                                        <span>{{ cart.quantity}}  <i>X</i></span>
+                                        <i class="fa fa-angle-down"></i>
+                                    </td>
                                     <td>
                                         <div>{{cart.product_name}}</div>
                                         <div v-if="cart.extras" v-for="(extra, extra_index) in cart.extras" >
@@ -91,22 +104,30 @@
                                     <td></td>
                                     <td>Total</td>
                                     <td></td>
-                                    <td>{{priceFormat(total_amount)}}</td>
+                                    <td>£{{priceFormat(total_amount)}}</td>
                                 </tr>
                             </table>
                         </div>
                     </div>
                 </div>
-                <div class="col-xs-12 full cart col-lg-3 col-md-4 col-sm-4"   v-else="getAllCartArray.length  ==1">
+                <div class="col-xs-12 full cart col-lg-3 col-md-4 col-sm-4 cart-right-desktop"   v-else="getAllCartArray.length  ==1">
                     <div class="order" id="cart-stiky">
                     <img src="../../../images/empty-cart.png" style="width:300px">
                     <h2 class="title" style="text-align:center">Your Cart is Empty</h2>
                     </div>
                 </div>
             </div>
+            <div class="mobile-cart-button" v-if="getAllCartArray.length > 1" @click="placeOrder()">
+                <span class="products-count"><svg xmlns="http://www.w3.org/2000/svg" class="svg-stroke-container" width="24" height="24">
+                    <path fill="#707070" d="M12 2.75a4.75 4.75 0 014.744 4.5h3.103a1 1 0 01.99 1.141l-1.714 12a1 1 0 01-.99.859H5.867a1 1 0 01-.99-.859l-1.714-12a1 1 0 01.99-1.141h3.103A4.75 4.75 0 0112 2.75zm5.559 14.75H6.44a.4.4 0 00-.396.457l.208 1.45a.4.4 0 00.396.343H17.35a.4.4 0 00.396-.343l.208-1.45a.4.4 0 00-.396-.457zm1.25-8.75H5.19a.4.4 0 00-.396.457l.922 6.45a.4.4 0 00.396.343h11.775a.4.4 0 00.396-.343l.922-6.45a.4.4 0 00-.396-.457zM12 4.25a3.251 3.251 0 00-3.193 2.638.305.305 0 00.3.362h5.796a.297.297 0 00.292-.35A3.251 3.251 0 0012 4.25z"></path>
+                </svg>  1</span>
+                <span class="text">Checkout</span>
+                <span class="products-value">{{priceFormat(total_amount)}}</span>
+            </div>
         </div>
         <add-product @HideModalValue="hideModal" :showModalProp="product" :list="list" :has_sizes="has_sizes"></add-product>
     </div>
+        
 </template>
 
 <script>
@@ -368,6 +389,9 @@
         padding-bottom: 1px;
         width: 100%;
     }
+    #categories-tabs .dropdown {
+        cursor:pointer;
+    }
 
     .nav-tabs.preload li a span {
         background: #ccc;
@@ -381,7 +405,7 @@
 
     .nav-tabs > li.dropdown > a,
     .nav-tabs > li > a {
-        background: #fff;
+        background: none;
         text-align: center;
         font-weight: bold;
         font-size: 15px;
@@ -396,8 +420,11 @@
     .nav-tabs > li > a:hover {
         background: #fff;
         border-color: transparent;
-        border-bottom: 3px solid #fff;
+        border-bottom: 3px solid #facc48;
         text-decoration:none;
+    }
+    .nav-tabs > li > a.active {
+        border-bottom: 3px solid #facc48;
     }
     .nav-tabs > li.dropdown > a.open,
     .nav-tabs > li.dropdown > a.active,
@@ -613,6 +640,9 @@
         top: 20px;
     }
 
+    #cart-stiky > img {
+        max-width:100%;
+    }
     .arabic_rtl .cart .order {
         direction: rtl;
     }
@@ -711,7 +741,19 @@
     .cart .order table tr td:nth-child(2) {
         font-weight: bold;
     }
-
+    .cart .order table tr td:nth-child(2) span{
+        display:block;
+    }
+    .cart .order table tr td:nth-child(2) span i{
+        font-style: normal;
+        font-size: 12px;
+        padding: 0;
+    }
+    .cart .order table tr td:nth-child(2) span,
+    .cart .order table tr td:nth-child(2) i{
+        line-height: 1;
+    }
+    
     .cart .order p {
         color: #777;
         font-size: 20px;
@@ -832,6 +874,9 @@
         font-weight: normal;
     }
 
+    #add-product.modal{
+        padding-left:0 !important;
+    }
     .modal.fullscreen {
         top: 0;
         bottom: 0;
@@ -1426,12 +1471,6 @@
         line-height:1.4;
 
     }
-
-
-
-
-
-
     .loading {
         position: fixed;
         z-index: 999;
@@ -1559,4 +1598,98 @@
 
     }
 
+    .mobile-tabs,
+    .mobile-cart-button{
+        display:none;
+    }
+    #cart-stiky{
+        direction: ltr;
+        padding-top: 20px;
+        text-align: center;
+        width: 100%;
+        position: sticky;
+        top: 20px;
+        overflow-y: scroll;
+        height: 60vh;
+    }
+    #cart-stiky::-webkit-scrollbar {
+        width:3px;
+    }
+    #cart-stiky::-webkit-scrollbar-track {
+        background: #f1f1f1; 
+    }
+    #cart-stiky::-webkit-scrollbar-thumb {
+        background: #888; 
+    }
+    #cart-stiky::-webkit-scrollbar-thumb:hover {
+        background: #555; 
+    }
+    @media (max-width: 767px) {
+        .increment-buttons {
+           
+        }
+        .mobile-tabs{
+            display:flex;
+        }
+        .desktop-tabs,
+        .cart-right-desktop{
+            display:none;
+        }
+        .nav-tabs > li.dropdown > a, .nav-tabs > li {
+        }
+        .nav.nav-tabs.mobile-tabs {
+            height:auto;
+        }
+        .dishes .dishe{
+            height:auto;
+        }
+        .dishes .dishe p, .dishes .dishe textarea{
+            height: auto;
+        }
+        .mobile-cart-button{
+            position: fixed;
+            bottom: 0;
+            display: flex;
+            background-color: #facc48;
+            border-color: #facc48;
+            font-weight: 600;
+            font-size: 16px;
+            width: 100%;
+            left: 0;
+            padding: 20px;
+            justify-content: space-around;
+            cursor:pointer;
+        }
+        .mobile-cart-button svg{
+            filter: brightness(0);
+            display: inline-block;
+            vertical-align: sub;
+        }
+        #add-product.modal .modal-dialog {
+            transform: none;
+            width: 100%;
+            max-width: 100%;
+            height: 100vh;
+            margin:0;
+            align-items: flex-start;
+        }
+        #add-product.modal .modal-dialog .modal-content{
+            overflow: hidden;
+            padding-bottom:60px;
+        }
+        #add-product.modal .count-footer {
+            justify-content: space-between;
+            align-items: center;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            left: 0;
+            background: #ccc;
+            padding: 10px 0;
+            background:#343a40;
+        }
+        #add-product.modal .count-footer h3{
+            display:none;
+        }
+    }
 </style>

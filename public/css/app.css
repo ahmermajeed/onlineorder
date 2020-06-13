@@ -12992,7 +12992,7 @@ label.error {
     url(/fonts/BernadetteRough.woff2?8bd7deb42fc92977d264d9e1e1db2814) format('woff2'),
     url(/fonts/BernadetteRough.woff?5339e7e0f8b82b67eb0eeabc649ee8ca) format('woff'),
     url(/fonts/BernadetteRough.ttf?38f8c14bf53c9c0b2de818034f1b232a) format('truetype'),
-    url(/fonts/BernadetteRough.svg?d4d354ebb4b92bbac88dc51eb16fe00c#BernadetteRough) format('svg');
+    url(/fonts/BernadetteRough.svg?b0c840315d094ac21658bf416771a73e#BernadetteRough) format('svg');
     font-weight: normal;
     font-style: normal;
 }
@@ -13202,7 +13202,6 @@ h3,
     color: #ffca14;
     margin-bottom: 20px;
 }
-h3:after,
 .aboutus-section h3:after,
 .menu-section h3:after,
 .deals-section h3:after{
@@ -14650,6 +14649,12 @@ label.error {
 #cart-stiky h2{
     color: #facc48;
 }
+.navbar-toggler.home-navbar-toggler {
+    display: none;
+}
+.navigation-bar.navbar-collapse.home-navbar {
+    display: block;
+}
 @media (min-width: 576px) {
     .modal .modal-dialog {
         max-width: 521px;
@@ -14684,6 +14689,47 @@ label.error {
         min-height: 0;
         padding-bottom: 50px;
     }
+    .navbar-toggler.home-navbar-toggler {
+        border: 1px solid #facc48;
+        color: #facc48;
+        margin: 10px auto;
+        display: block;
+    }
+    .navbar-toggler.home-navbar-toggler span{
+        color: #facc48;
+    }
+    .navigation-bar.navbar-collapse.home-navbar{
+        position: absolute;
+        z-index: 1000;
+        left: 0;
+        margin: 15px;
+        right: 0;
+        background:#010101;
+        margin-top: 0px;
+        height: 0;
+        overflow: hidden;
+    }
+    .navigation-bar.navbar-collapse.home-navbar.show{
+        height: auto;
+    }
+    .navigation-bar.navbar-collapse.home-navbar ul li {
+        display: block;
+    }
+    .navigation-bar.navbar-collapse.home-navbar ul li a {
+        padding: 5px 8px;
+    }
+    .aboutuspage .main_banner h3 {
+        font-size: 36px;
+    }
+    .aboutuspage .main_banner {
+        background-position: left center;
+    }
+    .contactus-form .text-right {
+        text-align: center !important;
+    }
+    .modal .add-count-button {
+        min-width: 180px;
+    }
 }
 
 @font-face {
@@ -14693,7 +14739,7 @@ label.error {
         url(/fonts/BernadetteRough.woff2?8bd7deb42fc92977d264d9e1e1db2814) format('woff2'),
         url(/fonts/BernadetteRough.woff?5339e7e0f8b82b67eb0eeabc649ee8ca) format('woff'),
         url(/fonts/BernadetteRough.ttf?38f8c14bf53c9c0b2de818034f1b232a) format('truetype'),
-        url(/fonts/BernadetteRough.svg?d4d354ebb4b92bbac88dc51eb16fe00c#BernadetteRough) format('svg');
+        url(/fonts/BernadetteRough.svg?b0c840315d094ac21658bf416771a73e#BernadetteRough) format('svg');
     font-weight: normal;
     font-style: normal;
 }

@@ -13,19 +13,19 @@
                                 </div>
                                 <div class="col-sm-6">
                                     <label class="customradiobutton radioiconed radio-inline mr-3">
-                                        <input type="radio" value="pickup" @change.prevent="showOrderType(false)"  v-model="form.order_type"><i class="fa fa-sign-language"></i> Pick up
+                                        <input type="radio" value="pickup" @change.prevent="showOrderType('pickup')"  v-model="form.order_type"><i class="fa fa-sign-language"></i> Pick up
 
                                     </label>
                                 </div>
                                 <div class="col-sm-6">
                                     <label class="customradiobutton radioiconed radio-inline mr-3">
-                                        <input type="radio" value="delivery" v-model="form.order_type" @change.prevent="showOrderType(true)" ><i class="fa fa-truck"></i> Delivery
+                                        <input type="radio" value="delivery" v-model="form.order_type" @change.prevent="showOrderType('getdelivery')" ><i class="fa fa-truck"></i> Delivery
 
                                     </label>
                                 </div>
 
                                 <div class="col-12">
-                                    <div class="row" v-show="order_card">
+                                    <div class="row" v-show="order_card == 'pickup'">
                                         <div class="col-sm-6">
                                             <label>Date</label>
                                             <b-form-datepicker id="example-datepicker" v-model="value" class="mb-2"></b-form-datepicker>
@@ -36,7 +36,7 @@
                                         </div>
                                     </div>
 
-                                    <div class="row" v-show="order_card">
+                                    <div class="row" v-show="order_card == 'getdelivery'">
                                         <div class="col-12">
                                             <ul id="error">
                                                 <li  v-for="(errorMessage) in errorMessage" style="color: red;">{{errorMessage}}</li>
@@ -916,6 +916,9 @@
 
     .cart .order table tr td:nth-child(2) {
         font-weight: bold;
+    }
+    .cart .order table tr td>div {
+        cursor:pointer;
     }
 
     .cart .order p {

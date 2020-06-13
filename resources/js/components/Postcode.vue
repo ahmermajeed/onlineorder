@@ -19,7 +19,6 @@
                                             <button type="button" v-on:click="checkPostCode">Check</button>
                                         </div>
                                     </div>
-                                    <br>
                                     <h1 style="color:red">{{error_message}} </h1>
 
                                 </form>

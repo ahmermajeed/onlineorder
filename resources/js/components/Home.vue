@@ -19,7 +19,10 @@
                                     <div class="logo">
                                         <img src="../../images/mainlogo.webp" alt="logo">
                                     </div><!--logo-->
-                                    <div class="navigation-bar">
+                                    <button type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler home-navbar-toggler">
+                                        <span class="fa fa-bars"></span>
+                                    </button>
+                                    <div class="navigation-bar navbar-collapse collapse home-navbar" id="navbarResponsive">
                                         <ul>
                                             <li>
                                                 <router-link :to="{ path: '/'}">
@@ -39,9 +42,6 @@
                                             <li>   <router-link :to="{ path: 'contact-us'}">
                                                 <a class="nav-link" >Contact Us</a>
                                             </router-link></li>
-
-
-
                                         </ul>
                                     </div><!--//navigation-bar-->
                                 </div> <!--//header-->
