@@ -16,25 +16,18 @@
 
                     <div class="offset-categories">
                         <div id="categories-tabs">
-                            <ul class="nav nav-tabs desktop-tabs" style=overflow:inherit>
-                                <li><a href="#"  @click.prevent="getProductAgainstCategories(false)" >All</a></li>
-                                <li  v-for="(item, index) in categories"  v-if="index  <= 4"><a href="#" @click.prevent="getProductAgainstCategories(item.id)">{{item.name}}</a></li>
-                                <li class="dropdown" v-if="cat_count">
-                                    <a data-toggle="dropdown" id="dropdownMenu1" v-if="cat_count">MORE <span class="caret fa fa-angle-down"></span></a>
-                                    <ul class="dropdown-menu dropdown-menu-right" id="dropdown-more" v-if="cat_count">
-                                        <li class="active"  v-for="(item, index) in categories"   v-if="index  > 4" ><a href="#"   @click.prevent="getProductAgainstCategories(item.id)">{{item.name}}</a></li>
-                                    </ul>
-                                </li>
-                            </ul>
-                            <ul class="nav nav-tabs mobile-tabs" style=overflow:inherit>
-                                <li><a href="#"  @click.prevent="getProductAgainstCategories(false)" >All</a></li>
-                                <li class="dropdown" v-if="cat_count">
-                                    <a data-toggle="dropdown" id="dropdownMenu1" v-if="cat_count">MORE <span class="caret fa fa-angle-down"></span></a>
-                                    <ul class="dropdown-menu dropdown-menu-right" id="dropdown-more" v-if="cat_count">
-                                        <li class="active"  v-for="(item, index) in categories"><a href="#"   @click.prevent="getProductAgainstCategories(item.id)">{{item.name}}</a></li>
-                                    </ul>
-                                </li>
-                            </ul>
+                            <div class="desktop-tabs">
+                                <ul class="nav nav-tabs">
+                                    <li><a href="#"  @click.prevent="getProductAgainstCategories(false)" >All</a></li>
+                                    <li  v-for="(item, index) in categories"  v-if="index  <= 4"><a href="#" @click.prevent="getProductAgainstCategories(item.id)">{{item.name}}</a></li>
+                                    <li class="dropdown" v-if="cat_count">
+                                        <a data-toggle="dropdown" id="dropdownMenu1" v-if="cat_count">MORE <span class="caret fa fa-angle-down"></span></a>
+                                        <ul class="dropdown-menu dropdown-menu-right" id="dropdown-more" v-if="cat_count">
+                                            <li class="active"  v-for="(item, index) in categories"   v-if="index  > 4" ><a href="#"   @click.prevent="getProductAgainstCategories(item.id)">{{item.name}}</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
                             <div class="form-group product-search">
                                 <div class=input-group>
                                     <div class=input-group-addon>
@@ -1745,6 +1738,29 @@
         position: sticky;
         top: 20px;
     }
+
+    .desktop-tabs{
+        width:100%;
+        overflow-x:scroll !important;
+        margin-bottom:5px;
+    }
+    .desktop-tabs ul.nav.nav-tabs{
+        flex-wrap:nowrap;
+    }
+    .desktop-tabs::-webkit-scrollbar {
+        height: 5px;
+        width: 5px;
+        border: 1px solid #d5d5d5;
+    }
+    .desktop-tabs::-webkit-scrollbar-track {
+        background: #f1f1f1; 
+    }
+    .desktop-tabs::-webkit-scrollbar-thumb {
+        background: #888; 
+    }
+    .desktop-tabs::-webkit-scrollbar-thumb:hover {
+        background: #555; 
+    }
     
     @media (max-width: 767px) {
         .increment-buttons {
@@ -1752,10 +1768,6 @@
         }
         .mobile-tabs{
             display:flex;
-        }
-        .desktop-tabs,
-        .cart-right-desktop{
-            display:none;
         }
         .nav-tabs > li.dropdown > a, .nav-tabs > li {
         }
