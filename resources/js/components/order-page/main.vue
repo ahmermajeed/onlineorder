@@ -79,34 +79,42 @@
                         <div>
                             <strong>Order Details</strong>
 
-                            <button class=" btn btn-primary" @click="placeOrder()">Checkout</button>
-                            <table class=tbl_cart_list>
-                                <tr v-for="(cart, product_index) in getAllCartArray"  v-if="product_index  > 0">
-                                    <td class=highlighted>
-                                    </td>
-                                    <td>
-                                        <i class="fa fa-angle-up"></i>
-                                        <span>{{ cart.quantity}}  <i>X</i></span>
-                                        <i class="fa fa-angle-down"></i>
-                                    </td>
-                                    <td>
-                                        <div>{{cart.product_name}}</div>
-                                        <div v-if="cart.extras" v-for="(extra, extra_index) in cart.extras" >
-                                            <strong>{{extra.group_name}}:</strong> {{extra.choice}}
-                                        </div>
-                                    </td>
+                            <button class="anima-btn move-eff" @click="placeOrder()"><span>Checkout</span></button>
+                            <div class="table-holder">
+                                <table class=tbl_cart_list>
+                                    <tr v-for="(cart, product_index) in getAllCartArray"  v-if="product_index  > 0">
+                                        <td class=highlighted>
+                                        </td>
+                                        <td>
+                                            <i class="fa fa-angle-up"></i>
+                                            <span>{{ cart.quantity}}  <i>X</i></span>
+                                            <i class="fa fa-angle-down"></i>
+                                        </td>
+                                        <td>
+                                            <div>{{cart.product_name}}</div>
+                                            <div v-if="cart.extras" v-for="(extra, extra_index) in cart.extras" >
+                                                <strong>{{extra.group_name}}:</strong> {{extra.choice}}
+                                            </div>
+                                            <span class="mealactions">
+                                                <i v-b-tooltip.hover title="Edit Meal" class="fa fa-pencil"></i>
+                                                <i v-b-tooltip.hover title="Remove Meal" class="fa fa-times"></i>
+                                            </span>
+                                        </td>
 
-                                    <td  v-if="!cart.extras">Price:</br>£ {{priceFormat(cart.price * cart.quantity) }}</td>
-                                    <td  v-if="cart.extras">Price:</br>£{{priceFormat(cart.single_product_total_amount)}} </td>
-
-                                <tr class="fees">
-                                <tr>
-                                    <td></td>
-                                    <td>Total</td>
-                                    <td></td>
-                                    <td>£{{priceFormat(total_amount)}}</td>
-                                </tr>
-                            </table>
+                                        <td  v-if="!cart.extras">£ {{priceFormat(cart.price * cart.quantity) }}</td>
+                                        <td  v-if="cart.extras">£{{priceFormat(cart.single_product_total_amount)}} </td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <div class="cart-money-detail">
+                                <ul>
+                                    <li class="fees"></li>
+                                    <li>
+                                        <span>Total</span>
+                                        <span>£{{priceFormat(total_amount)}}</span>
+                                    </li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -117,12 +125,70 @@
                     </div>
                 </div>
             </div>
-            <div class="mobile-cart-button" v-if="getAllCartArray.length > 1" @click="placeOrder()">
-                <span class="products-count"><svg xmlns="http://www.w3.org/2000/svg" class="svg-stroke-container" width="24" height="24">
-                    <path fill="#707070" d="M12 2.75a4.75 4.75 0 014.744 4.5h3.103a1 1 0 01.99 1.141l-1.714 12a1 1 0 01-.99.859H5.867a1 1 0 01-.99-.859l-1.714-12a1 1 0 01.99-1.141h3.103A4.75 4.75 0 0112 2.75zm5.559 14.75H6.44a.4.4 0 00-.396.457l.208 1.45a.4.4 0 00.396.343H17.35a.4.4 0 00.396-.343l.208-1.45a.4.4 0 00-.396-.457zm1.25-8.75H5.19a.4.4 0 00-.396.457l.922 6.45a.4.4 0 00.396.343h11.775a.4.4 0 00.396-.343l.922-6.45a.4.4 0 00-.396-.457zM12 4.25a3.251 3.251 0 00-3.193 2.638.305.305 0 00.3.362h5.796a.297.297 0 00.292-.35A3.251 3.251 0 0012 4.25z"></path>
-                </svg>  1</span>
-                <span class="text">Checkout</span>
-                <span class="products-value">{{priceFormat(total_amount)}}</span>
+            <div class="mobile-cart-button" v-bind:class="{ cartheight: cart_height }" v-if="getAllCartArray.length > 1">
+                <div class="inner">
+                    <span class="products-count"><svg xmlns="http://www.w3.org/2000/svg" class="svg-stroke-container" width="24" height="24">
+                        <path fill="#707070" d="M12 2.75a4.75 4.75 0 014.744 4.5h3.103a1 1 0 01.99 1.141l-1.714 12a1 1 0 01-.99.859H5.867a1 1 0 01-.99-.859l-1.714-12a1 1 0 01.99-1.141h3.103A4.75 4.75 0 0112 2.75zm5.559 14.75H6.44a.4.4 0 00-.396.457l.208 1.45a.4.4 0 00.396.343H17.35a.4.4 0 00.396-.343l.208-1.45a.4.4 0 00-.396-.457zm1.25-8.75H5.19a.4.4 0 00-.396.457l.922 6.45a.4.4 0 00.396.343h11.775a.4.4 0 00.396-.343l.922-6.45a.4.4 0 00-.396-.457zM12 4.25a3.251 3.251 0 00-3.193 2.638.305.305 0 00.3.362h5.796a.297.297 0 00.292-.35A3.251 3.251 0 0012 4.25z"></path>
+                    </svg>  1</span>
+                    <span class="text" @click="opencartlist()">Checkout</span>
+                    <span class="products-value">{{priceFormat(total_amount)}}</span>
+                </div>
+                <ul>
+                    <li>
+                        <span class="qty">2 
+                            <span class="qtyincrement">
+                               <i class="fa fa-plus-square-o"></i>
+                               <i class="fa fa-minus-square-o"></i> 
+                            </span>
+                        </span>
+                        <span class="meal">Loreum ipsum is dummy</span>
+                        <span class="price">$121</span>
+                    </li>
+                    <li>
+                        <span class="qty">2 
+                            <span class="qtyincrement">
+                               <i class="fa fa-plus-square-o"></i>
+                               <i class="fa fa-minus-square-o"></i> 
+                            </span>
+                        </span>
+                        <span class="meal">
+                            Loreum ipsum is dummy
+                            <ul>
+                                <li><b>Size:</b> Double</li>
+                                <li><b>Extra:</b> Cheese</li>
+                                <li><b>Drink:</b> Pepsi</li>
+                            </ul>
+                            <span class="mealactions">
+                                <i v-b-tooltip.hover title="Edit Meal" class="fa fa-pencil"></i>
+                                <i v-b-tooltip.hover title="Remove Meal" class="fa fa-times"></i>
+                            </span>
+                        </span>
+                        <span class="price">$121</span>
+                    </li>
+                    <li>
+                        <span class="qty">2 
+                            <span class="qtyincrement">
+                               <i class="fa fa-plus-square-o"></i>
+                               <i class="fa fa-minus-square-o"></i> 
+                            </span>
+                        </span>
+                        <span class="meal">Loreum ipsum is dummy</span>
+                        <span class="price">$121</span>
+                    </li>
+                    <li>
+                        <span class="qty">2 
+                            <span class="qtyincrement">
+                               <i class="fa fa-plus-square-o"></i>
+                               <i class="fa fa-minus-square-o"></i> 
+                            </span>
+                        </span>
+                        <span class="meal">Loreum ipsum is dummy</span>
+                        <span class="price">$121</span>
+                    </li>
+                </ul>
+                <div class="confirm-btn">
+                    <button class="anima-btn move-eff"><span>Confirm Order</span></button>
+                </div>
             </div>
         </div>
         <add-product @HideModalValue="hideModal" :showModalProp="product" :list="list" :has_sizes="has_sizes"></add-product>
@@ -141,8 +207,8 @@
                 list:{},
                 has_sizes:false,
                 cat_count: false,
-                total_amount:0
-
+                total_amount:0,
+                cart_height:false
             };
         },
         mounted() {
@@ -183,7 +249,7 @@
                 let  _this = this;
                 _this.loading  = true;
                 var url = '/api/categories';
-                if(id){
+                if(id){1
                     url = url + '?id=' + id;
                 }
                 axios.get(url)
@@ -193,7 +259,14 @@
 
                     });
             },
-
+            opencartlist(){
+                this.cart_height = !this.cart_height;
+                if(this.cart_height == true) {
+                    document.querySelector("body").style.overflow = 'hidden';
+                } else {
+                    document.querySelector("body").style.overflow = 'auto';
+                }
+            },
             viewProduct(id){
                 let  _this = this;
                 _this.loading  = true;
@@ -648,10 +721,18 @@
     }
 
     .cart .order button {
-        margin-top: 10px;
-        font-size: 18px;
-        padding: 10px;
-        width: 75%;
+        display: block;
+        margin: 8px auto;
+        color: #000 !important;
+        padding: 0;
+        width:170px;
+    }
+    .cart .order button.move-eff span{
+        top:3px;
+    }
+    .cart .order button:focus {
+        outline:0;
+        box-shadow:none;
     }
 
     .cart .order button.btn-sm {
@@ -672,16 +753,70 @@
         width: 100%;
     }
 
+    .cart .order .table-holder {
+        overflow-y: scroll;
+        max-height: 50vh;
+    }
+    .cart .order .table-holder::-webkit-scrollbar {
+        width:3px;
+    }
+    .cart .order .table-holder::-webkit-scrollbar-track {
+        background: #f1f1f1; 
+    }
+    .cart .order .table-holder::-webkit-scrollbar-thumb {
+        background: #888; 
+    }
+    .cart .order .table-holder::-webkit-scrollbar-thumb:hover {
+        background: #555; 
+    }
     .cart .order table {
         width: 100%;
         margin-top: 15px;
         text-align: left;
         border-top: 1px solid #eee;
     }
+    .cart .order table .mealactions{
+        display:block;
+        margin-top:2px;
+    }
+    .cart .order table .mealactions i{
+        background: #facc48;
+        padding: 2px;
+        text-align: center;
+        border-radius: 100%;
+        width: 24px;
+        height: 24px;
+        line-height: 20px;
+        margin: 0 5px 0 0;
+        color: #454545;
+    }
+    .cart .order table .mealactions i:before{
+        
+    }
+    .cart .order .cart-money-detail{
+        background: #eee;
+    }
+    .cart .order .cart-money-detail ul{
+        margin:0;
+        padding:0;
+    }
+    .cart .order .cart-money-detail ul li.fees{
+        display:none;
+    }
+    .cart .order .cart-money-detail ul li{
+        display:flex;
+        width:100%;
+        align-items: center;
+        justify-content: space-between;
+        padding: 15px;
+        font-size:18px;
+        font-weight:700;
+    }
+    .cart .order .cart-money-detail ul li span{}
 
-    /* .cart .order table tr {
-
-    } */
+    .cart .order table tr {
+        border-top: 1px solid #eee;
+    }
 
     .cart .order table tr td:nth-child(3) {
         min-width: 140px;
@@ -702,7 +837,7 @@
     }
 
     .cart .order table tr:last-child {
-        background: #eee;
+        background:none;
     }
 
     .cart .order table tr td {
@@ -1609,21 +1744,8 @@
         width: 100%;
         position: sticky;
         top: 20px;
-        overflow-y: scroll;
-        height: 60vh;
     }
-    #cart-stiky::-webkit-scrollbar {
-        width:3px;
-    }
-    #cart-stiky::-webkit-scrollbar-track {
-        background: #f1f1f1; 
-    }
-    #cart-stiky::-webkit-scrollbar-thumb {
-        background: #888; 
-    }
-    #cart-stiky::-webkit-scrollbar-thumb:hover {
-        background: #555; 
-    }
+    
     @media (max-width: 767px) {
         .increment-buttons {
            
@@ -1649,7 +1771,6 @@
         .mobile-cart-button{
             position: fixed;
             bottom: 0;
-            display: flex;
             background-color: #facc48;
             border-color: #facc48;
             font-weight: 600;
@@ -1659,6 +1780,20 @@
             padding: 20px;
             justify-content: space-around;
             cursor:pointer;
+            height: 64px;
+            display:block;
+            transition: all ease-in-out 0.3s;
+        }
+        .mobile-cart-button .inner {
+            display: flex;
+            width: 100%;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom:20px;
+            transition: all 0.5s ease-in;
+        }
+        .mobile-cart-button .inner span{
+            color: #000;
         }
         .mobile-cart-button svg{
             filter: brightness(0);
@@ -1691,5 +1826,90 @@
         #add-product.modal .count-footer h3{
             display:none;
         }
+        .cartheight{
+            height: 70vh;
+        }
+        .cartheight>ul {
+            margin:0;
+            padding:0;
+            max-height: 250px;
+            overflow-y: scroll;
+        }
+        .cartheight>ul>li{
+            display:flex;
+            font-size:14px;
+            border-top: 1px dashed #414141;
+            padding: 10px 0;
+            width:100%;
+            justify-content: space-between;
+        }
+        .cartheight>ul>li>span{
+            padding:5px;
+            color: #000;
+        }
+        .cartheight>ul>li>span.qty{
+            flex: 0 0 50px;
+            min-width: 50px;
+            position: relative;
+            padding-left: 20px;
+        }
+        .cartheight>ul>li>span.qty .qtyincrement{
+            display: inline-block;
+            vertical-align: middle;
+            position: absolute;
+            left: 0;
+            top: -7px;
+        }
+        .cartheight>ul>li>span.qty .qtyincrement i{
+            display: block;
+            margin: 5px 0;
+            font-size:15px
+        }
+        .cartheight>ul>li>span.meal{
+            flex: 0 0 calc(100% - 115px);
+        }
+        .cartheight>ul>li>span.meal ul{
+            margin: 0;
+            padding: 0;
+        }
+        .cartheight>ul>li>span.meal ul li{
+            margin-bottom:2px;
+            font-size:12px;
+            display:block;
+        }
+        .cartheight>ul>li>span.prices{
+            flex:0 0 100px;
+            width:100px;
+        }
+        .cartheight>ul>li>span.meal .mealactions{
+            display:block;
+            margin-top:2px;
+        }
+        .cartheight>ul>li>span.meal .mealactions i{
+            background: #f1f1f1;
+            padding: 2px;
+            text-align: center;
+            border-radius: 100%;
+            width: 22px;
+            height: 22px;
+            line-height: 19px;
+            margin: 0 5px 0 0;
+            color: #454545;
+        }
+        .cartheight>ul>li>span.meal .mealactions i:before{
+            margin-left: 1px;
+        }
+        .cartheight .confirm-btn{
+            text-align:center;
+        }
+        .cartheight .confirm-btn .anima-btn{
+            color: #000;
+            margin-top: 20px;
+        }
+        .cartheight .confirm-btn .anima-btn:focus{
+            outline:0;
+            box-shadow:none;
+        }
+
     }
 </style>

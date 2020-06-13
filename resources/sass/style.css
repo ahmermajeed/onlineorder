@@ -468,7 +468,11 @@ label.error {
 .required-text {
     color: #f00;
 }
-
+.modal .increment-buttons {
+    align-items: center;
+    display: flex;
+    justify-content: flex-start;
+}
 .modal .increment-buttons button{
     width: 30px;
     height: 30px;
@@ -488,8 +492,23 @@ label.error {
     color: #a1a1a1;
 }
 .modal .increment-buttons button.btn-plus{
-    color: #facc48;
+    /* color: #facc48; */
+    color: #a1a1a1;
 }
+.modal .increment-buttons .btn-badge-count{
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    background-color: #b49334;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 400;
+    border-radius: 5px;
+    vertical-align: middle;
+    text-align: center;
+}
+    
 .modal .count-footer{
     justify-content: space-between;
     align-items: center;
@@ -2022,7 +2041,7 @@ label.error {
 .modal h3 {
     color: #facc48;
     padding: 0;
-    font-size: 25px;
+    font-size: 20px;
     font-weight: 700;
     border-bottom: 0;
     font-family: "Nunito", sans-serif;
@@ -2199,8 +2218,8 @@ label.error {
     color: #facc48;
 }
 .modal .count-footer{
-    justify-content: space-between;
-    align-items: center;
+    justify-content: end;
+    align-items: flex-end;
 }
 .modal .add-count-button {
     min-width: 250px;
