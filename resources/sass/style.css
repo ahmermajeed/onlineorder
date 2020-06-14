@@ -2334,5 +2334,8 @@ label.error {
     .checkout-cart-form {
         order: 2;
     }
+    .navbar.navbar-expand-lg.navbar-dark.bg-dark.static-top{
+        text-align: center;
+    }
 }
 
