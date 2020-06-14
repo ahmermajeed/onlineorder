@@ -13031,7 +13031,7 @@ font-family: 'Montserrat', sans-serif;
     background-image: url(/images/mainbg.png?51b76ec7cef361ccbcd261b89689dd90);
     background-size: cover;
     background-repeat: repeat;
-    padding-bottom: 220px;
+    padding-bottom: 150px;
 }
 .header{
     text-align: center;
@@ -13132,7 +13132,7 @@ font-family: 'Montserrat', sans-serif;
     position: absolute;
     width: 407px;
     right: -54px;
-    top: 106vh;
+    top: 98vh;
 }
 .sliderbottomsparkle{
     position: absolute;
