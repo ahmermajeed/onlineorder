@@ -49,6 +49,15 @@
                                     <div class="offset-md-1 col-md-10">
                                         <div class="main-banner-holder">
                                             <img src="../../images/image00003.jpg" style="max-height: 400px;">
+
+
+                                            <hooper :itemsToShow="1" :centerMode="true" pagination="no">
+                                                <slide v-for="(slide, indx) in images" :key="indx" :index="indx">
+                                                    <img :src="slide" style="max-height: 400px;">
+                                                </slide>
+                                                ...
+
+                                            </hooper>
                                         </div>
                                     </div>
                                 </div><!--main-banner-->
