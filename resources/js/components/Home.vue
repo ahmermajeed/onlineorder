@@ -42,6 +42,14 @@
                                             <li>   <router-link :to="{ path: 'contact-us'}">
                                                 <a class="nav-link" >Contact Us</a>
                                             </router-link></li>
+
+                                            <li>   <router-link :to="{ path: 'contact-us'}">
+                                                <a class="nav-link" >Allergy Information </a>
+                                            </router-link></li>
+
+                                            <li>   <a  target="_blank" href="../../files/NEW-Papa-G-A4-Takeaway-Menu.pdf">
+                                                <a class="nav-link" >Our Menu </a>
+                                            </a></li>
                                         </ul>
                                     </div><!--//navigation-bar-->
                                 </div> <!--//header-->
