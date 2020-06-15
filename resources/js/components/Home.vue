@@ -48,9 +48,6 @@
                                 <div class="main-banner row">
                                     <div class="offset-md-1 col-md-10">
                                         <div class="main-banner-holder">
-                                            <img src="../../images/image00003.jpg" style="max-height: 400px;">
-
-
                                             <hooper :itemsToShow="1" :centerMode="true" pagination="no">
                                                 <slide v-for="(slide, indx) in images" :key="indx" :index="indx">
                                                     <img :src="slide" style="max-height: 400px;">
@@ -227,14 +224,7 @@
         data: function () {
             return {
                 images: [
-                    'https://dummyimage.com/800/ffffff/000000',
-                    'https://dummyimage.com/1600/ffffff/000000',
-                    'https://dummyimage.com/1280/000000/ffffff',
-                    'https://dummyimage.com/400/000000/ffffff',
-                    'https://dummyimage.com/800/ffffff/000000',
-                    'https://dummyimage.com/1600/ffffff/000000',
-                    'https://dummyimage.com/1280/000000/ffffff',
-                    'https://dummyimage.com/400/000000/ffffff'
+                    '../../images/image00003.jpg',
                 ],
                 stories: [],
                 index: null
