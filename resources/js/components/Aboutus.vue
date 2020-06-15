@@ -8,9 +8,9 @@
                     <div class="main_banner row">
                         <div class="container">
                             <div class="row">
-                                <div class="offset-lg-5 col-lg-7 offset-md-4 col-md-8 offset-sm-2 col-sm-10">
+                                <div class="offset-lg-5 col-lg-7 offset-md-4 col-md-8 offset-sm-0 col-sm-10">
                                     <div class="row">
-                                        <div class="col-lg-8 col-md-8 col-sm-7 col-xs-12">
+                                        <div class="col-lg-8 col-md-8 col-sm-12 col-xs-12">
                                             <h2>We Know</h2>
                                             <h3>How to Make Your<br> Life Awesome<span class="pulse"></span></h3>
 

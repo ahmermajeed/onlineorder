@@ -13,7 +13,6 @@
                 <h4>Allergy Information</h4>
                 <p>lorem ipsume lorem ipsume lorem ipsume lorem ipsume lorem ipsume lorem ipsume lorem ipsume lorem ipsume lorem ipsume lorem ipsume lorem ipsume lorem ipsume lorem ipsume lorem ipsume lorem ipsume lorem ipsume lorem ipsume lorem ipsume lorem ipsume lorem ipsume lorem ipsume lorem ipsume </p>
 
-
                 <form action="" method="">
 
 <!--                    <div>-->
@@ -81,22 +80,20 @@
                         <textarea class="form-control" rows="3" cols="12"  v-model="productData['special_instruction']"></textarea>
                     </div>
                     <div class="row count-footer">
-                        <div class="col increment-buttons" >
+                        <div class="col increment-buttons">
                             <button type="button" class="btn-minus" @click.prevent="minusQuantity()">
-                                -
+                               <i class="fa fa-minus-square-o"></i>
                             </button>
+                            <span class="btn-badge-count">{{product_quantity}}</span>   
                             <button type="button" class="btn-plus"  @click.prevent="plusQuantity()" >
-                                +
+                                <i class="fa fa-plus-square-o"></i>
                             </button>
                         </div>
 
                         <div class="col text-right">
 
                                <h3 >Total Amount : {{priceFormat(total_amount_of_single_product * product_quantity)}}</h3>
-
-                            <button  @click.prevent="addToCart()" class="add-count-button">
-                                <span class="btn-badge-count">{{product_quantity}}</span>
-                                Add</button>
+                                <button  @click.prevent="addToCart()" class="add-count-button">Add</button>
                         </div>
                     </div>
                 </form>
