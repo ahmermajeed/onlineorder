@@ -468,16 +468,20 @@ label.error {
 .required-text {
     color: #f00;
 }
-
+.modal .increment-buttons {
+    align-items: center;
+    display: flex;
+    justify-content: flex-start;
+}
 .modal .increment-buttons button{
     width: 30px;
     height: 30px;
-    line-height: 30px;
+    line-height: 36px;
     padding: 0;
     background: none;
     border: 0;
     cursor: pointer;
-    font-size: 30px;
+    font-size: 24px;
 }
 .modal .increment-buttons button:focus,
 .modal .increment-buttons button:hover{
@@ -485,11 +489,27 @@ label.error {
     box-shadow: none;
 }
 .modal .increment-buttons button.btn-minus{
-    color: #a1a1a1;
-}
-.modal .increment-buttons button.btn-plus{
+    /* color: #a1a1a1; */
     color: #facc48;
 }
+.modal .increment-buttons button.btn-plus{
+    /* color: #facc48; */
+    color: #facc48;
+}
+.modal .increment-buttons .btn-badge-count{
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    background-color:#facc48;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 400;
+    border-radius: 5px;
+    vertical-align: middle;
+    text-align: center;
+}
+    
 .modal .count-footer{
     justify-content: space-between;
     align-items: center;
@@ -568,7 +588,7 @@ font-family: 'Montserrat', sans-serif;
     background-image: url(../images/mainbg.png);
     background-size: cover;
     background-repeat: repeat;
-    padding-bottom: 220px;
+    padding-bottom: 150px;
 }
 .header{
     text-align: center;
@@ -669,7 +689,7 @@ font-family: 'Montserrat', sans-serif;
     position: absolute;
     width: 407px;
     right: -54px;
-    top: 106vh;
+    top: 98vh;
 }
 .sliderbottomsparkle{
     position: absolute;
@@ -2022,7 +2042,7 @@ label.error {
 .modal h3 {
     color: #facc48;
     padding: 0;
-    font-size: 25px;
+    font-size: 20px;
     font-weight: 700;
     border-bottom: 0;
     font-family: "Nunito", sans-serif;
@@ -2192,15 +2212,10 @@ label.error {
     outline: 0;
     box-shadow: none;
 }
-.modal .increment-buttons button.btn-minus{
-    color: #a1a1a1;
-}
-.modal .increment-buttons button.btn-plus{
-    color: #facc48;
-}
+
 .modal .count-footer{
-    justify-content: space-between;
-    align-items: center;
+    justify-content: end;
+    align-items: flex-end;
 }
 .modal .add-count-button {
     min-width: 250px;
@@ -2236,6 +2251,14 @@ label.error {
 }
 .navigation-bar.navbar-collapse.home-navbar {
     display: block;
+}
+.hooper{
+    min-height: 400px;
+}
+.hooper:focus,
+.hooper-list:focus{
+    outline: 0;
+    border: 0;
 }
 @media (min-width: 576px) {
     .modal .modal-dialog {
@@ -2311,6 +2334,16 @@ label.error {
     }
     .modal .add-count-button {
         min-width: 180px;
+    }
+    .checkout-cart-desktop {
+        order: 1;
+        margin-top: 30px;
+    }
+    .checkout-cart-form {
+        order: 2;
+    }
+    .navbar.navbar-expand-lg.navbar-dark.bg-dark.static-top{
+        text-align: center;
     }
 }
 

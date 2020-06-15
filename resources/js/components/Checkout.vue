@@ -4,7 +4,7 @@
         <div class="loading" v-if="loading">Loading&#8230;</div>
         <div class="container-fluid">
             <div class="row full">
-                <div class="col-sm-12 business checkoutpage col-lg-9 col-md-8 col-sm-8">
+                <div class="col-sm-12 business checkoutpage col-lg-9 col-md-8 col-sm-8 checkout-cart-form">
                     <div class="row">
                         <div class="col-sm-12 offset-sm-0 col-md-10 offset-md-1">
                             <div class="row  mt-4 box-shad p-3 mb-5 rounded">
@@ -156,37 +156,41 @@
                 </div>
 
 
-                <div class="col-xs-12 full cart col-lg-3 col-md-4 col-sm-4"   v-if="getAllCartArray.length > 1"  >
+                <div class="col-xs-12 full cart col-lg-3 col-md-4 col-sm-12 checkout-cart-desktop"   v-if="getAllCartArray.length > 1"  >
                     <div class="order" id="cart-stiky">
                         <h2>Your Order </h2>
                         <div>
                             <strong>Order Details</strong>
                             <button class=" btn btn-primary" @click="placeOrder()">Checkout</button>
-                            <table class=tbl_cart_list>
-                                <tr v-for="(cart, product_index) in getAllCartArray"  v-if="product_index  > 0">
-                                    <td class=highlighted>
-                                    </td>
-                                    <td>{{ cart.quantity}}  X</td>
+                            <div class="table-holder">
+                                <table class=tbl_cart_list>
+                                    <tr v-for="(cart, product_index) in getAllCartArray"  v-if="product_index  > 0">
+                                        <td class=highlighted>
+                                        </td>
+                                        <td>
+                                            <span>{{ cart.quantity}}  <i>X</i></span>
+                                        </td>
+                                        <td>
+                                            <div>{{cart.product_name}}</div>
+                                            <div v-if="cart.extras" v-for="(extra, extra_index) in cart.extras" >
+                                                <strong>{{extra.group_name}}:</strong> {{extra.choice}}
+                                            </div>
+                                        </td>
 
-                                    <td>
-                                        <div>{{cart.product_name}}</div>
-                                        <div v-if="cart.extras" v-for="(extra, extra_index) in cart.extras" >
-                                            <strong>{{extra.group_name}} :</strong> {{extra.choice}}
-                                        </div>
-                                    </td>
-
-                                    <td  v-if="!cart.extras">Price:</br>£ {{priceFormat(cart.price * cart.quantity) }}</td>
-                                    <td  v-if="cart.extras">Price:</br> £{{priceFormat(cart.single_product_total_amount)}} </td>
-
-
-                                <tr class="fees">
-                                <tr>
-                                    <td></td>
-                                    <td>Total</td>
-                                    <td></td>
-                                    <td>{{priceFormat(total_amount)}}</td>
-                                </tr>
-                            </table>
+                                        <td  v-if="!cart.extras">£ {{priceFormat(cart.price * cart.quantity) }}</td>
+                                        <td  v-if="cart.extras">£{{priceFormat(cart.single_product_total_amount)}} </td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <div class="cart-money-detail">
+                                <ul>
+                                    <li class="fees"></li>
+                                    <li>
+                                        <span>Total</span>
+                                        <span>£{{priceFormat(total_amount)}}</span>
+                                    </li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
                 </div>
