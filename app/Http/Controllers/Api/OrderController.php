@@ -8,6 +8,8 @@ use App\Http\Controllers\Controller;
 use Edujugon\PushNotification\PushNotification;
 use Illuminate\Http\Request;
 use Validator;
+use Stripe\Error\Card;
+use Cartalyst\Stripe\Stripe;
 use Symfony\Component\HttpFoundation\Response;
 
 class OrderController extends Controller
@@ -26,7 +28,7 @@ class OrderController extends Controller
         $pagination = !empty($requestData['pagination']) ? $requestData['pagination'] : false;
         $per_page = self::PER_PAGE;
 
-        $data = $this->_repository->findByAll($pagination,$per_page,$requestData);
+        $data = $this->_repository->findByAll($pagination, $per_page, $requestData);
 
         $output = [
             'data' => $data['data'],
@@ -41,7 +43,7 @@ class OrderController extends Controller
         $requestData = $request->all();
         $requestData['id'] = $id;
 
-        $validator =  Validator::make($requestData, [
+        $validator = Validator::make($requestData, [
             'id' => 'required|exists:orders,id',
             'status' => 'required'
         ]);
@@ -62,7 +64,7 @@ class OrderController extends Controller
     {
         $requestData = $request->all();
 
-        $validator =  Validator::make($requestData, [
+        $validator = Validator::make($requestData, [
             'user_id' => 'required',
             'total_amount_with_fee' => 'required',
             'delivery_fees' => 'required',
@@ -72,7 +74,11 @@ class OrderController extends Controller
             'order_details.*.price' => 'required|numeric',
             'order_details.*.product_id' => 'required|numeric',
             'order_details.*.product_name' => 'required',
-            'order_details.*.quantity' => 'required'
+            'order_details.*.quantity' => 'required',
+            'card_no' => 'required_if:payment,credit_card',
+            'ccExpiryMonth' => 'required_if:payment,credit_card',
+            'ccExpiryYear' => 'required_if:payment,credit_card',
+            'cvvNumber' => 'required_if:payment,credit_card'
         ]);
 
         if ($validator->fails()) {
@@ -84,6 +90,10 @@ class OrderController extends Controller
         $data = $this->_repository->placeOrder($requestData);
 
         if ($data) {
+
+            if ($requestData['payment'] == "credit_card") {
+                $this->stripeCharge($requestData);
+            }
             $this->sendNotification($data);
         }
 
@@ -101,13 +111,63 @@ class OrderController extends Controller
         $push->setMessage([
             'data' => [
                 'title' => 'This is the title',
-                'body'=>'New order has been placed to your restaurant',
+                'body' => 'New order has been placed to your restaurant',
                 'sound' => 'default',
                 'order_id' => $data->id
             ]
         ])->setDevicesToken($devices)->send();
 
         $response = $push->getFeedback();
+    }
+
+    /** Send Push Notification */
+    public function stripeCharge($data)
+    {
+        $stripe = Stripe::make(env('STRIPE_SECRET'));
+
+        try {
+            $token = $stripe->tokens()->create([
+                'card' => [
+                    'number' => $data['card_no'],
+                    'exp_month' => $data['ccExpiryMonth'],
+                    'exp_year' => $data['ccExpiryYear'],
+                    'cvc' => $data['cvvNumber'],
+                ],
+            ]);
+
+            print_r($token);
+            exit;
+
+            if (!isset($token['id'])) {
+                return redirect()->route('addmoney.paymentstripe');
+            }
+            $charge = $stripe->charges()->create([
+                'card' => $token['id'],
+                'currency' => 'USD',
+                'amount' => 20.49,
+                'description' => 'wallet',
+            ]);
+
+            if ($charge['status'] == 'succeeded') {
+                echo "<pre>";
+                print_r($charge);
+                exit();
+                return redirect()->route('addmoney.paymentstripe');
+            } else {
+                \Session::put('error', 'Money not add in wallet!!');
+                return redirect()->route('addmoney.paymentstripe');
+            }
+        } catch (Exception $e) {
+            \Session::put('error', $e->getMessage());
+            return redirect()->route('addmoney.paymentstripe');
+        } catch (\Cartalyst\Stripe\Exception\CardErrorException $e) {
+            \Session::put('error', $e->getMessage());
+            return redirect()->route('addmoney.paywithstripe');
+        } catch (\Cartalyst\Stripe\Exception\MissingParameterException $e) {
+            \Session::put('error', $e->getMessage());
+            return redirect()->route('addmoney.paymentstripe');
+        }
+
     }
 
     public function getTotalSales(Request $request)
