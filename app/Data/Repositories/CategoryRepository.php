@@ -23,7 +23,7 @@ class CategoryRepository
     {
 
         $data = array();
-        $model = $this->model;
+        $model = $this->model->where('status', 1);
 
         if (isset($input['id']) && !empty($input['id'])) {
             $model = $model->where('id', $input['id']);
