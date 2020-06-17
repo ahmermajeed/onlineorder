@@ -51,10 +51,17 @@
                                     <div class="offset-md-1 col-md-10">
                                         <div class="main-banner-holder">
                                             <hooper :itemsToShow="1" :centerMode="true" pagination="no">
-                                                <slide v-for="(slide, indx) in images" :key="indx" :index="indx">
-                                                    <img :src="slide" style="max-height: 400px;">
+
+                                                <slide>
+                                                    <img src="../../images/mainbanner1.jpg">
                                                 </slide>
-                                                ...
+                                                <slide>
+                                                    <img src="../../images/mainbanner2.jpg">
+                                                </slide>
+
+                                               <!-- <slide v-for="(slide, indx) in images" :key="indx" :index="indx">
+                                                    <img :src="slide" style="max-height: 400px;">
+                                                </slide>-->
 
                                             </hooper>
                                         </div>
@@ -226,6 +233,7 @@
         data: function () {
             return {
                 images: [
+                    '../../images/mainbanner1.jpeg',
                     '../../images/image00003.jpg',
                 ],
                 stories: [],
