@@ -30,11 +30,18 @@
                         </router-link>
                     </li>
 
-
                     <li class="nav-item">
                         <router-link :to="{ path: 'contact-us'}">
                             <a class="nav-link" >Contact Us</a>
                         </router-link>
+                    </li>
+
+                    <li class="nav-item" >
+                        <a href="#" class="nav-link" @click="downloadAllery">Allergy Food</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="#" class="nav-link" @click="downloadMenu">Our Menu</a>
                     </li>
 
                 </ul>
@@ -42,3 +49,76 @@
         </div>
     </nav>
 </template>
+
+<script>
+    export default {
+        data() {
+            return {}
+        },
+        methods: {
+
+            downloadAllery() {
+
+                let self = this;
+                let url = 'api/downloadAllergy';
+                var request;
+                var headers = {
+                    'Content-Type': 'application/x-www-form-urlencoded'
+                };
+
+                request = $.ajax({
+                    url: url,
+                    method: "GET",
+                    responseType: 'blob',
+                    headers: headers
+                });
+                request.done(function (response, textStatus, jqXHR) {
+
+                    var fileURL = response.data;
+                    var fileLink = document.createElement('a');
+
+                    fileLink.href = fileURL;
+
+                    fileLink.setAttribute('download', 'allergy.docx');
+                    document.body.appendChild(fileLink);
+
+                    fileLink.click();
+                });
+                request.fail(function (jqXHR, textStatus, errorThrown) {
+
+                });
+            },
+
+            downloadMenu() {
+
+                let self = this;
+                let url = 'api/downloadMenu';
+                var request;
+                var headers = {
+                    'Content-Type': 'application/x-www-form-urlencoded'
+                };
+                request = $.ajax({
+                    url: url,
+                    method: "GET",
+                    responseType: 'blob',
+                    headers: headers
+                });
+                request.done(function (response, textStatus, jqXHR) {
+
+                    var fileURL = response.data;
+                    var fileLink = document.createElement('a');
+
+                    fileLink.href = fileURL;
+
+                    fileLink.setAttribute('download', 'Menu.pdf');
+                    document.body.appendChild(fileLink);
+
+                    fileLink.click();
+                });
+                request.fail(function (jqXHR, textStatus, errorThrown) {
+
+                });
+            },
+        }
+    }
+</script>

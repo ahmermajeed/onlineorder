@@ -65,3 +65,7 @@ Route::put('update-order/{id}', 'Api\OrderController@updateOrderStatus');
 
 /** Update General Settings */
 Route::post('update-general-setting', 'Api\GeneralSettingController@updateGeneralSettings');
+
+Route::get('downloadAllergy', 'Api\ProductController@downloadAllergy');
+
+Route::get('downloadMenu', 'Api\ProductController@downloadMenu');

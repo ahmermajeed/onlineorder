@@ -63,4 +63,20 @@ class ProductController extends Controller
         $output = ['data' => $data, 'message' => __("messages.success")];
         return response()->json($output, Response::HTTP_OK);
     }
+
+    public function downloadAllergy(Request $request)
+    {
+        $file = url('files/2020-Papa-G-BHAM-Allergy-BOOK.docx');
+
+        $output = ['data' => $file, 'message' =>  "Success"];
+        return response()->json($output, Response::HTTP_OK);
+    }
+
+    public function downloadMenu(Request $request)
+    {
+        $file = url('files/NEW-Papa-G-A4-Takeaway-Menu.pdf');
+
+        $output = ['data' => $file, 'message' =>  "Success"];
+        return response()->json($output, Response::HTTP_OK);
+    }
 }
