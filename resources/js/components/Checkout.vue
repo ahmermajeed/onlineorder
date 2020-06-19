@@ -407,7 +407,7 @@
 
                 let data = { 'user_id':11,
                     'total_amount_with_fee':this.total_amount,
-                    'delivery_fees': 0,
+                    'delivery_fees': '150',
                     'payment':'cod',
                     'delivery_address':this.form.address +" "+ this.form.street +" "+ this.form.street +" "+ this.form.postal_code ,
                     'order_details':  this.$store.getters.getAllCartArray,
