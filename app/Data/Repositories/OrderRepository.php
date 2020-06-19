@@ -69,7 +69,7 @@ class OrderRepository
     public function placeOrder($data) {
         $data['reference'] = random_int(1000, 9999);
 
-        $placed = $this->model->create(["user_id" => $data['user_id'], "reference" => $data['reference'], "total_amount_with_fee" => $data['total_amount_with_fee'], "delivery_fees" => $data['delivery_fees'], "payment" => $data['payment'], "delivery_address" => $data['delivery_address'], "status" => "Order Placed"]);
+        $placed = $this->model->create(["user_id" => $data['user_id'], "reference" => $data['reference'], "total_amount_with_fee" => $data['total_amount_with_fee'], "delivery_fees" => $data['delivery_fees'], "payment" => $data['payment'], "order_type" => $data['order_type'], "delivery_address" => $data['delivery_address'], "status" => "Order Placed"]);
 
         if($placed) {
             foreach ($data['order_details'] as $detail) {

@@ -13,13 +13,13 @@
                                 </div>
                                 <div class="col-sm-6">
                                     <label class="customradiobutton radioiconed radio-inline mr-3">
-                                        <input type="radio" value="pickup" @change.prevent="showOrderType('pickup')"  v-model="form.order_type"><i class="fa fa-sign-language"></i> Pick up
+                                        <input type="radio" value="Pickup" @change.prevent="showOrderType('pickup')"  v-model="form.order_type"><i class="fa fa-sign-language"></i> Pick up
 
                                     </label>
                                 </div>
                                 <div class="col-sm-6">
                                     <label class="customradiobutton radioiconed radio-inline mr-3">
-                                        <input type="radio" value="delivery" v-model="form.order_type" @change.prevent="showOrderType('getdelivery')" ><i class="fa fa-truck"></i> Delivery
+                                        <input type="radio" value="Delivery" v-model="form.order_type" @change.prevent="showOrderType('getdelivery')" ><i class="fa fa-truck"></i> Delivery
 
                                     </label>
                                 </div>
@@ -411,7 +411,8 @@
                     'payment':'cod',
                     'delivery_address':this.form.address +" "+ this.form.street +" "+ this.form.street +" "+ this.form.postal_code ,
                     'order_details':  this.$store.getters.getAllCartArray,
-                    'user_data':this.form
+                    'user_data':this.form,
+                    'order_type': this.form.order_type
                 };
 
 
