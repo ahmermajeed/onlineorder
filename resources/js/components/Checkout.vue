@@ -409,7 +409,7 @@
                     'total_amount_with_fee':this.total_amount,
                     'delivery_fees': '0',
                     'payment':'cod',
-                    'delivery_address':this.form.address +" "+ this.form.street +" "+ this.form.street +" "+ this.form.postal_code ,
+                    'delivery_address':this.form.address +" "+ this.form.street +" "+ this.form.postal_code,
                     'order_details':  this.$store.getters.getAllCartArray,
                     'user_data':this.form,
                     'order_type': this.form.order_type
