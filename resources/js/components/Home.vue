@@ -43,6 +43,13 @@
                                                 <a class="nav-link" >Contact Us</a>
                                             </router-link></li>
 
+                                            <li>
+                                                <a href="#" @click="openAllergy" class="nav-link">Allergy Information</a>
+                                            </li>
+
+                                            <li>
+                                                <a href="#" class="nav-link" @click="openMenu">Our Menu</a>
+                                            </li>
 
                                         </ul>
                                     </div><!--//navigation-bar-->
@@ -210,7 +217,7 @@
                 </div>
             </div><!--container-fluid-->
         </div><!--wrapper-->
-
+        <download-menu @HideModalValue="hideModal" :showModalProp="showPopup" :isMenu="menu" :isAllergy="allergy" ></download-menu>
     </div>
 </template>
 
@@ -237,7 +244,10 @@
                     '../../images/image00003.jpg',
                 ],
                 stories: [],
-                index: null
+                index: null,
+                showPopup: false,
+                menu: false,
+                allergy: false
             };
         },
         mounted() {
@@ -254,6 +264,22 @@
                         _this.loading  = false;
                     });
             },
+
+            hideModal() {
+                this.showPopup = false;
+            },
+
+            openMenu () {
+                this.showPopup = true;
+                this.menu = true;
+                this.allergy = false;
+            },
+
+            openAllergy () {
+                this.showPopup = true;
+                this.allergy = true;
+                this.menu = false;
+            }
         }
     }
 </script>

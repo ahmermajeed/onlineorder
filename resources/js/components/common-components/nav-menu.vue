@@ -37,88 +37,46 @@
                     </li>
 
                     <li class="nav-item" >
-                        <a href="#" class="nav-link" @click="downloadAllery">Allergy Food</a>
+                        <a href="#" @click="openAllergy" class="nav-link">Allergy Information</a>
                     </li>
 
                     <li class="nav-item">
-                        <a href="#" class="nav-link" @click="downloadMenu">Our Menu</a>
+                        <a href="#" class="nav-link" @click="openMenu">Our Menu</a>
                     </li>
 
                 </ul>
             </div>
         </div>
+        <download-menu @HideModalValue="hideModal" :showModalProp="showPopup" :isMenu="menu" :isAllergy="allergy" ></download-menu>
     </nav>
 </template>
 
 <script>
     export default {
         data() {
-            return {}
+            return {
+                showPopup: false,
+                menu: false,
+                allergy: false
+            }
         },
         methods: {
 
-            downloadAllery() {
-
-                let self = this;
-                let url = 'api/downloadAllergy';
-                var request;
-                var headers = {
-                    'Content-Type': 'application/x-www-form-urlencoded'
-                };
-
-                request = $.ajax({
-                    url: url,
-                    method: "GET",
-                    responseType: 'blob',
-                    headers: headers
-                });
-                request.done(function (response, textStatus, jqXHR) {
-
-                    var fileURL = response.data;
-                    var fileLink = document.createElement('a');
-
-                    fileLink.href = fileURL;
-
-                    fileLink.setAttribute('download', 'allergy.docx');
-                    document.body.appendChild(fileLink);
-
-                    fileLink.click();
-                });
-                request.fail(function (jqXHR, textStatus, errorThrown) {
-
-                });
+            hideModal() {
+                this.showPopup = false;
             },
 
-            downloadMenu() {
-
-                let self = this;
-                let url = 'api/downloadMenu';
-                var request;
-                var headers = {
-                    'Content-Type': 'application/x-www-form-urlencoded'
-                };
-                request = $.ajax({
-                    url: url,
-                    method: "GET",
-                    responseType: 'blob',
-                    headers: headers
-                });
-                request.done(function (response, textStatus, jqXHR) {
-
-                    var fileURL = response.data;
-                    var fileLink = document.createElement('a');
-
-                    fileLink.href = fileURL;
-
-                    fileLink.setAttribute('download', 'Menu.pdf');
-                    document.body.appendChild(fileLink);
-
-                    fileLink.click();
-                });
-                request.fail(function (jqXHR, textStatus, errorThrown) {
-
-                });
+            openMenu () {
+                this.showPopup = true;
+                this.menu = true;
+                this.allergy = false;
             },
+
+            openAllergy () {
+                this.showPopup = true;
+                this.allergy = true;
+                this.menu = false;
+            }
         }
     }
 </script>
