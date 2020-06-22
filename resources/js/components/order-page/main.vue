@@ -564,7 +564,7 @@
     }
 
     .dishe strong{
-        font-size: 20px;
+        font-size: 15px;
     }
 
     .dishes .disheMulti {
