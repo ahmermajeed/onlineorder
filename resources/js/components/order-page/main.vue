@@ -6,7 +6,7 @@
             <div class="row full">
                 <div class="col-sm-12 full business col-lg-9 col-md-8 col-sm-8">
                     <div class="cover" style='background-image: url("../../../images/image00003.jpeg")'>
-                        <img src="../../../images/mainlogo.webp"  class="logo" >
+                        <img src="../../../images/mainlogo.png"  class="logo" >
                     </div>
                     <div class="business-content">
                         <h2 class="title"> Papa Ge 's

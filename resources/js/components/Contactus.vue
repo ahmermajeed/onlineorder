@@ -7,7 +7,8 @@
 
                     <div class="row">
                         <div class="col-md-12 maps">
-                            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d9941.854482253924!2d-0.9723299!3d51.4680038!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xaf3db6ac989416df!2sPapa%20Gee!5e0!3m2!1sen!2s!4v1591820858758!5m2!1sen!2s" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2429.2156154533595!2d-1.822215984654894!3d52.49333647980907!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4870bae64827134d%3A0x2e1a51de3c022c50!2s888a%20Washwood%20Heath%20Rd%2C%20Ward%20End%2C%20Birmingham%20B8%202NB%2C%20UK!5e0!3m2!1sen!2s!4v1592827053509!5m2!1sen!2s" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
                         </div>
                         <div class="col-12 contact-info-sec text-center">
                             <div class="row">
@@ -88,7 +89,7 @@
                                 <p><span>Site by</span> <a href="#">PapaGes</a></p>
                             </div>
                             <div class="col-md-2 footer-logo">
-                                <img src="../../images/mainlogo.webp" alt="logo">
+                                <img src="../../images/mainlogo.png" alt="logo">
                             </div>
                             <div class="col-md-5 footer-right">
                                 <p><span>Email:</span> <a href="#">support@papages.com</a></p>

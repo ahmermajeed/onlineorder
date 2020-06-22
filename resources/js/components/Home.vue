@@ -2,22 +2,22 @@
     <div>
         <div class="wrapper">
             <div class="container-fluid main-top">
-                <img src="../../images/topleftburger.webp" class="topleftburger parallax_scroll">
-                <img src="../../images/toprightleaves.webp" class="toprightleaves parallax_scroll">
-                <img src="../../images/topleftyelllowsauce.webp" class="topleftyellowsauce parallax_scroll">
-                <img src="../../images/toprightredsauce.webp" class="toprightredsauce parallax_scroll">
-                <img src="../../images/sliderrightsparkle.webp" class="sliderrightsparkle">
-                <img src="../../images/toprightmidleaves.webp" class="toprightmidleaves parallax_scroll">
-                <img src="../../images/topleftbottomburger.webp" class="topleftbottomburger parallax_scroll">
-                <img src="../../images/toprightbottomwood.webp" class="toprightbottomwood parallax_scroll">
-                <img src="../../images/sliderrightsparkle.webp" class="sliderbottomsparkle">
+                <img src="../../images/topleftburger.png" class="topleftburger parallax_scroll">
+                <img src="../../images/toprightleaves.png" class="toprightleaves parallax_scroll">
+                <img src="../../images/topleftyelllowsauce.png" class="topleftyellowsauce parallax_scroll">
+                <img src="../../images/toprightredsauce.png" class="toprightredsauce parallax_scroll">
+                <img src="../../images/sliderrightsparkle.png" class="sliderrightsparkle">
+                <img src="../../images/toprightmidleaves.png" class="toprightmidleaves parallax_scroll">
+                <img src="../../images/topleftbottomburger.png" class="topleftbottomburger parallax_scroll">
+                <img src="../../images/toprightbottomwood.png" class="toprightbottomwood parallax_scroll">
+                <img src="../../images/sliderrightsparkle.png" class="sliderbottomsparkle">
                 <div class="row">
                     <div class="container">
                         <div class="row">
                             <div class="col-12">
                                 <div class="header">
                                     <div class="logo">
-                                        <img src="../../images/mainlogo.webp" alt="logo">
+                                        <img src="../../images/mainlogo.png" alt="logo">
                                     </div><!--logo-->
                                     <button type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler home-navbar-toggler">
                                         <span class="fa fa-bars"></span>
@@ -94,18 +94,18 @@
             </div><!--container-fluid-->
 
             <div class="container-fluid bottom-section">
-                <img src="../../images/menutoptomato.webp" class="menutoptomato">
-                <img src="../../images/menutopleftleaves.webp" class="menutopleftleaves">
-                <img src="../../images/menubannersideleave.webp" class="menubannersideleave">
-                <img src="../../images/menubannerrightcorn.webp" class="menubannerrightcorn">
-                <img src="../../images/menubannerleftchilli.webp" class="menubannerleftchilli">
+                <img src="../../images/menutoptomato.png" class="menutoptomato">
+                <img src="../../images/menutopleftleaves.png" class="menutopleftleaves">
+                <img src="../../images/menubannersideleave.png" class="menubannersideleave">
+                <img src="../../images/menubannerrightcorn.png" class="menubannerrightcorn">
+                <img src="../../images/menubannerleftchilli.png" class="menubannerleftchilli">
                 <div class="row">
                     <div class="container">
                         <div class="row menu-section">
                             <div class="col-md-12">
                                 <h3>Menu</h3>
                                 <div class="menu-banner-holder">
-                                    <img src="../../images/menu-banner.webp">
+                                    <img src="../../images/menu-banner.png">
                                     <div class="banner-links">
                                         <router-link :to="{ path: 'onlineordering'}"> <span>Order Now</span></router-link>
                                         <router-link :to="{ path: 'onlineordering'}"> <span>Our Menu</span></router-link>
@@ -201,7 +201,7 @@
                                     <p><span>Site by</span> <a href="#">PapaGes</a></p>
                                 </div>
                                 <div class="col-md-2 footer-logo">
-                                    <img src="../../images/mainlogo.webp" alt="logo">
+                                    <img src="../../images/mainlogo.png" alt="logo">
                                 </div>
                                 <div class="col-md-5 footer-right">
                                     <p><span>Email:</span> <a href="#">support@papages.com</a></p>
