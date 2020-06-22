@@ -17,7 +17,7 @@
                             <div class="col-12">
                                 <div class="header">
                                     <div class="logo">
-                                        <img src="../../images/mainlogo.webp" alt="logo">
+                                        <img src="../../images/mainlogo.png" alt="logo">
                                     </div><!--logo-->
                                     <button type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler home-navbar-toggler">
                                         <span class="fa fa-bars"></span>
@@ -105,7 +105,7 @@
                             <div class="col-md-12">
                                 <h3>Menu</h3>
                                 <div class="menu-banner-holder">
-                                    <img src="../../images/menu-banner.webp">
+                                    <img src="../../images/menu-banner.png">
                                     <div class="banner-links">
                                         <router-link :to="{ path: 'onlineordering'}"> <span>Order Now</span></router-link>
                                         <router-link :to="{ path: 'onlineordering'}"> <span>Our Menu</span></router-link>
@@ -201,7 +201,7 @@
                                     <p><span>Site by</span> <a href="#">PapaGes</a></p>
                                 </div>
                                 <div class="col-md-2 footer-logo">
-                                    <img src="../../images/mainlogo.webp" alt="logo">
+                                    <img src="../../images/mainlogo.png" alt="logo">
                                 </div>
                                 <div class="col-md-5 footer-right">
                                     <p><span>Email:</span> <a href="#">support@papages.com</a></p>

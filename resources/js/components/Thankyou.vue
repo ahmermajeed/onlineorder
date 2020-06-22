@@ -19,7 +19,7 @@
                             <p><span>Site by</span> <a href="#">PapaGes</a></p>
                         </div>
                         <div class="col-md-2 footer-logo">
-                            <img src="../../images/mainlogo.webp" alt="logo">
+                            <img src="../../images/mainlogo.png" alt="logo">
                         </div>
                         <div class="col-md-5 footer-right">
                             <p><span>Email:</span> <a href="#">support@papages.com</a></p>
