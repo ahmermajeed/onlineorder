@@ -2,15 +2,15 @@
     <div>
         <div class="wrapper">
             <div class="container-fluid main-top">
-                <img src="../../images/topleftburger.webp" class="topleftburger parallax_scroll">
-                <img src="../../images/toprightleaves.webp" class="toprightleaves parallax_scroll">
-                <img src="../../images/topleftyelllowsauce.webp" class="topleftyellowsauce parallax_scroll">
-                <img src="../../images/toprightredsauce.webp" class="toprightredsauce parallax_scroll">
-                <img src="../../images/sliderrightsparkle.webp" class="sliderrightsparkle">
-                <img src="../../images/toprightmidleaves.webp" class="toprightmidleaves parallax_scroll">
-                <img src="../../images/topleftbottomburger.webp" class="topleftbottomburger parallax_scroll">
-                <img src="../../images/toprightbottomwood.webp" class="toprightbottomwood parallax_scroll">
-                <img src="../../images/sliderrightsparkle.webp" class="sliderbottomsparkle">
+                <img src="../../images/topleftburger.png" class="topleftburger parallax_scroll">
+                <img src="../../images/toprightleaves.png" class="toprightleaves parallax_scroll">
+                <img src="../../images/topleftyelllowsauce.png" class="topleftyellowsauce parallax_scroll">
+                <img src="../../images/toprightredsauce.png" class="toprightredsauce parallax_scroll">
+                <img src="../../images/sliderrightsparkle.png" class="sliderrightsparkle">
+                <img src="../../images/toprightmidleaves.png" class="toprightmidleaves parallax_scroll">
+                <img src="../../images/topleftbottomburger.png" class="topleftbottomburger parallax_scroll">
+                <img src="../../images/toprightbottomwood.png" class="toprightbottomwood parallax_scroll">
+                <img src="../../images/sliderrightsparkle.png" class="sliderbottomsparkle">
                 <div class="row">
                     <div class="container">
                         <div class="row">
@@ -94,11 +94,11 @@
             </div><!--container-fluid-->
 
             <div class="container-fluid bottom-section">
-                <img src="../../images/menutoptomato.webp" class="menutoptomato">
-                <img src="../../images/menutopleftleaves.webp" class="menutopleftleaves">
-                <img src="../../images/menubannersideleave.webp" class="menubannersideleave">
-                <img src="../../images/menubannerrightcorn.webp" class="menubannerrightcorn">
-                <img src="../../images/menubannerleftchilli.webp" class="menubannerleftchilli">
+                <img src="../../images/menutoptomato.png" class="menutoptomato">
+                <img src="../../images/menutopleftleaves.png" class="menutopleftleaves">
+                <img src="../../images/menubannersideleave.png" class="menubannersideleave">
+                <img src="../../images/menubannerrightcorn.png" class="menubannerrightcorn">
+                <img src="../../images/menubannerleftchilli.png" class="menubannerleftchilli">
                 <div class="row">
                     <div class="container">
                         <div class="row menu-section">
