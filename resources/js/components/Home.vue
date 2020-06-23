@@ -86,7 +86,9 @@
                         <div class="row">
                             <div class="offset-md-1 col-md-10">
                                 <h3>AboutUs</h3>
-                                <p>Welcome to the home of delicious gourmet burgers.Papa Ge 's is a modern contemporary restaurant that exists to delight passionate burger lovers. Walk in and place your order and sit back and relax and soak in our attractive ambiance as you wait for your order to be prepared. All burgers are cooked to order and we pride ourselves on serving fresh, delicious and hygienic burgers that tantalize the taste buds and excite your senses. Our packaging is designed to be easy to hold and carry as well as ensure that your burgers maintain their flavour and shape.</p>
+                                <p>Papa Ge’s has been established in the uk since 2004 and started off in Tamworth in Staffordshire, it has not reached Birminghak with this new and improved store located at 888 Washwood Heath Road in Birmingham.</p>
+                                <p>We specialise in a wide range of foods such as great quality pizzas, traditional COD and chips, kebabs, burgers and southern fried chicken.
+                                We use the best ingredients to provide the best quality along with providing the best service. We specialise in traditional fish and chips and pizzas as these are our specialities and we have a combined experience of over 50 years. We endeavour to bring our customers the best quality food for the best price.</p>
                             </div><!--//col-->
                         </div><!--aboutus-section-->
                     </div><!--container-->
