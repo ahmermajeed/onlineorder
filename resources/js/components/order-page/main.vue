@@ -19,13 +19,8 @@
                             <div class="desktop-tabs">
                                 <ul class="nav nav-tabs">
                                     <li><a href="#"  @click.prevent="getProductAgainstCategories(false)" >All</a></li>
-                                    <li  v-for="(item, index) in categories"  v-if="index  <= 4"><a href="#" @click.prevent="getProductAgainstCategories(item.id)">{{item.name}}</a></li>
-                                    <li class="dropdown" v-if="cat_count">
-                                        <a data-toggle="dropdown" id="dropdownMenu1" v-if="cat_count">MORE <span class="caret fa fa-angle-down"></span></a>
-                                        <ul class="dropdown-menu dropdown-menu-right" id="dropdown-more" v-if="cat_count">
-                                            <li class="active"  v-for="(item, index) in categories"   v-if="index  > 4" ><a href="#"   @click.prevent="getProductAgainstCategories(item.id)">{{item.name}}</a></li>
-                                        </ul>
-                                    </li>
+                                    <li  v-for="(item, index) in categories"><a href="#" @click.prevent="getProductAgainstCategories(item.id)">{{item.name}}</a></li>
+
                                 </ul>
                             </div>
                             <div class="form-group product-search">
