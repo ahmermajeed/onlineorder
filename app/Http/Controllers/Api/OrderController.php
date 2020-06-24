@@ -94,6 +94,7 @@ class OrderController extends Controller
             if ($requestData['payment'] == "credit_card") {
                 $this->stripeCharge($requestData);
             }
+
             $this->sendNotification($data);
         }
 
