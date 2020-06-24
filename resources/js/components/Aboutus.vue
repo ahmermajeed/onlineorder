@@ -96,7 +96,7 @@
                 _this.loading  = true;
                 axios.get('api/cms/about-us')
                     .then((response) => {
-                       console.log(response);
+                        console.log(response);
                     });
             },
         }

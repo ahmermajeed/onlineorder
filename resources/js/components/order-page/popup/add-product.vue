@@ -156,8 +156,6 @@
                     'single_product_total_amount':total_amount,
                 };
 
-
-
                 for (var key in this.productData) {
                     if(key != undefined){
                             if(key != 'special_instruction'){
@@ -170,6 +168,7 @@
                 if(extras.length > 0 ){
                     this.product_array.extras = extras;
                 }
+
                 let cart_data =  this.$store.getters.getAllCartArray;
                 if(cart_data.length === 0){
                     this.$store.commit('setAllCartArray', this.product_array);
@@ -222,6 +221,8 @@
                     this.total_amount_of_single_product = total;
                 },1000);
             },
+
+
 
         },
         watch: {
