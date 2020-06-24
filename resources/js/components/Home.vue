@@ -130,9 +130,11 @@
                                                 </router-link>
                                             </div>
                                             <div class="text-holder">
-                                                <h5><a href="#"> Deal 1 for £ 2 </a></h5>
-                                                <p><a href="#">*Papa Ge 's wishes you a blessed Ramadan. Enjoy our amazing deals for Iftaar and Dinner.
-                                                   .</a></p>
+                                                <h5><a href="#"> NAN KEBAB DEAL for £14.99</a></h5>
+                                                <p>  Donner in Nan (R)</p>
+                                                <p>+ Mix in Nan (R)</p>
+                                                <p>+ Chicken in Nan (R) </p>
+                                                <p>+ 1 Chips (R) + 1.5ltr Pepsi</p>
                                                 <i class="fa fa-long-arrow"></i>
                                             </div>
                                             <router-link :to="{ path: 'onlineordering'}"  class="deal-detail"><i class="fa fa-long-arrow-right"></i></router-link>
@@ -146,9 +148,11 @@
                                                 </router-link>
                                             </div>
                                             <div class="text-holder">
-                                                <h5><a href="#">Deal 1 for £ 2</a></h5>
-                                                <p><a href="#">*Papa Ge 's wishes you a blessed Ramadan. Enjoy our amazing deals for Iftaar and Dinner.
-                                                 </a></p>
+                                                <h5><a href="#">FAMILY DEAL for £16.99</a></h5>
+                                                <p>  2 Medium Pizzas</p>
+                                                <p>+ Garlic Bread (4pcs) </p>
+                                                <p>+ 1 Chips (R)</p>
+                                                <p>+ 1.5 ltr Pepsi</p>
                                                 <i class="fa fa-long-arrow"></i>
                                             </div>
                                             <router-link :to="{ path: 'postal-code'}"  class="deal-detail"><i class="fa fa-long-arrow-right"></i></router-link>
@@ -162,9 +166,11 @@
                                                 </router-link>
                                             </div>
                                             <div class="text-holder">
-                                                <h5><a href="#">Deal 1 for £ 2</a></h5>
-                                                <p><a href="#">*Papa Ge 's wishes you a blessed Ramadan. Enjoy our amazing deals for Iftaar and Dinner.
-                                                    apply.</a></p>
+                                                <h5><a href="#">BIG PIZZA DEAL for £24.99</a></h5>
+                                                <p>  Any 2 Large Pizzas</p>
+                                                <p>+ 2 Chips (R)</p>
+                                                <p>+ 2 Garlic Bread</p>
+                                                <p>+ 2 x 1.5 ltr Pepsi</p>
                                                 <i class="fa fa-long-arrow"></i>
                                             </div>
                                             <router-link :to="{ path: 'postal-code'}"  class="deal-detail"><i class="fa fa-long-arrow-right"></i></router-link>
@@ -178,9 +184,11 @@
 
                                             </div>
                                             <div class="text-holder">
-                                                <h5><a href="#">Deal 1 for £ 2</a></h5>
-                                                <p><a href="#">*Papa Ge 's wishes you a blessed Ramadan. Enjoy our amazing deals for Iftaar and Dinner.
-                                                   </a></p>
+                                                <h5><a href="#">MIXED DEAL for £14.99</a></h5>
+                                                <p>  Any Medium Pizza</p>
+                                                <p>+ Chicken Meat Chips (R)</p>
+                                                <p>+ Donner Meat Chips (R)</p>
+                                                <p>+ 1.5 ltr Pepsi</p>
                                                 <i class="fa fa-long-arrow"></i>
                                             </div>
                                             <router-link :to="{ path: 'postal-code'}"  class="deal-detail">
