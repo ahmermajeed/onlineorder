@@ -8,12 +8,6 @@
                     <div class="cover" style='background-image: url("../../../images/image00003.jpeg")'>
                         <img src="../../../images/mainlogo.png"  class="logo" >
                     </div>
-                    <div class="business-content">
-                        <h2 class="title"> Papa Ge 's
-                            <i class="fa btn-more-info fa-info-circle"></i>
-                        </h2>
-                    </div>
-
                     <div class="offset-categories">
                         <div id="categories-tabs">
                             <div class="desktop-tabs">
