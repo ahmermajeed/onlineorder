@@ -222,7 +222,7 @@
                     .then((response) => {
                         _this.categories =  response.data.data;
                         _this.loading  = false;
-                        if(_this.categories.length > 5){
+                        if(_this.categories.length > 7){
                             _this.cat_count = true;
                         }
                     });
