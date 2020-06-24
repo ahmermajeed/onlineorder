@@ -19,13 +19,8 @@
                             <div class="desktop-tabs">
                                 <ul class="nav nav-tabs">
                                     <li><a href="#"  @click.prevent="getProductAgainstCategories(false)" >All</a></li>
-                                    <li  v-for="(item, index) in categories"  v-if="index  <= 4"><a href="#" @click.prevent="getProductAgainstCategories(item.id)">{{item.name}}</a></li>
-                                    <li class="dropdown" v-if="cat_count">
-                                        <a data-toggle="dropdown" id="dropdownMenu1" v-if="cat_count">MORE <span class="caret fa fa-angle-down"></span></a>
-                                        <ul class="dropdown-menu dropdown-menu-right" id="dropdown-more" v-if="cat_count">
-                                            <li class="active"  v-for="(item, index) in categories"   v-if="index  > 4" ><a href="#"   @click.prevent="getProductAgainstCategories(item.id)">{{item.name}}</a></li>
-                                        </ul>
-                                    </li>
+                                    <li  v-for="(item, index) in categories"><a href="#" @click.prevent="getProductAgainstCategories(item.id)">{{item.name}}</a></li>
+
                                 </ul>
                             </div>
                             <div class="form-group product-search">
@@ -79,7 +74,7 @@
                                         <td class=highlighted>
                                         </td>
                                         <td>
-                                            <i class="fa fa-angle-up"></i>
+                                            <i class="fa fa-angle-up"  @click="quantityAddInCart(product_index)"></i>
                                             <span>{{ cart.quantity}}  <i>X</i></span>
                                             <i class="fa fa-angle-down"></i>
                                         </td>
@@ -90,7 +85,7 @@
                                             </div>
                                             <span class="mealactions">
                                                 <i v-b-tooltip.hover title="Edit Meal" class="fa fa-pencil"></i>
-                                                <i v-b-tooltip.hover title="Remove Meal" class="fa fa-times"></i>
+                                                <i v-b-tooltip.hover title="Remove Meal" class="fa fa-times" @click="removeFromCart(product_index)"></i>
                                             </span>
                                         </td>
 
@@ -308,13 +303,40 @@
                 //
                 //     });
                 //     location.reload();
-            }
+            },
+            removeFromCart(index){
+                let cart_data = this.$store.getters.getAllCartArray;
+                cart_data.splice(index,1);
+                this.updateCart();
+
+            },
+            quantityAddInCart(index){
+                console.log(this.$store.getters.getAllCartArray[index]);
+                this.$store.getters.getAllCartArray[index].quantity ++;
+                this.updateCart();
+                //this.getAllCartArray();
+            },
+            updateCart() {
+                if(this.$store.getters.getAllCartArray.length > 1 ){
+                    let sum = 0;
+                    let count = 0;
+                    this.$store.getters.getAllCartArray.forEach(function(item) {
+                        count++;
+                        if(count > 1){
+                            sum += item.single_product_total_amount;
+                        }
+                    });
+                    this.total_amount = sum;
+                }
+                return this.$store.getters.getAllCartArray;
+            },
+
+
 
         },
         computed: {
             getAllCartArray() {
                 if(this.$store.getters.getAllCartArray.length > 1 ){
-
                     let sum = 0;
                     let count = 0;
                     this.$store.getters.getAllCartArray.forEach(function(item) {
