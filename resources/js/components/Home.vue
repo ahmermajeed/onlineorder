@@ -86,7 +86,7 @@
                         <div class="row">
                             <div class="offset-md-1 col-md-10">
                                 <h3>AboutUs</h3>
-                                <p>Papa Ge’s has been established in the uk since 2004 and started off in Tamworth in Staffordshire, it has not reached Birminghak with this new and improved store located at 888 Washwood Heath Road in Birmingham.</p>
+                                <p>Papa Ge’s has been established in the UK since 2004 and started off in Tamworth in Staffordshire, it has now reached Birmingham with this new and improved store located at 888 Washwood Heath Road in Birmingham.</p>
                                 <p>We specialise in a wide range of foods such as great quality pizzas, traditional COD and chips, kebabs, burgers and southern fried chicken.
                                 We use the best ingredients to provide the best quality along with providing the best service. We specialise in traditional fish and chips and pizzas as these are our specialities and we have a combined experience of over 50 years. We endeavour to bring our customers the best quality food for the best price.</p>
                             </div><!--//col-->
@@ -130,9 +130,11 @@
                                                 </router-link>
                                             </div>
                                             <div class="text-holder">
-                                                <h5><a href="#"> Deal 1 for £ 2 </a></h5>
-                                                <p><a href="#">*Papa Ge 's wishes you a blessed Ramadan. Enjoy our amazing deals for Iftaar and Dinner.
-                                                   .</a></p>
+                                                <h5><a href="#"> NAN KEBAB DEAL for £14.99</a></h5>
+                                                <p>  Donner in Nan (R)</p>
+                                                <p>+ Mix in Nan (R)</p>
+                                                <p>+ Chicken in Nan (R) </p>
+                                                <p>+ 1 Chips (R) + 1.5ltr Pepsi</p>
                                                 <i class="fa fa-long-arrow"></i>
                                             </div>
                                             <router-link :to="{ path: 'onlineordering'}"  class="deal-detail"><i class="fa fa-long-arrow-right"></i></router-link>
@@ -146,9 +148,11 @@
                                                 </router-link>
                                             </div>
                                             <div class="text-holder">
-                                                <h5><a href="#">Deal 1 for £ 2</a></h5>
-                                                <p><a href="#">*Papa Ge 's wishes you a blessed Ramadan. Enjoy our amazing deals for Iftaar and Dinner.
-                                                 </a></p>
+                                                <h5><a href="#">FAMILY DEAL for £16.99</a></h5>
+                                                <p>  2 Medium Pizzas</p>
+                                                <p>+ Garlic Bread (4pcs) </p>
+                                                <p>+ 1 Chips (R)</p>
+                                                <p>+ 1.5 ltr Pepsi</p>
                                                 <i class="fa fa-long-arrow"></i>
                                             </div>
                                             <router-link :to="{ path: 'postal-code'}"  class="deal-detail"><i class="fa fa-long-arrow-right"></i></router-link>
@@ -162,9 +166,11 @@
                                                 </router-link>
                                             </div>
                                             <div class="text-holder">
-                                                <h5><a href="#">Deal 1 for £ 2</a></h5>
-                                                <p><a href="#">*Papa Ge 's wishes you a blessed Ramadan. Enjoy our amazing deals for Iftaar and Dinner.
-                                                    apply.</a></p>
+                                                <h5><a href="#">BIG PIZZA DEAL for £24.99</a></h5>
+                                                <p>  Any 2 Large Pizzas</p>
+                                                <p>+ 2 Chips (R)</p>
+                                                <p>+ 2 Garlic Bread</p>
+                                                <p>+ 2 x 1.5 ltr Pepsi</p>
                                                 <i class="fa fa-long-arrow"></i>
                                             </div>
                                             <router-link :to="{ path: 'postal-code'}"  class="deal-detail"><i class="fa fa-long-arrow-right"></i></router-link>
@@ -178,9 +184,11 @@
 
                                             </div>
                                             <div class="text-holder">
-                                                <h5><a href="#">Deal 1 for £ 2</a></h5>
-                                                <p><a href="#">*Papa Ge 's wishes you a blessed Ramadan. Enjoy our amazing deals for Iftaar and Dinner.
-                                                   </a></p>
+                                                <h5><a href="#">MIXED DEAL for £14.99</a></h5>
+                                                <p>  Any Medium Pizza</p>
+                                                <p>+ Chicken Meat Chips (R)</p>
+                                                <p>+ Donner Meat Chips (R)</p>
+                                                <p>+ 1.5 ltr Pepsi</p>
                                                 <i class="fa fa-long-arrow"></i>
                                             </div>
                                             <router-link :to="{ path: 'postal-code'}"  class="deal-detail">

@@ -94,6 +94,7 @@ class OrderController extends Controller
             if ($requestData['payment'] == "credit_card") {
                 $this->stripeCharge($requestData);
             }
+
             $this->sendNotification($data);
         }
 
@@ -187,7 +188,7 @@ class OrderController extends Controller
 
         $data = $this->_repository->getTotalSales($requestData);
 
-        $output = ['data' => ['total_sales' => $data], 'message' => "your order has been placed successfully "];
+        $output = ['data' => ['total_sales' => $data, 'most_sale_item' => "Margherita Pizza", 'tota_orders' => 15], 'message' => "your order has been placed successfully "];
         return response()->json($output, Response::HTTP_OK);
     }
 }

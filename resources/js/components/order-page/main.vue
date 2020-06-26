@@ -8,12 +8,6 @@
                     <div class="cover" style='background-image: url("../../../images/image00003.jpeg")'>
                         <img src="../../../images/mainlogo.png"  class="logo" >
                     </div>
-                    <div class="business-content">
-                        <h2 class="title"> Papa Ge 's
-                            <i class="fa btn-more-info fa-info-circle"></i>
-                        </h2>
-                    </div>
-
                     <div class="offset-categories">
                         <div id="categories-tabs">
                             <div class="desktop-tabs">
@@ -228,7 +222,7 @@
                     .then((response) => {
                         _this.categories =  response.data.data;
                         _this.loading  = false;
-                        if(_this.categories.length > 5){
+                        if(_this.categories.length > 7){
                             _this.cat_count = true;
                         }
                     });
