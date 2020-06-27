@@ -272,39 +272,7 @@
             },
             placeOrder(){
                 this.$router.push({name: 'check-out'})
-
-                // let obj = {
-                //     'user_id':1,
-                //     'total_amount_with_fee':2000,
-                //     'delivery_fees':'150',
-                //     'payment':'cod',
-                //     'delivery_address':"Test Address",
-                //     'order_details':  this.$store.getters.getAllCartArray
-                // };
-                // axios({
-                //     method: 'post',
-                //     url: 'http://frontonline.matrixepos.co.uk/api/placeOrder',
-                //     data: {
-                //         'user_id':1,
-                //         'total_amount_with_fee':2000,
-                //         'delivery_fees':'150',
-                //         'payment':'cod',
-                //         'delivery_address':"Test Address",
-                //         'order_details':  this.$store.getters.getAllCartArray
-                //     },
-                // })
-                //     .then(function (response) {
-                //         //handle success
-                //         console.log(response);
-                //         this.$store.commit('setAllCartArray', {})
-                //     })
-                //     .catch(function (response) {
-                //         //handle error
-                //         console.log(response);
-                //
-                //     });
-                //     location.reload();
-            },
+           },
             removeFromCart(index){
                 let cart_data = this.$store.getters.getAllCartArray;
                 cart_data.splice(index,1);
@@ -312,9 +280,11 @@
 
             },
             quantityAddInCart(index){
-                this.updateCart();
-                this.$store.getters.getAllCartArray[index].quantity ++;
-                this.$store.getters.getAllCartArray[index].single_product_total_amount  =  this.$store.getters.getAllCartArray[index].single_product_total_amount + this.$store.getters.getAllCartArray[index].price;
+                setTimeout(()=>{
+                    this.$store.getters.getAllCartArray[index].single_product_total_amount  =  this.$store.getters.getAllCartArray[index].single_product_total_amount + this.$store.getters.getAllCartArray[index].price;
+                    this.$store.getters.getAllCartArray[index].quantity ++;
+                    this.updateCart();
+                },1000);
                 //this.getAllCartArray();
             },
             quantityMinusInCart(index){
