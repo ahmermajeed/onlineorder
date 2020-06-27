@@ -72,7 +72,7 @@
                                         <td>
                                             <i class="fa fa-angle-up"  @click="quantityAddInCart(product_index)"></i>
                                             <span>{{ cart.quantity}}  <i>X</i></span>
-                                            <i class="fa fa-angle-down"></i>
+                                            <i class="fa fa-angle-down"  @click="quantityMinusInCart(product_index)"></i>
                                         </td>
                                         <td>
                                             <div>{{cart.product_name}}</div>
@@ -80,7 +80,7 @@
                                                 <strong>{{extra.group_name}}:</strong> {{extra.choice}}
                                             </div>
                                             <span class="mealactions">
-                                                <i v-b-tooltip.hover title="Edit Meal" class="fa fa-pencil"></i>
+<!--                                                <i v-b-tooltip.hover title="Edit Meal" class="fa fa-pencil"></i>-->
                                                 <i v-b-tooltip.hover title="Remove Meal" class="fa fa-times" @click="removeFromCart(product_index)"></i>
                                             </span>
                                         </td>
@@ -307,11 +307,24 @@
 
             },
             quantityAddInCart(index){
-                console.log(this.$store.getters.getAllCartArray[index]);
-                this.$store.getters.getAllCartArray[index].quantity ++;
                 this.updateCart();
+                this.$store.getters.getAllCartArray[index].quantity ++;
+                this.$store.getters.getAllCartArray[index].single_product_total_amount  =  this.$store.getters.getAllCartArray[index].single_product_total_amount + this.$store.getters.getAllCartArray[index].price;
                 //this.getAllCartArray();
             },
+            quantityMinusInCart(index){
+                let quantity = this.$store.getters.getAllCartArray[index].quantity;
+                 if(quantity >= 2){
+                     this.updateCart();
+                    this.$store.getters.getAllCartArray[index].quantity --;
+                    this.$store.getters.getAllCartArray[index].single_product_total_amount =  this.$store.getters.getAllCartArray[index].single_product_total_amount - this.$store.getters.getAllCartArray[index].price;
+                }else {
+                     this.removeFromCart(index)
+                 }
+
+            },
+
+
             updateCart() {
                 if(this.$store.getters.getAllCartArray.length > 1 ){
                     let sum = 0;
@@ -332,6 +345,7 @@
         },
         computed: {
             getAllCartArray() {
+                let self = this;
                 if(this.$store.getters.getAllCartArray.length > 1 ){
                     let sum = 0;
                     let count = 0;
