@@ -78,6 +78,7 @@
                     <div class="input-holder">
                         <h4>Special instructions <span class="required-text"> *</span></h4>
                         <textarea class="form-control" rows="3" cols="12"  v-model="productData['special_instruction']"></textarea>
+                        <b-alert show variant="danger" v-if="error_message" style="text-transform: capitalize;">{{error_message}}</b-alert>
                     </div>
                     <div class="row count-footer">
                         <div class="col increment-buttons">
@@ -90,8 +91,10 @@
                             </button>
                         </div>
 
-                        <div class="col text-right">
+                        <div class="col text-left">
 
+                        </div>
+                        <div class="col text-right">
                                <h3 >Total Amount : {{priceFormat(total_amount_of_single_product * product_quantity)}}</h3>
                                 <button  @click.prevent="addToCart()" class="add-count-button">Add</button>
                         </div>
@@ -116,6 +119,7 @@
                 total_amount_of_single_product : 0,
                 product_array:{},
                 cart:[],
+                error_message:''
             };
         },
         methods: {
@@ -125,7 +129,6 @@
             },
 
             showModal() {
-
                 this.$refs.myModalRef.show();
                 this.total_amount_of_single_product = this.priceFormat(this.list.price);
             },
@@ -138,13 +141,15 @@
                 self.product_quantity =1;
                 this.productData = {};
                 this.main_array=[];
+                this.error_message = '';
                 this.$refs.myModalRef.hide();
             },
-            addToCart() {
+            addToCart()
+            {
+                this.error_message = '';
                 this.product_array = {};
                 let total_amount = 0;
                 total_amount = this.total_amount_of_single_product * this.product_quantity;
-
                 let extras = [];
 
                 this.product_array = {
@@ -156,12 +161,26 @@
                     'single_product_total_amount':total_amount,
                 };
 
+                let group_check = [];
+
                 for (var key in this.productData) {
                     if(key != undefined){
                             if(key != 'special_instruction'){
                                 let choice =  this.productData[key].split("##@@");
                                 extras.push({group_name:key,choice:choice[0],'price':choice[1]})
+                                group_check.push(key)
                             }
+                    }
+                }
+
+                let checkMandatory = this.checkMandatory();
+
+                if(checkMandatory.length > 0 ){
+                    for( var cm in checkMandatory) {
+                        if(group_check.indexOf(checkMandatory[cm]) === -1) {
+                            this.error_message  = checkMandatory[cm] + ' is Required'
+                            return;
+                        }
                     }
                 }
 
@@ -170,6 +189,7 @@
                 }
 
                 let cart_data =  this.$store.getters.getAllCartArray;
+
                 if(cart_data.length === 0){
                     this.$store.commit('setAllCartArray', this.product_array);
                 }else {
@@ -179,6 +199,7 @@
                     this.$store.commit('setAllCartArray', old);
                 }
                 this.hideModal();
+
             },
             validateBeforeSubmit() {
                 var form_data = this.productData;
@@ -205,6 +226,21 @@
                     this.quantity = this.product_quantity --;
 
                 }
+            },
+            checkMandatory(){
+                let _this = this;
+                let  mandatory = [];
+                if(this.has_sizes){
+                    mandatory.push('size')
+                }
+                if(this.list.groups.length > 0 ){
+                    for( let group in  this.list.groups){
+                        if(this.list.groups[group].type == 'Mandatory'){
+                            mandatory.push(_this.list.groups[group].name)
+                        }
+                    }
+                }
+                return mandatory;
             },
 
             productSum(array_key,value){
