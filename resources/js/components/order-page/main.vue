@@ -2,7 +2,8 @@
     <div>
         <header-menu></header-menu>
         <div class="loading" v-if="loading">Loading&#8230;</div>
-        <div class="container-fluid">
+        <div class="container-fluid" 
+        :class="{'cart-menu-fixed': scrolled}"  v-on="handleScroll()">
             <div class="row full">
                 <div class="col-sm-12 full business col-lg-9 col-md-8 col-sm-8">
                     <div class="cover" style='background-image: url("../../../images/image00003.jpeg")'>
@@ -192,7 +193,10 @@
                 has_sizes:false,
                 cat_count: false,
                 total_amount:0,
-                cart_height:false
+                cart_height:false,
+                limitPosition: 380,
+                scrolled: false,
+                //lastPosition: 0
             };
         },
         mounted() {
@@ -204,6 +208,7 @@
                     var value = this.$store.getters.getAllCartArray[key];
                 }
             }
+            window.addEventListener("scroll", this.handleScroll);
 
         },
         methods: {
@@ -309,8 +314,23 @@
                 }
                 return this.$store.getters.getAllCartArray;
             },
+            handleScroll() {
+                
+                if (this.limitPosition < window.scrollY) {
+                    this.scrolled = true;
+                    // move up!
+                } 
+                
+                if (this.limitPosition > window.scrollY) {
+                    this.scrolled = false;
+                    // move down
+                }
+               
 
-
+                
+                //this.lastPosition = window.scrollY;
+                // this.scrolled = window.scrollY > 250;
+            }
 
         },
         computed: {
@@ -330,6 +350,9 @@
                 return this.$store.getters.getAllCartArray;
             },
 
+        },
+        destroyed() {
+            window.removeEventListener("scroll", this.handleScroll);
         }
     }
 </script>
@@ -1392,20 +1415,6 @@
         border:0;
     }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     .bottom-cont div a,
     .btn.btn-primary,
     .button.button-positive,
@@ -1957,4 +1966,26 @@
         }
 
     }
+    .cart-menu-fixed .offset-categories{
+        position: fixed;
+        top: 0;
+        z-index: 1000;
+        width: calc(100% - 25%);
+        margin-top: 0;
+        padding-top: 0 !important;
+        border-right: 1px solid rgba(0,0,0,0);
+    }
+    .cart-menu-fixed .business > div.dishes-wrapper {
+        padding-top: 190px !important;
+    }
+
+    @media (max-width: 767px) {
+        .cart-menu-fixed .offset-categories{
+            width:100%;
+        }
+        .cart-menu-fixed .business > div.dishes-wrapper {
+            padding-top: 210px !important;
+        }
+    }
+
 </style>
