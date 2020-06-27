@@ -44,9 +44,11 @@
                                 <div class="dishe" @click.prevent="viewProduct(product.id)" >
                                     <strong class="dish_title">
                                         <span> {{product.name}} </span>
-                                        <span class="dish_price">  £ {{product.price}} </span>
+                                        <span class="dish_price"  v-if="!product.sizes.length">  £ {{product.price}} </span>
                                     </strong>
-                                    <p>{{product.description}}</p>
+                                    <p>{{product.description}}
+                                        <span style="font-size: 12px;font-style: normal;font-weight: bolder;float:right" v-if="product.sizes.length"  v-for="(size, size_index) in product.sizes" > {{size.size}} : £{{size.price}} &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp </span>
+                                    </p>
                                 </div>
                             </div>
                         </div>
