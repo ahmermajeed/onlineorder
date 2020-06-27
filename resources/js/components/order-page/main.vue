@@ -2005,6 +2005,14 @@
         padding-top: 0 !important;
         border-right: 1px solid rgba(0,0,0,0);
     }
+
+    .business > div.dishes-wrapper {
+        padding-top: 2px !important;
+    }
+    .business > div.offset-categories {
+        padding-bottom: 0 !important;
+    }
+
     .cart-menu-fixed .business > div.dishes-wrapper {
         padding-top: 190px !important;
     }
