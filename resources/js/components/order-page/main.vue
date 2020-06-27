@@ -114,65 +114,33 @@
                 <div class="inner">
                     <span class="products-count"><svg xmlns="http://www.w3.org/2000/svg" class="svg-stroke-container" width="24" height="24">
                         <path fill="#707070" d="M12 2.75a4.75 4.75 0 014.744 4.5h3.103a1 1 0 01.99 1.141l-1.714 12a1 1 0 01-.99.859H5.867a1 1 0 01-.99-.859l-1.714-12a1 1 0 01.99-1.141h3.103A4.75 4.75 0 0112 2.75zm5.559 14.75H6.44a.4.4 0 00-.396.457l.208 1.45a.4.4 0 00.396.343H17.35a.4.4 0 00.396-.343l.208-1.45a.4.4 0 00-.396-.457zm1.25-8.75H5.19a.4.4 0 00-.396.457l.922 6.45a.4.4 0 00.396.343h11.775a.4.4 0 00.396-.343l.922-6.45a.4.4 0 00-.396-.457zM12 4.25a3.251 3.251 0 00-3.193 2.638.305.305 0 00.3.362h5.796a.297.297 0 00.292-.35A3.251 3.251 0 0012 4.25z"></path>
-                    </svg>  1</span>
+                    </svg>{{getAllCartArray.length - 1}}</span>
                     <span class="text" @click="opencartlist()">Checkout</span>
-                    <span class="products-value">{{priceFormat(total_amount)}}</span>
+                    <span class="products-value">£{{priceFormat(total_amount)}}</span>
                 </div>
-                <ul>
+                <ul v-for="(cart, product_index) in getAllCartArray"  v-if="product_index  > 0">
                     <li>
-                        <span class="qty">2 
+                        <span class="qty">{{ cart.quantity}}
                             <span class="qtyincrement">
-                               <i class="fa fa-plus-square-o"></i>
-                               <i class="fa fa-minus-square-o"></i> 
-                            </span>
-                        </span>
-                        <span class="meal">Loreum ipsum is dummy</span>
-                        <span class="price">$121</span>
-                    </li>
-                    <li>
-                        <span class="qty">2 
-                            <span class="qtyincrement">
-                               <i class="fa fa-plus-square-o"></i>
-                               <i class="fa fa-minus-square-o"></i> 
+                               <i class="fa fa-plus-square-o" @click="quantityAddInCart(product_index)"></i>
+                               <i class="fa fa-minus-square-o" @click="quantityMinusInCart(product_index)"></i>
                             </span>
                         </span>
                         <span class="meal">
-                            Loreum ipsum is dummy
-                            <ul>
-                                <li><b>Size:</b> Double</li>
-                                <li><b>Extra:</b> Cheese</li>
-                                <li><b>Drink:</b> Pepsi</li>
+                            {{cart.product_name}}
+                            <ul v-if="cart.extras" v-for="(extra, extra_index) in cart.extras">
+                                <li><b>{{extra.group_name}}:</b> {{extra.choice}}</li>
                             </ul>
                             <span class="mealactions">
-                                <i v-b-tooltip.hover title="Edit Meal" class="fa fa-pencil"></i>
-                                <i v-b-tooltip.hover title="Remove Meal" class="fa fa-times"></i>
+                              <!--  <i v-b-tooltip.hover title="Edit Meal" class="fa fa-pencil"></i>-->
+                                <i v-b-tooltip.hover title="Remove Meal" class="fa fa-times" @click="removeFromCart(product_index)"></i>
                             </span>
                         </span>
-                        <span class="price">$121</span>
-                    </li>
-                    <li>
-                        <span class="qty">2 
-                            <span class="qtyincrement">
-                               <i class="fa fa-plus-square-o"></i>
-                               <i class="fa fa-minus-square-o"></i> 
-                            </span>
-                        </span>
-                        <span class="meal">Loreum ipsum is dummy</span>
-                        <span class="price">$121</span>
-                    </li>
-                    <li>
-                        <span class="qty">2 
-                            <span class="qtyincrement">
-                               <i class="fa fa-plus-square-o"></i>
-                               <i class="fa fa-minus-square-o"></i> 
-                            </span>
-                        </span>
-                        <span class="meal">Loreum ipsum is dummy</span>
-                        <span class="price">$121</span>
+                        <span class="price">£{{priceFormat(cart.single_product_total_amount)}}</span>
                     </li>
                 </ul>
                 <div class="confirm-btn">
-                    <button class="anima-btn move-eff"><span>Confirm Order</span></button>
+                    <button class="anima-btn move-eff" @click="placeOrder()"><span>Confirm Order</span></button>
                 </div>
             </div>
         </div>
@@ -1975,6 +1943,14 @@
         padding-top: 0 !important;
         border-right: 1px solid rgba(0,0,0,0);
     }
+
+    .business > div.dishes-wrapper {
+        padding-top: 2px !important;
+    }
+    .business > div.offset-categories {
+        padding-bottom: 0 !important;
+    }
+
     .cart-menu-fixed .business > div.dishes-wrapper {
         padding-top: 190px !important;
     }
