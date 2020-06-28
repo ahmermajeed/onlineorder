@@ -184,7 +184,7 @@
 
                                             </div>
                                             <div class="text-holder">
-                                                <h5><a href="#">MIXED DEAL for £14.99</a></h5>
+                                                <h5><a href="#">MIXED DEAL for £15.99</a></h5>
                                                 <p>  Any Medium Pizza</p>
                                                 <p>+ Chicken Meat Chips (R)</p>
                                                 <p>+ Donner Meat Chips (R)</p>
