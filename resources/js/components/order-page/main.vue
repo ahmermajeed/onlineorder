@@ -248,11 +248,10 @@
 
             },
             quantityAddInCart(index){
-                setTimeout(()=>{
+
                     this.$store.getters.getAllCartArray[index].single_product_total_amount  =  parseFloat(this.$store.getters.getAllCartArray[index].single_product_total_amount) + parseFloat(this.$store.getters.getAllCartArray[index].price);
                     this.$store.getters.getAllCartArray[index].quantity ++;
                     this.updateCart();
-                },1000);
                 //this.getAllCartArray();
             },
             quantityMinusInCart(index){
