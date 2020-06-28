@@ -109,8 +109,8 @@
                                 <div class="menu-banner-holder">
                                     <img src="../../images/menu-banner.png">
                                     <div class="banner-links">
-                                        <router-link :to="{ path: 'onlineordering'}"> <span>Order Now</span></router-link>
-                                        <router-link :to="{ path: 'onlineordering'}"> <span>Our Menu</span></router-link>
+                                        <router-link :to="{ path: 'postal-code'}"> <span>Order Now</span></router-link>
+                                        <a href="#" @click="openMenu"> <span>Our Menu</span></a>
                                     </div>
                                 </div><!--//menu-banner-holder-->
                             </div><!--//col-->
