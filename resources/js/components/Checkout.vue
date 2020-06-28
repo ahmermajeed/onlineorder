@@ -161,7 +161,7 @@
                         <h2>Your Order </h2>
                         <div>
                             <strong>Order Details</strong>
-                            <button class=" btn btn-primary" @click="placeOrder()">Checkout</button>
+                          <!--  <button class=" btn btn-primary" @click="placeOrder()">Checkout</button>-->
                             <div class="table-holder">
                                 <table class=tbl_cart_list>
                                     <tr v-for="(cart, product_index) in getAllCartArray"  v-if="product_index  > 0">
