@@ -1,6 +1,7 @@
 <template>
     <div>
         <b-modal id="add-product" centered @hidden="onHidden" :hide-footer=true title-tag="h4" ok-variant="primary" ref="myModalRef" no-close-on-backdrop class="custom-modal ">
+            <b-alert show variant="danger" v-if="error_message" style="text-transform: capitalize;">{{error_message}}</b-alert>
             <h3>Name : {{list.name}}</h3>
             <div class="product-gallery" >
                 <h4 v-if="!has_sizes">Price :  £ {{list.price}}  </h4>
@@ -78,7 +79,7 @@
                     <div class="input-holder">
                         <h4>Special instructions <span class="required-text"> *</span></h4>
                         <textarea class="form-control" rows="3" cols="12"  v-model="productData['special_instruction']"></textarea>
-                        <b-alert show variant="danger" v-if="error_message" style="text-transform: capitalize;">{{error_message}}</b-alert>
+
                     </div>
                     <div class="row count-footer">
                         <div class="col increment-buttons">
@@ -123,6 +124,12 @@
             };
         },
         methods: {
+
+            scrollToTop() {
+                $('div#add-product').stop().animate({
+                    scrollTop: 0
+                }, 'slow', 'swing');
+            },
 
             priceFormat (num) {
                 return  parseFloat(num).toFixed(2);
@@ -179,6 +186,7 @@
                     for( var cm in checkMandatory) {
                         if(group_check.indexOf(checkMandatory[cm]) === -1) {
                             this.error_message  = checkMandatory[cm] + ' is Required'
+                            this.scrollToTop();
                             return;
                         }
                     }
