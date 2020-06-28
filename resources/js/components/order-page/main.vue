@@ -249,7 +249,7 @@
             },
             quantityAddInCart(index){
                 setTimeout(()=>{
-                    this.$store.getters.getAllCartArray[index].single_product_total_amount  =  this.$store.getters.getAllCartArray[index].single_product_total_amount + this.$store.getters.getAllCartArray[index].price;
+                    this.$store.getters.getAllCartArray[index].single_product_total_amount  =  parseFloat(this.$store.getters.getAllCartArray[index].single_product_total_amount) + parseFloat(this.$store.getters.getAllCartArray[index].price);
                     this.$store.getters.getAllCartArray[index].quantity ++;
                     this.updateCart();
                 },1000);
@@ -258,15 +258,14 @@
             quantityMinusInCart(index){
                 let quantity = this.$store.getters.getAllCartArray[index].quantity;
                  if(quantity >= 2){
-                     this.updateCart();
                     this.$store.getters.getAllCartArray[index].quantity --;
-                    this.$store.getters.getAllCartArray[index].single_product_total_amount =  this.$store.getters.getAllCartArray[index].single_product_total_amount - this.$store.getters.getAllCartArray[index].price;
-                }else {
+                    this.$store.getters.getAllCartArray[index].single_product_total_amount =  parseFloat(this.$store.getters.getAllCartArray[index].single_product_total_amount) - parseFloat(this.$store.getters.getAllCartArray[index].price);
+                     this.updateCart();
+                 } else {
                      this.removeFromCart(index)
                  }
 
             },
-
 
             updateCart() {
                 if(this.$store.getters.getAllCartArray.length > 1 ){
@@ -275,6 +274,9 @@
                     this.$store.getters.getAllCartArray.forEach(function(item) {
                         count++;
                         if(count > 1){
+
+                            console.log(item.single_product_total_amount)
+
                             sum += item.single_product_total_amount;
                         }
                     });
