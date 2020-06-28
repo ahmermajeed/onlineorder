@@ -137,7 +137,7 @@
                                                 <p>+ 1 Chips (R) + 1.5ltr Pepsi</p>
                                                 <i class="fa fa-long-arrow"></i>
                                             </div>
-                                            <router-link :to="{ path: 'onlineordering'}"  class="deal-detail"><i class="fa fa-long-arrow-right"></i></router-link>
+                                            <router-link :to="{ path: 'postal-code'}"  class="deal-detail"><i class="fa fa-long-arrow-right"></i></router-link>
                                         </div>
                                     </div><!--//col-3-->
                                     <div class="col-lg-3 col-md-6 col-sm-12">
