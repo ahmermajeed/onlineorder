@@ -126,11 +126,11 @@
                                         <div class="per-deal">
                                             <div class="image-holder">
                                                 <router-link :to="{ path: 'postal-code'}">
-                                                    <img src="../../images/image00009.jpeg" alt="deal img">
+                                                    <img src="../../images/nan_kebab_deal.jpg" alt="deal img">
                                                 </router-link>
                                             </div>
                                             <div class="text-holder">
-                                                <h5><a href="#"> NAN KEBAB DEAL for £14.99</a></h5>
+                                                <h5><a href="#"> NAN KEBAB DEAL for £15.99</a></h5>
                                                 <p>  Donner in Nan (R)</p>
                                                 <p>+ Mix in Nan (R)</p>
                                                 <p>+ Chicken in Nan (R) </p>
@@ -144,7 +144,7 @@
                                         <div class="per-deal">
                                             <div class="image-holder">
                                                 <router-link :to="{ path: 'postal-code'}">
-                                                    <img src="../../images/image00010.jpeg" alt="deal img">
+                                                    <img src="../../images/family_deal.jpg" alt="deal img">
                                                 </router-link>
                                             </div>
                                             <div class="text-holder">
@@ -162,7 +162,7 @@
                                         <div class="per-deal">
                                             <div class="image-holder">
                                                 <router-link :to="{ path: 'postal-code'}">
-                                                    <img src="../../images/image00004.jpeg" alt="deal img">
+                                                    <img src="../../images/big_deal.jpg" alt="deal img">
                                                 </router-link>
                                             </div>
                                             <div class="text-holder">
@@ -180,7 +180,7 @@
                                         <div class="per-deal">
                                             <div class="image-holder">
                                                 <router-link :to="{ path: 'postal-code'}">
-                                                    <img src="../../images/image00003.jpeg" alt="deal img"></router-link>
+                                                    <img src="../../images/mixed_deal.jpg" alt="deal img"></router-link>
 
                                             </div>
                                             <div class="text-holder">
