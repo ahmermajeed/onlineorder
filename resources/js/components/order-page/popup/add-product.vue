@@ -61,16 +61,14 @@
                         </ul>
                     </div>
 
-
                     <div  v-for="(item, index) in list.groups">
                     <h4>{{item.name}}</h4>
                     <ul class="selectionlist radio-list" >
-                        <li v-for="(choice,choice_index) in item.choices" >
+                        <li v-for="(choice,choice_index) in item.choices">
                             <label>
                                 {{choice.name}}
                                 <input type="radio"  :value="choice.name+'##@@'+choice.price"   v-model="productData[item.name]" @click="productSum(item.name,choice.price)" >
                                 <span class="checkmark"></span>
-
                             </label>
                             <span style="float:right"> £  {{choice.price}}</span>
                         </li>

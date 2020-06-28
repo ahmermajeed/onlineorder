@@ -155,7 +155,6 @@
                     </div>
                 </div>
 
-
                 <div class="col-xs-12 full cart col-lg-3 col-md-4 col-sm-12 checkout-cart-desktop"   v-if="getAllCartArray.length > 1"  >
                     <div class="order" id="cart-stiky">
                         <h2>Your Order </h2>
