@@ -5,5 +5,6 @@ Vue.component('footer-menu', require('./components/common-components/footer.vue'
 Vue.component('alert', require('./components/common-components/Alert.vue').default);
 
 Vue.component('add-product', require('./components/order-page/popup/add-product.vue').default);
+Vue.component('edit-product', require('./components/order-page/popup/edit-product.vue').default);
 
 Vue.component('download-menu', require('./components/common-components/download-menu.vue').default);

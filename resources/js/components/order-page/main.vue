@@ -81,7 +81,7 @@
                                                 <strong>{{extra.group_name}}:</strong> {{extra.choice}}
                                             </div>
                                             <span class="mealactions">
-<!--                                                <i v-b-tooltip.hover title="Edit Meal" class="fa fa-pencil"></i>-->
+                                                <i v-b-tooltip.hover title="Edit Meal" class="fa fa-pencil"  @click="updateProduct(cart.product_id,cart)"></i>
                                                 <i v-b-tooltip.hover title="Remove Meal" class="fa fa-times" @click="removeFromCart(product_index)"></i>
                                             </span>
                                         </td>
@@ -132,7 +132,8 @@
                                 <li><b>{{extra.group_name}}:</b> {{extra.choice}}</li>
                             </ul>
                             <span class="mealactions">
-                              <!--  <i v-b-tooltip.hover title="Edit Meal" class="fa fa-pencil"></i>-->
+
+                                <i v-b-tooltip.hover title="Edit Meal" class="fa fa-pencil"> </i>
                                 <i v-b-tooltip.hover title="Remove Meal" class="fa fa-times" @click="removeFromCart(product_index)"></i>
                             </span>
                         </span>
@@ -145,6 +146,7 @@
             </div>
         </div>
         <add-product @HideModalValue="hideModal" :showModalProp="product" :list="list" :has_sizes="has_sizes"></add-product>
+        <edit-product @HideModalValue="hideModal" :showModalProp="editProduct" :list="list" :editList="editList" :has_sizes="has_sizes"> </edit-product>
     </div>
         
 </template>
@@ -157,7 +159,9 @@
                 categories:[],
                 products:[],
                 product:false,
+                editProduct:false,
                 list:{},
+                editList:{},
                 has_sizes:false,
                 cat_count: false,
                 total_amount:0,
@@ -180,6 +184,19 @@
 
         },
         methods: {
+            updateProduct(id,cart){
+                let  _this = this;
+                this.editList = cart;
+                _this.loading  = true;
+                let url = '/api/products/'+id;
+                axios.get(url)
+                    .then((response) => {
+                        _this.list =  response.data.data;
+                        _this.has_sizes = _this.list.sizes.length > 0;
+                        _this.loading  = false;
+                        _this.editProduct = true;
+                    });
+            },
             priceFormat (num) {
                 return  parseFloat(num).toFixed(2);
             },
@@ -188,6 +205,7 @@
             },
             hideModal() {
                 this.product = false;
+                this.editProduct= false;
                 this.list = {};
             },
             getCategories(){
@@ -231,13 +249,16 @@
                 axios.get(url)
                     .then((response) => {
                         _this.list =  response.data.data;
-
                         _this.has_sizes = _this.list.sizes.length > 0;
                         _this.loading  = false;
                         _this.product = true;
-
                     });
             },
+
+
+
+
+
             placeOrder(){
                 this.$router.push({name: 'check-out'})
            },
@@ -294,11 +315,6 @@
                     this.scrolled = false;
                     // move down
                 }
-               
-
-                
-                //this.lastPosition = window.scrollY;
-                // this.scrolled = window.scrollY > 250;
             }
 
         },
@@ -318,15 +334,12 @@
                 }
                 return this.$store.getters.getAllCartArray;
             },
-
         },
         destroyed() {
             window.removeEventListener("scroll", this.handleScroll);
         }
     }
 </script>
-
-
 <style>
     .cover {
         background-image: url('https://res.cloudinary.com/ordering2/image/upload/f_auto,q_auto,h_800,c_limit/v1573197396/w7h69zusidjo01abgrel.jpg');

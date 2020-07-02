@@ -53,7 +53,7 @@
                             <li v-for="(item, index) in list.sizes" >
                                 <label>
                                     {{item.size}}
-                                    <input type="radio" :value="item.size+'##@@'+item.price"    v-model="productData['size']"  @click="productSum('size',item.price)">
+                                    <input type="radio" :value="item.size+'##@@'+priceFormat(item.price)"    v-model="productData['size']"  @click="productSum('size',priceFormat(item.price))">
                                     <span class="checkmark"></span>
                                 </label>
                                 <span style="float:right"> £  {{item.price}}</span>
@@ -68,7 +68,7 @@
                         <li v-for="(choice,choice_index) in item.choices" >
                             <label>
                                 {{choice.name}}
-                                <input type="radio"  :value="choice.name+'##@@'+choice.price"   v-model="productData[item.name]" @click="productSum(item.name,choice.price)" >
+                                <input type="radio"  :value="choice.name+'##@@'+priceFormat(choice.price)"   v-model="productData[item.name]" @click="productSum(item.name,priceFormat(choice.price))">
                                 <span class="checkmark"></span>
 
                             </label>
@@ -158,6 +158,8 @@
                 let total_amount = 0;
                 total_amount = this.total_amount_of_single_product * this.product_quantity;
                 let extras = [];
+                console.log(this.productData);
+               // return;
 
                 this.product_array = {
                     'product_id':this.list.id,
@@ -263,7 +265,7 @@
                         total +=  parseFloat(price[1]) ;
                     }
                     this.total_amount_of_single_product = total;
-                },1000);
+                },300);
             },
 
 
