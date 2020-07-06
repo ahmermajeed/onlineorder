@@ -13,8 +13,8 @@
                     <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
                     <div class="add-info">
                         <ul>
-                            <li><a href="#"><i class="fas fa-phone"></i> 02476441200</a></li>
-                            <li><a href="#"><i class="fas fa-envelope"></i>info@mjstakeaway.co.uk.com</a></li>
+                            <li><a href="#"><i class="fas fa-phone"></i> 0121 242 2020</a></li>
+                            <li><a href="#"><i class="fas fa-envelope"></i>support@papages.com</a></li>
                         </ul>
                     </div>
                     <div class="main-menu" id="navbarResponsive">
@@ -58,11 +58,11 @@
                     </div>
                     <div class="col-lg-6">
                         <div class="info-txt">
-                            <h4>Save upto 30% off on</h4>
+                            <h4>Save upto 10% off on</h4>
                             <h1 class="font-weight-bold">
                                 Taste your fav dish</h1>
-                            <h3><span>from</span> Mj's Takeaway.</h3>
-                            <p>MJs has been established in the UK lorem ipsum lorem ipsum lorem ipsum.</p>
+                            <h3><span>from</span> Pizza & Fish Bar Papa Ge's</h3>
+                            <p>Fish & Chips made the traditional way.</p>
                         </div>
                         <div class="search-res" v-if="this.$route.name !='online-order'">
                             <h3>Enter Your Postal Code.</h3>
