@@ -120,7 +120,7 @@ class LoginController extends Controller
 
          $user = User::find($data->id);
 
-        $output = ['access_token' => $data->access_token, 'printer_ip' => $data->printer_ip, 'shop_status' => $data->shop_status, 'data' => $user, 'message' => 'Success'];
+        $output = ['access_token' => $data->access_token, 'printer_ip' => $data->printer_ip, 'printer_ip_1' => $data->printer_ip_1, 'printer_ip_2' => $data->printer_ip_2, 'printer_ip_3' => $data->printer_ip_3, 'printer_ip_4' => $data->printer_ip_4, 'printer_ip_5' => $data->printer_ip_5, 'shop_status' => $data->shop_status, 'data' => $user, 'message' => 'Success'];
         // HTTP_OK = 200;
         return response()->json($output, Response::HTTP_OK);
     }
@@ -138,6 +138,11 @@ class LoginController extends Controller
         $general_settings = GeneralSettings::get();
 
         $user->printer_ip = $general_settings[0]->printer_ip;
+        $user->printer_ip_1 = $general_settings[0]->printer_ip_1;
+        $user->printer_ip_2 = $general_settings[0]->printer_ip_2;
+        $user->printer_ip_3 = $general_settings[0]->printer_ip_3;
+        $user->printer_ip_4 = $general_settings[0]->printer_ip_4;
+        $user->printer_ip_5 = $general_settings[0]->printer_ip_5;
         $user->shop_status = $general_settings[0]->shop_status;
 
         $user->access_token = $user->createToken('myApp')->accessToken;
