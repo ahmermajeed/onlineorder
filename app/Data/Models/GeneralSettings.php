@@ -20,6 +20,11 @@ class GeneralSettings extends Model
         'currencySign',
         'service_charges',
         'printer_ip',
+        'printer_ip_1',
+        'printer_ip_2',
+        'printer_ip_3',
+        'printer_ip_4',
+        'printer_ip_5',
         'shop_status'
     ];
 }
