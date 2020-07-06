@@ -328,7 +328,6 @@
                  } else {
                      this.removeFromCart(index)
                  }
-
             },
 
             updateCart() {
