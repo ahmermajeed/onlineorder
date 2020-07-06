@@ -17,6 +17,7 @@ const routes = [
         component: require('./components/reservaion.vue').default,
     },
 
+
 ];
 // Create the router instance
 const router = new VueRouter({

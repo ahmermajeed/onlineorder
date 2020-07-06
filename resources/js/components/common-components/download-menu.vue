@@ -1,19 +1,20 @@
 <template>
     <div>
-        <b-modal id="add-product" centered @hidden="onHidden" ok-variant="primary" title-tag="h4"  :hide-footer=true  ref="myModalRef" class="custom-modal ">
+        <b-modal id="add-product" centered @hidden="onHidden" ok-variant="primary" title-tag="h4"   :hide-footer=true  ref="myModalRef" custom-modal no-close-on-backdrop class="custom-modal">
+
             <h3 v-if="isMenu">Our Menu</h3>
             <h3 v-if="isAllergy">Allery Information</h3>
             <br>
-            <div class="row count-footer">
+            <div class="row">
 
                 <div class="col text-left">
-                    <button v-if="isMenu" @click="openMenu"  class="add-count-button">View</button>
-                    <button v-if="isAllergy" @click="openAllergy"  class="add-count-button">View</button>
+                    <button v-if="isMenu" @click="openMenu"   class="btn-primary btn">View</button>
+                    <button v-if="isAllergy" @click="openAllergy"   class="btn-primary btn">View</button>
                 </div>
 
                 <div class="col text-right">
-                    <button v-if="isMenu" @click="downloadMenu" class="add-count-button">Download</button>
-                    <button v-if="isAllergy" @click="downloadAllery" class="add-count-button">Download</button>
+                    <button v-if="isMenu" @click="downloadMenu"  class="btn-primary btn">Download</button>
+                    <button v-if="isAllergy" @click="downloadAllery" class="btn-primary btn">Download</button>
                 </div>
             </div>
 

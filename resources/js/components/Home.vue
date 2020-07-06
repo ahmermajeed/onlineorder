@@ -1,233 +1,372 @@
 <template>
     <div>
-        <div class="wrapper">
-            <div class="container-fluid main-top">
-                <img src="../../images/topleftburger.png" class="topleftburger parallax_scroll">
-                <img src="../../images/toprightleaves.png" class="toprightleaves parallax_scroll">
-                <img src="../../images/topleftyelllowsauce.png" class="topleftyellowsauce parallax_scroll">
-                <img src="../../images/toprightredsauce.png" class="toprightredsauce parallax_scroll">
-                <img src="../../images/sliderrightsparkle.png" class="sliderrightsparkle">
-                <img src="../../images/toprightmidleaves.png" class="toprightmidleaves parallax_scroll">
-                <img src="../../images/topleftbottomburger.png" class="topleftbottomburger parallax_scroll">
-                <img src="../../images/toprightbottomwood.png" class="toprightbottomwood parallax_scroll">
-                <img src="../../images/sliderrightsparkle.png" class="sliderbottomsparkle">
-                <div class="row">
-                    <div class="container">
+        <header-menu></header-menu>
+        <section class="menu-box">
+            <div class="container">
+                <div class="menus pattern">
+                    <div class="title">
+                        <img src="/images/logo.png">
+                        <h3>Our Food Menu</h3>
+                        <p>This is dummy copy. It is not meant to be read. It has been placed here solely to demonstrate the look and feel of finished, typeset text. Only for show. He who searches for meaning here will be sorely disappointed. </p>
+                    </div>
+                    <div class="menu-area">
                         <div class="row">
-                            <div class="col-12">
-                                <div class="header">
-                                    <div class="logo">
-                                        <img src="../../images/mainlogo.png" alt="logo">
-                                    </div><!--logo-->
-                                    <button type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler home-navbar-toggler">
-                                        <span class="fa fa-bars"></span>
-                                    </button>
-                                    <div class="navigation-bar navbar-collapse collapse home-navbar" id="navbarResponsive">
-                                        <ul>
-                                            <li>
-                                                <router-link :to="{ path: '/'}">
-                                                <a class="nav-link" >Home
-                                                    <span class="sr-only">(current)</span>
-                                                </a>
-                                            </router-link></li>
+                            <div class="col-md-6">
+                                <div class="menu-card">
+                                    <h3 class="tt">Fish and chips</h3>
+                                    <ul>
+                                        <li>
+                                            <h3>Cone of chips <span>£1.30</span></h3>
 
-                                            <li>   <router-link :to="{ path: 'postal-code'}">
-                                                <a class="nav-link" >Online Ordering</a>
-                                            </router-link></li>
+                                        </li>
+                                        <li class="special">
+                                            <h3>Regular chips  <span>£1.70</span></h3>
 
-                                            <li>   <router-link :to="{ path: 'about-us'}">
-                                                <a class="nav-link" >About Us</a>
-                                            </router-link></li>
+                                        </li>
+                                        <li>
+                                            <h3>Large chips <span>£2.90</span></h3>
 
-                                            <li>   <router-link :to="{ path: 'contact-us'}">
-                                                <a class="nav-link" >Contact Us</a>
-                                            </router-link></li>
+                                        </li>
+                                        <li>
+                                            <h3>Chip Batch  <span>£1.85</span></h3>
 
-                                            <li>
-                                                <a href="#" @click="openAllergy" class="nav-link">Allergy Information</a>
-                                            </li>
+                                        </li>
 
-                                            <li>
-                                                <a href="#" class="nav-link" @click="openMenu">Our Menu</a>
-                                            </li>
+                                        <li>
+                                            <h3>Cod  <span>£4.55</span></h3>
 
-                                        </ul>
-                                    </div><!--//navigation-bar-->
-                                </div> <!--//header-->
-                                <div class="main-banner row">
-                                    <div class="offset-md-1 col-md-10">
-                                        <div class="main-banner-holder">
-                                            <hooper :itemsToShow="1" :centerMode="true" pagination="no">
+                                        </li>
 
-                                                <slide>
-                                                    <img src="../../images/mainbanner1.jpg">
-                                                </slide>
-                                                <slide>
-                                                    <img src="../../images/mainbanner2.jpg">
-                                                </slide>
+                                        <li>
+                                            <h3>Haddock  <span>£4.55</span></h3>
 
-                                               <!-- <slide v-for="(slide, indx) in images" :key="indx" :index="indx">
-                                                    <img :src="slide" style="max-height: 400px;">
-                                                </slide>-->
+                                        </li>
 
-                                            </hooper>
+                                        <li>
+                                            <h3>Tinned Roe  <span>£1.40</span></h3>
+
+                                        </li>
+
+                                        <li>
+                                            <h3>Fishcake<span>£1.30</span></h3>
+
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="menu-card">
+                                    <h3 class="tt">Kebabs</h3>
+                                    <ul>
+                                        <li>
+                                            <h3>Doner Batch <span>£3.35</span></h3>
+
+                                        </li>
+                                        <li class="special">
+                                            <h3>Small Doner Kebab <span>£4.45</span></h3>
+
+                                        </li>
+                                        <li>
+                                            <h3>Large Doner Kebab<span>£4.75</span></h3>
+
+                                        </li>
+                                        <li>
+                                            <h3>Doner Meat & Chips <span>£4.65</span></h3>
+
+                                        </li>
+
+                                        <li>
+                                            <h3>Doner Wrap <span>£3.35</span></h3>
+
+                                        </li>
+                                        <li>
+                                            <h3>Portion of Doner Meat <span>£4.75</span></h3>
+
+                                        </li>
+
+                                        <li>
+                                            <h3>Chicken Wrap <span>£3.50</span></h3>
+
+                                        </li>
+
+                                        <li>
+                                            <h3>Chicken Kebab Batch <span>£3.50</span></h3>
+
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="menu-card">
+                                    <h3 class="tt">Burgers</h3>
+                                    <ul>
+                                        <li>
+                                            <h3>2 Faggots, Chips & Peas <span>£3.95</span></h3>
+                                        </li>
+                                        <li class="special">
+                                            <h3>1/4lb Burger with Salad <span>£2.20</span></h3>
+
+                                        </li>
+                                        <li>
+                                            <h3>Double Decker Burger <span>£2.85</span></h3>
+
+                                        </li>
+                                        <li>
+                                            <h3>1/4 Cheese Burger <span>£2.50</span></h3>
+
+                                        </li>
+
+                                        <li>
+                                            <h3>DoubleDecker Cheese Burger <span>£2.99</span></h3>
+
+                                        </li>
+
+                                        <li>
+                                            <h3>Vegi Burger with Salad <span>£2.50</span></h3>
+
+                                        </li>
+
+                                        <li>
+                                            <h3>Chicken Burger with Salad <span>£2.70</span></h3>
+
+                                        </li>
+
+                                        <li>
+                                            <h3>Spring Roll <span>£1.75</span></h3>
+
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="menu-card">
+                                    <h3 class="tt">Extras</h3>
+                                    <ul>
+                                        <li>
+                                            <h3>Batch <span>45p</span></h3>
+
+                                        </li>
+                                        <li class="special">
+                                            <h3>Pitta Bread <span>45p</span></h3>
+
+                                        </li>
+                                        <li>
+                                            <h3> Mushrooms in Batter (5)<span>£1.00</span></h3>
+
+                                        </li>
+                                        <li>
+                                            <h3>Potato Delight (5) <span>£1.00</span></h3>
+
+                                        </li>
+                                        <li>
+                                            <h3>Bottle of Vinegar <span>£1.20</span></h3>
+
+                                        </li>
+                                        <li>
+                                            <h3>Cockles <span>£2.25</span></h3>
+
+                                        </li>
+                                        <li>
+                                            <h3>Mussels <span>£1.95</span></h3>
+
+                                        </li>
+                                        <li>
+                                            <h3>Pickled Eggs <span>45p</span></h3>
+
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12 text-center mt-5">
+                                <a href="#" class="custom-btn">View All <i class="fas fa-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="big-img">
+            <div class="container">
+                <div class="inner">
+                    <div class="row">
+                        <div class="col-md-3">
+                            <div class="info-box">
+                                <h3>Explore Our All Delicious Dishes</h3>
+                                <a href="#" class="custom-btn">view all <i class="fas fa-long-arrow-alt-right"></i></a>
+                            </div>
+                        </div>
+                        <div class="col-md-9">
+                            <div class="img-box">
+                                <img src="https://i.ibb.co/9YY03V5/Png-Item-2134541.png">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="four-col">
+            <div class="container">
+                <div class="col-inner">
+                    <div class="overlay-2"></div>
+                    <div class="row c1">
+                        <div class="col-md-6">
+                            <div class="box offer">
+                                <div class="info">
+                                    <h3>£11.99 16 iches</h3>
+                                    <p>Family collection x large (16 inches) pizza Excluding MJ Special</p>
+                                    <a href="#" class="custom-btn2">Recommend Now <i class="fas fa-long-arrow-alt-right"></i></a>
+                                </div>
+                                <div class="overlay"></div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="box offer">
+                                <div class="info">
+                                    <h3>£23.99</h3>
+                                    <p>Any 2 Large Pizzas, Wings
+                                        Garlic Bread. Bottle of pop</p>
+                                    <a href="#" class="custom-btn2">Recommend Now <i class="fas fa-long-arrow-alt-right"></i></a>
+                                </div>
+                                <div class="overlay"></div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="row c2">
+                        <div class="col-md-12">
+                            <div class="box about">
+                                <div class="overlay"></div>
+                                <div class="row">
+                                    <div class="col-md-7">
+                                        <div class="">
+                                            <h4>ABOUT</h4>
+                                            <h3>Restaurant</h3>
+                                            <p>This is dummy copy. It is not meant to be read. It has been placed here solely to demonstrate the look and feel of finished text. He who searches for meaning here will be sorely disappointed. These words are here to provide the reader with a basic impression of how actual text will appear in its final presentation. </p>
+                                            <p>Think of them merely as actors on a paper stage, in a performance devoid of content yet rich in form. That being the case, there is really no point in your continuing to read them. </p>
+                                            <a href="#" class="custom-btn2">know more about us <i class="fas fa-long-arrow-alt-right"></i></a>
                                         </div>
                                     </div>
-                                </div><!--main-banner-->
-                            </div><!--//col-->
-                        </div><!--//row-->
-                    </div><!--//container-->
-                </div><!--//row-->
-            </div><!--//container-fluid-->
-
-            <div class="container-fluid aboutus-section">
-                <div class="row">
-                    <div class="container">
-                        <div class="row">
-                            <div class="offset-md-1 col-md-10">
-                                <h3>AboutUs</h3>
-                                <p>Papa Ge’s has been established in the UK since 2004 and started off in Tamworth in Staffordshire, it has now reached Birmingham with this new and improved store located at 888 Washwood Heath Road in Birmingham.</p>
-                                <p>We specialise in a wide range of foods such as great quality pizzas, traditional COD and chips, kebabs, burgers and southern fried chicken.
-                                We use the best ingredients to provide the best quality along with providing the best service. We specialise in traditional fish and chips and pizzas as these are our specialities and we have a combined experience of over 50 years. We endeavour to bring our customers the best quality food for the best price.</p>
-                            </div><!--//col-->
-                        </div><!--aboutus-section-->
-                    </div><!--container-->
-                </div><!--//row-->
-            </div><!--container-fluid-->
-
-            <div class="container-fluid bottom-section">
-                <img src="../../images/menutoptomato.png" class="menutoptomato">
-                <img src="../../images/menutopleftleaves.png" class="menutopleftleaves">
-                <img src="../../images/menubannersideleave.png" class="menubannersideleave">
-                <img src="../../images/menubannerrightcorn.png" class="menubannerrightcorn">
-                <img src="../../images/menubannerleftchilli.png" class="menubannerleftchilli">
-                <div class="row">
-                    <div class="container">
-                        <div class="row menu-section">
-                            <div class="col-md-12">
-                                <h3>Menu</h3>
-                                <div class="menu-banner-holder">
-                                    <img src="../../images/menu-banner.png">
-                                    <div class="banner-links">
-                                        <router-link :to="{ path: 'postal-code'}"> <span>Order Now</span></router-link>
-                                        <a href="#" @click="openMenu"> <span>Our Menu</span></a>
-                                    </div>
-                                </div><!--//menu-banner-holder-->
-                            </div><!--//col-->
-                        </div><!--menu-section-->
-
-                        <div class="row deals-section">
-                            <img src="../../images/dealsleftleaves.webp" class="dealsleftleaves">
-                            <img src="../../images/dealsrightlemon.webp" class="dealsrightlemon">
-                            <div class="col-md-12">
-                                <h3>Deals</h3>
-                                <div class="deals-slider row">
-                                    <div class="col-lg-3 col-md-6 col-sm-12">
-                                        <div class="per-deal">
-                                            <div class="image-holder">
-                                                <router-link :to="{ path: 'postal-code'}">
-                                                    <img src="../../images/nan_kebab_deal.jpg" alt="deal img">
-                                                </router-link>
-                                            </div>
-                                            <div class="text-holder">
-                                                <h5><a href="#"> NAN KEBAB DEAL for £15.99</a></h5>
-                                                <p>  Donner in Nan (R)</p>
-                                                <p>+ Mix in Nan (R)</p>
-                                                <p>+ Chicken in Nan (R) </p>
-                                                <p>+ 1 Chips (R) + 1.5ltr Pepsi</p>
-                                                <i class="fa fa-long-arrow"></i>
-                                            </div>
-                                            <router-link :to="{ path: 'postal-code'}"  class="deal-detail"><i class="fa fa-long-arrow-right"></i></router-link>
+                                    <div class="col-md-5">
+                                        <div class="img-box">
+                                            <img src="https://i.ibb.co/gZrwt11/Png-Item-1941470.png">
                                         </div>
-                                    </div><!--//col-3-->
-                                    <div class="col-lg-3 col-md-6 col-sm-12">
-                                        <div class="per-deal">
-                                            <div class="image-holder">
-                                                <router-link :to="{ path: 'postal-code'}">
-                                                    <img src="../../images/family_deal.jpg" alt="deal img">
-                                                </router-link>
-                                            </div>
-                                            <div class="text-holder">
-                                                <h5><a href="#">FAMILY DEAL for £16.99</a></h5>
-                                                <p>  2 Medium Pizzas</p>
-                                                <p>+ Garlic Bread (4pcs) </p>
-                                                <p>+ 1 Chips (R)</p>
-                                                <p>+ 1.5 ltr Pepsi</p>
-                                                <i class="fa fa-long-arrow"></i>
-                                            </div>
-                                            <router-link :to="{ path: 'postal-code'}"  class="deal-detail"><i class="fa fa-long-arrow-right"></i></router-link>
-                                        </div>
-                                    </div><!--//col-3-->
-                                    <div class="col-lg-3 col-md-6 col-sm-12">
-                                        <div class="per-deal">
-                                            <div class="image-holder">
-                                                <router-link :to="{ path: 'postal-code'}">
-                                                    <img src="../../images/big_deal.jpg" alt="deal img">
-                                                </router-link>
-                                            </div>
-                                            <div class="text-holder">
-                                                <h5><a href="#">BIG PIZZA DEAL for £24.99</a></h5>
-                                                <p>  Any 2 Large Pizzas</p>
-                                                <p>+ 2 Chips (R)</p>
-                                                <p>+ 2 Garlic Bread</p>
-                                                <p>+ 2 x 1.5 ltr Pepsi</p>
-                                                <i class="fa fa-long-arrow"></i>
-                                            </div>
-                                            <router-link :to="{ path: 'postal-code'}"  class="deal-detail"><i class="fa fa-long-arrow-right"></i></router-link>
-                                        </div>
-                                    </div><!--//col-3-->
-                                    <div class="col-lg-3 col-md-6 col-sm-12">
-                                        <div class="per-deal">
-                                            <div class="image-holder">
-                                                <router-link :to="{ path: 'postal-code'}">
-                                                    <img src="../../images/mixed_deal.jpg" alt="deal img"></router-link>
-
-                                            </div>
-                                            <div class="text-holder">
-                                                <h5><a href="#">MIXED DEAL for £15.99</a></h5>
-                                                <p>  Any Medium Pizza</p>
-                                                <p>+ Chicken Meat Chips (R)</p>
-                                                <p>+ Donner Meat Chips (R)</p>
-                                                <p>+ 1.5 ltr Pepsi</p>
-                                                <i class="fa fa-long-arrow"></i>
-                                            </div>
-                                            <router-link :to="{ path: 'postal-code'}"  class="deal-detail">
-                                               <i class="fa fa-long-arrow-right"></i>
-                                            </router-link>
-                                        </div>
-                                    </div><!--//col-3-->
-                                </div><!--//deals-slider-->
-                            </div><!--//col-->
-                        </div><!--deals-section-->
-
-                    </div><!--container-->
-                </div><!--//row-->
-                <div class="row">
-                    <div class="col-12">
-                        <div class="footer">
-                            <div class="row">
-                                <div class="col-md-5 footer-left">
-                                    <p>&copy; 2020 <span>All rights reserved</span></p>
-                                    <p><span>Site by</span> <a href="#">PapaGes</a></p>
-                                </div>
-                                <div class="col-md-2 footer-logo">
-                                    <img src="../../images/mainlogo.png" alt="logo">
-                                </div>
-                                <div class="col-md-5 footer-right">
-                                    <p><span>Email:</span> <a href="#">support@papages.com</a></p>
-                                    <p><span>Phone:</span> +44 121 242 2020</p>
-                                    <div class="footer-social">
-                                        <a href="#"><i class="fa fa-facebook-f"></i></a>
-                                        <a href="#"><i class="fa fa-twitter"></i></a>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div><!--container-fluid-->
-        </div><!--wrapper-->
-        <download-menu @HideModalValue="hideModal" :showModalProp="showPopup" :isMenu="menu" :isAllergy="allergy" ></download-menu>
+            </div>
+        </section>
+
+        <!-- Portfolio-->
+        <div class="gallery">
+            <div class="container">
+                <div class="gallery-area">
+                    <div class="title">
+
+                        <h3>Discover Our Gallery</h3>
+                        <p>This is dummy copy. It is not meant to be read. It has been placed here solely to demonstrate the look and feel of finished, typeset text. Only for show. He who searches for meaning here will be sorely disappointed. </p>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-3 col-sm-6 mb-4">
+                            <a class="portfolio-box" href="https://images.deliveryhero.io/image/fd-pk/LH/v5qm-listing.jpg">
+                                <img class="img-fluid" src="https://images.deliveryhero.io/image/fd-pk/LH/v5qm-listing.jpg?width=400&height=292" alt="" />
+                            </a>
+                        </div>
+                        <div class="col-lg-3 col-sm-6 mb-4">
+                            <a class="portfolio-box" href="https://images.deliveryhero.io/image/fd-pk/LH/s5vg-listing.jpg">
+                                <img class="img-fluid" src="https://images.deliveryhero.io/image/fd-pk/LH/s5vg-listing.jpg?width=400&height=292" alt="" />
+                            </a>
+                        </div>
+                        <div class="col-lg-3 col-sm-6 mb-4">
+                            <a class="portfolio-box" href="https://images.deliveryhero.io/image/fd-pk/LH/n7ng-listing.jpg">
+                                <img class="img-fluid" src="https://images.deliveryhero.io/image/fd-pk/LH/n7ng-listing.jpg?width=400&height=292" alt="" />
+                            </a>
+                        </div>
+                        <div class="col-lg-3 col-sm-6 mb-4">
+                            <a class="portfolio-box" href="https://images.deliveryhero.io/image/fd-pk/LH/s1gg-listing.jpg">
+                                <img class="img-fluid" src="https://images.deliveryhero.io/image/fd-pk/LH/s1gg-listing.jpg?width=400&height=292" alt="" />
+                            </a>
+                        </div>
+                        <div class="col-lg-3 col-sm-6 mb-4">
+                            <a class="portfolio-box" href="https://images.deliveryhero.io/image/fd-pk/LH/s1gg-listing.jpg">
+                                <img class="img-fluid" src="https://images.deliveryhero.io/image/fd-pk/LH/s1gg-listing.jpg?width=400&height=292" alt="" />
+                            </a>
+                        </div>
+                        <div class="col-lg-3 col-sm-6 mb-4">
+                            <a class="portfolio-box" href="https://images.deliveryhero.io/image/fd-pk/LH/n7ng-listing.jpg">
+                                <img class="img-fluid" src="https://images.deliveryhero.io/image/fd-pk/LH/n7ng-listing.jpg?width=400&height=292" alt="" />
+                            </a>
+                        </div>
+                        <div class="col-lg-3 col-sm-6 mb-4">
+                            <a class="portfolio-box" href="https://images.deliveryhero.io/image/fd-pk/LH/v5qm-listing.jpg">
+                                <img class="img-fluid" src="https://images.deliveryhero.io/image/fd-pk/LH/v5qm-listing.jpg?width=400&height=292" alt="" />
+                            </a>
+                        </div>
+                        <div class="col-lg-3 col-sm-6 mb-4">
+                            <a class="portfolio-box" href="https://images.deliveryhero.io/image/fd-pk/LH/s5vg-listing.jpg">
+                                <img class="img-fluid" src="https://images.deliveryhero.io/image/fd-pk/LH/s5vg-listing.jpg?width=400&height=292" alt="" />
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <section class="reservation">
+            <div class="container">
+                <div class="table-booked pattern">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="img-box">
+                                <img src="../../images/img-4.png">
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-box">
+                                <div class="title">
+                                    <h3>Contact us</h3>
+                                    <p>42 Torcross Ave, Coventry CV2 3NF.</p>
+                                    <p>02476441200.</p>
+                                </div>
+                                <form>
+                                    <div class="frm-body">
+                                        <div class="form-row">
+                                            <div class="form-group col-md-6">
+                                                <label for="">Name</label>
+                                                <input type="text" class="form-control" id="" placeholder="Your Name*">
+                                            </div>
+                                            <div class="form-group col-md-6">
+                                                <label>Email</label>
+                                                <input type="email" class="form-control" id="" placeholder="your email *">
+                                            </div>
+                                        </div>
+                                        <div class="form-row">
+                                            <div class="form-group col-md-6">
+                                                <label for="">Address</label>
+                                                <input type="text" class="form-control" id="" placeholder="Address">
+                                            </div>
+                                            <div class="form-group col-md-6">
+                                                <label>Number</label>
+                                                <input type="phone" class="form-control" id="" placeholder="Number">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="frm-ftr text-center mt-4">
+                                        <button class="custom-btn">Submit <i class="fas fa-long-arrow-alt-right"></i></button>
+                                    </div>
+
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <footer-menu></footer-menu>
     </div>
 </template>
 
@@ -275,32 +414,7 @@
                     });
             },
 
-            hideModal() {
-                this.showPopup = false;
-            },
-
-            openMenu () {
-                this.showPopup = true;
-                this.menu = true;
-                this.allergy = false;
-            },
-
-            openAllergy () {
-                this.showPopup = true;
-                this.allergy = true;
-                this.menu = false;
-            }
         }
     }
 </script>
 
-<style>
-    .image {
-        float: left;
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-position: center center;
-        border: 1px solid #ebebeb;
-
-    }
-</style>

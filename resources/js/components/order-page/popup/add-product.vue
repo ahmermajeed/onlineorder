@@ -1,8 +1,8 @@
 <template>
     <div>
-        <b-modal id="add-product" centered @hidden="onHidden" :hide-footer=true title-tag="h4" ok-variant="primary" ref="myModalRef" no-close-on-backdrop class="custom-modal ">
+        <b-modal id="add-product" centered @hidden="onHidden" :hide-footer=true title-tag="h4" ok-variant="primary" ref="myModalRef" custom-modal no-close-on-backdrop class="custom-modal">
             <b-alert show variant="danger" v-if="error_message" style="text-transform: capitalize;">{{error_message}}</b-alert>
-            <h3>Name : {{list.name}}</h3>
+            <h3>{{list.name}}</h3>
             <div class="product-gallery" >
                 <h4 v-if="!has_sizes">Price :  £ {{list.price}}  </h4>
 
@@ -11,7 +11,7 @@
                 <h4>Description</h4>
                 <p>{{list.description}}</p>
 
-                <h4 v-if="list.food_allergy">Allergy Information</h4>
+                <h5 v-if="list.food_allergy">Allergy Information</h5>
                 <p v-if="list.food_allergy">{{list.food_allergy}} </p>
 
                 <form action="" method="">
@@ -53,7 +53,7 @@
                             <li v-for="(item, index) in list.sizes" >
                                 <label>
                                     {{item.size}}
-                                    <input type="radio" :value="item.size+'##@@'+item.price"    v-model="productData['size']"  @click="productSum('size',item.price)">
+                                    <input type="radio" :value="item.size+'##@@'+priceFormat(item.price)"    v-model="productData['size']"  @click="productSum('size',priceFormat(item.price))">
                                     <span class="checkmark"></span>
                                 </label>
                                 <span style="float:right"> £  {{item.price}}</span>
@@ -67,7 +67,7 @@
                         <li v-for="(choice,choice_index) in item.choices">
                             <label>
                                 {{choice.name}}
-                                <input type="radio"  :value="choice.name+'##@@'+choice.price"   v-model="productData[item.name]" @click="productSum(item.name,choice.price)" >
+                                <input type="radio"  :value="choice.name+'##@@'+priceFormat(choice.price)"   v-model="productData[item.name]" @click="productSum(item.name,priceFormat(choice.price))">
                                 <span class="checkmark"></span>
                             </label>
                             <span style="float:right"> £  {{choice.price}}</span>
@@ -82,20 +82,21 @@
                     <div class="row count-footer">
                         <div class="col increment-buttons">
                             <button type="button" class="btn-minus" @click.prevent="minusQuantity()">
-                               <i class="fa fa-minus-square-o"></i>
+                               <i class="fas fa-minus-circle"></i>
                             </button>
                             <span class="btn-badge-count">{{product_quantity}}</span>   
                             <button type="button" class="btn-plus"  @click.prevent="plusQuantity()" >
-                                <i class="fa fa-plus-square-o"></i>
+                                <i class="fas fa-plus-circle"></i>
                             </button>
                         </div>
 
-                        <div class="col text-left">
-
-                        </div>
                         <div class="col text-right">
-                               <h3 >Total Amount : {{priceFormat(total_amount_of_single_product * product_quantity)}}</h3>
-                                <button  @click.prevent="addToCart()" class="add-count-button">Add</button>
+                               <h3 >Total Amount : <span>{{priceFormat(total_amount_of_single_product * product_quantity)}}</span></h3>
+                        </div>
+                    </div>
+                    <div class="row mt-3 pt-4" style="border-top: 1px solid #ddd;">
+                        <div class="col text-center">
+                            <button  @click.prevent="addToCart()" class="custom-btn add-count-button">Add</button>
                         </div>
                     </div>
                 </form>
@@ -156,6 +157,8 @@
                 let total_amount = 0;
                 total_amount = this.total_amount_of_single_product * this.product_quantity;
                 let extras = [];
+                console.log(this.productData);
+               // return;
 
                 this.product_array = {
                     'product_id':this.list.id,
@@ -261,7 +264,7 @@
                         total +=  parseFloat(price[1]) ;
                     }
                     this.total_amount_of_single_product = total;
-                },1000);
+                },300);
             },
 
 

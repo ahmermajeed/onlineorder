@@ -38,9 +38,9 @@ const router = new VueRouter({
             component: require('./components/Reservation.vue').default,
         },
         {
-            path: '/postal-code',
-            name: 'postal-code',
-            component: require('./components/Postcode.vue').default,
+            path: '/feedback',
+            name: 'feedback',
+            component: require('./components/Feedback.vue').default,
         },
         {
             path: '/check-out',
