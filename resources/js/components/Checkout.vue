@@ -1,15 +1,25 @@
 <template>
     <div>
         <header-menu></header-menu>
+        <section class="inner-section">
         <div class="loading" v-if="loading">Loading&#8230;</div>
-        <div class="container-fluid">
-            <div class="row full">
-                <div class="col-sm-12 business checkoutpage col-lg-9 col-md-8 col-sm-8 checkout-cart-form">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12 checkoutpage col-lg-8 col-md-8 col-sm-8 checkout-cart-form">
                     <div class="row">
                         <div class="col-sm-12 offset-sm-0 col-md-10 offset-md-1">
-                            <div class="row  mt-4 box-shad p-3 mb-5 rounded">
+
+                        <ul id="error_msg" >
+                            <li  v-for="(errorMessage) in errorMessage" style="color: red;" >{{errorMessage}}</li>
+                        </ul>
+                        </div>
+
+
+                        <div class="col-sm-12 offset-sm-0 col-md-10 offset-md-1">
+                            <div class="row  mt-4 p-3 mb-5 border-dashed">
+
                                 <div class="col-12">
-                                    <h2>Order</h2>
+                                    <h2>Order (Choose your Order Type) </h2> <span></span>
                                 </div>
                                 <div class="col-sm-6">
                                     <label class="customradiobutton radioiconed radio-inline mr-3">
@@ -38,9 +48,7 @@
 
                                     <div class="row" v-show="order_card == 'getdelivery'">
                                         <div class="col-12">
-                                            <ul id="error">
-                                                <li  v-for="(errorMessage) in errorMessage" style="color: red;">{{errorMessage}}</li>
-                                            </ul>
+
                                             <h2> Delivery Details</h2>
                                         </div>
                                         <div class="col-sm-6">
@@ -68,7 +76,7 @@
 
 
 
-                            <div class="row  mt-4  box-shad p-3 mb-5  rounded">
+                            <div class="row  mt-4 p-3 mb-5 border-dashed">
                                 <div class="col-12">
                                     <h2> Personal Details</h2>
                                 </div>
@@ -88,18 +96,18 @@
                                 </div>
                             </div>
 
-                            <div class="row mt-4  box-shad p-3 mb-5  rounded">
+                            <div class="row mt-4  p-3 mb-5 border-dashed">
                                 <div class="col-12">
                                     <h2>Payment</h2>
                                 </div>
                                 <div class="col-sm-6">
                                     <label class="customradiobutton radioiconed radio-inline mr-3">
-                                        <input type="radio" value="COD"  @change.prevent="showCard(false)"  v-model="form.payment_type" ><i class="fa fa-money"></i> Cash on Delivery
+                                        <input type="radio" value="COD"  @change.prevent="showCard(false)"  v-model="form.payment_type" ><i class="fas fa-wallet"></i> Cash on Delivery
                                     </label>
                                 </div>
                                 <div class="col-sm-6">
                                     <label class="customradiobutton radioiconed radio-inline mr-3">
-                                        <input type="radio" value="Credit/Debit Card" v-model="form.payment_type" @change.prevent="showCard(true)" ><i class="fa fa-credit-card-alt"></i> Credit/Debit Card
+                                        <input type="radio" value="Credit/Debit Card" v-model="form.payment_type" @change.prevent="showCard(true)" ><i class="fas fa-credit-card"></i> Credit/Debit Card
                                     </label>
                                 </div>
 
@@ -144,7 +152,7 @@
                                             </form>
                                         </div>
                                     </div>
-                                    <div class="row">
+                                    <div class="row mt-3">
                                         <div class="col-sm-4">
                                             <button class="subscribe btn btn-primary btn-block" type="button" @click="placeOrder()"> Confirm  </button>
                                         </div>
@@ -156,12 +164,12 @@
                 </div>
 
 
-                <div class="col-xs-12 full cart col-lg-3 col-md-4 col-sm-12 checkout-cart-desktop"   v-if="getAllCartArray.length > 1"  >
-                    <div class="order" id="cart-stiky">
+                <div class="col-xs-12 full cart col-lg-4 col-md-4 col-sm-12 checkout-cart-desktop"   v-if="getAllCartArray.length > 1"  >
+                    <div class="order cart-box" id="cart-stiky">
                         <h2>Your Order </h2>
                         <div>
                             <strong>Order Details</strong>
-                            <button class=" btn btn-primary" @click="placeOrder()">Checkout</button>
+                            
                             <div class="table-holder">
                                 <table class=tbl_cart_list>
                                     <tr v-for="(cart, product_index) in getAllCartArray"  v-if="product_index  > 0">
@@ -191,6 +199,9 @@
                                     </li>
                                 </ul>
                             </div>
+                            <div class="cart-btn mt-2">
+                                <button class=" custom-btn" @click="placeOrder()">Checkout</button>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -198,7 +209,8 @@
 
             </div>
         </div>
-
+        </section>
+        <footer-menu></footer-menu>
 
     </div>
 </template>
@@ -234,6 +246,7 @@
                 errorMessage:[],
                 validForm:true,
                 sendRequest:false,
+                value:''
 
             };
         },
@@ -244,6 +257,7 @@
                     var value = this.$store.getters.getAllCartArray[key];
                 }
             }
+            this.scrollToMain();
 
         },
         methods: {
@@ -257,192 +271,122 @@
             showOrderType(val){
                 this.order_card = val;
             },
-            scrollToTop() {
-                let element = document.getElementById("error");
-                element.scrollIntoView({behavior: "smooth", block: "end"});
+            scrollToMain() {
+                let element = document.getElementById("error_msg");
+                element.scrollIntoView({behavior: "instant", block: "start"});
             },
 
-            placeOrder(){
-                this.validForm  = true;
-                this.$validator.validateAll().then((result) => {
-                    if (result && !this.errorBag.all().length) {
+            scrollToTop() {
+                let element = document.getElementById("error_msg");
+                element.scrollIntoView({behavior: "instant", block: "start"});
+            },
 
-                        if(this.form.address === "") {
-                            this.errorBag.add({
-                                field:'address',
-                                msg: 'The address is required.',
-                                rule: 'required',
-                            });
-                            this.validForm  = false;
-                            this.errorMessage = this.errorBag.all();
-
-
-                        }
-                        if(this.form.street === "") {
-                            this.errorBag.add({
-                                msg: 'The Street is Required',
-                                rule: 'required',
-                            });
-                            this.validForm  = false;
-                            this.errorMessage = this.errorBag.all();
-
-                        }
-                        if(this.form.town === "") {
-                            this.errorBag.add({
-                                msg: 'The Town is Required',
-                                rule: 'required',
-                            });
-                            this.validForm  = false;
-                            this.errorMessage = this.errorBag.all();
-
-                        }
-
-                        if(this.form.postal_code === "") {
-                            this.errorBag.add({
-                                msg: 'The Postal code is Required',
-                                rule: 'required',
-                            });
-                            this.validForm  = false;
-                            this.errorMessage = this.errorBag.all();
-
-                        }
-
-
-                        if(this.form.email === "") {
-                            this.errorBag.add({
-                                msg: 'The Email is Required',
-                                rule: 'required',
-                            });
-                            this.validForm  = false;
-                            this.errorMessage = this.errorBag.all();
-
-                        }
-                        if(this.form.name === "") {
-                            this.errorBag.add({
-                                msg: 'The Name is Required',
-                                rule: 'required',
-                            });
-                            this.validForm  = false;
-                            this.errorMessage = this.errorBag.all();
-
-                        }
-                        if(this.form.number === "") {
-                            this.errorBag.add({
-                                msg: 'The Number is Required',
-                                rule: 'required',
-                            });
-                            this.validForm  = false;
-                            this.errorMessage = this.errorBag.all();
-
-                        }
-                        if(this.form.payment_type === "") {
-                            this.errorBag.add({
-                                msg: 'The Payment Type is Required',
-                                rule: 'required',
-                            });
-                            this.validForm  = false;
-                            this.errorMessage = this.errorBag.all();
-
-                        }
-                        if(this.card){
-                            if(this.form.card_holder_name === "") {
-                                this.errorBag.add({
-                                    msg: 'The Card Holder Name is Required',
-                                    rule: 'required',
-                                });
-                                this.validForm  = false;
-                                this.errorMessage = this.errorBag.all();
-
-                            }
-                            if(this.form.card_number === "") {
-                                this.errorBag.add({
-                                    msg: 'The Card_number is Required',
-                                    rule: 'required',
-                                });
-                                this.validForm  = false;
-                                this.errorMessage = this.errorBag.all();
-
-                            }
-                            if(this.form.expiration_month === "") {
-                                this.errorBag.add({
-                                    msg: 'The Expiration Month is Required',
-                                    rule: 'required',
-                                });
-                                this.validForm  = false;
-                                this.errorMessage = this.errorBag.all();
-
-                            }
-                            if(this.form.expiration_year === "") {
-                                this.errorBag.add({
-                                    msg: 'The Expiration year is Required',
-                                    rule: 'required',
-                                });
-                                this.validForm  = false;
-                                this.errorMessage = this.errorBag.all();
-
-                            }
-                            if(this.form.cvc === "") {
-                                this.errorBag.add({
-                                    msg: 'The CVC is Required',
-                                    rule: 'required',
-                                });
-                                this.validForm  = false;
-                                this.errorMessage = this.errorBag.all();
-
-                            }
-                        }
-
-                        setTimeout(()=>{
-                            console.log(  this.validForm)
-                            if(!this.validForm){
-                                this.scrollToTop();
-                            }
-
-                        },300);
-
+            placeOrder()
+            {
+                let error = [];
+                let _this = this;
+                if (this.form.order_type != '') {
+                    if (this.form.email === "") {
+                        error.push('Please Add Your Email Address');
                     }
-                });
+                    if (this.form.name === "") {
+                        error.push('Please Add Your Name');
+                    }
+                    if (this.form.number === "") {
+                        error.push('Please Add Your Number');
+                    }
+                    if (this.form.order_type === 'Delivery') {
+                        if (this.form.address === "") {
+                            error.push('Please Add Your Delivery Address');
+                        }
+                        if (this.form.street === "") {
+                            error.push('Please Add Your Street Adress');
+                        }
+                        if (this.form.town === "") {
+                            error.push('Please Add Your Town Name');
+                        }
+                        if (this.form.postal_code === "") {
+                            error.push('Please Add Your Postal Code');
+                        }
+                    }
 
-                let vm = this;
+                    if (this.form.payment_type === "") {
+                        error.push('Please Add Your Payment Type');
+                    }else if(this.form.payment_type == 'Credit/Debit Card') {
+                        if (this.form.card_holder_name === "") {
+                            error.push('Please Add Card Holder Name');
+                        }
+                        if (this.form.card_number === "") {
+                            error.push('Please Add Card Number');
+                        }
+                        if (this.form.expiration_month === "") {
+                            error.push('Please Add Your Expiration Month');
+                        }
 
-                let data = { 'user_id':11,
-                    'total_amount_with_fee':this.total_amount,
-                    'delivery_fees': '0',
-                    'payment':'cod',
-                    'delivery_address':this.form.address +" "+ this.form.street +" "+ this.form.postal_code,
-                    'order_details':  this.$store.getters.getAllCartArray,
-                    'user_data':this.form,
-                    'order_type': this.form.order_type
-                };
+                        if (this.form.expiration_year === "") {
+                            error.push('Please Add Expiration Year');
+                        }
+                        if (this.form.cvc === "") {
+                            error.push('Please Add Your Cvc');
+                        }
+                    }
 
+                } else {
+                    error.push('Please Choose Your Order Type');
+                }
+                this.errorMessage = error;
 
-                setTimeout(()=>{
-                    if(this.validForm){
+                if (this.errorMessage.length > 0) {
+                    _this.scrollToTop();
+                }else {
+                    let vm = this;
+                    if(this.form.order_type == 'Pickup'){
+                        vm.form.address = '---';
+                        vm.form.street = '---';
+                        vm.form.postal_code = '---';
+                    }
 
-                        let cart = this.$store.getters.getAllCartArray.splice(0,1);
-                        axios({
-                            method: 'post',
-                            url: 'http://frontonline.matrixepos.co.uk/api/placeOrder',
-                            data: data
-                        })
-                            .then(function (response) {
-                                //handle success
-                                console.log(response);
-                                vm.$router.push({name: 'thankyou'});
-                                //vm.$store.commit('setAllCartArray', {});
-
+                    let data = {
+                        'user_id': 11,
+                        'total_amount_with_fee': this.total_amount,
+                        'delivery_fees': '0',
+                        'payment': 'cod',
+                        'delivery_address': vm.form.address + " " + vm.form.street + " " + vm.form.postal_code,
+                        'order_details': this.$store.getters.getAllCartArray,
+                        'user_data': this.form,
+                        'order_type': this.form.order_type
+                    };
+                    console.log(data);
+                    setTimeout(() => {
+                        if (this.validForm) {
+                            vm.loading = true;
+                            let cart = this.$store.getters.getAllCartArray.splice(0, 1);
+                            axios({
+                                method: 'post',
+                                url: 'http://frontonline.matrixepos.co.uk/api/placeOrder',
+                                data: data
                             })
-                            .catch(function (response) {
-                                //handle error
-                                console.log(response);
+                                .then(function (response) {
+                                    vm.loading = false;
+                                    //handle success
+                                    console.log(response);
+                                    vm.$router.push({name: 'thankyou'});
+                                    //vm.$store.commit('setAllCartArray', {});
 
-                            });
-                    }
+                                })
+                                .catch(function (response) {
+                                    //handle error
+                                    console.log(response);
 
-                },1000);
+                                });
+                        }
+
+                    }, 1000);
+                }
+                }
 
 
-            }
+
 
         },
         computed: {
@@ -467,6 +411,9 @@
 
 
 <style>
+    body{
+        overflow: inherit !important;
+    }
     .cover {
         background-image: url('https://res.cloudinary.com/ordering2/image/upload/f_auto,q_auto,h_800,c_limit/v1573197396/w7h69zusidjo01abgrel.jpg');
     }
@@ -931,14 +878,13 @@
         font-size: 20px;
     }
 
-    .business {
+    /*.business {
         border-right: 1px solid #ccc;
-    }
+    }*/
 
     .arabic_rtl .business {
         float: right;
         border-right: 0;
-        border-left: 1px solid #ccc;
     }
 
     .form {
@@ -1451,8 +1397,8 @@
     .cart .order table tr td i.remove,
     .checkbox input:checked+.checkbox-icon:before,
     .checkbox input:checked:before {
-        background-color: #facc48;
-        border-color: #facc48;
+        background-color: #01a8fb;
+        border-color: #01a8fb;
         color: #fff !important
     }
 
@@ -1463,22 +1409,22 @@
     .button.button-positive.active,
     .button.button-positive:active,
     .item-btn a.button.activated {
-        background-color: #b49334;
-        border-color: #b49334;
+        background-color: #000 !important;
+        border-color: #000 !important;
         color: #fff
     }
 
     .form-group input.form-control,
     .form-group select.form-control,
     .navbar-default .navbar-nav>li label.notifications {
-        border-color: #facc48
+        border-color: #01a8fb
     }
 
     .input-group-addon,
     .input-group-addon:first-child,
     .pre-checkout .address .info .action button {
-        border-color: #facc48;
-        color: #facc48
+        border-color: #01a8fb;
+        color: #01a8fb
     }
 
     .cart .order table tr td.highlighted,
@@ -1506,15 +1452,15 @@
     h2.title,
     h3.title,
     input.title {
-        color: #facc48 !important
+        color: #01a8fb !important
     }
 
     .modal .popup-mode .tab-item-cont .button-bar .tab.active,
     .nav-tabs>li.dropdown>a.active,
     .nav-tabs>li.dropdown>a.open,
     .nav-tabs>li>a.active {
-        color: #facc48;
-        border-bottom-color: #facc48
+        color: #01a8fb;
+        border-bottom-color: #01a8fb
     }
 
     .navbar-default .navbar-nav>li>a:hover,
@@ -1525,29 +1471,29 @@
 
     .navbar-default .navbar-nav>li>a.cart label,
     .switcher__toggle {
-        background-color: #facc48
+        background-color: #01a8fb
     }
 
     .navbar-default .navbar-nav>li>a.cart.empty label {
         border-color: #facc48;
-        color: #facc48
+        color: #01a8fb
     }
 
     .navbar .dropdown .dropdown-toggle label.round {
-        border-color: #facc48
+        border-color: #01a8fb
     }
 
     .dishes .dishe.preload .price span,
     .nav-tabs.preload li a.active span,
     h3.title.preload {
-        background: #facc48;
-        color: #facc48
+        background: #01a8fb;
+        color: #01a8fb
     }
 
     .addr_tag_item.active,
     .badge-cont,
     .thumbnail .cartel.featured {
-        background: #facc48
+        background: #01a8fb
     }
 
     .btn-badge-cont,
@@ -1562,35 +1508,35 @@
     .go-cart,
     .navbar-default .navbar-nav>li label.notifications .count,
     table .count {
-        background: #facc48;
+        background: #01a8fb;
         color: #fff
     }
 
     .spinner.spinner-assertive {
-        stroke: #facc48;
-        fill: #facc48
+        stroke: #01a8fb;
+        fill: #01a8fb
     }
 
     .offset-categories.editor .nav-tabs>li>.category.selected {
-        border-bottom-color: #facc48
+        border-bottom-color: #01a8fb
     }
 
     .webtabs .tab.active {
-        color: #facc48;
-        border-bottom: 3px solid #facc48
+        color: #01a8fb;
+        border-bottom: 3px solid #01a8fb
     }
 
     input[readonly].form-control.home-address {
-        border: 1px solid #facc48 !important;
+        border: 1px solid #01a8fb !important;
         border-left: 0 !important
     }
 
     .check-box i {
-        color: #facc48
+        color: #01a8fb
     }
 
     .color-primary {
-        color: #facc48
+        color: #01a8fb
     }
 
     .color-secundary {
@@ -1598,7 +1544,7 @@
     }
 
     .background-primary {
-        background-color: #facc48
+        background-color: #01a8fb
     }
 
     .background-secondary {
@@ -1606,7 +1552,7 @@
     }
 
     .border-primary {
-        border-color: #facc48
+        border-color: #01a8fb
     }
 
     .border-secondary {

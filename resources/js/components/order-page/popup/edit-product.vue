@@ -2,9 +2,6 @@
     <div>
         <b-modal id="edit-product" centered @hidden="onHidden" :hide-footer=true title-tag="h4" ok-variant="primary" ref="myModalRef" no-close-on-backdrop class="custom-modal ">
             <b-alert show variant="danger" v-if="error_message" style="text-transform: capitalize;">{{error_message}}</b-alert>
-            {{editList}}
-            {{has_sizes}}
-
             <h3>Name : {{list.name}}</h3>
             <div class="product-gallery" >
                 <h4 v-if="!has_sizes">Price :  £ {{list.price}}  </h4>
@@ -57,21 +54,31 @@
                     </div>
                     <div class="row count-footer">
                         <div class="col increment-buttons">
-                            <button type="button" class="btn-minus" @click.prevent="minusQuantity()">
-                                <i class="fa fa-minus-square-o"></i>
+
+                            <button type="button" class="btn-minus" >
+                                <a href="#" @click.prevent="minusQuantity()">
+                                <i class="fas fa-minus-circle"></i>
+                                </a>
                             </button>
+
+
                             <span class="btn-badge-count">{{product_quantity}}</span>
                             <button type="button" class="btn-plus"  @click.prevent="plusQuantity()" >
-                                <i class="fa fa-plus-square-o"></i>
+                                <a href="#"  @click.prevent="plusQuantity()">
+                                <i class="fas fa-plus-circle"></i>
+                                </a>
                             </button>
-                        </div>
-
-                        <div class="col text-left">
 
                         </div>
+                        
                         <div class="col text-right">
                             <h3 >Total Amount : {{priceFormat(total_amount_of_single_product * product_quantity)}}</h3>
-                            <button  @click.prevent="addToCart()" class="add-count-button">Update</button>
+                            
+                        </div>
+                    </div>
+                    <div class="row mt-3 pt-4" style="border-top: 1px solid #ddd;">
+                        <div class="col text-center">
+                            <button  @click.prevent="addToCart()" class="custom-btn add-count-button">Update</button>
                         </div>
                     </div>
                 </form>
@@ -82,7 +89,7 @@
 </template>
 <script>
     export default {
-        props: ['showModalProp','list','has_sizes','editList'],
+        props: ['showModalProp','list','has_sizes','editList','editIndex'],
         data: function () {
             return {
                 errorMessage: '',
@@ -138,7 +145,6 @@
                 let total_amount = 0;
                 total_amount = this.total_amount_of_single_product * this.product_quantity;
                 let extras = [];
-
                 this.product_array = {
                     'product_id':this.list.id,
                     'quantity' :  this.product_quantity,
@@ -160,6 +166,8 @@
                     }
                 }
 
+
+
                 let checkMandatory = this.checkMandatory();
 
                 if(checkMandatory.length > 0 ){
@@ -176,16 +184,17 @@
                     this.product_array.extras = extras;
                 }
 
-                let cart_data =  this.$store.getters.getAllCartArray;
+                // let cart_data =  this.$store.getters.getAllCartArray;
+                this.$store.getters.getAllCartArray[this.editIndex]  = this.product_array;
 
-                if(cart_data.length === 0){
-                    this.$store.commit('setAllCartArray', this.product_array);
-                }else {
-                    let _this = this;
-                    let old = this.$store.getters.getAllCartArray;
-                    old.push(this.product_array);
-                    this.$store.commit('setAllCartArray', old);
-                }
+                // if(cart_data.length === 0){
+                //     this.$store.commit('setAllCartArray', this.product_array);
+                // }else {
+                //     let _this = this;
+                //     let old = this.$store.getters.getAllCartArray;
+                //     old.push(this.product_array);
+                //     this.$store.commit('setAllCartArray', old);
+                // }
                 this.hideModal();
 
             },
