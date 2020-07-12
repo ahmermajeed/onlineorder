@@ -27,13 +27,20 @@
                                 <li><a href="#">Mon - Fri: 4:00am - 11pm</a></li>
 
                             </ul>
+                            <h3>Check out our offers and follow us on</h3>
+                            <ul>
+                                <li><a href="https://web.facebook.com/Papa-Ges-pizza-Fish-Bar-104170144525384">Facebook</a></li>
+                                <li><a href="@papa_ges">Instagram</a></li>
+
+                            </ul>
+
                         </div>
                         <div class="col-md-3">
                             <h3>Contact Us</h3>
                             <ul>
-                                <li><a href="#"><span>Phone:</span>0121 242 202</a></li>
+                                <li><a href="#"><span>Phone:</span>0121 2422020</a></li>
                                 <li><a href="#"><span>Email:</span>support@papages.com</a></li>
-                                <li><a href="#"><span>Address:</span>4888 Washwood Heath Road, Fox & Goose (Opposite BP) B8 2NB</a></li>
+                                <li><a href="#"><span>Address:</span>Birmingham,UK.</a></li>
                             </ul>
                         </div>
                     </div>

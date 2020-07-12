@@ -13,13 +13,17 @@
                         <div class="row">
                             <div class="col-md-6">
                                 <div class="menu-card">
-                                    <h3 class="tt">Traditional Fish & Chips</h3>
+                                    <h3 class="tt">Traditional Fish & Chips Bar</h3>
                                     <ul>
                                         <li>
-                                            <h3>Fresh Large COD <span>£5.80</span> </h3>
+                                            <h3>CHUNKY Chips<span>£2.30</span> </h3>
 
                                         </li>
                                         <li class="special">
+                                            <h3>Fresh Large COD <span>£5.80</span></h3>
+
+                                        </li>
+                                        <li>
                                             <h3>Fresh Large COD & Chips <span>£7.50</span></h3>
 
                                         </li>
@@ -37,10 +41,7 @@
 
                                         </li>
 
-                                        <li>
-                                            <h3>Sausage <span>£1.40</span></h3>
 
-                                        </li>
 
 
                                     </ul>
@@ -81,31 +82,31 @@
                             </div>
                             <div class="col-md-6">
                                 <div class="menu-card">
-                                    <h3 class="tt">Extras</h3>
+                                    <h3 class="tt">Pizzas</h3>
                                     <ul>
                                         <li>
-                                            <h3>Garlic Bread (4pcs) <span>£2.20</span></h3>
+                                            <h3>Margherita <span>Starting From £ 5.50*</span></h3>
                                         </li>
                                         <li class="special">
-                                            <h3>Garlic Bread & Cheese (4pcs) <span>£2.50</span></h3>
+                                            <h3>Garlic Margherita <span>Starting From £ 5.50*</span></h3>
 
                                         </li>
                                         <li>
-                                            <h3>Garlic Pizza with Cheese 9” (6 Slices)<span>£3.50</span></h3>
+                                            <h3>Hawaiian Lou <span>Starting From £ 5.50*</span></h3>
 
                                         </li>
                                         <li>
-                                            <h3>Onion Rings (10pcs) <span>£2.40</span></h3>
-
-                                        </li>
-
-                                        <li>
-                                            <h3>Potato Wedges <span>£2.80</span></h3>
+                                            <h3>Farmhouse Bite <span>Starting From £ 5.50*</span></h3>
 
                                         </li>
 
                                         <li>
-                                            <h3>Mozzarella Sticks (5pcs) <span>£2.40</span></h3>
+                                            <h3>Vegetable Supreme <span>Starting From £ 5.50*</span></h3>
+
+                                        </li>
+
+                                        <li>
+                                            <h3>Fiery Veg<span>Starting From £ 5.50*</span></h3>
 
                                         </li>
 
@@ -114,26 +115,30 @@
                             </div>
                             <div class="col-md-6">
                                 <div class="menu-card">
-                                    <h3 class="tt">Drinks & Desserts</h3>
+                                    <h3 class="tt">Pizzas</h3>
                                     <ul>
                                         <li>
-                                            <h3>Hagen Dazs Ice Cream (500ml)<span>£5.50</span></h3>
+                                            <h3>Seafood Sensation<span>Starting From £ 5.50*</span></h3>
 
                                         </li>
                                         <li class="special">
-                                            <h3>Strawberry Cheesecake Slice (F)  <span>£3.00</span></h3>
+                                            <h3>California Chicken<span>Starting From £ 5.50*</span></h3>
 
                                         </li>
                                         <li>
-                                            <h3>Chocolate Fudge Cake Slice<span>£3.00</span></h3>
+                                            <h3>Tuna Special<span>Starting From £ 5.50*</span></h3>
 
                                         </li>
                                         <li>
-                                            <h3>Drinks(cans)<span>) £1.10</span></h3>
+                                            <h3>Carribean Dream<span>)Starting From £ 5.50*</span></h3>
 
                                         </li>
                                         <li>
-                                            <h3>Drinks(Bottles 1.5ltr) <span> £2.70</span></h3>
+                                            <h3>Mexicano<span>Starting From £ 5.50*</span></h3>
+
+                                        </li>
+                                        <li>
+                                            <h3>Donner Pizza<span>Starting From £ 5.50*</span></h3>
 
                                         </li>
 
@@ -211,7 +216,7 @@
                                     <div class="col-md-7">
                                         <div class="">
                                             <h4>Welcome At</h4>
-                                            <h3>PAPAG RESTAURANT</h3>
+                                            <h3>PAPA Ge's RESTAURANT</h3>
                                             <p>Papa Ge’s has been established in the uk since 2004 and started off in Tamworth in Staffordshire, it has not reached Birminghak with this new and improved store located at 888 Washwood Heath Road in Birmingham.
                                                 We specialise in a wide range of foods such as great quality pizzas, traditional COD and chips, kebabs, burgers and southern fried chicken.
                                                 We use the best ingredients to provide the best quality along with providing the best service. We specialise in traditional fish and chips and pizzas as these are our specialities and we have a combined experience of over 50 years. We endeavour to bring our customers the best quality food for the best price</p>
@@ -289,14 +294,14 @@
                 <div class="table-booked pattern">
                     <div class="row">
                         <div class="col-md-6">
-                                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2429.2156154533595!2d-1.822215984654894!3d52.49333647980907!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4870bae64827134d%3A0x2e1a51de3c022c50!2s888a%20Washwood%20Heath%20Rd%2C%20Ward%20End%2C%20Birmingham%20B8%202NB%2C%20UK!5e0!3m2!1sen!2s!4v1592827053509!5m2!1sen!2s" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0" width="auto" height="450"></iframe>
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2429.2156154533595!2d-1.822215984654894!3d52.49333647980907!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4870bae64827134d%3A0x2e1a51de3c022c50!2s888a%20Washwood%20Heath%20Rd%2C%20Ward%20End%2C%20Birmingham%20B8%202NB%2C%20UK!5e0!3m2!1sen!2s!4v1592827053509!5m2!1sen!2s" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0" width="auto" height="450"></iframe>
                         </div>
                         <div class="col-md-6">
                             <div class="form-box">
                                 <div class="title">
                                     <h3>Contact us</h3>
-                                    <p>888 Washwood Heath Road, Fox & Goose (Opposite BP) B8 2NB.</p>
-                                    <p>0121 242 2020.</p>
+                                    <p>Birmingham,UK.</p>
+                                    <p>0121 2422020</p>
                                 </div>
                                 <form>
                                     <div class="frm-body">
