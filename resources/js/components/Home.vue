@@ -155,6 +155,56 @@
                 </div>
             </div>
         </section>
+        <section class="covid-section mt-5">
+            <div class="container">
+                <div class="title">
+                    <h3>Covid 19</h3>
+                    <p>Collection offers</p>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="box red">
+                            <h5>
+                                2x 9inch (6 slice) Pizzas
+                                <span>$ 6.49</span>
+                            </h5>
+                            <h5>
+                                2x 9inch (6 slice) Pizzas
+                                <span>$ 6.49</span>
+                            </h5>
+                            <h5>
+                                2x 9inch (6 slice) Pizzas
+                                <span>$ 6.49</span>
+                            </h5>
+                            <h5>
+                                2x 9inch (6 slice) Pizzas
+                                <span>$ 6.49</span>
+                            </h5>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="box yellow">
+                            <h5>
+                                2x 9inch (6 slice) Pizzas
+                                <span>$ 6.49</span>
+                            </h5>
+                            <h5>
+                                2x 9inch (6 slice) Pizzas
+                                <span>$ 6.49</span>
+                            </h5>
+                            <h5>
+                                2x 9inch (6 slice) Pizzas
+                                <span>$ 6.49</span>
+                            </h5>
+                            <h5>
+                                2x 9inch (6 slice) Pizzas
+                                <span>$ 6.49</span>
+                            </h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
         <section class="big-img">
             <div class="container">
                 <div class="inner">
@@ -187,7 +237,7 @@
                                         + Mix in Nan (R)
                                         + Chicken in Nan (R)
                                         + 1 Chips (R) + 1.5ltr Pepsi</p>
-                                    <a href="#" class="custom-btn2">Recommend Now <i class="fas fa-long-arrow-alt-right"></i></a>
+                                    <!-- <a href="#" class="custom-btn2">Recommend Now <i class="fas fa-long-arrow-alt-right"></i></a> -->
                                 </div>
                                 <div class="overlay"></div>
                             </div>
@@ -200,7 +250,7 @@
                                         + Garlic Bread (4pcs)
                                         + 1 Chips (R)
                                         + 1.5ltr Pepsi</p>
-                                    <a href="#" class="custom-btn2">Recommend Now <i class="fas fa-long-arrow-alt-right"></i></a>
+                                    <!-- <a href="#" class="custom-btn2">Recommend Now <i class="fas fa-long-arrow-alt-right"></i></a> -->
                                 </div>
                                 <div class="overlay"></div>
                             </div>
@@ -228,6 +278,16 @@
                                     </div>
                                 </div>
                             </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="artboard">
+                    <div class="row">
+                        <div class="col-md-2">
+                            <img src="/images/artboard-1-8.png">
+                        </div>
+                        <div class="col-md-10">
+                            <h3>Traditional English Classic <span style="color:#01a8fb;">Fresh Cod</span> Cooked to Order</h3>
                         </div>
                     </div>
                 </div>
@@ -284,12 +344,13 @@
                 </div>
             </div>
         </div>
+        
         <section class="reservation">
             <div class="container">
                 <div class="table-booked pattern">
                     <div class="row">
                         <div class="col-md-6">
-                                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2429.2156154533595!2d-1.822215984654894!3d52.49333647980907!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4870bae64827134d%3A0x2e1a51de3c022c50!2s888a%20Washwood%20Heath%20Rd%2C%20Ward%20End%2C%20Birmingham%20B8%202NB%2C%20UK!5e0!3m2!1sen!2s!4v1592827053509!5m2!1sen!2s" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0" width="auto" height="450"></iframe>
+                                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2429.2156154533595!2d-1.822215984654894!3d52.49333647980907!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4870bae64827134d%3A0x2e1a51de3c022c50!2s888a%20Washwood%20Heath%20Rd%2C%20Ward%20End%2C%20Birmingham%20B8%202NB%2C%20UK!5e0!3m2!1sen!2s!4v1592827053509!5m2!1sen!2s" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0" width="100%" height="450"></iframe>
                         </div>
                         <div class="col-md-6">
                             <div class="form-box">
