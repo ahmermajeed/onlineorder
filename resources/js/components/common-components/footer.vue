@@ -29,8 +29,8 @@
                             </ul>
                             <h3>Check out our offers and follow us on</h3>
                             <ul>
-                                <li><a href="https://web.facebook.com/Papa-Ges-pizza-Fish-Bar-104170144525384">Facebook</a></li>
-                                <li><a href="@papa_ges">Instagram</a></li>
+                                <li><a href="https://web.facebook.com/Papa-Ges-pizza-Fish-Bar-104170144525384"  target="_blank">Facebook</a></li>
+                                <li><a href="https://www.instagram.com/papa_ges/" target="_blank"> Instagram</a></li>
 
                             </ul>
 

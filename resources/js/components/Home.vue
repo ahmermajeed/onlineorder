@@ -7,23 +7,19 @@
                     <div class="title">
                         <img src="/images/logo.png">
                         <h3>Our Food Menu</h3>
-                        <p>This is dummy copy. It is not meant to be read. It has been placed here solely to demonstrate the look and feel of finished, typeset text. Only for show. He who searches for meaning here will be sorely disappointed. </p>
+                        <p></p>
                     </div>
                     <div class="menu-area">
                         <div class="row">
                             <div class="col-md-6">
                                 <div class="menu-card">
-                                    <h3 class="tt">Traditional Fish & Chips Bar</h3>
+                                    <h3 class="tt">Traditional Fish & Chips</h3>
                                     <ul>
                                         <li>
-                                            <h3>CHUNKY Chips<span>£2.30</span> </h3>
+                                            <h3>Fresh Large COD <span>£5.80</span> </h3>
 
                                         </li>
                                         <li class="special">
-                                            <h3>Fresh Large COD <span>£5.80</span></h3>
-
-                                        </li>
-                                        <li>
                                             <h3>Fresh Large COD & Chips <span>£7.50</span></h3>
 
                                         </li>
@@ -41,7 +37,10 @@
 
                                         </li>
 
+                                        <li>
+                                            <h3>Sausage <span>£1.40</span></h3>
 
+                                        </li>
 
 
                                     </ul>
@@ -216,8 +215,8 @@
                                     <div class="col-md-7">
                                         <div class="">
                                             <h4>Welcome At</h4>
-                                            <h3>PAPA Ge's RESTAURANT</h3>
-                                            <p>Papa Ge’s has been established in the uk since 2004 and started off in Tamworth in Staffordshire, it has not reached Birminghak with this new and improved store located at 888 Washwood Heath Road in Birmingham.
+                                            <h3>PAPA Ge'S </h3>
+                                            <p>Papa Ge’s has been established in the UK since 2004 and started off in Tamworth in Staffordshire, it has now reached Birmingham with this new and improved store located at 888 Washwood Heath Road in Birmingham.
                                                 We specialise in a wide range of foods such as great quality pizzas, traditional COD and chips, kebabs, burgers and southern fried chicken.
                                                 We use the best ingredients to provide the best quality along with providing the best service. We specialise in traditional fish and chips and pizzas as these are our specialities and we have a combined experience of over 50 years. We endeavour to bring our customers the best quality food for the best price</p>
                                         </div>
@@ -241,8 +240,8 @@
                 <div class="gallery-area">
                     <div class="title">
 
-                        <h3>Discover Our Gallery</h3>
-                        <p>This is dummy copy. It is not meant to be read. It has been placed here solely to demonstrate the look and feel of finished, typeset text. Only for show. He who searches for meaning here will be sorely disappointed. </p>
+                        <h3>Discover Our Offers</h3>
+                        <p>Check out our offers and follow us on  <a href="https://web.facebook.com/Papa-Ges-pizza-Fish-Bar-104170144525384" target="_blank">Facebook</a> and <a href="https://www.instagram.com/papa_ges/" target="_blank"> Instagram @papa_ges </a></p>
                     </div>
                     <div class="row">
                         <div class="col-lg-3 col-sm-6 mb-4">
@@ -255,11 +254,7 @@
                                 <img class="img-fluid" src="https://i.ibb.co/X5jLgtf/bannertheme4-01.jpg" alt="" />
                             </a>
                         </div>
-                        <div class="col-lg-3 col-sm-6 mb-4">
-                            <a class="portfolio-box" href="https://i.ibb.co/X5jLgtf/bannertheme4-01.jpg">
-                                <img class="img-fluid" src="https://i.ibb.co/X5jLgtf/bannertheme4-01.jpg" alt="" />
-                            </a>
-                        </div>
+
                         <div class="col-lg-3 col-sm-6 mb-4">
                             <a class="portfolio-box" href="https://i.ibb.co/0cPGZJz/bannertheme4-04.jpg">
                                 <img class="img-fluid" src="https://i.ibb.co/0cPGZJz/bannertheme4-04.jpg" alt="" />
@@ -294,14 +289,14 @@
                 <div class="table-booked pattern">
                     <div class="row">
                         <div class="col-md-6">
-                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2429.2156154533595!2d-1.822215984654894!3d52.49333647980907!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4870bae64827134d%3A0x2e1a51de3c022c50!2s888a%20Washwood%20Heath%20Rd%2C%20Ward%20End%2C%20Birmingham%20B8%202NB%2C%20UK!5e0!3m2!1sen!2s!4v1592827053509!5m2!1sen!2s" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0" width="auto" height="450"></iframe>
+                                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2429.2156154533595!2d-1.822215984654894!3d52.49333647980907!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4870bae64827134d%3A0x2e1a51de3c022c50!2s888a%20Washwood%20Heath%20Rd%2C%20Ward%20End%2C%20Birmingham%20B8%202NB%2C%20UK!5e0!3m2!1sen!2s!4v1592827053509!5m2!1sen!2s" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0" width="auto" height="450"></iframe>
                         </div>
                         <div class="col-md-6">
                             <div class="form-box">
                                 <div class="title">
                                     <h3>Contact us</h3>
-                                    <p>Birmingham,UK.</p>
-                                    <p>0121 2422020</p>
+                                    <p>888 Washwood Heath Road, Fox & Goose (Opposite BP) B8 2NB.</p>
+                                    <p>0121 242 2020.</p>
                                 </div>
                                 <form>
                                     <div class="frm-body">
