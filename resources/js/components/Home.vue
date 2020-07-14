@@ -203,6 +203,11 @@
                         </div>
                     </div>
                 </div>
+                <div class="row">
+                    <div class="col-md-12 text-center">
+                        <p>Call and Collect offer Limited time only <a href="tel:0121 2422020">0121 2422020</a></p>
+                    </div>
+                </div>
             </div>
         </section>
         <section class="big-img">
