@@ -166,19 +166,19 @@
                         <div class="box red">
                             <h5>
                                 2x 9inch (6 slice) Pizzas
-                                <span>$ 6.49</span>
+                                <span>£ 6.49</span>
                             </h5>
                             <h5>
                                 2x 9inch (6 slice) Pizzas
-                                <span>$ 6.49</span>
+                                <span>£ 6.49</span>
                             </h5>
                             <h5>
                                 2x 9inch (6 slice) Pizzas
-                                <span>$ 6.49</span>
+                                <span>£ 6.49</span>
                             </h5>
                             <h5>
                                 2x 9inch (6 slice) Pizzas
-                                <span>$ 6.49</span>
+                                <span>£ 6.49</span>
                             </h5>
                         </div>
                     </div>
@@ -186,19 +186,19 @@
                         <div class="box yellow">
                             <h5>
                                 2x 9inch (6 slice) Pizzas
-                                <span>$ 6.49</span>
+                                <span>£ 6.49</span>
                             </h5>
                             <h5>
                                 2x 9inch (6 slice) Pizzas
-                                <span>$ 6.49</span>
+                                <span>£ 6.49</span>
                             </h5>
                             <h5>
                                 2x 9inch (6 slice) Pizzas
-                                <span>$ 6.49</span>
+                                <span>£ 6.49</span>
                             </h5>
                             <h5>
                                 2x 9inch (6 slice) Pizzas
-                                <span>$ 6.49</span>
+                                <span>£ 6.49</span>
                             </h5>
                         </div>
                     </div>
