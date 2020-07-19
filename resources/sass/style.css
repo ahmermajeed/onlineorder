@@ -10220,7 +10220,7 @@ header.masthead h1 {
 }
 .custom-header .main-menu ul.navbar-nav li{
     position: relative;
-    margin-right: 40px;
+    margin-right: 18px;
 }
 .custom-header .main-menu ul.navbar-nav li a{
     color: #707070 !important;
@@ -10297,8 +10297,8 @@ header.masthead h1 {
     background: #01a8fb;
     border-radius: 0;
     font-weight: 600;
-    font-size: 16px;
-    padding: 14px 10px;
+    font-size: 12px;
+    padding: 8px 7px;
 }
 
 .custom-header .order-now a:hover{
@@ -10667,7 +10667,8 @@ section .pattern{
 }
 
 .custom-btn:hover{
-    color: #fff
+    color: #fff;
+    text-decoration: none;
 }
 
 .custom-btn:hover:after{
@@ -10886,6 +10887,62 @@ section .pattern{
 .inner-section .product .p-cart .custom-btn2:hover{
     color: #000 !important;
 }
+.covid-section .title{
+    position: relative;
+}
+.covid-section .title:after{
+    position: absolute;
+    content: "";
+    width: 50px;
+    height: 3px;
+    background: #01a8fb;
+    left: 0;
+    right: 0;
+    bottom: -10px;
+    margin: 0 auto;
+
+}
+.covid-section .title h3, .covid-section .title p{
+    margin-bottom: 0;
+}
+
+.covid-section .box{
+    border-radius: 0;
+    padding: 0;
+    margin-bottom: 40px;
+}
+
+.covid-section .box h5{
+    color: #000;
+    font-size: 16px;
+    border-bottom: 1px dashed #000;
+    padding: 12px 0;
+    margin: 0;
+}
+
+.covid-section .box h5 span{
+    float: right;
+}
+
+
+
+.artboard{
+    margin: 50px 0 0 0;
+    border-bottom: 2px dotted #505050;
+    padding-bottom: 40px;
+}
+.artboard img{
+    width: 100%;
+    height: auto;
+}
+
+.artboard h3{
+    font-size: 35px;
+    padding: 43px 0;
+    margin: 0;
+}
+
+
 
 button:focus{
     outline: none !important;
@@ -11365,6 +11422,14 @@ footer span{
 
     .inner-page header.masthead{
         background-size: cover;
+    }
+
+    section .pattern{
+        padding: 30px 20px;
+    }
+
+    section .pattern iframe{
+        width: 100%;
     }
 
     .inner-page .masthead .info-txt{
