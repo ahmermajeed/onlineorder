@@ -8,7 +8,7 @@ class Deal extends Model
 {
     protected $table = 'deals';
 
-    protected $with= ['products'];
+    //protected $with= ['products'];
 
     public function products()
     {

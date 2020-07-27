@@ -25,7 +25,7 @@ class DealController extends Controller
         $per_page = self::PER_PAGE;
         $data = $this->_repository->findByAll($pagination,$per_page,$requestData);
         $output = [
-            'data' => $data['data'],
+            'data' => $data,
             'pagination' => !empty($data['pagination']) ? $data['pagination'] : false,
             'message' => "Deals Retrieved Successfully",
         ];

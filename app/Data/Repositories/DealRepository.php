@@ -2,7 +2,9 @@
 
 namespace App\Data\Repositories;
 
+use App\Data\Models\Category;
 use App\Data\Models\Deal;
+use App\Data\Models\DealProducts;
 use App\Data\Models\Products;
 use function App\Helpers\paginator;
 
@@ -22,9 +24,13 @@ class DealRepository
      */
     public function findByAll($pagination = false,$perPage = 10, $input = [])
     {
-        $data = array();
-        $data['data'] = $this->model->with('products')->get();
-        return $data;
+        $deals = $this->model->get();
+
+        foreach ($deals as $key => $deal) {
+            $deals[$key]['type'] = "deal";
+        }
+
+        return $deals;
     }
 
     /**
@@ -33,13 +39,35 @@ class DealRepository
      */
     public function findById($id)
     {
-        $data = array();
-        $query = $this->model->with('groups')->find($id);
+        $data = $this->model->find($id)->toArray();
 
-        if ($query != NULL) {
-            $data = $query;
-        } else {
-            $data = null;
+        $data['items'] = array();
+
+        $dealProducts = DealProducts::where('id_deal', $id)->get();
+
+        if(count($dealProducts) > 0) {
+            foreach ($dealProducts as $key => $dealProduct) {
+
+                if($dealProduct['is_category'] == 1) {
+
+                    $exp = explode('_', $dealProduct['item_id']);
+                    $category = Category::where('id', $exp[1])->with(['products' => function ($query) {
+                        $query->with('groups');
+                    }])->first();
+
+                    $data['items'][$key] = $category;
+                    $data['items'][$key]['item_type'] = "category";
+
+                } else {
+
+                    $exp = explode('_', $dealProduct['item_id']);
+                    $product = Products::where('id', $exp[1])->with('groups')->first();
+
+                    $data['items'][$key] = $product;
+                    $data['items'][$key]['item_type'] = "product";
+                }
+
+            }
         }
 
         return $data;
