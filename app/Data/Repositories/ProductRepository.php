@@ -2,6 +2,7 @@
 
 namespace App\Data\Repositories;
 
+use App\Data\Models\Deal;
 use App\Data\Models\Products;
 use function App\Helpers\paginator;
 class ProductRepository
@@ -20,7 +21,6 @@ class ProductRepository
      */
     public function findByAll($pagination = false,$perPage = 10, $input = [])
     {
-
         $data = array();
         $model = $this->model;
 
