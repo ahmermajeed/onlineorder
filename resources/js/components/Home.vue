@@ -7,173 +7,140 @@
                     <div class="title">
                         <img src="/images/logo.png">
                         <h3>Our Food Menu</h3>
-                        <p>This is dummy copy. It is not meant to be read. It has been placed here solely to demonstrate the look and feel of finished, typeset text. Only for show. He who searches for meaning here will be sorely disappointed. </p>
+                        <p></p>
                     </div>
                     <div class="menu-area">
                         <div class="row">
                             <div class="col-md-6">
                                 <div class="menu-card">
-                                    <h3 class="tt">Fish and chips</h3>
+                                    <h3 class="tt">Traditional Fish & Chips</h3>
                                     <ul>
                                         <li>
-                                            <h3>Cone of chips <span>£1.30</span></h3>
+                                            <h3>Fresh Large COD <span>£5.80</span> </h3>
 
                                         </li>
                                         <li class="special">
-                                            <h3>Regular chips  <span>£1.70</span></h3>
+                                            <h3>Fresh Large COD & Chips <span>£7.50</span></h3>
 
                                         </li>
                                         <li>
-                                            <h3>Large chips <span>£2.90</span></h3>
+                                            <h3>Masala COD Fish <span>£5.80</span></h3>
 
                                         </li>
                                         <li>
-                                            <h3>Chip Batch  <span>£1.85</span></h3>
-
-                                        </li>
-
-                                        <li>
-                                            <h3>Cod  <span>£4.55</span></h3>
+                                            <h3>Masala COD Fish in Nan  <span>£7.50</span></h3>
 
                                         </li>
 
                                         <li>
-                                            <h3>Haddock  <span>£4.55</span></h3>
+                                            <h3>Fish Cake  <span>£1.40</span></h3>
 
                                         </li>
 
                                         <li>
-                                            <h3>Tinned Roe  <span>£1.40</span></h3>
+                                            <h3>Sausage <span>£1.40</span></h3>
 
                                         </li>
 
-                                        <li>
-                                            <h3>Fishcake<span>£1.30</span></h3>
 
-                                        </li>
                                     </ul>
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="menu-card">
-                                    <h3 class="tt">Kebabs</h3>
+                                    <h3 class="tt">S. F. Chicken</h3>
                                     <ul>
                                         <li>
-                                            <h3>Doner Batch <span>£3.35</span></h3>
+                                            <h3>1 Piece Chicken <span>£1.40</span></h3>
 
                                         </li>
                                         <li class="special">
-                                            <h3>Small Doner Kebab <span>£4.45</span></h3>
+                                            <h3>2 Pieces Chicken <span>£2.60</span></h3>
 
                                         </li>
                                         <li>
-                                            <h3>Large Doner Kebab<span>£4.75</span></h3>
+                                            <h3>3 Pieces Chicken<span>£3.50</span></h3>
 
                                         </li>
                                         <li>
-                                            <h3>Doner Meat & Chips <span>£4.65</span></h3>
-
-                                        </li>
-
-                                        <li>
-                                            <h3>Doner Wrap <span>£3.35</span></h3>
-
-                                        </li>
-                                        <li>
-                                            <h3>Portion of Doner Meat <span>£4.75</span></h3>
+                                            <h3>1 Piece Chicken & Chips <span>£2.50</span></h3>
 
                                         </li>
 
                                         <li>
-                                            <h3>Chicken Wrap <span>£3.50</span></h3>
+                                            <h3>2 Pieces Chicken & Chips <span>£3.60</span></h3>
 
                                         </li>
-
                                         <li>
-                                            <h3>Chicken Kebab Batch <span>£3.50</span></h3>
+                                            <h3>3 Pieces Chicken & Chips <span>£4.50</span></h3>
 
                                         </li>
+
                                     </ul>
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="menu-card">
-                                    <h3 class="tt">Burgers</h3>
+                                    <h3 class="tt">Pizzas</h3>
                                     <ul>
                                         <li>
-                                            <h3>2 Faggots, Chips & Peas <span>£3.95</span></h3>
+                                            <h3>Margherita <span>Starting From £ 5.50*</span></h3>
                                         </li>
                                         <li class="special">
-                                            <h3>1/4lb Burger with Salad <span>£2.20</span></h3>
+                                            <h3>Garlic Margherita <span>Starting From £ 5.50*</span></h3>
 
                                         </li>
                                         <li>
-                                            <h3>Double Decker Burger <span>£2.85</span></h3>
+                                            <h3>Hawaiian Lou <span>Starting From £ 5.50*</span></h3>
 
                                         </li>
                                         <li>
-                                            <h3>1/4 Cheese Burger <span>£2.50</span></h3>
-
-                                        </li>
-
-                                        <li>
-                                            <h3>DoubleDecker Cheese Burger <span>£2.99</span></h3>
+                                            <h3>Farmhouse Bite <span>Starting From £ 5.50*</span></h3>
 
                                         </li>
 
                                         <li>
-                                            <h3>Vegi Burger with Salad <span>£2.50</span></h3>
+                                            <h3>Vegetable Supreme <span>Starting From £ 5.50*</span></h3>
 
                                         </li>
 
                                         <li>
-                                            <h3>Chicken Burger with Salad <span>£2.70</span></h3>
+                                            <h3>Fiery Veg<span>Starting From £ 5.50*</span></h3>
 
                                         </li>
 
-                                        <li>
-                                            <h3>Spring Roll <span>£1.75</span></h3>
-
-                                        </li>
                                     </ul>
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="menu-card">
-                                    <h3 class="tt">Extras</h3>
+                                    <h3 class="tt">Pizzas</h3>
                                     <ul>
                                         <li>
-                                            <h3>Batch <span>45p</span></h3>
+                                            <h3>Seafood Sensation<span>Starting From £ 5.50*</span></h3>
 
                                         </li>
                                         <li class="special">
-                                            <h3>Pitta Bread <span>45p</span></h3>
+                                            <h3>California Chicken<span>Starting From £ 5.50*</span></h3>
 
                                         </li>
                                         <li>
-                                            <h3> Mushrooms in Batter (5)<span>£1.00</span></h3>
+                                            <h3>Tuna Special<span>Starting From £ 5.50*</span></h3>
 
                                         </li>
                                         <li>
-                                            <h3>Potato Delight (5) <span>£1.00</span></h3>
+                                            <h3>Carribean Dream<span>)Starting From £ 5.50*</span></h3>
 
                                         </li>
                                         <li>
-                                            <h3>Bottle of Vinegar <span>£1.20</span></h3>
+                                            <h3>Mexicano<span>Starting From £ 5.50*</span></h3>
 
                                         </li>
                                         <li>
-                                            <h3>Cockles <span>£2.25</span></h3>
+                                            <h3>Donner Pizza<span>Starting From £ 5.50*</span></h3>
 
                                         </li>
-                                        <li>
-                                            <h3>Mussels <span>£1.95</span></h3>
 
-                                        </li>
-                                        <li>
-                                            <h3>Pickled Eggs <span>45p</span></h3>
-
-                                        </li>
                                     </ul>
                                 </div>
                             </div>
@@ -184,6 +151,57 @@
                                 <a href="#" class="custom-btn">View All <i class="fas fa-arrow-right"></i></a>
                             </div>
                         </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="covid-section mt-5">
+            <div class="container">
+                <div class="title">
+                    <h3>Covid 19</h3>
+                    <p>Collection offers</p>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="box red">
+                            <h5>
+                                2x 9inch (6 slice) Pizzas
+                                <span>£ 6.49</span>
+                            </h5>
+                            <h5>
+                                2x 12 inch (8slice) Pizzas
+                                <span>£9.99</span>
+                            </h5>
+                            <h5>
+                                2x 16 (12 Slice) Pizzas
+                                <span>£12.99</span>
+                            </h5>
+                            <h5>  (Upto 5 toppings or a set pizza off the menu)</h5>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="box yellow">
+                            <h5>
+                                3x 9inch (6slice) pizzas
+                                <span>£9.49</span>
+                            </h5>
+                            <h5>
+                                3x 12 inch (8slice) Pizzas
+                                <span>£13.99</span>
+                            </h5>
+                            <h5>
+                                3x 16 (12 Slice) Pizzas
+                                <span>£18.99</span>
+                            </h5>
+                            <h5>
+                                (Upto 5 toppings or a set pizza off the menu)
+                            </h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12 text-center">
+                        <p>Call and Collect offer Limited time only <a href="tel:0121 2422020">0121 2422020</a></p>
                     </div>
                 </div>
             </div>
@@ -215,9 +233,12 @@
                         <div class="col-md-6">
                             <div class="box offer">
                                 <div class="info">
-                                    <h3>£11.99 16 iches</h3>
-                                    <p>Family collection x large (16 inches) pizza Excluding MJ Special</p>
-                                    <a href="#" class="custom-btn2">Recommend Now <i class="fas fa-long-arrow-alt-right"></i></a>
+                                    <h3>£15.99</h3>
+                                    <p>Donner in Nan (R),
+                                        + Mix in Nan (R)
+                                        + Chicken in Nan (R)
+                                        + 1 Chips (R) + 1.5ltr Pepsi</p>
+                                    <!-- <a href="#" class="custom-btn2">Recommend Now <i class="fas fa-long-arrow-alt-right"></i></a> -->
                                 </div>
                                 <div class="overlay"></div>
                             </div>
@@ -225,10 +246,12 @@
                         <div class="col-md-6">
                             <div class="box offer">
                                 <div class="info">
-                                    <h3>£23.99</h3>
-                                    <p>Any 2 Large Pizzas, Wings
-                                        Garlic Bread. Bottle of pop</p>
-                                    <a href="#" class="custom-btn2">Recommend Now <i class="fas fa-long-arrow-alt-right"></i></a>
+                                    <h3>£16.99</h3>
+                                    <p>2 Medium Pizzas
+                                        + Garlic Bread (4pcs)
+                                        + 1 Chips (R)
+                                        + 1.5ltr Pepsi</p>
+                                    <!-- <a href="#" class="custom-btn2">Recommend Now <i class="fas fa-long-arrow-alt-right"></i></a> -->
                                 </div>
                                 <div class="overlay"></div>
                             </div>
@@ -242,11 +265,11 @@
                                 <div class="row">
                                     <div class="col-md-7">
                                         <div class="">
-                                            <h4>ABOUT</h4>
-                                            <h3>Restaurant</h3>
-                                            <p>This is dummy copy. It is not meant to be read. It has been placed here solely to demonstrate the look and feel of finished text. He who searches for meaning here will be sorely disappointed. These words are here to provide the reader with a basic impression of how actual text will appear in its final presentation. </p>
-                                            <p>Think of them merely as actors on a paper stage, in a performance devoid of content yet rich in form. That being the case, there is really no point in your continuing to read them. </p>
-                                            <a href="#" class="custom-btn2">know more about us <i class="fas fa-long-arrow-alt-right"></i></a>
+                                            <h4>Welcome At</h4>
+                                            <h3>PAPA Ge'S </h3>
+                                            <p>Papa Ge’s has been established in the UK since 2004 and started off in Tamworth in Staffordshire, it has now reached Birmingham with this new and improved store located at 888 Washwood Heath Road in Birmingham.
+                                                We specialise in a wide range of foods such as great quality pizzas, traditional COD and chips, kebabs, burgers and southern fried chicken.
+                                                We use the best ingredients to provide the best quality along with providing the best service. We specialise in traditional fish and chips and pizzas as these are our specialities and we have a combined experience of over 50 years. We endeavour to bring our customers the best quality food for the best price</p>
                                         </div>
                                     </div>
                                     <div class="col-md-5">
@@ -259,6 +282,16 @@
                         </div>
                     </div>
                 </div>
+                <div class="artboard">
+                    <div class="row">
+                        <div class="col-md-2">
+                            <img src="/images/artboard-1-8.png">
+                        </div>
+                        <div class="col-md-10">
+                            <h3>Traditional English Classic <span style="color:#01a8fb;">Fresh Cod</span> Cooked to Order</h3>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
 
@@ -268,69 +301,64 @@
                 <div class="gallery-area">
                     <div class="title">
 
-                        <h3>Discover Our Gallery</h3>
-                        <p>This is dummy copy. It is not meant to be read. It has been placed here solely to demonstrate the look and feel of finished, typeset text. Only for show. He who searches for meaning here will be sorely disappointed. </p>
+                        <h3>Discover Our Offers</h3>
+                        <p>Check out our offers and follow us on  <a href="https://web.facebook.com/Papa-Ges-pizza-Fish-Bar-104170144525384" target="_blank">Facebook</a> and <a href="https://www.instagram.com/papa_ges/" target="_blank"> Instagram @papa_ges </a></p>
                     </div>
                     <div class="row">
                         <div class="col-lg-3 col-sm-6 mb-4">
-                            <a class="portfolio-box" href="https://images.deliveryhero.io/image/fd-pk/LH/v5qm-listing.jpg">
-                                <img class="img-fluid" src="https://images.deliveryhero.io/image/fd-pk/LH/v5qm-listing.jpg?width=400&height=292" alt="" />
+                            <a class="portfolio-box" href="https://i.ibb.co/Rcrtpwx/dealimg1.jpg">
+                                <img class="img-fluid" src="https://i.ibb.co/Rcrtpwx/dealimg1.jpg" alt="" />
                             </a>
                         </div>
                         <div class="col-lg-3 col-sm-6 mb-4">
-                            <a class="portfolio-box" href="https://images.deliveryhero.io/image/fd-pk/LH/s5vg-listing.jpg">
-                                <img class="img-fluid" src="https://images.deliveryhero.io/image/fd-pk/LH/s5vg-listing.jpg?width=400&height=292" alt="" />
+                            <a class="portfolio-box" href="https://i.ibb.co/X5jLgtf/bannertheme4-01.jpg">
+                                <img class="img-fluid" src="https://i.ibb.co/X5jLgtf/bannertheme4-01.jpg" alt="" />
+                            </a>
+                        </div>
+
+                        <div class="col-lg-3 col-sm-6 mb-4">
+                            <a class="portfolio-box" href="https://i.ibb.co/0cPGZJz/bannertheme4-04.jpg">
+                                <img class="img-fluid" src="https://i.ibb.co/0cPGZJz/bannertheme4-04.jpg" alt="" />
                             </a>
                         </div>
                         <div class="col-lg-3 col-sm-6 mb-4">
-                            <a class="portfolio-box" href="https://images.deliveryhero.io/image/fd-pk/LH/n7ng-listing.jpg">
-                                <img class="img-fluid" src="https://images.deliveryhero.io/image/fd-pk/LH/n7ng-listing.jpg?width=400&height=292" alt="" />
+                            <a class="portfolio-box" href="https://i.ibb.co/NCLNQ5D/bannerthem4-02.jpg">
+                                <img class="img-fluid" src="https://i.ibb.co/NCLNQ5D/bannerthem4-02.jpg" alt="" />
                             </a>
                         </div>
                         <div class="col-lg-3 col-sm-6 mb-4">
-                            <a class="portfolio-box" href="https://images.deliveryhero.io/image/fd-pk/LH/s1gg-listing.jpg">
-                                <img class="img-fluid" src="https://images.deliveryhero.io/image/fd-pk/LH/s1gg-listing.jpg?width=400&height=292" alt="" />
+                            <a class="portfolio-box" href="https://i.ibb.co/jhyx531/menutheme1-03.jpg">
+                                <img class="img-fluid" src="https://i.ibb.co/jhyx531/menutheme1-03.jpg" alt="" />
                             </a>
                         </div>
                         <div class="col-lg-3 col-sm-6 mb-4">
-                            <a class="portfolio-box" href="https://images.deliveryhero.io/image/fd-pk/LH/s1gg-listing.jpg">
-                                <img class="img-fluid" src="https://images.deliveryhero.io/image/fd-pk/LH/s1gg-listing.jpg?width=400&height=292" alt="" />
+                            <a class="portfolio-box" href="https://i.ibb.co/gZt2SYN/menutheme1-04.jpg">
+                                <img class="img-fluid" src="https://i.ibb.co/gZt2SYN/menutheme1-04.jpg" alt="" />
                             </a>
                         </div>
                         <div class="col-lg-3 col-sm-6 mb-4">
-                            <a class="portfolio-box" href="https://images.deliveryhero.io/image/fd-pk/LH/n7ng-listing.jpg">
-                                <img class="img-fluid" src="https://images.deliveryhero.io/image/fd-pk/LH/n7ng-listing.jpg?width=400&height=292" alt="" />
-                            </a>
-                        </div>
-                        <div class="col-lg-3 col-sm-6 mb-4">
-                            <a class="portfolio-box" href="https://images.deliveryhero.io/image/fd-pk/LH/v5qm-listing.jpg">
-                                <img class="img-fluid" src="https://images.deliveryhero.io/image/fd-pk/LH/v5qm-listing.jpg?width=400&height=292" alt="" />
-                            </a>
-                        </div>
-                        <div class="col-lg-3 col-sm-6 mb-4">
-                            <a class="portfolio-box" href="https://images.deliveryhero.io/image/fd-pk/LH/s5vg-listing.jpg">
-                                <img class="img-fluid" src="https://images.deliveryhero.io/image/fd-pk/LH/s5vg-listing.jpg?width=400&height=292" alt="" />
+                            <a class="portfolio-box" href="https://i.ibb.co/7k690Rw/menutheme1-02.jpg">
+                                <img class="img-fluid" src="https://i.ibb.co/7k690Rw/menutheme1-02.jpg" alt="" />
                             </a>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+        
         <section class="reservation">
             <div class="container">
                 <div class="table-booked pattern">
                     <div class="row">
                         <div class="col-md-6">
-                            <div class="img-box">
-                                <img src="../../images/img-4.png">
-                            </div>
+                                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2429.2156154533595!2d-1.822215984654894!3d52.49333647980907!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4870bae64827134d%3A0x2e1a51de3c022c50!2s888a%20Washwood%20Heath%20Rd%2C%20Ward%20End%2C%20Birmingham%20B8%202NB%2C%20UK!5e0!3m2!1sen!2s!4v1592827053509!5m2!1sen!2s" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0" width="100%" height="450"></iframe>
                         </div>
                         <div class="col-md-6">
                             <div class="form-box">
                                 <div class="title">
                                     <h3>Contact us</h3>
-                                    <p>42 Torcross Ave, Coventry CV2 3NF.</p>
-                                    <p>02476441200.</p>
+                                    <p>888 Washwood Heath Road, Fox & Goose (Opposite BP) B8 2NB.</p>
+                                    <p>0121 242 2020.</p>
                                 </div>
                                 <form>
                                     <div class="frm-body">

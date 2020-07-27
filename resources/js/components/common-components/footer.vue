@@ -6,7 +6,8 @@
                     <div class="row">
                         <div class="col-md-4">
                             <img src="../../../images/logo.png">
-                            <p>This is dummy copy. It is not meant to be read. It has been placed here solely to demonstrate the look and feel of finished text. He who searches for meaning here will be sorely disappointed.</p>
+                            <p>Open 7 days a week
+                                4PM - 11pm.</p>
                         </div>
                         <div class="col-md-2">
                             <h3>Quick Links</h3>
@@ -23,17 +24,23 @@
                         <div class="col-md-3">
                             <h3>Opening Hours</h3>
                             <ul>
-                                <li><a href="#">Mon - Fri: 8:00am - 10pm</a></li>
+                                <li><a href="#">Mon - Fri: 4:00am - 11pm</a></li>
 
                             </ul>
+                            <h3>Check out our offers and follow us on</h3>
+                            <ul>
+                                <li><a href="https://web.facebook.com/Papa-Ges-pizza-Fish-Bar-104170144525384"  target="_blank">Facebook</a></li>
+                                <li><a href="https://www.instagram.com/papa_ges/" target="_blank"> Instagram</a></li>
+
+                            </ul>
+
                         </div>
                         <div class="col-md-3">
                             <h3>Contact Us</h3>
                             <ul>
-                                <li><a href="#"><span>Phone:</span>02476441200</a></li>
-                                <li><a href="#"><span>Email:</span>info@mjstakeaway.co.uk.com</a></li>
-                                <li><a href="#"><span>Address:</span>42 Torcross Ave, Coventry CV2 3NF
-                                    78562, fake city, UK</a></li>
+                                <li><a href="#"><span>Phone:</span>0121 2422020</a></li>
+                                <li><a href="#"><span>Email:</span>support@papages.com</a></li>
+                                <li><a href="#"><span>Address:</span>Birmingham,UK.</a></li>
                             </ul>
                         </div>
                     </div>
@@ -41,7 +48,7 @@
             </div>
             <div class="copyright">
                 <div class="container">
-                    <p>2020 ©  <span>Mjs</span>, All rights reserved</p>
+                    <p>2020 ©  <span>Papages.com</span>, All rights reserved</p>
                 </div>
             </div>
         </footer>
