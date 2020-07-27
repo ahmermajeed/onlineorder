@@ -9,8 +9,8 @@
                             <div class="filter-content">
                                 <h3>Categories</h3>
                                 <div class="list-group list-group-flush">
-
                                     <a href="#"   @click.prevent="getProductAgainstCategories(false)" class="list-group-item">All<span class="float-right badge badge-light round"></span> </a>
+                                    <a href="#"   @click.prevent="getDeals(false)" class="list-group-item">Deals<span class="float-right badge badge-light round"></span> </a>
                                     <a href="#" class="list-group-item"  v-for="(item, index) in categories"  @click.prevent="getProductAgainstCategories(item.id)" > {{item.name}}  <span class="float-right badge badge-light round">{{item.products.length}}</span> </a>
                             </div>  <!-- list-group .// -->
                             </div>
@@ -18,6 +18,7 @@
                     </div>
                     <div class="col-md-5"  >
                         <div class="product-list">
+
 
                             <div class="product"  v-for="(item, index) in products" v-if="item.products.length">
                                  <div class="row">
@@ -41,7 +42,6 @@
                                         </div>
                                  </div>
                             </div>
-
                         </div>
                     </div>
                     <div class="col-md-4 cart">
@@ -263,6 +263,18 @@
                         }
                     });
             },
+
+            getDeals(){
+                let  _this = this;
+                _this.loading  = true;
+                axios.get('/api/deals')
+                    .then((response) => {
+                        // console.log( response.data.data);
+                        _this.products =  response.data.data;
+                        _this.loading  = false;
+                    });
+            },
+
             getProductAgainstCategories(id){
                 let  _this = this;
                 _this.loading  = true;
