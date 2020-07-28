@@ -10,16 +10,16 @@
                                 <h3>Categories</h3>
                                 <div class="list-group list-group-flush">
                                     <a href="#"   @click.prevent="getProductAgainstCategories(false)" class="list-group-item">All<span class="float-right badge badge-light round"></span> </a>
-                                    <a href="#"   @click.prevent="getDeals(false)" class="list-group-item">Deals<span class="float-right badge badge-light round"></span> </a>
+
                                     <a href="#" class="list-group-item"  v-for="(item, index) in categories"  @click.prevent="getProductAgainstCategories(item.id)" > {{item.name}}  <span class="float-right badge badge-light round">{{item.products.length}}</span> </a>
+                                    <a href="#"   @click.prevent="getDeals(false)" class="list-group-item">Deals<span class="float-right badge badge-light round">{{deals.length}}</span> </a>
                             </div>  <!-- list-group .// -->
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-5"  >
+                    <div class="col-md-5">
                         <div class="product-list">
-
-
+                            <!--                            for products-->
                             <div class="product"  v-for="(item, index) in products" v-if="item.products.length">
                                  <div class="row">
                                         <div class="col-md-12">
@@ -42,6 +42,34 @@
                                         </div>
                                  </div>
                             </div>
+
+                            <!--                            for Deals-->
+                            <div class="product"  v-for="(item, index) in deals" >
+                                <div class="row">
+                                    <div class="col-md-12">
+
+                                        <h2 class="mb-4" style="color: #01a9fb; margin-bottom: 25px;" >{{item.name}}</h2>
+                                    </div>
+                                    <div class="col-md-12 mb-4 pb-1"  style="border-bottom: 1px dashed #ccc;">
+                                        <div class="p-d">
+                                            <h3>{{item.description}}</h3>
+                                            <p>{{item.description}}.</p>
+
+                                        </div>
+                                        <div class="p-cart">
+                                            <p><span>£</span>{{item.price}}</p>
+                                            <!--                                            <a href="#" class="custom-btn2 btn"  @click.prevent="viewProduct(item.id)">-->
+                                            <!--                                                Add to cart <i class="fas fa-long-arrow-alt-right"></i></i>-->
+                                            <!--                                            </a>-->
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+
+
+
                         </div>
                     </div>
                     <div class="col-md-4 cart">
@@ -202,12 +230,14 @@
                 limitPosition: 380,
                 scrolled: false,
                 editIndex:'',
+                deals:[],
                 //lastPosition: 0
             };
         },
         mounted() {
             this.getCategories();
             this.getProductAgainstCategories(false);
+            this.getDeals(false)
             if(this.$store.getters.getAllCartArray.length > 0) {
                 let total = 0;
                 for( var key in this.$store.getters.getAllCartArray ) {
@@ -270,7 +300,9 @@
                 axios.get('/api/deals')
                     .then((response) => {
                         // console.log( response.data.data);
-                        _this.products =  response.data.data;
+                        _this.products = [];
+                        _this.deals = response.data.data;
+
                         _this.loading  = false;
                     });
             },
