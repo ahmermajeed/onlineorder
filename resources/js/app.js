@@ -5,6 +5,8 @@ import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Vuex from 'vuex';
 import store from './store.js'
+import VueCtkDateTimePicker from 'vue-ctk-date-time-picker';
+import 'vue-ctk-date-time-picker/dist/vue-ctk-date-time-picker.css';
 
 Vue.use(VueRouter);
 
@@ -23,6 +25,8 @@ Vue.use(ModalPlugin);
 Vue.use(BootstrapVue);
 
 Vue.use(Vuex);
+Vue.component('VueCtkDateTimePicker', VueCtkDateTimePicker)
+
 require('./components-tags');
 const router = new VueRouter({
     mode: 'history',
