@@ -58,17 +58,13 @@
                                         </div>
                                         <div class="p-cart">
                                             <p><span>£</span>{{item.price}}</p>
-                                            <!--                                            <a href="#" class="custom-btn2 btn"  @click.prevent="viewProduct(item.id)">-->
-                                            <!--                                                Add to cart <i class="fas fa-long-arrow-alt-right"></i></i>-->
-                                            <!--                                            </a>-->
+                                                                                        <a href="#" class="custom-btn2 btn"  @click.prevent="viewDeal(item.id)">
+                                                                                            Add to cart <i class="fas fa-long-arrow-alt-right"></i></i>
+                                                                                        </a>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-
-
-
-
 
                         </div>
                     </div>
@@ -205,8 +201,17 @@
                 </div>
             </div>
         </div>
+
+
+
+
         <add-product @HideModalValue="hideModal" :showModalProp="product" :list="list" :has_sizes="has_sizes"></add-product>
+
         <edit-product @HideModalValue="hideModal" :showModalProp="editProduct" :list="list" :editList="editList" :has_sizes="has_sizes" :editIndex="editIndex"> </edit-product>
+
+        <add-deal @HideModalValue="hideModal" :showModalProp="dealsModal" :deals_data="deals_data"></add-deal>
+
+
         <footer-menu></footer-menu>
     </div>
         
@@ -231,6 +236,8 @@
                 scrolled: false,
                 editIndex:'',
                 deals:[],
+                deals_data:{},
+                dealsModal:false,
                 //lastPosition: 0
             };
         },
@@ -279,8 +286,11 @@
             hideModal() {
                 this.product = false;
                 this.editProduct= false;
+                this.dealsModal= false;
                 this.list = {};
+                this.deals_data = {};
             },
+
             getCategories(){
                 let  _this = this;
                 _this.loading  = true;
@@ -342,6 +352,17 @@
                     });
             },
 
+            viewDeal(id){
+                let  _this = this;
+                _this.loading  = true;
+                let url = '/api/deals/'+id;
+                axios.get(url)
+                    .then((response) => {
+                        _this.deals_data =  response.data.data;
+                        _this.loading  = false;
+                        _this.dealsModal = true;
+                    });
+            },
 
 
 
