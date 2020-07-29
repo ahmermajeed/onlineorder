@@ -45,6 +45,7 @@ class DealRepository
 
         $dealProducts = DealProducts::where('id_deal', $id)->get();
 
+
         if(count($dealProducts) > 0) {
             foreach ($dealProducts as $key => $dealProduct) {
 
@@ -54,9 +55,9 @@ class DealRepository
                     $category = Category::where('id', $exp[1])->with(['products' => function ($query) {
                         $query->with('groups');
                     }])->first();
-
                     $data['items'][$key] = $category;
                     $data['items'][$key]['item_type'] = "category";
+                    $data['items'][$key]['quantity'] = $dealProduct['quantity'];
 
                 } else {
 
@@ -65,6 +66,7 @@ class DealRepository
 
                     $data['items'][$key] = $product;
                     $data['items'][$key]['item_type'] = "product";
+                    $data['items'][$key]['quantity'] = $dealProduct['quantity'];
                 }
 
             }

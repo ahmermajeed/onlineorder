@@ -9,6 +9,7 @@ class Deal extends Model
     protected $table = 'deals';
 
     //protected $with= ['products'];
+    protected $fillable = ['price'];
 
     public function products()
     {

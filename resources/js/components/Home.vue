@@ -167,7 +167,7 @@
             <div class="container">
                 <div class="title">
                     <h3>Covid 19</h3>
-                    <p>Collection offers</p>
+                    <h3>Collection offers</h3>
                 </div>
                 <div class="row">
                     <div class="col-md-6">
