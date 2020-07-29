@@ -1,6 +1,14 @@
 <template>
     <div>
         <header-menu></header-menu>
+        <section class="rating-area">
+            <div class="container">
+                <div class="rating-img">
+                    <a href="#"><img class="for-dktp" src="https://i.ibb.co/rdDNmNh/rating-bg.png" alt="rating-bg" border="0">
+                        <img class="for-mb" src="https://i.ibb.co/c6X6yB4/rating-bg-mb.png" alt="rating-bg" border="0"></a>
+                </div>
+            </div>
+        </section>
         <section class="menu-box">
             <div class="container">
                 <div class="menus pattern">
@@ -200,7 +208,7 @@
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-md-12 text-center">
+                    <div class="col-md-12 text-center callnow">
                         <p>Call and Collect offer Limited time only <a href="tel:0121 2422020">0121 2422020</a></p>
                     </div>
                 </div>

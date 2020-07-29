@@ -10964,6 +10964,18 @@ button:focus{
     margin-right: 10px;
 }
 
+.callnow p{
+    font-size: 20px;
+}
+
+.rating-area img{
+    width: 100%;
+    height: auto;
+}
+
+.rating-area .for-mb{
+    display: none;
+}
 
 footer{
     padding: 40px 0 0 0;
@@ -11502,6 +11514,14 @@ footer span{
         color: #03aafb;
 
     }*/
+
+    .rating-area .for-mb{
+        display: block;
+    }
+
+    .rating-area .for-dktp{
+        display: none;
+    }
 }
 
 
