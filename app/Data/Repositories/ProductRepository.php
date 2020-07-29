@@ -64,12 +64,6 @@ class ProductRepository
      */
     public function updateRecord($request, $id)
     {
-        
-        if(isset($request['size'])) {
-            print_r($request['size']);
-            exit;
-        }
-        
         $data = $this->model->findOrFail($id);
         $data->fill($request)->save();
         return $data;

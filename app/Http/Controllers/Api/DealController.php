@@ -38,4 +38,26 @@ class DealController extends Controller
         $output = ['data' => $data, 'message' => __("messages.success")];
         return response()->json($output, Response::HTTP_OK);
     }
+
+    public function update(Request $request, $id)
+    {
+        $requestData = $request->all();
+        $requestData['id'] = $id;
+
+        $validator =  Validator::make($requestData, [
+            'id' => 'required|exists:deals,id',
+            'price' => 'required'
+        ]);
+
+        if ($validator->fails()) {
+            $code = 401;
+            $output = ['error' => ['code' => $code, 'message' => $validator->errors()->first()]];
+            return response()->json($output, $code);
+        }
+
+        $data = $this->_repository->updateRecord($requestData, $id);
+
+        $output = ['data' => $data, 'message' => "Your deal has been updated successfully "];
+        return response()->json($output, Response::HTTP_OK);
+    }
 }
