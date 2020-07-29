@@ -12,31 +12,23 @@
                 <p>{{deals_data.description}}</p>
             </div>
 
-
+            {{productData}}
 
             <div  v-for="(item, index) in dealsProducts">
-
-
-
-                    <h4>{{item.name}}</h4>
-                    <h4>{{item.quantity}}</h4>
-
-
-                <div  v-for="(product, index) in item.products">
-                    <ul class="selectionlist radio-list">
-                        <li>
-                            <label>
-                                {{product.name}}
-                                <input type="radio"  :value="product.name+'##@@'+priceFormat(product.price)"   v-model="productData[product.name]" @click="productSum(product.name,priceFormat(product.price))">
-                                <span class="checkmark"></span>
-                            </label>
-
-                        </li>
-                    </ul>
+                <div v-for="(n,index) in item.quantity">
+                    <h4>{{item.name}} {{n}} </h4>
+                    <div  v-for="(product, index) in item.products">
+                        <ul class="selectionlist radio-list">
+                            <li>
+                                <label>
+                                    {{product.name}}
+                                    <input type="radio"  :value="product.name"   v-model="productData[item.name +' '+n]" @click="productSum(product.name,priceFormat(product.price))">
+                                    <span class="checkmark"></span>
+                                </label>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
-
-
-
             </div>
 
 
@@ -135,17 +127,17 @@
                     'single_product_total_amount':total_amount,
                 };
 
-                // let group_check = [];
-                //
-                // for (var key in this.productData) {
-                //     if(key != undefined){
-                //         if(key != 'special_instruction'){
-                //             let choice =  this.productData[key].split("##@@");
-                //             extras.push({group_name:key,choice:choice[0],'price':choice[1]})
-                //             group_check.push(key)
-                //         }
-                //     }
-                // }
+                let group_check = [];
+
+                for (var key in this.productData) {
+                    if(key != undefined){
+                        if(key != 'special_instruction'){
+
+                            extras.push({group_name:key,choice:this.productData[key]})
+                            group_check.push(key)
+                        }
+                    }
+                }
                 //
                 // let checkMandatory = this.checkMandatory();
                 //
