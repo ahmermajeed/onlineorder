@@ -21,13 +21,12 @@
                                 <div class="col-12">
                                     <h2>Order (Choose your Order Type) </h2> <span></span>
                                 </div>
-                                <div class="col-sm-6">
+                               <!-- <div class="col-sm-6">
                                     <label class="customradiobutton radioiconed radio-inline mr-3">
                                         <input type="radio" value="Pickup" @change.prevent="showOrderType('pickup')"  v-model="form.order_type"><i class="fa fa-sign-language"></i> Pick up
-
                                     </label>
-                                </div>
-                                <div class="col-sm-6">
+                                </div>-->
+                                <div class="col-sm-12">
                                     <label class="customradiobutton radioiconed radio-inline mr-3">
                                         <input type="radio" value="Delivery" v-model="form.order_type" @change.prevent="showOrderType('getdelivery')" ><i class="fa fa-truck"></i> Delivery
 
@@ -47,8 +46,20 @@
                                     </div>
 
                                     <div class="row" v-show="order_card == 'getdelivery'">
-                                        <div class="col-12">
 
+                                        <div class="col-sm-12">
+                                            <label>Date</label>
+                                            <!--<b-form-datepicker id="example-datepicker" v-model="value" class="mb-2"></b-form-datepicker>-->
+                                            <VueCtkDateTimePicker min-date="todayDate" v-model="form.deliveryTime" />
+                                            <br>
+                                        </div>
+
+                                       <!-- <div class="col-sm-6">
+                                            <label>Time</label>
+                                            <b-form-timepicker v-model="value" locale="en"></b-form-timepicker>
+                                        </div>-->
+
+                                        <div class="col-12">
                                             <h2> Delivery Details</h2>
                                         </div>
                                         <div class="col-sm-6">
@@ -72,9 +83,6 @@
                                     </div>
                                 </div>
                             </div>
-
-
-
 
                             <div class="row  mt-4 p-3 mb-5 border-dashed">
                                 <div class="col-12">
@@ -240,6 +248,7 @@
                     expiration_month:'',
                     expiration_year:'',
                     cvc:'',
+                    deliveryTime: ''
                 },
                 foods: [{ text: 'Select One', value: null }, 'Carrots', 'Beans', 'Tomatoes', 'Corn'],
                 show: true,
@@ -257,6 +266,12 @@
                     var value = this.$store.getters.getAllCartArray[key];
                 }
             }
+
+            var twentyMinutesLater = new Date();
+            twentyMinutesLater.setMinutes(twentyMinutesLater.getMinutes() + 50);
+
+            this.form.deliveryTime = twentyMinutesLater;
+
             this.scrollToMain();
 
         },
@@ -307,6 +322,9 @@
                         }
                         if (this.form.postal_code === "") {
                             error.push('Please Add Your Postal Code');
+                        }
+                        if (this.form.deliveryTime === "") {
+                            error.push('Please select delivery date and time');
                         }
                     }
 
