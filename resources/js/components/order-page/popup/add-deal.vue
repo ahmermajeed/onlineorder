@@ -2,17 +2,16 @@
     <div>
         <b-modal id="add-deal" centered @hidden="onHidden" :hide-footer=true title-tag="h4" ok-variant="primary" ref="myModalRef" custom-modal no-close-on-backdrop class="custom-modal">
             <b-alert show variant="danger" v-if="error_message" style="text-transform: capitalize;">{{error_message}}</b-alert>
-            <h3>{{deals_data.name}}</h3>
+             <h3>{{deals_data.name}}</h3>
 
             <div class="product-gallery" >
-                <h4> {{deals_data.price}}  </h4>
-           </div>
+                <h4> £ {{deals_data.price}}  </h4>
+            </div>
             <div class="description">
                 <h4>Description</h4>
                 <p>{{deals_data.description}}</p>
             </div>
 
-            {{productData}}
 
             <div  v-for="(item, index) in dealsProducts">
                 <div v-for="(n,index) in item.quantity">
@@ -22,7 +21,7 @@
                             <li>
                                 <label>
                                     {{product.name}}
-                                    <input type="radio"  :value="product.name"   v-model="productData[item.name +' '+n]" @click="productSum(product.name,priceFormat(product.price))">
+                                    <input type="radio"  :value="product.name"   v-model="productData[item.name +' '+n]" >
                                     <span class="checkmark"></span>
                                 </label>
                             </li>
@@ -127,6 +126,7 @@
 
                 this.product_array = {
                     'product_id':this.deals_data.id,
+                    'product_type':'deal',
                     'quantity' :  this.product_quantity,
                     'product_name':this.deals_data.name,
                     'price':this.total_amount_of_single_product,

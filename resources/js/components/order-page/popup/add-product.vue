@@ -162,6 +162,7 @@
 
                 this.product_array = {
                     'product_id':this.list.id,
+                    'product_type':'product',
                     'quantity' :  this.product_quantity,
                     'product_name':this.list.name,
                     'price':this.total_amount_of_single_product,

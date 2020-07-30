@@ -153,6 +153,7 @@
                                 <ul class="nav nav-tabs">
                                     <li><a href="#"  @click.prevent="getProductAgainstCategories(false)" >All</a></li>
                                     <li  v-for="(item, index) in categories"><a href="#" @click.prevent="getProductAgainstCategories(item.id)">{{item.name}}</a></li>
+                                    <li> <a href="#"   @click.prevent="getDeals(false)">DEALS </a></li>
 
                                 </ul>
                             </div>
@@ -207,9 +208,16 @@
 
         <add-product @HideModalValue="hideModal" :showModalProp="product" :list="list" :has_sizes="has_sizes"></add-product>
 
+
         <edit-product @HideModalValue="hideModal" :showModalProp="editProduct" :list="list" :editList="editList" :has_sizes="has_sizes" :editIndex="editIndex"> </edit-product>
 
+
         <add-deal @HideModalValue="hideModal" :showModalProp="dealsModal" :deals_data="deals_data"></add-deal>
+
+
+
+        <edit-deal @HideModalValue="hideModal" :showModalProp="editDeal" :deals_data="deals_data" :editDealsData="editDealsData" :editIndex="editIndex"> </edit-deal>
+
 
 
         <footer-menu></footer-menu>
@@ -238,6 +246,8 @@
                 deals:[],
                 deals_data:{},
                 dealsModal:false,
+                editDeal:false,
+                editDealsData:{},
                 //lastPosition: 0
             };
         },
@@ -264,17 +274,41 @@
             },
 
             updateProduct(id,cart,index){
+
+
+
                 let  _this = this;
-                this.editList = cart;
-                _this.loading  = true;
-                let url = '/api/products/'+id;
+                var url = '';
+                if(cart.product_type === "deal")
+                {
+                    this.editDealsData = cart;
+                    _this.loading  = true;
+                     url = '/api/deals/'+id;
+
+                }else {
+
+                    this.editList = cart;
+                    _this.loading  = true;
+                    url = '/api/products/'+id;
+                }
                 axios.get(url)
                     .then((response) => {
-                        _this.list =  response.data.data;
-                        _this.has_sizes = _this.list.sizes.length > 0;
-                        _this.loading  = false;
-                        _this.editIndex  = index;
-                        _this.editProduct = true;
+                        if (cart.product_type === 'deal') {
+
+                            _this.deals_data = response.data.data;
+                            _this.loading = false;
+                            _this.editIndex = index;
+                            _this.editDeal = true;
+
+                        } else {
+
+                            _this.list = response.data.data;
+                            _this.has_sizes = _this.list.sizes.length > 0;
+                            _this.loading = false;
+                            _this.editIndex = index;
+                            _this.editProduct = true;
+
+                        }
                     });
             },
             priceFormat (num) {
@@ -289,6 +323,8 @@
                 this.dealsModal= false;
                 this.list = {};
                 this.deals_data = {};
+                this.editDeal = false;
+                this.editDealsData ={};
             },
 
             getCategories(){
