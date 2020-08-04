@@ -11271,8 +11271,7 @@ footer span{
 }
 
 
-
-@media (max-width: 767px) {
+@media(max-width: 767px) {
     header.masthead{
         padding-top: 0;
         padding-bottom: 10px;
@@ -11307,12 +11306,12 @@ footer span{
     .custom-header{
         padding: 0 !important;
     }
-    .custom-header .navbar-brand{
+    .custom-header .router-link-active{
         width: 30%;
         margin-left: 10px;
         padding: 0;
     }
-    .custom-header .navbar-brand img{
+    .custom-header .router-link-active img{
         width: 100%;
         height: auto;
     }
@@ -11321,6 +11320,7 @@ footer span{
         width: 57%;
         top: 0;
         position: inherit;
+        text-align: right;
     }
     .custom-header .main-menu {
         position: absolute;
@@ -11331,7 +11331,7 @@ footer span{
         margin: 0;
         background: #ffff;
         padding: 0;
-        top: 107px;
+        top: 101px;
         z-index: 2;
         box-shadow: 0 8px 8px #0000007d;
     }
@@ -11341,13 +11341,15 @@ footer span{
     .custom-header .main-menu ul.navbar-nav li a{
         padding: 10px 0 !important;
     }
-    .custom-header .main-menu ul.navbar-nav a:hover:after, .custom-header .main-menu ul.navbar-nav li.active a:after{
+    .custom-header .main-menu ul.navbar-nav a:hover:after,
+    .custom-header .main-menu ul.navbar-nav li.active a:after{
         bottom: 0;
         height:1px;
     }
     .navbar-light .navbar-toggler{
         margin-left: 10px;
         padding: 5px;
+        margin-right: 20px;
     }
     .custom-header .main-menu ul.navbar-nav {
         padding-bottom: 7px;
@@ -11355,6 +11357,7 @@ footer span{
         width: 96%;
         display: inline-block;
         padding: 0 10px;
+        text-align: left;
     }
     .custom-header .btm-menu{
         display: none;
@@ -11436,14 +11439,6 @@ footer span{
         background-size: cover;
     }
 
-    section .pattern{
-        padding: 30px 20px;
-    }
-
-    section .pattern iframe{
-        width: 100%;
-    }
-
     .inner-page .masthead .info-txt{
         position: inherit;
     }
@@ -11489,6 +11484,19 @@ footer span{
         margin: 15px 0;
     }
 
+    section .pattern{
+        padding: 40px 20px !important;
+    }
+
+    .menu-box .menu-card ul h3{
+        font-size: 13px;
+    }
+
+    .four-col .c2 .box {
+    padding-top: 40px;
+    padding-bottom: 50px;
+    }
+
     .modal-content .modal-body .increment-buttons button,
     .modal-content .modal-body .increment-buttons .btn-badge-count{
         color: #ccc;
@@ -11508,6 +11516,18 @@ footer span{
     .container-fluid{
         overflow: hidden !important;
     }
+
+    .ftr4{
+        order: 2;
+    }
+    .ftr2{
+        order: 3;
+    }
+    .ftr3{
+        order: 4;
+    }
+
+    
     /*.modal-content .modal-body ul.selectionlist li span{
         float: left !important;
         margin: 0 0 0 20px;
@@ -11522,6 +11542,12 @@ footer span{
     .rating-area .for-dktp{
         display: none;
     }
+
+    .cartheight {
+    height: 100vh !important;
+    z-index: 99999 !important;
+    }   
 }
+
 
 
