@@ -176,6 +176,7 @@
                     <span class="text" @click="opencartlist()">Checkout</span>
                     <span class="products-value">£{{priceFormat(total_amount)}}</span>
                 </div>
+                <div class="cart-inner">
                 <ul v-for="(cart, product_index) in getAllCartArray"  v-if="product_index  > 0">
                     <li>
                         <span class="qty">
@@ -197,6 +198,7 @@
                         <span class="price">£{{priceFormat(cart.single_product_total_amount)}}</span>
                     </li>
                 </ul>
+                </div>
                 <div class="confirm-btn">
                     <button class="anima-btn btn-primary btn move-eff" @click="placeOrder()"><span>Confirm Order</span></button>
                 </div>
