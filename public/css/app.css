@@ -23721,6 +23721,28 @@ footer span{
     box-shadow: 0 1x 4px 0 rgba(0, 0, 0, 0.05);
 }
 
+.mb-cart-box {
+    margin: 0;
+    padding: 0;
+    max-height: 350px;
+    overflow-y: scroll;
+}
+
+.mb-cart-box ul{
+    padding: 0;
+    list-style: none;
+}
+
+.mb-cart-box ul li{
+    display: flex;
+    font-size: 14px;
+    border-top: 1px dashed #414141;
+    padding: 10px 0;
+    width: 100%;
+    justify-content: space-between;
+}
+
+
 
 @media(max-width: 767px) {
     header.masthead{
@@ -23997,6 +24019,32 @@ footer span{
     .cartheight {
     height: 100vh !important;
     z-index: 99999 !important;
+    }
+
+    .cartheight ul li span {
+    padding: 5px;
+    color: #000;
+    }
+
+    .mb-cart-box ul li span.qty {
+    flex: 0 0 50px;
+    min-width: 50px;
+    position: relative;
+    padding-left: 25px;
+    }
+    .mb-cart-box svg {
+    -webkit-filter: brightness(0);
+    filter: brightness(0);
+    display: inline-block;
+    vertical-align: sub;
+    }
+
+    .mb-cart-box ul li span.meal {
+    flex: 0 0 calc(100% - 115px);
+    }
+    .mb-cart-box ul li span.meal .mealactions {
+    display: block;
+    margin-top: 2px;
     }   
 }
 

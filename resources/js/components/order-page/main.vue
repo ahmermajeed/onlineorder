@@ -176,7 +176,7 @@
                     <span class="text" @click="opencartlist()">Checkout</span>
                     <span class="products-value">£{{priceFormat(total_amount)}}</span>
                 </div>
-                <div class="cart-inner">
+                <div class="mb-cart-box">
                 <ul v-for="(cart, product_index) in getAllCartArray"  v-if="product_index  > 0">
                     <li>
                         <span class="qty">
