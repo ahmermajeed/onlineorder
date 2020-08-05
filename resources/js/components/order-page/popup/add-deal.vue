@@ -140,7 +140,7 @@
                     if(key != undefined){
                         if(key != 'special_instruction'){
 
-                            extras.push({group_name:key,choice:this.productData[key]})
+                            extras.push({group_name:key,choice:this.productData[key],'price':0})
                             group_check.push(key)
                         }
                     }
