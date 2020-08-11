@@ -58,6 +58,7 @@ class DealRepository
                     $data['items'][$key] = $category;
                     $data['items'][$key]['item_type'] = "category";
                     $data['items'][$key]['quantity'] = $dealProduct['quantity'];
+                    $data['items'][$key]['is_options'] = $dealProduct['is_options'];
 
                 } else {
 
@@ -67,6 +68,7 @@ class DealRepository
                     $data['items'][$key] = $product;
                     $data['items'][$key]['item_type'] = "product";
                     $data['items'][$key]['quantity'] = $dealProduct['quantity'];
+                    $data['items'][$key]['is_options'] = $dealProduct['is_options'];
                 }
 
             }

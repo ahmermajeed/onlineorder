@@ -27,6 +27,21 @@
                             </li>
                         </ul>
                     </div>
+                    <div v-if="item.is_options == 1">
+                        <div  v-for="(item, index) in item.products[0].groups">
+                            <h4>{{item.name}}</h4>
+                            <ul class="selectionlist radio-list" >
+                                <li v-for="(choice,choice_index) in item.choices">
+                                    <label>
+                                        {{choice.name}}
+                                        <input type="radio"  :value="choice.name+'##@@'+priceFormat(choice.price)"   v-model="productData[item.name +' '+n]" @click="productSum(item.name,priceFormat(choice.price))">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                    <span style="float:right"> £  {{choice.price}}</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
             </div>
 
@@ -139,8 +154,12 @@
                 for (var key in this.productData) {
                     if(key != undefined){
                         if(key != 'special_instruction'){
-
-                            extras.push({group_name:key,choice:this.productData[key],'price':0})
+                            let choice =  this.productData[key].split("##@@");
+                            if(choice[0] != undefined){
+                                extras.push({group_name:key,choice:choice[0],'price':choice[1]})
+                            }else {
+                                extras.push({group_name:key,choice:this.productData[key],'price':0})
+                            }
                             group_check.push(key)
                         }
                     }
