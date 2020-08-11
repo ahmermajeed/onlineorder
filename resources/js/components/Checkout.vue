@@ -43,6 +43,10 @@
                                             <label>Time</label>
                                             <b-form-timepicker v-model="value" locale="en"></b-form-timepicker>
                                         </div>
+
+
+
+
                                     </div>
 
                                     <div class="row" v-show="order_card == 'getdelivery'">
@@ -52,6 +56,13 @@
                                             <!--<b-form-datepicker id="example-datepicker" v-model="value" class="mb-2"></b-form-datepicker>-->
                                             <VueCtkDateTimePicker min-date="todayDate" v-model="form.deliveryTime" />
                                             <br>
+                                        </div>
+
+
+                                        <div class="col-sm-12">
+                                            <label class="customradiobutton radioiconed radio-inline mr-3">
+                                                <input type="radio" value="Asap" v-model="form.asap"  >Asap
+                                            </label>
                                         </div>
 
                                        <!-- <div class="col-sm-6">
@@ -248,14 +259,15 @@
                     expiration_month:'',
                     expiration_year:'',
                     cvc:'',
-                    deliveryTime: ''
+                    deliveryTime: '',
+                    asap: ''
                 },
                 foods: [{ text: 'Select One', value: null }, 'Carrots', 'Beans', 'Tomatoes', 'Corn'],
                 show: true,
                 errorMessage:[],
                 validForm:true,
                 sendRequest:false,
-                value:''
+
 
             };
         },
