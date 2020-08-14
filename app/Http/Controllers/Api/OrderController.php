@@ -88,6 +88,8 @@ class OrderController extends Controller
         }
 
         $data = $this->_repository->placeOrder($requestData);
+        $requestData['user_id'] = $data['user_id'];
+        $requestData['phone_number'] = $data['phone_number'];
 
         if ($data) {
 

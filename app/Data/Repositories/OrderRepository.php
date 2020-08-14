@@ -4,6 +4,8 @@ namespace App\Data\Repositories;
 
 use App\Data\Models\OrderDetail;
 use App\Data\Models\Orders;
+use App\Data\Models\UserAddress;
+use App\User;
 use function App\Helpers\paginator;
 
 class OrderRepository
@@ -32,6 +34,19 @@ class OrderRepository
         } else {
             $data['data'] = $model->get();
         }
+
+
+        foreach ($data['data']  as $key =>$value){
+            $user = User::find($value['user_id']);
+            if($user){
+                $data['data'][$key]['phone_number'] = $user->phone_number;
+            }else {
+                $data['data'][$key]['phone_number'] = 78601;
+            }
+
+        }
+
+
 
         return $data;
     }
@@ -68,8 +83,18 @@ class OrderRepository
 
     public function placeOrder($data) {
         $data['reference'] = random_int(1000, 9999);
+        $password = "yousuf+1";
+        if(isset($data['user_data']))
+        {
+            $userData = User::where('email',$data['user_data']['email'])->first();
+            if(!$userData){
+                $userData = User::create(['name'=>$data['user_data']['name'],'email'=>$data['user_data']['email'],'password'=>bcrypt($password),'phone_number'=>$data['user_data']['number']]);
+                $userAddress = UserAddress::create(['user_id'=>$userData->id,'address'=>isset($data['user_data']['address'])?$data['user_data']['address']:'','street'=>isset($data['user_data']['street']) ? $data['user_data']['street']:'','town'=>isset($data['user_data']['town']) ? $data['user_data']['town']:'','postal_code'=>isset($data['user_data']['postal_code']) ? $data['user_data']['postal_code']:'','active'=>1]);
+            }
+        }
 
-        $placed = $this->model->create(["user_id" => $data['user_id'], "reference" => $data['reference'], "total_amount_with_fee" => $data['total_amount_with_fee'], "delivery_fees" => $data['delivery_fees'], "payment" => $data['payment'], "order_type" => $data['order_type'], "delivery_address" => $data['delivery_address'], "status" => "Order Placed"]);
+        $placed = $this->model->create(["user_id" => isset($userData->id) ? $userData->id:'1', "reference" => $data['reference'], "total_amount_with_fee" => $data['total_amount_with_fee'], "delivery_fees" => $data['delivery_fees'], "payment" => $data['payment'], "order_type" => $data['order_type'], "delivery_address" => $data['delivery_address'], "status" => "Order Placed"]);
+
 
         if($placed) {
             foreach ($data['order_details'] as $detail) {
@@ -81,7 +106,10 @@ class OrderRepository
                 $detail['order_id'] = $placed['id'];
                 OrderDetail::create($detail);
             }
+
+            $placed['phone_number'] =$userData->phone_number;
         }
+
 
         return $placed;
     }
