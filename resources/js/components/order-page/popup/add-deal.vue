@@ -21,7 +21,7 @@
                             <li>
                                 <label>
                                     {{product.name}}
-                                    <input type="radio"  :value="product.name"   v-model="productData[item.name +' '+n]" >
+                                    <input type="radio"  :value="product.name+'##@@'+0"   v-model="productData[item.name +' '+n]" >
                                     <span class="checkmark"></span>
                                 </label>
                             </li>
@@ -34,7 +34,7 @@
                                 <li v-for="(choice,choice_index) in item.choices">
                                     <label>
                                         {{choice.name}}
-                                        <input type="radio"  :value="choice.name+'##@@'+priceFormat(choice.price)"   v-model="productData[item.name +' '+n]" @click="productSum(item.name,priceFormat(choice.price))">
+                                        <input type="radio"  :value="choice.name+'##@@'+priceFormat(choice.price=== undefined ? 0: choice.price)"   v-model="productData[item.name +' '+n]" @click="productSum(item.name,priceFormat(choice.price=== undefined ? 0: choice.price))">
                                         <span class="checkmark"></span>
                                     </label>
                                     <span style="float:right"> £  {{choice.price}}</span>
@@ -149,9 +149,11 @@
                     'single_product_total_amount':total_amount,
                 };
 
+
+
                 let group_check = [];
 
-                for (var key in this.productData) {
+               for (var key in this.productData) {
                     if(key != undefined){
                         if(key != 'special_instruction'){
                             let choice =  this.productData[key].split("##@@");
@@ -163,19 +165,9 @@
                             group_check.push(key)
                         }
                     }
-                }
-                //
-                // let checkMandatory = this.checkMandatory();
-                //
-                // if(checkMandatory.length > 0 ){
-                //     for( var cm in checkMandatory) {
-                //         if(group_check.indexOf(checkMandatory[cm]) === -1) {
-                //             this.error_message  = checkMandatory[cm] + ' is Required'
-                //             this.scrollToTop();
-                //             return;
-                //         }
-                //     }
-                // }
+               }
+
+
 
                 if(extras.length > 0 ){
                     this.product_array.extras = extras;

@@ -15,6 +15,8 @@ class DeliveryChargesRepository
 
     public function checkPostalCode($input = [])
     {
+
+
         $string = substr($input['postal_code'], 0, 2);  // returns "cde"
         $data = $this->model->where('postal_code', 'LIKE', '%'.$string.'%')->first();
         if ($data) { return $data; } else { return false; }
