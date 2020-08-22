@@ -25,6 +25,7 @@ Route::group(['prefix' => 'auth'], function () {
 /** Slider Routes */
 Route::resource('slider', 'Api\SliderController');
 
+
 /** Gallery Routes */
 Route::resource('gallery', 'Api\GalleryController');
 
@@ -69,3 +70,6 @@ Route::post('update-general-setting', 'Api\GeneralSettingController@updateGenera
 Route::get('downloadAllergy', 'Api\ProductController@downloadAllergy');
 
 Route::get('downloadMenu', 'Api\ProductController@downloadMenu');
+
+/** Get Offers*/
+Route::resource('offer', 'Api\OfferController');
