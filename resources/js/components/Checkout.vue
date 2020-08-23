@@ -182,13 +182,12 @@
                     </div>
                 </div>
 
-
                 <div class="col-xs-12 full cart col-lg-4 col-md-4 col-sm-12 checkout-cart-desktop"   v-if="getAllCartArray.length > 1"  >
                     <div class="order cart-box" id="cart-stiky">
                         <h2>Your Order </h2>
                         <div>
                             <strong>Order Details</strong>
-                            
+
                             <div class="table-holder">
                                 <table class=tbl_cart_list>
                                     <tr v-for="(cart, product_index) in getAllCartArray"  v-if="product_index  > 0">
@@ -213,9 +212,21 @@
                                 <ul>
                                     <li class="fees"></li>
                                     <li>
-                                        <span>Total</span>
+                                        <span>Sub Total</span>
                                         <span>£{{priceFormat(total_amount)}}</span>
                                     </li>
+
+                                    <li>
+                                        <span>Discount</span>
+                                        <span>  {{discountedAmount}} </span>
+                                    </li>
+
+                                    <li>
+                                        <span>Total</span>
+                                        <span>£{{priceFormat(finalAmount)}}</span>
+                                    </li>
+
+
                                 </ul>
                             </div>
                             <div class="cart-btn mt-2">
@@ -267,6 +278,10 @@
                 errorMessage:[],
                 validForm:true,
                 sendRequest:false,
+                offers:[],
+                discountedAmount:0,
+                discountedPercentAge:10,
+                finalAmount:0,
 
 
             };
@@ -278,16 +293,26 @@
                     var value = this.$store.getters.getAllCartArray[key];
                 }
             }
-
             var twentyMinutesLater = new Date();
             twentyMinutesLater.setMinutes(twentyMinutesLater.getMinutes() + 50);
 
             this.form.deliveryTime = twentyMinutesLater;
 
             this.scrollToMain();
+            this.getOffers();
 
         },
         methods: {
+           getOffers(){
+                let  _this = this;
+                _this.loading  = true;
+                axios.get('/api/offer')
+                    .then((response) => {
+                        _this.offers =  response.data.data;
+
+                        _this.loading  = false;
+                    });
+            },
 
             priceFormat (num) {
                 return  parseFloat(num).toFixed(2);
@@ -378,8 +403,9 @@
 
                     let data = {
                         'user_id': 11,
-                        'total_amount_with_fee': this.total_amount,
+                        'total_amount_with_fee': this.total_amount - this.discountedAmount,
                         'delivery_fees': '0',
+                        'discounted_amount': this.discountedAmount,
                         'payment': 'cod',
                         'delivery_address': vm.form.address + " " + vm.form.street + " " + vm.form.postal_code,
                         'order_details': this.$store.getters.getAllCartArray,
@@ -393,7 +419,7 @@
                             let cart = this.$store.getters.getAllCartArray.splice(0, 1);
                             axios({
                                 method: 'post',
-                                url: 'http://frontonline.matrixepos.co.uk/api/placeOrder',
+                                url: '/api/placeOrder',
                                 data: data
                             })
                                 .then(function (response) {
@@ -432,6 +458,12 @@
                         }
                     });
                     this.total_amount = sum;
+                    if(sum  > 15){
+                        this.discountedAmount =  (sum/100 * this.discountedPercentAge).toFixed(2)
+                    }
+
+                    this.finalAmount =   this.total_amount - this.discountedAmount
+
                 }
                 return this.$store.getters.getAllCartArray;
             },
