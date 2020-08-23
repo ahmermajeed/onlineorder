@@ -124,11 +124,11 @@
                                         <input type="radio" value="COD"  @change.prevent="showCard(false)"  v-model="form.payment_type" ><i class="fas fa-wallet"></i> Cash on Delivery
                                     </label>
                                 </div>
-                                <div class="col-sm-6">
-                                    <label class="customradiobutton radioiconed radio-inline mr-3">
-                                        <input type="radio" value="Credit/Debit Card" v-model="form.payment_type" @change.prevent="showCard(true)" ><i class="fas fa-credit-card"></i> Credit/Debit Card
-                                    </label>
-                                </div>
+<!--                                <div class="col-sm-6">-->
+<!--                                    <label class="customradiobutton radioiconed radio-inline mr-3">-->
+<!--                                        <input type="radio" value="Credit/Debit Card" v-model="form.payment_type" @change.prevent="showCard(true)" ><i class="fas fa-credit-card"></i> Credit/Debit Card-->
+<!--                                    </label>-->
+<!--                                </div>-->
 
                                 <div class="col-12">
                                     <div class="row" v-show="card">
