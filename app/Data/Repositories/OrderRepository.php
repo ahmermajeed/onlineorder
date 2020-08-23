@@ -94,13 +94,10 @@ class OrderRepository
             }
         }
 
-<<<<<<< HEAD
+
         $transaction_id = rand(10000000,99999999);
 
-        $placed = $this->model->create(["user_id" => isset($userData->id) ? $userData->id:'1', "reference" => $data['reference'], "total_amount_with_fee" => $data['total_amount_with_fee'], "delivery_fees" => $data['delivery_fees'], "payment" => $data['payment'], "order_type" => $data['order_type'], "delivery_address" => $data['delivery_address'], "status" => "Order Placed", 'transaction_id' => $transaction_id]);
-=======
         $placed = $this->model->create(["user_id" => isset($userData->id) ? $userData->id:'1', "reference" => $data['reference'], "total_amount_with_fee" => $data['total_amount_with_fee'], "delivery_fees" => $data['delivery_fees'], "payment" => $data['payment'], "order_type" => $data['order_type'], "delivery_address" => $data['delivery_address'], "status" => "Order Placed",'discounted_amount'=>isset($data['discounted_amount'])?$data['discounted_amount']:0]);
->>>>>>> 5b863f1f1379ae3527064ddc713aeafc0b13f7a0
 
         if($placed) {
             foreach ($data['order_details'] as $detail) {
