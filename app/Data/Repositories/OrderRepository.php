@@ -84,6 +84,7 @@ class OrderRepository
     public function placeOrder($data) {
         $data['reference'] = random_int(1000, 9999);
         $password = "yousuf+1";
+
         if(isset($data['user_data']))
         {
             $userData = User::where('email',$data['user_data']['email'])->first();
@@ -93,8 +94,9 @@ class OrderRepository
             }
         }
 
-        $placed = $this->model->create(["user_id" => isset($userData->id) ? $userData->id:'1', "reference" => $data['reference'], "total_amount_with_fee" => $data['total_amount_with_fee'], "delivery_fees" => $data['delivery_fees'], "payment" => $data['payment'], "order_type" => $data['order_type'], "delivery_address" => $data['delivery_address'], "status" => "Order Placed"]);
+        $transaction_id = rand(10000000,99999999);
 
+        $placed = $this->model->create(["user_id" => isset($userData->id) ? $userData->id:'1', "reference" => $data['reference'], "total_amount_with_fee" => $data['total_amount_with_fee'], "delivery_fees" => $data['delivery_fees'], "payment" => $data['payment'], "order_type" => $data['order_type'], "delivery_address" => $data['delivery_address'], "status" => "Order Placed", 'transaction_id' => $transaction_id]);
 
         if($placed) {
             foreach ($data['order_details'] as $detail) {
