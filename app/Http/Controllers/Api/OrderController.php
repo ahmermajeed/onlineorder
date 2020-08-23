@@ -79,7 +79,7 @@ class OrderController extends Controller
             'order_details.*.product_id' => 'required|numeric',
             'order_details.*.product_name' => 'required',
             'order_details.*.quantity' => 'required',
-            'user_data.card_no' => 'required_if:payment,credit_card',
+            'user_data.card_number' => 'required_if:payment,credit_card',
             'user_data.expiration_month' => 'required_if:payment,credit_card',
             'user_data.expiration_year' => 'required_if:payment,credit_card',
             'user_data.cvc' => 'required_if:payment,credit_card'
