@@ -30,7 +30,7 @@
                                             <div class="p-d">
                                                 <h3>{{product.name}}</h3>
                                                <p>{{product.description}}.</p>
-                                                
+
                                             </div>
                                             <div class="p-cart">
                                                 <p style="font-size: 12px;" v-if="product.sizes.length"  v-for="(size, size_index) in product.sizes" > {{size.size}} : £{{size.price}}</p>
@@ -143,10 +143,10 @@
             </div>
         </section>
         <div class="loading" v-if="loading">Loading&#8230;</div>
-        <div class="container-fluid" 
+        <div class="container-fluid"
         :class="{'cart-menu-fixed': scrolled}"  v-on="handleScroll()">
             <div class="row full">
-                
+
                     <div class="offset-categories">
                         <div id="categories-tabs">
                             <div class="desktop-tabs">
@@ -224,7 +224,7 @@
 
         <footer-menu></footer-menu>
     </div>
-        
+
 </template>
 
 <script>
@@ -451,12 +451,12 @@
                 return this.$store.getters.getAllCartArray;
             },
             handleScroll() {
-                
+
                 if (this.limitPosition < window.scrollY) {
                     this.scrolled = true;
                     // move up!
-                } 
-                
+                }
+
                 if (this.limitPosition > window.scrollY) {
                     this.scrolled = false;
                     // move down

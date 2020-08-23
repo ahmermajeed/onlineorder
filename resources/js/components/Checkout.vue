@@ -172,9 +172,14 @@
                                         </div>
                                     </div>
                                     <div class="row mt-3">
-                                        <div class="col-sm-4">
+                                        <div class="col-sm-4" v-if="finalAmount >= 10">
                                             <button class="subscribe btn btn-primary btn-block" type="button" @click="placeOrder()"> Confirm  </button>
                                         </div>
+
+                                        <div class="col-sm-12" v-else>
+                                            <p style="color:red;text-align:center"> Your Order Must be greater than £10 </p>
+                                        </div>
+
                                     </div>
                                 </div>
                             </div>
@@ -229,9 +234,9 @@
 
                                 </ul>
                             </div>
-                            <div class="cart-btn mt-2">
-                                <button class=" custom-btn" @click="placeOrder()">Checkout</button>
-                            </div>
+<!--                            <div class="cart-btn mt-2">-->
+<!--                                <button class=" custom-btn" @click="placeOrder()">Checkout</button>-->
+<!--                            </div>-->
                         </div>
                     </div>
                 </div>
