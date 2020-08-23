@@ -84,6 +84,7 @@ class OrderRepository
     public function placeOrder($data) {
         $data['reference'] = random_int(1000, 9999);
         $password = "yousuf+1";
+
         if(isset($data['user_data']))
         {
             $userData = User::where('email',$data['user_data']['email'])->first();
@@ -92,6 +93,9 @@ class OrderRepository
                 $userAddress = UserAddress::create(['user_id'=>$userData->id,'address'=>isset($data['user_data']['address'])?$data['user_data']['address']:'','street'=>isset($data['user_data']['street']) ? $data['user_data']['street']:'','town'=>isset($data['user_data']['town']) ? $data['user_data']['town']:'','postal_code'=>isset($data['user_data']['postal_code']) ? $data['user_data']['postal_code']:'','active'=>1]);
             }
         }
+
+
+        $transaction_id = rand(10000000,99999999);
 
         $placed = $this->model->create(["user_id" => isset($userData->id) ? $userData->id:'1', "reference" => $data['reference'], "total_amount_with_fee" => $data['total_amount_with_fee'], "delivery_fees" => $data['delivery_fees'], "payment" => $data['payment'], "order_type" => $data['order_type'], "delivery_address" => $data['delivery_address'], "status" => "Order Placed",'discounted_amount'=>isset($data['discounted_amount'])?$data['discounted_amount']:0]);
 

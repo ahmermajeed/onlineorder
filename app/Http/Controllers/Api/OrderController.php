@@ -2,11 +2,15 @@
 
 namespace App\Http\Controllers\Api;
 
+use App\Data\Models\Orders;
 use App\Data\Models\UserDevices;
 use App\Data\Repositories\OrderRepository;
 use App\Http\Controllers\Controller;
+use App\PayPal;
 use Edujugon\PushNotification\PushNotification;
 use Illuminate\Http\Request;
+use Omnipay\Common\CreditCard;
+use Omnipay\Omnipay;
 use Validator;
 use Stripe\Error\Card;
 use Cartalyst\Stripe\Stripe;
@@ -75,10 +79,10 @@ class OrderController extends Controller
             'order_details.*.product_id' => 'required|numeric',
             'order_details.*.product_name' => 'required',
             'order_details.*.quantity' => 'required',
-            'card_no' => 'required_if:payment,credit_card',
-            'ccExpiryMonth' => 'required_if:payment,credit_card',
-            'ccExpiryYear' => 'required_if:payment,credit_card',
-            'cvvNumber' => 'required_if:payment,credit_card'
+            'user_data.card_number' => 'required_if:payment,credit_card',
+            'user_data.expiration_month' => 'required_if:payment,credit_card',
+            'user_data.expiration_year' => 'required_if:payment,credit_card',
+            'user_data.cvc' => 'required_if:payment,credit_card'
         ]);
 
         if ($validator->fails()) {
@@ -87,15 +91,21 @@ class OrderController extends Controller
             return response()->json($output, $code);
         }
 
-        $data = $this->_repository->placeOrder($requestData);
-        $requestData['user_id'] = $data['user_id'];
-        $requestData['phone_number'] = $data['phone_number'];
+        if($requestData['payment'] == "credit_card") {
+            $response = $this->paypalPayment($requestData);
+
+            if ($response->isSuccessful()) {
+                $data = $this->_repository->placeOrder($requestData);
+            }
+
+        } else {
+            $data = $this->_repository->placeOrder($requestData);
+        }
 
         if ($data) {
 
-            if ($requestData['payment'] == "credit_card") {
-                $this->stripeCharge($requestData);
-            }
+            $requestData['user_id'] = $data['user_id'];
+            $requestData['phone_number'] = $data['phone_number'];
 
             $this->sendNotification($data);
         }
@@ -123,7 +133,6 @@ class OrderController extends Controller
         $response = $push->getFeedback();
     }
 
-    /** Send Push Notification */
     public function stripeCharge($data)
     {
         $stripe = Stripe::make(env('STRIPE_SECRET'));
@@ -171,6 +180,34 @@ class OrderController extends Controller
             return redirect()->route('addmoney.paymentstripe');
         }
 
+    }
+
+    public function paypalPayment($requestData)
+    {
+        $paypal = new PayPal;
+
+        $card = new CreditCard(array(
+            'firstName' => $requestData['user_data']['name'],
+            'lastName' =>  $requestData['user_data']['name'],
+            'number'                => $requestData['user_data']['card_no'],
+            'expiryMonth'           => $requestData['user_data']['expiration_month'],
+            'expiryYear'            => $requestData['user_data']['expiration_year'],
+            'cvv'                   => $requestData['user_data']['cvc'],
+           /* 'billingAddress1'       => '1 Scrubby Creek Road',
+            'billingCountry'        => 'AU',
+            'billingCity'           => 'Scrubby Creek',
+            'billingPostcode'       => '4999',
+            'billingState'          => 'QLD',*/
+        ));
+
+        $response = $paypal->purchase([
+            'amount' => $paypal->formatAmount($requestData['total_amount_with_fee']),
+            'currency' => 'USD',
+            'card'     => $card,
+            'description'   => 'This is a test purchase transaction.',
+        ]);
+
+        return $response;
     }
 
     public function getTotalSales(Request $request)

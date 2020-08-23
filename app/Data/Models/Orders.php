@@ -7,6 +7,9 @@ use Illuminate\Support\Facades\Storage;
 
 class Orders extends Model
 {
+    const PAYMENT_COMPLETED = 1;
+    const PAYMENT_PENDING = 0;
+
     protected $table = 'orders';
 
     protected $with = ['details'];
