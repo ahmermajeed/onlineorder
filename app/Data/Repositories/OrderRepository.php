@@ -78,6 +78,10 @@ class OrderRepository
     {
         $data = $this->model->findOrFail($id);
         $data->fill($request)->save();
+
+        $data->phone_number = User::where('id',$data->user_id)->pluck('phone_number')->first();
+
+
         return $data;
     }
 
