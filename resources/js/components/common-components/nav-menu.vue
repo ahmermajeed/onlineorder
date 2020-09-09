@@ -91,7 +91,7 @@
         <section class="deliver-area mb-5">
             <div class="container">
                 <div class="locations">
-                    <h3><i class="fas fa-map-marker-alt"></i> We are offering Deliveries in these areas</h3>
+                    <h3><i class="fas fa-map-marker-alt"></i> We are offering deliveries to the following areas in Birmingham:</h3>
                     <ul>
                         <li>
                             <a href="#">B7</a>
