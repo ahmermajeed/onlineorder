@@ -83,7 +83,51 @@
                     </div>
                 </div>
             </div>
+
+
+
         </header>
+
+        <section class="deliver-area mb-5">
+            <div class="container">
+                <div class="locations">
+                    <h3><i class="fas fa-map-marker-alt"></i> We are offering Deliveries in these areas</h3>
+                    <ul>
+                        <li>
+                            <a href="#">B7</a>
+                        </li>
+                        <li>
+                            <a href="#">B8</a>
+                        </li>
+                        <li>
+                            <a href="#">B9</a>
+                        </li>
+                        <li>
+                            <a href="#">B25</a>
+                        </li>
+                        <li>
+                            <a href="#">B26</a>
+                        </li>
+                        <li>
+                            <a href="#">B33</a>
+                        </li>
+                        <li>
+                            <a href="#">B34</a>
+                        </li>
+                        <li>
+                            <a href="#">B35</a>
+                        </li>
+                        <li>
+                            <a href="#">B36</a>
+                        </li>
+                        <li>
+                            <a href="#">B37</a>
+                        </li>
+                    </ul>
+                    <div class="overlay-bg"></div>
+                </div>
+            </div>
+        </section>
 
         <download-menu @HideModalValue="hideModal" :showModalProp="showPopup" :isMenu="menu" :isAllergy="allergy" ></download-menu>
         <postal-code-popup  @HideModalValue="hideModal"   :showModalProp="showPostalCode"></postal-code-popup>

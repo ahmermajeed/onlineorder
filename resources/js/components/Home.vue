@@ -353,7 +353,7 @@
                 </div>
             </div>
         </div>
-        
+
         <section class="reservation">
             <div class="container">
                 <div class="table-booked pattern">

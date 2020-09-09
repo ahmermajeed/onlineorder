@@ -1,6 +1,7 @@
 <template>
     <div>
         <header-menu></header-menu>
+
         <section class="inner-section">
         <div class="loading" v-if="loading">Loading&#8230;</div>
         <div class="container">
