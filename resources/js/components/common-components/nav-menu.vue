@@ -105,7 +105,7 @@
                         <li>
                             <a href="#"> B10</a>
                         </li>
-                        <li>git
+                        <li>
                             <a href="#">B25</a>
                         </li>
                         <li>
