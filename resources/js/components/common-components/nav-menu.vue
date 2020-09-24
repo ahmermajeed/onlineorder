@@ -58,7 +58,7 @@
                         </div>
                         <div class="col-lg-6">
                             <div class="info-txt">
-                                <h4>Save upto 10% off on orders if £15.00 and over </h4>
+                                <h4>10% off on orders if £15.00 and over </h4>
                                 <h1 class="font-weight-bold">
                                     Taste your fav dish</h1>
                                 <h3><span>from</span> Papa Ge's Pizza & Fish Bar</h3>
