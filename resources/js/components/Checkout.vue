@@ -464,7 +464,7 @@
                         }
                     });
                     this.total_amount = sum;
-                    if(sum  > 15){
+                    if(sum  >= 15){
                         this.discountedAmount =  (sum/100 * this.discountedPercentAge).toFixed(2)
                     }
 
