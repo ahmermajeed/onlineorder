@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Api;
 
 use App\Data\Models\Orders;
+use App\Data\Models\Products;
 use App\Data\Models\UserDevices;
 use App\Data\Repositories\OrderRepository;
 use App\Http\Controllers\Controller;
@@ -66,6 +67,7 @@ class OrderController extends Controller
 
     public function placeOrder(Request $request)
     {
+        $categories = [24=>'SMALL PIZZA',25=>'MEDIUM PIZZA',26=>'LARGE PIZZA'];
         $requestData = $request->all();
 
         $validator = Validator::make($requestData, [
@@ -84,6 +86,13 @@ class OrderController extends Controller
             'user_data.expiration_year' => 'required_if:payment,credit_card',
             'user_data.cvc' => 'required_if:payment,credit_card'
         ]);
+
+        foreach ($requestData['order_details'] as $key => $value){
+            $product = Products::where('id',$value['product_id'])->select('id_category')->first();
+            if(isset($categories[$product->id_category])){
+               $requestData['order_details'][$key]['product_name'] = $categories[$product->id_category]." ".$value['product_name'];
+            }
+        }
 
         if ($validator->fails()) {
             $code = 401;
