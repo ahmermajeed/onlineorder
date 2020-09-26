@@ -87,11 +87,16 @@ class OrderController extends Controller
             'user_data.cvc' => 'required_if:payment,credit_card'
         ]);
 
+
+
         foreach ($requestData['order_details'] as $key => $value){
-            $product = Products::where('id',$value['product_id'])->select('id_category')->first();
-            if(isset($categories[$product->id_category])){
-               $requestData['order_details'][$key]['product_name'] = $categories[$product->id_category]." ".$value['product_name'];
+            if($value['product_type'] == 'product'){
+                $product = Products::where('id',$value['product_id'])->select('id_category')->first();
+                if(isset($categories[$product->id_category])){
+                    $requestData['order_details'][$key]['product_name'] = $categories[$product->id_category]." ".$value['product_name'];
+                }
             }
+
         }
 
         if ($validator->fails()) {
