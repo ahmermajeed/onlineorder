@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers\Api;
 
+use App\Data\Models\Choices;
+use App\Data\Models\ChoicesGroup;
 use App\Data\Repositories\CategoryRepository;
 use App\Data\Repositories\ChoicesGroupRepository;
 use App\Data\Repositories\GalleryRepository;
@@ -31,5 +33,33 @@ class ChoicesGroupController extends Controller
             'message' => "Sidelines Retrieved Successfully",
         ];
         return response()->json($output, Response::HTTP_OK);
+    }
+
+    public function store(Request $request ) {
+        $choices = new ChoicesGroup();
+        $choices->fill($request->all());
+        $choices->save();
+
+        return response()->json([
+            'status' => true,
+            'created' => true,
+            'data' => [
+                'id' => $choices->id
+            ]
+        ]);
+    }
+
+    public function addChoice(Request $request){
+        $choices = new Choices();
+        $choices->fill($request->all());
+        $choices->save();
+        return response()->json([
+            'status' => true,
+            'created' => true,
+            'data' => [
+                'id' => $choices->id
+            ]
+        ]);
+
     }
 }

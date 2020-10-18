@@ -4,10 +4,13 @@ namespace App\Http\Controllers\Api;
 
 use App\Data\Models\Products;
 use App\Data\Repositories\CategoryRepository;
-use App\Data\Repositories\GalleryRepository;
 use App\Data\Repositories\ProductRepository;
+
+use App\Data\Repositories\Pr;
 use App\Http\Controllers\Controller;
+use App\Data\Models\ProductSizes;
 use Illuminate\Http\Request;
+use Stripe\Product;
 use Validator;
 use Symfony\Component\HttpFoundation\Response;
 
@@ -78,5 +81,30 @@ class ProductController extends Controller
 
         $output = ['data' => $file, 'message' =>  "Success"];
         return response()->json($output, Response::HTTP_OK);
+    }
+
+    public function store(Request $request ) {
+
+        $requestData = $request->all();
+
+        $product = new Products();
+        $product->fill($request->all());
+        $product->save();
+
+        if($product->id) {
+            if (count($requestData['inputs']) > 0) {
+                foreach ($requestData['inputs'] as $input) {
+                    ProductSizes::create(['id_product' => $product->id, 'size' => $input['size'], 'price' => $input['price']]);
+                }
+            }
+        }
+
+        return response()->json([
+            'status' => true,
+            'created' => true,
+            'data' => [
+                'id' => $product->id
+            ]
+        ]);
     }
 }

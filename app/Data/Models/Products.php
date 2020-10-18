@@ -13,7 +13,7 @@ class Products extends Model
 
     protected $with= ['sizes', 'groups'];
 
-    protected $fillable = ['name', 'price', 'description', 'image', 'status'];
+    protected $fillable = ['name', 'price', 'description', 'image', 'status','id_category'];
 
     public function groups()
     {

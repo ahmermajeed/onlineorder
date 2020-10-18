@@ -52,6 +52,7 @@ class CategoryController extends Controller
         $requestData = $request->all();
 
         $category = new Category();
+        $requestData['status'] = 1;
         $category->fill($requestData);
         $category->save();
 
@@ -75,14 +76,14 @@ class CategoryController extends Controller
 
         $category = Category::find($id);
 
-        $products = $category->products();
-
-        foreach($products->get() as $product) {
-            $product->productGroups()->delete();
-            $product->productSizes()->delete();
-        }
-
-        $products->delete();
+//        $products = $category->products();
+//
+//        foreach($products->get() as $product) {
+//            $product->productGroups()->delete();
+//            $product->productSizes()->delete();
+//        }
+//
+//        $products->delete();
 
         $category->delete();
 
