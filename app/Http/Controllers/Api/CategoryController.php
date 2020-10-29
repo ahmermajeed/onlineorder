@@ -78,8 +78,8 @@ class CategoryController extends Controller
         $products = $category->products();
 
         foreach($products->get() as $product) {
-            $product->productGroups()->delete();
-            $product->productSizes()->delete();
+            $product->groups()->delete();
+            $product->sizes()->delete();
         }
 
         $products->delete();

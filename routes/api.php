@@ -44,6 +44,9 @@ Route::get('restaurant_info', 'Api\RestaurantController@getRestaurantInfo');
 /** Choices Groups Routes */
 Route::resource('choices-group', 'Api\ChoicesGroupController');
 
+/** Choices Groups Routes */
+Route::post('add-choice', 'Api\ChoicesGroupController@addChoicesToGroup');
+
 /** Products Routes */
 Route::resource('products', 'Api\ProductController');
 

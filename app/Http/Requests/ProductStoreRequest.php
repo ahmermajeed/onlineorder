@@ -2,10 +2,9 @@
 
 namespace App\Http\Requests;
 
-use App\Http\Requests\BaseAPIRequest;
 use Illuminate\Foundation\Http\FormRequest;
 
-class ChoicesGroupStoreRequest extends BaseAPIRequest
+class ProductStoreRequest extends BaseAPIRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -24,10 +23,15 @@ class ChoicesGroupStoreRequest extends BaseAPIRequest
      */
     public function rules()
     {
-        return [
+        $rules = [
             'name' => 'required',
-            'type' => 'required',
-            'display_type' => 'required'
+            'description' => 'required',
+            'id_category' => 'required',
+            'price' => 'required',
+            'inputs.*.size' => 'required',
+            'inputs.*.price' => 'required'
         ];
+
+        return $rules;
     }
 }

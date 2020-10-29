@@ -46,7 +46,7 @@ class ProductRepository
     public function findById($id)
     {
         $data = array();
-        $query = $this->model->with('groups')->find($id);
+        $query = $this->model->find($id);
 
         if ($query != NULL) {
             $data = $query;
