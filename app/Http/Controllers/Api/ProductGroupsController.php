@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Api;
 
 use App\Data\Models\ChoicesGroup;
+use App\Http\Controllers\Controller;
 use App\Http\Requests\ProductGroupsStoreRequest;
 use App\Data\Models\ProductGroups;
 
