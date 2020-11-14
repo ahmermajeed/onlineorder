@@ -50,6 +50,8 @@ Route::post('add-choice', 'Api\ChoicesGroupController@addChoicesToGroup');
 /** Products Routes */
 Route::resource('products', 'Api\ProductController');
 
+Route::post('add-product-choice', 'Api\ProductGroupsController@store');
+
 /** Products Routes */
 Route::resource('deals', 'Api\DealController');
 
