@@ -173,16 +173,12 @@
                     <div class="col-md-6">
                         <div class="box red">
                             <h5>
-                                2x 9inch (6 slice) Pizzas
-                                <span>£ 6.49</span>
+                                2x 12inch (8 slice) Pizzas
+                                <span>£ 10.99</span>
                             </h5>
                             <h5>
-                                2x 12 inch (8slice) Pizzas
-                                <span>£9.99</span>
-                            </h5>
-                            <h5>
-                                2x 16 (12 Slice) Pizzas
-                                <span>£12.99</span>
+                                2x 16 inch (12slice) Pizzas
+                                <span>£13.99</span>
                             </h5>
                             <h5>  (Upto 5 toppings or a set pizza off the menu)</h5>
                         </div>
@@ -190,16 +186,12 @@
                     <div class="col-md-6">
                         <div class="box yellow">
                             <h5>
-                                3x 9inch (6slice) pizzas
-                                <span>£9.49</span>
+                                3x 12inch (8slice) pizzas
+                                <span>£14.99</span>
                             </h5>
                             <h5>
-                                3x 12 inch (8slice) Pizzas
-                                <span>£13.99</span>
-                            </h5>
-                            <h5>
-                                3x 16 (12 Slice) Pizzas
-                                <span>£18.99</span>
+                                3x 16 inch (12slice) Pizzas
+                                <span>£19.99</span>
                             </h5>
                             <h5>
                                 (Upto 5 toppings or a set pizza off the menu)
