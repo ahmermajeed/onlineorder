@@ -296,55 +296,55 @@
         </section>
 
         <!-- Portfolio-->
-        <div class="gallery">
-            <div class="container">
-                <div class="gallery-area">
-                    <div class="title">
+<!--        <div class="gallery">-->
+<!--            <div class="container">-->
+<!--                <div class="gallery-area">-->
+<!--                    <div class="title">-->
 
-                        <h3>Discover Our Offers</h3>
-                        <p>Check out our offers and follow us on  <a href="https://web.facebook.com/Papa-Ges-pizza-Fish-Bar-104170144525384" target="_blank">Facebook</a> and <a href="https://www.instagram.com/papa_ges/" target="_blank"> Instagram @papa_ges </a></p>
-                    </div>
-                    <div class="row">
-                        <div class="col-lg-3 col-sm-6 mb-4">
-                            <a class="portfolio-box" href="https://i.ibb.co/Rcrtpwx/dealimg1.jpg">
-                                <img class="img-fluid" src="https://i.ibb.co/Rcrtpwx/dealimg1.jpg" alt="" />
-                            </a>
-                        </div>
-                        <div class="col-lg-3 col-sm-6 mb-4">
-                            <a class="portfolio-box" href="https://i.ibb.co/X5jLgtf/bannertheme4-01.jpg">
-                                <img class="img-fluid" src="https://i.ibb.co/X5jLgtf/bannertheme4-01.jpg" alt="" />
-                            </a>
-                        </div>
+<!--                        <h3>Discover Our Offers</h3>-->
+<!--                        <p>Check out our offers and follow us on  <a href="https://web.facebook.com/Papa-Ges-pizza-Fish-Bar-104170144525384" target="_blank">Facebook</a> and <a href="https://www.instagram.com/papa_ges/" target="_blank"> Instagram @papa_ges </a></p>-->
+<!--                    </div>-->
+<!--                    <div class="row">-->
+<!--                        <div class="col-lg-3 col-sm-6 mb-4">-->
+<!--                            <a class="portfolio-box" href="https://i.ibb.co/Rcrtpwx/dealimg1.jpg">-->
+<!--                                <img class="img-fluid" src="https://i.ibb.co/Rcrtpwx/dealimg1.jpg" alt="" />-->
+<!--                            </a>-->
+<!--                        </div>-->
+<!--                        <div class="col-lg-3 col-sm-6 mb-4">-->
+<!--                            <a class="portfolio-box" href="https://i.ibb.co/X5jLgtf/bannertheme4-01.jpg">-->
+<!--                                <img class="img-fluid" src="https://i.ibb.co/X5jLgtf/bannertheme4-01.jpg" alt="" />-->
+<!--                            </a>-->
+<!--                        </div>-->
 
-                        <div class="col-lg-3 col-sm-6 mb-4">
-                            <a class="portfolio-box" href="https://i.ibb.co/0cPGZJz/bannertheme4-04.jpg">
-                                <img class="img-fluid" src="https://i.ibb.co/0cPGZJz/bannertheme4-04.jpg" alt="" />
-                            </a>
-                        </div>
-                        <div class="col-lg-3 col-sm-6 mb-4">
-                            <a class="portfolio-box" href="https://i.ibb.co/NCLNQ5D/bannerthem4-02.jpg">
-                                <img class="img-fluid" src="https://i.ibb.co/NCLNQ5D/bannerthem4-02.jpg" alt="" />
-                            </a>
-                        </div>
-                        <div class="col-lg-3 col-sm-6 mb-4">
-                            <a class="portfolio-box" href="https://i.ibb.co/jhyx531/menutheme1-03.jpg">
-                                <img class="img-fluid" src="https://i.ibb.co/jhyx531/menutheme1-03.jpg" alt="" />
-                            </a>
-                        </div>
-                        <div class="col-lg-3 col-sm-6 mb-4">
-                            <a class="portfolio-box" href="https://i.ibb.co/gZt2SYN/menutheme1-04.jpg">
-                                <img class="img-fluid" src="https://i.ibb.co/gZt2SYN/menutheme1-04.jpg" alt="" />
-                            </a>
-                        </div>
-                        <div class="col-lg-3 col-sm-6 mb-4">
-                            <a class="portfolio-box" href="https://i.ibb.co/7k690Rw/menutheme1-02.jpg">
-                                <img class="img-fluid" src="https://i.ibb.co/7k690Rw/menutheme1-02.jpg" alt="" />
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+<!--                        <div class="col-lg-3 col-sm-6 mb-4">-->
+<!--                            <a class="portfolio-box" href="https://i.ibb.co/0cPGZJz/bannertheme4-04.jpg">-->
+<!--                                <img class="img-fluid" src="https://i.ibb.co/0cPGZJz/bannertheme4-04.jpg" alt="" />-->
+<!--                            </a>-->
+<!--                        </div>-->
+<!--                        <div class="col-lg-3 col-sm-6 mb-4">-->
+<!--                            <a class="portfolio-box" href="https://i.ibb.co/NCLNQ5D/bannerthem4-02.jpg">-->
+<!--                                <img class="img-fluid" src="https://i.ibb.co/NCLNQ5D/bannerthem4-02.jpg" alt="" />-->
+<!--                            </a>-->
+<!--                        </div>-->
+<!--                        <div class="col-lg-3 col-sm-6 mb-4">-->
+<!--                            <a class="portfolio-box" href="https://i.ibb.co/jhyx531/menutheme1-03.jpg">-->
+<!--                                <img class="img-fluid" src="https://i.ibb.co/jhyx531/menutheme1-03.jpg" alt="" />-->
+<!--                            </a>-->
+<!--                        </div>-->
+<!--                        <div class="col-lg-3 col-sm-6 mb-4">-->
+<!--                            <a class="portfolio-box" href="https://i.ibb.co/gZt2SYN/menutheme1-04.jpg">-->
+<!--                                <img class="img-fluid" src="https://i.ibb.co/gZt2SYN/menutheme1-04.jpg" alt="" />-->
+<!--                            </a>-->
+<!--                        </div>-->
+<!--                        <div class="col-lg-3 col-sm-6 mb-4">-->
+<!--                            <a class="portfolio-box" href="https://i.ibb.co/7k690Rw/menutheme1-02.jpg">-->
+<!--                                <img class="img-fluid" src="https://i.ibb.co/7k690Rw/menutheme1-02.jpg" alt="" />-->
+<!--                            </a>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--        </div>-->
 
         <section class="reservation">
             <div class="container">
