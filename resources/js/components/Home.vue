@@ -24,29 +24,29 @@
                                     <h3 class="tt">Traditional Fish & Chips</h3>
                                     <ul>
                                         <li>
-                                            <h3>Fresh Large COD <span>£5.80</span> </h3>
+                                            <h3>Fresh Large COD <span>£6.00</span> </h3>
 
                                         </li>
                                         <li class="special">
-                                            <h3>Fresh Large COD & Chips <span>£7.50</span></h3>
+                                            <h3>Fresh Large COD & Chips <span>£7.80</span></h3>
 
                                         </li>
                                         <li>
-                                            <h3>Masala COD Fish <span>£5.80</span></h3>
+                                            <h3>Masala COD Fish <span>£6.0</span></h3>
 
                                         </li>
                                         <li>
-                                            <h3>Masala COD Fish in Nan  <span>£7.50</span></h3>
-
-                                        </li>
-
-                                        <li>
-                                            <h3>Fish Cake  <span>£1.40</span></h3>
+                                            <h3>Masala COD Fish in Nan  <span>£7.80</span></h3>
 
                                         </li>
 
                                         <li>
-                                            <h3>Sausage <span>£1.40</span></h3>
+                                            <h3>Fish Cake  <span>£1.50</span></h3>
+
+                                        </li>
+
+                                        <li>
+                                            <h3>Sausage <span>£1.50</span></h3>
 
                                         </li>
 
@@ -59,28 +59,28 @@
                                     <h3 class="tt">S. F. Chicken</h3>
                                     <ul>
                                         <li>
-                                            <h3>1 Piece Chicken <span>£1.40</span></h3>
+                                            <h3>1 Piece Chicken <span>£1.50</span></h3>
 
                                         </li>
                                         <li class="special">
-                                            <h3>2 Pieces Chicken <span>£2.60</span></h3>
+                                            <h3>2 Pieces Chicken <span>£2.80</span></h3>
 
                                         </li>
                                         <li>
-                                            <h3>3 Pieces Chicken<span>£3.50</span></h3>
+                                            <h3>3 Pieces Chicken<span>£4.00</span></h3>
 
                                         </li>
                                         <li>
-                                            <h3>1 Piece Chicken & Chips <span>£2.50</span></h3>
+                                            <h3>1 Piece Chicken & Chips <span>£2.60</span></h3>
 
                                         </li>
 
                                         <li>
-                                            <h3>2 Pieces Chicken & Chips <span>£3.60</span></h3>
+                                            <h3>2 Pieces Chicken & Chips <span>£3.80</span></h3>
 
                                         </li>
                                         <li>
-                                            <h3>3 Pieces Chicken & Chips <span>£4.50</span></h3>
+                                            <h3>3 Pieces Chicken & Chips <span>£4.80</span></h3>
 
                                         </li>
 
@@ -125,7 +125,7 @@
                                     <h3 class="tt">Pizzas</h3>
                                     <ul>
                                         <li>
-                                            <h3>Seafood Sensation<span>Starting From £ 5.50*</span></h3>
+                                            <h3>Seafood Sensation<span>Starting From £ 6.00*</span></h3>
 
                                         </li>
                                         <li class="special">
@@ -137,15 +137,15 @@
 
                                         </li>
                                         <li>
-                                            <h3>Carribean Dream<span>)Starting From £ 5.50*</span></h3>
+                                            <h3>Carribean Dream<span>)Starting From £ 6.00*</span></h3>
 
                                         </li>
                                         <li>
-                                            <h3>Mexicano<span>Starting From £ 5.50*</span></h3>
+                                            <h3>Mexicano<span>Starting From £  6.00*</span></h3>
 
                                         </li>
                                         <li>
-                                            <h3>Donner Pizza<span>Starting From £ 5.50*</span></h3>
+                                            <h3>Donner Pizza<span>Starting From £  6.00*</span></h3>
 
                                         </li>
 
@@ -173,7 +173,7 @@
                     <div class="col-md-6">
                         <div class="box red">
                             <h5>
-                                2x 12inch (8 slice) Pizzas
+                                2x 12 inch (8 slice) Pizzas
                                 <span>£ 10.99</span>
                             </h5>
                             <h5>
@@ -233,7 +233,7 @@
                         <div class="col-md-6">
                             <div class="box offer">
                                 <div class="info">
-                                    <h3>£15.99</h3>
+                                    <h3>£16.99</h3>
                                     <p>Donner in Nan (R),
                                         + Mix in Nan (R)
                                         + Chicken in Nan (R)
