@@ -4,51 +4,64 @@
             <div class="main-ftr">
                 <div class="container">
                     <div class="row">
-                        <div class="col-md-4">
-                            <img src="../../../images/logo.png">
-                            <p>Open 7 days a week
-                                4PM - 11pm.</p>
-                        </div>
-                        <div class="col-md-2">
-                            <h3>Quick Links</h3>
-                            <ul>
-                                <li><a href="#">Home</a></li>
-                                <li><a href="#">About us</a></li>
-                                <li><a href="#">Menu</a></li>
-                                <li><a href="#">Reservation</a></li>
-                                <li><a href="#">Gallery</a></li>
-                                <li><a href="#">Blog</a></li>
-                                <li><a href="#">Contact Us</a></li>
-                            </ul>
-                        </div>
-                        <div class="col-md-3">
+                        <div class="col-md-3 footer-section-1">
                             <h3>Opening Hours</h3>
-                            <ul>
-                                <li><a href="#">Mon - Fri: 4:00am - 11pm</a></li>
-
+                            <ul class="left">
+                                <li><a href="#"><span><img src="../../../images/smartphone.png"></span>02476441200</a></li>
+                                <li><a href="#"><span><img src="../../../images/mail1.png"></span>info@mjstakeaway.co.uk.com</a></li>
+                                <li><a href="#"><span><img src="../../../images/location1.png"></span>10 Peckham Park Road, London  SE15 6TW </a></li>
                             </ul>
-                            <h3>Check out our offers and follow us on</h3>
-                            <ul>
-                                <li><a href="https://web.facebook.com/Papa-Ges-pizza-Fish-Bar-104170144525384"  target="_blank">Facebook</a></li>
-                                <li><a href="https://www.instagram.com/papa_ges/" target="_blank"> Instagram</a></li>
-
-                            </ul>
-
                         </div>
-                        <div class="col-md-3">
-                            <h3>Contact Us</h3>
-                            <ul>
-                                <li><a href="#"><span>Phone:</span>0121 2422020</a></li>
-                                <li><a href="#"><span>Email:</span>support@papages.com</a></li>
-                                <li><a href="#"><span>Address:</span>Birmingham,UK.</a></li>
+                        <div class="col-md-6 footer-section-2">
+                            <div class="text-center">
+                               <a href="#"><img src="../../../images/Ali-baba-logo.png"></a> 
+                            </div>
+                            <div class="footer-menu">
+                                <ul>
+                                  <li><a href="#">Home</a></li>
+                                  <li><a href="#">About us</a></li>
+                                  <li><a href="#">Feedback</a></li>
+                                  <li><a href="#">Allergy Information</a></li>
+                                  <li><a href="#">Our Menu</a></li>
+                                </ul>
+                            </div>
+                            <div class="follow-us text-center">
+                                <h3>Follow</h3>
+                            </div>
+                            <div class="icons text-center">
+                                <ul>
+                                    <li class="linked"><a href="#"><img src="../../../images/in.png"></a></li>
+                                    <li class="twitter"><a href="#"><img src="../../../images/in.png"></a></li>
+                                    <li class="pinterest"><a href="#"><img src="../../../images/in.png"></a></li>
+                                    <li class="google-plus"><a href="#"><img src="../../../images/in.png"></a></li>
+                                    <li class="wifi"><a href="#"><img src="../../../images/in.png"></a></li>
+                                </ul>
+                                
+                            </div>
+                        </div>
+                        <div class="col-md-3 footer-section-3">
+                            <h3>Opening Hours</h3>
+                            <ul class="left">
+                                <li>
+                                    <strong><a href="#">Open 7 days a week</a></strong>
+                                </li>
+                                <li>
+                                    <a href="#">2pm till late</a>
+                                </li>
+                                <li>
+                                    <strong><a href="#">Delivery Hours</a></strong>
+                                </li>
+                                <li>
+                                    <a href="#">5pm till late </a>
+                                </li>
                             </ul>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="copyright">
+            <div class="copyright text-center">
                 <div class="container">
-                    <p>2020 ©  <span>Papages.com</span>, All rights reserved</p>
+                    <p>Copyright © 2020 | All rights reserved</p>
                 </div>
             </div>
         </footer>

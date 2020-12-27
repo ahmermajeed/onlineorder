@@ -4,48 +4,93 @@
         <header class="masthead">
             <nav class="navbar navbar-expand-lg navbar-light custom-header" id="mainNav">
                 <div class="container">
-                    <router-link :to="{ path: '/'}">
-                        <a class="navbar-brand js-scroll-trigger" href="#">
-                            <img src="../../../images/logo.png">
-                        </a>
-                    </router-link>
-                    <div class="right">
-                        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
-                        <div class="add-info">
-                            <ul>
-                                <li><a href="#"><i class="fas fa-phone"></i> 0121 242 2020</a></li>
-                                <li><a href="#"><i class="fas fa-envelope"></i>support@papages.com</a></li>
-                            </ul>
-                        </div>
-                        <div class="main-menu" id="navbarResponsive">
-                            <ul class="navbar-nav ml-auto my-2 my-lg-0">
+                    <div class="row header-top">
+                        <div class="col-12 header-top-section">
+                            <div class="row">
+                                <div class="col-lg-6">
+                                    <div class="add-info">
+                                        <ul>
+                                            <li><img src="../../../images/mail.png">
+                                                <span>
+                                                    <a href="mailto:Info@yourdomain.com">Info@yourdomain.com</a>
+                                                </span>
+                                            </li>
+                                            <li><img src="../../../images/location.png">
+                                                <span>
+                                                     <a href="10 Peckham Park Road, London SE15 6TW ">10 Peckham Park Road, London SE15 6TW </a>
+                                                </span>
+                                            </li>
+                                        </ul>
+                                    </div> 
+                                </div>
+                                    <div class="col-lg-6">
+                                        <div class="header-icon float-right">
+                                           <ul>
+                                               <li><a href="#"><img src="../../../images/facebook.png"></a></li>
+                                               <li><a href="#"><img src="../../../images/twitter.png"></a></li>
+                                               <li><a href="#"><img src="../../../images/Instagram.png"></a></li>
+                                               <li><a href="#"><img src="../../../images/in.png"></a></li>
+                                           </ul> 
+                                        </div>
+                                    </div> 
+                                            
+                            </div>
 
-                                <li class="nav-item active"> <router-link :to="{ path: '/'}"><a class="nav-link js-scroll-trigger" href="#about">Home</a></router-link></li>
-                                <li class="nav-item "> <router-link :to="{ path: '/feedback'}"><a class="nav-link js-scroll-trigger" >Feedback</a></router-link></li>
-                                <li class="nav-item">
-                                    <a href="#" @click="openAllergy" class="nav-link">Allergy Information</a>
-                                </li>
-
-                                <li class="nav-item">
-                                    <a href="#" class="nav-link" @click="openMenu">Our Menu</a>
-                                </li>
-
-                                <!--                            <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#services">Menu</a></li>-->
-                                <!--                            <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#contact">GALLERY</a></li>-->
-                            </ul>
-                            <ul class="btm-menu">
-                                <!--                            <li><a href="#">Feedback</a></li>-->
-                                <!--                            <li><a href="#">Contact Us</a></li>-->
-                                <!--                            <li><a href="#">Help</a></li>-->
-                                <!--                            <li><a href="#"><i class="fas fa-user"></i> My Account</a></li>-->
-                            </ul>
+                            
                         </div>
-                        <div class="order-now">
-                            <a href="#" class="btn-primary btn"  @click.prevent="openPostalCode">
-                                Order Online <i class="fas fa-long-arrow-alt-right"></i></i>
-                            </a>
-                        </div>
+                        <div class="col-xl header-bottom">
+                            <div class="row">
+                                <div class="col-lg-5">
+                                   <a href="#"><img src="../../../images/Ali-baba-logo.png"></a> 
+                                </div>
+                                <div class="col-lg-7">
+                                    <div class="right">
+                                        <div class="main-menu" id="navbarResponsiv">
+                                            <ul class="navbar-nav ml-auto my-2 my-lg-0">
+
+                                                <li class="nav-item active"> <router-link :to="{ path: '/'}"><a class="nav-link js-scroll-trigger" href="#about">Home</a></router-link></li>
+                                                <li class="nav-item "> <router-link :to="{ path: '/About us'}"><a class="nav-link js-scroll-trigger" >About us</a></router-link></li>
+                                                <li class="nav-item "> <router-link :to="{ path: '/feedback'}"><a class="nav-link js-scroll-trigger" >Feedback</a></router-link></li>
+                                                <li class="nav-item">
+                                                    <a href="#" @click="openAllergy" class="nav-link">Allergy Information</a>
+                                                </li>
+
+                                                <li class="nav-item">
+                                                    <a href="#" class="nav-link" @click="openMenu">Our Menu</a>
+                                                </li>
+
+                                                <!--                            <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#services">Menu</a></li>-->
+                                                <!--                            <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#contact">GALLERY</a></li>-->
+                                                <div class="order-now">
+                                                 <a href="#" class="btn-primary btn"  @click.prevent="openPostalCode">
+                                                Order Online <i class="fas fa-long-arrow-alt-right"></i></i>
+                                                     </a>
+                                             </div>
+                                            </ul>
+                                             
+                                        </div>
+                                        
+                                     </div>
+                                </div>
+                            </div>
+                        </div>  
                     </div>
+                
+                                        
+
+
+
+
+
+
+
+
+
+
+                          <router-link :to="{ path: '/'}">
+                        
+                    </router-link>
+                    
                 </div>
             </nav>
             <div class="header-bottom">
