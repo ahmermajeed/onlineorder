@@ -712,7 +712,7 @@
                         
                     </div>
                     <div class="view-btn text-center order-btn">
-                       <a href="#" class=" btn btn-danger"> VIEW ALL</a>
+                       <a href="#" class=" btn btn-outline-danger"> VIEW ALL</a>
                     
                      </div>
                 
@@ -767,7 +767,7 @@
                 
                 </div>
                 <div class="view-btn text-center ">
-                       <a href="#" class=" btn btn-danger"> VIEW ALL</a>
+                       <a href="#" class=" btn btn-outline-danger"> VIEW ALL</a>
                     
                 </div>
             </div>
@@ -830,7 +830,7 @@
 
 
 
-        <section class="big-img">
+        <!--  <section class="big-img">
             <div class="container">
                 <div class="inner">
                     <div class="row">
@@ -862,7 +862,7 @@
                                         + Mix in Nan (R)
                                         + Chicken in Nan (R)
                                         + 1 Chips (R) + 1.5ltr Pepsi</p>
-                                    <!-- <a href="#" class="custom-btn2">Recommend Now <i class="fas fa-long-arrow-alt-right"></i></a> -->
+                                     <a href="#" class="custom-btn2">Recommend Now <i class="fas fa-long-arrow-alt-right"></i></a>
                                 </div>
                                 <div class="overlay"></div>
                             </div>
@@ -875,7 +875,7 @@
                                         + Garlic Bread (4pcs)
                                         + 1 Chips (R)
                                         + 1.5ltr Pepsi</p>
-                                    <!-- <a href="#" class="custom-btn2">Recommend Now <i class="fas fa-long-arrow-alt-right"></i></a> -->
+                                    <a href="#" class="custom-btn2">Recommend Now <i class="fas fa-long-arrow-alt-right"></i></a>
                                 </div>
                                 <div class="overlay"></div>
                             </div>
@@ -917,7 +917,7 @@
                     </div>
                 </div>
             </div>
-        </section>
+        </section> -->
 
         <!-- Portfolio-->
 <!--        <div class="gallery">-->
@@ -974,46 +974,48 @@
             <div class="container">
                 <div class="table-booked pattern">
                     <div class="row">
-                        <div class="col-md-6">
-                                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2429.2156154533595!2d-1.822215984654894!3d52.49333647980907!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4870bae64827134d%3A0x2e1a51de3c022c50!2s888a%20Washwood%20Heath%20Rd%2C%20Ward%20End%2C%20Birmingham%20B8%202NB%2C%20UK!5e0!3m2!1sen!2s!4v1592827053509!5m2!1sen!2s" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0" width="100%" height="450"></iframe>
+                        <div class="col-3">
+                              <!--   <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2429.2156154533595!2d-1.822215984654894!3d52.49333647980907!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4870bae64827134d%3A0x2e1a51de3c022c50!2s888a%20Washwood%20Heath%20Rd%2C%20Ward%20End%2C%20Birmingham%20B8%202NB%2C%20UK!5e0!3m2!1sen!2s!4v1592827053509!5m2!1sen!2s" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0" width="100%" height="450"></iframe> -->
                         </div>
-                        <div class="col-md-6">
+                        <div class="col-5">
                             <div class="form-box">
                                 <div class="title">
                                     <h3>Contact us</h3>
-                                    <p>888 Washwood Heath Road, Fox & Goose (Opposite BP) B8 2NB.</p>
-                                    <p>0121 242 2020.</p>
+                                    <p>10 Peckham Park Road, London SE15 6TW</p>
+                                  
                                 </div>
                                 <form>
                                     <div class="frm-body">
                                         <div class="form-row">
-                                            <div class="form-group col-md-6">
-                                                <label for="">Name</label>
-                                                <input type="text" class="form-control" id="" placeholder="Your Name*">
+                                            <div class="form-group col-md-12">
+                                                <label for=""> Name</label>
+                                                <input type="text" class="form-control" id="" placeholder="Enter Your Name">
                                             </div>
-                                            <div class="form-group col-md-6">
+                                            <div class="form-group col-md-12">
                                                 <label>Email</label>
-                                                <input type="email" class="form-control" id="" placeholder="your email *">
+                                                <input type="email" class="form-control" id="" placeholder="Enter  email ">
                                             </div>
                                         </div>
                                         <div class="form-row">
-                                            <div class="form-group col-md-6">
+                                            <div class="form-group col-md-12">
                                                 <label for="">Address</label>
-                                                <input type="text" class="form-control" id="" placeholder="Address">
+                                                <input type="text" class="form-control" id="" placeholder="Enter Address">
                                             </div>
-                                            <div class="form-group col-md-6">
+                                            <div class="form-group col-md-12"> 
                                                 <label>Number</label>
-                                                <input type="phone" class="form-control" id="" placeholder="Number">
+                                                <input type="phone" class="form-control" id="" placeholder="Enter Number">
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="frm-ftr text-center mt-4">
-                                        <button class="custom-btn">Submit <i class="fas fa-long-arrow-alt-right"></i></button>
-                                    </div>
+                                     <div class="view-btn text-center ">
+	                    				   <a href="#" class=" btn btn-outline-danger"> VIEW ALL</a>
+	                    
+	                				</div>
 
                                 </form>
                             </div>
                         </div>
+                        <div class="col-3"></div>
                     </div>
                 </div>
             </div>
