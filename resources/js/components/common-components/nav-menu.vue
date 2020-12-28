@@ -38,7 +38,7 @@
 
                             
                         </div>
-                        <div class="col-xl header-bottom">
+                        <div class="col-xl header-bottom-section">
                             <div class="row">
                                 <div class="col-lg-5">
                                    <a href="#"><img src="/images/Ali-baba-logo.png"></a> 
@@ -96,20 +96,20 @@
             <div class="header-bottom">
                 <div class="container">
                     <div class="row">
-                        <div class="col-lg-6">
-                            <div class="img-box">
-                                <img src="https://i.ibb.co/H77j5pd/Png-Item-3671735.png">
-                            </div>
+                        <div class="col-lg-5">
+                            
                         </div>
-                        <div class="col-lg-6">
-                            <div class="info-txt">
-                                <h4>10% off on orders if £15.00 and over </h4>
-                                <h1 class="font-weight-bold">
-                                    Taste your fav dish</h1>
-                                <h3><span>from</span> Papa Ge's Pizza & Fish Bar</h3>
-                                <p>Fish & Chips made the traditional way.</p>
-                            </div>
-                            <div class="search-res" v-if="this.$route.name !='online-order'">
+                        <div class="col-lg-7">
+                            <div class="contact-bnner">
+                               <div class="row">
+                                <div class="col-5 mt-0">
+                                    
+                                </div>
+                                <div class="col-6 mt-0">
+                                    <div class="search-res" v-if="this.$route.name !='online-order'">
+                                <div class="info-txt">
+                                    <h4>Save 25% on orders over £30</h4>
+                                </div>
                                 <h3>Enter Your Postal Code.</h3>
                                 <form class="form-inline">
                                     <div class="form-group mx-sm-3 mb-2">
@@ -124,6 +124,12 @@
                                     <p style="color:red">{{error_message}} </p>
                                 </form>
                             </div>
+                                    
+                                </div>
+                                   
+                               </div>
+                            </div>
+                            
                         </div>
                     </div>
                 </div>
