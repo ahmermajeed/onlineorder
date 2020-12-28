@@ -10,12 +10,12 @@
                                 <div class="col-lg-6">
                                     <div class="add-info">
                                         <ul>
-                                             <li><img src="/images/mail.png">
+                                             <li><img src="/images/theme-1/mail.png">
                                                 <span>
                                                     <a href="mailto:Info@yourdomain.com">Info@yourdomain.com</a>
                                                 </span>
                                             </li>
-                                            <li><img src="/images/location.png">
+                                            <li><img src="/images/theme-1/location.png">
                                                 <span>
                                                      <a href="10 Peckham Park Road, London SE15 6TW ">10 Peckham Park Road, London SE15 6TW </a>
                                                 </span>
@@ -26,10 +26,10 @@
                                     <div class="col-lg-6">
                                         <div class="header-icon float-right">
                                            <ul>
-                                               <li><a href="#"><img src="/images/facebook.png"></a></li>
-                                               <li><a href="#"><img src="/images/twitter.png"></a></li>
-                                               <li><a href="#"><img src="/images/Instagram.png"></a></li>
-                                               <li><a href="#"><img src="/images/in.png"></a></li>
+                                               <li><a href="#"><img src="/images/theme-1/facebook.png"></a></li>
+                                               <li><a href="#"><img src="/images/theme-1/twitter.png"></a></li>
+                                               <li><a href="#"><img src="/images/theme-1/Instagram.png"></a></li>
+                                               <li><a href="#"><img src="/images/theme-1/in.png"></a></li>
                                            </ul> 
                                         </div>
                                     </div> 
@@ -41,7 +41,7 @@
                         <div class="col-xl header-bottom-section">
                             <div class="row">
                                 <div class="col-lg-5">
-                                   <a href="#"><img src="/images/Ali-baba-logo.png"></a> 
+                                   <a href="#"><img src="/images/theme-1/Ali-baba-logo.png"></a> 
                                 </div>
                                 <div class="col-lg-7">
                                     <div class="right">

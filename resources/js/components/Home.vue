@@ -9,7 +9,7 @@
                                    <div class="card-content">
                                      <h3>Pizza Offer 2</h3>
                                      <p>Any 2 x 12” Pizzas, 10 Hot Wings,Chips &Bottle of Drinks</p>
-                                     <img src="../../../images/card-img.png">
+                                     <img src="/images/theme-1/card-img.png">
                                    </div>
                                    <div class="row pries-bar">
                                         <div class="col-8 order-btn">
@@ -33,7 +33,7 @@
                                    <div class="card-content">
                                      <h2>Pizza Offer 2</h2>
                                      <p>Any 2 x 12” Pizzas, 10 Hot Wings,Chips &Bottle of Drinks</p>
-                                     <img src="../../../images/card-img.png">
+                                     <img src="/images/theme-1/card-img.png">
                                    </div>
                                    <div class="row pries-bar">
                                         <div class="col-8 order-btn">
@@ -57,7 +57,7 @@
                                    <div class="card-content">
                                      <h2>Pizza Offer 2</h2>
                                      <p>Any 2 x 12” Pizzas, 10 Hot Wings,Chips &Bottle of Drinks</p>
-                                     <img src="../../../images/card-img.png">
+                                     <img src="/images/theme-1/card-img.png">
                                    </div>
                                    <div class="row pries-bar">
                                         <div class="col-8 order-btn">
@@ -107,7 +107,7 @@
                             
                         </div>
                         <div class="col-6 px-0">
-                             <img src="../../../images/rating-img.png">
+                             <img src="/images/theme-1/rating-img.png">
                             
                         </div>
                         
@@ -645,7 +645,7 @@
                                             <li>1 Lamb Doner,1 Chicken Doner,</li>
                                            <li>1 Portion Grilled Wings& Bottle of Drink</li>
                                         </ul>
-                                        <img src="../../../images/tagline.jpg">
+                                        <img src="/images/theme-1/tagline.jpg">
 
                                          <div class="row pries-bar">
                                             <div class="col-8 order-btn">
@@ -685,7 +685,7 @@
                                             <li>1 Lamb Doner,1 Chicken Doner,</li>
                                            <li>1 Portion Grilled Wings& Bottle of Drink</li>
                                         </ul>
-                                        <img src="../../../images/tagline.jpg">
+                                        <img src="/images/theme-1/tagline.jpg">
 
                                          <div class="row pries-bar">
                                             <div class="col-8 order-btn">
@@ -1043,8 +1043,8 @@
         data: function () {
             return {
                 images: [
-                    '../../images/mainbanner1.jpeg',
-                    '../../images/image00003.jpg',
+                    '/images/theme-1/mainbanner1.jpeg',
+                    '/images/theme-1/image00003.jpg',
                 ],
                 stories: [],
                 index: null,

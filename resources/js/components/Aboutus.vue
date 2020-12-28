@@ -27,7 +27,7 @@
                         <div class="row">
                             <div class="col-lg-6 col-md-6 col-sm-12">
                                 <div class="image-holder">
-                                    <img src="../../images/about_img1.jpg" alt="about_img">
+                                    <img src="public/images/about_img1.jpg" alt="about_img">
                                 </div>
                             </div>
                             <div class="col-lg-6 col-md-6 col-sm-12">
@@ -56,7 +56,7 @@
                                 <p><span>Site by</span> <a href="#">PapaGes</a></p>
                             </div>
                             <div class="col-md-2 footer-logo">
-                                <img src="../../images/mainlogo.png" alt="logo">
+                                <img src="public/images/mainlogo.png" alt="logo">
                             </div>
                             <div class="col-md-5 footer-right">
                                 <p><span>Email:</span> <a href="#">support@papages.com</a></p>
