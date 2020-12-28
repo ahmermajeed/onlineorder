@@ -2,97 +2,80 @@
 
     <div>
         <header class="masthead">
-            <nav class="navbar navbar-expand-lg navbar-light custom-header" id="mainNav">
-                <div class="container">
-                    <div class="row header-top">
-                        <div class="col-12 header-top-section">
-                            <div class="row">
-                                <div class="col-lg-6">
-                                    <div class="add-info">
-                                        <ul>
-                                             <li><img src="/images/theme-1/mail.png">
-                                                <span>
-                                                    <a href="mailto:Info@yourdomain.com">Info@yourdomain.com</a>
-                                                </span>
-                                            </li>
-                                            <li><img src="/images/theme-1/location.png">
-                                                <span>
-                                                     <a href="10 Peckham Park Road, London SE15 6TW ">10 Peckham Park Road, London SE15 6TW </a>
-                                                </span>
-                                            </li>
-                                        </ul>
-                                    </div> 
-                                </div>
-                                    <div class="col-lg-6">
-                                        <div class="header-icon float-right">
-                                           <ul>
-                                               <li><a href="#"><img src="/images/theme-1/facebook.png"></a></li>
-                                               <li><a href="#"><img src="/images/theme-1/twitter.png"></a></li>
-                                               <li><a href="#"><img src="/images/theme-1/Instagram.png"></a></li>
-                                               <li><a href="#"><img src="/images/theme-1/in.png"></a></li>
-                                           </ul> 
-                                        </div>
-                                    </div> 
-                                            
+            <!-- <nav class="navbar navbar-expand-lg navbar-light custom-header" id="mainNav"> -->
+            
+            <div class="header-top">
+                <div class="header-top-section">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <div class="add-info">
+                                    <ul>
+                                         <li><img src="/images/theme-1/mail.png">
+                                            <span>
+                                                <a href="mailto:Info@yourdomain.com">Info@yourdomain.com</a>
+                                            </span>
+                                        </li>
+                                        <li><img src="/images/theme-1/location.png">
+                                            <span>
+                                                 <a href="10 Peckham Park Road, London SE15 6TW ">10 Peckham Park Road, London SE15 6TW </a>
+                                            </span>
+                                        </li>
+                                    </ul>
+                                </div> 
                             </div>
-
-                            
+                            <div class="col-lg-6">
+                                <div class="header-icon float-right">
+                                   <ul>
+                                       <li><a href="#"><img src="/images/theme-1/facebook.png"></a></li>
+                                       <li><a href="#"><img src="/images/theme-1/twitter.png"></a></li>
+                                       <li><a href="#"><img src="/images/theme-1/Instagram.png"></a></li>
+                                       <li><a href="#"><img src="/images/theme-1/in.png"></a></li>
+                                   </ul> 
+                                </div>
+                            </div>     
                         </div>
-                        <div class="col-xl header-bottom-section">
-                            <div class="row">
-                                <div class="col-lg-5">
-                                   <a href="#"><img src="/images/theme-1/Ali-baba-logo.png"></a> 
-                                </div>
-                                <div class="col-lg-7">
-                                    <div class="right">
-                                        <div class="main-menu" id="navbarResponsiv">
-                                            <ul class="navbar-nav ml-auto my-2 my-lg-0">
+                    </div>
+                </div>
+                <div class="header-bottom-section">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-lg-5">
+                                <router-link :to="{ path: '/'}">
+                                    <img src="/images/theme-1/Ali-baba-logo.png">
+                                </router-link>
+                            </div>
+                            <div class="col-lg-7">
+                                <div class="main-menu" id="navbarResponsiv">
+                                    <ul class="nav justify-content-end">
 
-                                                <li class="nav-item active"> <router-link :to="{ path: '/'}"><a class="nav-link js-scroll-trigger" href="#about">Home</a></router-link></li>
-                                                <li class="nav-item "> <router-link :to="{ path: '/About us'}"><a class="nav-link js-scroll-trigger" >About us</a></router-link></li>
-                                                <li class="nav-item "> <router-link :to="{ path: '/feedback'}"><a class="nav-link js-scroll-trigger" >Feedback</a></router-link></li>
-                                                <li class="nav-item">
-                                                    <a href="#" @click="openAllergy" class="nav-link">Allergy Information</a>
-                                                </li>
+                                        <li class="nav-item active"> <router-link :to="{ path: '/'}"><a class="nav-link js-scroll-trigger" href="#about">Home</a></router-link></li>
+                                        <li class="nav-item "> <router-link :to="{ path: '/About us'}"><a class="nav-link js-scroll-trigger" >About us</a></router-link></li>
+                                        <li class="nav-item "> <router-link :to="{ path: '/feedback'}"><a class="nav-link js-scroll-trigger" >Feedback</a></router-link></li>
+                                        <li class="nav-item">
+                                            <a href="#" @click="openAllergy" class="nav-link">Allergy Information</a>
+                                        </li>
 
-                                                <li class="nav-item">
-                                                    <a href="#" class="nav-link" @click="openMenu">Our Menu</a>
-                                                </li>
+                                        <li class="nav-item">
+                                            <a href="#" class="nav-link" @click="openMenu">Our Menu</a>
+                                        </li>
 
-                                                <!--                            <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#services">Menu</a></li>-->
-                                                <!--                            <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#contact">GALLERY</a></li>-->
-                                                <div class="order-now">
-                                                 <a href="#" class="btn-primary btn"  @click.prevent="openPostalCode">
-                                                Order Online <i class="fas fa-long-arrow-alt-right"></i></i>
-                                                     </a>
-                                             </div>
-                                            </ul>
-                                             
-                                        </div>
-                                        
+                                        <!--                            <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#services">Menu</a></li>-->
+                                        <!--                            <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#contact">GALLERY</a></li>-->
+                                        <div class="order-now">
+                                         <a href="#" class="btn-primary btn"  @click.prevent="openPostalCode">
+                                        Order Online <i class="fas fa-long-arrow-alt-right"></i></i>
+                                             </a>
                                      </div>
+                                    </ul>
+                                     
                                 </div>
                             </div>
-                        </div>  
+                        </div>
                     </div>
-                
-                                        
-
-
-
-
-
-
-
-
-
-
-                          <router-link :to="{ path: '/'}">
-                        
-                    </router-link>
-                    
-                </div>
-            </nav>
+                </div>  
+            </div>
+            <!-- </nav> -->
             <div class="header-bottom">
                 <div class="container">
                     <div class="row">
@@ -145,10 +128,7 @@
         <postal-code-popup  @HideModalValue="hideModal"   :showModalProp="showPostalCode"></postal-code-popup>
 
     </div>
-
-
-
-
+    
 </template>
 
 <script>

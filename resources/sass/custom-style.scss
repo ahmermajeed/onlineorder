@@ -1,10 +1,5 @@
-
-
-		
- body{
- 	color: "fff";
-	border: none;
-	h2{
+body{
+ 	h2{
 		font-size: 36px;
 		font-weight: bold;
 	}
@@ -30,7 +25,7 @@
 	a{
 		text-decoration: none;
 	}
-	 .btn-outline-danger {
+	.btn-outline-danger {
    		 border-radius: 17px;
     	 width: 140px;
    		 border: none;
@@ -43,72 +38,70 @@
    		 background: -webkit-linear-gradient(left, #d72327 0%,#9c2122 100%);
    		 background: linear-gradient(to right, #d72327 0%,#9c2122 100%);
    		 filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d72327', endColorstr='#9c2122',GradientType=1 );
-		} 
-		.btn-outline-secondary {
+	} 
+	.btn-outline-secondary {
 			 border-radius: 17px;
     		 width: 140px;
    		 	color: #fff !important;
    			 font-size: 14px;
    			 font-weight: 700;
    		 	box-shadow: 0px 15px 20px 0px rgba(0, 0, 0, 0.2);
-		}
-      	.btn-outline-secondary {
-			    
-			    border-color: #ffff;
-		    }
-	
+	}
+  	.btn-outline-secondary {
+		border-color: #ffff;
+	}
     .pries p {
 	    font-size: 20px;
 	    font-weight: 600;
 	    color: #fff100;
 	}
-   .header-top-section {
-    background-color: #212121;
-    padding: 12px 0px 12px 0px;
-    .add-info{ 
-       li {
-     	 display: inline-block;
-  		}
-  		a {
-  			font-size: 12px;
-  		    padding: 5px;
-  		    color: #fff !important;
-    	    padding-right: 28px;
+   	.header-top-section {
+	    background-color: #212121;
+	    padding: 12px 0px 12px 0px;
+	    .add-info{ 
+	       	li {
+	     		display: inline-block;
+	  		}
+	  		a {
+	  			font-size: 12px;
+	  		    padding: 5px;
+	  		    color: #fff !important;
+	    	    padding-right: 28px;
 
-  		}
-    }
-    .header-icon 
-       li {
-       display: inline-block;
-    }
-    .header-icon 
-    li {
-    padding: 0px 11px 0px 11px;
-    }
-    ul {
-    margin-bottom: 0px;
-    }
-}
-.header-bottom-section {
-    padding: 10px 0px 10px 0px;
-
-    .main-menu{ 
-	    a {
-	    font-size: 14px;
-	    color: #000 !important;
-	    padding-left: 0px;
-	    padding-right: 0px;
+	  		}
 	    }
+	    .header-icon 
+	       li {
+	       display: inline-block;
+	    }
+	    .header-icon 
 	    li {
-	    padding-left: 15px;
-      }
+	    padding: 0px 11px 0px 11px;
+	    }
+	    ul {
+	    margin-bottom: 0px;
+	    }
+	}
+	.header-bottom-section {
+	    padding: 10px 0px 10px 0px;
 
-     }
- }
+	    .main-menu{ 
+		    a {
+		    font-size: 14px;
+		    color: #000 !important;
+		    padding-left: 0px;
+		    padding-right: 0px;
+		    }
+		    li {
+		    padding-left: 15px;
+	      }
+
+	     }
+	 }
     /********************footer start****************************/
 .main-ftr {
     padding-top: 50px;
-    background-image: url(../../../images/footer-banner.png);
+    background-image: url(../../../images/theme-1/footer-banner.png);
 	    li {
 	    list-style: none;
 	}
@@ -251,11 +244,12 @@ a{
 
 
 .header-bottom {
-    background-image: url("images/mains-banner.jpg");
+    background-image: url("images/theme-1/mains-banner.jpg");
     background-repeat: no-repeat;
-        padding: 100px 0px 100px;
+    padding: 100px 0px 100px;
+    background-size: cover;
     .contact-bnner {
-    	 background-image: url("images/contact-banner-image.jpg");
+    	 background-image: url("images/theme-1/contact-banner-image.jpg");
          background-repeat: no-repeat;
          border-radius: 10px;
           padding-bottom: 34px;
@@ -284,13 +278,13 @@ a{
 }
 .deliver-area {
    
-     background-image: url("images/offer-main.jpg");
+     background-image: url("images/theme-1/offer-main.jpg");
      background-repeat: no-repeat;
      background-position: center;
      padding: 90px 0px 90px 0px;
-
+     background-size: cover;
 .card-offer{
-	background-image: url("images/card-banner.jpg");
+	background-image: url("images/theme-1/card-banner.jpg");
      background-position: top;
      background-repeat: no-repeat;
       border-radius: 8px;
@@ -318,16 +312,16 @@ a{
  .card-offer:before {
 		    content: "";
 		    position: absolute;
-		    background-image: url("images/before-leafs.png");
+		    background-image: url(/images/theme-1/before-leafs.png?0dd26c8…);
 		    background-repeat: no-repeat;
-   		    width: 100%;
-   		    height: 100px;
-    		top: -10px;
- 		    left: 77%;
+		    width: 90px;
+		    height: 100px;
+		    top: -10px;
+		    right: 0;
 		}
 
 .rating-area{
-	background-image: url("images/delivery-bar.jpg");
+	background-image: url("images/theme-1/delivery-bar.jpg");
      background-repeat: no-repeat;
      background-position: top;
      color: #fff;
@@ -363,13 +357,13 @@ a{
 
 }
 .menu-box{
-	 background-image: url("images/menu-banner.jpg");
+	 background-image: url("images/theme-1/menu-banner.jpg");
      background-repeat: no-repeat;
      background-position: top;
+     background-size: cover;
      padding: 90px 0px 0px 0px;
-    margin-top: -8px;
        .menus-pattern-second {
-		    background-image: url("images/pizzas-baner.jpg");
+		    background-image: url("images/theme-1/pizzas-baner.jpg");
 		    background-repeat: no-repeat;
 		    background-position: top;
 		    border-top-left-radius: 80px;
@@ -390,7 +384,7 @@ a{
 		    .menu-second-before:before {
 			    content: "";
 			    position: absolute;
-			    background-image: url("images/pizza-before.png");
+			    background-image: url("images/theme-1/pizza-before.png");
 			    background-repeat: no-repeat;
 			    width: 100%;
 			    height: 115px;
@@ -403,7 +397,7 @@ a{
        	}
 
      .menus-pattern-first{
-     	background-image: url("images/menu-pattern-first.jpg");
+     	background-image: url("images/theme-1/menu-pattern-first.jpg");
         background-repeat: no-repeat;
         background-position: top;
         border-top-right-radius: 80px;
@@ -425,7 +419,7 @@ a{
 		.menu-first-before:before {
 		    content: "";
 		    position: absolute;
-		    background-image: url(images/first-menu-before.png);
+		    background-image: url(images/theme-1/first-menu-before.png);
 		    background-repeat: no-repeat;
 		    width: 100%;
 		    height: 219px;
@@ -467,9 +461,9 @@ a{
         
         .family-section {
            padding: 100px 0px 90px 0px;
-            background-image: url("images/menu-banner.jpg");
+            background-image: url("images/theme-1/menu-banner.jpg");
             .family-card{
-	        	background-image: url("images/familys-one.jpg");
+	        	background-image: url("images/theme-1/familys-one.jpg");
 			    background-repeat: no-repeat;
     			width: 90%;
     			padding: 30px 0px 20px 0px;
@@ -510,8 +504,9 @@ a{
 
 }
 .deal-section{
-			background-image: url("images/deal-banner.jpg");
+			background-image: url("images/theme-1/deal-banner.jpg");
         	background-repeat: no-repeat;
+        	background-size: cover;
         	padding: 90px 0px 90px 0px;
         	 p {
     				font-size: 20px;
@@ -528,7 +523,7 @@ a{
 				}
 
 	.offers{
-        	background-image: url("images/offer-img.jpg");
+        	background-image: url("images/theme-1/offer-img.jpg");
         	background-repeat: no-repeat;
         	border-radius: 6px;
    			 padding: 20px;
@@ -554,8 +549,9 @@ a{
 
 }
 		.reservation {
-		    background-image: url("images/contact-us-banner.jpg");
+		    background-image: url("images/theme-1/contact-us-banner.jpg");
 		    background-repeat: no-repeat;
+		    background-size: cover;
 		        padding: 70px 0px;
 		    .form-box {
 			    border-radius: 10px !important;
@@ -563,7 +559,7 @@ a{
 			     box-shadow: 0px 15px 20px 0px rgba(0, 0, 0, 0.2);
 			     .title {
 				    text-align: center;
-				    background-image: url("images/forms-image.jpg");
+				    background-image: url("images/theme-1/forms-image.jpg");
 				     color: #fff;
 	   				 background-repeat: no-repeat;
 	   				 border-top-left-radius: 10px;

@@ -1,122 +1,123 @@
 <template>
     <div>
         <header-menu></header-menu>
-        <section class="deliver-area ">
-                    <div class="container">
-                          <div class="row">
-                            <div class="col-4">
-                               <div class="card-offer text-center">
-                                   <div class="card-content">
-                                     <h3>Pizza Offer 2</h3>
-                                     <p>Any 2 x 12” Pizzas, 10 Hot Wings,Chips &Bottle of Drinks</p>
-                                     <img src="/images/theme-1/card-img.png">
-                                   </div>
-                                   <div class="row pries-bar">
-                                        <div class="col-8 order-btn">
-                                            <button type="button" class="btn btn-outline-secondary">Order Now!</button>  
-                                            <a href="#" class=""></a> 
-                                        </div>
-                                        <div class="col-4">
-                                            <div class="pries">
-                                                <p>£21.00</p>
-                                                
-                                            </div>
-                                            
-                                        </div>
-                                       
-                                   </div>
-                                  
-                              </div>
-                            </div>
-                            <div class="col-4">
-                               <div class="card-offer text-center">
-                                   <div class="card-content">
-                                     <h2>Pizza Offer 2</h2>
-                                     <p>Any 2 x 12” Pizzas, 10 Hot Wings,Chips &Bottle of Drinks</p>
-                                     <img src="/images/theme-1/card-img.png">
-                                   </div>
-                                   <div class="row pries-bar">
-                                        <div class="col-8 order-btn">
-                                            <button type="button" class="btn btn-outline-secondary">Order Now!</button>  
-                                            <a href="#" class=""></a> 
-                                        </div>
-                                        <div class="col-4">
-                                            <div class="pries">
-                                                <p>£21.00</p>
-                                                
-                                            </div>
-                                            
-                                        </div>
-                                       
-                                   </div>
-                                  
-                              </div>
-                            </div>
-                            <div class="col-4">
-                               <div class="card-offer text-center">
-                                   <div class="card-content">
-                                     <h2>Pizza Offer 2</h2>
-                                     <p>Any 2 x 12” Pizzas, 10 Hot Wings,Chips &Bottle of Drinks</p>
-                                     <img src="/images/theme-1/card-img.png">
-                                   </div>
-                                   <div class="row pries-bar">
-                                        <div class="col-8 order-btn">
-                                            <button type="button" class="btn btn-outline-secondary">Order Now!</button>  
-                                            <a href="#" class=""></a> 
-                                        </div>
-                                        <div class="col-4">
-                                            <div class="pries">
-                                                <p>£21.00</p>
-                                                
-                                            </div>
-                                            
-                                        </div>
-                                       
-                                   </div>
-                                  
-                              </div>
-                            </div>
-                          </div>
-                    </div>
-        </section>
-            <section class="rating-area">
-                <div class="container">
-                <div class="rating-img">
-                    <div class="row">
-                        <div class="col-6 px-0">
-                            <div class="rating-content">
-                                <div class="row">
-                                    <div class="col-2 px-1 payment-type">
-                                        <p class="rounded-circle">Cash<br> only</p>
-                                        
-                                    </div>
-                                    <div class="col-6 px-1 delivry-content">
-                                        <p>Free Delivery</p>
-                                        <span>Min. Order £20 within 3 miles.<br>Under £20, £3 delivery charge will apply</span>
+        <section class="home-section deliver-area ">
+            <div class="container">
+                  <div class="row">
+                    <div class="col-4">
+                       <div class="card-offer text-center">
+                           <div class="card-content">
+                             <h3>Pizza Offer 2</h3>
+                             <p>Any 2 x 12” Pizzas, 10 Hot Wings,Chips &Bottle of Drinks</p>
+                             <img src="../../../images/card-img.png">
+                           </div>
+                           <div class="row pries-bar">
+                                <div class="col-8 order-btn">
+                                    <button type="button" class="btn btn-outline-secondary">Order Now!</button>  
+                                    <a href="#" class=""></a> 
+                                </div>
+                                <div class="col-4">
+                                    <div class="pries">
+                                        <p>£21.00</p>
                                         
                                     </div>
                                     
                                 </div>
-                                <div class="located-num">
-                                    <strong>0203 490 2727</strong>
-                                    <p>10 Peckham Park Road, London SE15 6TW</p>
+                               
+                           </div>
+                          
+                      </div>
+                    </div>
+                    <div class="col-4">
+                       <div class="card-offer text-center">
+                           <div class="card-content">
+                             <h2>Pizza Offer 2</h2>
+                             <p>Any 2 x 12” Pizzas, 10 Hot Wings,Chips &Bottle of Drinks</p>
+                             <img src="../../../images/card-img.png">
+                           </div>
+                           <div class="row pries-bar">
+                                <div class="col-8 order-btn">
+                                    <button type="button" class="btn btn-outline-secondary">Order Now!</button>  
+                                    <a href="#" class=""></a> 
                                 </div>
-
+                                <div class="col-4">
+                                    <div class="pries">
+                                        <p>£21.00</p>
+                                        
+                                    </div>
+                                    
+                                </div>
+                               
+                           </div>
+                          
+                      </div>
+                    </div>
+                    <div class="col-4">
+                       <div class="card-offer text-center">
+                           <div class="card-content">
+                             <h2>Pizza Offer 2</h2>
+                             <p>Any 2 x 12” Pizzas, 10 Hot Wings,Chips &Bottle of Drinks</p>
+                             <img src="../../../images/card-img.png">
+                           </div>
+                           <div class="row pries-bar">
+                                <div class="col-8 order-btn">
+                                    <button type="button" class="btn btn-outline-secondary">Order Now!</button>  
+                                    <a href="#" class=""></a> 
+                                </div>
+                                <div class="col-4">
+                                    <div class="pries">
+                                        <p>£21.00</p>
+                                        
+                                    </div>
+                                    
+                                </div>
+                               
+                           </div>
+                          
+                      </div>
+                    </div>
+                  </div>
+            </div>
+        </section>
+        
+        <section class="home-section rating-area">
+            <div class="container">
+            <div class="rating-img">
+                <div class="row">
+                    <div class="col-6 px-0">
+                        <div class="rating-content">
+                            <div class="row">
+                                <div class="col-2 px-1 payment-type">
+                                    <p class="rounded-circle">Cash<br> only</p>
+                                    
+                                </div>
+                                <div class="col-6 px-1 delivry-content">
+                                    <p>Free Delivery</p>
+                                    <span>Min. Order £20 within 3 miles.<br>Under £20, £3 delivery charge will apply</span>
+                                    
+                                </div>
                                 
                             </div>
-                            
-                        </div>
-                        <div class="col-6 px-0">
-                             <img src="/images/theme-1/rating-img.png">
+                            <div class="located-num">
+                                <strong>0203 490 2727</strong>
+                                <p>10 Peckham Park Road, London SE15 6TW</p>
+                            </div>
+
                             
                         </div>
                         
                     </div>
+                    <div class="col-6 px-0">
+                         <img src="../../../images/rating-img.png">
+                        
+                    </div>
                     
                 </div>
+                
+            </div>
             </div>
         </section>
-        <section class="menu-box">
+        <section class="home-section menu-box">
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-5 menus-pattern-first">
@@ -645,7 +646,7 @@
                                             <li>1 Lamb Doner,1 Chicken Doner,</li>
                                            <li>1 Portion Grilled Wings& Bottle of Drink</li>
                                         </ul>
-                                        <img src="/images/theme-1/tagline.jpg">
+                                        <img src="../../../images/tagline.jpg">
 
                                          <div class="row pries-bar">
                                             <div class="col-8 order-btn">
@@ -685,7 +686,7 @@
                                             <li>1 Lamb Doner,1 Chicken Doner,</li>
                                            <li>1 Portion Grilled Wings& Bottle of Drink</li>
                                         </ul>
-                                        <img src="/images/theme-1/tagline.jpg">
+                                        <img src="../../../images/tagline.jpg">
 
                                          <div class="row pries-bar">
                                             <div class="col-8 order-btn">
@@ -721,7 +722,7 @@
             </div>
             
         </section>
-        <section class="deal-section">
+        <section class="home-section deal-section">
             <div class="container">
                 <div class="deal-content">
                     <div class="offers-head">
@@ -970,7 +971,7 @@
 <!--            </div>-->
 <!--        </div>-->
 
-        <section class="reservation">
+        <section class="home-section reservation">
             <div class="container">
                 <div class="table-booked pattern">
                     <div class="row">
@@ -1043,8 +1044,8 @@
         data: function () {
             return {
                 images: [
-                    '/images/theme-1/mainbanner1.jpeg',
-                    '/images/theme-1/image00003.jpg',
+                    '../../images/mainbanner1.jpeg',
+                    '../../images/image00003.jpg',
                 ],
                 stories: [],
                 index: null,

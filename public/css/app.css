@@ -13631,8 +13631,6 @@ a.text-dark:focus {
 }
 
 body {
-  color: "fff";
-  border: none;
   /********************footer start****************************/
 }
 
@@ -13887,6 +13885,7 @@ body .header-bottom {
   background-image: url(/images/mains-banner.jpg?1503bcd7054add883e166decd2bc7ca8);
   background-repeat: no-repeat;
   padding: 100px 0px 100px;
+  background-size: cover;
 }
 
 body .header-bottom .contact-bnner {
@@ -13926,6 +13925,7 @@ body .deliver-area {
   background-repeat: no-repeat;
   background-position: center;
   padding: 90px 0px 90px 0px;
+  background-size: cover;
 }
 
 body .deliver-area .card-offer {
@@ -13951,12 +13951,12 @@ body .deliver-area .card-offer .order-btn {
 body .card-offer:before {
   content: "";
   position: absolute;
-  background-image: url(/images/before-leafs.png?0dd26c8a4d4a5e8fafd596d8803a6305);
+  background-image: url(/images/theme-1/before-leafs.png?0dd26c8…);
   background-repeat: no-repeat;
-  width: 100%;
+  width: 90px;
   height: 100px;
   top: -10px;
-  left: 77%;
+  right: 0;
 }
 
 body .rating-area {
@@ -13999,8 +13999,8 @@ body .menu-box {
   background-image: url(/images/menu-banner.jpg?a05d7e06a8f21f3082881d948a5a4a05);
   background-repeat: no-repeat;
   background-position: top;
+  background-size: cover;
   padding: 90px 0px 0px 0px;
-  margin-top: -8px;
 }
 
 body .menu-box .menus-pattern-second {
@@ -14144,6 +14144,7 @@ body .menu-box .family-section .view-btn a {
 body .deal-section {
   background-image: url(/images/deal-banner.jpg?31d7be7fa38dd7dff4df9e60e83b15d9);
   background-repeat: no-repeat;
+  background-size: cover;
   padding: 90px 0px 90px 0px;
 }
 
@@ -14190,6 +14191,7 @@ body .deal-section .offers strong {
 body .reservation {
   background-image: url(/images/contact-us-banner.jpg?e71265f2dfcd868f77f6c65126d3e509);
   background-repeat: no-repeat;
+  background-size: cover;
   padding: 70px 0px;
 }
 
