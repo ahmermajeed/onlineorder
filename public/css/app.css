@@ -14001,6 +14001,7 @@ body .menu-box {
   background-position: top;
   background-size: cover;
   padding: 90px 0px 0px 0px;
+  overflow: hidden;
 }
 
 body .menu-box .menus-pattern-second {

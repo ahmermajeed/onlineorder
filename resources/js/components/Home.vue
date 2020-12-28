@@ -79,7 +79,7 @@
                   </div>
             </div>
         </section>
-        
+
         <section class="home-section rating-area">
             <div class="container">
             <div class="rating-img">
@@ -120,362 +120,367 @@
         <section class="home-section menu-box">
             <div class="container-fluid">
                 <div class="row">
-                    <div class="col-5 menus-pattern-first">
-                        <div class="menu-first-before"></div>
-                        <div class="first-menu title-styl">
-                            
-                            
-                            <h2>Kebabs</h2>
-                            <div class="menu-content">
-                                <div class="row">
-                                    <div class="col-9">
-                                        <p>All combination kebabs are served with bread & salad</p> 
-                                    </div>
-                                    <div class="col-3 text-right">
-                                        <span class="badge badge-pill badge-danger">Large</span>
-                                    </div>
-                                
-                                </div>
-                            </div>
-                            <div class="menu-item">
+                    <div class="col-6">
+                        <div class="menus-pattern-first">
+                            <div class="menu-first-before"></div>
+                                <div class="first-menu title-styl">
                                     
-                                    <div class="box-borders">
+                                    
+                                    <h2>Kebabs</h2>
+                                    <div class="menu-content">
                                         <div class="row">
                                             <div class="col-9">
-                                                <p>Lamb Doner </p> 
+                                                <p>All combination kebabs are served with bread & salad</p> 
                                             </div>
                                             <div class="col-3 text-right">
-                                                <span>£8.50</span>
-                                            </div>
-                                    
-                                        </div>
-                                    </div>
-                                    
-                                    <div class="box-borders">
-                                        <div class="row">
-                                            <div class="col-9 ">
-                                                <p>Chicken Doner</p> 
-                                            </div>
-                                            <div class="col-3 text-right">
-                                                <span>£8.50</span>
+                                                <span class="badge badge-pill badge-danger">Large</span>
                                             </div>
                                         
                                         </div>
                                     </div>
-                                    
-                                    <div class="box-borders">
-                                        <div class="row">
-                                            <div class="col-9 ">
-                                                <p>Chicken Shish & Rice</p> 
+                                    <div class="menu-item">
+                                            
+                                            <div class="box-borders">
+                                                <div class="row">
+                                                    <div class="col-9">
+                                                        <p>Lamb Doner </p> 
+                                                    </div>
+                                                    <div class="col-3 text-right">
+                                                        <span>£8.50</span>
+                                                    </div>
+                                            
+                                                </div>
                                             </div>
-                                            <div class="col-3 text-right">
-                                                <span>£9.50</span>
+                                            
+                                            <div class="box-borders">
+                                                <div class="row">
+                                                    <div class="col-9 ">
+                                                        <p>Chicken Doner</p> 
+                                                    </div>
+                                                    <div class="col-3 text-right">
+                                                        <span>£8.50</span>
+                                                    </div>
+                                                
+                                                </div>
                                             </div>
-                                        
-                                        </div>
+                                            
+                                            <div class="box-borders">
+                                                <div class="row">
+                                                    <div class="col-9 ">
+                                                        <p>Chicken Shish & Rice</p> 
+                                                    </div>
+                                                    <div class="col-3 text-right">
+                                                        <span>£9.50</span>
+                                                    </div>
+                                                
+                                                </div>
+                                            </div>
+                                            
+                                            <div class="box-borders">
+                                                <div class="row">
+                                                    <div class="col-9 ">
+                                                        <p>Kofta Shish & Rice</p> 
+                                                    </div>
+                                                    <div class="col-3 text-right">
+                                                        <span>£9.50</span>
+                                                    </div>
+                                                
+                                                </div>
+                                            </div>
+                                            
+                                            <div class="box-borders">
+                                                <div class="row">
+                                                    <div class="col-9">
+                                                        <p>Lamb Shish & Rice</p> 
+                                                    </div>
+                                                    <div class="col-3 text-right">
+                                                        <span>£11.00</span>
+                                                    </div>
+                                                
+                                                </div>
+                                            </div>
+                                            
+                                            <div class="box-borders">
+                                                <div class="row">
+                                                    <div class="col-9">
+                                                        <p>Grilled Wings & Chips</p> 
+                                                    </div>
+                                                    <div class="col-3  text-right">
+                                                        <span>£9.50</span>
+                                                    </div>
+                                                
+                                                  </div>
+                                            </div>
+                                            <div class="box-borders">
+                                                <div class="row">
+                                                    <div class="col-9 ">
+                                                        <p>Mix Grill<br>(Chicken shish, lamb shish & kofta)</p> 
+                                                    </div>
+                                                    <div class="col-3 text-right">
+                                                        <span>£16.00</span>
+                                                    </div>
+                                                
+                                                </div>
+                                            </div>
+                                            
+                                            <div class="box-borders">
+                                                <div class="row">
+                                                    <div class="col-9">
+                                                        <p>Mix Doner</p> 
+                                                    </div>
+                                                    <div class="col-3 text-right">
+                                                        <span>£10.00</span>
+                                                    </div>
+                                                
+                                                 </div>
+                                                
+                                            </div>
+                                            
+                                            <div class="box-borders">
+                                                <div class="row">
+                                                    <div class="col-9 ">
+                                                        <p>Lamb Doner Meat & Chips</p> 
+                                                    </div>
+                                                    <div class="col-3  text-right">
+                                                        <span>£9.50</span>
+                                                    </div>
+                                                
+                                                </div>
+                                                
+                                            </div>
+                                            
+                                            <div class="box-borders">
+                                                <div class="row">
+                                                    <div class="col-9 ">
+                                                        <p>Chicken Doner Meat & Chips</p> 
+                                                    </div>
+                                                    <div class="col-3 text-right">
+                                                        <span>£9.50</span>
+                                                    </div>
+                                                
+                                                </div>
+                                            </div>
+                                            
+                                            <div class="box-borders">
+                                                 <div class="row">
+                                                    <div class="col-9 ">
+                                                        <p>. Mix Doner Meat & Chips</p> 
+                                                    </div>
+                                                    <div class="col-3 text-right">
+                                                        <span>£10.50</span>
+                                                    </div>
+                                                
+                                                </div>
+                                                
+                                            </div>
+                                           
                                     </div>
                                     
-                                    <div class="box-borders">
-                                        <div class="row">
-                                            <div class="col-9 ">
-                                                <p>Kofta Shish & Rice</p> 
-                                            </div>
-                                            <div class="col-3 text-right">
-                                                <span>£9.50</span>
-                                            </div>
-                                        
-                                        </div>
-                                    </div>
-                                    
-                                    <div class="box-borders">
-                                        <div class="row">
-                                            <div class="col-9">
-                                                <p>Lamb Shish & Rice</p> 
-                                            </div>
-                                            <div class="col-3 text-right">
-                                                <span>£11.00</span>
-                                            </div>
-                                        
-                                        </div>
-                                    </div>
-                                    
-                                    <div class="box-borders">
-                                        <div class="row">
-                                            <div class="col-9">
-                                                <p>Grilled Wings & Chips</p> 
-                                            </div>
-                                            <div class="col-3  text-right">
-                                                <span>£9.50</span>
-                                            </div>
-                                        
-                                          </div>
-                                    </div>
-                                    <div class="box-borders">
-                                        <div class="row">
-                                            <div class="col-9 ">
-                                                <p>Mix Grill<br>(Chicken shish, lamb shish & kofta)</p> 
-                                            </div>
-                                            <div class="col-3 text-right">
-                                                <span>£16.00</span>
-                                            </div>
-                                        
-                                        </div>
-                                    </div>
-                                    
-                                    <div class="box-borders">
-                                        <div class="row">
-                                            <div class="col-9">
-                                                <p>Mix Doner</p> 
-                                            </div>
-                                            <div class="col-3 text-right">
-                                                <span>£10.00</span>
-                                            </div>
-                                        
-                                         </div>
-                                        
-                                    </div>
-                                    
-                                    <div class="box-borders">
-                                        <div class="row">
-                                            <div class="col-9 ">
-                                                <p>Lamb Doner Meat & Chips</p> 
-                                            </div>
-                                            <div class="col-3  text-right">
-                                                <span>£9.50</span>
-                                            </div>
-                                        
-                                        </div>
-                                        
-                                    </div>
-                                    
-                                    <div class="box-borders">
-                                        <div class="row">
-                                            <div class="col-9 ">
-                                                <p>Chicken Doner Meat & Chips</p> 
-                                            </div>
-                                            <div class="col-3 text-right">
-                                                <span>£9.50</span>
-                                            </div>
-                                        
-                                        </div>
-                                    </div>
-                                    
-                                    <div class="box-borders">
-                                         <div class="row">
-                                            <div class="col-9 ">
-                                                <p>. Mix Doner Meat & Chips</p> 
-                                            </div>
-                                            <div class="col-3 text-right">
-                                                <span>£10.50</span>
-                                            </div>
-                                        
-                                        </div>
-                                        
-                                    </div>
                                    
-                            </div>
-                            
-                           
+                                </div>    
                         </div>
                     </div>
-                    <div class="col-6 menus-pattern-second">
-                        <div class="menu-second-before"></div>
-                        <div class="second-menu title-styl">
-                            <h2>Pizza Menu</h2>
-                            <div class="menu-content">
-                                <div class="row ">
-                                    <div class="col-6">
-                                        <p>All pizzas topped with Cheese & Tomato Paste</p> 
+                    <div class="col-6">
+                        <div class="menus-pattern-second">
+                            <div class="menu-second-before"></div>
+                            <div class="second-menu title-styl">
+                                <h2>Pizza Menu</h2>
+                                <div class="menu-content">
+                                    <div class="row ">
+                                        <div class="col-6">
+                                            <p>All pizzas topped with Cheese & Tomato Paste</p> 
+                                        </div>
+                                        <div class="col-2 text-center">
+                                            <span class="badge badge-warning">Med 10”</span>
+                                        </div>
+                                        <div class="col-2 text-center">
+                                            <span class="badge badge-danger">Lrg 12”</span>
+                                        </div>
+                                        <div class="col-2 text-center">
+                                            <span class="badge badge-warning">Xlrg 15”</span>
+                                        </div>
+                                    
                                     </div>
-                                    <div class="col-2 text-center">
-                                        <span class="badge badge-warning">Med 10”</span>
-                                    </div>
-                                    <div class="col-2 text-center">
-                                        <span class="badge badge-danger">Lrg 12”</span>
-                                    </div>
-                                    <div class="col-2 text-center">
-                                        <span class="badge badge-warning">Xlrg 15”</span>
-                                    </div>
-                                
                                 </div>
-                            </div>
-                            <div class="menu-item">
-                                    <div class="box-borders">
-                                        <div class="row">
-                                            <div class="col-6">
-                                                <p>Margherita<span>mozzarella cheese & tomato sauce</span></p> 
+                                <div class="menu-item">
+                                        <div class="box-borders">
+                                            <div class="row">
+                                                <div class="col-6">
+                                                    <p>Margherita<span>mozzarella cheese & tomato sauce</span></p> 
+                                                </div>
+                                                <div class="col-2 text-center">
+                                                    <span>£7.50</span>
+                                                </div>
+                                                <div class="col-2  text-center">
+                                                    <span>£9.50</span>
+                                                </div>
+                                                <div class="col-2  text-center">
+                                                    <span>£11.50</span>
+                                                </div>
+                                        
                                             </div>
-                                            <div class="col-2 text-center">
-                                                <span>£7.50</span>
-                                            </div>
-                                            <div class="col-2  text-center">
-                                                <span>£9.50</span>
-                                            </div>
-                                            <div class="col-2  text-center">
-                                                <span>£11.50</span>
-                                            </div>
-                                    
                                         </div>
-                                    </div>
-                                   
-                                    <div class="box-borders">
-                                        <div class="row">
-                                            <div class="col-6">
-                                              <p>Hawaiian<span> ham & pineapple</span></p>   
+                                       
+                                        <div class="box-borders">
+                                            <div class="row">
+                                                <div class="col-6">
+                                                  <p>Hawaiian<span> ham & pineapple</span></p>   
+                                                </div>
+                                                <div class="col-2 text-center">
+                                                    <span>£8.00</span>
+                                                </div>
+                                                <div class="col-2  text-center">
+                                                    <span>£10.00</span>
+                                                </div>
+                                                <div class="col-2  text-center">
+                                                    <span>£12.00</span>
+                                                </div>
+                                        
                                             </div>
-                                            <div class="col-2 text-center">
-                                                <span>£8.00</span>
-                                            </div>
-                                            <div class="col-2  text-center">
-                                                <span>£10.00</span>
-                                            </div>
-                                            <div class="col-2  text-center">
-                                                <span>£12.00</span>
-                                            </div>
-                                    
                                         </div>
-                                    </div>
-                                    <div class="box-borders">
-                                        <div class="row">
-                                            <div class="col-6">
-                                                 <p>Pepperoni<span>pepperoni </span></p>  
+                                        <div class="box-borders">
+                                            <div class="row">
+                                                <div class="col-6">
+                                                     <p>Pepperoni<span>pepperoni </span></p>  
+                                                </div>
+                                                <div class="col-2 text-center">
+                                                    <span>£8.00</span>
+                                                </div>
+                                                <div class="col-2  text-center">
+                                                    <span>£8.00</span>
+                                                </div>
+                                                <div class="col-2  text-center">
+                                                    <span>£12.00</span>
+                                                </div>
+                                        
                                             </div>
-                                            <div class="col-2 text-center">
-                                                <span>£8.00</span>
-                                            </div>
-                                            <div class="col-2  text-center">
-                                                <span>£8.00</span>
-                                            </div>
-                                            <div class="col-2  text-center">
-                                                <span>£12.00</span>
-                                            </div>
-                                    
                                         </div>
-                                    </div>
-                                    <div class="box-borders">
-                                        <div class="row">
-                                            <div class="col-6">
-                                                <p>Seafood Special<span> prawns, tuna, anchovies </span></p>  
+                                        <div class="box-borders">
+                                            <div class="row">
+                                                <div class="col-6">
+                                                    <p>Seafood Special<span> prawns, tuna, anchovies </span></p>  
+                                                </div>
+                                                <div class="col-2 text-center">
+                                                    <span>£9.00</span>
+                                                </div>
+                                                <div class="col-2  text-center">
+                                                    <span>£11.00</span>
+                                                </div>
+                                                <div class="col-2  text-center">
+                                                    <span>£13.00</span>
+                                                </div>
+                                        
                                             </div>
-                                            <div class="col-2 text-center">
-                                                <span>£9.00</span>
+                                        </div> 
+                                        <div class="box-borders">
+                                            <div class="row">
+                                                <div class="col-6">
+                                                   <p>Classic Pizza<span>  ham & mushroom</span></p>  
+                                                </div>
+                                                <div class="col-2 text-center">
+                                                    <span>£8.00</span>
+                                                </div>
+                                                <div class="col-2  text-center">
+                                                    <span>£10.00</span>
+                                                </div>
+                                                <div class="col-2  text-center">
+                                                    <span>£12.00</span>
+                                                </div>
+                                        
                                             </div>
-                                            <div class="col-2  text-center">
-                                                <span>£11.00</span>
-                                            </div>
-                                            <div class="col-2  text-center">
-                                                <span>£13.00</span>
-                                            </div>
-                                    
                                         </div>
-                                    </div> 
-                                    <div class="box-borders">
-                                        <div class="row">
-                                            <div class="col-6">
-                                               <p>Classic Pizza<span>  ham & mushroom</span></p>  
+                                        <div class="box-borders">
+                                            <div class="row">
+                                                <div class="col-6">
+                                                    <p>Vegetarian<span> mushrooms, onions, pepper & sweetcorn</span></p> 
+                                                </div>
+                                                <div class="col-2 text-center">
+                                                    <span>£9.00</span>
+                                                </div>
+                                                <div class="col-2  text-center">
+                                                    <span>£11.00</span>
+                                                </div>
+                                                <div class="col-2  text-center">
+                                                    <span>£13.00</span>
+                                                </div>
+                                        
                                             </div>
-                                            <div class="col-2 text-center">
-                                                <span>£8.00</span>
-                                            </div>
-                                            <div class="col-2  text-center">
-                                                <span>£10.00</span>
-                                            </div>
-                                            <div class="col-2  text-center">
-                                                <span>£12.00</span>
-                                            </div>
-                                    
                                         </div>
-                                    </div>
-                                    <div class="box-borders">
-                                        <div class="row">
-                                            <div class="col-6">
-                                                <p>Vegetarian<span> mushrooms, onions, pepper & sweetcorn</span></p> 
+                                        <div class="box-borders">
+                                            <div class="row">
+                                                <div class="col-6">
+                                                    <p>B.B.Q. Original<span>  chicken, BBQ sauce, onion & pepper</span></p>  
+                                                </div>
+                                                <div class="col-2 text-center">
+                                                    <span>£9.00</span>
+                                                </div>
+                                                <div class="col-2  text-center">
+                                                    <span>£11.00</span>
+                                                </div>
+                                                <div class="col-2  text-center">
+                                                    <span>£13.00</span>
+                                                </div>
+                                        
                                             </div>
-                                            <div class="col-2 text-center">
-                                                <span>£9.00</span>
-                                            </div>
-                                            <div class="col-2  text-center">
-                                                <span>£11.00</span>
-                                            </div>
-                                            <div class="col-2  text-center">
-                                                <span>£13.00</span>
-                                            </div>
-                                    
                                         </div>
-                                    </div>
-                                    <div class="box-borders">
-                                        <div class="row">
-                                            <div class="col-6">
-                                                <p>B.B.Q. Original<span>  chicken, BBQ sauce, onion & pepper</span></p>  
+                                        <div class="box-borders">
+                                            <div class="row">
+                                                <div class="col-6">
+                                                    <p>Meat Feast Pizza<span> chicken, salami, pepperoni & beef</span></p> 
+                                                </div>
+                                                <div class="col-2 text-center">
+                                                    <span>£9.00</span>
+                                                </div>
+                                                <div class="col-2  text-center">
+                                                    <span>£11.00</span>
+                                                </div>
+                                                <div class="col-2  text-center">
+                                                    <span>£13.00</span>
+                                                </div>
+                                        
                                             </div>
-                                            <div class="col-2 text-center">
-                                                <span>£9.00</span>
-                                            </div>
-                                            <div class="col-2  text-center">
-                                                <span>£11.00</span>
-                                            </div>
-                                            <div class="col-2  text-center">
-                                                <span>£13.00</span>
-                                            </div>
-                                    
                                         </div>
-                                    </div>
-                                    <div class="box-borders">
-                                        <div class="row">
-                                            <div class="col-6">
-                                                <p>Meat Feast Pizza<span> chicken, salami, pepperoni & beef</span></p> 
+                                        <div class="box-borders">
+                                            <div class="row">
+                                                <div class="col-6">
+                                                    <p>Cheese Garlic Pizza Bread</p>  
+                                                </div>
+                                                <div class="col-2 text-center">
+                                                    <span>£6.00</span>
+                                                </div>
+                                                <div class="col-2  text-center">
+                                                    <span>£6.50</span>
+                                                </div>
+                                                <div class="col-2  text-center">
+                                                   
+                                                </div>
+                                        
                                             </div>
-                                            <div class="col-2 text-center">
-                                                <span>£9.00</span>
-                                            </div>
-                                            <div class="col-2  text-center">
-                                                <span>£11.00</span>
-                                            </div>
-                                            <div class="col-2  text-center">
-                                                <span>£13.00</span>
-                                            </div>
-                                    
                                         </div>
-                                    </div>
-                                    <div class="box-borders">
-                                        <div class="row">
-                                            <div class="col-6">
-                                                <p>Cheese Garlic Pizza Bread</p>  
+                                        <div class="box-borders">
+                                            <div class="row">
+                                                <div class="col-6">
+                                                    <p>Garlic Pizza Bread</p> 
+                                                </div>
+                                                <div class="col-2 text-center">
+                                                    <span>£3.50</span>
+                                                </div>
+                                                <div class="col-2  text-center">
+                                                    <span>£4.50</span>
+                                                </div>
+                                                <div class="col-2  text-center">
+                                                   
+                                                </div>
+                                        
                                             </div>
-                                            <div class="col-2 text-center">
-                                                <span>£6.00</span>
-                                            </div>
-                                            <div class="col-2  text-center">
-                                                <span>£6.50</span>
-                                            </div>
-                                            <div class="col-2  text-center">
-                                               
-                                            </div>
-                                    
                                         </div>
-                                    </div>
-                                    <div class="box-borders">
-                                        <div class="row">
-                                            <div class="col-6">
-                                                <p>Garlic Pizza Bread</p> 
-                                            </div>
-                                            <div class="col-2 text-center">
-                                                <span>£3.50</span>
-                                            </div>
-                                            <div class="col-2  text-center">
-                                                <span>£4.50</span>
-                                            </div>
-                                            <div class="col-2  text-center">
-                                               
-                                            </div>
-                                    
-                                        </div>
-                                    </div>
-                                    
-                            </div>
-                            
-                           
+                                        
+                                </div>
+                                
+                               
+                            </div>  
                         </div>
+                        
                         
                     </div>
                     
