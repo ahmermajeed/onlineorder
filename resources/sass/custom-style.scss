@@ -2,6 +2,9 @@ body{
  	h2{
 		font-size: 36px;
 		font-weight: bold;
+		@include media-breakpoint-down(sm){
+      		font-size: 26px;
+        }
 	}
 	
 	h3{
@@ -23,7 +26,7 @@ body{
        font-size: 12px;
 	}
 	a{
-		text-decoration: none;
+		text-decoration: none !important;
 	}
 	.btn-outline-danger {
    		 border-radius: 17px;
@@ -39,6 +42,16 @@ body{
    		 background: linear-gradient(to right, #d72327 0%,#9c2122 100%);
    		 filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d72327', endColorstr='#9c2122',GradientType=1 );
 	} 
+	.btn-outline-dark {
+	    border-radius: 30px;
+	    border: none;
+	     width: 140px;
+	     font-weight: 700;
+	    box-shadow: 0px 15px 20px 0px rgba(0, 0, 0, 0.2);
+	    margin: 0 auto;
+	    padding: 8px;
+	    color: #e3342f !important;
+	}
 	.btn-outline-secondary {
 			 border-radius: 17px;
     		 width: 140px;
@@ -80,21 +93,36 @@ body{
 	    }
 	    ul {
 	    margin-bottom: 0px;
+	    padding: 0;
 	    }
 	}
 	.header-bottom-section {
 	    padding: 10px 0px 10px 0px;
 
-	    .main-menu{ 
+	    .main-menu{
+		    .order-now {
+		    a {
+			    color: #fff !important;
+			    }
+			} 
+
 		    a {
 		    font-size: 14px;
 		    color: #000 !important;
 		    padding-left: 0px;
 		    padding-right: 0px;
 		    }
-		    li {
-		    padding-left: 15px;
-	      }
+		    ul{
+		    	margin-top: 11px;
+		    	 li {
+		  
+		          padding-left: 35px;
+	           }
+		    }
+		   
+	      .order-now {
+			    padding-left: 35px;
+			}
 
 	     }
 	 }
@@ -135,26 +163,27 @@ body{
 
     padding-top: 35px;
 
-		ul {
+	ul {
 	    border-top: 1px solid #393839;
 	    border-bottom: 1px solid #393839;
 	    padding: 9px 0px 9px 0px;
 	}
-	    li {
+    li {
 	    display: inline-block;
 	    padding-left: 25px;
 	}
-	     img {
+	img {
 	    padding-bottom: 35px;
 	}
-	}
+}
+
 .follow-us{
-	 h3 {
-		    font-size: 16px;
-		    text-transform: uppercase;
-		    font-weight: bold;
-	        margin-bottom: 0px;
-	        padding: 15px 0px 20px 0px;
+	h3 {
+	    font-size: 16px;
+	    text-transform: uppercase;
+	    font-weight: bold;
+        margin-bottom: 0px;
+        padding: 15px 0px 20px 0px;
 	}
 }
 
@@ -246,18 +275,19 @@ a{
 .header-bottom {
     background-image: url("images/theme-1/mains-banner.jpg");
     background-repeat: no-repeat;
-    padding: 100px 0px 100px;
+    padding: 140px 0px 140px;
     background-size: cover;
     .contact-bnner {
     	 background-image: url("images/theme-1/contact-banner-image.jpg");
          background-repeat: no-repeat;
          border-radius: 10px;
-          padding-bottom: 34px;
+          padding-bottom: 20px;
+          background-position: left;
 	}
 	.search-res {
 	    text-align: center;
 	    color: #fff;
-	     padding: 60px 0px 50px 0px;
+	    padding: 79px 0px 28px 0px;
 	    h4 {
 		    font-size: 22px;
 		}
@@ -283,6 +313,9 @@ a{
      background-position: center;
      padding: 90px 0px 90px 0px;
      background-size: cover;
+     @include media-breakpoint-down(sm){
+		padding: 50px 0px 60px 0px;
+	 }
 .card-offer{
 	background-image: url("images/theme-1/card-banner.jpg");
      background-position: top;
@@ -290,6 +323,12 @@ a{
       border-radius: 8px;
       color: #fff;
       padding: 75px 40px 30px 40px;
+      @include media-breakpoint-only(md){
+      	    margin-top: 30px;
+      }
+      @include media-breakpoint-down(sm){
+      	margin-top: 30px;
+      }
       		
 			
        .card-content {
@@ -318,14 +357,44 @@ a{
 		    height: 100px;
 		    top: -10px;
 		    right: 0;
+		    @include media-breakpoint-only(md){
+      	   	   top: 20px;
+      		}
+      		@include media-breakpoint-down(sm){
+		        top: 20px;
+		      }
 		}
 
 .rating-area{
-	background-image: url("images/theme-1/delivery-bar.jpg");
+	background-image: url("images/deliverys.jpg");
      background-repeat: no-repeat;
      background-position: top;
      color: #fff;
      padding: 40px 0px 40px 0px;
+    	 @include media-breakpoint-only(md){
+      	   	  background-position: inherit;
+      		}
+      		@include media-breakpoint-down(sm){
+      			 padding: 20px 0px 0px 0px;
+      			 background-position: inherit;
+     		 }
+     .rating-content {
+     	@include media-breakpoint-only(md){
+      	   	 padding-top: 25px;
+      		}
+      		@include media-breakpoint-down(sm){
+      			   padding: 0px 30px 0px 30px;
+      			   .payment-type {
+					    display: inline-block;
+					    width: 30%;
+					}
+					.delivry-content {
+					    display: inline-block;
+					    width: 70%;
+					}
+     		 }
+		    
+		} 
     .payment-type 
     p {
 	    background-color: #e3342f;
@@ -343,14 +412,38 @@ a{
 	}
 	.located-num{
 		margin-top: 25px;
+		@include media-breakpoint-down(sm){
+      			margin-top: 0px;
+     		 }
 		strong {
-	       color: #e3342f;
-	           line-height: 45px;
+	        color: #e3342f;
+	        line-height: 45px;
+	           @include media-breakpoint-down(sm){
+      			font-size: 25px;
+     		 }
+	    }
+	    p{
+	    	 @include media-breakpoint-down(sm){
+      			font-size: 12px;
+     		 }
 	    }
 
 	}
 	img {
 		    float: right;
+		  
+    
+   			 @include media-breakpoint-only(md){
+      	   	 	 width: 100%;
+   				 margin-top: 35px;
+      		} 
+      		@include media-breakpoint-down(sm){
+      			    width: 66%;
+				    display: block;
+				    margin: 0 auto;
+				    float: none;
+     		 }
+
 		}
 			 
 
@@ -363,6 +456,9 @@ a{
      background-size: cover;
      padding: 90px 0px 0px 0px;
      overflow: hidden;
+     @include media-breakpoint-down(sm){
+      		 padding: 55px 0px 0px 0px;
+        }
        .menus-pattern-second {
 		    background-image: url("images/theme-1/pizzas-baner.jpg");
 		    background-repeat: no-repeat;
@@ -371,6 +467,13 @@ a{
 		    border-bottom-left-radius: 80px;
 		    height: 635px;
 		    margin-left: 20px;
+		    padding: 15px 0px 0px 20px;
+		    @include media-breakpoint-only(md){
+      	   	  margin-top: 95px;
+      		}
+      		@include media-breakpoint-down(sm){
+      		 margin-top: 57%;
+        }
 		    .second-menu{
 		    	background: rgba(255,255,255, 0.9);
 	    		border-top-left-radius: 80px;
@@ -379,7 +482,13 @@ a{
 	            margin-top: 28px;
 	            margin-left: 5px;
 	            margin-right: -15px;
-	            box-shadow: 0px 20px 20px 0px rgba(0, 0, 0, 0.3);
+	            box-shadow: 0px 20px 20px 0px rgba(0, 0, 0, 0.3); 
+	            
+	 				@include media-breakpoint-only(md){
+		      	   	    padding: 60px 100px 35px 30px;
+		      		}            
+
+				
 
 		    }
 		    .menu-second-before:before {
@@ -387,23 +496,27 @@ a{
 			    position: absolute;
 			    background-image: url("images/theme-1/pizza-before.png");
 			    background-repeat: no-repeat;
-			    width: 100%;
-			    height: 115px;
-			    top: 29px;
-			    left: 17px;
+			    width: 75%;
+			    height: 110px;
+			    top: 43px;
+			    left: 45px;
 			    border-top-left-radius: 80px;
 			    z-index: 1;
+			    @include media-breakpoint-only(md){
+	      	   	      top: 138px;
+	      		}
 		    }
 
        	}
 
      .menus-pattern-first{
-     	background-image: url("images/theme-1/menu-pattern-first.jpg");
+     	background-image: url("images/menu-patterns-first.jpg");
         background-repeat: no-repeat;
         background-position: top;
         border-top-right-radius: 80px;
         border-bottom-right-radius: 80px;
         height: 635px;
+         padding: 15px 10px 0px 0px;
         .first-menu {
     		background: rgba(255,255,255, 0.9);
     		border-top-right-radius: 80px;
@@ -412,6 +525,7 @@ a{
             margin-top: 28px;
             margin-right: 15px;
             box-shadow: 20px 7px 20px 0px rgba(0, 0, 0, 0.3);
+				
             
 			
 						            
@@ -463,16 +577,31 @@ a{
         .family-section {
            padding: 100px 0px 90px 0px;
             background-image: url("images/theme-1/menu-banner.jpg");
+            @include media-breakpoint-only(xl) { 
+            	
+            	padding-top: 180px;
+             }
+             @include media-breakpoint-only(lg) { 
+            	
+            	padding-top: 180px;
+             }
             .family-card{
 	        	background-image: url("images/theme-1/familys-one.jpg");
 			    background-repeat: no-repeat;
     			width: 90%;
     			padding: 30px 0px 20px 0px;
     			box-shadow: 0px 20px 20px 0px rgba(0, 0, 0, 0.3);
+    			@include media-breakpoint-only(md){
+		      	   	  width: 100%;
+		      	   	      background-position: center;
+		      		}
     			h3 {
 	  				  color: #ffed4a;
 	   				 font-size: 24px;
 	   				 margin-bottom: 10px;
+		   				 @include media-breakpoint-only(md){
+			      	   	  font-size: 20px;
+			      		}
 					}
 					ul{
 						padding: 0;
@@ -511,10 +640,17 @@ a{
         	padding: 90px 0px 90px 0px;
         	 p {
     				font-size: 20px;
+    				@include media-breakpoint-down(sm){
+			      		 font-size: 15px;
+			        }
 				}
 			 span {
    				 font-size: 20px;
    				 color: #e3342f;
+   				
+			      	@include media-breakpoint-down(sm){
+			      		 font-size: 15px;
+			        }
 				}
 				.offers-head {
    						 padding-bottom: 40px;
@@ -569,9 +705,15 @@ a{
     				    h3 {
 							    text-transform: uppercase;
 							    font-weight: 700;
+							    @include media-breakpoint-down(sm){
+						      		font-size: 25px;
+						        }
 							}
 							p {
 			 					font-size: 16px !important;
+			 					@include media-breakpoint-down(sm){
+						      		font-size: 13px !important; 
+						        }
 							}
 				}
 				form {
@@ -584,6 +726,9 @@ a{
    						border: none;
     					border-bottom: 1px solid #d7d7d7;
    						border-radius: 0;
+   						@include media-breakpoint-down(sm){
+			      		 width: 72%;
+			        }
 
 						
 					}

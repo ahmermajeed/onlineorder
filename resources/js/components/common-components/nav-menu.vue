@@ -40,12 +40,12 @@
                 <div class="header-bottom-section">
                     <div class="container">
                         <div class="row">
-                            <div class="col-lg-5">
+                            <div class="col-lg-4">
                                 <router-link :to="{ path: '/'}">
                                     <img src="/images/theme-1/Ali-baba-logo.png">
                                 </router-link>
                             </div>
-                            <div class="col-lg-7">
+                            <div class="col-lg-8">
                                 <div class="main-menu" id="navbarResponsiv">
                                     <ul class="nav justify-content-end">
 
@@ -63,8 +63,8 @@
                                         <!--                            <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#services">Menu</a></li>-->
                                         <!--                            <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#contact">GALLERY</a></li>-->
                                         <div class="order-now">
-                                         <a href="#" class="btn-primary btn"  @click.prevent="openPostalCode">
-                                        Order Online <i class="fas fa-long-arrow-alt-right"></i></i>
+                                         <a href="#" class="btn btn-outline-danger"  @click.prevent="openPostalCode">
+                                        Order Online </i></i>
                                              </a>
                                      </div>
                                     </ul>
@@ -100,8 +100,8 @@
                                         <input type="text"  class="form-control" v-model="postal_code" placeholder="Enter your Postal code">
                                     </div>
 
-                                    <button type="button" class="custom-btn"  v-on:click="checkPostCode">
-                                        <span>Submit! <i class="fas fa-long-arrow-alt-right"></i></span>
+                                    <button type="button" class="btn-outline-dark"  v-on:click="checkPostCode">
+                                        <span>Submit! </span>
 
                                     </button>
                                     <p style="color:red">{{error_message}} </p>
