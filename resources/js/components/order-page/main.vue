@@ -1,14 +1,17 @@
 <template>
     <div>
         <header-menu></header-menu>
-        <section class="inner-section" id="product-scroll" >
+        <section class="inner-section main-popup-section" id="product-scroll " >
             <div class="container" >
                 <div class="row">
-                    <div class="col-md-3">
+                    <div class=" col-lg-3 col-md-4 col-sm-12 ">
                         <div class="sidebar-area">
                             <div class="filter-content">
-                                <h3>Categories</h3>
-                                <div class="list-group list-group-flush">
+                                <div class="cate-heading">
+                                    <h3>Categories</h3>
+                                </div>
+                                
+                                <div class="list-group list-group-flush cate-list">
                                     <a href="#"   @click.prevent="getProductAgainstCategories(false)" class="list-group-item">All<span class="float-right badge badge-light round"></span> </a>
 
                                     <a href="#" class="list-group-item"  v-for="(item, index) in categories"  @click.prevent="getProductAgainstCategories(item.id)" > {{item.name}}  <span class="float-right badge badge-light round">{{item.products.length}}</span> </a>
@@ -17,8 +20,8 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-5">
-                        <div class="product-list">
+                    <div class="col-lg-6 col-md-8 col-sm-12">
+                        <div class="product-list order-product">
                             <!--                            for products-->
                             <div class="product"  v-for="(item, index) in products" v-if="item.products.length">
                                  <div class="row">
@@ -27,15 +30,15 @@
                                             <h2 class="mb-4" style="color: #01a9fb; margin-bottom: 25px;" >{{item.name}}</h2>
                                         </div>
                                         <div class="col-md-12 mb-4 pb-1" v-for="(product, product_index) in item.products" style="border-bottom: 1px dashed #ccc;">
-                                            <div class="p-d">
+                                            <div class="p-d prouct-item">
                                                 <h3>{{product.name}}</h3>
                                                <p>{{product.description}}.</p>
 
                                             </div>
-                                            <div class="p-cart">
+                                            <div class="p-cart product-dec">
                                                 <p style="font-size: 12px;" v-if="product.sizes.length"  v-for="(size, size_index) in product.sizes" > {{size.size}} : £{{size.price}}</p>
                                                 <p  v-if="!product.sizes.length" ><span>£</span>{{product.price}}</p>
-                                                <a href="#" class="custom-btn2 btn"  @click.prevent="viewProduct(product.id)">
+                                                <a href="#" class="custom-btn2  btn btn-outline-success"  @click.prevent="viewProduct(product.id)">
                                                     Add to cart <i class="fas fa-long-arrow-alt-right"></i></i>
                                                 </a>
                                             </div>
@@ -68,7 +71,7 @@
 
                         </div>
                     </div>
-                    <div class="col-md-4 cart">
+                    <div class=" col-lg-3 col-md-12 col-sm-12 cart add-card">
                         <div class="cart-box order" id="cart-stiky">
                             <div class="img-box">
                                 <img src="../../../images/cart.png">

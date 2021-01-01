@@ -8,9 +8,7 @@
                        <div class="card-offer text-center">
                            <div class="card-content">
                              <h3>Pizza Offer 1</h3>
-                             <p>Any 2 x 10” Pizzas,
-                                 10 Hot Wings, Chips &
-                                 Bottle of Drinks</p>
+                             <p>Any 2 x 12” Pizzas, 10 Hot Wings,Chips &Bottle of Drinks</p>
                              <img src="../../../images/card-img.png">
                            </div>
                            <div class="row pries-bar">
@@ -34,10 +32,8 @@
                     <div class="col-xl-4 col-md-6 col-sm-12">
                        <div class="card-offer text-center">
                            <div class="card-content">
-                             <h3>Pizza Offer 2</h3>
-                             <p>Any 2 x 12” Pizzas,
-                                 10 Hot Wings, Chips &
-                                 Bottle of Drinks</p>
+                              <h3>Pizza Offer 2</h3>
+                             <p>Any 2 x 12” Pizzas, 10 Hot Wings,Chips &Bottle of Drinks</p>
                              <img src="../../../images/card-img.png">
                            </div>
                            <div class="row pries-bar">
@@ -60,10 +56,9 @@
                     <div class="col-xl-4 col-md-6 col-sm-12">
                        <div class="card-offer text-center">
                            <div class="card-content">
-                             <h3>Pizza Offer 3</h3>
-                             <p>Any 2 x 15” Pizzas,
-                                 10 Hot Wings, Chips &
-                                 Bottle of Drinks</p>
+
+                             <h3>Pizza Offer 2</h3>
+                             <p>Any 2 x 12” Pizzas, 10 Hot Wings,Chips &Bottle of Drinks</p>
                              <img src="../../../images/card-img.png">
                            </div>
                            <div class="row pries-bar">
@@ -642,11 +637,10 @@
             <div class="family-section">
                 <div class="container">
                     <div class="row">
-                        <div class="col-6">
+                        <div class="col-lg-6 col-md-6 col-sm-12">
                             <div class="family-card rounded-lg">
                                 <div class="row">
                                     <div class="col-lg-4 col-md-2 ">
-
                                     </div>
                                     <div class="col-lg-8 col-md-10">
                                         <h3>
@@ -658,7 +652,10 @@
                                             <li>1 Lamb Doner,1 Chicken Doner,</li>
                                            <li>1 Portion Grilled Wings& Bottle of Drink</li>
                                         </ul>
-                                        <img src="../../../images/tagline.jpg">
+                                        
+                                        
+                                         <img src="/images/theme-1/familys-line.png">
+                                       
 
                                          <div class="row pries-bar">
                                             <div class="col-8 order-btn">
@@ -682,11 +679,12 @@
 
                             </div>
                         </div>
-                        <div class="col-6">
+                        <div class="col-lg-6 col-md-6 col-sm-12">
                             <div class="family-card rounded-lg">
                                 <div class="row">
                                     <div class="col-lg-4 col-md-2">
 
+                                
                                     </div>
                                     <div class="col-lg-8 col-md-10">
                                         <h3>
@@ -698,7 +696,7 @@
                                             <li>1 Lamb Doner,1 Chicken Doner,</li>
                                            <li>1 Portion Grilled Wings& Bottle of Drink</li>
                                         </ul>
-                                        <img src="../../../images/tagline.jpg">
+                                         <img src="/images/theme-1/familys-line.png">
 
                                          <div class="row pries-bar">
                                             <div class="col-8 order-btn">
@@ -744,7 +742,7 @@
                     </div>
 
                      <div class="row">
-                        <div class="col-3">
+                        <div class="col-lg-3 col-md-6 col-sm-6">
                             <div class="offers">
                                 <h5>Chicken Bucket</h5>
                                 <p>6 Pieces Chicken<br>Chips (L)<br>1.5ltr Pepsi</p>
@@ -752,7 +750,7 @@
 
                             </div>
                         </div>
-                        <div class="col-3">
+                        <div class="col-lg-3 col-md-6 col-sm-6">
                             <div class="offers">
                                 <h5>Chicken Bucket</h5>
                                 <p>6 Pieces Chicken<br>Chips (L)<br>1.5ltr Pepsi</p>
@@ -760,7 +758,7 @@
 
                             </div>
                         </div>
-                        <div class="col-3">
+                        <div class="col-lg-3 col-md-6 col-sm-6">
                             <div class="offers">
                                 <h5>Chicken Bucket</h5>
                                 <p>6 Pieces Chicken<br>Chips (L)<br>1.5ltr Pepsi</p>
@@ -768,7 +766,7 @@
 
                             </div>
                         </div>
-                        <div class="col-3">
+                        <div class="col-lg-3 col-md-6 col-sm-6">
                             <div class="offers">
                                 <h5>Chicken Bucket</h5>
                                 <p>6 Pieces Chicken<br>Chips (L)<br>1.5ltr Pepsi</p>
@@ -832,17 +830,6 @@
                 </div>
             </div>
         </section> -->
-
-
-
-
-
-
-
-
-
-
-
 
         <!--  <section class="big-img">
             <div class="container">

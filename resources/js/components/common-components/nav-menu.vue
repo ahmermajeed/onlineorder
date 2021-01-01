@@ -3,116 +3,140 @@
     <div>
         <header class="masthead">
             <!-- <nav class="navbar navbar-expand-lg navbar-light custom-header" id="mainNav"> -->
-
+            
             <div class="header-top">
                 <div class="header-top-section">
                     <div class="container">
                         <div class="row">
-                            <div class="col-lg-6">
+                            <div class="col-lg-6 col-md-6">
                                 <div class="add-info">
                                     <ul>
-                                         <li><img src="/images/theme-1/mail.png">
+                                         <li class="mail-space"><i class="icon-mail-2"></i>
                                             <span>
-                                                <a href="mailto:Info@yourdomain.com">Info@alibabakebab.co.uk</a>
+                                                <a href="mailto:Info@yourdomain.com">Info@yourdomain.com</a>
                                             </span>
                                         </li>
-                                        <li><img src="/images/theme-1/location.png">
+                                        <li><i class="icon-placeholder"></i>
                                             <span>
                                                  <a href="10 Peckham Park Road, London SE15 6TW ">10 Peckham Park Road, London SE15 6TW </a>
                                             </span>
                                         </li>
                                     </ul>
-                                </div>
+                                </div> 
                             </div>
-                            <div class="col-lg-6">
+                            <div class="col-lg-6 col-md-6">
                                 <div class="header-icon float-right">
                                    <ul>
-                                       <li><a href="#"><img src="/images/theme-1/facebook.png"></a></li>
-                                       <li><a href="#"><img src="/images/theme-1/twitter.png"></a></li>
-                                       <li><a href="#"><img src="/images/theme-1/Instagram.png"></a></li>
-                                       <li><a href="#"><img src="/images/theme-1/in.png"></a></li>
-                                   </ul>
+                                       <li><a href="#"><i class="icon-facebook"></i></a></li>
+                                       <li><a href="#"><i class="icon-twitter"></i></a></li>
+                                       <li><a href="#"><i class="icon-instagram-symbol"></i></a></li>
+                                       <li><a href="#"><i class="icon-linkedin"></i></a></li>
+                                   </ul> 
                                 </div>
-                            </div>
+                            </div>     
                         </div>
                     </div>
                 </div>
                 <div class="header-bottom-section">
                     <div class="container">
                         <div class="row">
-                            <div class="col-lg-4">
+                            <div class="col-lg-4 col-md-3">
                                 <router-link :to="{ path: '/'}">
-                                    <img src="/images/theme-1/Ali-baba-logo.png">
+                                     <a class="navbar-brand js-scroll-trigger" href="#">
+                                        <img src="/images/theme-1/Ali-baba-logo.png">
+                                    </a>
                                 </router-link>
                             </div>
-                            <div class="col-lg-8">
+                            <div class="col-lg-8 col-md-9 right">
+                                  <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
                                 <div class="main-menu" id="navbarResponsiv">
                                     <ul class="nav justify-content-end">
 
                                         <li class="nav-item active"> <router-link :to="{ path: '/'}"><a class="nav-link js-scroll-trigger" href="#about">Home</a></router-link></li>
-<!--                                        <li class="nav-item "> <router-link :to="{ path: '/About us'}"><a class="nav-link js-scroll-trigger" >About us</a></router-link></li>-->
-<!--                                        <li class="nav-item "> <router-link :to="{ path: '/feedback'}"><a class="nav-link js-scroll-trigger" >Feedback</a></router-link></li>-->
-<!--                                        <li class="nav-item">-->
-<!--                                            <a href="#" @click="openAllergy" class="nav-link">Allergy Information</a>-->
-<!--                                        </li>-->
+                                        <li class="nav-item "> <router-link :to="{ path: '/About us'}"><a class="nav-link js-scroll-trigger" >About us</a></router-link></li>
+                                        <li class="nav-item "> <router-link :to="{ path: '/feedback'}"><a class="nav-link js-scroll-trigger" >Feedback</a></router-link></li>
+                                        <li class="nav-item">
+                                            <a href="#" @click="openAllergy" class="nav-link">Allergy Information</a>
+                                        </li>
 
-<!--                                        <li class="nav-item">-->
-<!--                                            <a href="#" class="nav-link" @click="openMenu">Our Menu</a>-->
-<!--                                        </li>-->
+                                        <li class="nav-item">
+                                            <a href="#" class="nav-link" @click="openMenu">Our Menu</a>
+                                        </li>
 
                                         <!--                            <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#services">Menu</a></li>-->
                                         <!--                            <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#contact">GALLERY</a></li>-->
-                                        <div class="order-now">
-<!--                                         <a href="#" class="btn btn-outline-danger"  @click.prevent="openPostalCode">-->
-<!--                                        Order Online </i></i>-->
-<!--                                             </a>-->
-                                     </div>
+                                         <div class="order-now">
+                                             <!-- <a href="#" class="btn btn-outline-danger"  @click.prevent="openPostalCode"> 
+                                            Order Online </i></i>
+                                                 </a> -->
+                                            <a href="#" class="btn btn-outline-danger"  @click.prevent="openPostalCode"> Order Online <i class="fas fa-long-arrow-alt-right"></i></i>
+                                            </a>
+                                           
+                                         </div>
                                     </ul>
-
+                                     
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
+                </div>  
             </div>
             <!-- </nav> -->
             <div class="header-bottom">
                 <div class="container">
                     <div class="row">
                         <div class="col-lg-5">
-
+                            
                         </div>
                         <div class="col-lg-7">
                             <div class="contact-bnner">
                                <div class="row">
-                                <div class="col-5 mt-0">
+                                <div class="col-lg-4 col-md-4 col-sm-12 mt-0 px-0">
+                                    <div class="food">
+                                        <div class="hala-img ">
+                                            <img src="/images/theme-1/halal.png">
+                                        </div>
+                                        <div class="item-img text-center">
+                                             <img src="/images/theme-1/banner-item.png">
+                                        </div>
+                                        
+                                        <div class="num-img text-center">
+                                           <a href="tel: 02476441200"> <img src="/images/theme-1/banner-num.png"></a>
+                                        </div>
+                                        
+                                    </div>
 
+                                    
                                 </div>
-                                <div class="col-6 mt-0">
-                                    <div class="search-res" v-if="this.$route.name !='online-order'">
-                                <div class="info-txt">
-                                    <h4>Save 25% on orders over £30</h4>
+                                <div class="col-lg-8 col-md-8 col-sm-12 mt-0 px-0">
+                                    <div class="postal-code">
+                                        <div class="search-res" v-if="this.$route.name !='online-order'">
+                                        <div class="info-txt">
+                                            <h4>Save 25% on orders over £30</h4>
+                                        </div>
+                                        <h3>Enter Your Postal Code.</h3>
+                                        <form class="form-inline">
+                                            <div class="form-group mx-sm-3 mb-2">
+
+                                                <input type="text"  class="form-control" v-model="postal_code" placeholder="Enter your Postal code">
+                                            </div>
+
+                                            <button type="button" class="btn-outline-dark"  v-on:click="checkPostCode">
+                                                <span>Submit! </span>
+
+                                            </button>
+                                            <p style="color:red">{{error_message}} </p>
+                                        </form>
+                                    </div>
+                                        
+                                    </div>
+                                    
+                                    
                                 </div>
-                                <h3>Enter Your Postal Code.</h3>
-<!--                                <form class="form-inline">-->
-<!--                                    <div class="form-group mx-sm-3 mb-2">-->
-
-<!--                                        <input type="text"  class="form-control" v-model="postal_code" placeholder="Enter your Postal code">-->
-<!--                                    </div>-->
-
-<!--                                    <button type="button" class="btn-outline-dark"  v-on:click="checkPostCode">-->
-<!--                                        <span>Submit! </span>-->
-
-<!--                                    </button>-->
-<!--                                    <p style="color:red">{{error_message}} </p>-->
-<!--                                </form>-->
-                            </div>
-
-                                </div>
-
+                                   
                                </div>
                             </div>
-
+                            
                         </div>
                     </div>
                 </div>
