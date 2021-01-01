@@ -17,7 +17,7 @@
                                 <div class="text-center">
                                    <a href="#"><img src="/images/Ali-baba-logo.png"></a> 
                                 </div>
-                                <div class="footer-menu">
+                                <div class="footer-menu text-center">
                                     <ul>
                                       <li><a href="#">Home</a></li>
                                       <li><a href="#">About us</a></li>

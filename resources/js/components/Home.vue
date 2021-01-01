@@ -1,10 +1,10 @@
 <template>
     <div>
         <header-menu></header-menu>
-        <section class="home-section deliver-area ">
+        <section class="section-fullwidth deliver-area ">
             <div class="container">
                   <div class="row">
-                    <div class="col-xl-4 col-md-6 col-sm-12">
+                    <div class="col-md-4 col-12">
                        <div class="card-offer text-center">
                            <div class="card-content">
                              <h3>Pizza Offer 1</h3>
@@ -12,24 +12,20 @@
                              <img src="../../../images/card-img.png">
                            </div>
                            <div class="row pries-bar">
-                                <div class="col-8 order-btn">
+                                <div class="col-12 col-lg-8 order-btn">
                                     <button type="button" class="btn btn-outline-secondary">Order Now!</button>
                                     <a href="#" class=""></a>
                                 </div>
-                                <div class="col-4">
+                                <div class="col-12 col-lg-4 pt-2 pt-lg-0">
                                     <div class="pries">
-                                        <p>£21.00
-                                        </p>
-
+                                        <p>£21.00</p>
                                     </div>
-
                                 </div>
-
                            </div>
 
                       </div>
                     </div>
-                    <div class="col-xl-4 col-md-6 col-sm-12">
+                    <div class="col-md-4 col-12">
                        <div class="card-offer text-center">
                            <div class="card-content">
                               <h3>Pizza Offer 2</h3>
@@ -37,23 +33,21 @@
                              <img src="../../../images/card-img.png">
                            </div>
                            <div class="row pries-bar">
-                                <div class="col-8 order-btn">
+                                <div class="col-12 col-lg-8 order-btn">
                                     <button type="button" class="btn btn-outline-secondary">Order Now!</button>
                                     <a href="#" class=""></a>
                                 </div>
-                                <div class="col-4">
+                                <div class="col-12 col-lg-4 pt-2 pt-lg-0">
                                     <div class="pries">
                                         <p>£25.00</p>
 
                                     </div>
-
                                 </div>
-
                            </div>
 
                       </div>
                     </div>
-                    <div class="col-xl-4 col-md-6 col-sm-12">
+                    <div class="col-md-4 col-12">
                        <div class="card-offer text-center">
                            <div class="card-content">
 
@@ -62,11 +56,11 @@
                              <img src="../../../images/card-img.png">
                            </div>
                            <div class="row pries-bar">
-                                <div class="col-8 order-btn">
+                                <div class="col-12 col-lg-8 order-btn">
                                     <button type="button" class="btn btn-outline-secondary">Order Now!</button>
                                     <a href="#" class=""></a>
                                 </div>
-                                <div class="col-4">
+                                <div class="col-12 col-lg-4 pt-2 pt-lg-0">
                                     <div class="pries">
                                         <p>£29.00</p>
 
@@ -82,7 +76,7 @@
             </div>
         </section>
 
-        <section class="home-section rating-area">
+        <section class="rating-area">
             <div class="container">
             <div class="rating-img">
                 <div class="row">
@@ -119,7 +113,7 @@
             </div>
             </div>
         </section>
-        <section class="home-section menu-box">
+        <section class="section-fullwidth menu-box">
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-lg-6 col-md-12 col-sm-12 px-0">
@@ -724,7 +718,7 @@
 
                     </div>
                     <div class="view-btn text-center order-btn">
-                       <a href="#" class=" btn btn-outline-danger"> VIEW ALL</a>
+                       <a href="#" class="btn btn-rounded-danger"> VIEW ALL</a>
 
                      </div>
 
@@ -733,7 +727,7 @@
             </div>
 
         </section>
-        <section class="home-section deal-section">
+        <section class="section-fullwidth deal-section">
             <div class="container">
                 <div class="deal-content">
                     <div class="offers-head">
@@ -779,7 +773,7 @@
 
                 </div>
                 <div class="view-btn text-center ">
-                       <a href="#" class=" btn btn-outline-danger"> VIEW ALL</a>
+                       <a href="#" class="btn btn-rounded-danger"> VIEW ALL</a>
 
                 </div>
             </div>
@@ -971,7 +965,7 @@
 <!--            </div>-->
 <!--        </div>-->
 
-        <section class="home-section reservation">
+        <section class="section-fullwidth reservation">
             <div class="container">
                 <div class="table-booked pattern">
                     <div class="row">
@@ -1009,7 +1003,7 @@
                                         </div>
                                     </div>
                                      <div class="view-btn text-center ">
-	                    				   <a href="#" class=" btn btn-outline-danger"> VIEW ALL</a>
+	                    				   <a href="#" class="btn btn-rounded-danger"> VIEW ALL</a>
 
 	                				</div>
 

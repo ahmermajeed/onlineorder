@@ -8,7 +8,7 @@
                 <div class="header-top-section">
                     <div class="container">
                         <div class="row">
-                            <div class="col-lg-6 col-md-6">
+                            <div class="col-7 col-md-6">
                                 <div class="add-info">
                                     <ul>
                                          <li class="mail-space"><i class="icon-mail-2"></i>
@@ -24,7 +24,7 @@
                                     </ul>
                                 </div> 
                             </div>
-                            <div class="col-lg-6 col-md-6">
+                            <div class="col-5 col-md-6">
                                 <div class="header-icon float-right">
                                    <ul>
                                        <li><a href="#"><i class="icon-facebook"></i></a></li>
@@ -39,18 +39,21 @@
                 </div>
                 <div class="header-bottom-section">
                     <div class="container">
-                        <div class="row">
-                            <div class="col-lg-4 col-md-3">
+                        <div class="row align-items-center">
+                            <div class="col-6 col-md-3">
                                 <router-link :to="{ path: '/'}">
-                                     <a class="navbar-brand js-scroll-trigger" href="#">
+                                     <a class="navbar-brand js-scroll-trigger main-logo" href="javascript:;">
                                         <img src="/images/theme-1/Ali-baba-logo.png">
                                     </a>
                                 </router-link>
                             </div>
-                            <div class="col-lg-8 col-md-9 right">
-                                  <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
-                                <div class="main-menu" id="navbarResponsiv">
-                                    <ul class="nav justify-content-end">
+                            <div class="col-6 col-md-9 right">
+                                <nav class="navbar navbar-expand-lg navbar-light bg-light justify-content-end main-menu p-0">
+                                  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsiv" aria-controls="navbarResponsiv" aria-expanded="false" aria-label="Toggle navigation">
+                                    <span class="navbar-toggler-icon"></span>
+                                  </button>
+                                  <div class="collapse navbar-collapse justify-content-end" id="navbarResponsiv">
+                                    <ul class="nav ">
 
                                         <li class="nav-item active"> <router-link :to="{ path: '/'}"><a class="nav-link js-scroll-trigger" href="#about">Home</a></router-link></li>
                                         <li class="nav-item "> <router-link :to="{ path: '/About us'}"><a class="nav-link js-scroll-trigger" >About us</a></router-link></li>
@@ -65,30 +68,30 @@
 
                                         <!--                            <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#services">Menu</a></li>-->
                                         <!--                            <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#contact">GALLERY</a></li>-->
-                                         <div class="order-now">
-                                             <!-- <a href="#" class="btn btn-outline-danger"  @click.prevent="openPostalCode"> 
-                                            Order Online </i></i>
-                                                 </a> -->
-                                            <a href="#" class="btn btn-outline-danger"  @click.prevent="openPostalCode"> Order Online <i class="fas fa-long-arrow-alt-right"></i></i>
-                                            </a>
-                                           
-                                         </div>
+                                        <li class="nav-item">
+                                            <div class="order-now">
+                                                 <!-- <a href="#" class="btn btn-outline-danger"  @click.prevent="openPostalCode"> 
+                                                Order Online </i></i>
+                                                     </a> -->
+                                                <a href="#" class="btn btn-rounded-default btn-rounded-danger"  @click.prevent="openPostalCode"> Order Online</a>
+                                            </div> 
+                                        </li>
                                     </ul>
-                                     
-                                </div>
+                                  </div>
+                                </nav>
                             </div>
                         </div>
                     </div>
                 </div>  
             </div>
             <!-- </nav> -->
-            <div class="header-bottom">
+            <div class="header-bottom section-fullwidth">
                 <div class="container">
                     <div class="row">
-                        <div class="col-lg-5">
+                        <div class="col-lg-4 col-xl-5">
                             
                         </div>
-                        <div class="col-lg-7">
+                        <div class="col-lg-8 col-xl-7">
                             <div class="contact-bnner">
                                <div class="row">
                                 <div class="col-lg-4 col-md-4 col-sm-12 mt-0 px-0">
@@ -111,21 +114,26 @@
                                 <div class="col-lg-8 col-md-8 col-sm-12 mt-0 px-0">
                                     <div class="postal-code">
                                         <div class="search-res" v-if="this.$route.name !='online-order'">
-                                        <div class="info-txt">
+                                        <div class="info-txt mb-2 mb-md-4">
                                             <h4>Save 25% on orders over £30</h4>
                                         </div>
                                         <h3>Enter Your Postal Code.</h3>
-                                        <form class="form-inline">
-                                            <div class="form-group mx-sm-3 mb-2">
-
-                                                <input type="text"  class="form-control" v-model="postal_code" placeholder="Enter your Postal code">
+                                        <form >
+                                            <div class="row">
+                                                <div class="col-12">
+                                                    <div class="form-group">
+                                                        <input type="text"  class="form-control" v-model="postal_code" placeholder="Enter your Postal code">
+                                                    </div>
+                                                    <div class="form-group text-center">
+                                                        <button type="button" class="btn btn-rounded-default"  v-on:click="checkPostCode">
+                                                            <span>Submit! </span>
+                                                        </button>
+                                                    </div>
+                                                    <div class="form-group text-center mb-0">
+                                                        <p class="error">{{error_message}} </p>
+                                                    </div>
+                                                </div>
                                             </div>
-
-                                            <button type="button" class="btn-outline-dark"  v-on:click="checkPostCode">
-                                                <span>Submit! </span>
-
-                                            </button>
-                                            <p style="color:red">{{error_message}} </p>
                                         </form>
                                     </div>
                                         
