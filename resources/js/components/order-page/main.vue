@@ -2004,6 +2004,7 @@
         margin-top: 0;
         padding-top: 0 !important;
         border-right: 1px solid rgba(0,0,0,0);
+        display: none;
     }
 
     .business > div.dishes-wrapper {
