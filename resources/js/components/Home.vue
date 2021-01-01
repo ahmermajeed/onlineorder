@@ -1002,9 +1002,8 @@
                                             </div>
                                         </div>
                                     </div>
-                                     <div class="view-btn text-center ">
-	                    				   <a href="#" class="btn btn-rounded-danger"> VIEW ALL</a>
-
+                                     <div class="frm-ftr view-btn text-center ">
+	                    				   <button class="btn btn-rounded-danger">Submit</button>
 	                				</div>
 
                                 </form>
