@@ -16,11 +16,11 @@
                                                 <a href="mailto:Info@yourdomain.com">Info@yourdomain.com</a>
                                             </span>
                                         </li>
-                                        <li><i class="icon-placeholder"></i>
+                                        <!-- <li><i class="icon-placeholder"></i>
                                             <span>
-                                                 <a href="10 Peckham Park Road, London SE15 6TW ">10 Peckham Park Road, London SE15 6TW </a>
+                                                 <a href="javascript:;">10 Peckham Park Road, London SE15 6TW </a>
                                             </span>
-                                        </li>
+                                        </li> -->
                                     </ul>
                                 </div> 
                             </div>
