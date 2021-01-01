@@ -14241,6 +14241,7 @@ ul {
 
 .header-bottom .postal-code .search-res .error {
   font-size: 14px;
+  color: #fff;
 }
 
 @media (max-width: 767.98px) {
@@ -14925,6 +14926,46 @@ ul {
   width: 100%;
 }
 
+.lp-sidebar-title {
+  padding: 10px 15px;
+  border-bottom: 1px solid #e1e1e1;
+  position: relative;
+}
+
+.lp-sidebar-title h3 {
+  font-size: 22px;
+  margin: 0;
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .lp-sidebar-title h3 {
+    font-size: 20px;
+  }
+}
+
+.lp-sidebar-title img {
+  position: absolute;
+  width: 30px;
+  top: 50%;
+  right: 15px;
+  transform: translate(0, -50%);
+}
+
+.lp-sidebar-body {
+  padding: 0 15px;
+}
+
+.lp-sidebar-right .cart-box {
+  background: #F4F8FB;
+  border: 1px solid #e1e1e1;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.lp-sidebar-right .cart-box .lp-sidebar-title {
+  background-color: #fff;
+}
+
 .main-popup-section {
   padding: 80px 0px 80px 0px;
 }
@@ -14934,30 +14975,8 @@ ul {
   border-radius: 20px;
 }
 
-.main-popup-section .sidebar-area .cate-heading {
-  padding: 20px;
-  background-color: #e3342f;
-  color: #fff;
-  border-top-left-radius: 20px;
-  border-top-right-radius: 20px;
-  margin-bottom: 40px;
-}
-
-@media (min-width: 768px) and (max-width: 991.98px) {
-  .main-popup-section .sidebar-area .cate-heading h3 {
-    font-size: 24px;
-  }
-}
-
-@media (min-width: 768px) and (max-width: 991.98px) {
-  .main-popup-section .sidebar-area .cate-heading {
-    margin-bottom: 0px;
-    padding: 13px;
-  }
-}
-
 .main-popup-section .sidebar-area .cate-list {
-  padding: 0px 20px;
+  padding: 0px 15px;
   padding-bottom: 60px;
 }
 
@@ -14966,8 +14985,8 @@ ul {
 }
 
 .main-popup-section .sidebar-area .cate-list a {
-  padding: 15px 0px 10px 0px;
-  font-size: 16px;
+  padding: 10px 0px 10px 0px;
+  font-size: 14px;
   color: #000 !important;
 }
 
@@ -15089,9 +15108,9 @@ ul {
 }
 
 .main-popup-section .add-card {
-  background: #f5f8fa;
+  /*background: #f5f8fa;
   border: 1px solid #e1e1e1;
-  border-radius: 20px;
+  border-radius: 20px;*/
 }
 
 /************** feed back start ******************/

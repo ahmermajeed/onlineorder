@@ -4,10 +4,10 @@
         <section class="inner-section main-popup-section" id="product-scroll " >
             <div class="container" >
                 <div class="row">
-                    <div class=" col-lg-3 col-md-4 col-sm-12 ">
+                    <div class=" col-lg-3 col-md-4 col-sm-12 listing-page-sidebar lp-sidebar-left">
                         <div class="sidebar-area">
                             <div class="filter-content">
-                                <div class="cate-heading">
+                                <div class="lp-sidebar-title cate-heading">
                                     <h3>Categories</h3>
                                 </div>
                                 
@@ -71,42 +71,47 @@
 
                         </div>
                     </div>
-                    <div class=" col-lg-3 col-md-12 col-sm-12 cart add-card">
+                    <div class=" col-lg-3 col-md-12 col-sm-12 cart add-card listing-page-sidebar lp-sidebar-right">
                         <div class="cart-box order" id="cart-stiky">
-                            <div class="img-box">
+                            <div class="lp-sidebar-title cate-heading">
+                                <h3>Your Cart</h3>
                                 <img src="../../../images/cart.png">
-                                <h2>Your Cart</h2>
-                                <h3 v-if="getAllCartArray.length == 1">No item in your cart</h3>
                             </div>
-                            <div class="table-holder">
-                                <table class=tbl_cart_list>
-                                    <tr v-for="(cart, product_index) in getAllCartArray"  v-if="product_index  > 0">
-                                        <td class=highlighted>
-                                        </td>
-                                        <td>
-                                            <a href="#" @click.prevent="quantityAddInCart(product_index)"> <i class="fa fa-angle-up"  ></i></a>
-                                            <span>{{ cart.quantity}}  <i>X</i></span>
-                                            <a href="#"  @click.prevent="quantityMinusInCart(product_index)"> <i class="fa fa-angle-down"></i></a>
-                                        </td>
-                                        <td>
-                                            <div>{{cart.product_name}}</div>
-                                            <div v-if="cart.extras" v-for="(extra, extra_index) in cart.extras" >
-                                                <strong>{{extra.group_name}}:</strong> {{extra.choice}}
-                                            </div>
-                                            <span class="mealactions">
-                                                <a href="#"  @click.prevent="updateProduct(cart.product_id,cart,product_index)"> <i v-b-tooltip.hover title="Edit Meal"  class="fas fa-pen"></i></a>
-                                                <a href="#" @click.prevent="removeFromCart(product_index)"> <i v-b-tooltip.hover title="Remove Meal" class="fa fa-times" ></i></a>
-                                            </span>
-                                        </td>
+                            <div class="lp-sidebar-body">
+                                <div class="img-box text-center">
+                                    <h5 v-if="getAllCartArray.length == 1" class="mt-2">No item in your cart</h5>
+                                </div>
+                                <div class="table-holder">
+                                    <table class=tbl_cart_list>
+                                        <tr v-for="(cart, product_index) in getAllCartArray"  v-if="product_index  > 0">
+                                            <td class=highlighted>
+                                            </td>
+                                            <td>
+                                                <a href="#" @click.prevent="quantityAddInCart(product_index)"> <i class="fa fa-angle-up"  ></i></a>
+                                                <span>{{ cart.quantity}}  <i>X</i></span>
+                                                <a href="#"  @click.prevent="quantityMinusInCart(product_index)"> <i class="fa fa-angle-down"></i></a>
+                                            </td>
+                                            <td>
+                                                <div>{{cart.product_name}}</div>
+                                                <div v-if="cart.extras" v-for="(extra, extra_index) in cart.extras" >
+                                                    <strong>{{extra.group_name}}:</strong> {{extra.choice}}
+                                                </div>
+                                                <span class="mealactions">
+                                                    <a href="#"  @click.prevent="updateProduct(cart.product_id,cart,product_index)"> <i v-b-tooltip.hover title="Edit Meal"  class="fas fa-pen"></i></a>
+                                                    <a href="#" @click.prevent="removeFromCart(product_index)"> <i v-b-tooltip.hover title="Remove Meal" class="fa fa-times" ></i></a>
+                                                </span>
+                                            </td>
 
-                                        <td  v-if="!cart.extras">£ {{priceFormat(cart.price * cart.quantity) }}</td>
-                                        <td  v-if="cart.extras">£{{priceFormat(cart.single_product_total_amount)}} </td>
-                                    </tr>
-                                </table>
+                                            <td  v-if="!cart.extras">£ {{priceFormat(cart.price * cart.quantity) }}</td>
+                                            <td  v-if="cart.extras">£{{priceFormat(cart.single_product_total_amount)}} </td>
+                                        </tr>
+                                    </table>
+                                </div>
+                                <div class="cart-btn mt-2 mb-3 text-center">
+                                     <button class="anima-btn custom-btn move-eff btn btn-rounded-danger" @click="placeOrder()"><span>Checkout</span> <i class="fas fa-long-arrow-alt-right"></i></button>
+                                </div> 
                             </div>
-                            <div class="cart-btn mt-2">
-                                 <button class="anima-btn custom-btn move-eff" @click="placeOrder()"><span>Checkout</span> <i class="fas fa-long-arrow-alt-right"></i></button>
-                            </div>
+                            
                         </div>
                         <div class="mobile-cart-button" v-bind:class="{ cartheight: cart_height }" v-if="getAllCartArray.length > 1">
                 <div class="inner">
@@ -762,17 +767,7 @@
         border-radius: 3px;
     }
 
-    /* .dishes .dishe.compressed {
-      height: auto;
-    } */
 
-    /*.arabic_rtl .dishes .dishe strong {
-      padding-left: 0;
-    }
-
-    .dishes .dishe strong {
-      padding-left: 7px;
-    }*/
     .arabic_rtl .my_orders, .arabic_rtl .my_orders .middle-div {
         display: flex;
         align-items: flex-start;
@@ -812,7 +807,6 @@
 
     .dishes .dishe p,
     .dishes .dishe textarea {
-        /*width: 100%;*/
         color: #777;
         font-size: 13px;
         height: 36px;
@@ -826,9 +820,6 @@
     }
 
     .dishes .dishe .price {
-        /*position: absolute;
-        top: 0;
-        right: 10px;*/
         float: right;
         margin-top: -10px;
         margin-left: 10px;
@@ -856,15 +847,7 @@
         background:#fff;
     }
 
-    .cart .order {
-        direction: ltr;
-        padding-top: 20px;
-        text-align: center;
-        width: 100%;
-        position: sticky;
-        top: 20px;
-    }
-
+    
     #cart-stiky > img {
         max-width:100%;
     }
@@ -875,38 +858,11 @@
         font-size: 16px !important;
     }
 
-    /*.cart .order button {
-        display: block;
-        margin: 8px auto;
-        color: #000 !important;
-        padding: 0;
-        width:170px;
-    }
-    .cart .order button.move-eff span{
-        top:3px;
-    }
-    .cart .order button:focus {
-        outline:0;
-        box-shadow:none;
-    }
-
-    .cart .order button.btn-sm {
-        padding: 5px 10px;
-        width: 60%;
-        font-size: 16px;
-    }*/
-
     button.btn-gray {
         background: #ccc;
     }
 
-    .cart h3 {
-        color: #EF1962;
-    }
-
-    .cart .order img {
-        width: 100%;
-    }
+    
 
     .cart .order .table-holder {
         overflow-y: scroll;
@@ -926,7 +882,6 @@
     }
     .cart .order table {
         width: 100%;
-        margin-top: 15px;
         text-align: left;
         border-top: 1px solid #eee;
     }
@@ -1217,14 +1172,6 @@
     }
 
     @media (max-width: 767.98px) {
-        /* .checkout .content {
-          padding: 0 0px;
-          overflow: hidden;
-        } */
-        /* .checkout .content table tbody tr td {
-          font-size: calc(11px + 1vw) !important;
-          padding-right: 0px  !important;
-        } */
         .to {
             padding-top: 20px !important;
             padding-bottom: 0px !important;
@@ -1353,24 +1300,6 @@
         background: #fff;
     }
 
-
-
-    /* @media only screen
-      and (min-device-width: 375px)
-      and (max-device-width: 812px)
-      and (-webkit-min-device-pixel-ratio: 3) {
-        .modal .popup-mode {
-          background-color: red !important;
-        }
-    }
-    @media only screen
-    and (min-device-width: 375px)
-    and (max-device-width: 812px)
-    and (-webkit-min-device-pixel-ratio: 2) {
-      .modal .popup-mode {
-        background-color: cyan !important;
-      }
-    } */
     .safari-browser{
         padding-right: env(safe-area-inset-bottom);
     }
@@ -1473,7 +1402,6 @@
         border-radius: 3px;
         cursor: pointer;
         margin-bottom: 0;
-        /*margin-top: -5px;*/
     }
 
     .view-more {
@@ -1581,34 +1509,6 @@
     .pre-checkout .address .info .action button {
         border-color: #01a8fb;
         color: #01a8fb
-    }
-
-    .cart .order table tr td.highlighted,
-    .cart h3,
-    .checkout .content table tbody tr td span,
-    .color-main,
-    .dishes .dishe .price,
-    .error-page h1,
-    .form .form-horizontal .control-label span,
-    .icon-primary,
-    .item-radio input+.radio-content .dynamic-radio:before,
-    .item-radio input:checked+.radio-content .dynamic-radio:before,
-    .list .list-item.selected .content .secondary,
-    .modal .popup-mode .item.item-divider.title,
-    .nav-tabs .dropdown-menu>li>a,
-    .navbar-default .navbar-nav>li>a,
-    .points .fa-star,
-    .preorder .menus .resmenu .check .checked,
-    .rating .points,
-    .review i.selected,
-    .upselling-products .products .product .price,
-    .view-more,
-    a,
-    h1.title,
-    h2.title,
-    h3.title,
-    input.title {
-        color: #01a8fb !important
     }
 
     .modal .popup-mode .tab-item-cont .button-bar .tab.active,
@@ -1755,7 +1655,6 @@
         right: 0;
     }
 
-    /* Transparent Overlay */
     .loading:before {
         content: '';
         display: block;
@@ -1769,9 +1668,7 @@
         background: -webkit-radial-gradient(rgba(20, 20, 20,.8), rgba(0, 0, 0,.8));
     }
 
-    /* :not(:required) hides these rules from IE9 and below */
     .loading:not(:required) {
-        /* hide "loading..." text */
         font: 0/0 a;
         color: transparent;
         text-shadow: none;
@@ -1800,8 +1697,7 @@
         float:right;
     }
 
-    /* Animation */
-
+    
     @-webkit-keyframes spinner {
         0% {
             -webkit-transform: rotate(0deg);
@@ -1875,7 +1771,6 @@
     }
     #cart-stiky{
         direction: ltr;
-        padding-top: 20px;
         text-align: center;
         width: 100%;
         position: sticky;

@@ -520,6 +520,7 @@ ul {
         	transform: translate(0,-50%);
         	.error{
         		font-size:14px;
+        		color:#fff;
         	}
         }
         @include media-breakpoint-down(sm) {
@@ -1141,6 +1142,41 @@ ul {
     }
 }
 
+.lp-sidebar-title {
+    padding: 10px 15px;
+	border-bottom: 1px solid #e1e1e1;
+	position: relative;
+    h3 {
+    	font-size: 22px;
+		margin: 0;
+        @include media-breakpoint-only(md) {
+            font-size: 20px;
+        }
+
+    }
+    img{
+    	position: absolute;
+	    width: 30px;
+	    top: 50%;
+	    right: 15px;
+	    transform: translate(0, -50%);
+    }
+}
+.lp-sidebar-body {
+    padding: 0 15px;
+}
+.lp-sidebar-right{
+	.cart-box{
+		background: #F4F8FB;
+        border: 1px solid #e1e1e1;
+        border-radius: 20px;
+        overflow: hidden;
+        .lp-sidebar-title{
+			background-color: #fff;
+		}
+	}
+}
+
 .main-popup-section {
     padding: 80px 0px 80px 0px;
 
@@ -1148,37 +1184,16 @@ ul {
         border: 1px solid #e1e1e1;
         border-radius: 20px;
 
-        .cate-heading {
-            padding: 20px;
-            background-color: #e3342f;
-            color: #fff;
-            border-top-left-radius: 20px;
-            border-top-right-radius: 20px;
-            margin-bottom: 40px;
-
-            h3 {
-                @include media-breakpoint-only(md) {
-                    font-size: 24px;
-                }
-            }
-
-            @include media-breakpoint-only(md) {
-                margin-bottom: 0px;
-                padding: 13px;
-            }
-        }
-
         .cate-list {
-            padding: 0px 20px;
+            padding: 0px 15px;
             padding-bottom: 60px;
 
             .list-group-item:last-child {
                 border-bottom-width: 1px !important;
             }
-
             a {
-                padding: 15px 0px 10px 0px;
-                font-size: 16px;
+                padding: 10px 0px 10px 0px;
+                font-size: 14px;
                 color: #000 !important;
 
                 @include media-breakpoint-only(md) {
@@ -1291,9 +1306,9 @@ ul {
     }
 
     .add-card {
-        background: #f5f8fa;
+        /*background: #f5f8fa;
         border: 1px solid #e1e1e1;
-        border-radius: 20px;
+        border-radius: 20px;*/
     }
 }
 

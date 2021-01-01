@@ -1,11 +1,10 @@
 <template>
     <div>
-        <b-modal id="add-product" centered @hidden="onHidden" :hide-footer=true title-tag="h4" ok-variant="primary" ref="myModalRef" custom-modal no-close-on-backdrop class="custom-modal">
+        <b-modal id="add-product" centered @hidden="onHidden" :hide-footer=true title-tag="h4" ok-variant="primary" ref="myModalRef" custom-modal no-close-on-backdrop modal-class="postal-code-modal custom-modal">
             <b-alert show variant="danger" v-if="error_message" style="text-transform: capitalize;">{{error_message}}</b-alert>
-            <h3>{{list.name}}</h3>
+            <template #modal-title>{{list.name}}</template>
             <div class="product-gallery" >
                 <h4 v-if="!has_sizes">Price :  £ {{list.price}}  </h4>
-
             </div>
             <div class="description">
                 <h4>Description</h4>
@@ -96,7 +95,7 @@
                     </div>
                     <div class="row mt-3 pt-4" style="border-top: 1px solid #ddd;">
                         <div class="col text-center">
-                            <button  @click.prevent="addToCart()" class="custom-btn add-count-button">Add</button>
+                            <button  @click.prevent="addToCart()" class="custom-btn add-count-button btn btn-rounded-danger">Add</button>
                         </div>
                     </div>
                 </form>
