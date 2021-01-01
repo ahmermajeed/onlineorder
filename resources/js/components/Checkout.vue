@@ -1482,11 +1482,6 @@
         color: #fff
     }
 
-    .form-group input.form-control,
-    .form-group select.form-control,
-    .navbar-default .navbar-nav>li label.notifications {
-        border-color: #01a8fb
-    }
 
     .input-group-addon,
     .input-group-addon:first-child,

@@ -1,21 +1,19 @@
 <template>
     <div>
-        <b-modal id="add-product" centered @hidden="onHidden" ok-variant="primary" title-tag="h4"   :hide-footer=true  ref="myModalRef" custom-modal no-close-on-backdrop class="custom-modal">
-
-            <h3 v-if="isMenu">Our Menu</h3>
-            <h3 v-if="isAllergy">Allery Information</h3>
-            <br>
+        <b-modal id="add-product" centered @hidden="onHidden" ok-variant="primary" title-tag="h4"   :hide-footer=true  ref="myModalRef" custom-modal no-close-on-backdrop modal-class="postal-code-modal custom-modal">
+            <template #modal-title v-if="isMenu">Our Menu</template>
+            <template #modal-title v-if="isAllergy">Allery Information</template>
             <div class="row">
-
-                <div class="col text-left">
-                    <button v-if="isMenu" @click="openMenu"   class="btn-primary btn">View</button>
-                    <button v-if="isAllergy" @click="openAllergy"   class="btn-primary btn">View</button>
+                <div class="col-md-2"></div>
+                <div class="col-md-4">
+                    <button v-if="isMenu" @click="openMenu"   class="btn btn-rounded-danger btn-block">View</button>
+                    <button v-if="isAllergy" @click="openAllergy"   class="btn btn-rounded-danger btn-block">View</button>
                 </div>
-
-                <div class="col text-right">
-                    <button v-if="isMenu" @click="downloadMenu"  class="btn-primary btn">Download</button>
-                    <button v-if="isAllergy" @click="downloadAllery" class="btn-primary btn">Download</button>
+                <div class="col-md-4">
+                    <button v-if="isMenu" @click="downloadMenu"  class="btn btn-rounded-danger btn-block">Download</button>
+                    <button v-if="isAllergy" @click="downloadAllery" class="btn btn-rounded-danger btn-block">Download</button>
                 </div>
+                <div class="col-md-2"></div>
             </div>
 
         </b-modal>

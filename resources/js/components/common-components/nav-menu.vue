@@ -48,7 +48,7 @@
                                 </router-link>
                             </div>
                             <div class="col-6 col-md-9 right">
-                                <nav class="navbar navbar-expand-lg navbar-light bg-light justify-content-end main-menu p-0">
+                                <nav class="navbar navbar-expand-lg navbar-light justify-content-end main-menu p-0">
                                   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsiv" aria-controls="navbarResponsiv" aria-expanded="false" aria-label="Toggle navigation">
                                     <span class="navbar-toggler-icon"></span>
                                   </button>

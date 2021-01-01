@@ -83,7 +83,12 @@ a {
 .btn-outline-secondary {
     border-color: #ffff;
 }
-
+.form-control{
+	border: 1px solid #d7d7d7;
+	&.form-control-rounded{
+		border-radius: 50px;
+	}
+}
 ul {
     margin: 0;
     padding: 0;
@@ -1129,16 +1134,10 @@ ul {
 }
 
 .home-popup {
-    padding: 25px;
-
     form {
-        width: 70%;
-        text-align: center;
-
-        input {
-            border-radius: 170px;
-            border: 1px solid #d7d7d7 !important;
-        }
+        max-width: 300px;
+	    text-align: center;
+	    width: 100%;
     }
 }
 
@@ -1572,3 +1571,15 @@ ul {
 
 
 /*********************about end************************/
+.custom-modal{
+	.modal-header {
+	    padding: 10px 1rem;
+	}
+	.modal-body{
+		padding: 1.5rem 1rem;
+	}
+}
+.error{
+	font-size: 14px;
+	color:$red;
+}

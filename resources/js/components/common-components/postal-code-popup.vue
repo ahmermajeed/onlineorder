@@ -1,22 +1,19 @@
 <template>
     <div>
-        <b-modal id="postal-code-popup"  @hidden="onHidden" centered  ok-variant="primary" title-tag="h4"   :hide-footer=true  ref="myModalRef" custom-modal no-close-on-backdrop class="custom-modal">
+        <b-modal id="postal-code-popup"  @hidden="onHidden" centered  ok-variant="primary" title-tag="h4"   :hide-footer=true  ref="myModalRef" custom-modal no-close-on-backdrop modal-class="postal-code-modal custom-modal">
+            <template #modal-title>Enter Your Postal Code</template>
             <div class="home-popup">
-                <h3 style="text-align:center">Enter Your Postal Code</h3>
-                <br>
                 <div class="row d-flex justify-content-center ">
 
                     <form>
                         <div class="form-group">
-
-                            <input type="text"  class="form-control" v-model="postal_code" placeholder="Enter your Postal code">
+                            <input type="text"  class="form-control form-control-rounded" v-model="postal_code" placeholder="Enter your Postal code">
                         </div>
 
-                        <button type="button" class="custom-btn btn btn-outline-danger"  v-on:click="checkPostCode">
-                            <span>Submit! <i class="fas fa-long-arrow-alt-right"></i></span>
-
+                        <button type="button" class="btn btn-rounded-danger"  v-on:click="checkPostCode">
+                            <span>Submit!</span>
                         </button>
-                        <p style="color:red">{{error_message}} </p>
+                        <p class="error mt-2">{{error_message}} </p>
                     </form>
 
                 </div>

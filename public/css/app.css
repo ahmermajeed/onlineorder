@@ -13807,6 +13807,14 @@ a {
   border-color: #ffff;
 }
 
+.form-control {
+  border: 1px solid #d7d7d7;
+}
+
+.form-control.form-control-rounded {
+  border-radius: 50px;
+}
+
 ul {
   margin: 0;
   padding: 0;
@@ -14911,18 +14919,10 @@ ul {
   font-size: 33px !important;
 }
 
-.home-popup {
-  padding: 25px;
-}
-
 .home-popup form {
-  width: 70%;
+  max-width: 300px;
   text-align: center;
-}
-
-.home-popup form input {
-  border-radius: 170px;
-  border: 1px solid #d7d7d7 !important;
+  width: 100%;
 }
 
 .main-popup-section {
@@ -15395,4 +15395,17 @@ ul {
 }
 
 /*********************about end************************/
+
+.custom-modal .modal-header {
+  padding: 10px 1rem;
+}
+
+.custom-modal .modal-body {
+  padding: 1.5rem 1rem;
+}
+
+.error {
+  font-size: 14px;
+  color: #da2327;
+}
 
