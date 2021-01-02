@@ -103,9 +103,9 @@
                                              <img src="/images/theme-1/banner-item.png">
                                         </div>
 
-                                        <div class="num-img text-center">
-                                           <a href="tel: 0203 490 2727"> <img src="/images/theme-1/banner-num.png"></a>
-                                        </div>
+<!--                                        <div class="num-img text-center">-->
+<!--                                           <a href="tel: 0203 490 2727"> <img src="/images/theme-1/banner-num.png"></a>-->
+<!--                                        </div>-->
 
                                     </div>
 
