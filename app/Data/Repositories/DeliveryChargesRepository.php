@@ -22,24 +22,24 @@ class DeliveryChargesRepository
         $data = $this->model->where('postal_code', 'LIKE', '%'.$string.'%')->first();
         if ($data) {
 
-            $postCodeDetail = DeliveryPostCodesMiles::where('post_code', $input['postal_code'])->first();
-
-            if(!$postCodeDetail) {
-
-                $client = new Client();
-                // Create a request with auth credentials
-                $request = $client->get('https://maps.googleapis.com/maps/api/distancematrix/json?units=imperial&origins=B12 9RG, birmingham&destinations=B8+2nb, birmingham&key=AIzaSyDwX7Hvp5q6fuQ8uwCEYARNwYIgJ-6_3mo');
-
-                // Get the actual response without headers
-                $response = $request->getBody();
-
-                print_r($response);
-                exit;
-
-                return $response;
-
-
-            }
+//            $postCodeDetail = DeliveryPostCodesMiles::where('post_code', $input['postal_code'])->first();
+//
+//            if(!$postCodeDetail) {
+//
+//                $client = new Client();
+//                // Create a request with auth credentials
+//                $request = $client->get('https://maps.googleapis.com/maps/api/distancematrix/json?units=imperial&origins=B12 9RG, birmingham&destinations=B8+2nb, birmingham&key=AIzaSyDwX7Hvp5q6fuQ8uwCEYARNwYIgJ-6_3mo');
+//
+//                // Get the actual response without headers
+//                $response = $request->getBody();
+//
+//                print_r($response);
+//                exit;
+//
+//                return $response;
+//
+//
+//            }
 
             return $data;
         } else { return false; }
