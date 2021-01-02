@@ -71,7 +71,7 @@
 
                         </div>
                     </div>
-                    <div class=" col-lg-3 col-md-12 col-sm-12 cart add-card listing-page-sidebar lp-sidebar-right">
+                    <div class=" col-lg-3 col-md-12 col-sm-12 cart  check-card add-card listing-page-sidebar lp-sidebar-right">
                         <div class="cart-box order" id="cart-stiky">
                             <div class="lp-sidebar-title cate-heading">
                                 <h3>Your Cart</h3>
@@ -83,31 +83,32 @@
                                 </div>
                                 <div class="table-holder">
                                     <table class=tbl_cart_list>
-                                        <tr v-for="(cart, product_index) in getAllCartArray"  v-if="product_index  > 0">
-                                            <td class=highlighted>
-                                            </td>
-                                            <td>
-                                                <a href="#" @click.prevent="quantityAddInCart(product_index)"> <i class="fa fa-angle-up"  ></i></a>
-                                                <span>{{ cart.quantity}}  <i>X</i></span>
-                                                <a href="#"  @click.prevent="quantityMinusInCart(product_index)"> <i class="fa fa-angle-down"></i></a>
-                                            </td>
-                                            <td>
-                                                <div>{{cart.product_name}}</div>
-                                                <div v-if="cart.extras" v-for="(extra, extra_index) in cart.extras" >
+                                        <tr class="section-border" v-for="(cart, product_index) in getAllCartArray"  v-if="product_index  > 0">
+                                            <!-- <td class=highlighted>
+                                            </td> -->
+                                            <td class="order-name">
+                                                <div class="cart-order">{{cart.product_name}}</div>
+                                                <div  class="strong-open"  v-if="cart.extras" v-for="(extra, extra_index) in cart.extras" >
                                                     <strong>{{extra.group_name}}:</strong> {{extra.choice}}
                                                 </div>
                                                 <span class="mealactions">
-                                                    <a href="#"  @click.prevent="updateProduct(cart.product_id,cart,product_index)"> <i v-b-tooltip.hover title="Edit Meal"  class="fas fa-pen"></i></a>
-                                                    <a href="#" @click.prevent="removeFromCart(product_index)"> <i v-b-tooltip.hover title="Remove Meal" class="fa fa-times" ></i></a>
+                                                    <a href="#"  @click.prevent="updateProduct(cart.product_id,cart,product_index)"> <i v-b-tooltip.hover title="Edit Meal"  class="icon-edit-1"></i></a>
+                                                    <a href="#" class="close-icon" @click.prevent="removeFromCart(product_index)"> <i v-b-tooltip.hover title="Remove Meal" class="icon-close" ></i></a>
                                                 </span>
                                             </td>
+                                            <td class="order-quty">
+                                                <a href="#" @click.prevent="quantityAddInCart(product_index)"> <i class="fa fa-angle-up"  ></i></a>
+                                                <span class="text-center">{{ cart.quantity}}  <i>X</i></span>
+                                                <a href="#"  @click.prevent="quantityMinusInCart(product_index)"> <i class="fa fa-angle-down"></i></a>
+                                            </td>
+                                            
 
                                             <td  v-if="!cart.extras">£ {{priceFormat(cart.price * cart.quantity) }}</td>
-                                            <td  v-if="cart.extras">£{{priceFormat(cart.single_product_total_amount)}} </td>
+                                            <td class="order-priecs"  v-if="cart.extras">£{{priceFormat(cart.single_product_total_amount)}} </td>
                                         </tr>
                                     </table>
                                 </div>
-                                <div class="cart-btn mt-2 mb-3 text-center">
+                                <div class="cart-btn mt-3 mb-3 text-center">
                                      <button class="anima-btn custom-btn move-eff btn btn-rounded-danger" @click="placeOrder()"><span>Checkout</span> <i class="fas fa-long-arrow-alt-right"></i></button>
                                 </div> 
                             </div>

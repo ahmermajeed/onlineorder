@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div>  
         <hooper style="height: 400px" >
             <slide v-for="(item, index) in sliders">
                 <img :src="item.image">
@@ -8,16 +8,16 @@
         </hooper>
         <div class="space-70"></div>
     </div>
-</template>
+</template> 
 
 <script>
     import VueGallery from 'vue-gallery';
     import {
         Hooper,
-        Slide,
+        Slide, 
         Navigation as HooperNavigation
     } from 'hooper';
-
+ 
     import 'hooper/dist/hooper.css';
     export default {
         components: {

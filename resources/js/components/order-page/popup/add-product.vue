@@ -1,14 +1,21 @@
 <template>
     <div>
-        <b-modal id="add-product" centered @hidden="onHidden" :hide-footer=true title-tag="h4" ok-variant="primary" ref="myModalRef" custom-modal no-close-on-backdrop modal-class="postal-code-modal custom-modal">
+        <b-modal id="add-product " centered @hidden="onHidden" :hide-footer=true title-tag="h4" ok-variant="primary" ref="myModalRef" custom-modal no-close-on-backdrop modal-class="postal-code-modal custom-modal order-product">
             <b-alert show variant="danger" v-if="error_message" style="text-transform: capitalize;">{{error_message}}</b-alert>
             <template #modal-title>{{list.name}}</template>
-            <div class="product-gallery" >
+            <div class="add-popup">
+                 
+                <div class="product-gallery text-center" >
                 <h4 v-if="!has_sizes">Price :  £ {{list.price}}  </h4>
+                </div>
             </div>
+            
             <div class="description">
-                <h4>Description</h4>
-                <p>{{list.description}}</p>
+                <div class="info-item section-border">
+                    <h4 class="text-left">Description</h4>
+                    <p class="text-right">{{list.description}}</p>
+                </div>
+                
 
                 <h5 v-if="list.food_allergy">Allergy Information</h5>
                 <p v-if="list.food_allergy">{{list.food_allergy}} </p>
@@ -46,14 +53,15 @@
 <!--                    </div>-->
 
 
-                    <div v-if="has_sizes">
-                        <h4>Sizes</h4>
+                    <div v-if="has_sizes" class="addcart-form  section-border">
+                        <!-- <h4>Sizes</h4> -->
                         <ul class="selectionlist radio-list" >
                             <li v-for="(item, index) in list.sizes" >
                                 <label>
-                                    {{item.size}}
                                     <input type="radio" :value="item.size+'##@@'+priceFormat(item.price)"    v-model="productData['size']"  @click="productSum('size',priceFormat(item.price))">
                                     <span class="checkmark"></span>
+                                    {{item.size}}
+                                    
                                 </label>
                                 <span style="float:right"> £  {{item.price}}</span>
                             </li>
@@ -79,21 +87,32 @@
 
                     </div>
                     <div class="row count-footer">
-                        <div class="col increment-buttons">
-                            <button type="button" class="btn-minus" @click.prevent="minusQuantity()">
-                               <i class="fas fa-minus-circle"></i>
-                            </button>
-                            <span class="btn-badge-count">{{product_quantity}}</span>   
-                            <button type="button" class="btn-plus"  @click.prevent="plusQuantity()" >
-                                <i class="fas fa-plus-circle"></i>
-                            </button>
+                        <div class="col-12 increment-buttons ">
+                            <div class="cont-section section-border">
+                                <div class=" quantity-head text-left">
+                                    <h4>Quantity</h4>
+                                </div>
+                                <div class="select-num text-right">
+                                     <button type="button" class="btn-minus" @click.prevent="minusQuantity()">
+                                   <i class="fas fa-minus-circle"></i>
+                                    </button>
+                                    <span class="btn-badge-count">{{product_quantity}}</span>   
+                                    <button type="button" class="btn-plus"  @click.prevent="plusQuantity()" >
+                                        <i class="fas fa-plus-circle"></i>
+                                    </button>
+                                </div>
+                            </div>
                         </div>
 
-                        <div class="col text-right">
-                               <h3 >Total Amount : <span>{{priceFormat(total_amount_of_single_product * product_quantity)}}</span></h3>
+                        <div class="col-12 text-right ">
+                            <div class="priec-add section-border">
+                                <h4 class="text-left">Total Amount : </h4>
+                               <span class="text-right">{{priceFormat(total_amount_of_single_product * product_quantity)}}</span>
+                            </div>
+                               
                         </div>
                     </div>
-                    <div class="row mt-3 pt-4" style="border-top: 1px solid #ddd;">
+                    <div class="row mt-4">
                         <div class="col text-center">
                             <button  @click.prevent="addToCart()" class="custom-btn add-count-button btn btn-rounded-danger">Add</button>
                         </div>

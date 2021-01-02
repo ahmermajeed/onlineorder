@@ -188,25 +188,26 @@
                     </div>
                 </div>
 
-                <div class="col-xs-12 full cart col-lg-4 col-md-4 col-sm-12 checkout-cart-desktop"   v-if="getAllCartArray.length > 1"  >
+                <div class="col-xs-12 full cart col-lg-4 col-md-4 col-sm-12 cart  checkout-cart-desktop"   v-if="getAllCartArray.length > 1"  >
                     <div class="order cart-box" id="cart-stiky">
-                        <h2>Your Order </h2>
+                        <h3>Your Order </h3>
                         <div>
-                            <strong>Order Details</strong>
+                            <h3>Order Details</h3>
 
                             <div class="table-holder">
                                 <table class=tbl_cart_list>
                                     <tr v-for="(cart, product_index) in getAllCartArray"  v-if="product_index  > 0">
-                                        <td class=highlighted>
-                                        </td>
-                                        <td>
-                                            <span>{{ cart.quantity}}  <i>X</i></span>
-                                        </td>
-                                        <td>
-                                            <div>{{cart.product_name}}</div>
-                                            <div v-if="cart.extras" v-for="(extra, extra_index) in cart.extras" >
+                                        <!-- <td class=highlighted>
+                                        </td> -->
+                                        
+                                        <td class="order-name">
+                                            <div class="check-order">{{cart.product_name}}</div>
+                                            <div  v-if="cart.extras" v-for="(extra, extra_index) in cart.extras" >
                                                 <strong>{{extra.group_name}}:</strong> {{extra.choice}}
                                             </div>
+                                        </td>
+                                        <td class="order-quty">
+                                            <span>{{ cart.quantity}}  <i>X</i></span>
                                         </td>
 
                                         <td  v-if="!cart.extras">£ {{priceFormat(cart.price * cart.quantity) }}</td>
