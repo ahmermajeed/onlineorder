@@ -16,22 +16,21 @@
                                     <div class="contact-info-box">
                                         <i class="fa fa-phone-square"></i>
                                         <h5 itemprop="headline">PHONE</h5>
-                                        <p itemprop="description">Phone 0203 490 2727
-                                        </p>
+                                        <p itemprop="description">Phone +44 121 242 2020</p>
                                     </div>
                                 </div>
                                 <div class="col-md-4 col-sm-4 col-lg-4">
                                     <div class="contact-info-box">
                                         <i class="fa fa-map-marker"></i>
                                         <h5 itemprop="headline">ADDRESS</h5>
-                                        <p itemprop="description">10 Peckham Park Road, London SE15 6TW</p>
+                                        <p itemprop="description">888a Washwood Heath Rd, Ward End, Birmingham B8 2NB, United Kingdom</p>
                                     </div>
                                 </div>
                                 <div class="col-md-4 col-sm-4 col-lg-4">
                                     <div class="contact-info-box">
                                         <i class="fa fa-envelope"></i>
                                         <h5 itemprop="headline">EMAIL</h5>
-                                        <p itemprop="description">support@alibaba.co.uk</p>
+                                        <p itemprop="description">support@papages.com</p>
                                     </div>
                                 </div>
                             </div>
@@ -87,14 +86,14 @@
                         <div class="row">
                             <div class="col-md-5 footer-left">
                                 <p>&copy; 2020 <span>All rights reserved</span></p>
-                                <p><span>Site by</span> <a href="#">Alibabab</a></p>
+                                <p><span>Site by</span> <a href="#">PapaGes</a></p>
                             </div>
                             <div class="col-md-2 footer-logo">
                                 <img src="public/images/mainlogo.png" alt="logo">
                             </div>
                             <div class="col-md-5 footer-right">
-                                <p><span>Email:</span> <a href="#">support@alibaba.co.uk</a></p>
-                                <p><span>Phone:</span> 0203 490 2727</p>
+                                <p><span>Email:</span> <a href="#">support@papages.com</a></p>
+                                <p><span>Phone:</span> +44 121 242 2020</p>
                                 <div class="footer-social">
                                     <a href="#"><i class="fa fa-facebook-f"></i></a>
                                     <a href="#"><i class="fa fa-twitter"></i></a>

@@ -2,7 +2,7 @@
     <div>
         <header-menu></header-menu>
 
-        <section class="inner-section">
+        <section class="inner-section check-out-page">
         <div class="loading" v-if="loading">Loading&#8230;</div>
         <div class="container">
             <div class="row">
@@ -16,18 +16,24 @@
                         </div>
 
 
-                        <div class="col-sm-12 offset-sm-0 col-md-10 offset-md-1">
-                            <div class="row  mt-4 p-3 mb-5 border-dashed">
+                        <div class="col-sm-12  col-md-10 ">
+                            <div class="row section-border order-check">
+
 
                                 <div class="col-12">
-                                    <h2>Order (Choose your Order Type) </h2> <span></span>
+                                    <div class="check-head">
+                                        <h2>Checkout</h2>
+                                    
+                                    </div>
+                                    
                                 </div>
                                <!-- <div class="col-sm-6">
                                     <label class="customradiobutton radioiconed radio-inline mr-3">
                                         <input type="radio" value="Pickup" @change.prevent="showOrderType('pickup')"  v-model="form.order_type"><i class="fa fa-sign-language"></i> Pick up
                                     </label>
                                 </div>-->
-                                <div class="col-sm-12">
+                                <div class="col-sm-12 cash-delivery section-delivery">
+                                    <h3>Order (Choose your Order Type) </h3> <span></span>
                                     <label class="customradiobutton radioiconed radio-inline mr-3">
                                         <input type="radio" value="Delivery" v-model="form.order_type" @change.prevent="showOrderType('getdelivery')" ><i class="fa fa-truck"></i> Delivery
 
@@ -60,7 +66,7 @@
                                         </div>
 
 
-                                        <div class="col-sm-12">
+                                        <div class="col-sm-12 ">
                                             <label class="customradiobutton radioiconed radio-inline mr-3">
                                                 <input type="radio" value="Asap" v-model="form.asap"  >Asap
                                             </label>
@@ -72,7 +78,7 @@
                                         </div>-->
 
                                         <div class="col-12">
-                                            <h2> Delivery Details</h2>
+                                            <h3> Delivery Details</h3>
                                         </div>
                                         <div class="col-sm-6">
                                             <label>Address </label>
@@ -96,31 +102,30 @@
                                 </div>
                             </div>
 
-                            <div class="row  mt-4 p-3 mb-5 border-dashed">
+                            <div class="row  section-border check-form">
                                 <div class="col-12">
-                                    <h2> Personal Details</h2>
+                                    <h3> Personal Details</h3>
                                 </div>
-                                <div class="col-sm-6">
+                                <div class="col-sm-4">
+                                    <label  class="col-form-label">Name</label>
+                                    <input type="text" class="form-control" placeholder="Enter Name" v-model="form.name">
+                                </div>
+                                <div class="col-sm-4">
                                     <label  class="col-form-label">Email</label>
                                     <input type="text" class="form-control"  v-model="form.email" placeholder="abc@example.com">
                                 </div>
 
-                                <div class="col-sm-6">
+                                <div class="col-sm-4">
                                     <label  class="col-form-label">Number</label>
-                                    <input type="text" class="form-control"  v-model="form.number" placeholder="">
+                                    <input type="text" class="form-control"  v-model="form.number" placeholder="Enter Number">
                                 </div>
 
-                                <div class="col-sm-6">
-                                    <label  class="col-form-label">Name</label>
-                                    <input type="text" class="form-control" placeholder="" v-model="form.name">
-                                </div>
+                                
                             </div>
 
-                            <div class="row mt-4  p-3 mb-5 border-dashed">
-                                <div class="col-12">
-                                    <h2>Payment</h2>
-                                </div>
-                                <div class="col-sm-6">
+                            <div class="row border-dashed payment-sec">
+                                <div class="col-sm-12 cash-delivery">
+                                    <h3>Payment</h3>
                                     <label class="customradiobutton radioiconed radio-inline mr-3">
                                         <input type="radio" value="COD"  @change.prevent="showCard(false)"  v-model="form.payment_type" ><i class="fas fa-wallet"></i> Cash on Delivery
                                     </label>
@@ -174,7 +179,7 @@
                                     </div>
                                     <div class="row mt-3">
                                         <div class="col-sm-4" v-if="finalAmount >= 10">
-                                            <button class="subscribe btn btn-primary btn-block" type="button" @click="placeOrder()"> Confirm  </button>
+                                            <button class="subscribe btn btn-rounded-danger btn-block" type="button" @click="placeOrder()"> Confirm  </button>
                                         </div>
 
                                         <div class="col-sm-12" v-else>
@@ -191,11 +196,13 @@
                 <div class="col-xs-12 full cart col-lg-4 col-md-4 col-sm-12 cart  checkout-cart-desktop"   v-if="getAllCartArray.length > 1"  >
                     <div class="order cart-box" id="cart-stiky">
                         <h3>Your Order </h3>
-                        <div>
-                            <h3>Order Details</h3>
+                        <div class="check-out-list">
+                           
 
                             <div class="table-holder">
+
                                 <table class=tbl_cart_list>
+                                     <h4>Order Details</h4>
                                     <tr v-for="(cart, product_index) in getAllCartArray"  v-if="product_index  > 0">
                                         <!-- <td class=highlighted>
                                         </td> -->
@@ -210,7 +217,7 @@
                                             <span>{{ cart.quantity}}  <i>X</i></span>
                                         </td>
 
-                                        <td  v-if="!cart.extras">£ {{priceFormat(cart.price * cart.quantity) }}</td>
+                                        <td class="amount" v-if="!cart.extras">£ {{priceFormat(cart.price * cart.quantity) }}</td>
                                         <td  v-if="cart.extras">£{{priceFormat(cart.single_product_total_amount)}} </td>
                                     </tr>
                                 </table>

@@ -82,9 +82,8 @@
                                 <img src="../../images/mainlogo.png" alt="logo">
                             </div>
                             <div class="col-md-5 footer-right">
-                                <p><span>Email:</span> <a href="#">support@alibaba.co.uk</a></p>
-                                <p><span>Phone:</span> 0203 490 2727
-                                </p>
+                                <p><span>Email:</span> <a href="#">support@papages.com</a></p>
+                                <p><span>Phone:</span> +44 121 242 2020</p>
                                 <div class="footer-social">
                                     <a href="#"><i class="fa fa-facebook-f"></i></a>
                                     <a href="#"><i class="fa fa-twitter"></i></a>

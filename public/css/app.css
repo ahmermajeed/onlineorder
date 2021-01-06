@@ -13751,6 +13751,10 @@ strong {
   }
 }
 
+.section-border {
+  border-bottom: 1px dashed !important;
+}
+
 a {
   text-decoration: none !important;
 }
@@ -14935,6 +14939,7 @@ ul {
 .lp-sidebar-title h3 {
   font-size: 22px;
   margin: 0;
+  font-weight: 700;
 }
 
 @media (min-width: 768px) and (max-width: 991.98px) {
@@ -15012,6 +15017,11 @@ ul {
   }
 }
 
+.main-popup-section .order-product h3 {
+  font-size: 16px !important;
+  font-weight: 700;
+}
+
 .main-popup-section .order-product h2 {
   font-size: 29px;
   color: #000 !important;
@@ -15023,6 +15033,10 @@ ul {
   .main-popup-section .order-product h2 {
     font-size: 24px;
   }
+}
+
+.main-popup-section .order-product p {
+  font-size: 14px;
 }
 
 .main-popup-section .order-product .prouct-item {
@@ -15043,15 +15057,6 @@ ul {
   .main-popup-section .order-product .prouct-item {
     width: 31%;
   }
-}
-
-.main-popup-section .order-product .prouct-item h3 {
-  font-size: 16px !important;
-  font-weight: 700;
-}
-
-.main-popup-section .order-product .prouct-item p {
-  font-size: 14px;
 }
 
 .main-popup-section .order-product .product-dec {
@@ -15105,6 +15110,15 @@ ul {
   float: right;
   font-size: 12px;
   box-shadow: 0px 8px 15px 0px rgba(0, 0, 0, 0.2);
+}
+
+.main-popup-section .order-product .deals-pro .p-cart {
+  padding: 20px 0px;
+}
+
+.main-popup-section .order-product .deals-pro .p-cart p {
+  display: inline-block;
+  font-weight: 700;
 }
 
 .main-popup-section .add-card {
@@ -15429,9 +15443,14 @@ ul {
 }
 
 .check-card .order table tr td:nth-child(3) {
-  min-width: 50px !important;
+  min-width: 93px !important;
   font-size: 14px;
   font-weight: bold;
+  width: 96px;
+}
+
+.order table tr {
+  border-top: none !important;
 }
 
 .order {
@@ -15439,7 +15458,7 @@ ul {
 }
 
 .order .section-border {
-  border-bottom: 1px dashed;
+  border-bottom: 1px dashed !important;
   padding-bottom: 5px;
   padding-top: 11px;
 }
@@ -15468,43 +15487,48 @@ ul {
   float: left;
 }
 
-.order .order-name .mealactions {
-  float: right;
-  width: 20px;
+.order .priec-order {
+  border: 1px solid #a2a2a2;
+  border-radius: 4px;
+  padding: 0px 6px;
+  line-height: 16px;
 }
 
-.order .order-name .mealactions .close-icon {
-  position: absolute;
-  right: 24px;
-  top: 55px;
-}
-
-.order .order-name .mealactions .close-icon i {
-  font-size: 9px !important;
-  color: red !important;
-}
-
-.order .order-name .mealactions a i {
-  background: transparent !important;
-  padding: 0px !important;
-  font-size: 14px;
+.order .priec-order span {
+  border: 1px solid #a2a2a2;
+  padding-left: 8px;
+  background-color: #fff;
+  border-bottom: 0px;
 }
 
 @media (min-width: 768px) and (max-width: 991.98px) {
-  .order .order-quty {
+  .order .priec-order .order-quty {
     text-align: center !important;
   }
 }
 
-.order .order-quty a {
-  border: 1px solid #a2a2a2;
-  padding: 0px 4px 2px 4px;
-  border-radius: 43px;
-}
-
-.order .order-quty .svg-inline--fa {
+.order .priec-order .svg-inline--fa {
   vertical-align: middle;
   color: #a2a2a2;
+}
+
+.order .mealactions {
+  width: 50px;
+  padding: 26px 0px !important;
+  margin-left: 10px;
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .order .mealactions {
+    margin-top: 10px !important;
+  }
+}
+
+.order .mealactions a i {
+  background: transparent !important;
+  padding: 0px !important;
+  font-size: 14px;
+  color: #000 !important;
 }
 
 .modal-content {
@@ -15599,17 +15623,153 @@ ul {
   outline: none !important;
 }
 
-.cart-box {
+/***************check out start **********************/
+
+.check-out-page {
+  padding: 80px 0px;
+}
+
+.check-out-page .checkoutpage h2 {
+  text-transform: uppercase;
+}
+
+.check-out-page .checkoutpage h3 {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.check-out-page .checkoutpage .check-head {
+  padding-bottom: 20px;
+}
+
+.check-out-page .checkoutpage .order-check {
+  padding-bottom: 25px;
+}
+
+.check-out-page .checkoutpage .order-check h3 {
+  padding-bottom: 12px;
+}
+
+.check-out-page .checkoutpage .cash-delivery label {
+  width: 48%;
+  padding: 8px 10px;
+  border: 1px solid #e1e1e1;
+  font-size: 14px;
+  font-weight: 700;
+  border-radius: 6px;
+  position: relative;
+}
+
+@media (max-width: 767.98px) {
+  .check-out-page .checkoutpage .cash-delivery label {
+    width: 100%;
+  }
+}
+
+.check-out-page .checkoutpage .cash-delivery label .svg-inline--fa {
+  position: absolute;
+  right: 15px;
+  top: 13px;
+  color: #bebebe;
+}
+
+.check-out-page .checkoutpage .check-form {
+  padding: 35px 0px;
+}
+
+.check-out-page .checkoutpage .check-form h3 {
+  padding-bottom: 10px;
+}
+
+.check-out-page .checkoutpage .check-form label {
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.check-out-page .checkoutpage .check-form .form-control {
+  border: none;
+  border-bottom: 1px solid #d7d7d7;
+  border-radius: 0;
+  padding-left: 0px;
+}
+
+.check-out-page .checkoutpage .payment-sec {
+  padding: 20px 0px;
+}
+
+@media (max-width: 767.98px) {
+  .check-out-page .checkout-cart-desktop {
+    margin: 30px 10px;
+    margin-top: 30px;
+  }
+}
+
+.check-out-page .checkout-cart-desktop h2 {
+  text-transform: uppercase;
+}
+
+.check-out-page .checkout-cart-desktop h3 {
+  font-size: 20px;
+  font-weight: 600;
+  margin: 0px;
+  text-transform: uppercase;
+  padding: 20px 0px;
+}
+
+.check-out-page .checkout-cart-desktop h4 {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.check-out-page .checkout-cart-desktop .cart-box {
   border: 1px solid #e1e1e1;
   border-radius: 20px;
 }
 
-.cart-box .check-order {
+.check-out-page .checkout-cart-desktop .cart-box .check-out-list {
+  background-color: #f5f8fa;
+  border-top: 1px solid #e1e1e1;
+  padding: 0px 20px;
+  border-bottom-right-radius: 20px;
+  border-bottom-left-radius: 20px;
+  padding-bottom: 20px;
+}
+
+.check-out-page .checkout-cart-desktop .cart-box .check-out-list .table-holder {
+  overflow-y: hidden;
+  padding: 15px 0px;
+}
+
+.check-out-page .checkout-cart-desktop .cart-box .check-out-list .table-holder .order-name {
+  width: 65%;
+  padding: 10px 0px;
+}
+
+.check-out-page .checkout-cart-desktop .cart-box .check-out-list .table-holder .order-name .check-order {
   font-weight: bold;
 }
 
-.cart-box .cart-money-detail {
-  border-bottom-right-radius: 20px;
-  border-bottom-left-radius: 20px;
+.check-out-page .checkout-cart-desktop .cart-box .check-out-list .table-holder .amount {
+  min-width: 80px !important;
+  text-align: right;
 }
+
+.check-out-page .checkout-cart-desktop .cart-box .check-out-list .table-holder tr {
+  border-top: 1px dashed !important;
+  border-bottom: 1px dashed !important;
+}
+
+.check-out-page .checkout-cart-desktop .cart-box .check-out-list .table-holder .tbl_cart_list {
+  border: none;
+}
+
+.check-out-page .checkout-cart-desktop .cart-box .check-out-list .cart-money-detail {
+  background: transparent !important;
+}
+
+.check-out-page .checkout-cart-desktop .cart-box .check-out-list .cart-money-detail li {
+  padding: 10px 0px !important;
+}
+
+/***************check out start **********************/
 

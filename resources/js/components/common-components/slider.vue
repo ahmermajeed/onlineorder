@@ -18,7 +18,7 @@
         Navigation as HooperNavigation
     } from 'hooper';
  
-    import 'hooper/dist/hooper.css';
+    import 'hooper/dist/hooper.css';  
     export default {
         components: {
             Hooper,
