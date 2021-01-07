@@ -11,7 +11,7 @@
             </div>
             
             <div class="description">
-                <div class="info-item section-border">
+                <div class="info-item section-border ">
                     <h4 class="text-left">Description</h4>
                     <p class="text-right">{{list.description}}</p>
                 </div>
@@ -53,7 +53,7 @@
 <!--                    </div>-->
 
 
-                    <div v-if="has_sizes" class="addcart-form  section-border">
+                    <div v-if="has_sizes" class="addcart-form  section-border mb-3">
                         <!-- <h4>Sizes</h4> -->
                         <ul class="selectionlist radio-list" >
                             <li v-for="(item, index) in list.sizes" >
@@ -68,13 +68,14 @@
                         </ul>
                     </div>
 
-                    <div  v-for="(item, index) in list.groups">
+                    <div class="sub-cat mt-3" v-for="(item, index) in list.groups">
                     <h4>{{item.name}}</h4>
                     <ul class="selectionlist radio-list" >
                         <li v-for="(choice,choice_index) in item.choices">
                             <label>
+                                 <input type="radio"  :value="choice.name+'##@@'+priceFormat(choice.price)"   v-model="productData[item.name]" @click="productSum(item.name,priceFormat(choice.price))">
                                 {{choice.name}}
-                                <input type="radio"  :value="choice.name+'##@@'+priceFormat(choice.price)"   v-model="productData[item.name]" @click="productSum(item.name,priceFormat(choice.price))">
+                               
                                 <span class="checkmark"></span>
                             </label>
                             <span style="float:right"> £  {{choice.price}}</span>

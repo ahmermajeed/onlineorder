@@ -96,15 +96,15 @@
                                             </td>
                                             <td class="order-quty">
                                                 <div class="priec-order">
-                                                    <a href="#" @click.prevent="quantityAddInCart(product_index)"> <i class="fa fa-angle-up"  ></i></a>
-                                                    <span class="text-center">{{ cart.quantity}}  <i>X</i></span>
-                                                    <a href="#"  @click.prevent="quantityMinusInCart(product_index)"> <i class="fa fa-angle-down"></i></a>
+                                                    <a class="icon-up"  href="#" @click.prevent="quantityAddInCart(product_index)"> <i class="icon-plus"  ></i></a>
+                                                    <span class="text-center">{{ cart.quantity}}  <!-- <i>X</i> --></span>
+                                                    <a  class="icon-down"  href="#"  @click.prevent="quantityMinusInCart(product_index)"> <i class="icon-subtract"></i></a>
                                                 </div>
                                                 
                                             </td>
                                              <span class="mealactions">
                                                     <a href="#"  @click.prevent="updateProduct(cart.product_id,cart,product_index)"> <i v-b-tooltip.hover title="Edit Meal"  class="icon-edit-1"></i></a>
-                                                    <a href="#" class="close-icon" @click.prevent="removeFromCart(product_index)"> <i v-b-tooltip.hover title="Remove Meal" class="icon-close" ></i></a>
+                                                    <a href="#" class="close-icon" @click.prevent="removeFromCart(product_index)"> <i v-b-tooltip.hover title="Remove Meal" class="icon-delete" ></i></a>
                                                 </span>
                                             
 
@@ -113,7 +113,7 @@
                                     </table>
                                 </div>
                                 <div class="cart-btn mt-3 mb-3 text-center">
-                                     <button class="anima-btn custom-btn move-eff btn btn-rounded-danger" @click="placeOrder()"><span>Checkout</span> <i class="fas fa-long-arrow-alt-right"></i></button>
+                                     <button class="anima-btn custom-btn move-eff btn btn-rounded-danger" @click="placeOrder()"><span>Checkout</span> <!-- <i class="fas fa-long-arrow-alt-right"></i> --></button>
                                 </div> 
                             </div>
                             
@@ -141,7 +141,7 @@
                             </ul>
                             <span class="mealactions">
                                 <i v-b-tooltip.hover title="Edit Meal"  class="fas fa-pen"></i>
-                                <a href="#" @click.prevent="removeFromCart(product_index)"> <i v-b-tooltip.hover title="Remove Meal" class="fa fa-times"></i></a>
+                                <a href="#" @click.prevent="removeFromCart(product_index)"> <i v-b-tooltip.hover title="Remove Meal" class="icon-delete"></i></a>
                             </span>
                         </span>
                         <span class="price">£{{priceFormat(cart.single_product_total_amount)}}</span>
@@ -205,7 +205,7 @@
                             <span class="mealactions">
 
 <!--                                <a href="#"  @click="updateProduct(cart.product_id,cart,product_index)"><i v-b-tooltip.hover title="Edit Meal" class="fas fa-pen"> </i></a>-->
-                               <a href="#"  @click.prevent="removeFromCart(product_index)"> <i v-b-tooltip.hover title="Remove Meal" class="fa fa-times"></i></a>
+                               <a href="#"  @click.prevent="removeFromCart(product_index)"> <i v-b-tooltip.hover title="Remove Meal" class="icon-delete"></i></a>
                             </span>
                         </span>
                         <span class="price">£{{priceFormat(cart.single_product_total_amount)}}</span>

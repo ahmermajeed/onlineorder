@@ -7,7 +7,7 @@
             <hooper-navigation slot="hooper-addons"></hooper-navigation>
         </hooper>
         <div class="space-70"></div>
-    </div>
+    </div> 
 </template> 
 
 <script>

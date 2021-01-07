@@ -8,25 +8,26 @@
 
             <div class="product-gallery" >
                 <h4> £ {{deals_data.price}}  </h4>
-            </div>
+            </div> 
             <div class="description">
-                <div class="info-item section-border">
-                    <h4 class="text-left">Description</h4>
-                    <p class="text-right">{{deals_data.description}}</p>
+                <div class="info-item section-border mb-4 ">
+                    <h4 class="text-left float-none">Description</h4>
+                    <p>{{deals_data.description}}</p>
                 </div>
                 
             </div>
 
 
-            <div  v-for="(item, index) in dealsProducts" class="addcart-form  section-border">
+            <div  v-for="(item, index) in dealsProducts" class="addcart-form  section-border mb-3">
                 <div v-for="(n,index) in item.quantity">
                     <h4>{{item.name}} {{n}} </h4>
                     <div  v-for="(product, index) in item.products">
                         <ul class="selectionlist radio-list">
                             <li>
                                 <label>
-                                    {{product.name}}
                                     <input type="radio"  :value="product.name"   v-model="productData[item.name +' '+n]" >
+                                    {{product.name}}
+                                    
                                     <span class="checkmark"></span>
                                 </label>
                             </li>
@@ -43,30 +44,36 @@
             </div>
 
 
-            <div class="row count-footer">
-                <div class="col-12 increment-buttons ">
-                    <div class="cont-section section-border">
-                        <div class="select-num text-right">
-                             <button type="button" class="btn-minus" @click.prevent="minusQuantity()">
-                            <i class="fas fa-minus-circle"></i>
-                            </button>
-                            <span class="btn-badge-count">{{product_quantity}}</span>
-                            <button type="button" class="btn-plus"  @click.prevent="plusQuantity()" >
-                                <i class="fas fa-plus-circle"></i>
-                            </button>
+                    <div class="row count-footer">
+                        <div class="col-12 increment-buttons ">
+                            <div class="cont-section section-border">
+                                <div class=" quantity-head text-left">
+                                    <h4>Quantity</h4>
+                                </div>
+                                <div class="select-num text-right">
+                                     <button type="button" class="btn-minus" @click.prevent="minusQuantity()">
+                                   <i class="fas fa-minus-circle"></i>
+                                    </button>
+                                    <span class="btn-badge-count">{{product_quantity}}</span>   
+                                    <button type="button" class="btn-plus"  @click.prevent="plusQuantity()" >
+                                        <i class="fas fa-plus-circle"></i>
+                                    </button>
+                                </div>
+                            </div>
                         </div>
-                       
+
+                        <div class="col-12 text-right ">
+                            <div class="priec-add section-border">
+                                <h4 class="text-left">Total Amount : </h4>
+                               <span class="text-right">{{priceFormat(total_amount_of_single_product * product_quantity)}}</span>
+                            </div>
+                               
+                        </div>
                     </div>
-                </div>
 
-                <div class="col-12 text-right">
-                    <h3 >Total Amount : £  <span>{{priceFormat(total_amount_of_single_product * product_quantity)}}</span></h3>
-                </div>
-            </div>
-
-            <div class="row mt-3 pt-4" style="border-top: 1px solid #ddd;">
+            <div class="row mt-4">
                 <div class="col text-center">
-                    <button  @click.prevent="addToCart()" class="custom-btn add-count-button">Update</button>
+                    <button  @click.prevent="addToCart()" class="custom-btn add-count-button btn btn-rounded-danger">Update</button>
                 </div>
             </div>
 

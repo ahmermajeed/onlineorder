@@ -1613,10 +1613,10 @@ ul {
 }
 
 .check-card .order table tr td:nth-child(3) {
-      min-width: 93px !important;
+    min-width: 87px !important;
     font-size: 14px;
     font-weight: bold;
-    width: 96px;;
+    width: 80px;
 }
 .order table tr {
      border-top: none !important;
@@ -1654,13 +1654,29 @@ ul {
     .priec-order {
             border: 1px solid #a2a2a2;
             border-radius: 4px;
-             padding: 0px 6px;
             line-height: 16px;
+            padding: 0px 6px;
+             i {
+                padding: 0px !important;
+                color: #a2a2a2;
+            }
+            .icon-up {
+                float: left;
+                padding-right: 3px;
+                padding-top: 1px;
+            }
+            .icon-down {
+                float: right;
+                margin-right: 0px;
+                padding-top: 1px;
+            }
             span {
                border: 1px solid #a2a2a2;
-                padding-left: 8px;
+                padding: 0px 8px;
                 background-color: #fff;
                 border-bottom: 0px;
+                border-top: 0px;
+                margin-left: 3px;
             }
        
          .order-quty {
@@ -1672,7 +1688,7 @@ ul {
             
         }
         .svg-inline--fa{
-            vertical-align: middle;
+           
             color: #a2a2a2;
         }
     }
@@ -1681,15 +1697,16 @@ ul {
                 width: 50px;
                 padding: 26px 0px !important;
                 margin-left: 10px;
+                margin-top: 14px;
                  @include media-breakpoint-only(md) {
-                   margin-top: 10px !important;
+                   width: 100%;
                 }
                 
             a{
                 i {
                     background: transparent !important;
                     padding: 0px !important;
-                    font-size: 14px;
+                    font-size: 15px;
                     color: #000 !important;
                     
 
@@ -1704,6 +1721,9 @@ ul {
 
 .modal-content {
         border-radius: 20px !important;
+         ul{
+            list-style: none;
+         }
         h4 {           
             font-size: 14px;
             font-weight: 700;
@@ -1714,8 +1734,9 @@ ul {
         }
 
         .modal-header {
-            padding: 40px 0px 0px 0px !important;
-            border: none;
+               padding: 40px 20px 0px 20px !important;
+                border: none;
+                text-align: center;
             .modal-title {
                 margin: 0 auto;
                 font-size: 26px;
@@ -1738,15 +1759,17 @@ ul {
                 h4 { 
                     width: 50%;
                     float: left;
+                    line-height: 25px;
                 }
             }
             .addcart-form{
-                ul{
-                    list-style: none;
-                }
+               
                  label {
                     font-size: 12px;
                     font-weight: bold;
+                    input {
+                        vertical-align: text-top;
+                    }
                 }
             }
             .input-holder {
@@ -1778,9 +1801,10 @@ ul {
                     border: 1px solid #9a9a9a;
                     background-color: #fff;
                     vertical-align: middle;
+                    line-height: 1px;
                     
                     svg {
-                      font-size: 12px;
+                      font-size: 13px;
                      color: #9d9d9d;
                      vertical-align: text-top;
                      padding: 0px 1px 0px 0px;
@@ -1791,6 +1815,10 @@ ul {
             button:focus {
                 outline: none !important;
              }
+        }
+        
+        .add-deal-section p{
+            font-size: 16px;
         }
        
         
@@ -1823,18 +1851,22 @@ ul {
                 width: 48%;
                 padding: 8px 10px;
                 border: 1px solid #e1e1e1;
-                font-size: 14px;
+                font-size: 16px;
                 font-weight: 700;
                 border-radius: 6px;
                 position: relative;
                 @include media-breakpoint-down(sm) {
                     width: 100%;
                 }
+                input {
+                    vertical-align: inherit;
+                }
                 .svg-inline--fa{
                     position: absolute;
                     right: 15px;
                     top: 13px;
                     color: #bebebe;
+                    
                 }
             }
         }
@@ -1939,3 +1971,10 @@ ul {
 
 
 /***************check out start **********************/
+
+/***************Deal-section-start*******************/
+.add-deal-section{
+        padding-bottom: 10px !important;
+    margin-bottom: 15px;
+}
+/***************Deal-section-end*******************/
