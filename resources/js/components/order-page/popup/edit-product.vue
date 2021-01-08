@@ -57,34 +57,37 @@
                         <textarea class="form-control" rows="3" cols="12"  v-model="productData['special_instruction']"></textarea>
 
                     </div>
-                    <div class="row count-footer">
-                        <div class="col-12 increment-buttons ">
-                            <div class="cont-section section-border">
+                    <div class="row count-footer section-border">
+                        <div class="col-lg-6 col-md-6 col-sm-12 increment-buttons ">
+                            <div class="cont-section">
                                 <div class=" quantity-head text-left">
                                     <h4>Quantity</h4>
                                 </div>
                                 <div class="select-num text-right">
-                                     <button type="button" class="btn-minus" @click.prevent="minusQuantity()">
-                                   <i class="fas fa-minus-circle"></i>
-                                    </button>
-                                    <span class="btn-badge-count">{{product_quantity}}</span>   
-                                    <button type="button" class="btn-plus"  @click.prevent="plusQuantity()" >
-                                        <i class="fas fa-plus-circle"></i>
-                                    </button>
+                                    <div class="qunt-btn">
+                                         <button type="button" class="btn-minus" @click.prevent="minusQuantity()">
+                                       <i class="icon-subtract"></i>
+                                        </button>
+                                        <span class="btn-badge-count">{{product_quantity}}</span>   
+                                        <button type="button" class="btn-plus"  @click.prevent="plusQuantity()" >
+                                            <i class="icon-plus"></i>
+                                        </button>
+                                    </div>
+                                    
                                 </div>
                             </div>
                         </div>
 
-                        <div class="col-12 text-right ">
-                            <div class="priec-add section-border">
+                        <div class="col-lg-6 col-md-6 col-sm-12 text-right ">
+                            <div class="priec-add">
                                 <h4 class="text-left">Total Amount : </h4>
                                <span class="text-right">{{priceFormat(total_amount_of_single_product * product_quantity)}}</span>
                             </div>
                                
                         </div>
                     </div>
-                    <div class="row mt-4">
-                        <div class="col text-center">
+                    <div class="row mt-3">
+                        <div class="col text-right">
                             <button  @click.prevent="addToCart()" class="custom-btn add-count-button btn btn-rounded-danger">Update</button>
                         </div>
                     </div>

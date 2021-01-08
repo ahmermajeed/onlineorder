@@ -1605,6 +1605,7 @@ ul {
 	}
 	.modal-body{
 		padding: 1.5rem 1rem;
+
 	}
 }
 .error{
@@ -1720,7 +1721,11 @@ ul {
 
 
 .modal-content {
+
         border-radius: 20px !important;
+        .deal-head h4{
+            margin-top: 20px;
+        }
          ul{
             list-style: none;
          }
@@ -1750,17 +1755,27 @@ ul {
                 padding-bottom: 5px;
                 padding-top: 11px;
             }
+            .radio-list {
+                li {
+                    border-bottom: 1px dashed;
+                    padding: 10px 0px 10px 0px;
+                    label {
+                         margin-bottom: 0px;
+                    }
+                }
+
+            }
             
             .info-item {
                
                 p{
                     font-size: 16px;
                 }
-                h4 { 
+                /*h4 { 
                     width: 50%;
                     float: left;
                     line-height: 25px;
-                }
+                }*/
             }
             .addcart-form{
                
@@ -1779,29 +1794,52 @@ ul {
                     border-color: #e1e1e1;
                 }
             }
-           
-            .cont-section{
-                .quantity-head {
-                    width: 50%;
-                    float: left;
+            .count-footer {
+                border-top: 1px dashed !important;
+                .increment-buttons {
+                    @include media-breakpoint-down(sm) {
+                        border-bottom: 1px dashed;
+                        padding-bottom: 10px;
+                        margin-bottom: 12px;
+                    }
+                     .cont-section{
+                    .quantity-head {
+                        width: 50%;
+                        float: left;
+                         h4 {
+                            line-height: 25px;
+                            margin: 0px!important;
+                        }
+                     }
                 }
-            }
-            .priec-add{
-                h4{
-                     width: 50%;
-                    float: left;
-                }
-
-            }
+            
             .select-num{
-                 button {
-                   padding: 0px 2px 0px 3px;
-                   height: 19px;
-                    border-radius: 21px;
-                    border: 1px solid #9a9a9a;
-                    background-color: #fff;
-                    vertical-align: middle;
-                    line-height: 1px;
+                
+                .qunt-btn {
+                        overflow: hidden;
+                        display: block;
+                        background: #eceff1;
+                        margin: 0px;
+                        border: 1px solid #d7d7d7;
+                        border-radius: 4px;
+                        width: 45%;
+                        float: right;
+                        @include media-breakpoint-down(sm) {
+                            width: 36%;
+                        }
+                         button {
+                            padding: 0px 2px 0px 3px;
+                            border: none;
+                            vertical-align: middle;
+                            line-height: 1px;
+                        }
+                         span {
+                            background: #fff;
+                            width: 36px;
+                            max-width: 40px;
+                            display: inline-block;
+                            text-align: center;
+                        }
                     
                     svg {
                       font-size: 13px;
@@ -1812,6 +1850,22 @@ ul {
                     }
                 }
             }
+                   
+                }
+
+               
+            .priec-add{
+                h4{
+                    width: 62%;
+                    float: left;
+                    line-height: 22px;
+                }
+
+            }
+        }
+
+           
+            
             button:focus {
                 outline: none !important;
              }
@@ -1856,6 +1910,9 @@ ul {
                 border-radius: 6px;
                 position: relative;
                 @include media-breakpoint-down(sm) {
+                    width: 100%;
+                }
+                @include media-breakpoint-only(md) {
                     width: 100%;
                 }
                 input {

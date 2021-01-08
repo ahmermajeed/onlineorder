@@ -15578,6 +15578,10 @@ ul {
   border-radius: 20px !important;
 }
 
+.modal-content .deal-head h4 {
+  margin-top: 20px;
+}
+
 .modal-content ul {
   list-style: none;
 }
@@ -15614,14 +15618,25 @@ ul {
   padding-top: 11px;
 }
 
-.modal-content .modal-body .info-item p {
-  font-size: 16px;
+.modal-content .modal-body .radio-list li {
+  border-bottom: 1px dashed;
+  padding: 10px 0px 10px 0px;
 }
 
-.modal-content .modal-body .info-item h4 {
-  width: 50%;
-  float: left;
-  line-height: 25px;
+.modal-content .modal-body .radio-list li label {
+  margin-bottom: 0px;
+}
+
+.modal-content .modal-body .info-item {
+  /*h4 { 
+      width: 50%;
+      float: left;
+      line-height: 25px;
+  }*/
+}
+
+.modal-content .modal-body .info-item p {
+  font-size: 16px;
 }
 
 .modal-content .modal-body .addcart-form label {
@@ -15642,31 +15657,71 @@ ul {
   border-color: #e1e1e1;
 }
 
-.modal-content .modal-body .cont-section .quantity-head {
+.modal-content .modal-body .count-footer {
+  border-top: 1px dashed !important;
+}
+
+@media (max-width: 767.98px) {
+  .modal-content .modal-body .count-footer .increment-buttons {
+    border-bottom: 1px dashed;
+    padding-bottom: 10px;
+    margin-bottom: 12px;
+  }
+}
+
+.modal-content .modal-body .count-footer .increment-buttons .cont-section .quantity-head {
   width: 50%;
   float: left;
 }
 
-.modal-content .modal-body .priec-add h4 {
-  width: 50%;
-  float: left;
+.modal-content .modal-body .count-footer .increment-buttons .cont-section .quantity-head h4 {
+  line-height: 25px;
+  margin: 0px !important;
 }
 
-.modal-content .modal-body .select-num button {
+.modal-content .modal-body .count-footer .increment-buttons .select-num .qunt-btn {
+  overflow: hidden;
+  display: block;
+  background: #eceff1;
+  margin: 0px;
+  border: 1px solid #d7d7d7;
+  border-radius: 4px;
+  width: 45%;
+  float: right;
+}
+
+@media (max-width: 767.98px) {
+  .modal-content .modal-body .count-footer .increment-buttons .select-num .qunt-btn {
+    width: 36%;
+  }
+}
+
+.modal-content .modal-body .count-footer .increment-buttons .select-num .qunt-btn button {
   padding: 0px 2px 0px 3px;
-  height: 19px;
-  border-radius: 21px;
-  border: 1px solid #9a9a9a;
-  background-color: #fff;
+  border: none;
   vertical-align: middle;
   line-height: 1px;
 }
 
-.modal-content .modal-body .select-num button svg {
+.modal-content .modal-body .count-footer .increment-buttons .select-num .qunt-btn span {
+  background: #fff;
+  width: 36px;
+  max-width: 40px;
+  display: inline-block;
+  text-align: center;
+}
+
+.modal-content .modal-body .count-footer .increment-buttons .select-num .qunt-btn svg {
   font-size: 13px;
   color: #9d9d9d;
   vertical-align: text-top;
   padding: 0px 1px 0px 0px;
+}
+
+.modal-content .modal-body .count-footer .priec-add h4 {
+  width: 62%;
+  float: left;
+  line-height: 22px;
 }
 
 .modal-content .modal-body button:focus {
@@ -15715,6 +15770,12 @@ ul {
 }
 
 @media (max-width: 767.98px) {
+  .check-out-page .checkoutpage .cash-delivery label {
+    width: 100%;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) {
   .check-out-page .checkoutpage .cash-delivery label {
     width: 100%;
   }
