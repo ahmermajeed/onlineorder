@@ -218,7 +218,7 @@
                                         </td>
 
                                         <td class="amount" v-if="!cart.extras">£ {{priceFormat(cart.price * cart.quantity) }}</td>
-                                        <td  v-if="cart.extras">£{{priceFormat(cart.single_product_total_amount)}} </td>
+                                        <td class="text-right" v-if="cart.extras">£{{priceFormat(cart.single_product_total_amount)}} </td>
                                     </tr>
                                 </table>
                             </div>

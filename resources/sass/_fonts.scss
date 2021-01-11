@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'icomoon';
-  src:  url('fonts/icomoon.eot?3rxeib');
-  src:  url('fonts/icomoon.eot?3rxeib#iefix') format('embedded-opentype'),
-    url('fonts/icomoon.ttf?3rxeib') format('truetype'),
-    url('fonts/icomoon.woff?3rxeib') format('woff'),
-    url('fonts/icomoon.svg?3rxeib#icomoon') format('svg');
+  src:  url('fonts/icomoon.eot?q50rx7');
+  src:  url('fonts/icomoon.eot?q50rx7#iefix') format('embedded-opentype'),
+    url('fonts/icomoon.ttf?q50rx7') format('truetype'),
+    url('fonts/icomoon.woff?q50rx7') format('woff'),
+    url('fonts/icomoon.svg?q50rx7#icomoon') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -25,60 +25,66 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-.icon-subtract:before {
-  content: "\e900";
-}
-.icon-calculate:before {
-  content: "\e900";
-}
-.icon-remove:before {
-  content: "\e900";
-}
-.icon-withdraw:before {
-  content: "\e900";
-}
-.icon-deduct:before {
+.icon-shopping-cart:before {
   content: "\e900";
 }
 .icon-plus:before {
   content: "\e901";
 }
-.icon-pinterest-logo:before {
+.icon-keyboard_arrow_down:before {
   content: "\e902";
 }
-.icon-facebook:before {
+.icon-subtract:before {
   content: "\e903";
 }
-.icon-placeholder:before {
+.icon-calculate:before {
+  content: "\e903";
+}
+.icon-remove:before {
+  content: "\e903";
+}
+.icon-withdraw:before {
+  content: "\e903";
+}
+.icon-deduct:before {
+  content: "\e903";
+}
+.icon-pinterest-logo:before {
   content: "\e904";
 }
-.icon-mail-2:before {
+.icon-facebook:before {
   content: "\e905";
 }
-.icon-smartphone-1:before {
+.icon-placeholder:before {
   content: "\e906";
 }
-.icon-twitter:before {
+.icon-mail-2:before {
   content: "\e907";
 }
-.icon-close:before {
+.icon-smartphone-1:before {
   content: "\e908";
 }
-.icon-google-plus-logo:before {
+.icon-twitter:before {
   content: "\e909";
 }
-.icon-instagram-symbol:before {
+.icon-close:before {
   content: "\e90a";
 }
-.icon-linkedin:before {
+.icon-google-plus-logo:before {
   content: "\e90b";
 }
-.icon-delete:before {
+.icon-instagram-symbol:before {
   content: "\e90c";
 }
-.icon-edit-1:before {
+.icon-linkedin:before {
   content: "\e90d";
 }
-.icon-rss-feed-symbol:before {
+.icon-delete:before {
   content: "\e90e";
+}
+.icon-edit-1:before {
+  content: "\e90f";
+}
+.icon-rss-feed-symbol:before {
+  content: "\e910";
 }
