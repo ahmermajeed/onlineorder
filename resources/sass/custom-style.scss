@@ -1,4 +1,5 @@
 body {
+    overflow: inherit !important;
 }
 h2 {
     font-size: 36px;
@@ -2101,6 +2102,7 @@ ul {
            content: "\e902" !important;
             color: #909090;
             font-family: 'icomoon' !important;
+            transform: rotate(178deg);
         }
 
    
