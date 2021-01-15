@@ -54,8 +54,8 @@ a {
 	}
 	&.btn-rounded-danger {
 	    color: #fff !important;
-	    background: #d72327;
-	    @include gradient-x($start-color: #d72327, $end-color: #9c2122, $start-percent: 0%, $end-percent: 100%)
+	    background: $btn-color1;
+	    @include gradient-x($start-color: $btn-color1, $end-color: $btn-color2, $start-percent: 0%, $end-percent: 100%)
 	}
 }
 
@@ -67,7 +67,7 @@ a {
     box-shadow: 0px 15px 20px 0px rgba(0, 0, 0, 0.2);
     margin: 0 auto;
     padding: 8px;
-    color: #e3342f !important;*/
+    color: $red !important;*/
 }
 
 .btn-outline-secondary {
@@ -266,7 +266,7 @@ ul {
             }
 
             i {
-                color: #e3342f;
+                color: $red;
             }
         }
 
@@ -356,7 +356,7 @@ ul {
         }
 
         .pinterest a {
-            background-color: #e3342f;
+            background-color: $red;
         }
 
         .google-plus a {
@@ -414,7 +414,7 @@ ul {
     }
 
     strong a {
-        color: #da2327 !important;
+        color: $red !important;
     }
 
 
@@ -688,7 +688,7 @@ ul {
     }
 
     .payment-type p {
-        background-color: #e3342f;
+        background-color: $red;
         height: 90px;
         text-align: center;
         padding-top: 26px;
@@ -711,7 +711,7 @@ ul {
         }
 
         strong {
-            color: #e3342f;
+            color: $red;
             line-height: 45px;
 
             @include media-breakpoint-down(sm) {
@@ -1006,7 +1006,7 @@ ul {
 
     span {
         font-size: 20px;
-        color: #e3342f;
+        color: $red;
 
         @include media-breakpoint-down(sm) {
             font-size: 15px;
