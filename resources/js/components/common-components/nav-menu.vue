@@ -43,7 +43,7 @@
                             <div class="col-6 col-md-3">
                                 <router-link :to="{ path: '/'}">
                                      <a class="navbar-brand js-scroll-trigger main-logo" href="javascript:;">
-                                        <img src="/images/theme-1/Ali-baba-logo.png">
+                                        <img src="/images/theme-2/taj-logo.png">
                                     </a>
                                 </router-link>
                             </div>
@@ -73,7 +73,7 @@
                                                  <!-- <a href="#" class="btn btn-outline-danger"  @click.prevent="openPostalCode"> 
                                                 Order Online </i></i>
                                                      </a> -->
-                                                <a href="#" class="btn btn-rounded-default btn-rounded-danger"  @click.prevent="openPostalCode"> Order Online</a>
+                                                <a href="#" class="btn btn-warning "  @click.prevent="openPostalCode"> Order Online</a>
                                             </div> 
                                         </li>
                                     </ul>
@@ -88,36 +88,34 @@
             <div class="header-bottom section-fullwidth">
                 <div class="container">
                     <div class="row">
-                        <div class="col-lg-4 col-xl-5">
+                        <div class="col-2">
                             
                         </div>
-                        <div class="col-lg-8 col-xl-7">
+                        <div class="col-8">
                             <div class="contact-bnner">
+                                <div class="head-taj mb-3">
+                                    <h2>Save 25% on orders over £30</h2>
+                                </div>
                                <div class="row">
-                                <div class="col-lg-4 col-md-4 col-sm-12 mt-0 px-0">
+                                <div class="col-4 mt-0 px-0">
                                     <div class="food">
-                                        <div class="hala-img ">
-                                            <img src="/images/theme-1/halal.png">
-                                        </div>
+                                        
                                         <div class="item-img text-center">
-                                             <img src="/images/theme-1/banner-item.png">
+                                             <img src="/images/theme-2/taj-halal.png">
                                         </div>
                                         
                                         <div class="num-img text-center">
-                                           <a href="tel: 02476441200"> <img src="/images/theme-1/banner-num.png"></a>
+                                           <a href="tel: 02476441200">02476441200</a>
                                         </div>
                                         
                                     </div>
 
                                     
                                 </div>
-                                <div class="col-lg-8 col-md-8 col-sm-12 mt-0 px-0">
+                                <div class="col-8 mt-0 px-0">
                                     <div class="postal-code">
                                         <div class="search-res" v-if="this.$route.name !='online-order'">
-                                        <div class="info-txt mb-2 mb-md-4">
-                                            <h4>Save 25% on orders over £30</h4>
-                                        </div>
-                                        <h3>Enter Your Postal Code.</h3>
+                                        <h3>Enter Your Postal Code</h3>
                                         <form >
                                             <div class="row">
                                                 <div class="col-12">
@@ -125,7 +123,7 @@
                                                         <input type="text"  class="form-control" v-model="postal_code" placeholder="Enter your Postal code">
                                                     </div>
                                                     <div class="form-group text-center">
-                                                        <button type="button" class="btn btn-rounded-default"  v-on:click="checkPostCode">
+                                                        <button type="button" class="btn btn-warning"  v-on:click="checkPostCode">
                                                             <span>Submit! </span>
                                                         </button>
                                                     </div>
@@ -144,6 +142,9 @@
                                    
                                </div>
                             </div>
+                            
+                        </div>
+                        <div class="col-2">
                             
                         </div>
                     </div>
