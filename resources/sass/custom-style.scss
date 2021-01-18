@@ -173,6 +173,7 @@ ul {
     background-color: #161616;
     background: rgba(0, 0, 0, 0.7);
 
+
     .main-menu {
         .order-now {
             a {
@@ -230,6 +231,11 @@ ul {
                 background-color: #fff;
                 z-index: 100;
                 pointer-events: none;
+                li{
+                    a{
+                        color: #000 !important;
+                    }
+                }
                 .nav {
                     display: block;
                     text-align: center;

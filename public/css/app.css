@@ -13992,6 +13992,10 @@ ul {
     pointer-events: none;
   }
 
+  .header-top .header-bottom-section .main-menu .navbar-collapse li a {
+    color: #000 !important;
+  }
+
   .header-top .header-bottom-section .main-menu .navbar-collapse .nav {
     display: block;
     text-align: center;
