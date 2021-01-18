@@ -179,7 +179,7 @@
                                     </div>
                                     <div class="row mt-3">
                                         <div class="col-sm-4" v-if="finalAmount >= 10">
-                                            <button class="subscribe btn btn-rounded-danger btn-block" type="button" @click="placeOrder()"> Confirm  </button>
+                                            <button class="subscribe btn btn-warning btn-block" type="button" @click="placeOrder()"> Confirm  </button>
                                         </div>
 
                                         <div class="col-sm-12" v-else>

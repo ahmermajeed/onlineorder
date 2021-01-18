@@ -88,16 +88,16 @@
             <div class="header-bottom section-fullwidth">
                 <div class="container">
                     <div class="row">
-                        <div class="col-2">
+                        <div class="col-lg-2 col-md-1 col-sm-12">
                             
                         </div>
-                        <div class="col-8">
+                        <div class="col-lg-8 col-md-10 col-sm-12">
                             <div class="contact-bnner">
                                 <div class="head-taj mb-3">
                                     <h2>Save 25% on orders over £30</h2>
                                 </div>
                                <div class="row">
-                                <div class="col-4 mt-0 px-0">
+                                <div class="col-lg-4 col-md-4 col-sm-12 mt-0 px-0">
                                     <div class="food">
                                         
                                         <div class="item-img text-center">
@@ -112,7 +112,7 @@
 
                                     
                                 </div>
-                                <div class="col-8 mt-0 px-0">
+                                <div class="col-lg-8 col-md-8 col-sm-12  mt-0 px-0">
                                     <div class="postal-code">
                                         <div class="search-res" v-if="this.$route.name !='online-order'">
                                         <h3>Enter Your Postal Code</h3>
@@ -144,7 +144,7 @@
                             </div>
                             
                         </div>
-                        <div class="col-2">
+                        <div class="col-lg-2 col-md-1 col-sm-12">
                             
                         </div>
                     </div>

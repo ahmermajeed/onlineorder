@@ -3,31 +3,34 @@
         <footer>
             <div class="main-ftr">
                 <div class="inner-ftr">
-                    <div class="container">
+                    <div class="container-fluid footer-top-head">
                         <div class="footer-top">
-                           <div class="row">
-                            <div class="col-lg-6 col-md-6 col-sm-12 footer-section-2 text-right">
-                                <div>
-                                   <a href="#"><img src="/images/theme-2/taj-footer-logo.png"></a> 
+                            <div class="row">
+                                <div class="col-lg-6 col-md-6 col-sm-12 footer-section-1 text-right">
+                                    <div>
+                                       <a href="#"><img src="/images/theme-2/taj-footer-logo.png"></a> 
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="col-lg-6 col-md-6 col-sm-12 footer-section-2">
-                                <div class="follow-us"> 
-                                    <h3>Follow</h3>
+                                <div class="col-lg-6 col-md-6 col-sm-12 footer-section-1">
+                                    <div class="follow-us"> 
+                                        <h3>Follow</h3>
+                                    </div>
+                                    <div class="icons">
+                                        <ul>
+                                            <li class="linked"><a href="#"><i class="icon-linkedin"></i></a></li>
+                                            <li class="twitter"><a href="#"><i class="icon-twitter"></i></a></li>
+                                            <li class="pinterest"><a href="#"><i class="icon-pinterest-logo"></i></a></li>
+                                            <li class="google-plus"><a href="#"><i class="icon-google-plus-logo"></i></a></li>
+                                            <li class="wifi"><a href="#"><i class="icon-rss-feed-symbol"></i></a></li>
+                                        </ul>
+                                        
+                                    </div>
                                 </div>
-                                <div class="icons">
-                                    <ul>
-                                        <li class="linked"><a href="#"><i class="icon-linkedin"></i></a></li>
-                                        <li class="twitter"><a href="#"><i class="icon-twitter"></i></a></li>
-                                        <li class="pinterest"><a href="#"><i class="icon-pinterest-logo"></i></a></li>
-                                        <li class="google-plus"><a href="#"><i class="icon-google-plus-logo"></i></a></li>
-                                        <li class="wifi"><a href="#"><i class="icon-rss-feed-symbol"></i></a></li>
-                                    </ul>
-                                    
-                                </div>
-                            </div>
-                        </div> 
+                            </div> 
                         </div>
+                    </div>
+                    <div class="container">
+                        
 
                         
                         <div class="footer-bottom">
@@ -44,7 +47,7 @@
                                     </ul> 
                                 </div>
                             </div>
-                             <div class="col-lg-4 col-md-4 footer-section-3 footer-section-space">
+                             <div class="col-lg-4 col-md-4 footer-section-2 footer-section-space text-center">
                                 <h3>Opening Hours</h3>
                                 <ul class="Opening-hours">
                                     <li>
@@ -57,7 +60,7 @@
                                     </li>
                                 </ul>
                             </div>
-                            <div class="col-lg-4 col-md-4 footer-section-1 footer-section-space">
+                            <div class="col-lg-4 col-md-4 footer-section-3 footer-section-space">
                                 <h3>Opening Hours</h3>
                                 <ul class="Opening">
                                     <li><a href="#"><span><i class="icon-smartphone-1"></i></span>02476441200</a></li>

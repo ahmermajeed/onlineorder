@@ -49,7 +49,7 @@ a {
 	border-radius: 0px;
 	box-shadow: 0px 15px 20px 0px rgba(0, 0, 0, 0.2) !important;
 	min-width: 140px;
-	&.btn-rounded-default{
+	/*&.btn-rounded-default{
 		background-color: #fff;
 		color:$red;
 	}
@@ -57,19 +57,19 @@ a {
 	    color: #fff !important;
 	    background: $btn-color1;
 	    @include gradient-x($start-color: $btn-color1, $end-color: $btn-color2, $start-percent: 0%, $end-percent: 100%)
-	}
+	}*/
 }
 
-.btn-outline-dark {
-    /*border-radius: 30px;
+/*.btn-outline-dark {
+    border-radius: 30px;
     border: none;
     width: 140px;
     font-weight: 700;
     box-shadow: 0px 15px 20px 0px rgba(0, 0, 0, 0.2);
     margin: 0 auto;
     padding: 8px;
-    color: $red !important;*/
-}
+    color: $red !important;
+}*/
 .btn-warning {
     background-color: $yellowdark !important;
     outline: none !important;
@@ -77,7 +77,7 @@ a {
         border: none;
 }
 
-.btn-outline-secondary {
+/*.btn-outline-secondary {
     border-radius: 17px;
     width: 140px;
     color: #fff !important;
@@ -89,15 +89,13 @@ a {
         width: 109px;
         font-size: 12px;
     }
-}
+}*/
 
-.btn-outline-secondary {
-    border-color: #d2ad3e;
-}
+
 .form-control{
 	border: 1px solid #d7d7d7;
 	&.form-control-rounded{
-		border-radius: 50px;
+		border-radius: 0px;
 	}
 }
 ul {
@@ -110,11 +108,11 @@ ul {
     font-weight: 600;
     color: #e3342f;
 }
-.main-logo{
+/*.main-logo{
 	img{
 		max-width: 100%;
 	}
-}
+}*/
 .header-top {
     position: absolute;
     left: 0;
@@ -185,6 +183,9 @@ ul {
         a {
             font-size: 14px;
             color: #fff !important;
+            @include media-breakpoint-only(md) {
+                color: #000 !important;
+            }
         }
 
         ul {
@@ -210,6 +211,7 @@ ul {
         .navbar-toggler {
             border-color: #ccc;
             position: relative;
+                background-color: rgba(255, 255, 255, 0.6);
             &[aria-expanded="false"] {
                 z-index: 0;
             }
@@ -248,16 +250,16 @@ ul {
 
 /********************footer start****************************/
 .main-ftr {
-    background-image: url(../../../images/theme-2/Taj-footer-banner.png);
+    background-image: url(/images/theme-2/taj-footer-section.png);
     background-repeat: no-repeat;
     background-position: bottom;
-    background-color: #111010;
+    background-size: cover;
+
 
     li {
         list-style: none;
-        border-bottom: 1px dashed #49453f;
+        border-bottom: 1px dashed #49453f; 
         padding: 5px 0px;
-        border-top: 1px dashed #49453f;
     }
 
     i {
@@ -265,7 +267,7 @@ ul {
         vertical-align: middle;
     }
 
-    .footer-section-1 {
+    .footer-section-3 {
         span {
             margin-right: 10px;
         }
@@ -286,7 +288,7 @@ ul {
 
         }
     }
-    .footer-section-2{
+    .footer-section-1{
             padding-right: 55px; 
         @include media-breakpoint-down(sm) {
             text-align:left !important; 
@@ -305,6 +307,7 @@ ul {
             margin-bottom: 0px;
             padding-top: 10px;
             padding-bottom: 16px;
+            border: none;
             @include media-breakpoint-down(sm) {
             padding-top: 40px;
         }
@@ -364,7 +367,16 @@ ul {
 
     }
 
-    .footer-section-3 {
+    .footer-section-2 {
+            @include media-breakpoint-down(sm) {
+              text-align: left !important;
+            }
+        h3 {
+            width: 58%;
+            @include media-breakpoint-down(md) {
+                width: 75%;
+            }
+        }
         .Opening-hours{
              a {
                  display: inline-block;
@@ -384,6 +396,11 @@ ul {
         color: #fff;
         padding-bottom: 20px;
         margin-bottom: 0px;
+        border-bottom: 1px dashed #49453f; 
+        width: 61%;
+        @include media-breakpoint-down(md) {
+            width: 75%;
+        }
     }
 
     a {
@@ -397,7 +414,7 @@ ul {
 
 
     .inner-ftr {
-        padding-bottom: 45px;
+        padding-bottom: 50px;
     }
 
     a {
@@ -408,17 +425,37 @@ ul {
         color: #b49f4f !important;
     }
 
-
-    .footer-top {
-        padding: 60px 0px 40px 0px;
+    .footer-top-head {
+        background-color: #000;
+        margin-bottom: 40px;
+        .footer-top {
+            padding: 60px 0px 40px 0px;
+        }
     }
+    
     
     .footer-bottom {
         li {
-            width: 65%;
+            width: 61%;
         @include media-breakpoint-down(md) {
-            width: 100%;
+            width: 75%;
         }
+        }
+        .footer-menu {
+            li {
+                color: #fff;
+                padding-left: 15px;
+                :after {
+                    content: "";
+                    position: absolute;
+                    width: 6px;
+                    height: 7px;
+                    background-color: #fff;
+                    left: 15px;
+                    border-radius: 24px;
+                    margin-top: 9px;
+                }
+            }
         }
     }
     .footer-section-space{
@@ -455,6 +492,13 @@ ul {
     background-size: cover;
     background-position: inherit;
     height: 650px;
+    @include media-breakpoint-down(md) {
+        padding: 121px 0px 60px 0px;
+    }
+    @include media-breakpoint-down(sm) {
+        background-position: center;
+        height: 670px;
+    }
    
     .contact-bnner {
         background-image: url("images/theme-2/banner-contact.jpg");
@@ -464,6 +508,13 @@ ul {
         padding-bottom: 45px;
         top: 37%;
          position: relative;
+         @include media-breakpoint-down(md) {
+            top: 27%;
+        }
+        @include media-breakpoint-down(sm) {
+            top: 5%;
+            padding: 20px 30px;
+        }
     	
         .head-taj{
             h2{
@@ -487,6 +538,9 @@ ul {
         		display: inline-block;
                 font-size: 26px;
                 color: #fff;
+                 @include media-breakpoint-down(md) {
+                    font-size: 20px;
+                }
         	
             }
         }
@@ -542,26 +596,27 @@ ul {
         background-repeat: no-repeat;
         color: #fff;
         padding: 15px;
-        @include media-breakpoint-down(lg) {
+        /*@include media-breakpoint-down(lg) {
             padding: 75px 25px 30px 25px;
-        }
-        @include media-breakpoint-only(md) {
-            margin-top: 30px;
-        }
+        }*/
+        
 
         @include media-breakpoint-down(sm) {
-            margin-top: 30px;
+            margin-top: 25px;
         }
         .taj-card-section {
             border: 1px solid #43535f;
             padding: 30px;
+            @include media-breakpoint-only(md) {
+                padding: 15px;
+            }
             .card-content {
                 overflow: hidden;
                 h3{
                     padding-top: 30px;
                     padding-bottom: 23px;
-                    @include media-breakpoint-down(lg){
-                        font-size: 22px;
+                    @include media-breakpoint-only(md) {
+                        font-size: 18px;
                     }
                 }
                 p{
@@ -580,17 +635,23 @@ ul {
                 .pries{
                         padding-bottom: 50px;
                     :after {
-                     content: "";
-                     position: absolute;
-                     background-color: #43535f;
-                     width: 70px;
+                    content: "";
+                    position: absolute;
+                    background-color: #43535f;
+                    width: 70px;
                     height: 1px;
                     left: 41%;
                     bottom: 24%;
+                        @include media-breakpoint-only(md) {
+                            left: 36%;
+                        }
                     }
                  }
                  img {
                     width: 130px;
+                    @include media-breakpoint-only(md) {
+                        width: 100px;
+                    }
                 }
                 
             }
@@ -611,13 +672,12 @@ ul {
     padding: 55px 0px 20px 0px;
 
     @include media-breakpoint-only(md) {
-        background-position: inherit;
+        background-position: right;
     }
 
     @include media-breakpoint-down(sm) {
-        padding: 20px 0px 0px 0px;
-        background-position: inherit;
-        background-size: cover;
+        padding: 40px 0px 35px 0px;
+        background-position: right;
     }
 
     .rating-content {
@@ -647,6 +707,16 @@ ul {
         color: #e3342f;
         text-transform: uppercase;
         font-weight: bolder;
+        /*@include media-breakpoint-only(md) {
+            font-size: 28px;
+            line-height: 30px;
+            padding-top: 5px;
+        }*/
+        @include media-breakpoint-down(sm) {
+            font-size: 28px;
+            line-height: 30px;
+            padding-top: 5px;
+        }
     }
     span {
         font-size: 13px;
@@ -657,6 +727,11 @@ ul {
         font-size: 26px;
         color: #000;
         font-weight: 500;
+        @include media-breakpoint-down(sm) {
+            font-size: 29px;
+            line-height: 30px;
+            padding-top: 6px;
+        }
     }
 
     .located-num {
@@ -667,12 +742,17 @@ ul {
 
         @include media-breakpoint-down(sm) {
            	margin: 5px 0;
+            padding: 10px 20px;
         }
 
         strong {
             color: $red;
             line-height: 40px;
             font-weight: 400;
+             @include media-breakpoint-only(md) {
+                font-size: 28px;
+               
+            }
 
             @include media-breakpoint-down(sm) {
                 font-size: 25px;
@@ -682,6 +762,10 @@ ul {
         p {
             font-size: 16px;
             color: #000;
+            @include media-breakpoint-only(md) {
+                font-size: 14px;
+               
+            }
             @include media-breakpoint-down(sm) {
                 font-size: 12px;
             }
@@ -691,10 +775,8 @@ ul {
 
     img {
        
-
-
         @include media-breakpoint-only(md) {
-            width: 100%;
+            width: 84%;
             margin-top: 35px;
         }
 
@@ -711,345 +793,138 @@ ul {
 
 }
 
-/*.menu-box {
-    background-image: url("images/theme-1/menu-banner.jpg");
-    background-repeat: no-repeat;
-    background-position: top;
-    background-size: cover;
-    overflow: hidden;
-    .menus-pattern-second {
-        background-image: url("images/theme-1/pizzas-baner.jpg");
-        background-repeat: no-repeat;
-        background-position: top;
-        border-top-left-radius: 80px;
-        border-bottom-left-radius: 80px;
-        height: 635px;
-        margin-left: 20px;
-        padding: 15px 0px 0px 20px;
 
-        @include media-breakpoint-only(md) {
-            margin-top: 150px;
-        }
-
-        @include media-breakpoint-down(sm) {
-            margin-top: 100px;
-        }
-
-        .second-menu {
-            background: rgba(255, 255, 255, 0.9);
-            border-top-left-radius: 80px;
-            border-bottom-left-radius: 80px;
-            padding: 60px 100px 55px 30px;
-            margin-top: 28px;
-            margin-left: 5px;
-            margin-right: -15px;
-            box-shadow: 0px 20px 20px 0px rgba(0, 0, 0, 0.3);
-
-            @include media-breakpoint-only(md) {
-                padding: 60px 100px 35px 30px;
-            }
-
-            @include media-breakpoint-down(sm) {
-                padding: 40px 40px 40px 15px;
-                margin-top: 15px;
-                margin-left: 0px;
-                margin-right: 0px;
-            }
-
-
-
-        }
-
-        .menu-second-before:before {
-            content: "";
-            position: absolute;
-            background-image: url("images/theme-1/pizza-before.png");
-            background-repeat: no-repeat;
-            width: 75%;
-            height: 110px;
-            top: 43px;
-            left: 45px;
-            border-top-left-radius: 80px;
-            z-index: 1;
-
-            @include media-breakpoint-only(md) {
-                top: 193px;
-            }
-
-            @include media-breakpoint-down(sm) {
-                top: 28%;
-                left: 40px;
-            }
-        }
-
+.menu-box{
+    position: relative;
+    @include media-breakpoint-down(sm) {
+        padding: 40px 15px;
     }
-
-    .menus-pattern-first {
-        background-image: url("images/menu-patterns-first.jpg");
-        background-repeat: no-repeat;
-        background-position: top;
-        border-top-right-radius: 80px;
-        border-bottom-right-radius: 80px;
-        height: 635px;
-        padding: 15px 10px 0px 0px;
-
-        .first-menu {
-            background: rgba(255, 255, 255, 0.9);
-            border-top-right-radius: 80px;
-            border-bottom-right-radius: 80px;
-            padding: 60px 25px 55px 100px;
-            margin-top: 28px;
-            margin-right: 15px;
-            box-shadow: 20px 7px 20px 0px rgba(0, 0, 0, 0.3);
-
-            @include media-breakpoint-only(md) {
-                padding: 60px 25px 110px 100px;
-
+        .second-section {
+            margin-top: 60px;
+            h2{
+                margin-bottom: 20px;
             }
-            @include media-breakpoint-down(sm) {
-                padding: 40px 20px 40px 25px;
-            }
-
+            .btn.btn-warning {
+                 margin-top: 40px;
+             }
         }
+    .menu-left{
 
-        .menu-first-before:before {
-            content: "";
-            position: absolute;
-            background-image: url(images/theme-1/first-menu-before.png);
-            background-repeat: no-repeat;
-            width: 100%;
-            height: 219px;
-            top: -36px;
-            left: 0;
-            z-index: 1;
-            @include media-breakpoint-down(sm) {
-                background-size: 120px auto;
-                height: 150px;
-            }
-        }
+        .menu-img-top{
+            img {
 
-
-    }
-
-    .title-styl h2 {
-        position: relative;
-        z-index: 2;
-        text-shadow: -1px -1px #fff;
-    }
-
-    .menu-content {
-        p {
-            font-size: 14px;
-        }
-
-
-
-    }
-
-    .menu-item {
-        .box-borders {
-            border-bottom: 1px dashed !important;
-            padding: 10px 0px 5px 0px !important;
-
-            p {
-                font-size: 16px;
-                line-height: 20px;
-                font-size: 14px;
-
-            }
-
-            span {
-                font-size: 14px;
-                font-weight: 600;
-            }
-
-        }
-
-    }
-
-    .family-section {
-        padding: 100px 0px 0 0px;
-        background-image: url("images/theme-1/menu-banner.jpg");
-
-        @include media-breakpoint-only(xl) {
-
-            padding-top: 180px;
-        }
-
-        @include media-breakpoint-only(lg) {
-
-            padding-top: 180px;
-        }
-
-        @include media-breakpoint-down(sm) {
-            margin-top: 150px;
-        }
-
-        .family-card {
-            background-image: url("images/theme-1/familys-one.jpg");
-            background-repeat: no-repeat;
-            width: 90%;
-            padding: 30px 0px 20px 0px;
-            box-shadow: 0px 20px 20px 0px rgba(0, 0, 0, 0.3);
-
-            @include media-breakpoint-only(md) {
                 width: 100%;
-                background-position: center;
+                box-shadow: 0px 15px 20px 0px rgba(0, 0, 0, 0.15) !important;
+                margin-bottom: 30px;
+                border: 1px solid $yellowdark;
             }
-
-            @include media-breakpoint-down(sm) {
-                width: 100%;
-                background-position: top;
-                padding: 30px 0px 20px 30px;
-                margin-top: 30px;
-            }
-
-            h3 {
-                color: #ffed4a;
-                font-size: 24px;
-                margin-bottom: 10px;
-
-                @include media-breakpoint-only(md) {
-                    font-size: 20px;
+            h2 {
+                font-size: 36px;
+                font-weight: 500;
+                color: #d1ab3c;
+                margin: 0;
+                text-transform: uppercase;
+                @include media-breakpoint-down(sm) {
+                    font-size: 30px;
+                    margin-bottom: 19px !important;
                 }
             }
-
-            ul {
-                padding: 0;
-                margin: 0;
-
-                li {
-                    color: #fff;
-                    list-style: none;
+        }
+        .menu-left-item{
+            .order-taj {
+                padding-bottom: 15px;
+                p {
                     font-size: 16px;
-
+                    color: $red;
+                    font-weight: 600;
                     @include media-breakpoint-down(sm) {
-                        font-size: 14px;
+                       font-size: 14px;
                     }
                 }
-            }
-
-            img {
-                width: 100%;
-                padding: 30px 0px 15px 0px;
-            }
-
-        }
-
-        .view-btn {
-            border: none !important;
-            padding: 0 !important;
-            padding-top: 60px !important;
-            @include media-breakpoint-down(sm) {
-                padding-top: 40px !important;
-            }
-            a {
-                color: #fff !important;
-                font-size: 14px;
-                font-weight: bold;
-            }
-        }
-
-    }
-
-}*/
- .second-section {
-        margin-top: 60px;
-        h2{
-            margin-bottom: 20px;
-        }
-        .btn.btn-warning {
-            margin-top: 40px;
-        }
-}
-.menu-left{
-
-    .menu-img-top{
-        img {
-
-            width: 100%;
-            box-shadow: 0px 15px 20px 0px rgba(0, 0, 0, 0.15) !important;
-            margin-bottom: 30px;
-            border: 1px solid $yellowdark;
-        }
-        h2 {
-            font-size: 36px;
-            font-weight: 500;
-            color: #d1ab3c;
-            margin: 0;
-            text-transform: uppercase;
-        }
-    }
-    .menu-left-item{
-        .order-taj {
-            padding-bottom: 15px;
-            p {
-                font-size: 16px;
-                color: $red;
-                font-weight: 600;
-            }
-            .badge-primary {
-                background-color: $purple;
-                padding: 6px;
-                border-radius: inherit;
-            }
-        }
-        
-        .border-bottom-taj {
-            border-bottom: 1px solid #e1e1e1;
-            padding: 6px;
-            ul {
-                list-style: circle;
-                margin-left: 11px;
-                 li {
-                    font-size: 16px;
+                .badge-primary {
+                    background-color: $purple;
+                    padding: 6px;
+                    border-radius: inherit;
                 }
             }
-           
-            .pries-menu {
-                font-weight: 700;
+            
+            .border-bottom-taj {
+                border-bottom: 1px solid #e1e1e1;
+                padding: 6px;
+                ul {
+                    list-style: circle;
+                    margin-left: 11px;
+                     li {
+                        font-size: 16px;
+                        @include media-breakpoint-down(sm) {
+                            font-size: 14px;
+                        }
+                    }
+                }
+               
+                .pries-menu {
+                    font-weight: 700;
+                }
             }
+        }
+
+    }
+    .menu-right{
+        background-image: url("images/theme-2/order-right.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        padding: 20px;
+        margin-top: 70px;
+        margin-left: 50px;
+        box-shadow: 0px 15px 20px 0px rgba(0, 0, 0, 0.15) !important;
+        @include media-breakpoint-only(md) {
+            margin-left: 0px;
+        }
+        @include media-breakpoint-down(sm) {
+             margin-left: 0px;
+             margin-top: 45px;
+        }
+        .order-box-1 {
+            background-color: rgba(255, 255, 255, 0.6);
+            border: 1px solid #fff;
+            padding: 30px;
+                h2 {
+                font-weight: 500;
+                text-transform: uppercase;
+            }
+            p {
+                font-size: 16px;
+            }
+            span {
+                font-size: 16px;
+                color: $red;
+            }
+            .btn.btn-warning {
+                margin-top: 30px;
+                border: 2px solid;
+            }
+        }
+    }
+    .full-image {
+        img {
+          
+            position: absolute;
+            right: 0px;
+            margin-top: -30%;
+            @include media-breakpoint-only(md) {
+                display: none;
+            }
+            @include media-breakpoint-down(sm) {
+                 display: none;
+            }
+            
         }
     }
 
 }
-.menu-right{
-    background-image: url("images/theme-2/order-right.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    padding: 20px;
-    margin-top: 70px;
-    margin-left: 50px;
-    box-shadow: 0px 15px 20px 0px rgba(0, 0, 0, 0.15) !important;
-    .order-box-1 {
-        background-color: rgba(255, 255, 255, 0.6);
-        border: 1px solid #fff;
-        padding: 30px;
-            h2 {
-            font-weight: 500;
-            text-transform: uppercase;
-        }
-        p {
-            font-size: 16px;
-        }
-        span {
-            font-size: 16px;
-            color: $red;
-        }
-        .btn.btn-warning {
-            margin-top: 30px;
-            border: 2px solid;
-        }
-    }
-}
-.full-image {
-    img {
-        width: 100%;
-        position: absolute;
-        left: 38%;
-        bottom: 4%;
-    }
-}
+
+
+
 
 .deal-section {
     background-image: url("images/theme-2/discover-img.jpg");
@@ -1061,6 +936,10 @@ ul {
         margin: 0px 40px;
         padding: 60px;
         border: 1px solid #fff;
+        @include media-breakpoint-down(sm) {
+            margin: 0px 20px;
+            padding: 40px 20px;
+        }
     }
     p {
         font-size: 20px;
@@ -1094,6 +973,10 @@ ul {
             font-size: 40px;
             font-weight: 500;
             text-transform: uppercase;
+             @include media-breakpoint-down(sm) {
+                font-size: 33px;
+                margin-bottom: 20px;
+            }
         }
     }
 
@@ -1138,8 +1021,8 @@ ul {
     background-repeat: no-repeat;
     background-size: cover;
     .form-box {
-        border-radius: 10px !important;
         background-color: #fff;
+        padding: 40px;
         box-shadow: 0px 15px 20px 0px rgba(0, 0, 0, 0.2);
 
         .title {
@@ -1170,27 +1053,55 @@ ul {
         }
 
         form {
-            padding: 40px 35px 40px 35px;
+            .frm-body{
+                
+                input.form-control {
+                   
+                    padding: 0;
+                    border: none;
+                    border-bottom: 1px solid #d7d7d7;
+                    border-radius: 0;
 
-            input.form-control {
-                width: 80%;
-                display: inline-block;
-                float: right;
-                border: none;
-                border-bottom: 1px solid #d7d7d7;
-                border-radius: 0;
-
-                @include media-breakpoint-down(sm) {
-                    width: 72%;
                 }
 
-
+                label {
+                    font-size: 12px;
+                    font-weight: 700;
+                    margin: 0px;
+                    text-transform: uppercase;
+                    padding-top: 7px;
+                    color: $yellowdark;
+                }
+            }
+            .frm-body:after {
+                    content: "";
+                    position: absolute;
+                    background-color: $yellowdark;
+                    width: 1px;
+                    height: 313px;
+                    left: -9%;
+                    top: 11px;
+                 @include media-breakpoint-down(sm) {
+                    width: 313px;
+                    height: 1px;
+                    left: -6%;
+                    top: -10px;
+                }
             }
 
-            label {
-                font-size: 14px;
-                font-weight: 700;
-                padding-top: 7px;
+            
+        }
+         img {
+            position: absolute;
+            top: 37%;
+            @include media-breakpoint-only(md) {
+                    width: 80%;
+            }
+            @include media-breakpoint-down(sm) {
+                position: inherit;
+                top: 0;
+                width: 100%;
+                margin-bottom: 33px;
             }
         }
     }
@@ -1244,7 +1155,6 @@ ul {
 	.cart-box{
 		background: #F4F8FB;
         border: 1px solid #e1e1e1;
-        border-radius: 20px;
         overflow: hidden;
         .lp-sidebar-title{
 			background-color: #fff;
@@ -1257,7 +1167,6 @@ ul {
 
     .sidebar-area {
         border: 1px solid #e1e1e1;
-        border-radius: 20px;
 
         .cate-list {
             padding: 0px 15px;
@@ -1365,11 +1274,10 @@ ul {
 
         }
 
-        .btn-outline-success {
+        .btn-warning {
             padding: 4px 10px 2px 10px;
-            border-radius: 32px;
             color: #fff !important;
-            background-color: #41ad49;
+            background-color: $yellowdark;
             border: none;
             float: right;
             font-size: 12px;
@@ -1491,13 +1399,13 @@ ul {
                 font-size: 14px;
                 font-weight: 700;
                 padding-top: 7px;
+                color: $yellowdark;
             }
 
             .reactions {
                 border: 1px solid #e1e1e1;
                 padding: 10px;
                 background-color: #fff;
-                border-radius: 8px;
                 box-shadow: 0px 10px 20px 0px rgba(0, 0, 0, 0.1);
                 margin: 30px 0px 10px 0px !important;
 
@@ -1563,7 +1471,7 @@ ul {
                 width: 100% !important;
                 border: 1px solid #e1e1e1 !important;
                 background-color: #fff !important;
-                border-radius: 10px !important;
+                border-radius: 0px !important;
             }
 
 
@@ -1868,6 +1776,7 @@ ul {
                  textarea {
                     background-color: #f5f9fb;
                     border-color: #e1e1e1;
+                    border-radius: inherit;
                 }
             }
             .count-footer {
@@ -1975,15 +1884,18 @@ ul {
             h3 {
                 padding-bottom: 12px;
             }
+            label{
+                color: $yellowdark;
+            }
         }
         .cash-delivery{
              label {
                 width: 48%;
                 padding: 8px 10px;
                 border: 1px solid #e1e1e1;
+                 color: $yellowdark;
                 font-size: 16px;
                 font-weight: 700;
-                border-radius: 6px;
                 position: relative;
                 @include media-breakpoint-down(sm) {
                     width: 100%;
@@ -2011,6 +1923,7 @@ ul {
             label {
                 font-size: 14px;
                 font-weight: bold;
+                color: $yellowdark;
             }
             .form-control {
               
@@ -2048,13 +1961,10 @@ ul {
        
         .cart-box {
             border: 1px solid #e1e1e1;
-            border-radius: 20px;
             .check-out-list {
                 background-color: #f5f8fa;
                 border-top: 1px solid #e1e1e1;
                 padding: 0px 20px;
-                border-bottom-right-radius: 20px;
-                border-bottom-left-radius: 20px;
                 padding-bottom: 20px;
                 .table-holder{
                     overflow-y: hidden;
