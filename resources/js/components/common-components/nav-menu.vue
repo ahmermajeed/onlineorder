@@ -13,7 +13,7 @@
                                     <ul>
                                          <li class="mail-space"><i class="icon-mail-2"></i>
                                             <span>
-                                                <a href="mailto:Info@yourdomain.com">Info@yourdomain.com</a>
+                                                <a href="mailto:Info@bigsaj.com">info@bigsaj.com</a>
                                             </span>
                                         </li>
                                         <!-- <li><i class="icon-placeholder"></i>
@@ -43,7 +43,7 @@
                             <div class="col-6 col-md-3">
                                 <router-link :to="{ path: '/'}">
                                      <a class="navbar-brand js-scroll-trigger main-logo" href="javascript:;">
-                                        <img src="/images/theme-1/Ali-baba-logo.png">
+                                        <img src="/images/bigsage-logo.png">
                                     </a>
                                 </router-link>
                             </div>
@@ -56,7 +56,7 @@
                                     <ul class="nav ">
 
                                         <li class="nav-item active"> <router-link :to="{ path: '/'}"><a class="nav-link js-scroll-trigger" href="#about">Home</a></router-link></li>
-                                        <li class="nav-item "> <router-link :to="{ path: '/About us'}"><a class="nav-link js-scroll-trigger" >About us</a></router-link></li>
+                                        <li class="nav-item "> <router-link :to="{ path: '/about-us'}"><a class="nav-link js-scroll-trigger" >About us</a></router-link></li>
                                         <li class="nav-item "> <router-link :to="{ path: '/feedback'}"><a class="nav-link js-scroll-trigger" >Feedback</a></router-link></li>
                                         <li class="nav-item">
                                             <a href="#" @click="openAllergy" class="nav-link">Allergy Information</a>

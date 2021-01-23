@@ -72,6 +72,8 @@
                                             </label>
                                         </div>
 
+                                      
+
                                        <!-- <div class="col-sm-6">
                                             <label>Time</label>
                                             <b-form-timepicker v-model="value" locale="en"></b-form-timepicker>
@@ -94,11 +96,19 @@
                                             <input type="text"  v-model="form.town" class="form-control" placeholder="abc town">
                                         </div>
 
-                                        <div class="col-sm-6">
+                                        <div class="col-sm-6 mb-2">
                                             <label  class="col-form-label">Postal Code *</label>
                                             <input type="text"   v-model="form.postal_code" class="form-control" placeholder="wc2h 9ah">
                                         </div>
                                     </div>
+                                    <div class="row">
+                                        <div class="col-sm-12 cash-delivery section-delivery">
+                                              <label class="customradiobutton radioiconed radio-inline">
+                                                  <input type="radio" value="collection" class="mr-2">Collection
+                                              </label>
+                                          </div>
+                                    </div>
+                                 
                                 </div>
                             </div>
 

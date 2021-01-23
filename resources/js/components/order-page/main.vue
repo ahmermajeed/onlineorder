@@ -76,6 +76,20 @@
                                 <h3 class="text-left">Your Cart</h3>
                                 <img src="../../../images/cart.png">
                             </div>
+                            <div class="col-sm-12 mt-4 my-cart-section">
+                                    <div class="form-check">
+                                      <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                                      <label class="form-check-label" for="flexRadioDefault1">
+                                        Delivery
+                                      </label>
+                                    </div>
+                                    <div class="form-check">
+                                      <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+                                      <label class="form-check-label" for="flexRadioDefault2">
+                                        Collection
+                                      </label>
+                                    </div>
+                            </div>
                             <div class="lp-sidebar-body">
                                 <div class="img-box text-center">
                                     <h5 v-if="getAllCartArray.length == 1" class="mt-2">No item in your cart</h5>
@@ -521,6 +535,11 @@
     }
 </script>
 <style>
+    .my-cart-section {
+        .form-check {
+            display: inline-block;
+        }
+    }
     .cover {
         background-image: url('https://res.cloudinary.com/ordering2/image/upload/f_auto,q_auto,h_800,c_limit/v1573197396/w7h69zusidjo01abgrel.jpg');
     }
