@@ -62,9 +62,9 @@
 <!--                                            <a href="#" @click="openAllergy" class="nav-link">Allergy Information</a>-->
 <!--                                        </li>-->
 
-<!--                                        <li class="nav-item">-->
-<!--                                            <a href="#" class="nav-link" @click="openMenu">Our Menu</a>-->
-<!--                                        </li>-->
+                                        <li class="nav-item">
+                                            <a href="#" class="nav-link" @click="openMenu">Our Menu</a>
+                                        </li>
 
                                         <!--                            <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#services">Menu</a></li>-->
                                         <!--                            <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#contact">GALLERY</a></li>-->
@@ -104,7 +104,7 @@
                                         </div>
 
                                         <div class="num-img text-center">
-                                           <a href="tel: 02476441200"> <img src="/images/theme-1/banner-num.png"></a>
+                                           <a href="tel: 0121 440 3393"> 0121 440 3393</a>
                                         </div>
 
                                     </div>
