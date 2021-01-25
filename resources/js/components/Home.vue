@@ -100,8 +100,8 @@
 
                             </div>
                             <div class="located-num text-center">
-                                <strong>0203 490 2727</strong>
-                                <p><i class="icon-placeholder"></i>  10 Peckham Park Road, London SE15 6TW</p>
+                                <strong>01484 518 555</strong>
+                                <p> 46A Chapel Hill HD1 3EB HUDDERSFIELD</p>
                             </div>
 
 
@@ -126,9 +126,8 @@
                                          <img src="images/theme-2/order-cash-1.jpg">
                                     </div>
                                     <div class="col-12 px-0">
-                                            <h2>Burgers & Rolls</h2>
-                                        </div>
-                                    
+                                            <h2>Burgers</h2>
+                                        </div>                                    
                                 </div>
                                
                                 
@@ -139,17 +138,18 @@
                                     <div class="row ">
                                         
                                         <div class="col-6 px-0 ">
-                                            <p>Meals Include 1 Fries & 1 Drink</p>
+                                            <p>All burgers are served in a toasted gourmet bun with fresh salad &amp; chunky chips</p>
                                         </div>
-                                        <div class="col-3  text-center">
-                                            <span class="badge badge-primary">Single</span>
-                                            
+                                        <div class="col-2 text-center">
+                                            <span class="badge badge-primary">1/4 Lb</span>    
                                         </div>
-                                        <div class="col-3 text-center">
-                                            <span class="badge badge-primary">Meal</span>
-                                            
+                                        <div class="col-2 text-center">
+                                            <span class="badge badge-primary">1/2 Lb</span>    
                                         </div>
-                                        
+                                        <div class="col-2 text-center">
+                                            <span class="badge badge-primary">Triple</span>    
+                                        </div>
+                                                                                
                                     </div>
                                 </div>
                                 
@@ -157,196 +157,228 @@
                                     <div class="col-6 px-0  ">
                                         <ul>
                                             <li>
-                                                Masala Fish Burger
+                                               Plain Burger
                                             </li>
                                         </ul>
                                     </div>
-                                    <div class="col-3  text-center">
-                                        <span class="pries-menu">Rs 5.00</span>
-                                        
+                                    <div class="col-2 text-center">
+                                        <span class="pries-menu">Rs 3.50</span>                                        
                                     </div>
-                                    <div class="col-3 text-center">
-                                        <span class="pries-menu">Rs 7.50</span>
-                                        
+                                    <div class="col-2 text-center">
+                                        <span class="pries-menu">Rs 4.50</span>                                        
+                                    </div>
+                                    <div class="col-2 text-center">
+                                        <span class="pries-menu">Rs 5.50</span>                                        
                                     </div>
                                     
                                 </div>
+
                                 <div class="row border-bottom-taj">
                                     <div class="col-6 px-0  ">
                                         <ul>
                                             <li>
-                                                Masala Fish Burger
+                                               Cheese Burger
                                             </li>
                                         </ul>
                                     </div>
-                                    <div class="col-3   text-center">
-                                        <span class="pries-menu">Rs 5.00</span>
-                                        
+                                    <div class="col-2 text-center">
+                                        <span class="pries-menu">Rs 3.50</span>                                        
                                     </div>
-                                    <div class="col-3  text-center">
-                                        <span class="pries-menu">Rs 7.50</span>
-                                        
+                                    <div class="col-2 text-center">
+                                        <span class="pries-menu">Rs 4.50</span>                                        
+                                    </div>
+                                    <div class="col-2 text-center">
+                                        <span class="pries-menu">Rs 5.50</span>                                        
                                     </div>
                                     
                                 </div>
+
                                 <div class="row border-bottom-taj">
                                     <div class="col-6 px-0  ">
                                         <ul>
                                             <li>
-                                                Masala Fish Burger
+                                               Hot Shot Burger
                                             </li>
                                         </ul>
                                     </div>
-                                    <div class="col-3   text-center">
-                                        <span class="pries-menu">Rs 5.00</span>
-                                        
+                                    <div class="col-2 text-center">
+                                        <span class="pries-menu">Rs 3.80</span>                                        
                                     </div>
-                                    <div class="col-3  text-center">
-                                        <span class="pries-menu">Rs 7.50</span>
-                                        
+                                    <div class="col-2 text-center">
+                                        <span class="pries-menu">Rs 4.80</span>                                        
+                                    </div>
+                                    <div class="col-2 text-center">
+                                        <span class="pries-menu">Rs 5.80</span>                                        
                                     </div>
                                     
                                 </div>
+
                                 <div class="row border-bottom-taj">
                                     <div class="col-6 px-0  ">
                                         <ul>
                                             <li>
-                                                Masala Fish Burger
+                                               Americano Burger
                                             </li>
                                         </ul>
                                     </div>
-                                    <div class="col-3 text-center">
-                                        <span class="pries-menu">Rs 5.00</span>
-                                        
+                                    <div class="col-2 text-center">
+                                        <span class="pries-menu">Rs 3.60</span>                                        
                                     </div>
-                                    <div class="col-3  text-center">
-                                        <span class="pries-menu">Rs 7.50</span>
-                                        
+                                    <div class="col-2 text-center">
+                                        <span class="pries-menu">Rs 4.60</span>                                        
+                                    </div>
+                                    <div class="col-2 text-center">
+                                        <span class="pries-menu">Rs 5.60</span>                                        
                                     </div>
                                     
                                 </div>
+
                                 <div class="row border-bottom-taj">
                                     <div class="col-6 px-0  ">
                                         <ul>
                                             <li>
-                                                Masala Fish Burger
+                                               Vegitable Burger
                                             </li>
                                         </ul>
                                     </div>
-                                    <div class="col-3   text-center">
-                                        <span class="pries-menu">Rs 5.00</span>
-                                        
+                                    <div class="col-2 text-center">
+                                        <span class="pries-menu">Rs 3.50</span>                                        
                                     </div>
-                                    <div class="col-3 text-center">
-                                        <span class="pries-menu">Rs 7.50</span>
-                                        
+                                    <div class="col-2 text-center">
+                                        <span class="pries-menu">Rs 4.50</span>                                        
+                                    </div>
+                                    <div class="col-2 text-center">
+                                        <span class="pries-menu">Rs 5.50</span>                                        
                                     </div>
                                     
                                 </div>
+
                                 <div class="row border-bottom-taj">
                                     <div class="col-6 px-0  ">
                                         <ul>
                                             <li>
-                                                Masala Fish Burger
+                                               Coleslaw Burger
                                             </li>
                                         </ul>
                                     </div>
-                                    <div class="col-3   text-center">
-                                        <span class="pries-menu">Rs 5.00</span>
-                                        
+                                    <div class="col-2 text-center">
+                                        <span class="pries-menu">Rs 3.70</span>                                        
                                     </div>
-                                    <div class="col-3  text-center">
-                                        <span class="pries-menu">Rs 7.50</span>
-                                        
+                                    <div class="col-2 text-center">
+                                        <span class="pries-menu">Rs 4.70</span>                                        
                                     </div>
-                                    
+                                    <div class="col-2 text-center">
+                                        <span class="pries-menu">Rs 5.70</span>                                       
+                                    </div>                                    
                                 </div>
+
                                 <div class="row border-bottom-taj">
                                     <div class="col-6 px-0  ">
                                         <ul>
                                             <li>
-                                                Masala Fish Burger
+                                               Mexicano Burger
                                             </li>
                                         </ul>
                                     </div>
-                                    <div class="col-3   text-center">
-                                        <span class="pries-menu">Rs 5.00</span>
-                                        
+                                    <div class="col-2 text-center">
+                                        <span class="pries-menu">Rs 3.80</span>                                        
                                     </div>
-                                    <div class="col-3  text-center">
-                                        <span class="pries-menu">Rs 7.50</span>
-                                        
+                                    <div class="col-2 text-center">
+                                        <span class="pries-menu">Rs 4.80</span>                                        
                                     </div>
-                                    
+                                    <div class="col-2 text-center">
+                                        <span class="pries-menu">Rs 5.80</span>                                       
+                                    </div>                                    
                                 </div>
+
                                 <div class="row border-bottom-taj">
                                     <div class="col-6 px-0  ">
                                         <ul>
                                             <li>
-                                                Masala Fish Burger
+                                               Fried Chicken Burger
                                             </li>
                                         </ul>
                                     </div>
-                                    <div class="col-3  text-center">
-                                        <span class="pries-menu">Rs 5.00</span>
-                                        
+                                    <div class="col-2 text-center">
+                                        <span class="pries-menu">Rs 3.70</span>                                        
                                     </div>
-                                    <div class="col-3  text-center">
-                                        <span class="pries-menu">Rs 7.50</span>
-                                        
+                                    <div class="col-2 text-center">
+                                        <span class="pries-menu">Rs 4.70</span>                                        
                                     </div>
-                                    
+                                    <div class="col-2 text-center">
+                                        <span class="pries-menu">Rs 5.70</span>                                       
+                                    </div>                                    
                                 </div>
+
                                 <div class="row border-bottom-taj">
                                     <div class="col-6 px-0  ">
                                         <ul>
                                             <li>
-                                                Masala Fish Burger
+                                               Grilled Chicken Burger
                                             </li>
                                         </ul>
                                     </div>
-                                    <div class="col-3 text-center">
-                                        <span class="pries-menu">Rs 5.00</span>
-                                        
+                                    <div class="col-2 text-center">
+                                        <span class="pries-menu">Rs 3.70</span>                                        
                                     </div>
-                                    <div class="col-3  text-center">
-                                        <span class="pries-menu">Rs 7.50</span>
-                                        
+                                    <div class="col-2 text-center">
+                                        <span class="pries-menu">Rs 4.70</span>                                        
                                     </div>
-                                    
+                                    <div class="col-2 text-center">
+                                        <span class="pries-menu">Rs 5.70</span>                                       
+                                    </div>                                    
                                 </div>
+
                                 <div class="row border-bottom-taj">
-                                   <div class="col-6 px-0  ">
+                                    <div class="col-6 px-0  ">
                                         <ul>
                                             <li>
-                                                Masala Fish Burger
+                                               Grilled Peri Peri Chicken Burger
                                             </li>
                                         </ul>
                                     </div>
-                                    <div class="col-3   text-center">
-                                        <span class="pries-menu">Rs 5.00</span>
-                                        
+                                    <div class="col-2 text-center">
+                                        <span class="pries-menu">Rs 3.80</span>                                        
                                     </div>
-                                    <div class="col-3  text-center">
-                                        <span class="pries-menu">Rs 7.50</span>
-                                        
+                                    <div class="col-2 text-center">
+                                        <span class="pries-menu">Rs 4.80</span>                                        
                                     </div>
-                                    
+                                    <div class="col-2 text-center">
+                                        <span class="pries-menu">Rs 5.80</span>                                       
+                                    </div>                                    
                                 </div>
+                           
                                 
                             </div>
                             
                         </div>
                         <div class="menu-left second-section">
                             <div class="menu-img-top">
+                                
                                 <div class="row">
                                     <div class="col-12 px-0">
                                          <img src="images/theme-2/order-cash-2.jpg">
                                     </div>
                                     <div class="col-12 px-0">
-                                            <h2>Naan & Roti</h2>
+                                            <h2>Grilled Kebabs</h2>
                                         </div>
                                     
+                                </div>
+                                  <div class="order-taj">
+                                    <div class="row ">
+                                        
+                                        <div class="col-7 px-0 ">
+                                            &nbsp;
+                                        </div>
+                                        
+                                        <div class="col-2 text-center">
+                                            <span class="badge badge-primary">Reg</span>    
+                                        </div>
+                                        <div class="col-2 text-center">
+                                            <span class="badge badge-primary">Lrg</span>    
+                                        </div>
+                                                                                
+                                    </div>
                                 </div>
                                
                                 
@@ -356,168 +388,181 @@
                                 
                                 
                                 <div class="row border-bottom-taj">
-                                    <div class="col-9 px-0 ">
+                                    <div class="col-7 px-0 ">
                                         <ul>
                                             <li>
-                                                Masala Fish Burger
+                                                Grilled Donar in pitta
                                             </li>
                                         </ul>
                                     </div>
-                                    <div class="col-3   text-center">
-                                        <span class="pries-menu">Rs 5.00</span>
+                                    <div class="col-2 text-center">
+                                        <span class="pries-menu">Rs 4.50</span>
+                                    </div>
+                                    <div class="col-2 text-center">
+                                        <span class="pries-menu">Rs 5.50</span>
+                                    </div>
+                                    
+                                    
+                                </div>
+                                <div class="row border-bottom-taj">
+                                    <div class="col-7 px-0 ">
+                                        <ul>
+                                            <li>
+                                                Grilled Donar fillet in pitta
+                                                
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="col-2 text-center">
+                                        <span class="pries-menu">Rs 4.50</span>
+                                        
+                                    </div> <div class="col-2 text-center">
+                                        <span class="pries-menu">Rs 5.50</span>
                                         
                                     </div>
                                     
                                     
                                 </div>
                                 <div class="row border-bottom-taj">
-                                    <div class="col-9 px-0 ">
+                                     <div class="col-7 px-0 ">
                                         <ul>
                                             <li>
-                                                Masala Fish Burger
+                                                Grilled Donar Meat on naan
+                                                
                                             </li>
                                         </ul>
                                     </div>
-                                    <div class="col-3 text-center">
-                                        <span class="pries-menu">Rs 5.00</span>
+                                    <div class="col-2 text-center">
+                                        <span class="pries-menu">Rs 4.50</span>
+                                        
+                                    </div> <div class="col-2 text-center">
+                                        <span class="pries-menu">Rs 5.50</span>
                                         
                                     </div>
                                     
                                     
                                 </div>
                                 <div class="row border-bottom-taj">
-                                    <div class="col-9 px-0 ">
-                                        <ul>
-                                            <li>
-                                                Masala Fish Burger
-                                            </li>
-                                        </ul>
-                                    </div>
-                                    <div class="col-3  text-center">
-                                        <span class="pries-menu">Rs 5.00</span>
-                                        
-                                    </div>
-                                    
-                                    
-                                </div>
-                                <div class="row border-bottom-taj">
-                                    <div class="col-9 px-0 ">
-                                        <ul>
-                                            <li>
-                                                Masala Fish Burger
-                                            </li>
-                                        </ul>
-                                    </div>
-                                    <div class="col-3  text-center">
-                                        <span class="pries-menu">Rs 5.00</span>
-                                        
-                                    </div>
+                                  <div class="col-7 px-0 ">
+                                     <ul>
+                                         <li>
+                                             Grilled Chicken Fillet on naan
+                                             
+                                         </li>
+                                     </ul>
+                                 </div>
+                                 <div class="col-2 text-center">
+                                     <span class="pries-menu">Rs 4.50</span>
+                                     
+                                 </div> 
+                                 <div class="col-2 text-center">
+                                     <span class="pries-menu">Rs 5.50</span>
+                                     
+                                 </div>
                                    
                                     
                                 </div>
                                 <div class="row border-bottom-taj">
-                                    <div class="col-9 px-0 ">
-                                        <ul>
-                                            <li>
-                                                Masala Fish Burger
-                                            </li>
-                                        </ul>
-                                    </div>
-                                    <div class="col-3  text-center">
-                                        <span class="pries-menu">Rs 5.00</span>
-                                        
-                                    </div>
+                                    <div class="col-7 px-0 ">
+                                       <ul>
+                                           <li>
+                                               Grilled Mixed Kebab on naan
+                                               
+                                           </li>
+                                       </ul>
+                                   </div>
+                                   <div class="col-2 text-center">
+                                       <span class="pries-menu">Rs 4.50</span>
+                                       
+                                   </div> 
+                                   <div class="col-2 text-center">
+                                       <span class="pries-menu">Rs 5.50</span>
+                                       
+                                   </div>
                                     
                                 </div>
                                 <div class="row border-bottom-taj">
-                                    <div class="col-9 px-0 ">
-                                        <ul>
-                                            <li>
-                                                Masala Fish Burger
-                                            </li>
-                                        </ul>
-                                    </div>
-                                    <div class="col-3  text-center">
-                                        <span class="pries-menu">Rs 5.00</span>
-                                        
-                                    </div>
+                                 <div class="col-7 px-0 ">
+                                    <ul>
+                                        <li>
+                                            Grilled Donar Meat
+                                            
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="col-2 text-center">
+                                    <span class="pries-menu">Rs 4.20</span>
+                                    
+                                </div> 
+                                <div class="col-2 text-center">
+                                    <span class="pries-menu">Rs 5.20</span>
+                                    
+                                </div>
                                    
                                     
                                 </div>
                                 <div class="row border-bottom-taj">
-                                    <div class="col-9 px-0 ">
-                                        <ul>
-                                            <li>
-                                                Masala Fish Burger
-                                            </li>
-                                        </ul>
-                                    </div>
-                                    <div class="col-3  text-center">
-                                        <span class="pries-menu">Rs 5.00</span>
-                                        
-                                    </div>
+                                   <div class="col-7 px-0 ">
+                                    <ul>
+                                        <li>
+                                            Grilled Chicken
+                                            
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="col-2 text-center">
+                                    <span class="pries-menu">Rs 4.20</span>
+                                    
+                                </div> 
+                                <div class="col-2 text-center">
+                                    <span class="pries-menu">Rs 5.20</span>
+                                    
+                                </div>
                                    
                                     
                                 </div>
                                 <div class="row border-bottom-taj">
-                                    <div class="col-9 px-0 ">
-                                        <ul>
-                                            <li>
-                                                Masala Fish Burger
-                                            </li>
-                                        </ul>
-                                    </div>
-                                    <div class="col-3   text-center">
-                                        <span class="pries-menu">Rs 5.00</span>
-                                        
-                                    </div>
+                                    <div class="col-7 px-0 ">
+                                     <ul>
+                                         <li>
+                                             Grilled Mixed Kebab
+                                             
+                                         </li>
+                                     </ul>
+                                 </div>
+                                 <div class="col-2 text-center">
+                                     <span class="pries-menu">Rs 4.90</span>
+                                     
+                                 </div> 
+                                 <div class="col-2 text-center">
+                                     <span class="pries-menu">Rs 5.90</span>
+                                     
+                                 </div>
+                                    
                                    
                                     
                                 </div>
                                 <div class="row border-bottom-taj">
-                                    <div class="col-9 px-0 ">
-                                        <ul>
-                                            <li>
-                                                Masala Fish Burger
-                                            </li>
-                                        </ul>
-                                    </div>
-                                    <div class="col-3  text-center">
-                                        <span class="pries-menu">Rs 5.00</span>
-                                        
-                                    </div>
+                                     <div class="col-7 px-0 ">
+                                     <ul>
+                                         <li>
+                                             Stir Fry
+                                             
+                                         </li>
+                                     </ul>
+                                 </div>
+                                 <div class="col-2 text-center">
+                                     <span class="pries-menu">Rs 4.50</span>
+                                     
+                                 </div> 
+                                 <div class="col-2 text-center">
+                                     <span class="pries-menu">Rs 5.50</span>
+                                     
+                                 </div>
                                    
                                     
                                 </div>
-                                <div class="row border-bottom-taj">
-                                    <div class="col-9 px-0 ">
-                                        <ul>
-                                            <li>
-                                                Masala Fish Burger
-                                            </li>
-                                        </ul>
-                                    </div>
-                                    <div class="col-3  text-center">
-                                        <span class="pries-menu">Rs 5.00</span>
-                                        
-                                    </div>
-                                   
-                                    
-                                </div>
-                                <div class="row border-bottom-taj">
-                                    <div class="col-9 px-0 ">
-                                        <ul>
-                                            <li>
-                                                Masala Fish Burger
-                                            </li>
-                                        </ul>
-                                    </div>
-                                    <div class="col-3   text-center">
-                                        <span class="pries-menu">Rs 5.00</span>
-                                        
-                                    </div>
-
-                                </div>
+                                
                                 <div class="view-btn">
                                     <button type="button" class="btn btn-warning ">VIEW ALL</button> <a href="#"></a>
                                 </div>
@@ -532,10 +577,10 @@
                         <div class="menu-right">
                             <div class="order-box-1">
                                 <h2>Drinks</h2>
-                                <p>Water Bottle<br>Can Drinks </p>
-                                <span>(Pepsi, Coke, 7up, Tango, Rubicon, Diet Coke)</span>
-                                <p>Glass Bottle</p>
-                                <span>(Coke, Sprite, Fanta)</span><br>
+                                <p>Water Bottle<br>Drinks </p>
+                                <span>(Coca-Cola, Pepsi, Diet Coca-Cola, Sprite)</span>
+                                <p>Sun Kist</p>
+                                <span>(Lemon/ Summer Fruit)</span><br>
                                 <button type="button" class="btn btn-warning ">VIEW ALL</button> <a href="#"></a>
                                 
                             </div>
@@ -545,7 +590,7 @@
                          <div class="menu-right">
                             <div class="order-box-1">
                                 <h2>Desserts</h2>
-                                <p>Kheer<br>Gulab Jaman<br>Home Made Oreo CheeseCake<br>Home Made Vanilla CheeseCake<br>Tea & Biscuit </p>
+                                <p>Choclate Fudge Cake Slice<br>Oreo Cake<br>Rainbow Cake<br>Flake Fudge Cake<br>Deep Fried Mars Bar</p>
                                 <br>
                                 <button type="button" class="btn btn-warning ">VIEW ALL</button> <a href="#"></a>
                                 
@@ -967,7 +1012,7 @@
                             <div class="form-box">
                                 <div class="row">
                                     <div class="col-lg-6 col-md-7 col-sm-12">
-                                        <img src="images/theme-2/contact-banner-taj.png">
+                                        <img src="/images/theme-2/contact-banner-my-cod.png">
                                         
                                     </div>
                                     <div class="col-lg-6 col-md-5 col-sm-12">

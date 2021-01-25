@@ -8,7 +8,7 @@
                             <div class="row">
                                 <div class="col-lg-6 col-md-6 col-sm-12 footer-section-1 text-right">
                                     <div>
-                                       <a href="#"><img src="/images/theme-2/taj-footer-logo.png"></a> 
+                                       <a href="#"><img src="/images/theme-2/footer-logo.png"></a> 
                                     </div>
                                 </div>
                                 <div class="col-lg-6 col-md-6 col-sm-12 footer-section-1">
@@ -51,21 +51,29 @@
                                 <h3>Opening Hours</h3>
                                 <ul class="Opening-hours">
                                     <li>
-                                        <strong><a href="#">Open 7 days a week</a></strong>
-                                         <a href="#">2pm till late</a>
+                                        <strong><a href="#">Mon - Thurs </a></strong>
+                                         <a href="#">11:30AM - 9:00PM</a>
+                                    </li>
+                                    <li>
+                                        <strong><a href="#">Fri - Sun </a></strong>
+                                         <a href="#">12:30PM - 9:30PM</a>
                                     </li>
                                     <li>
                                         <strong><a href="#">Delivery Hours</a></strong>
-                                           <a href="#">5pm till late </a>
+                                           <a href="#">11:30PM - 9:30PM </a>
+                                    </li>
+                                    <li>
+                                        <strong><a href="#">Delivery Hours (Friday)</a></strong>
+                                           <a href="#">02:30PM - 9:30PM </a>
                                     </li>
                                 </ul>
                             </div>
                             <div class="col-lg-4 col-md-4 footer-section-3 footer-section-space">
                                 <h3>Opening Hours</h3>
                                 <ul class="Opening">
-                                    <li><a href="#"><span><i class="icon-smartphone-1"></i></span>02476441200</a></li>
-                                    <li><a href="#"><span><i class="icon-mail-2"></i></span>info@mjstakeaway.co.uk.com</a></li>
-                                    <li><a href="#"><span><i class="icon-placeholder"></i></span>10 Peckham Park Road,London SE15 6TW</a></li>
+                                    <li><a href="#"><span><i class="icon-smartphone-1"></i></span>01484 518 555</a></li>
+                                    <li><a href="#"><span><i class="icon-mail-2"></i></span>info@my-cod.com</a></li>
+                                    <li><a href="#"><span><i class="icon-placeholder"></i></span>46A Chapel Hill HD1 3EB HUDDERSFIELD</a></li>
                                 </ul>
                             </div>
                         </div> 
