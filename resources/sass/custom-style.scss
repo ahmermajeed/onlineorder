@@ -2101,3 +2101,17 @@ ul {
     margin-bottom: 15px;
 }
 /***************Deal-section-end*******************/
+
+
+/***************Additional Css start*******************/
+.my-cart-delivery {
+    padding: 20px 20px 10px 20px;
+    .delivery-selection {   
+        margin-bottom: 10px;
+        .custom-control {
+            display: inline-block;
+        }
+    }
+}
+
+/***************Additional Css end*******************/
