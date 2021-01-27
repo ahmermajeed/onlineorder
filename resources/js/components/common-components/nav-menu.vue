@@ -93,7 +93,7 @@
                         <div class="col-lg-8 col-md-10 col-sm-12">
                             <div class="contact-bnner">
                                 <div class="head-taj mb-3">
-                                    <h2>Save 25% on orders over £30</h2>
+                                    <h2>Save 5% on orders over £20</h2>
                                 </div>
                                <div class="row">
                                 <div class="col-lg-4 col-md-4 col-sm-12 mt-0 px-0">
