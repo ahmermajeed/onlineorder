@@ -3,7 +3,7 @@
     <div>
         <header class="masthead">
             <!-- <nav class="navbar navbar-expand-lg navbar-light custom-header" id="mainNav"> -->
-            
+
             <div class="header-top">
                 <div class="header-top-section">
                     <div class="container">
@@ -22,7 +22,7 @@
                                             </span>
                                         </li> -->
                                     </ul>
-                                </div> 
+                                </div>
                             </div>
                             <div class="col-5 col-md-6">
                                 <div class="header-icon float-right">
@@ -31,9 +31,9 @@
                                        <li><a href="#"><i class="icon-twitter"></i></a></li>
                                        <li><a href="#"><i class="icon-instagram-symbol"></i></a></li>
                                        <li><a href="#"><i class="icon-linkedin"></i></a></li>
-                                   </ul> 
+                                   </ul>
                                 </div>
-                            </div>     
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -56,7 +56,6 @@
                                     <ul class="nav ">
 
                                         <li class="nav-item active"> <router-link :to="{ path: '/'}"><a class="nav-link js-scroll-trigger" href="#about">Home</a></router-link></li>
-                                        <li class="nav-item "> <router-link :to="{ path: '/About us'}"><a class="nav-link js-scroll-trigger" >About us</a></router-link></li>
                                         <li class="nav-item "> <router-link :to="{ path: '/feedback'}"><a class="nav-link js-scroll-trigger" >Feedback</a></router-link></li>
                                         <li class="nav-item">
                                             <a href="#" @click="openAllergy" class="nav-link">Allergy Information</a>
@@ -70,11 +69,11 @@
                                         <!--                            <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#contact">GALLERY</a></li>-->
                                         <li class="nav-item">
                                             <div class="order-now">
-                                                 <!-- <a href="#" class="btn btn-outline-danger"  @click.prevent="openPostalCode"> 
+                                                 <!-- <a href="#" class="btn btn-outline-danger"  @click.prevent="openPostalCode">
                                                 Order Online </i></i>
                                                      </a> -->
                                                 <a href="#" class="btn btn-warning "  @click.prevent="openPostalCode"> Order Online</a>
-                                            </div> 
+                                            </div>
                                         </li>
                                     </ul>
                                   </div>
@@ -82,14 +81,14 @@
                             </div>
                         </div>
                     </div>
-                </div>  
+                </div>
             </div>
             <!-- </nav> -->
             <div class="header-bottom section-fullwidth">
                 <div class="container">
                     <div class="row">
                         <div class="col-lg-2 col-md-1 col-sm-12">
-                            
+
                         </div>
                         <div class="col-lg-8 col-md-10 col-sm-12">
                             <div class="contact-bnner">
@@ -99,18 +98,18 @@
                                <div class="row">
                                 <div class="col-lg-4 col-md-4 col-sm-12 mt-0 px-0">
                                     <div class="food">
-                                        
+
                                         <div class="item-img text-center">
                                              <img src="/images/theme-2/taj-halal.png">
                                         </div>
-                                        
+
                                         <div class="num-img text-center">
                                            <a href="tel: 02476441200">02476441200</a>
                                         </div>
-                                        
+
                                     </div>
 
-                                    
+
                                 </div>
                                 <div class="col-lg-8 col-md-8 col-sm-12  mt-0 px-0">
                                     <div class="postal-code">
@@ -134,18 +133,18 @@
                                             </div>
                                         </form>
                                     </div>
-                                        
+
                                     </div>
-                                    
-                                    
+
+
                                 </div>
-                                   
+
                                </div>
                             </div>
-                            
+
                         </div>
                         <div class="col-lg-2 col-md-1 col-sm-12">
-                            
+
                         </div>
                     </div>
                 </div>
