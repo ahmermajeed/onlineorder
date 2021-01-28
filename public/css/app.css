@@ -14186,7 +14186,7 @@ ul {
 }
 
 .header-bottom {
-  background-image: url(/images/mains-banner.jpg?1503bcd7054add883e166decd2bc7ca8);
+  background-image: url(/images/mains-banner.png?076b933933d67d3faea173e8b3826835);
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -14341,7 +14341,7 @@ ul {
 }
 
 .deliver-area .card-offer {
-  background-image: url(/images/ratings-img.png?5d50dd140ea98dc2ad78432e44ea2d12);
+  background-image: url(/images/ratings-img.png?a05b35678e3e58abbe3398a0465b00e1);
   background-repeat: no-repeat;
   border-radius: 8px;
   color: #fff;
@@ -14480,6 +14480,7 @@ ul {
   padding-top: 26px;
   line-height: 19px;
   font-weight: bolder;
+  font-size: 11px;
 }
 
 .rating-area .delivry-content p {

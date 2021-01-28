@@ -13,7 +13,7 @@
                                     <ul>
                                          <li class="mail-space"><i class="icon-mail-2"></i>
                                             <span>
-                                                <a href="mailto:Info@bigsaj.com">info@bigsaj.com</a>
+                                                <a href="mailto:hello@bigsajoriginal.co.uk">hello@bigsajoriginal.co.uk</a>
                                             </span>
                                         </li>
                                         <!-- <li><i class="icon-placeholder"></i>
@@ -43,7 +43,7 @@
                             <div class="col-6 col-md-3">
                                 <router-link :to="{ path: '/'}">
                                      <a class="navbar-brand js-scroll-trigger main-logo" href="javascript:;">
-                                        <img src="/images/bigsage-logo.png">
+                                        <img src="/images/big-saj-logo.jpg">
                                     </a>
                                 </router-link>
                             </div>

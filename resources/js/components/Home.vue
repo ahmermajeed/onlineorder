@@ -84,12 +84,12 @@
                         <div class="rating-content">
                             <div class="row">
                                 <div class="col-lg-2  col-sm-3 col-md-3 px-1 payment-type">
-                                    <p class="rounded-circle">Cash<br> only</p>
+                                    <p class="rounded-circle">Card payment <br> integration</p>
 
                                 </div>
                                 <div class="col-lg-10 col-sm-9 col-md-9 px-1 delivry-content">
-                                    <p>Free Delivery</p>
-                                    <span>Min. Order £20 within 3 miles.<br>Under £20, £3 delivery charge will apply</span>
+                                    <!-- <p>Free Delivery</p> -->
+                                    <span>Default 10% off when ordering online<br>20% off for new customers and first order only</span>
 
                                 </div>
 
@@ -1008,7 +1008,7 @@
                             <div class="form-box">
                                 <div class="title">
                                     <h3>Contact us</h3>
-                                    <p>10 Peckham Park Road, London SE15 6TW</p>
+                                    <p>231 Edward Road</p>
 
                                 </div>
                                 <form>

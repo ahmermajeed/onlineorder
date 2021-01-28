@@ -9,14 +9,14 @@
                                 <h3>Opening Hours</h3>
                                 <ul class="Opening">
                                     <li><a href="#"><span><i class="icon-smartphone-1"></i></span>0121 440 3393</a></li>
-                                    <li><a href="#"><span><i class="icon-mail-2"></i></span>info@bigsag.co.uk</a></li>
+                                    <li><a href="#"><span><i class="icon-mail-2"></i></span>hello@bigsajoriginal.co.uk</a></li>
                                     <li><a href="#"><span><i class="icon-placeholder"></i></span>231 edward rd
                                     </a></li>
                                 </ul>
                             </div>
                             <div class="col-lg-6 col-md-6 footer-section-2 order-3 order-md-2">
                                 <div class="text-center">
-                                   <a href="#"><img src="/images/bigsage-logo.png"></a>
+                                   <a href="#"><img src="/images/big-saj-logo.jpg"></a>
                                 </div>
                                 <div class="footer-menu text-center">
                                     <ul>
@@ -48,13 +48,16 @@
                                         <strong><a href="#">Open 7 days a week</a></strong>
                                     </li>
                                     <li>
-                                        <a href="#">2pm till late</a>
+                                        <a href="#">Mon > Sat – 12pm till 11</a>
+                                    </li>
+                                     <li>
+                                        <a href="#">Sunday – 1pm till 11</a>
                                     </li>
                                     <li>
                                         <strong><a href="#">Delivery Hours</a></strong>
                                     </li>
                                     <li>
-                                        <a href="#">5pm till late </a>
+                                        <a href="#">5pm till late – every day</a>
                                     </li>
                                 </ul>
                             </div>
