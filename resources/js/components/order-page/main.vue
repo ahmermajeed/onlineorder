@@ -173,7 +173,7 @@
             </div>
         </section>
         <div class="loading" v-if="loading">Loading&#8230;</div>
-        <div class="container-fluid"
+        <div class="container-fluid desktop-tab-section"
         :class="{'cart-menu-fixed': scrolled}"  v-on="handleScroll()">
             <div class="row full">
 
@@ -411,6 +411,11 @@
                     .then((response) => {
                         _this.products =  response.data.data
                         _this.loading  = false;
+                        $(".list-group-item").click(function() {
+                            $('html,body').animate({
+                                scrollTop: $(".product").offset().top},
+                                'slow');
+                        });           
 
                     });
             },

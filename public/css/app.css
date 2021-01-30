@@ -15999,5 +15999,11 @@ ul {
   margin-bottom: 15px;
 }
 
+@media (max-width: 767.98px) {
+  .desktop-tab-section {
+    display: none;
+  }
+}
+
 /***************Deal-section-end*******************/
 

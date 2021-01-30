@@ -1987,4 +1987,9 @@ ul {
     padding-bottom: 10px !important;
     margin-bottom: 15px;
 }
+.desktop-tab-section {
+    @include media-breakpoint-down(sm) {
+        display: none;
+    }
+}
 /***************Deal-section-end*******************/
