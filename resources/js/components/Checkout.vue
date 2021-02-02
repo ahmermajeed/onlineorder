@@ -173,12 +173,12 @@
                                         </div>
                                     </div>
                                     <div class="row mt-3">
-                                        <div class="col-sm-4" v-if="finalAmount >= 10">
+                                        <div class="col-sm-4" v-if="finalAmount >= 12">
                                             <button class="subscribe btn btn-primary btn-block" type="button" @click="placeOrder()"> Confirm  </button>
                                         </div>
 
                                         <div class="col-sm-12" v-else>
-                                            <p style="color:red;text-align:center"> Your Order Must be greater than £10 </p>
+                                            <p style="color:red;text-align:center"> Your Order Must be greater than £12 </p>
                                         </div>
 
                                     </div>
