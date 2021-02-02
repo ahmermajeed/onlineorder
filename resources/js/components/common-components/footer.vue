@@ -8,7 +8,7 @@
                             <div class="row">
                                 <div class="col-lg-6 col-md-6 col-sm-12 footer-section-1 text-right">
                                     <div>
-                                       <a href="#"><img src="/images/theme-2/taj-footer-logo.png"></a> 
+                                       <a href="#"><img src="/images/theme-2/waterhead-footer-logo.png"></a> 
                                     </div>
                                 </div>
                                 <div class="col-lg-6 col-md-6 col-sm-12 footer-section-1">
@@ -51,21 +51,21 @@
                                 <h3>Opening Hours</h3>
                                 <ul class="Opening-hours">
                                     <li>
-                                        <strong><a href="#">Open 7 days a week</a></strong>
-                                         <a href="#">2pm till late</a>
+                                        <strong><a href="#">Sunday - Thursday</a></strong>
+                                         <a href="#">4:30 PM till 11:30 PM</a>
                                     </li>
                                     <li>
-                                        <strong><a href="#">Delivery Hours</a></strong>
-                                           <a href="#">5pm till late </a>
+                                        <strong><a href="#">Friday - Saturday</a></strong>
+                                           <a href="#">4:00 PM till 12:00 AM</a>
                                     </li>
                                 </ul>
                             </div>
                             <div class="col-lg-4 col-md-4 footer-section-3 footer-section-space">
                                 <h3>Opening Hours</h3>
                                 <ul class="Opening">
-                                    <li><a href="#"><span><i class="icon-smartphone-1"></i></span>02476441200</a></li>
-                                    <li><a href="#"><span><i class="icon-mail-2"></i></span>info@mjstakeaway.co.uk.com</a></li>
-                                    <li><a href="#"><span><i class="icon-placeholder"></i></span>10 Peckham Park Road,London SE15 6TW</a></li>
+                                    <li><a href="#"><span><i class="icon-smartphone-1"></i></span>0161 627 2121</a></li>
+                                    <li><a href="#"><span><i class="icon-mail-2"></i></span>info@waterheadtandoori.co.uk.com</a></li>
+                                    <li><a href="#"><span><i class="icon-placeholder"></i></span>491 Huddersfield Road,  Waterhead, Oldham, OL4 2JG </a></li>
                                 </ul>
                             </div>
                         </div> 
