@@ -211,6 +211,97 @@
                                         <span class="pries-menu">£ 3.50</span>
                                     </div>                                    
                                 </div>
+
+                                <div class="row border-bottom-taj">
+                                    <div class="col-9 px-0  ">
+                                        <ul>
+                                            <li>
+                                            The New Yorker Special Filling                                  
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="col-3  text-center">
+                                        <span class="pries-menu">£0.70</span>
+                                    </div>                                    
+                                </div>
+
+                                <div class="row border-bottom-taj">
+                                    <div class="col-9 px-0  ">
+                                        <ul>
+                                            <li>
+                                            The Reuben Special Filling                                 
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="col-3  text-center">
+                                        <span class="pries-menu">£0.70</span>
+                                    </div>                                    
+                                </div>
+
+                                <div class="row border-bottom-taj">
+                                    <div class="col-9 px-0  ">
+                                        <ul>
+                                            <li>
+                                           The Big Boy Special Filling                                 
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="col-3  text-center">
+                                        <span class="pries-menu">£0.70</span>
+                                    </div>                                    
+                                </div>
+
+                                <div class="row border-bottom-taj">
+                                    <div class="col-9 px-0  ">
+                                        <ul>
+                                            <li>
+                                          Chicken & Bacon Club Special Filling                                 
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="col-3  text-center">
+                                        <span class="pries-menu">£0.70</span>
+                                    </div>                                    
+                                </div>
+
+                                <div class="row border-bottom-taj">
+                                    <div class="col-9 px-0  ">
+                                        <ul>
+                                            <li>
+                                       All Day Breakfast Special Filling                                
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="col-3  text-center">
+                                        <span class="pries-menu">£0.70</span>
+                                    </div>                                    
+                                </div>
+
+                                <div class="row border-bottom-taj">
+                                    <div class="col-9 px-0  ">
+                                        <ul>
+                                            <li>
+                                       Cheddar Ploughmans Special Filling                             
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="col-3  text-center">
+                                        <span class="pries-menu">£0.70</span>
+                                    </div>                                    
+                                </div>
+
+                                <div class="row border-bottom-taj">
+                                    <div class="col-9 px-0  ">
+                                        <ul>
+                                            <li>
+                                    Ham, Cheese & Chutney Special Filling                           
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="col-3  text-center">
+                                        <span class="pries-menu">£0.70</span>
+                                    </div>                                    
+                                </div>
                                
              
                                 
