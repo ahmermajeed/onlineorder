@@ -71,7 +71,7 @@ a {
     color: $red !important;
 }*/
 .btn-warning {
-    background-color: $yellowdark !important;
+    background-color: $green !important;
     outline: none !important;
     color: #fff !important;
         border: none;
@@ -119,7 +119,7 @@ ul {
     right: 0;
     width: 100%;
     .header-top-section {
-        background-color: #000000;
+        background-color: #b3dc1f;
         padding: 12px 0px 12px 0px;
 
     a {
@@ -171,7 +171,7 @@ ul {
 .header-bottom-section {
     padding: 10px 0px 10px 0px;
     background-color: #161616;
-    background: rgba(0, 0, 0, 0.7);
+    background: rgba(63, 86, 92, 0.6);
 
 
     .main-menu {
@@ -538,7 +538,7 @@ ul {
          z-index: 1;
         
         .num-img{
-                background-color: #582d7c;
+                background-color: $green;
                  padding: 10px;
         	a{
         		display: inline-block;
@@ -556,7 +556,7 @@ ul {
     .postal-code {
         text-align: center;
         padding: 5px 20px 0 20px;
-         background-color: #fcf4ec;
+         background-color: #f5ffce;
         height: 100%;
         .search-res{
         	position: relative;
@@ -822,7 +822,7 @@ ul {
                 width: 100%;
                 box-shadow: 0px 15px 20px 0px rgba(0, 0, 0, 0.15) !important;
                 margin-bottom: 30px;
-                border: 1px solid $yellowdark;
+                border: 1px solid $green;
             }
             h2 {
                 font-size: 36px;
@@ -1076,13 +1076,13 @@ ul {
                     margin: 0px;
                     text-transform: uppercase;
                     padding-top: 7px;
-                    color: $yellowdark;
+                    color: $green;
                 }
             }
             .frm-body:after {
                     content: "";
                     position: absolute;
-                    background-color: $yellowdark;
+                    background-color: $green;
                     width: 1px;
                     height: 313px;
                     left: -9%;
@@ -1283,7 +1283,7 @@ ul {
         .btn-warning {
             padding: 4px 10px 2px 10px;
             color: #fff !important;
-            background-color: $yellowdark;
+            background-color: $green;
             border: none;
             float: right;
             font-size: 12px;
