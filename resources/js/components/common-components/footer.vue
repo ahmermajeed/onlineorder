@@ -8,7 +8,7 @@
                             <div class="row">
                                 <div class="col-lg-6 col-md-6 col-sm-12 footer-section-1 text-right">
                                     <div>
-                                       <a href="#"><img src="/images/theme-2/dannys-logo.png"></a> 
+                                       <a href="#"><img src="/images/theme-2/myappetite-logo.png"></a> 
                                     </div>
                                 </div>
                                 <div class="col-lg-6 col-md-6 col-sm-12 footer-section-1">

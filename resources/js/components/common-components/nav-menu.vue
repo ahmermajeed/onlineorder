@@ -13,7 +13,7 @@
                                     <ul>
                                          <li class="mail-space"><i class="icon-mail-2"></i>
                                             <span>
-                                                <a href="mailto:info@danny's.com">info@danny's.com</a>
+                                                <a href="mailto:info@myappetite.com">info@myappetite.com</a>
                                             </span>
                                         </li>
                                         <!-- <li><i class="icon-placeholder"></i>
@@ -43,7 +43,7 @@
                             <div class="col-6 col-md-3">
                                 <router-link :to="{ path: '/'}">
                                      <a class="navbar-brand js-scroll-trigger main-logo" href="javascript:;">
-                                        <img src="/images/theme-2/dannys-logo.png">
+                                        <img src="/images/theme-2/myappetite-logo.png">
                                     </a>
                                 </router-link>
                             </div>
