@@ -76,7 +76,7 @@
                                 <h3 class="text-left">Your Cart</h3>
                                 <img src="../../../images/cart.png">
                             </div>
-                            <div class="my-cart-delivery">
+                         <!--    <div class="my-cart-delivery">
                                 <div class="delivery-selection">
                                     <b-form-radio v-model="deliveryOptions" :aria-describedby="ariaDescribedby" name="some-radios" value="delivery" class="mr-3">Delivery</b-form-radio>
                                     <b-form-radio v-model="deliveryOptions" :aria-describedby="ariaDescribedby" name="some-radios" value="collection">Collection</b-form-radio>
@@ -96,7 +96,22 @@
                                     </div>
                                     
                                 </div>
+                            </div> -->
+
+                            <div class="food-allergy" @click="foodAllergyPopup">
+                                <p><i class="icon-plus"></i>Click here if you or someone you are ordering for has a food allergy</p>
                             </div>
+
+                            <form class="form-cart">
+                                <div class="switch-field">
+                                    <input type="radio" id="radio-one" name="switch-one" value="yes" checked/>
+                                    <label for="radio-one"><i class="icon-bike"></i>Delivery 
+                                        <span>30 - 45 mins</span></label>
+                                    <input type="radio" id="radio-two" name="switch-one" value="no" />
+                                    <label for="radio-two"><i class="icon-shopping-basket"></i>Collection
+                                        <span>10 mins</span></label>
+                                </div>
+                            </form>
                           
 
                             <div class="lp-sidebar-body">
@@ -262,6 +277,8 @@
 
 
 
+        <food-allergy @HideModalValue="hideModal" :showModalProp="foodAllergyModal"></food-allergy>
+
         <add-product @HideModalValue="hideModal" :showModalProp="product" :list="list" :has_sizes="has_sizes"></add-product>
 
 
@@ -289,6 +306,7 @@
                 categories:[],
                 products:[],
                 product:false,
+                foodAllergyModal: false,
                 editProduct:false,
                 list:{},
                 editList:{},
@@ -304,25 +322,6 @@
                 dealsModal:false,
                 editDeal:false,
                 editDealsData:{},
-                deliveryOptions: 'delivery',
-                selectDelivery:null,
-                selectPickup:null,
-                deliveryTime: [
-                      { value: null, text: 'Please select delivery time' },
-                      { value: 'a', text: 'Delivery in 30min' },
-                      { value: 'b', text: 'Delivery in 45min' },
-                      { value: 'c', text: 'Delivery in 50min' },
-                      { value: 'd', text: 'Delivery in 60min' },
-                ],
-                pickupTime: [
-                      { value: null, text: 'Please select pickup time' },
-                      { value: 'a', text: 'Pickup in 30min' },
-                      { value: 'b', text: 'Pickup in 45min' },
-                      { value: 'c', text: 'Pickup in 50min' },
-                      { value: 'd', text: 'Pickup in 60min' },
-                ],
-
-                //lastPosition: 0
             };
         },
         mounted() {
@@ -348,9 +347,6 @@
             },
 
             updateProduct(id,cart,index){
-
-
-
                 let  _this = this;
                 var url = '';
                 if(cart.product_type === "deal")
@@ -399,6 +395,7 @@
                 this.deals_data = {};
                 this.editDeal = false;
                 this.editDealsData ={};
+                this.foodAllergyModal = false;
             },
 
             getCategories(){
@@ -533,7 +530,10 @@
                     this.scrolled = false;
                     // move down
                 }
-            }
+            },
+            foodAllergyPopup() {
+                this.foodAllergyModal = true;
+            },
 
         },
         computed: {

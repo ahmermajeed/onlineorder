@@ -25,66 +25,78 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-.icon-shopping-cart:before {
-  content: "\e900";
-}
-.icon-plus:before {
-  content: "\e901";
-}
-.icon-keyboard_arrow_down:before {
-  content: "\e902";
-}
-.icon-subtract:before {
-  content: "\e903";
-}
-.icon-calculate:before {
-  content: "\e903";
-}
-.icon-remove:before {
-  content: "\e903";
-}
-.icon-withdraw:before {
-  content: "\e903";
-}
-.icon-deduct:before {
-  content: "\e903";
-}
-.icon-pinterest-logo:before {
-  content: "\e904";
-}
-.icon-facebook:before {
-  content: "\e905";
-}
-.icon-placeholder:before {
-  content: "\e906";
-}
-.icon-mail-2:before {
-  content: "\e907";
-}
-.icon-smartphone-1:before {
-  content: "\e908";
-}
-.icon-twitter:before {
-  content: "\e909";
-}
-.icon-close:before {
-  content: "\e90a";
-}
-.icon-google-plus-logo:before {
-  content: "\e90b";
-}
-.icon-instagram-symbol:before {
-  content: "\e90c";
-}
-.icon-linkedin:before {
-  content: "\e90d";
-}
-.icon-delete:before {
-  content: "\e90e";
-}
-.icon-edit-1:before {
+.icon-shopping-basket:before {
   content: "\e90f";
 }
-.icon-rss-feed-symbol:before {
+.icon-bike:before {
   content: "\e910";
+}
+.icon-motorcycle:before {
+  content: "\e910";
+}
+.icon-travel:before {
+  content: "\e910";
+}
+.icon-ride:before {
+  content: "\e910";
+}
+.icon-info:before {
+  content: "\e92c";
+}
+.icon-pinterest-logo:before {
+  content: "\e900";
+}
+.icon-facebook:before {
+  content: "\e901";
+}
+.icon-placeholder:before {
+  content: "\e902";
+}
+.icon-mail-2:before {
+  content: "\e903";
+}
+.icon-smartphone-1:before {
+  content: "\e904";
+}
+.icon-twitter:before {
+  content: "\e905";
+}
+.icon-close:before {
+  content: "\e906";
+}
+.icon-google-plus-logo:before {
+  content: "\e907";
+}
+.icon-instagram-symbol:before {
+  content: "\e908";
+}
+.icon-linkedin:before {
+  content: "\e909";
+}
+.icon-delete:before {
+  content: "\e90a";
+}
+.icon-edit-1:before {
+  content: "\e90b";
+}
+.icon-rss-feed-symbol:before {
+  content: "\e90c";
+}
+.icon-subtract:before {
+  content: "\e90d";
+}
+.icon-calculate:before {
+  content: "\e90d";
+}
+.icon-remove:before {
+  content: "\e90d";
+}
+.icon-withdraw:before {
+  content: "\e90d";
+}
+.icon-deduct:before {
+  content: "\e90d";
+}
+.icon-plus:before {
+  content: "\e90e";
 }
