@@ -699,6 +699,7 @@
                                             <li>8 Hot wings</li>
                                             <li>4 pcs Chicken</li>
                                             <li>2x12" pizza</li>
+                                            <li>&nbsp;</li>
                                         </ul>
                                          <img src="/images/theme-1/familys-line.png">
 
@@ -762,7 +763,7 @@
 
                             </div>
                         </div>
-             <!--            <div class="col-lg-3 col-md-6 col-sm-6">
+                        <div class="col-lg-3 col-md-6 col-sm-6">
                             <div class="offers">
                                 <h5>Chicken Bucket</h5>
                                 <p>6 Pieces Chicken<br>Chips (L)<br>1.5ltr Pepsi</p>
@@ -777,7 +778,7 @@
                                 <div class="pries"><strong>£21.00</strong></div>
 
                             </div>
-                        </div> -->
+                        </div>
 
                      </div>
 
