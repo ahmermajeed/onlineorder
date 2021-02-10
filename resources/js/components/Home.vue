@@ -8,7 +8,10 @@
                        <div class="card-offer text-center">
                            <div class="card-content">
                              <h3>Pizza Offer 1</h3>
-                             <p>Any 2 x 12” Pizzas, 10 Hot Wings,Chips &Bottle of Drinks</p>
+                             <p>Any 2 x 10” Pizzas, 10 Hot Wings,Chips &Bottle of Drinks</p>
+                             <div class="side-order">
+                                 <p>Can you take of the Coleslow from the side order</p>
+                             </div>
                              <img src="../../../images/card-img.png">
                            </div>
                            <div class="row pries-bar">
@@ -22,6 +25,7 @@
                                     </div>
                                 </div>
                            </div>
+                          
 
                       </div>
                     </div>
@@ -30,6 +34,9 @@
                            <div class="card-content">
                               <h3>Pizza Offer 2</h3>
                              <p>Any 2 x 12” Pizzas, 10 Hot Wings,Chips &Bottle of Drinks</p>
+                             <div class="side-order">
+                                 <p>Can you take of the Coleslow from the side order</p>
+                             </div>
                              <img src="../../../images/card-img.png">
                            </div>
                            <div class="row pries-bar">
@@ -51,8 +58,12 @@
                        <div class="card-offer text-center">
                            <div class="card-content">
 
-                             <h3>Pizza Offer 2</h3>
-                             <p>Any 2 x 12” Pizzas, 10 Hot Wings,Chips &Bottle of Drinks</p>
+                             <h3>Pizza Offer 3</h3>
+                             <p>Any 2 x 15
+                             ” Pizzas, 10 Hot Wings,Chips &Bottle of Drinks</p>
+                             <div class="side-order">
+                                 <p>Can you take of the Coleslow from the side order</p>
+                             </div>
                              <img src="../../../images/card-img.png">
                            </div>
                            <div class="row pries-bar">
@@ -103,10 +114,10 @@
                         </div>
 
                     </div>
-                    <div class="col-lg-6 col-md-6 col-sm-12 px-0">
+                  <!--   <div class="col-lg-6 col-md-6 col-sm-12 px-0">
                          <img src="../../../images/rating-img.png">
 
-                    </div>
+                    </div> -->
 
                 </div>
 
@@ -644,7 +655,7 @@
                                             <li>1 Lamb Shish,1 Chicken Shish,</li>
                                             <li>1 Kofta,1 Lamb Doner,</li>
                                             <li>1 Lamb Doner,1 Chicken Doner,</li>
-                                           <li>1 Portion Grilled Wings& Bottle of Drink</li>
+                                           <li>1 Portion Grilled Wings & Bottle of Drink</li>
                                         </ul>
                                         
                                         
@@ -658,7 +669,7 @@
                                             </div>
                                             <div class="col-4">
                                                 <div class="pries">
-                                                    <p>£21.00</p>
+                                                    <p>£40.00</p>
 
                                                 </div>
 
@@ -682,13 +693,12 @@
                                     </div>
                                     <div class="col-lg-8 col-md-10">
                                         <h3>
-                                           Ali Baba Family Special 1
+                                           Ali Baba Family Special 2
                                         </h3>
                                         <ul>
-                                            <li>1 Lamb Shish,1 Chicken Shish,</li>
-                                            <li>1 Kofta,1 Lamb Doner,</li>
-                                            <li>1 Lamb Doner,1 Chicken Doner,</li>
-                                           <li>1 Portion Grilled Wings& Bottle of Drink</li>
+                                            <li>8 Hot wings</li>
+                                            <li>4 pcs Chicken</li>
+                                            <li>2x12" pizza</li>
                                         </ul>
                                          <img src="/images/theme-1/familys-line.png">
 
@@ -699,7 +709,7 @@
                                             </div>
                                             <div class="col-4">
                                                 <div class="pries">
-                                                    <p>£40.00
+                                                    <p>£60.00
                                                     </p>
 
                                                 </div>
@@ -739,12 +749,20 @@
                         <div class="col-lg-3 col-md-6 col-sm-6">
                             <div class="offers">
                                 <h5>Chicken Bucket</h5>
-                                <p>6 Pieces Chicken<br>Chips (L)<br>1.5ltr Pepsi</p>
-                                <div class="pries"><strong>£21.00</strong></div>
+                                <p>8 Pieces Chicken<br>4 Wings<br>3 Fries <br>Bottle of drink</p>
+                                <div class="pries"><strong>£16.00</strong></div>
 
                             </div>
                         </div>
                         <div class="col-lg-3 col-md-6 col-sm-6">
+                            <div class="offers">
+                                <h5>Chicken Bucket</h5>
+                                <p>12 Pieces Chicken<br>6 Hot Wings<br>4 Fries <br>Bottle of drink</p>
+                                <div class="pries"><strong>£19 .00</strong></div>
+
+                            </div>
+                        </div>
+             <!--            <div class="col-lg-3 col-md-6 col-sm-6">
                             <div class="offers">
                                 <h5>Chicken Bucket</h5>
                                 <p>6 Pieces Chicken<br>Chips (L)<br>1.5ltr Pepsi</p>
@@ -759,15 +777,7 @@
                                 <div class="pries"><strong>£21.00</strong></div>
 
                             </div>
-                        </div>
-                        <div class="col-lg-3 col-md-6 col-sm-6">
-                            <div class="offers">
-                                <h5>Chicken Bucket</h5>
-                                <p>6 Pieces Chicken<br>Chips (L)<br>1.5ltr Pepsi</p>
-                                <div class="pries"><strong>£21.00</strong></div>
-
-                            </div>
-                        </div>
+                        </div> -->
 
                      </div>
 
