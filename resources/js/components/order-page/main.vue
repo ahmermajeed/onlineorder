@@ -76,6 +76,29 @@
                                 <h3 class="text-left">Your Cart</h3>
                                 <img src="../../../images/cart.png">
                             </div>
+
+                            <div class="food-allergy" @click="foodAllergyPopup">
+                                <p>
+                                <img src="/images/information.png" alt="">
+                                </i>Click here if you or someone you are ordering for has a food allergy</p>
+                            </div>
+
+                            <form class="form-cart">
+                                <div class="switch-field">
+                                    <input type="radio" id="radio-one" name="switch-one" value="yes" checked/>
+                                    <label for="radio-one"> 
+                                    <img src="/images/delivery.png" alt="">
+                                    </i>Delivery 
+                                        <span>30 - 45 mins</span></label>
+                                    <input type="radio" id="radio-two" name="switch-one" value="no" />
+                                    <label for="radio-two">
+                                    <img src="/images/shopping-basket.png" alt="">
+                                        Collection
+                                        <span>10 mins</span></label>
+                                </div>
+                            </form>
+
+
                             <div class="lp-sidebar-body">
                                 <div class="img-box text-center">
                                     <h5 v-if="getAllCartArray.length == 1" class="mt-2">No item in your cart</h5>
@@ -237,7 +260,7 @@
         </div>
 
 
-
+        <food-allergy @HideModalValue="hideModal" :showModalProp="foodAllergyModal"></food-allergy>
 
         <add-product @HideModalValue="hideModal" :showModalProp="product" :list="list" :has_sizes="has_sizes"></add-product>
 
@@ -281,7 +304,7 @@
                 dealsModal:false,
                 editDeal:false,
                 editDealsData:{},
-                //lastPosition: 0
+                foodAllergyModal: false,
             };
         },
         mounted() {
@@ -358,6 +381,7 @@
                 this.deals_data = {};
                 this.editDeal = false;
                 this.editDealsData ={};
+                this.foodAllergyModal = false;
             },
 
             getCategories(){
@@ -492,7 +516,11 @@
                     this.scrolled = false;
                     // move down
                 }
-            }
+            },
+
+            foodAllergyPopup() {
+                this.foodAllergyModal = true;
+            },
 
         },
         computed: {
