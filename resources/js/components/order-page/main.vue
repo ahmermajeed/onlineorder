@@ -76,34 +76,36 @@
                                 <h3 class="text-left">Your Cart</h3>
                                 <img src="../../../images/cart.png">
                             </div>
-                            <div class="my-cart-delivery">
-                                   <div class="delivery-selection">
-                                       <b-form-radio v-model="deliveryOptions" :aria-describedby="ariaDescribedby" name="some-radios" value="delivery" class="mr-3">Delivery</b-form-radio>
-                                       <b-form-radio v-model="deliveryOptions" :aria-describedby="ariaDescribedby" name="some-radios" value="collection">Collection</b-form-radio>
+                 
 
-                                   </div>
+                            <div class="food-allergy" @click="foodAllergyPopup">
+                                <p>
+                                <img src="/images/information.png" alt="">
+                                </i>Click here if you or someone you are ordering for has a food allergy</p>
+                            </div>
 
-                                   <div class="delivery-options">
+                            <form class="form-cart">
+                                <div class="switch-field">
+                                    <input type="radio" id="radio-one" name="switch-one" value="yes" checked/>
+                                    <label for="radio-one"> 
+                                    <img src="/images/delivery.png" alt="">
+                                    </i>Delivery 
+                                        <span>30 - 45 mins</span></label>
+                                    <input type="radio" id="radio-two" name="switch-one" value="no" />
+                                    <label for="radio-two">
+                                    <img src="/images/shopping-basket.png" alt="">
+                                        Collection
+                                        <span>10 mins</span></label>
+                                </div>
+                            </form>
 
-                                       <div class="row">
-                                           <div class="col-md-12" v-if="deliveryOptions == 'delivery'">
-                                               <b-form-select v-model="selectDelivery" :options="deliveryTime"></b-form-select>
-                                           </div>
 
-                                           <div class="col-md-12" v-if="deliveryOptions == 'collection'">
-                                               <b-form-select v-model="selectPickup" :options="pickupTime"></b-form-select>
-                                           </div>                               
-                                       </div>
-                                       
-                                   </div>
-                               </div>
+
+
                             <div class="lp-sidebar-body">
                                 <div class="img-box text-center">
                                     <h5 v-if="getAllCartArray.length == 1" class="mt-2">No item in your cart</h5>
-                                </div>
-
-
-              
+                                </div>              
 
                                 <div class="table-holder">
                                     <table class=tbl_cart_list>
@@ -263,6 +265,7 @@
 
 
 
+        <food-allergy @HideModalValue="hideModal" :showModalProp="foodAllergyModal"></food-allergy>
 
         <add-product @HideModalValue="hideModal" :showModalProp="product" :list="list" :has_sizes="has_sizes"></add-product>
 
@@ -306,24 +309,8 @@
                 dealsModal:false,
                 editDeal:false,
                 editDealsData:{},
-                deliveryOptions: 'delivery',
-                selectDelivery:null,
-                selectPickup:null,
-                deliveryTime: [
-                      { value: null, text: 'Please select delivery time' },
-                      { value: 'a', text: 'Delivery in 30min' },
-                      { value: 'b', text: 'Delivery in 45min' },
-                      { value: 'c', text: 'Delivery in 50min' },
-                      { value: 'd', text: 'Delivery in 60min' },
-                ],
-                pickupTime: [
-                      { value: null, text: 'Please select pickup time' },
-                      { value: 'a', text: 'Pickup in 30min' },
-                      { value: 'b', text: 'Pickup in 45min' },
-                      { value: 'c', text: 'Pickup in 50min' },
-                      { value: 'd', text: 'Pickup in 60min' },
-                ],
-                //lastPosition: 0
+                foodAllergyModal: false,
+
             };
         },
         mounted() {
@@ -400,6 +387,7 @@
                 this.deals_data = {};
                 this.editDeal = false;
                 this.editDealsData ={};
+                this.foodAllergyModal = false;
             },
 
             getCategories(){
@@ -534,6 +522,10 @@
                     this.scrolled = false;
                     // move down
                 }
+            },
+
+            foodAllergyPopup() {
+                this.foodAllergyModal = true;
             }
 
         },
