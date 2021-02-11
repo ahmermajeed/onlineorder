@@ -14,3 +14,5 @@ Vue.component('postal-code-popup', require('./components/common-components/posta
 Vue.component('add-deal', require('./components/order-page/popup/add-deal.vue').default);
 
 Vue.component('edit-deal', require('./components/order-page/popup/edit-deal.vue').default);
+
+Vue.component('food-allergy', require('./components/order-page/popup/food-allergy.vue').default);
