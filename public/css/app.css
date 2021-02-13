@@ -14847,10 +14847,9 @@ ul {
 .deal-section .offers {
   background-image: url(/images/deal-img.png?2f25bc1b074a4cf868d07c39ce17ab79);
   background-repeat: no-repeat;
-  background-position: right;
+  background-position: -10px 0;
   border-radius: 6px;
   padding: 20px;
-  box-shadow: 0px 9px 20px 0px rgba(0, 0, 0, 0.3);
 }
 
 @media (max-width: 767.98px) {
@@ -14866,6 +14865,10 @@ ul {
 }
 
 .deal-section .offers h5 {
+  color: #fff;
+}
+
+.deal-section .offers h6 {
   color: #fff;
 }
 
