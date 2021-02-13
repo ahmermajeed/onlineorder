@@ -271,7 +271,7 @@
                                             <div class="box-borders">
                                                  <div class="row">
                                                     <div class="col-9 ">
-                                                        <p>. Mix Doner Meat & Chips</p>
+                                                        <p>Mix Doner Meat & Chips</p>
                                                     </div>
                                                     <div class="col-3 text-right">
                                                         <span>£10.50</span>

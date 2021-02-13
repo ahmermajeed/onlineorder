@@ -114,7 +114,7 @@
                                     <div class="postal-code">
                                         <div class="search-res" v-if="this.$route.name !='online-order'">
                                         <div class="info-txt mb-2 mb-md-4">
-                                            <h4>Save 25% on orders over £30</h4>
+                                            <h4>Save 10% on orders over £30</h4>
                                         </div>
                                         <h3>Enter Your Postal Code.</h3>
                                         <form >
