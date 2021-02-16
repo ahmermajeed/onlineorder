@@ -50,50 +50,6 @@
 									</div>
 									<div class="pull-right search_wrapper">
 										<ul>
-											<li class="cart"><a><i class="icon-location-shopping"></i><span>2</span></a>
-												<ul class="cart_box">
-													<li>
-														<div class="cart_section">
-															<div class="cart_img">
-																<a href="#"><img src="images/cart/1.jpg" alt="icecream-parlour-cart"></a>
-															</div>
-															<div class="cart_detail">
-																<h4><a href="cart.html">ice-cream</a></h4>
-																<h5>$ 23.12</h5>
-															</div>
-															<a class="cart_delete"></a>
-														</div>
-													</li>
-													<li>
-														<div class="cart_section">
-															<div class="cart_img">
-																<a href="#"><img src="images/cart/2.jpg" alt="icecream-parlour-cart-2"></a>
-															</div>
-															<div class="cart_detail">
-																<h4><a href="cart.html">ice-cream</a></h4>
-																<h5>$ 23.12</h5>
-															</div>
-															<a class="cart_delete"></a>
-														</div>
-													</li>
-													<li>
-														<div class="cart_section">
-															<div class="cart_img">
-																<h4>total</h4>
-															</div>
-															<div class="cart_detail">
-																<h5>$ 23.12</h5>
-															</div>
-														</div>
-													</li>
-													<li>
-														<div class="cart_section">
-															<p><a href="cart.html" class="ice_btn">view cart</a></p>
-															<p><a href="checkout.html" class="ice_btn">proceed to checkout</a></p>
-														</div>
-													</li>
-												</ul>
-											</li>
 											<li class="search">
 												<a>
 													<i class="icon-search"></i>
@@ -298,89 +254,6 @@
 						</div>
 					</div>
 				</div>
-			</div>
-		</div>
-
-		<div class="ice_main_section2 ice_team_wrapper">
-			<div class="container">
-				<div class="row">
-					<div class="col-lg- col-md-6 col-sm-12 col-xs-12 col-lg-offset-3 col-md-offset-3 col-sm-offset-0 col-sx-offset-0">
-						<div class="heading_wrapper text-center wow slidedown">
-							<h1 class="ice_heading_white">our team</h1>
-							<p class="white">It is a paradisematic country, in which roasted parts of sentences fly into your mouth.Pityful a rethoric question.</p>
-						</div>
-					</div>
-					<div class="team_wrapper">
-						<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 pull-left">
-							<div class="team_section text-center wow zoomIn">
-								<div class="team_img">
-									<img src="images/team/1.jpg" alt="icecream-parlour-team1" class="img-responsive team_member">
-									<img src="images/team/shape.png" alt="icecream-parlour-team-shape" class="img-responsive shape_img">
-								</div>
-								<h2 class="ice_sub_heading white"><a href="team_single.html">Jonthana Thomas</a></h2>
-								<p class="white">CEO</p>
-								<ul class="social_icon">
-									<li><a href="#"><i class="icon-facebook"></i></a></li>
-									<li><a href="#"><i class="icon-twitter"></i></a></li>
-									<li><a href="#"><i class="icon-linkedin"></i></a></li>
-									<li><a href="#"><i class="icon-google-plus-logo"></i></a></li>
-								</ul>
-							</div>
-						</div>
-						<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 pull-left">
-							<div class="team_section text-center wow zoomIn" data-wow-delay="0.2s">
-								<div class="team_img">
-									<img src="images/team/2.jpg" alt="icecream-parlour-team2" class="img-responsive team_member">
-									<img src="images/team/shape.png" alt="icecream-parlour-team2-shape" class="img-responsive shape_img">
-								</div>
-								<h2 class="ice_sub_heading white"><a href="team_single.html">Bernadette	Greene</a></h2>
-								<p class="white">Taste Bud</p>
-								<ul class="social_icon">
-									<li><a href="#"><i class="icon-facebook"></i></a></li>
-									<li><a href="#"><i class="icon-twitter"></i></a></li>
-									<li><a href="#"><i class="icon-linkedin"></i></a></li>
-									<li><a href="#"><i class="icon-google-plus-logo"></i></a></li>
-								</ul>
-							</div>
-						</div>
-						<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 pull-left">
-							<div class="team_section text-center wow zoomIn" data-wow-delay="0.4s">
-								<div class="team_img">
-									<img src="images/team/3.jpg" alt="icecream-parlour-team3" class="img-responsive team_member">
-									<img src="images/team/shape.png" alt="icecream-parlour-team3-shape" class="img-responsive shape_img">
-								</div>
-								<h2 class="ice_sub_heading white"><a href="team_single.html">John Thomas</a></h2>
-								<p class="white">Marketing</p>
-								<ul class="social_icon">
-									<li><a href="#"><i class="icon-facebook"></i></a></li>
-									<li><a href="#"><i class="icon-twitter"></i></a></li>
-									<li><a href="#"><i class="icon-linkedin"></i></a></li>
-									<li><a href="#"><i class="icon-google-plus-logo"></i></a></li>
-								</ul>
-							</div>
-						</div>
-						<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 pull-left">
-							<div class="team_section text-center wow zoomIn" data-wow-delay="0.6s">
-								<div class="team_img">
-									<img src="images/team/4.jpg" alt="icecream-parlour-team4" class="img-responsive team_member">
-									<img src="images/team/shape.png" alt="icecream-parlour-shape" class="img-responsive shape_img">
-								</div>
-								<h2 class="ice_sub_heading white"><a href="team_single.html">Matt Gibson</a></h2>
-								<p class="white">Director</p>
-								<ul class="social_icon">
-									<li><a href="#"><i class="icon-facebook"></i></a></li>
-									<li><a href="#"><i class="icon-twitter"></i></a></li>
-									<li><a href="#"><i class="icon-linkedin"></i></a></li>
-									<li><a href="#"><i class="icon-google-plus-logo"></i></a></li>
-								</ul>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="overlay">
-				<div class="left_img"><img src="images/team/1.png" alt="icecream-parlour-team-overlay"></div>
-				<div class="right_img"><img src="images/team/2.png" alt="icecream-parlour-team-overlay"></div>
 			</div>
 		</div>
 
@@ -675,12 +548,8 @@
 						<div class="widget widget_page">
 							<h2 class="ice_sub_heading widget-title">our pages</h2>
 							<ul>
-								<li><a href="term_condition.html"><i class="icon-check-alt"></i>terms and condition</a></li>
-								<li><a href="cart.html"><i class="icon-check-alt"></i>cart</a></li>
-								<li><a href="checkout.html"><i class="icon-check-alt"></i>checkout</a></li>
-								<li><a href="faq.html"><i class="icon-check-alt"></i>FAQS</a></li>
+								<li><a href="javascript:;"><i class="icon-check-alt"></i>Home</a></li>
 								
-								<li><a href="shortcodes.html"><i class="icon-check-alt"></i>shortcodes</a></li>
 							</ul>
 						</div>
 					</div>
@@ -714,7 +583,7 @@
 				<div class="row">
 					<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
 						<div class="">
-							<p class="white">Copyrights &copy; 2018, All Rights Reserved by <a href="index.html">ICE CREAM</a></p>
+							<p class="white">Copyrights &copy; 2021, All Rights Reserved by <a href="javascript:;">Dessert King</a></p>
 						</div>
 					</div>
 				</div>

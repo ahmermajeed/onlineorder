@@ -56,25 +56,7 @@
                                     <ul class="nav ">
 
                                         <li class="nav-item active"> <router-link :to="{ path: '/'}"><a class="nav-link js-scroll-trigger" href="#about">Home</a></router-link></li>
-                                        <li class="nav-item "> <router-link :to="{ path: '/feedback'}"><a class="nav-link js-scroll-trigger" >Feedback</a></router-link></li>
-                                        <li class="nav-item">
-                                            <a href="#" @click="openAllergy" class="nav-link">Allergy Information</a>
-                                        </li>
-
-                                        <li class="nav-item">
-                                            <a href="#" class="nav-link" @click="openMenu">Our Menu</a>
-                                        </li>
-
-                                        <!--                            <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#services">Menu</a></li>-->
-                                        <!--                            <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#contact">GALLERY</a></li>-->
-                                        <li class="nav-item">
-                                            <div class="order-now">
-                                                 <!-- <a href="#" class="btn btn-outline-danger"  @click.prevent="openPostalCode">
-                                                Order Online </i></i>
-                                                     </a> -->
-                                                <a href="#" class="btn btn-rounded-default btn-rounded-danger"  @click.prevent="openPostalCode"> Order Online</a>
-                                            </div>
-                                        </li>
+                                       
                                     </ul>
                                   </div>
                                 </nav>
@@ -84,70 +66,7 @@
                 </div>
             </div>
             <!-- </nav> -->
-            <div class="header-bottom section-fullwidth">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-lg-4 col-xl-5">
-
-                        </div>
-                        <div class="col-lg-8 col-xl-7">
-                            <div class="contact-bnner">
-                               <div class="row">
-                                <div class="col-lg-4 col-md-4 col-sm-12 mt-0 px-0">
-                                    <div class="food">
-                                        <div class="hala-img ">
-                                            <img src="/images/theme-1/halal.png">
-                                        </div>
-                                        <div class="item-img text-center">
-                                             <img src="/images/theme-1/banner-item.png">
-                                        </div>
-
-                                        <div class="num-img text-center">
-                                           <a href="tel: 0000 0000 0000"> 0000 000 0000</a>
-                                        </div>
-
-                                    </div>
-
-
-                                </div>
-                                <div class="col-lg-8 col-md-8 col-sm-12 mt-0 px-0">
-                                    <div class="postal-code">
-                                        <div class="search-res" v-if="this.$route.name !='online-order'">
-                                        <div class="info-txt mb-2 mb-md-4">
-                                            <h4>Save 10% on orders over £30</h4>
-                                        </div>
-                                        <h3>Enter Your Postal Code.</h3>
-                                        <form >
-                                            <div class="row">
-                                                <div class="col-12">
-                                                    <div class="form-group">
-                                                        <input type="text"  class="form-control" v-model="postal_code" placeholder="Enter your Postal code">
-                                                    </div>
-                                                    <div class="form-group text-center">
-                                                        <button type="button" class="btn btn-rounded-default"  v-on:click="checkPostCode">
-                                                            <span>Submit! </span>
-                                                        </button>
-                                                    </div>
-                                                    <div class="form-group text-center mb-0">
-                                                        <p class="error">{{error_message}} </p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </form>
-                                    </div>
-
-                                    </div>
-
-
-                                </div>
-
-                               </div>
-                            </div>
-
-                        </div>
-                    </div>
-                </div>
-            </div>
+           
 
         </header>
 
