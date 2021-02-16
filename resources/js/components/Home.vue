@@ -22,26 +22,14 @@
 										<a data-toggle="collapse" data-target="#menu" class="toggle close"><span></span></a>
 										<ul>
 											<li><a>home</a>
-												<ul class="sub-menu">
-													<li><a href="javascript:;">home version 1</a></li>
-													<li><a href="javascript:;">home version 2</a>
-													</li>
-												</ul>
+			
 											</li>
 											<li><a href="javascript:;">about</a></li>
 											<li><a>blog</a>
-												<ul class="sub-menu">
-													<li><a href="javascript:;">blog</a></li>
-													<li><a href="javascript:;">blog single</a>
-													</li>
-												</ul>
+												
 											</li>
 											<li><a href="javascript:;">shop</a>
-												<ul class="sub-menu">
-													<li><a href="shop.html">shop</a></li>
-													<li><a href="shop_single.html">shop single</a>
-													</li>
-												</ul>
+												
 											</li>
 									<!-- 		<li><a>pages</a>
 												<ul class="sub-menu">
