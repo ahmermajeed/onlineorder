@@ -1,1056 +1,784 @@
 <template>
-    <div>
-        <header-menu></header-menu>
-        <section class="section-fullwidth deliver-area ">
-            <div class="container">
-                  <div class="row">
-                    <div class="col-md-4 col-12">
-                       <div class="card-offer text-center">
-                           <div class="card-content">
-                             <h3>Pizza Offer 1</h3>
-                             <p>Any 2 x 10” Pizzas, 10 Hot Wings,Chips & Bottle of Drinks</p>
-                             <img src="../../../images/card-img.png">
-                           </div>
-                           <div class="row pries-bar">
-                                <div class="col-12 col-lg-8 order-btn">
-                                    <button type="button" class="btn btn-outline-secondary">Order Now!</button>
-                                    <a href="#" class=""></a>
-                                </div>
-                                <div class="col-12 col-lg-4 pt-2 pt-lg-0">
-                                    <div class="pries">
-                                        <p>£21.00</p>
-                                    </div>
-                                </div>
-                           </div>
-                          
-
-                      </div>
-                    </div>
-                    <div class="col-md-4 col-12">
-                       <div class="card-offer text-center">
-                           <div class="card-content">
-                              <h3>Pizza Offer 2</h3>
-                             <p>Any 2 x 12” Pizzas, 10 Hot Wings,Chips & Bottle of Drinks</p>
-                             <img src="../../../images/card-img.png">
-                           </div>
-                           <div class="row pries-bar">
-                                <div class="col-12 col-lg-8 order-btn">
-                                    <button type="button" class="btn btn-outline-secondary">Order Now!</button>
-                                    <a href="#" class=""></a>
-                                </div>
-                                <div class="col-12 col-lg-4 pt-2 pt-lg-0">
-                                    <div class="pries">
-                                        <p>£25.00</p>
-                                    </div>
-                                </div>
-                           </div>
-
-                      </div>
-                    </div>
-                    <div class="col-md-4 col-12">
-                       <div class="card-offer text-center">
-                           <div class="card-content">
-
-                             <h3>Pizza Offer 3</h3>
-                             <p>Any 2 x 15
-                             ” Pizzas, 10 Hot Wings,Chips & Bottle of Drinks</p>
-                             <img src="../../../images/card-img.png">
-                           </div>
-                           <div class="row pries-bar">
-                                <div class="col-12 col-lg-8 order-btn">
-                                    <button type="button" class="btn btn-outline-secondary">Order Now!</button>
-                                    <a href="#" class=""></a>
-                                </div>
-                                <div class="col-12 col-lg-4 pt-2 pt-lg-0">
-                                    <div class="pries">
-                                        <p>£29.00</p>
-
-                                    </div>
-
-                                </div>
-
-                           </div>
-
-                      </div>
-                    </div>
-                  </div>
-            </div>
-        </section>
-
-        <section class="rating-area">
-            <div class="container">
-            <div class="rating-img">
-                <div class="row">
-                    <div class="col-lg-6 col-md-6 col-sm-12 px-0">
-                        <div class="rating-content">
-                            <div class="row">
-                                <div class="col-lg-2  col-sm-3 col-md-3 px-1 payment-type">
-                                    <p class="rounded-circle">Cash<br> only</p>
-
-                                </div>
-                                <div class="col-lg-10 col-sm-9 col-md-9 px-1 delivry-content">
-                                    <p>Free Delivery</p>
-                                    <span>Min. Order £20 within 3 miles.<br>Under £20, £3 delivery charge will apply</span>
-
-                                </div>
-
-                            </div>
-                            <div class="located-num">
-                                <strong>0203 490 2727</strong>
-                                <p>10 Peckham Park Road, London SE15 6TW</p>
-                            </div>
-
-
-                        </div>
-
-                    </div>
-                  <!--   <div class="col-lg-6 col-md-6 col-sm-12 px-0">
-                         <img src="../../../images/rating-img.png">
-
-                    </div> -->
-
-                </div>
-
-            </div>
-            </div>
-        </section>
-        <section class="section-fullwidth menu-box">
-            <div class="container-fluid">
-                <div class="row">
-                    <div class="col-lg-6 col-md-12 col-sm-12 px-0">
-                        <div class="menus-pattern-first">
-                            <div class="menu-first-before"></div>
-                                <div class="first-menu title-styl">
-
-
-                                    <h2>Kebabs</h2>
-                                    <div class="menu-content">
-                                        <div class="row">
-                                            <div class="col-9">
-                                                <p>All combination kebabs are served with bread & salad</p>
-                                            </div>
-                                            <div class="col-3 text-right">
-                                                <span class="badge badge-pill badge-danger">Large</span>
-                                            </div>
-
-                                        </div>
-                                    </div>
-                                    <div class="menu-item">
-
-                                            <div class="box-borders">
-                                                <div class="row">
-                                                    <div class="col-9">
-                                                        <p>Lamb Doner </p>
-                                                    </div>
-                                                    <div class="col-3 text-right">
-                                                        <span>£8.50</span>
-                                                    </div>
-
-                                                </div>
-                                            </div>
-
-                                            <div class="box-borders">
-                                                <div class="row">
-                                                    <div class="col-9 ">
-                                                        <p>Chicken Doner</p>
-                                                    </div>
-                                                    <div class="col-3 text-right">
-                                                        <span>£8.50</span>
-                                                    </div>
-
-                                                </div>
-                                            </div>
-
-                                            <div class="box-borders">
-                                                <div class="row">
-                                                    <div class="col-9 ">
-                                                        <p>Chicken Shish & Rice</p>
-                                                    </div>
-                                                    <div class="col-3 text-right">
-                                                        <span>£9.50</span>
-                                                    </div>
-
-                                                </div>
-                                            </div>
-
-                                            <div class="box-borders">
-                                                <div class="row">
-                                                    <div class="col-9 ">
-                                                        <p>Kofta Shish & Rice</p>
-                                                    </div>
-                                                    <div class="col-3 text-right">
-                                                        <span>£9.50</span>
-                                                    </div>
-
-                                                </div>
-                                            </div>
-
-                                            <div class="box-borders">
-                                                <div class="row">
-                                                    <div class="col-9">
-                                                        <p>Lamb Shish & Rice</p>
-                                                    </div>
-                                                    <div class="col-3 text-right">
-                                                        <span>£11.00</span>
-                                                    </div>
-
-                                                </div>
-                                            </div>
-
-                                            <div class="box-borders">
-                                                <div class="row">
-                                                    <div class="col-9">
-                                                        <p>Grilled Wings & Chips</p>
-                                                    </div>
-                                                    <div class="col-3  text-right">
-                                                        <span>£9.50</span>
-                                                    </div>
-
-                                                  </div>
-                                            </div>
-                                            <div class="box-borders">
-                                                <div class="row">
-                                                    <div class="col-9 ">
-                                                        <p>Mix Grill<br>(Chicken shish, lamb shish & kofta)</p>
-                                                    </div>
-                                                    <div class="col-3 text-right">
-                                                        <span>£16.00</span>
-                                                    </div>
-
-                                                </div>
-                                            </div>
-
-                                            <div class="box-borders">
-                                                <div class="row">
-                                                    <div class="col-9">
-                                                        <p>Mix Doner</p>
-                                                    </div>
-                                                    <div class="col-3 text-right">
-                                                        <span>£10.00</span>
-                                                    </div>
-
-                                                 </div>
-
-                                            </div>
-
-                                            <div class="box-borders">
-                                                <div class="row">
-                                                    <div class="col-9 ">
-                                                        <p>Lamb Doner Meat & Chips</p>
-                                                    </div>
-                                                    <div class="col-3  text-right">
-                                                        <span>£9.50</span>
-                                                    </div>
-
-                                                </div>
-
-                                            </div>
-
-                                            <div class="box-borders">
-                                                <div class="row">
-                                                    <div class="col-9 ">
-                                                        <p>Chicken Doner Meat & Chips</p>
-                                                    </div>
-                                                    <div class="col-3 text-right">
-                                                        <span>£9.50</span>
-                                                    </div>
-
-                                                </div>
-                                            </div>
-
-                                            <div class="box-borders">
-                                                 <div class="row">
-                                                    <div class="col-9 ">
-                                                        <p>Mix Doner Meat & Chips</p>
-                                                    </div>
-                                                    <div class="col-3 text-right">
-                                                        <span>£10.50</span>
-                                                    </div>
-
-                                                </div>
-
-                                            </div>
-
-                                    </div>
-
-
-                                </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-6 col-md-12 col-sm-12 px-0">
-                        <div class="menus-pattern-second">
-                            <div class="menu-second-before"></div>
-                            <div class="second-menu title-styl">
-                                <h2>Pizza Menu</h2>
-                                <div class="menu-content">
-                                    <div class="row ">
-                                        <div class="col-6">
-                                            <p>All pizzas topped with Cheese & Tomato Paste</p>
-                                        </div>
-                                        <div class="col-2 text-center">
-                                            <span class="badge badge-warning">Med 10”</span>
-                                        </div>
-                                        <div class="col-2 text-center">
-                                            <span class="badge badge-danger">Lrg 12”</span>
-                                        </div>
-                                        <div class="col-2 text-center">
-                                            <span class="badge badge-warning">Xlrg 15”</span>
-                                        </div>
-
-                                    </div>
-                                </div>
-                                <div class="menu-item">
-                                        <div class="box-borders">
-                                            <div class="row">
-                                                <div class="col-6">
-                                                    <p>Margherita<span>mozzarella cheese & tomato sauce</span></p>
-                                                </div>
-                                                <div class="col-2 text-center">
-                                                    <span>£7.50</span>
-                                                </div>
-                                                <div class="col-2  text-center">
-                                                    <span>£9.50</span>
-                                                </div>
-                                                <div class="col-2  text-center">
-                                                    <span>£11.50</span>
-                                                </div>
-
-                                            </div>
-                                        </div>
-
-                                        <div class="box-borders">
-                                            <div class="row">
-                                                <div class="col-6">
-                                                  <p>Hawaiian<span> ham & pineapple</span></p>
-                                                </div>
-                                                <div class="col-2 text-center">
-                                                    <span>£8.00</span>
-                                                </div>
-                                                <div class="col-2  text-center">
-                                                    <span>£10.00</span>
-                                                </div>
-                                                <div class="col-2  text-center">
-                                                    <span>£12.00</span>
-                                                </div>
-
-                                            </div>
-                                        </div>
-                                        <div class="box-borders">
-                                            <div class="row">
-                                                <div class="col-6">
-                                                     <p>Pepperoni<span>pepperoni </span></p>
-                                                </div>
-                                                <div class="col-2 text-center">
-                                                    <span>£8.00</span>
-                                                </div>
-                                                <div class="col-2  text-center">
-                                                    <span>£8.00</span>
-                                                </div>
-                                                <div class="col-2  text-center">
-                                                    <span>£12.00</span>
-                                                </div>
-
-                                            </div>
-                                        </div>
-                                        <div class="box-borders">
-                                            <div class="row">
-                                                <div class="col-6">
-                                                    <p>Seafood Special<span> prawns, tuna, anchovies </span></p>
-                                                </div>
-                                                <div class="col-2 text-center">
-                                                    <span>£9.00</span>
-                                                </div>
-                                                <div class="col-2  text-center">
-                                                    <span>£11.00</span>
-                                                </div>
-                                                <div class="col-2  text-center">
-                                                    <span>£13.00</span>
-                                                </div>
-
-                                            </div>
-                                        </div>
-                                        <div class="box-borders">
-                                            <div class="row">
-                                                <div class="col-6">
-                                                   <p>Classic Pizza<span>  ham & mushroom</span></p>
-                                                </div>
-                                                <div class="col-2 text-center">
-                                                    <span>£8.00</span>
-                                                </div>
-                                                <div class="col-2  text-center">
-                                                    <span>£10.00</span>
-                                                </div>
-                                                <div class="col-2  text-center">
-                                                    <span>£12.00</span>
-                                                </div>
-
-                                            </div>
-                                        </div>
-                                        <div class="box-borders">
-                                            <div class="row">
-                                                <div class="col-6">
-                                                    <p>Vegetarian<span> mushrooms, onions, pepper & sweetcorn</span></p>
-                                                </div>
-                                                <div class="col-2 text-center">
-                                                    <span>£9.00</span>
-                                                </div>
-                                                <div class="col-2  text-center">
-                                                    <span>£11.00</span>
-                                                </div>
-                                                <div class="col-2  text-center">
-                                                    <span>£13.00</span>
-                                                </div>
-
-                                            </div>
-                                        </div>
-                                        <div class="box-borders">
-                                            <div class="row">
-                                                <div class="col-6">
-                                                    <p>B.B.Q. Original<span>  chicken, BBQ sauce, onion & pepper</span></p>
-                                                </div>
-                                                <div class="col-2 text-center">
-                                                    <span>£9.00</span>
-                                                </div>
-                                                <div class="col-2  text-center">
-                                                    <span>£11.00</span>
-                                                </div>
-                                                <div class="col-2  text-center">
-                                                    <span>£13.00</span>
-                                                </div>
-
-                                            </div>
-                                        </div>
-                                        <div class="box-borders">
-                                            <div class="row">
-                                                <div class="col-6">
-                                                    <p>Meat Feast Pizza<span> chicken, salami, pepperoni & beef</span></p>
-                                                </div>
-                                                <div class="col-2 text-center">
-                                                    <span>£9.00</span>
-                                                </div>
-                                                <div class="col-2  text-center">
-                                                    <span>£11.00</span>
-                                                </div>
-                                                <div class="col-2  text-center">
-                                                    <span>£13.00</span>
-                                                </div>
-
-                                            </div>
-                                        </div>
-                                        <div class="box-borders">
-                                            <div class="row">
-                                                <div class="col-6">
-                                                    <p>Cheese Garlic Pizza Bread</p>
-                                                </div>
-                                                <div class="col-2 text-center">
-                                                    <span>£6.00</span>
-                                                </div>
-                                                <div class="col-2  text-center">
-                                                    <span>£6.50</span>
-                                                </div>
-                                                <div class="col-2  text-center">
-
-                                                </div>
-
-                                            </div>
-                                        </div>
-                                        <div class="box-borders">
-                                            <div class="row">
-                                                <div class="col-6">
-                                                    <p>Garlic Pizza Bread</p>
-                                                </div>
-                                                <div class="col-2 text-center">
-                                                    <span>£3.50</span>
-                                                </div>
-                                                <div class="col-2  text-center">
-                                                    <span>£4.50</span>
-                                                </div>
-                                                <div class="col-2  text-center">
-
-                                                </div>
-
-                                            </div>
-                                        </div>
-
-                                </div>
-
-
-                            </div>
-                        </div>
-
-
-                    </div>
-
-                </div>
-                <div class="menus pattern ">
-
-                    <!-- <div class="menu-area">
-                        <div class="row">
-                            <div class="col-md-6">
-                                <div class="menu-card">
-                                    <h3 class="tt">Traditional Fish & Chips</h3>
-                                    <ul>
-                                        <li>
-                                            <h3>Fresh Large COD <span>£6.00</span> </h3>
-
-                                        </li>
-                                        <li class="special">
-                                            <h3>Fresh Large COD & Chips <span>£7.80</span></h3>
-
-                                        </li>
-                                        <li>
-                                            <h3>Masala COD Fish <span>£6.0</span></h3>
-
-                                        </li>
-                                        <li>
-                                            <h3>Masala COD Fish in Nan  <span>£7.80</span></h3>
-
-                                        </li>
-
-                                        <li>
-                                            <h3>Fish Cake  <span>£1.50</span></h3>
-
-                                        </li>
-
-                                        <li>
-                                            <h3>Sausage <span>£1.50</span></h3>
-
-                                        </li>
-
-
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="menu-card">
-                                    <h3 class="tt">S. F. Chicken</h3>
-                                    <ul>
-                                        <li>
-                                            <h3>1 Piece Chicken <span>£1.50</span></h3>
-
-                                        </li>
-                                        <li class="special">
-                                            <h3>2 Pieces Chicken <span>£2.80</span></h3>
-
-                                        </li>
-                                        <li>
-                                            <h3>3 Pieces Chicken<span>£4.00</span></h3>
-
-                                        </li>
-                                        <li>
-                                            <h3>1 Piece Chicken & Chips <span>£2.60</span></h3>
-
-                                        </li>
-
-                                        <li>
-                                            <h3>2 Pieces Chicken & Chips <span>£3.80</span></h3>
-
-                                        </li>
-                                        <li>
-                                            <h3>3 Pieces Chicken & Chips <span>£4.80</span></h3>
-
-                                        </li>
-
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="menu-card">
-                                    <h3 class="tt">Pizzas</h3>
-                                    <ul>
-                                        <li>
-                                            <h3>Margherita <span>Starting From £ 5.50*</span></h3>
-                                        </li>
-                                        <li class="special">
-                                            <h3>Garlic Margherita <span>Starting From £ 5.50*</span></h3>
-
-                                        </li>
-                                        <li>
-                                            <h3>Hawaiian Lou <span>Starting From £ 5.50*</span></h3>
-
-                                        </li>
-                                        <li>
-                                            <h3>Farmhouse Bite <span>Starting From £ 5.50*</span></h3>
-
-                                        </li>
-
-                                        <li>
-                                            <h3>Vegetable Supreme <span>Starting From £ 5.50*</span></h3>
-
-                                        </li>
-
-                                        <li>
-                                            <h3>Fiery Veg<span>Starting From £ 5.50*</span></h3>
-
-                                        </li>
-
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="menu-card">
-                                    <h3 class="tt">Pizzas</h3>
-                                    <ul>
-                                        <li>
-                                            <h3>Seafood Sensation<span>Starting From £ 6.00*</span></h3>
-
-                                        </li>
-                                        <li class="special">
-                                            <h3>California Chicken<span>Starting From £ 5.50*</span></h3>
-
-                                        </li>
-                                        <li>
-                                            <h3>Tuna Special<span>Starting From £ 5.50*</span></h3>
-
-                                        </li>
-                                        <li>
-                                            <h3>Carribean Dream<span>)Starting From £ 6.00*</span></h3>
-
-                                        </li>
-                                        <li>
-                                            <h3>Mexicano<span>Starting From £  6.00*</span></h3>
-
-                                        </li>
-                                        <li>
-                                            <h3>Donner Pizza<span>Starting From £  6.00*</span></h3>
-
-                                        </li>
-
-                                    </ul>
-                                </div>
-                            </div>
-
-                        </div>
-                        <div class="row">
-                            <div class="col-md-12 text-center mt-5">
-                                <a href="#" class="custom-btn">View All <i class="fas fa-arrow-right"></i></a>
-                            </div>
-                        </div>
-                    </div> -->
-                </div>
-            </div>
-            <div class="family-section">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-lg-6 col-md-6 col-sm-12">
-                            <div class="family-card rounded-lg">
-                                <div class="row">
-                                    <div class="col-lg-4 col-md-2 ">
-                                    </div>
-                                    <div class="col-lg-8 col-md-10">
-                                        <h3>
-                                           Ali Baba Family Special 1
-                                        </h3>
-                                        <ul>
-                                            <li>1 Lamb Shish,</li>
-                                            <li>1 Chicken Shish,</li>
-                                            <li>1 Kofta,1 Lamb Doner,</li>
-                                            <li>1 Chicken Doner,</li>
-                                           <li>1 Portion Grilled Wings & Bottle of Drink</li>
-                                        </ul>
-                                        
-                                        
-                                         <img src="/images/theme-1/familys-line.png">
-                                       
-
-                                         <div class="row pries-bar">
-                                            <div class="col-8 order-btn">
-                                                <button type="button" class="btn btn-outline-secondary">Order Now!</button>
-                                                <a href="#" class=""></a>
-                                            </div>
-                                            <div class="col-4">
-                                                <div class="pries">
-                                                    <p>£40.00</p>
-
-                                                </div>
-
-                                            </div>
-
-                                 </div>
-                                    </div>
-
-                                </div>
-
-
-
-                            </div>
-                        </div>
-                        <div class="col-lg-6 col-md-6 col-sm-12">
-                            <div class="family-card rounded-lg">
-                                <div class="row">
-                                    <div class="col-lg-4 col-md-2">
-
-                                
-                                    </div>
-                                    <div class="col-lg-8 col-md-10">
-                                        <h3>
-                                           Ali Baba Family Special 2
-                                        </h3>
-                                         <ul>
-                                             <li>1 Lamb Shish,1 Chicken Shish,</li>
-                                             <li>1 Kofta,1 Lamb Doner,1 Chicken Doner,</li>
-                                             <li>8pcs Grilled Wings, 4pcs Chicken,</li>
-                                            <li>2x12" Pizzas <span>(from set menu),</span> & Bottle of Drink</li>
-                                         </ul>
-                                         <img src="/images/theme-1/familys-line.png">
-
-                                         <div class="row pries-bar">
-                                            <div class="col-8 order-btn">
-                                                <button type="button" class="btn btn-outline-secondary">Order Now!</button>
-                                                <a href="#" class=""></a>
-                                            </div>
-                                            <div class="col-4">
-                                                <div class="pries">
-                                                    <p>£60.00
-                                                    </p>
-
-                                                </div>
-
-                                            </div>
-
-                                 </div>
-                                    </div>
-
-                                </div>
-
-
-
-                            </div>
-                        </div>
-
-                    </div>
-                    <div class="view-btn text-center order-btn">
-                       <a href="#" class="btn btn-rounded-danger"> VIEW ALL</a>
-
-                     </div>
-
-                </div>
-
-            </div>
-
-        </section>
-        <section class="section-fullwidth deal-section">
-            <div class="container">
-                <div class="deal-content">
-                    <div class="offers-head">
-                         <h2 class="text-center">Discover Our Offers</h2>
-                             <p class="text-center">Check out our offers and follow us on <span>Facebook</span> and <span>Instagram</span></p>
-                    </div>
-
-                     <div class="row justify-content-md-center">
-                        <div class="col-lg-4 col-md-6 col-sm-6">
-                            <div class="offers">
-                                <h5>Chicken Bucket</h5>
-                                <h6>Family Pack 1</h6>
-                                <p>8 Pieces Chicken<br>4 Hot Wings<br>3 Fries <br>Bottle of drink</p>
-                                <div class="pries"><strong>£16.00</strong></div>
-
-                            </div>
-                        </div>
-                        <div class="col-lg-4 col-md-6 col-sm-6">
-                            <div class="offers">
-                                <h5>Chicken Bucket</h5>
-                                <h6>Family Pack 2</h6>
-                                <p>12 Pieces Chicken<br>6 Hot Wings<br>4 Fries <br>Bottle of drink</p>
-                                <div class="pries"><strong>£19.00</strong></div>
-
-                            </div>
-                        </div>
-
-                     </div>
-
-                </div>
-                <div class="view-btn text-center ">
-                       <a href="#" class="btn btn-rounded-danger"> VIEW ALL</a>
-
-                </div>
-            </div>
-
-
-        </section>
-
-       <!--  <section class="covid-section mt-5">
-            <div class="container">
-                <div class="title">
-                    <h3>Covid 19</h3>
-                    <h3>Collection offers</h3>
-                </div>
-                <div class="row">
-                    <div class="col-md-6">
-                        <div class="box red">
-                            <h5>
-                                2x 12 inch (8 slice) Pizzas
-                                <span>£ 10.99</span>
-                            </h5>
-                            <h5>
-                                2x 16 inch (12slice) Pizzas
-                                <span>£13.99</span>
-                            </h5>
-                            <h5>  (Upto 5 toppings or a set pizza off the menu)</h5>
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="box yellow">
-                            <h5>
-                                3x 12inch (8slice) pizzas
-                                <span>£14.99</span>
-                            </h5>
-                            <h5>
-                                3x 16 inch (12slice) Pizzas
-                                <span>£19.99</span>
-                            </h5>
-                            <h5>
-                                (Upto 5 toppings or a set pizza off the menu)
-                            </h5>
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-md-12 text-center callnow">
-                        <p>Call and Collect offer Limited time only <a href="tel:0121 2422020">0121 2422020</a></p>
-                    </div>
-                </div>
-            </div>
-        </section> -->
-
-        <!--  <section class="big-img">
-            <div class="container">
-                <div class="inner">
-                    <div class="row">
-                        <div class="col-md-3">
-                            <div class="info-box">
-                                <h3>Explore Our All Delicious Dishes</h3>
-                                <a href="#" class="custom-btn">view all <i class="fas fa-long-arrow-alt-right"></i></a>
-                            </div>
-                        </div>
-                        <div class="col-md-9">
-                            <div class="img-box">
-                                <img src="https://i.ibb.co/9YY03V5/Png-Item-2134541.png">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section class="four-col">
-            <div class="container">
-                <div class="col-inner">
-                    <div class="overlay-2"></div>
-                    <div class="row c1">
-                        <div class="col-md-6">
-                            <div class="box offer">
-                                <div class="info">
-                                    <h3>£16.99</h3>
-                                    <p>Donner in Nan (R),
-                                        + Mix in Nan (R)
-                                        + Chicken in Nan (R)
-                                        + 1 Chips (R) + 1.5ltr Pepsi</p>
-                                     <a href="#" class="custom-btn2">Recommend Now <i class="fas fa-long-arrow-alt-right"></i></a>
-                                </div>
-                                <div class="overlay"></div>
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="box offer">
-                                <div class="info">
-                                    <h3>£16.99</h3>
-                                    <p>2 Medium Pizzas
-                                        + Garlic Bread (4pcs)
-                                        + 1 Chips (R)
-                                        + 1.5ltr Pepsi</p>
-                                    <a href="#" class="custom-btn2">Recommend Now <i class="fas fa-long-arrow-alt-right"></i></a>
-                                </div>
-                                <div class="overlay"></div>
-                            </div>
-                        </div>
-
-                    </div>
-                    <div class="row c2">
-                        <div class="col-md-12">
-                            <div class="box about">
-                                <div class="overlay"></div>
-                                <div class="row">
-                                    <div class="col-md-7">
-                                        <div class="">
-                                            <h4>Welcome At</h4>
-                                            <h3>PAPA Ge'S </h3>
-                                            <p>Papa Ge’s has been established in the UK since 2004 and started off in Tamworth in Staffordshire, it has now reached Birmingham with this new and improved store located at 888 Washwood Heath Road in Birmingham.
-                                                We specialise in a wide range of foods such as great quality pizzas, traditional COD and chips, kebabs, burgers and southern fried chicken.
-                                                We use the best ingredients to provide the best quality along with providing the best service. We specialise in traditional fish and chips and pizzas as these are our specialities and we have a combined experience of over 50 years. We endeavour to bring our customers the best quality food for the best price</p>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-5">
-                                        <div class="img-box">
-                                            <img src="https://i.ibb.co/gZrwt11/Png-Item-1941470.png">
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="artboard">
-                    <div class="row">
-                        <div class="col-md-2">
-                            <img src="/images/artboard-1-8.png">
-                        </div>
-                        <div class="col-md-10">
-                            <h3>Traditional English Classic <span style="color:#01a8fb;">Fresh Cod</span> Cooked to Order</h3>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section> -->
-
-        <!-- Portfolio-->
-<!--        <div class="gallery">-->
-<!--            <div class="container">-->
-<!--                <div class="gallery-area">-->
-<!--                    <div class="title">-->
-
-<!--                        <h3>Discover Our Offers</h3>-->
-<!--                        <p>Check out our offers and follow us on  <a href="https://web.facebook.com/Papa-Ges-pizza-Fish-Bar-104170144525384" target="_blank">Facebook</a> and <a href="https://www.instagram.com/papa_ges/" target="_blank"> Instagram @papa_ges </a></p>-->
-<!--                    </div>-->
-<!--                    <div class="row">-->
-<!--                        <div class="col-lg-3 col-sm-6 mb-4">-->
-<!--                            <a class="portfolio-box" href="https://i.ibb.co/Rcrtpwx/dealimg1.jpg">-->
-<!--                                <img class="img-fluid" src="https://i.ibb.co/Rcrtpwx/dealimg1.jpg" alt="" />-->
-<!--                            </a>-->
-<!--                        </div>-->
-<!--                        <div class="col-lg-3 col-sm-6 mb-4">-->
-<!--                            <a class="portfolio-box" href="https://i.ibb.co/X5jLgtf/bannertheme4-01.jpg">-->
-<!--                                <img class="img-fluid" src="https://i.ibb.co/X5jLgtf/bannertheme4-01.jpg" alt="" />-->
-<!--                            </a>-->
-<!--                        </div>-->
-
-<!--                        <div class="col-lg-3 col-sm-6 mb-4">-->
-<!--                            <a class="portfolio-box" href="https://i.ibb.co/0cPGZJz/bannertheme4-04.jpg">-->
-<!--                                <img class="img-fluid" src="https://i.ibb.co/0cPGZJz/bannertheme4-04.jpg" alt="" />-->
-<!--                            </a>-->
-<!--                        </div>-->
-<!--                        <div class="col-lg-3 col-sm-6 mb-4">-->
-<!--                            <a class="portfolio-box" href="https://i.ibb.co/NCLNQ5D/bannerthem4-02.jpg">-->
-<!--                                <img class="img-fluid" src="https://i.ibb.co/NCLNQ5D/bannerthem4-02.jpg" alt="" />-->
-<!--                            </a>-->
-<!--                        </div>-->
-<!--                        <div class="col-lg-3 col-sm-6 mb-4">-->
-<!--                            <a class="portfolio-box" href="https://i.ibb.co/jhyx531/menutheme1-03.jpg">-->
-<!--                                <img class="img-fluid" src="https://i.ibb.co/jhyx531/menutheme1-03.jpg" alt="" />-->
-<!--                            </a>-->
-<!--                        </div>-->
-<!--                        <div class="col-lg-3 col-sm-6 mb-4">-->
-<!--                            <a class="portfolio-box" href="https://i.ibb.co/gZt2SYN/menutheme1-04.jpg">-->
-<!--                                <img class="img-fluid" src="https://i.ibb.co/gZt2SYN/menutheme1-04.jpg" alt="" />-->
-<!--                            </a>-->
-<!--                        </div>-->
-<!--                        <div class="col-lg-3 col-sm-6 mb-4">-->
-<!--                            <a class="portfolio-box" href="https://i.ibb.co/7k690Rw/menutheme1-02.jpg">-->
-<!--                                <img class="img-fluid" src="https://i.ibb.co/7k690Rw/menutheme1-02.jpg" alt="" />-->
-<!--                            </a>-->
-<!--                        </div>-->
-<!--                    </div>-->
-<!--                </div>-->
-<!--            </div>-->
-<!--        </div>-->
-
-        <section class="section-fullwidth reservation">
-            <div class="container">
-                <div class="table-booked pattern">
-                    <div class="row">
-                        <div class="col-lg-3 col-md-2 col-sm-1">
-                              <!--   <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2429.2156154533595!2d-1.822215984654894!3d52.49333647980907!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4870bae64827134d%3A0x2e1a51de3c022c50!2s888a%20Washwood%20Heath%20Rd%2C%20Ward%20End%2C%20Birmingham%20B8%202NB%2C%20UK!5e0!3m2!1sen!2s!4v1592827053509!5m2!1sen!2s" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0" width="100%" height="450"></iframe> -->
-                        </div>
-                        <div class="col-lg-6 col-md-8 col-sm-12">
-                            <div class="form-box">
-                                <div class="title">
-                                    <h3>Contact us</h3>
-                                    <p>10 Peckham Park Road, London SE15 6TW</p>
-
-                                </div>
-                                <form>
-                                    <div class="frm-body">
-                                        <div class="form-row">
-                                            <div class="form-group col-md-12">
-                                                <label for=""> Name</label>
-                                                <input type="text" class="form-control" id="" placeholder="Enter Your Name">
-                                            </div>
-                                            <div class="form-group col-md-12">
-                                                <label>Email</label>
-                                                <input type="email" class="form-control" id="" placeholder="Enter  email ">
-                                            </div>
-                                        </div>
-                                        <div class="form-row">
-                                            <div class="form-group col-md-12">
-                                                <label for="">Address</label>
-                                                <input type="text" class="form-control" id="" placeholder="Enter Address">
-                                            </div>
-                                            <div class="form-group col-md-12">
-                                                <label>Number</label>
-                                                <input type="phone" class="form-control" id="" placeholder="Enter Number">
-                                            </div>
-                                        </div>
-                                    </div>
-                                     <div class="frm-ftr view-btn text-center ">
-	                    				   <button class="btn btn-rounded-danger">Submit</button>
-	                				</div>
-
-                                </form>
-                            </div>
-                        </div>
-                        <div class="col-lg-3 col-md-2 col-sm-1"></div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <footer-menu></footer-menu>
-    </div>
+	<div class="home-page">
+	<div class="loader_wrapper">
+		<div class="loader">
+			<img src="images/icecream-parlour/loader.gif" alt="icecream-parlour-loader">
+		</div>
+	</div>
+	<div class="ice_main_wrapper">
+		<div class="ice_banner_wrapper">
+			<img src="images/banner/banner_bg.jpg" alt="icecream-parlour-banner" class="img-responsive">
+			<div class="banner_content">
+				<div class="container">
+					<div class="row">
+						<div class="col-lg-10 col-md-10 col-sm-12 col-xs-12 col-lg-offset-1 col-md-offset-1 col-sm-offset-0 col-xs-offset-0">
+							<div class="header_wrapper">
+								<div class="ice_logo">
+									<a href="javascript:;"><img src="images/banner/logo.png" alt="icecream-parlour-logo"></a>
+								</div>
+								<div class="ice_menu_wraper">
+									<a data-toggle="collapse" data-target="#menu" class="toggle"><span></span></a>
+									<div class="ice_menu collapse" id="menu">
+										<a data-toggle="collapse" data-target="#menu" class="toggle close"><span></span></a>
+										<ul>
+											<li><a>home</a>
+												<ul class="sub-menu">
+													<li><a href="javascript:;">home version 1</a></li>
+													<li><a href="javascript:;">home version 2</a>
+													</li>
+												</ul>
+											</li>
+											<li><a href="javascript:;">about</a></li>
+											<li><a>blog</a>
+												<ul class="sub-menu">
+													<li><a href="javascript:;">blog</a></li>
+													<li><a href="javascript:;">blog single</a>
+													</li>
+												</ul>
+											</li>
+											<li><a href="javascript:;">shop</a>
+												<ul class="sub-menu">
+													<li><a href="shop.html">shop</a></li>
+													<li><a href="shop_single.html">shop single</a>
+													</li>
+												</ul>
+											</li>
+									<!-- 		<li><a>pages</a>
+												<ul class="sub-menu">
+													<li><a href="cart.html">cart</a></li>
+													<li><a href="checkout.html">checkout</a>
+													</li>
+													
+													<li><a href="faq.html">FAQS</a>
+													</li>
+													<li><a href="shortcodes.html">shortcodes</a>
+													</li>
+													<li><a href="term_condition.html">terms & conditions</a>
+													</li>
+												</ul>
+											</li> -->
+											<li><a href="javascript:;" @click.prevent="openPostalCode">Order Online</a></li>
+										</ul>
+									</div>
+									<div class="pull-right search_wrapper">
+										<ul>
+											<li class="cart"><a><i class="icon-location-shopping"></i><span>2</span></a>
+												<ul class="cart_box">
+													<li>
+														<div class="cart_section">
+															<div class="cart_img">
+																<a href="#"><img src="images/cart/1.jpg" alt="icecream-parlour-cart"></a>
+															</div>
+															<div class="cart_detail">
+																<h4><a href="cart.html">ice-cream</a></h4>
+																<h5>$ 23.12</h5>
+															</div>
+															<a class="cart_delete"></a>
+														</div>
+													</li>
+													<li>
+														<div class="cart_section">
+															<div class="cart_img">
+																<a href="#"><img src="images/cart/2.jpg" alt="icecream-parlour-cart-2"></a>
+															</div>
+															<div class="cart_detail">
+																<h4><a href="cart.html">ice-cream</a></h4>
+																<h5>$ 23.12</h5>
+															</div>
+															<a class="cart_delete"></a>
+														</div>
+													</li>
+													<li>
+														<div class="cart_section">
+															<div class="cart_img">
+																<h4>total</h4>
+															</div>
+															<div class="cart_detail">
+																<h5>$ 23.12</h5>
+															</div>
+														</div>
+													</li>
+													<li>
+														<div class="cart_section">
+															<p><a href="cart.html" class="ice_btn">view cart</a></p>
+															<p><a href="checkout.html" class="ice_btn">proceed to checkout</a></p>
+														</div>
+													</li>
+												</ul>
+											</li>
+											<li class="search">
+												<a>
+													<i class="icon-search"></i>
+												</a>
+												<ul class="search_box">
+													<li><a class="search_close"></a></li>
+													<li>
+														<form class="search_form">
+															<p>
+																<input type="text" value="" name="search" id="search">
+																<label for="search">search</label>
+															</p>
+															<a href="#" class="search_btn"><i class="icon-search"></i></a>
+														</form>
+													</li>
+												</ul>
+											</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+							<div class="slider_content">
+								<h1>All YOu Need Is Love & Ice Cream</h1>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="overlay">
+				<div class="chery c1"><img src="images/banner/1.png" alt="icecream-parlour-banner"></div>
+				<div class="chery c2"><img src="images/banner/1.png" alt="icecream-parlour-banner"></div>
+				<div class="chery c3"><img src="images/banner/1.png" alt="icecream-parlour-banner"></div>
+				<div class="chery c4"><img src="images/banner/1.png" alt="icecream-parlour-banner"></div>
+				<div class="chery c5"><img src="images/banner/1.png" alt="icecream-parlour-banner"></div>
+				<div class="chery c6"><img src="images/banner/1.png" alt="icecream-parlour-banner"></div>
+				<div class="chery c7"><img src="images/banner/1.png" alt="icecream-parlour-banner"></div>
+				<div class="chery c8"><img src="images/banner/1.png" alt="icecream-parlour-banner"></div>
+			</div>
+		</div>
+
+		<div class="ice_main_section1">
+			<div class="container">
+				<div class="row">
+					<div class="ice_about_wrapper">
+						<div class="col-lg-7 col-md-7 col-sm-12 col-xs-12">
+							<div class="ice_about_Section wow slideleft">
+								<h1 class="ice_heading">Something About Ice Creame</h1>
+								<p>Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however a small line of blind text by the name of Lorem Ipsum decided to leave for the World of Grammar.</p>
+								<p><i>It is a paradisematic country, in which roasted parts of sentences fly into your mouth.Pityful a rethoric question.</i></p>
+								<ul>
+									<li>
+										<div class="pull-left">
+											<i class="icon-ice-cream-cup"></i>
+										</div>
+										<div class="pull-left">
+											<p><i>Fresh Ice Cream</i></p>
+										</div>
+									</li>
+									<li>
+										<div class="pull-left">
+											<i class="icon-ice-cream-cup"></i>
+										</div>
+										<div class="pull-left">
+											<p><i>Bacon ice cream</i></p>
+										</div>
+									</li>
+									<li>
+										<div class="pull-left">
+											<i class="icon-ice-cream-cup"></i>
+										</div>
+										<div class="pull-left">
+											<p><i>Brown bread ice cream</i></p>
+										</div>
+									</li>
+									<li>
+										<div class="pull-left">
+											<i class="icon-ice-cream-cup"></i>
+										</div>
+										<div class="pull-left">
+											<p><i>Cherry Ice Cream</i></p>
+										</div>
+									</li>
+									<li>
+										<div class="pull-left">
+											<i class="icon-ice-cream-cup"></i>
+										</div>
+										<div class="pull-left">
+											<p><i>Chocolate Ice Cream</i></p>
+										</div>
+									</li>
+									<li>
+										<div class="pull-left">
+											<i class="icon-ice-cream-cup"></i>
+										</div>
+										<div class="pull-left">
+											<p><i>Coffee Ice Cream</i></p>
+										</div>
+									</li>
+								</ul>
+							</div>
+						</div>
+						<div class="overlap_img">
+							<img src="images/icecream-parlour/about.png" alt="icecream-parlour-about">
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="ice_main_section2 ice_special_wrapper">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg- col-md-6 col-sm-12 col-xs-12 col-lg-offset-3 col-md-offset-3 col-sm-offset-0 col-sx-offset-0">
+						<div class="heading_wrapper text-center wow slidedown">
+							<h1 class="ice_heading_white">Todays Special</h1>
+							<p class="white">It is a paradisematic country, in which roasted parts of sentences fly into your mouth.Pityful a rethoric question.</p>
+						</div>
+					</div>
+					<div class="ice_special">
+						<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 pull-left">
+							<div class="special_section text-center wow slideright">
+								<div class="special_img">
+									<img src="images/special/1.jpg" alt="icecream-parlour-special" class="img-responsive">
+								</div>
+								<h2 class="ice_sub_heading"><a href="shop_single.html"><i class="icon-check-alt"></i>  Cherry Ice Cream</a></h2>
+								<p>It is a paradisematic country, in which roasted parts of sentences fly into your mouth.Pityful a rethoric question.</p>
+								<div class="wishlist_wrapper">
+									<span class="pull-left">$70.00</span>
+									<a href="#" class="pull-right"><i class="icon-heart-outlined"></i> add to wishlist</a>
+								</div>
+								<a href="shop_single.html" class="ice_btn">add to cart</a>
+							</div>
+						</div>
+						<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 pull-left">
+							<div class="special_section text-center">
+								<div class="special_img">
+									<img src="images/special/2.jpg" alt="icecream-parlour-special2" class="img-responsive">
+								</div>
+								<h2 class="ice_sub_heading"><a href="shop_single.html"><i class="icon-check-alt"></i> Grape-Nuts</a></h2>
+								<p>It is a paradisematic country, in which roasted parts of sentences fly into your mouth.Pityful a rethoric question.</p>
+								<div class="wishlist_wrapper">
+									<span class="pull-left">$70.00</span>
+									<a href="#" class="pull-right"><i class="icon-heart-outlined"></i> add to wishlist</a>
+								</div>
+								<a href="shop_single.html" class="ice_btn">add to cart</a>
+							</div>
+						</div>
+						<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 col-lg-offset-0 col-md-offset-0 col-sm-offset-3 col-sx-offset-0 pull-left">
+							<div class="special_section text-center wow slideleft">
+								<div class="special_img">
+									<img src="images/special/3.jpg" alt="icecream-parlour-special3" class="img-responsive">
+								</div>
+								<h2 class="ice_sub_heading"><a href="shop_single.html"><i class="icon-check-alt"></i>  Butter Brickle</a></h2>
+								<p>It is a paradisematic country, in which roasted parts of sentences fly into your mouth.Pityful a rethoric question.</p>
+								<div class="wishlist_wrapper">
+									<span class="pull-left">$70.00</span>
+									<a href="#" class="pull-right"><i class="icon-heart-outlined"></i> add to wishlist</a>
+								</div>
+								<a href="shop_single.html" class="ice_btn">add to cart</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="ice_main_section2">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg- col-md-6 col-sm-12 col-xs-12 col-lg-offset-3 col-md-offset-3 col-sm-offset-0 col-sx-offset-0">
+						<div class="heading_wrapper text-center wow slidedown">
+							<h1 class="ice_heading">our services</h1>
+							<p>It is a paradisematic country, in which roasted parts of sentences fly into your mouth.Pityful a rethoric question.</p>
+						</div>
+					</div>
+					<div class="service_wrapper">
+						<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 pull-left">
+							<div class="service_section text-center wow zoomIn" style="background-image: url('images/service/1.png');">
+								<span class="flaticon-ice-cream"></span>
+								<h2 class="ice_sub_heading"><a href="#" class="white">Ice Cream Parlour</a></h2>
+								<p class="white">It is a paradisematic country, in which roasted parts.</p>
+							</div>
+						</div>
+						<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 pull-left">
+							<div class="service_section text-center wow zoomIn"  data-wow-delay="0.2s" style="background-image: url('images/service/2.png');">
+								<span class="flaticon-restaurant-cutlery-circular-symbol-of-a-spoon-and-a-fork-in-a-circle"></span>
+								<h2 class="ice_sub_heading"><a href="#" class="white">restaurant</a></h2>
+								<p class="white">It is a paradisematic country, in which roasted parts.</p>
+							</div>
+						</div> 
+						<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 pull-left">
+							<div class="service_section text-center wow zoomIn"  data-wow-delay="0.4s" style="background-image: url('images/service/3.png');">
+								<span class="flaticon-wine-glasses"></span>
+								<h2 class="ice_sub_heading"><a href="#" class="white">Bar Club Hall</a></h2>
+								<p class="white">It is a paradisematic country, in which roasted parts.</p>
+							</div>
+						</div>
+						<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 pull-left">
+							<div class="service_section text-center wow zoomIn"  data-wow-delay="0.6s" style="background-image: url('images/service/4.png');">
+								<span class="flaticon-stair-of-a-swimming-pool"></span>
+								<h2 class="ice_sub_heading"><a href="#" class="white">Ice Cream Parlour</a></h2>
+								<p class="white">It is a paradisematic country, in which roasted parts.</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="ice_main_section2 ice_team_wrapper">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg- col-md-6 col-sm-12 col-xs-12 col-lg-offset-3 col-md-offset-3 col-sm-offset-0 col-sx-offset-0">
+						<div class="heading_wrapper text-center wow slidedown">
+							<h1 class="ice_heading_white">our team</h1>
+							<p class="white">It is a paradisematic country, in which roasted parts of sentences fly into your mouth.Pityful a rethoric question.</p>
+						</div>
+					</div>
+					<div class="team_wrapper">
+						<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 pull-left">
+							<div class="team_section text-center wow zoomIn">
+								<div class="team_img">
+									<img src="images/team/1.jpg" alt="icecream-parlour-team1" class="img-responsive team_member">
+									<img src="images/team/shape.png" alt="icecream-parlour-team-shape" class="img-responsive shape_img">
+								</div>
+								<h2 class="ice_sub_heading white"><a href="team_single.html">Jonthana Thomas</a></h2>
+								<p class="white">CEO</p>
+								<ul class="social_icon">
+									<li><a href="#"><i class="icon-facebook"></i></a></li>
+									<li><a href="#"><i class="icon-twitter"></i></a></li>
+									<li><a href="#"><i class="icon-linkedin"></i></a></li>
+									<li><a href="#"><i class="icon-google-plus-logo"></i></a></li>
+								</ul>
+							</div>
+						</div>
+						<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 pull-left">
+							<div class="team_section text-center wow zoomIn" data-wow-delay="0.2s">
+								<div class="team_img">
+									<img src="images/team/2.jpg" alt="icecream-parlour-team2" class="img-responsive team_member">
+									<img src="images/team/shape.png" alt="icecream-parlour-team2-shape" class="img-responsive shape_img">
+								</div>
+								<h2 class="ice_sub_heading white"><a href="team_single.html">Bernadette	Greene</a></h2>
+								<p class="white">Taste Bud</p>
+								<ul class="social_icon">
+									<li><a href="#"><i class="icon-facebook"></i></a></li>
+									<li><a href="#"><i class="icon-twitter"></i></a></li>
+									<li><a href="#"><i class="icon-linkedin"></i></a></li>
+									<li><a href="#"><i class="icon-google-plus-logo"></i></a></li>
+								</ul>
+							</div>
+						</div>
+						<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 pull-left">
+							<div class="team_section text-center wow zoomIn" data-wow-delay="0.4s">
+								<div class="team_img">
+									<img src="images/team/3.jpg" alt="icecream-parlour-team3" class="img-responsive team_member">
+									<img src="images/team/shape.png" alt="icecream-parlour-team3-shape" class="img-responsive shape_img">
+								</div>
+								<h2 class="ice_sub_heading white"><a href="team_single.html">John Thomas</a></h2>
+								<p class="white">Marketing</p>
+								<ul class="social_icon">
+									<li><a href="#"><i class="icon-facebook"></i></a></li>
+									<li><a href="#"><i class="icon-twitter"></i></a></li>
+									<li><a href="#"><i class="icon-linkedin"></i></a></li>
+									<li><a href="#"><i class="icon-google-plus-logo"></i></a></li>
+								</ul>
+							</div>
+						</div>
+						<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 pull-left">
+							<div class="team_section text-center wow zoomIn" data-wow-delay="0.6s">
+								<div class="team_img">
+									<img src="images/team/4.jpg" alt="icecream-parlour-team4" class="img-responsive team_member">
+									<img src="images/team/shape.png" alt="icecream-parlour-shape" class="img-responsive shape_img">
+								</div>
+								<h2 class="ice_sub_heading white"><a href="team_single.html">Matt Gibson</a></h2>
+								<p class="white">Director</p>
+								<ul class="social_icon">
+									<li><a href="#"><i class="icon-facebook"></i></a></li>
+									<li><a href="#"><i class="icon-twitter"></i></a></li>
+									<li><a href="#"><i class="icon-linkedin"></i></a></li>
+									<li><a href="#"><i class="icon-google-plus-logo"></i></a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="overlay">
+				<div class="left_img"><img src="images/team/1.png" alt="icecream-parlour-team-overlay"></div>
+				<div class="right_img"><img src="images/team/2.png" alt="icecream-parlour-team-overlay"></div>
+			</div>
+		</div>
+
+		<div class="ice_main_section1">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg- col-md-6 col-sm-12 col-xs-12 col-lg-offset-3 col-md-offset-3 col-sm-offset-0 col-sx-offset-0">
+						<div class="heading_wrapper text-center wow slidedown">
+							<h1 class="ice_heading">Handmade Ice Creams</h1>
+							<p>It is a paradisematic country, in which roasted parts of sentences fly into your mouth.Pityful a rethoric question.</p>
+						</div>
+					</div>
+					<div class="ice_cream_wrapper">
+						<div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+							<div class="handmade_section wow slideleft">
+								<h2 class="ice_sub_heading">Handmade Cones</h2>
+								<ul>
+									<li>
+										<div class="product_detail">
+											<a href="shop_single.html" class="pull-left ice_sub_heading">Vannila Scotch</a>
+											<span class="pull-right ice_sub_heading">6.5$</span>
+										</div>
+										<p>There are many variations of passages of Lorem Ipsum available.</p>
+									</li>
+									<li>
+										<div class="product_detail">
+											<a href="shop_single.html" class="pull-left ice_sub_heading">Strawberry Gems</a>
+											<span class="pull-right ice_sub_heading">7.5$</span>
+										</div>
+										<p>There are many variations of passages of Lorem Ipsum available.</p>
+									</li>
+									<li>
+										<div class="product_detail">
+											<a href="shop_single.html" class="pull-left ice_sub_heading">Butter Scotch</a>
+											<span class="pull-right ice_sub_heading">9.5$</span>
+										</div>
+										<p>There are many variations of passages of Lorem Ipsum available.</p>
+									</li>
+								</ul>
+							</div>
+						</div>
+						<div class="handmade_img wow slideright">
+							<img src="images/handmade/1.png" alt="icecream-parlour-handmade1">
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="ice_video_wrapper">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-8 col-md-8 col-lg-offset-2 col-md-offset-2 col-sm-12 col-xs-12 col-sm-offset-0 col-sx-offset-0">
+						<div class="video_detail text-center">
+							<a href="https://www.youtube.com/embed/Zy33XDwGVxc" class="video"><i class="icon-play3"></i></a>
+							<h1 class="ice_heading_white">How We Make Best Ice Cream</h1>
+							<p class="white">It is a paradisematic country, in which roasted parts of sentences fly into your mouth.Pityful a entences fly into your mouth.Pityful a rethoric question.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="ice_main_section2">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg- col-md-6 col-sm-12 col-xs-12 col-lg-offset-3 col-md-offset-3 col-sm-offset-0 col-sx-offset-0">
+						<div class="heading_wrapper text-center wow slidedown">
+							<h1 class="ice_heading">Our Blogs</h1>
+							<p>It is a paradisematic country, in which roasted parts of sentences fly into your mouth.Pityful a rethoric question.</p>
+						</div>
+					</div>
+					<div class="blog_wrapper">
+						<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 pull-left">
+							<div class="blog_Section wow slideup">
+								<div class="blog_img ice_hover">
+									<img src="images/blog/1.jpg" alt="icecream-parlour-blog-1" class="img-responsive">
+									<div class="overlay">
+										<a href="blog_single.html"><i class="fa fa-link"></i></a>
+									</div>
+								</div>
+								<div class="blog_detail">
+									<h2 class="ice_sub_heading"><a href="blog_single.html">We Post Amazing Post Blogs </a></h2>
+									<ul>
+										<li><span>by</span><a href="#" class="link">admin</a></li>
+										<li><a href="#" class="link">24 Nov 2017</a></li>
+										<li><span>in</span><a href="#" class="link">Mechanic</a></li>
+									</ul>
+									<p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur.</p>
+									<ul class="share_wrapper">
+										<li><a href="#"><i class="flaticon-favorite-heart-button"></i>360</a></li>
+										<li><a href="#"><i class="icon-bubble"></i>26</a></li>
+										<li class="share"><a href="#"><i class="icon-share2"></i>share</a>
+											<ul class="social_icon">
+												<li><a href="#"><i class="icon-facebook"></i></a></li>
+												<li><a href="#"><i class="icon-twitter"></i></a></li>
+												<li><a href="#"><i class="icon-linkedin"></i></a></li>
+												<li><a href="#"><i class="icon-google-plus-logo"></i></a></li>
+											</ul>
+										</li>
+									</ul>
+								</div>
+							</div>
+							<div class="blog_Section wow slideup">
+								<div class="blog_img ice_hover">
+									<img src="images/blog/4.jpg" alt="icecream-parlour-blog-2" class="img-responsive">
+									<div class="overlay">
+										<a href="blog_single.html"><i class="fa fa-link"></i></a>
+									</div>
+								</div>
+								<div class="blog_detail">
+									<h2 class="ice_sub_heading"><a href="blog_single.html">	Jeni's Splendid Ice Creams </a></h2>
+									<ul>
+										<li><span>by</span><a href="#" class="link">admin</a></li>
+										<li><a href="#" class="link">24 Nov 2017</a></li>
+										<li><span>in</span><a href="#" class="link">Mechanic</a></li>
+									</ul>
+									<p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur.at Hampden-Sydney College in Virginia, looked up one of the more.</p>
+									<ul class="share_wrapper">
+										<li><a href="#"><i class="flaticon-favorite-heart-button"></i>360</a></li>
+										<li><a href="#"><i class="icon-bubble"></i>26</a></li>
+										<li class="share"><a href="#"><i class="icon-share2"></i>share</a>
+											<ul class="social_icon">
+												<li><a href="#"><i class="icon-facebook"></i></a></li>
+												<li><a href="#"><i class="icon-twitter"></i></a></li>
+												<li><a href="#"><i class="icon-linkedin"></i></a></li>
+												<li><a href="#"><i class="icon-google-plus-logo"></i></a></li>
+											</ul>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 pull-left">
+							<div class="blog_Section wow slideup">
+								<div class="blog_img ice_hover">
+									<img src="images/blog/2.jpg" alt="icecream-parlour-blog-3" class="img-responsive">
+									<div class="overlay">
+										<a href="blog_single.html"><i class="fa fa-link"></i></a>
+									</div>
+								</div>
+								<div class="blog_detail">
+									<h2 class="ice_sub_heading"><a href="blog_single.html">	Ice Cream Journal </a></h2>
+									<ul>
+										<li><span>by</span><a href="#" class="link">admin</a></li>
+										<li><a href="#" class="link">24 Nov 2017</a></li>
+										<li><span>in</span><a href="#" class="link">Mechanic</a></li>
+									</ul>
+									<p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.</p>
+									<ul class="share_wrapper">
+										<li><a href="#"><i class="flaticon-favorite-heart-button"></i>360</a></li>
+										<li><a href="#"><i class="icon-bubble"></i>26</a></li>
+										<li class="share"><a href="#"><i class="icon-share2"></i>share</a>
+											<ul class="social_icon">
+												<li><a href="#"><i class="icon-facebook"></i></a></li>
+												<li><a href="#"><i class="icon-twitter"></i></a></li>
+												<li><a href="#"><i class="icon-linkedin"></i></a></li>
+												<li><a href="#"><i class="icon-google-plus-logo"></i></a></li>
+											</ul>
+										</li>
+									</ul>
+								</div>
+							</div>
+							<div class="blog_Section wow slideup">
+								<div class="blog_img ice_hover">
+									<img src="images/blog/5.jpg" alt="icecream-parlour-blog4" class="img-responsive">
+									<div class="overlay">
+										<a href="blog_single.html"><i class="fa fa-link"></i></a>
+									</div>
+								</div>
+								<div class="blog_detail">
+									<h2 class="ice_sub_heading"><a href="blog_single.html">	Reddit - Ice cream </a></h2>
+									<ul>
+										<li><span>by</span><a href="#" class="link">admin</a></li>
+										<li><a href="#" class="link">24 Nov 2017</a></li>
+										<li><span>in</span><a href="#" class="link">Mechanic</a></li>
+									</ul>
+									<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum culpa qui officia deserunt mollit anim id est laborum</p>
+									<ul class="share_wrapper">
+										<li><a href="#"><i class="flaticon-favorite-heart-button"></i>360</a></li>
+										<li><a href="#"><i class="icon-bubble"></i>26</a></li>
+										<li class="share"><a href="#"><i class="icon-share2"></i>share</a>
+											<ul class="social_icon">
+												<li><a href="#"><i class="icon-facebook"></i></a></li>
+												<li><a href="#"><i class="icon-twitter"></i></a></li>
+												<li><a href="#"><i class="icon-linkedin"></i></a></li>
+												<li><a href="#"><i class="icon-google-plus-logo"></i></a></li>
+											</ul>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12  col-lg-offset-0 col-md-offset-0 col-sm-offset-3 col-sx-offset-0 pull-left">
+							<div class="blog_Section wow slideup">
+								<div class="blog_img ice_hover">
+									<img src="images/blog/3.jpg" alt="icecream-parlour-blog5" class="img-responsive">
+									<div class="overlay">
+										<a href="blog_single.html"><i class="fa fa-link"></i></a>
+									</div>
+								</div>
+								<div class="blog_detail">
+									<h2 class="ice_sub_heading"><a href="blog_single.html">Ice Cream Rolls | Youtube </a></h2>
+									<ul>
+										<li><span>by</span><a href="#" class="link">admin</a></li>
+										<li><a href="#" class="link">24 Nov 2017</a></li>
+										<li><span>in</span><a href="#" class="link">Mechanic</a></li>
+									</ul>
+									<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+									<ul class="share_wrapper">
+										<li><a href="#"><i class="flaticon-favorite-heart-button"></i>360</a></li>
+										<li><a href="#"><i class="icon-bubble"></i>26</a></li>
+										<li class="share"><a href="#"><i class="icon-share2"></i>share</a>
+											<ul class="social_icon">
+												<li><a href="#"><i class="icon-facebook"></i></a></li>
+												<li><a href="#"><i class="icon-twitter"></i></a></li>
+												<li><a href="#"><i class="icon-linkedin"></i></a></li>
+												<li><a href="#"><i class="icon-google-plus-logo"></i></a></li>
+											</ul>
+										</li>
+									</ul>
+								</div>
+							</div>
+							<div class="blog_Section wow slideup">
+								<div class="blog_img ice_hover">
+									<img src="images/blog/6.jpg" alt="icecream-parlour-blog6" class="img-responsive">
+									<div class="overlay">
+										<a href="blog_single.html"><i class="fa fa-link"></i></a>
+									</div>
+								</div>
+								<div class="blog_detail">
+									<h2 class="ice_sub_heading"><a href="blog_single.html">	Smitten Ice Cream</a></h2>
+									<ul>
+										<li><span>by</span><a href="#" class="link">admin</a></li>
+										<li><a href="#" class="link">24 Nov 2017</a></li>
+										<li><span>in</span><a href="#" class="link">Mechanic</a></li>
+									</ul>
+									<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.</p>
+									<ul class="share_wrapper">
+										<li><a href="#"><i class="flaticon-favorite-heart-button"></i>360</a></li>
+										<li><a href="#"><i class="icon-bubble"></i>26</a></li>
+										<li class="share"><a href="#"><i class="icon-share2"></i>share</a>
+											<ul class="social_icon">
+												<li><a href="#"><i class="icon-facebook"></i></a></li>
+												<li><a href="#"><i class="icon-twitter"></i></a></li>
+												<li><a href="#"><i class="icon-linkedin"></i></a></li>
+												<li><a href="#"><i class="icon-google-plus-logo"></i></a></li>
+											</ul>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="ice_footer_wrapper">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
+						<div class="widget widget_info text-center">
+							<div class="ice_logo">
+								<a href="index.html"><img src="images/banner/logo.png" alt="icecream-parlour-footer-logo"></a>
+							</div>
+							<p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical.</p>
+							<ul class="social_icon">
+								<li><a href="#"><i class="icon-facebook"></i></a></li>
+								<li><a href="#"><i class="icon-twitter"></i></a></li>
+								<li><a href="#"><i class="icon-linkedin"></i></a></li>
+								<li><a href="#"><i class="icon-google-plus-logo"></i></a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
+						<div class="widget widget_news">
+							<h2 class="ice_sub_heading widget-title">latest news</h2>
+							<ul>
+								<li>
+									<div class="news_img"><a href="#"><img src="images/footer/1.jpg" alt="icecream-parlour-footer-latest-post"></a></div>
+									<div class="news_detail"><a href="#">22 jul 2017</a> <p>Li nov lingua franca va simplic Europan. simplice Europan.</p></div>
+								</li>
+								<li>
+									<div class="news_img"><a href="#"><img src="images/footer/2.jpg" alt="icecream-parlour-footer-latest-post"></a></div>
+									<div class="news_detail"><a href="#">22 jul 2017</a> <p>Li nov lingua franca va simplic Europan. simplice Europan.</p></div>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
+						<div class="widget widget_page">
+							<h2 class="ice_sub_heading widget-title">our pages</h2>
+							<ul>
+								<li><a href="term_condition.html"><i class="icon-check-alt"></i>terms and condition</a></li>
+								<li><a href="cart.html"><i class="icon-check-alt"></i>cart</a></li>
+								<li><a href="checkout.html"><i class="icon-check-alt"></i>checkout</a></li>
+								<li><a href="faq.html"><i class="icon-check-alt"></i>FAQS</a></li>
+								
+								<li><a href="shortcodes.html"><i class="icon-check-alt"></i>shortcodes</a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
+						<div class="widget widget_address">
+							<h2 class="ice_sub_heading widget-title">our contact</h2>
+							<ul>
+								<li>
+									<div class="address_icon"><i class="icon-location"></i></div>
+									<div class="address_detail"><h3>Address</h3> <p>Rainbow Drive Youngstown</p></div>
+								</li>
+								<li>
+									<div class="address_icon"><i class="icon-phone1"></i></div>
+									<div class="address_detail"><h3>Contact Numbers</h3> <p>1800 450 1245</p></div>
+								</li>
+								<li>
+									<div class="address_icon"><i class="icon-clock"></i></div>
+									<div class="address_detail"><h3>Office Timings</h3> <p>Mon - Fri 9.00am : 6.00pm</p></div>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="overlay">
+				<img src="images/footer/ice.png" alt="icecream-parlour-footer-overlay">
+			</div>
+		</div>
+		<div class="ice_copyright_wrapper text-center">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+						<div class="">
+							<p class="white">Copyrights &copy; 2018, All Rights Reserved by <a href="index.html">ICE CREAM</a></p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="goto_wrapper"><img src="images/loader.gif" alt="icecream-parlour-sroll-go-to-up"></div>
+
+	<postal-code-popup  @HideModalValue="hideModal"   :showModalProp="showPostalCode"></postal-code-popup>
+
+	</div>
 </template>
-
 <script>
-    import VueGallery from 'vue-gallery';
-    import {
-        Hooper,
-        Slide,
-        Navigation as HooperNavigation
-    } from 'hooper';
-
-    import 'hooper/dist/hooper.css';
     export default {
-        components: {
-            Hooper,
-            Slide,
-            HooperNavigation,
-            'gallery': VueGallery,
-        },
-        data: function () {
+        data() {
             return {
-                images: [
-                    '../../images/mainbanner1.jpeg',
-                    '../../images/image00003.jpg',
-                ],
-                stories: [],
-                index: null,
+                postal_code: '',
+                error_message: '',
                 showPopup: false,
+                showPostalCode: false,
                 menu: false,
                 allergy: false
-            };
-        },
-        mounted() {
-            this.getStory();
-            console.log('Component mounted.')
+            }
         },
         methods: {
-            getStory(){
-                let  _this = this
-                _this.loading  = true;
-                axios.get('/api/our-story')
-                    .then((response) => {
-                        _this.stories =  response.data.data;
-                        _this.loading  = false;
-                    });
+
+            hideModal() {
+                this.showPopup = false;
+                this.showPostalCode = false;
             },
 
-        }
+            openMenu() {
+                this.showPopup = true;
+                this.menu = true;
+                this.allergy = false;
+            },
+
+            openAllergy() {
+                this.showPopup = true;
+                this.allergy = true;
+                this.menu = false;
+            },
+            openPostalCode() {
+                this.showPopup = false;
+                this.allergy = false;
+                this.menu = false;
+                this.showPostalCode = true;
+            },
+
+
+    
+        },
+      
     }
 </script>
-

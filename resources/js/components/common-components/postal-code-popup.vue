@@ -7,7 +7,7 @@
 
                     <form>
                         <div class="form-group">
-                            <input type="text"  class="form-control form-control-rounded" v-model="postal_code" placeholder="Enter your Postal code">
+                            <input type="text"  class="form-control form-control-rounded mb-3" v-model="postal_code" placeholder="Enter your Postal code">
                         </div>
 
                         <button type="button" class="btn btn-rounded-danger"  v-on:click="checkPostCode">

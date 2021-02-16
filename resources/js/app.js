@@ -1,4 +1,14 @@
 require('./bootstrap');
+require('./custom');
+// require('./jquery-ui.min');
+// require('./jquery');
+// require('./jquery.magnific-popup');
+// require('./okzoom.min');
+// require('./owl.carousel.min');
+// require('./theia-sticky-sidebar');
+// require('./wow');
+import $ from 'jquery'
+
 window.Vue = require('vue');
       
 import Vue from 'vue' 
@@ -81,6 +91,7 @@ const router = new VueRouter({
         }
     }
 });
+    
 
 new Vue({
     el: '#app',
@@ -96,7 +107,7 @@ new Vue({
         setTimeout(() => {
             this.loading = false
         }, 1000);
-    }
+    },
 });
 
 
