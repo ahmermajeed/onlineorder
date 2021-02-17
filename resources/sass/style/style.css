@@ -390,7 +390,7 @@ input:focus, textarea:focus, select:focus, button:focus {
     
 }
 .header_wrapper .ice_menu_wraper{
-    width: calc(100% - 85px);
+    width: calc(100% - 225px);
     float: left;
     padding-left: 45px;
     margin-top: 15px;
@@ -1690,8 +1690,7 @@ a.search_close:after {
 	text-transform:capitalize;
 }
 .breadcrumb>li+li:before{
-	content:'\f122';
-	font-family: Flaticon;
+	content:'>';
 	color:#ffffff;
 	font-size:13px;
 }
@@ -4352,5 +4351,8 @@ ul.social_icon > li > a i:before {
 }
 .pull-right {
 	float: right;
+}
+.slider_content .breadcrumb {
+    background-color: transparent;
 }
 /* Additional css*/

@@ -1,12 +1,5 @@
 require('./bootstrap');
 require('./custom');
-// require('./jquery-ui.min');
-// require('./jquery');
-// require('./jquery.magnific-popup');
-// require('./okzoom.min');
-// require('./owl.carousel.min');
-// require('./theia-sticky-sidebar');
-// require('./wow');
 import $ from 'jquery'
 
 window.Vue = require('vue');
@@ -83,6 +76,16 @@ const router = new VueRouter({
             path: '/online-order/:id',
             name: 'online-order',
             component: require('./components/order-page/main.vue').default,
+        },
+        {
+            path: '/shop',
+            name: 'shop',
+            component: require('./components/Shop.vue').default,
+        },
+        {
+            path: '/blog',
+            name: 'blog',
+            component: require('./components/Blog.vue').default,
         },
     ],
 });

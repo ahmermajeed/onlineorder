@@ -14,43 +14,42 @@
 						<div class="col-lg-10 col-md-10 col-sm-12 col-xs-12 col-lg-offset-1 col-md-offset-1 col-sm-offset-0 col-xs-offset-0">
 							<div class="header_wrapper">
 								<div class="ice_logo">
-									<a href="javascript:;"><img src="images/banner/logo.png" alt="icecream-parlour-logo"></a>
+			                        <router-link :to="{ path: '/'}">
+										<a href="javascript:;"><img src="images/banner/logo.png" alt="dessert-king-logo"></a>
+									</router-link>
 								</div>
 								<div class="ice_menu_wraper">
-									<a data-toggle="collapse" data-target="#menu" class="toggle"><span></span></a>
-									<div class="ice_menu collapse" id="menu">
-										<a data-toggle="collapse" data-target="#menu" class="toggle close"><span></span></a>
+									<a class="toggle" @click="responsiveMenu">
+										<span></span>
+									</a>
+									<div class="ice_menu collapse">
+										<a class="toggle close"><span></span></a>
 										<ul>
-											<li><a>home</a>
-			
+											<li>
+			                                <router-link :to="{ path: '/'}">
+												<a>home</a>
+											</router-link>
 											</li>
-											<li><a href="javascript:;">about</a></li>
-											<li><a>blog</a>
-												
+											<li>
+			                                <router-link :to="{ path: '/about-us'}">
+												<a href="javascript:;">about</a>
+											</router-link>
 											</li>
-											<li><a href="javascript:;">shop</a>
-												
+											<li>
+				                                <router-link :to="{ path: '/blog'}">
+													<a href="javascript:;">Blog</a>
+												</router-link>
 											</li>
-									<!-- 		<li><a>pages</a>
-												<ul class="sub-menu">
-													<li><a href="cart.html">cart</a></li>
-													<li><a href="checkout.html">checkout</a>
-													</li>
-													
-													<li><a href="faq.html">FAQS</a>
-													</li>
-													<li><a href="shortcodes.html">shortcodes</a>
-													</li>
-													<li><a href="term_condition.html">terms & conditions</a>
-													</li>
-												</ul>
-											</li> -->
+											<li>
+												<router-link :to="{ path: '/shop'}">				<a href="javascript:;">Shop</a>				
+												</router-link>	
+											</li>
 											<li><a href="javascript:;" @click.prevent="openPostalCode">Order Online</a></li>
 										</ul>
 									</div>
 									<div class="pull-right search_wrapper">
 										<ul>
-											<li class="search">
+											<li class="search" @click="openSearchBox">
 												<a>
 													<i class="icon-search"></i>
 												</a>
@@ -179,7 +178,7 @@
 									<span class="pull-left">$70.00</span>
 									<a href="#" class="pull-right"><i class="icon-heart-outlined"></i> add to wishlist</a>
 								</div>
-								<a href="shop_single.html" class="ice_btn">add to cart</a>
+								<a href="javascript:;" @click.prevent="openPostalCode" class="ice_btn">add to cart</a>
 							</div>
 						</div>
 						<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 pull-left">
@@ -193,7 +192,7 @@
 									<span class="pull-left">$70.00</span>
 									<a href="#" class="pull-right"><i class="icon-heart-outlined"></i> add to wishlist</a>
 								</div>
-								<a href="shop_single.html" class="ice_btn">add to cart</a>
+								<a href="javascript:;" @click.prevent="openPostalCode" class="ice_btn">add to cart</a>
 							</div>
 						</div>
 						<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 col-lg-offset-0 col-md-offset-0 col-sm-offset-3 col-sx-offset-0 pull-left">
@@ -207,7 +206,7 @@
 									<span class="pull-left">$70.00</span>
 									<a href="#" class="pull-right"><i class="icon-heart-outlined"></i> add to wishlist</a>
 								</div>
-								<a href="shop_single.html" class="ice_btn">add to cart</a>
+								<a href="javascript:;" @click.prevent="openPostalCode" class="ice_btn">add to cart</a>
 							</div>
 						</div>
 					</div>
@@ -548,8 +547,26 @@
 						<div class="widget widget_page">
 							<h2 class="ice_sub_heading widget-title">our pages</h2>
 							<ul>
-								<li><a href="javascript:;"><i class="icon-check-alt"></i>Home</a></li>
-								
+								<li>
+									<router-link :to="{ path: '/'}">
+										<a href="javascript:;"><i class="icon-check-alt"></i>Home</a>
+									</router-link>
+								</li>
+								<li>
+									<router-link :to="{ path: '/aboutus'}">
+										<a href="javascript:;"><i class="icon-check-alt"></i>About Us</a>
+									</router-link>
+								</li>
+								<li>
+									<router-link :to="{ path: '/shop'}">
+										<a href="javascript:;"><i class="icon-check-alt"></i>Shop</a>
+									</router-link>
+								</li>
+								<li>
+									<router-link :to="{ path: '/blog'}">
+										<a href="javascript:;"><i class="icon-check-alt"></i>Blog</a>
+									</router-link>
+								</li>
 							</ul>
 						</div>
 					</div>
@@ -633,9 +650,23 @@
                 this.showPostalCode = true;
             },
 
+            openSearchBox() {
+            	$(".search > a").on("click", function(){
+            		$(this).parent().addClass('show_search');
+            	});
+            	$(".search_close").on("click", function(){
+            		$('.search_close').closest('.search').removeClass('show_search');
+            	});	
+            },
 
-    
-        },
-      
+            responsiveMenu() {
+	            $(".ice_menu_wraper a.toggle").on("click", function(){
+                 $(".ice_menu").addClass("in");
+	            });
+	            $(".toggle.close").on("click", function(){
+                  $(this).closest(".ice_menu").removeClass("in");
+	            });
+            },
     }
+}
 </script>
