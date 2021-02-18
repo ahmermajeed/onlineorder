@@ -9,10 +9,10 @@
         <div class="space-70"></div>
     </div> 
 </template> 
-
+    
 <script>
     import VueGallery from 'vue-gallery';
-    import {
+    import { 
         Hooper,
         Slide, 
         Navigation as HooperNavigation
@@ -23,7 +23,7 @@
         components: {
             Hooper,
             Slide,
-            HooperNavigation,
+            HooperNavigation, 
             'gallery': VueGallery,
         },
         methods: {

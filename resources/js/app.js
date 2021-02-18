@@ -12,11 +12,11 @@ Vue.use(VueRouter);
 
 import BootstrapVue from 'bootstrap-vue';
 import { ModalPlugin } from 'bootstrap-vue'
-
-
+ 
+ 
 import VeeValidate from 'vee-validate';
-const config = {
-    errorBagName: 'errorBag',
+const config = {  
+    errorBagName: 'errorBag', 
     events: 'input'
 };
 Vue.use(VeeValidate, config);

@@ -5,7 +5,7 @@
             <!-- <nav class="navbar navbar-expand-lg navbar-light custom-header" id="mainNav"> -->
             
             <div class="header-top">
-                <div class="header-top-section">
+                <!-- <div class="header-top-section">
                     <div class="container">
                         <div class="row">
                             <div class="col-7 col-md-6">
@@ -20,34 +20,25 @@
                                             <span>
                                                  <a href="javascript:;">10 Peckham Park Road, London SE15 6TW </a>
                                             </span>
-                                        </li> -->
+                                        </li>
                                     </ul>
                                 </div> 
                             </div>
-                            <div class="col-5 col-md-6">
-                                <div class="header-icon float-right">
-                                   <ul>
-                                       <li><a href="#"><i class="icon-facebook"></i></a></li>
-                                       <li><a href="#"><i class="icon-twitter"></i></a></li>
-                                       <li><a href="#"><i class="icon-instagram-symbol"></i></a></li>
-                                       <li><a href="#"><i class="icon-linkedin"></i></a></li>
-                                   </ul> 
-                                </div>
-                            </div>     
+                               
                         </div>
                     </div>
-                </div>
+                </div> --> 
                 <div class="header-bottom-section">
                     <div class="container">
                         <div class="row align-items-center">
-                            <div class="col-6 col-md-3">
+                            <div class="col-lg-3 col-md-3 col-sm-3">
                                 <router-link :to="{ path: '/'}">
                                      <a class="navbar-brand js-scroll-trigger main-logo" href="javascript:;">
-                                        <img src="/images/theme-2/taj-logo.png">
+                                        <img src="/images/theme-3/big-logo.png">
                                     </a>
                                 </router-link>
                             </div>
-                            <div class="col-6 col-md-9 right">
+                            <div class="col-lg-6 col-md-9 col-sm-6">
                                 <nav class="navbar navbar-expand-lg navbar-light justify-content-end main-menu p-0">
                                   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsiv" aria-controls="navbarResponsiv" aria-expanded="false" aria-label="Toggle navigation">
                                     <span class="navbar-toggler-icon"></span>
@@ -68,18 +59,21 @@
 
                                         <!--                            <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#services">Menu</a></li>-->
                                         <!--                            <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#contact">GALLERY</a></li>-->
-                                        <li class="nav-item">
-                                            <div class="order-now">
-                                                 <!-- <a href="#" class="btn btn-outline-danger"  @click.prevent="openPostalCode"> 
-                                                Order Online </i></i>
-                                                     </a> -->
-                                                <a href="#" class="btn btn-warning "  @click.prevent="openPostalCode"> Order Online</a>
-                                            </div> 
-                                        </li>
+                                       
                                     </ul>
                                   </div>
                                 </nav>
                             </div>
+                            <div class="col-lg-3 col-md-3 col-sm-3 header-top-section">
+                                <div class="header-icon float-right">
+                                   <ul>
+                                       <li><a href="#"><i class="icon-facebook"></i></a></li>
+                                       <li><a href="#"><i class="icon-twitter"></i></a></li>
+                                       <li><a href="#"><i class="icon-instagram-symbol"></i></a></li>
+                                       <li><a href="#"><i class="icon-linkedin"></i></a></li>
+                                   </ul> 
+                                </div>
+                            </div>  
                         </div>
                     </div>
                 </div>  
@@ -88,15 +82,20 @@
             <div class="header-bottom section-fullwidth">
                 <div class="container">
                     <div class="row">
-                        <div class="col-lg-2 col-md-1 col-sm-12">
-                            
-                        </div>
-                        <div class="col-lg-8 col-md-10 col-sm-12">
-                            <div class="contact-bnner">
-                                <div class="head-taj mb-3">
-                                    <h2>Save 25% on orders over £30</h2>
+                        <div class="contact-bnner">
+                            <div class="head-taj mb-3">
+                                <h2>The Passion for the Perfect Taste</h2>
+                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+                                <div class="form-group text-center">
+                                    <button type="button" class="btn btn-outline-light"  v-on:click="checkPostCode">
+                                      <span>Explore MOre </span>
+                                    </button>
                                 </div>
-                               <div class="row">
+                                <div class="form-group text-center mb-0">
+                                    <p class="error">{{error_message}} </p>
+                                </div>
+                            </div>
+                            <!-- <div class="row">
                                 <div class="col-lg-4 col-md-4 col-sm-12 mt-0 px-0">
                                     <div class="food">
                                         
@@ -140,13 +139,11 @@
                                     
                                 </div>
                                    
-                               </div>
-                            </div>
-                            
+                            </div> -->
                         </div>
-                        <div class="col-lg-2 col-md-1 col-sm-12">
                             
-                        </div>
+                        
+                        
                     </div>
                 </div>
             </div>
