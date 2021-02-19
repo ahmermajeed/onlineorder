@@ -21,6 +21,9 @@ p {
 
 span {
     font-size: 14px;
+    @include media-breakpoint-only(md) {
+        font-size: 12px;
+    }
 }
 
 strong {
@@ -50,6 +53,9 @@ a {
     padding: 7px 30px;
 	box-shadow: 0px 15px 20px 0px rgba(0, 0, 0, 0.2) !important;
 	min-width: 140px;
+    @include media-breakpoint-only(md) {
+        min-width: 120px;
+    }
 	&.btn-rounded-default{
 		background-color: #fff;
 		color:$red;
@@ -174,6 +180,25 @@ ul {
 
 .header-bottom-section {
     padding: 10px 0px 10px 0px;
+    .justify-content-end {
+        justify-content: center;
+        @include media-breakpoint-down(sm){
+               justify-content: flex-end !important;
+            }
+            @include media-breakpoint-only(md) {
+                justify-content: flex-end !important;
+            }
+    }
+    .header-top-section {
+        
+        @include media-breakpoint-down(sm){
+              display: none;
+            }
+            @include media-breakpoint-only(md) {
+               display: none;
+            }
+    }
+     
     .main-menu {
         .order-now {
             a {
@@ -500,6 +525,7 @@ ul {
     height: 650px;
     @include media-breakpoint-down(md) {
         padding: 121px 0px 60px 0px;
+        background-size: inherit;
     }
     @include media-breakpoint-down(sm) {
         background-position: center;
@@ -514,7 +540,7 @@ ul {
          max-width: 830px;
        
          @include media-breakpoint-down(md) {
-            margin-top: 27% !important;
+            margin-top: 10% !important;
         }
         @include media-breakpoint-down(sm) {
             margin-top: 5% !important;
@@ -528,6 +554,7 @@ ul {
                 font-size: 46px;
                  font-style: italic;
                  margin:0px;
+                 font-family: 'Kaushan Script', cursive;
             }
             p{
                 color: $white;
@@ -551,6 +578,12 @@ ul {
         position: relative;
         right: 70px;
         margin-bottom: 60px;
+        @include media-breakpoint-down(md) {
+            margin-top: -136px !important;
+            width: 100%;
+            right: 0px;
+            margin-bottom: 60px;
+        }
         .postal-code {
             width: 320px;
             margin: 0 auto;
@@ -562,6 +595,7 @@ ul {
                 color: #fff;
                 line-height: 42px;
                 margin-bottom: 20px;
+                font-family: 'Kaushan Script', cursive;
             }
             h4 {
                 font-size: 22px;
@@ -582,9 +616,16 @@ ul {
             margin-top: -64px;
             color: #b7781b;
             margin-left: 25px;
+             @include media-breakpoint-down(md) {
+                    margin-top: -95px;
+            }
         }
         .menu-left-item {
             margin-top: 50px;
+            @include media-breakpoint-down(md) {
+                margin-top: 85px;
+                margin-bottom: 30px;
+            }
 
             .order-taj {
                 margin-bottom: 12px;
@@ -638,6 +679,13 @@ ul {
             width: 100%;
             padding-top: 18px;
              height: 100%;
+             @include media-breakpoint-down(md) {
+                    margin-left: 30px;
+                    height: 58%;
+            }
+            @include media-breakpoint-down(sm) {
+                
+            }
         }
     }
     ul{
@@ -645,10 +693,16 @@ ul {
         li {
             list-style: none;
             font-size: 22px;
+            @include media-breakpoint-down(md) {
+               font-size: 16px;
+            }
             span {
                 font-size: 26px;
                 color: $red;
                 padding-left: 23px;
+                @include media-breakpoint-down(md) {
+                   font-size: 20px;
+                }
             }
 
         }
@@ -791,6 +845,9 @@ ul {
 .deal-section {
     background-color: #ecf0f4;
     margin-top: 90px;
+    @include media-breakpoint-only(md) {
+        margin-top: 50px;
+    }
     
     p {
         font-size: 18px;
@@ -798,6 +855,9 @@ ul {
         line-height: 30px;
         margin-bottom: 125px;
         margin-top: 12px;
+        @include media-breakpoint-only(md) {
+            margin-bottom: 70px;
+        }
 
         @include media-breakpoint-down(sm) {
             font-size: 15px;
@@ -811,18 +871,17 @@ ul {
         padding: 50px 30px;
         box-shadow: 0px 9px 20px 0px rgba(0, 0, 0, 0.3);
         border-left: 7px solid #b7781b;
-
-        @include media-breakpoint-down(sm) {
-            margin-top: 25px;
-        }
-
         @include media-breakpoint-only(md) {
+           padding: 30px 10px;
+        }
+        @include media-breakpoint-down(sm) {
             margin-top: 25px;
         }
         h2 {
             font-size: 36px;
             font-weight: 500;
             font-style: italic;
+            font-family: 'Kaushan Script', cursive;
         }
 
     } 
@@ -838,15 +897,26 @@ ul {
         font-weight: 500;
         color: #b7781b;
          margin-bottom: 20px;
+         font-family: 'Kaushan Script', cursive;
+         @include media-breakpoint-only(md) {
+            font-size: 56px;
+        }
+
     }
     p {
         margin: 0px;
         font-size: 26px;
         color: #fff;
-    }
+        @include media-breakpoint-only(md) {
+           font-size: 20px;
+        }
+    } 
     a{
        font-size: 26px;
-        color: #fff; 
+        color: #fff;
+        @include media-breakpoint-only(md) {
+           font-size: 20px;
+        } 
     }
     i{
         font-size: 20px;
@@ -863,6 +933,109 @@ ul {
 
 
 }
+.discovery-section {
+    background-color: #ecf0f4;
+    .discover-content {
+        padding-bottom: 20px;
+        .d-offers {
+        background-color: #fff;
+        padding: 40px 20px 0px 20px;
+        box-shadow: 0px 20px 25px 0px rgba(0, 0, 0, 0.25) !important;
+        @include media-breakpoint-only(md) {
+            max-width: 325px;
+            margin: 0 auto;
+            padding: 40px 20px 40px 20px;
+        }
+        h2 {
+            font-size: 40px;
+            font-weight: 600;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+            :after {
+                position: absolute;
+                content: "";
+                width: 50px;
+                height: 2px;
+                background-color: red;
+                top: 22%;
+                left: 11%;
+            }
+        }
+        p {
+            font-size: 16px;
+            span {
+                font-size: 16px;
+                font-weight: 600;
+                color: #112d81;
+            }
+        }
+        img {
+            position: relative;
+            right: -42px;
+            top: 35px;
+            box-shadow: 0px 15px 25px 0px rgba(0, 0, 0, 0.25) !important;
+             @include media-breakpoint-only(md) {
+                margin-top: 25px;
+                right: 0;
+                top: 0;
+            }
+        }
+    }
+    h2:after {
+                position: absolute;
+                content: "";
+                width: 30px;
+                height: 1px;
+                background-color: red;
+                top: 21%;
+                left: 11%;
+                @include media-breakpoint-only(md) {
+                    top: 20%;
+                    left: 32%;
+                }
+            }
+    .d-offer-box {
+        margin-left: 30px;
+        margin-top: 50px;
+        .d-box {
+            background-color: #fff;
+            border: 1px solid #e1e1e1;
+            padding: 20px;
+            margin-bottom: 30px;
+            .d-content {
+                width: 60%;
+                float: left;
+                h4 {
+                    font-weight: 600;
+                    text-transform: uppercase;
+                    @include media-breakpoint-only(md) {
+                        font-size: 17px;
+                    }
+                }
+                p {
+                    font-size: 16px;
+                    margin-bottom: 15px;
+                }
+            }
+            .d-img {
+                width: 40%;
+                display: inline-block;
+                img {
+                    width: 100%;
+                    border: 1px solid #e1e1e1;
+                    height: 155px;
+                }
+            }
+        }
+        .d-box:hover {
+            box-shadow: 0px 09px 20px 0px rgba(0, 0, 0, 0.30) !important;
+        }
+    } 
+    }
+           
+
+}
+
 
 .reservation {
     background-image: url("images/theme-1/contact-us-banner.jpg");
@@ -870,8 +1043,13 @@ ul {
     background-size: cover;
     .form-box {
         background-color: #fff;
-        padding: 40px;
         box-shadow: 0px 15px 20px 0px rgba(0, 0, 0, 0.2);
+        position: relative;
+         bottom: -60%;
+         @include media-breakpoint-only(md) {
+            bottom: -34%;
+        }
+
 
         .title {
             text-align: center;
@@ -901,7 +1079,17 @@ ul {
         }
 
         form {
+            
+            padding: 60px 20px;
+            @include media-breakpoint-only(md) {
+                padding: 60px 30px 60px 10px;
+            }
+
             .frm-body{
+                h2{
+                    color: #112d81;
+                    margin-bottom: 30px;
+                }
                 
                 input.form-control {
                    
@@ -921,36 +1109,12 @@ ul {
                     color: $yellowdark;
                 }
             }
-            .frm-body:after {
-                    content: "";
-                    position: absolute;
-                    background-color: $yellowdark;
-                    width: 1px;
-                    height: 313px;
-                    left: -9%;
-                    top: 11px;
-                 @include media-breakpoint-down(sm) {
-                    width: 313px;
-                    height: 1px;
-                    left: -6%;
-                    top: -10px;
-                }
-            }
-
             
         }
          img {
-            position: absolute;
-            top: 37%;
-            @include media-breakpoint-only(md) {
-                    width: 80%;
-            }
-            @include media-breakpoint-down(sm) {
-                position: inherit;
-                top: 0;
-                width: 100%;
-                margin-bottom: 33px;
-            }
+            width: 100%;
+            height: 362px;
+            
         }
     }
 

@@ -4,7 +4,7 @@
         <section class="section-fullwidth deliver-area ">
             <div class="container">
                   <div class="row">
-                        <div class="col-lg-4 col-md-4 col-sm-12 ">
+                        <div class="col-lg-4 col-md-12 col-sm-12  order-1 order-md-2 ">
                             <div class="menu-left">
                                     <img src="images/theme-3/product-ban-1.png">
                                     <h2>Burgers</h2>
@@ -304,7 +304,7 @@
                             
                             
                         </div>
-                        <div class="col-lg-4 col-md-4 col-sm-12">
+                        <div class="col-lg-4 col-md-12 col-sm-12 order-2 order-md-1">
                             <div class="code-area">
                                 <div class="postal-code">
                                     <div class="search-res" v-if="this.$route.name !='online-order'">
@@ -340,7 +340,7 @@
                                         
                                         
                         </div>
-                         <div class="col-lg-4 col-md-4 col-sm-12 ">
+                         <div class="col-lg-4 col-md-12 col-sm-12  order-3 order-md-34 ">
                             <div class="menu-left">
                                     <img src="images/theme-3/product-ban-kab.png">
                                     <h2>Kebabs</h2>
@@ -618,7 +618,7 @@
                     <div class="row">
                         <div class="col-12">
                             <div class="row">
-                                <div class="col-7">
+                                <div class="col-lg-7 col-md-6 col-sm-12">
                                     <h2>Drinks</h2>
                                     <p>Pepsi, 7up, Coke, Cherry Coke Rubicon Mango Guava / Passion,<br>Dr Pepper Pinapple Soda, Sprite, Fanta Orange /Fruit Twist,<br>Rubena Blackcurrant / Strawberry, Ginger Beer</p>
                                     <ul>
@@ -633,11 +633,11 @@
                                     <span>Order now </span>
                                     </button>
                                 </div>
-                                <div class="col-2">
+                                <div class="col-lg-2 col-md-2 col-sm-6">
                                     <img src="images/theme-3/coca.png">
                                     
                                 </div>
-                                <div class="col-3 cans">
+                                <div class="col-lg-3 col-md-4 col-sm-6 cans cans">
                                     <img src="images/theme-3/cans.png">
                                 </div>
                                 
@@ -690,7 +690,7 @@
                 </div>   
             </div>
         </section>
-         <section class="section-fullwidth delivery-section">
+        <section class="section-fullwidth delivery-section">
            
             <div class="container">
                 <div class="deliver-area text-center">
@@ -713,6 +713,114 @@
                       
                 </div>
             </div>
+        </section>
+         <section class="section-fullwidth discovery-section">
+           
+                <div class="container">
+                    <div class="discover-content">
+                         <div class="row">
+                            <div class="col-lg-3 col-md-12 col-sm-12">
+                                <div class="d-offers">
+                                   <h2>Discover Our Offers</h2>
+                                   <p>Check out our offers<br> and follow us on <br><span>Facebook</span>and<span>Instagram</span></p>
+                                   <img src="images/theme-3/d-offer.png">
+
+                                </div>
+                            </div> 
+                            <div class="col-lg-9 col-md-12 col-sm-12">
+                                <div class="d-offer-box">
+                                    <div class="row">
+                                        <div class="col-6">
+                                            <div class="d-box">
+                                                <div class="d-content">
+                                                    <h4>Chicken Bucket</h4>
+                                                    <p>6 Pieces Chicken<br>Chips (L)<br>1.5ltr Pepsi</p>
+                                                    <div class="pries">
+                                                        <strong>£21.00</strong>
+                                                    </div>
+                                                    
+                                                </div>
+                                                <div class="d-img">
+                                                        <img src="images/theme-3/d-pro.png">
+                                                        
+                                                </div>
+                                                
+                                                
+                                            </div>
+                                            
+                                        </div>
+                                        <div class="col-6">
+                                            <div class="d-box">
+                                                <div class="d-content">
+                                                    <h4>Chicken Bucket</h4>
+                                                    <p>6 Pieces Chicken<br>Chips (L)<br>1.5ltr Pepsi</p>
+                                                    <div class="pries">
+                                                        <strong>£21.00</strong>
+                                                    </div>
+                                                    
+                                                </div>
+                                                <div class="d-img">
+                                                        <img src="images/theme-3/d-pro.png">
+                                                        
+                                                </div>
+                                                
+                                                
+                                            </div>
+                                            
+                                        </div>
+                                        <div class="col-6">
+                                            <div class="d-box">
+                                                <div class="d-content">
+                                                    <h4>Chicken Bucket</h4>
+                                                    <p>6 Pieces Chicken<br>Chips (L)<br>1.5ltr Pepsi</p>
+                                                    <div class="pries">
+                                                        <strong>£21.00</strong>
+                                                    </div>
+                                                    
+                                                </div>
+                                                <div class="d-img">
+                                                        <img src="images/theme-3/d-pro.png">
+                                                        
+                                                </div>
+                                                
+                                                
+                                            </div>
+                                            
+                                        </div>
+                                        <div class="col-6">
+                                            <div class="d-box">
+                                                <div class="d-content">
+                                                    <h4>Chicken Bucket</h4>
+                                                    <p>6 Pieces Chicken<br>Chips (L)<br>1.5ltr Pepsi</p>
+                                                    <div class="pries">
+                                                        <strong>£21.00</strong>
+                                                    </div>
+                                                    
+                                                </div>
+                                                <div class="d-img">
+                                                        <img src="images/theme-3/d-pro.png">
+                                                        
+                                                </div>
+                                                
+                                                
+                                            </div>
+                                            
+                                        </div>
+                                    
+                                    
+                                    </div>
+                                    <button type="button" class="btn  btn-danger"  v-on:click="checkPostCode">
+                                          <span>Submit! </span>
+                                    </button>
+                                
+                                    
+                                </div>
+                                
+                            </div> 
+                            
+                         </div>
+                    </div>   
+                </div>
         </section>
 
        <!--  <section class="covid-section mt-5">
@@ -903,42 +1011,43 @@
             <div class="container">
                 <div class="table-booked pattern">
                     <div class="row">
-                        <div class="col-lg-1 col-md-1 col-sm-1">
+                        <div class="col-lg-2 col-md-1 col-sm-1">
                               <!--   <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2429.2156154533595!2d-1.822215984654894!3d52.49333647980907!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4870bae64827134d%3A0x2e1a51de3c022c50!2s888a%20Washwood%20Heath%20Rd%2C%20Ward%20End%2C%20Birmingham%20B8%202NB%2C%20UK!5e0!3m2!1sen!2s!4v1592827053509!5m2!1sen!2s" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0" width="100%" height="450"></iframe> -->
                         </div>
-                        <div class="col-lg-10 col-md-10 col-sm-12">
+                        <div class="col-lg-8 col-md-10 col-sm-12">
                             <div class="form-box">
                                 <div class="row">
-                                    <div class="col-lg-6 col-md-7 col-sm-12">
-                                        <img src="images/theme-2/contact-banner-taj.png">
-                                        
+                                    <div class="col-lg-4 col-md-5 col-sm-5">
+                                        <img src="images/theme-3/contact-img.png">
+                                         
                                     </div>
-                                    <div class="col-lg-6 col-md-5 col-sm-12">
+                                    <div class="col-lg-6 col-md-7 col-sm-7">
                                         <form>
                                             <div class="frm-body">
                                                 <div class="form-row">
-                                                    <div class="form-group col-md-12">
-                                                        <label for=""> Name</label>
+                                                    <h2>Let's go!<br>Join with our Platform</h2>
+                                                    <div class="form-group col-md-6">
+                                                       
                                                         <input type="text" class="form-control" id="" placeholder="Enter Your Name">
                                                     </div>
-                                                    <div class="form-group col-md-12">
-                                                        <label>Email</label>
+                                                    <div class="form-group col-md-6">
+                                                       
                                                         <input type="email" class="form-control" id="" placeholder="Enter  email ">
                                                     </div>
                                                 </div>
                                                 <div class="form-row">
-                                                    <div class="form-group col-md-12">
-                                                        <label for="">Address</label>
+                                                    <div class="form-group col-md-6">
+                                                        
                                                         <input type="text" class="form-control" id="" placeholder="Enter Address">
                                                     </div>
-                                                    <div class="form-group col-md-12">
-                                                        <label>Number</label>
+                                                    <div class="form-group col-md-6">
+                                                        
                                                         <input type="phone" class="form-control" id="" placeholder="Enter Number">
                                                     </div>
                                                 </div>
                                             </div>
-                                             <div class="frm-ftr view-btn text-right ">
-                                                   <button class="btn btn-warning">Submit</button>
+                                             <div class="frm-ftr view-btn text-left ">
+                                                   <button class="btn  btn-danger">Submit</button>
                                             </div>
 
                                         </form>
@@ -948,7 +1057,8 @@
                                 
                             </div>
                         </div>
-                        <div class="col-lg-1 col-md-1 col-sm-1"></div>
+                        <div class="col-lg-2 col-md-1 col-sm-1"></div>
+                        
                     </div>
                 </div>
             </div>
