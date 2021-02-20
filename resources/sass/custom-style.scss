@@ -181,7 +181,7 @@ ul {
 .header-bottom-section {
     padding: 10px 0px 10px 0px;
     .justify-content-end {
-        justify-content: center;
+        justify-content: center !important;
         @include media-breakpoint-down(sm){
                justify-content: flex-end !important;
             }
@@ -281,67 +281,106 @@ ul {
 
 /********************footer start****************************/
 .main-ftr {
-    background-image: url(/images/theme-2/taj-footer-section.png);
-    background-repeat: no-repeat;
-    background-position: bottom;
-    background-size: cover;
-
+    padding-top: 12%;
+    font-size: 12px;
+    background-color: #14100f;
 
     li {
         list-style: none;
-        border-bottom: 1px dashed #49453f; 
-        padding: 5px 0px;
     }
 
     i {
-        font-size: 16px;
-        vertical-align: middle;
+        vertical-align: sub;
     }
 
-    .footer-section-3 {
+    .footer-section-1 {
+        p {
+          font-size: 12px;
+          color: #fff;
+          padding-top: 10px;
+        }
         span {
             margin-right: 10px;
+            padding: 10px;
+            background-color: #fff;
+            border-radius: 4px;
+            box-shadow: 0px 10px 15px 0px rgba(0, 0, 0, 0.2);
         }
 
         .Opening {
             padding-left: 0px;
 
+
+            li {
+                margin-bottom: 20px;
+            }
+
             img {
                 width: 13px;
             }
-            li {
-                padding: 15px 0px 15px 0px;
-            }
 
             i {
-               color: #c6a239 !important;
+                color: #e3342f;
             }
+        }
+
+    }
+    .footer-section-3 { 
+        i {
+            background: #b7781b;
+            border-radius: 100%;
+            width: 34px;
+            height: 34px;
+            display: inline-block;
+            line-height: 35px;
+            text-align: center;
+            margin-bottom: 20px;
+            margin-right: 15px;
+            vertical-align: initial;
 
         }
-    }
-    .footer-section-1{
-            padding-right: 55px; 
-        @include media-breakpoint-down(sm) {
-            text-align:left !important; 
+        .Opening {
+            margin-top: 70px;
         }
-        .icons 
-            li {
-                border: none;
+    }
+
+
+
+    .footer-menu {
+        padding-bottom: 35px;
+
+
+        ul {
+            border-top: 1px solid #393839;
+            border-bottom: 1px solid #393839;
+            padding: 9px 0px 9px 0px;
+
+            @include media-breakpoint-down(sm) {
+                text-align: center;
+            }
+        }
+
+        li {
+            display: inline-block;
+            padding-left: 25px;
+
+            @include media-breakpoint-down(sm) {
+                padding-left: 11px;
+            }
+        }
+
+        img {
+            padding-bottom: 35px;
         }
     }
 
     .follow-us {
         h3 {
-            font-size: 16px;
+            font-size: 12px;
             text-transform: uppercase;
             font-weight: bold;
             margin-bottom: 0px;
-            padding-top: 10px;
-            padding-bottom: 16px;
-            border: none;
-            @include media-breakpoint-down(sm) {
-            padding-top: 40px;
-        }
+            padding: 20px 0px 20px 0px;
         }
     }
 
@@ -363,11 +402,10 @@ ul {
 
                 a {
                     border-radius: 100%;
-                    border-color: #fff;
-                    width: 30px;
-                    height: 30px;
+                    width: 35px;
+                    height: 35px;
                     display: inline-block;
-                    line-height: 26px;
+                    line-height: 30px;
                     text-align: center;
                 }
             }
@@ -385,7 +423,7 @@ ul {
         }
 
         .pinterest a {
-            background-color: $red;
+            background-color: #e3342f;
         }
 
         .google-plus a {
@@ -399,39 +437,17 @@ ul {
     }
 
     .footer-section-2 {
-            @include media-breakpoint-down(sm) {
-              text-align: left !important;
-            }
-        h3 {
-            width: 58%;
-            @include media-breakpoint-down(md) {
-                width: 75%;
-            }
+
+        strong {
+            font-size: 14px;
         }
-        .Opening-hours{
-             a {
-                 display: inline-block;
-             }
-             strong {
-                font-size: 14px;
-                    display: block;
-            }
-        }
-        
     }
 
     h3 {
         font-size: 16px;
         text-transform: uppercase;
-        font-weight: 600;
-        color: #fff;
-        padding-bottom: 20px;
-        margin-bottom: 0px;
-        border-bottom: 1px dashed #49453f; 
-        width: 61%;
-        @include media-breakpoint-down(md) {
-            width: 75%;
-        }
+        font-weight: bold;
+        color: #fff; 
     }
 
     a {
@@ -441,11 +457,23 @@ ul {
     .Opening-hours {
         padding-left: 0px;
 
+        li {
+            padding-top: 5px;
+            padding-bottom: 5px;
+        }
+
     }
 
+    .footer-space {
+
+        @include media-breakpoint-down(sm) {
+            padding-top: 30px !important;
+
+        }
+    }
 
     .inner-ftr {
-        padding-bottom: 50px;
+        padding-bottom: 13px;
     }
 
     a {
@@ -453,51 +481,16 @@ ul {
     }
 
     strong a {
-        color: #b49f4f !important;
+        color: #da2327 !important;
     }
 
-    .footer-top-head {
-        background-color: #000;
-        margin-bottom: 40px;
-        .footer-top {
-            padding: 60px 0px 40px 0px;
-        }
-    }
-    
-    
-    .footer-bottom {
-        li {
-            width: 61%;
-        @include media-breakpoint-down(md) {
-            width: 75%;
-        }
-        }
-        .footer-menu {
-            li {
-                color: #fff;
-                padding-left: 15px;
-                :after {
-                    content: "";
-                    position: absolute;
-                    width: 6px;
-                    height: 7px;
-                    background-color: #fff;
-                    left: 15px;
-                    border-radius: 24px;
-                    margin-top: 9px;
-                }
-            }
-        }
-    }
-    .footer-section-space{
-        @include media-breakpoint-down(sm) {
-            padding-top: 40px;
-        }
-    }
+
+
 }
+
  
 .copyright {
-    border-top: 1px solid #2b240f;
+    border-top: 1px solid #252525; 
 
     p {
         font-size: 14px;
@@ -506,6 +499,9 @@ ul {
         color: #fff;
     }
 }
+
+/********************footer end****************************/
+
 .section-fullwidth{
 	@include media-breakpoint-up(lg) {
         padding: 80px 0px 80px;
@@ -555,11 +551,17 @@ ul {
                  font-style: italic;
                  margin:0px;
                  font-family: 'Kaushan Script', cursive;
+                 @include media-breakpoint-down(sm) {
+                    font-size: 30px;
+                }
             }
             p{
                 color: $white;
                 font-weight: normal;
                 margin: 20px 0px 36px 0px;
+                @include media-breakpoint-down(sm) {
+                    font-size: 16px;
+                }
             }
         }
 	    
@@ -593,9 +595,14 @@ ul {
             h2 {
                 font-size: 42px;
                 color: #fff;
-                line-height: 42px;
+                
                 margin-bottom: 20px;
                 font-family: 'Kaushan Script', cursive;
+                @include media-breakpoint-down(sm) {
+                    font-size: 30px;
+                }
+            
+
             }
             h4 {
                 font-size: 22px;
@@ -619,12 +626,18 @@ ul {
              @include media-breakpoint-down(md) {
                     margin-top: -95px;
             }
+            @include media-breakpoint-down(sm) {
+                    margin-top: -50px;
+            }
         }
         .menu-left-item {
             margin-top: 50px;
             @include media-breakpoint-down(md) {
                 margin-top: 85px;
                 margin-bottom: 30px;
+            }
+            @include media-breakpoint-down(sm) {
+                    margin-top: 50px;
             }
 
             .order-taj {
@@ -633,9 +646,16 @@ ul {
                     font-size: 12px;
                     padding: 5px 10px;
                     border-radius: inherit;
+                    @include media-breakpoint-down(sm) {
+                        padding: 3px;
+                        font-size: 11px;
+                    }
                 }
                 .green-badge {
                     padding: 6px 10px !important;
+                    @include media-breakpoint-down(sm) {
+                        padding: 3px !important;
+                    }
                 }
             }
 
@@ -644,6 +664,7 @@ ul {
             }
             .pries-menu {
                 font-weight: 600;
+                
             }
         }
     }
@@ -663,6 +684,9 @@ ul {
     padding: 50px 50px 65px 50px;
     color: #fff;
     box-shadow: 0px 10px 30px 0px rgba(0, 0, 0, 0.30) !important;
+        @include media-breakpoint-down(sm) {
+              padding: 30px 20px 40px 20px;              
+        }
     h2 {
         font-size: 36px;
         font-weight: 500;
@@ -684,8 +708,10 @@ ul {
                     height: 58%;
             }
             @include media-breakpoint-down(sm) {
-                
-            }
+                height: 100%;  
+                padding-top: 30px;  
+                 margin-left: 0px;          
+             }
         }
     }
     ul{
@@ -848,6 +874,10 @@ ul {
     @include media-breakpoint-only(md) {
         margin-top: 50px;
     }
+    @include media-breakpoint-down(sm) {
+        margin-top: 60px;    
+        padding-bottom: 50px;
+    }
     
     p {
         font-size: 18px;
@@ -901,6 +931,9 @@ ul {
          @include media-breakpoint-only(md) {
             font-size: 56px;
         }
+        @include media-breakpoint-down(sm) {
+             font-size: 30px;
+        }
 
     }
     p {
@@ -910,22 +943,38 @@ ul {
         @include media-breakpoint-only(md) {
            font-size: 20px;
         }
+        @include media-breakpoint-down(sm) {
+            font-size: 17px;
+            
+        }
     } 
     a{
        font-size: 26px;
         color: #fff;
         @include media-breakpoint-only(md) {
            font-size: 20px;
+        }
+        @include media-breakpoint-down(sm) {
+            font-size: 17px;
+            
         } 
     }
     i{
         font-size: 20px;
         color: #b7781b;
         padding-right: 5px;
+        @include media-breakpoint-down(sm) {
+            font-size: 16px;
+            vertical-align: middle;
+        }
     }
     .space {
         border-left: 1px solid;
         padding-left: 23px;
+        @include media-breakpoint-down(sm) {
+            padding-left: 14px;
+            
+        }
     }
     .btn {
         margin-top: 40px;
@@ -945,6 +994,10 @@ ul {
             max-width: 325px;
             margin: 0 auto;
             padding: 40px 20px 40px 20px;
+        }
+        @include media-breakpoint-down(sm) {
+            padding: 40px 20px 40px 20px;
+            
         }
         h2 {
             font-size: 40px;
@@ -979,6 +1032,13 @@ ul {
                 right: 0;
                 top: 0;
             }
+            @include media-breakpoint-down(sm) {
+                    right: 0;
+                    top: 0;
+                    padding-top: 20px;
+                    width: 100%;
+                                
+            }
         }
     }
     h2:after {
@@ -997,6 +1057,10 @@ ul {
     .d-offer-box {
         margin-left: 30px;
         margin-top: 50px;
+        @include media-breakpoint-down(sm) {
+            margin-left: 0px;
+            
+        }
         .d-box {
             background-color: #fff;
             border: 1px solid #e1e1e1;
@@ -1010,6 +1074,10 @@ ul {
                     text-transform: uppercase;
                     @include media-breakpoint-only(md) {
                         font-size: 17px;
+                    }
+                    @include media-breakpoint-down(sm) {
+                        font-size: 18px;
+                        
                     }
                 }
                 p {
@@ -1041,6 +1109,10 @@ ul {
     background-image: url("images/theme-1/contact-us-banner.jpg");
     background-repeat: no-repeat;
     background-size: cover;
+    @include media-breakpoint-down(sm) {
+        padding: 50px 0px;
+                        
+    }
     .form-box {
         background-color: #fff;
         box-shadow: 0px 15px 20px 0px rgba(0, 0, 0, 0.2);
@@ -1048,6 +1120,10 @@ ul {
          bottom: -60%;
          @include media-breakpoint-only(md) {
             bottom: -34%;
+        }
+         @include media-breakpoint-down(sm) {
+            bottom: 0%;
+                        
         }
 
 

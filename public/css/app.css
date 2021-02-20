@@ -13957,7 +13957,7 @@ ul {
 }
 
 .header-top .header-bottom-section .justify-content-end {
-  justify-content: center;
+  justify-content: center !important;
 }
 
 @media (max-width: 767.98px) {
@@ -14056,71 +14056,103 @@ ul {
 /********************footer start****************************/
 
 .main-ftr {
-  background-image: url(/images/theme-2/taj-footer-section.png);
-  background-repeat: no-repeat;
-  background-position: bottom;
-  background-size: cover;
+  padding-top: 12%;
+  font-size: 12px;
+  background-color: #14100f;
 }
 
 .main-ftr li {
   list-style: none;
-  border-bottom: 1px dashed #49453f;
-  padding: 5px 0px;
 }
 
 .main-ftr i {
-  font-size: 16px;
-  vertical-align: middle;
+  vertical-align: sub;
 }
 
-.main-ftr .footer-section-3 span {
+.main-ftr .footer-section-1 p {
+  font-size: 12px;
+  color: #fff;
+  padding-top: 10px;
+}
+
+.main-ftr .footer-section-1 span {
   margin-right: 10px;
+  padding: 10px;
+  background-color: #fff;
+  border-radius: 4px;
+  box-shadow: 0px 10px 15px 0px rgba(0, 0, 0, 0.2);
 }
 
-.main-ftr .footer-section-3 .Opening {
+.main-ftr .footer-section-1 .Opening {
   padding-left: 0px;
 }
 
-.main-ftr .footer-section-3 .Opening img {
+.main-ftr .footer-section-1 .Opening li {
+  margin-bottom: 20px;
+}
+
+.main-ftr .footer-section-1 .Opening img {
   width: 13px;
 }
 
-.main-ftr .footer-section-3 .Opening li {
-  padding: 15px 0px 15px 0px;
+.main-ftr .footer-section-1 .Opening i {
+  color: #e3342f;
 }
 
-.main-ftr .footer-section-3 .Opening i {
-  color: #c6a239 !important;
+.main-ftr .footer-section-3 i {
+  background: #b7781b;
+  border-radius: 100%;
+  width: 34px;
+  height: 34px;
+  display: inline-block;
+  line-height: 35px;
+  text-align: center;
+  margin-bottom: 20px;
+  margin-right: 15px;
+  vertical-align: initial;
 }
 
-.main-ftr .footer-section-1 {
-  padding-right: 55px;
+.main-ftr .footer-section-3 .Opening {
+  margin-top: 70px;
+}
+
+.main-ftr .footer-menu {
+  padding-bottom: 35px;
+}
+
+.main-ftr .footer-menu ul {
+  border-top: 1px solid #393839;
+  border-bottom: 1px solid #393839;
+  padding: 9px 0px 9px 0px;
 }
 
 @media (max-width: 767.98px) {
-  .main-ftr .footer-section-1 {
-    text-align: left !important;
+  .main-ftr .footer-menu ul {
+    text-align: center;
   }
 }
 
-.main-ftr .footer-section-1 .icons li {
-  border: none;
+.main-ftr .footer-menu li {
+  display: inline-block;
+  padding-left: 25px;
+}
+
+@media (max-width: 767.98px) {
+  .main-ftr .footer-menu li {
+    padding-left: 11px;
+  }
+}
+
+.main-ftr .footer-menu img {
+  padding-bottom: 35px;
 }
 
 .main-ftr .follow-us h3 {
-  font-size: 16px;
+  font-size: 12px;
   text-transform: uppercase;
   font-weight: bold;
   margin-bottom: 0px;
-  padding-top: 10px;
-  padding-bottom: 16px;
-  border: none;
-}
-
-@media (max-width: 767.98px) {
-  .main-ftr .follow-us h3 {
-    padding-top: 40px;
-  }
+  padding: 20px 0px 20px 0px;
 }
 
 .main-ftr .icons i {
@@ -14140,11 +14172,10 @@ ul {
 
 .main-ftr .icons ul li a {
   border-radius: 100%;
-  border-color: #fff;
-  width: 30px;
-  height: 30px;
+  width: 35px;
+  height: 35px;
   display: inline-block;
-  line-height: 26px;
+  line-height: 30px;
   text-align: center;
 }
 
@@ -14168,46 +14199,15 @@ ul {
   background-color: #f6993f;
 }
 
-@media (max-width: 767.98px) {
-  .main-ftr .footer-section-2 {
-    text-align: left !important;
-  }
-}
-
-.main-ftr .footer-section-2 h3 {
-  width: 58%;
-}
-
-@media (max-width: 991.98px) {
-  .main-ftr .footer-section-2 h3 {
-    width: 75%;
-  }
-}
-
-.main-ftr .footer-section-2 .Opening-hours a {
-  display: inline-block;
-}
-
-.main-ftr .footer-section-2 .Opening-hours strong {
+.main-ftr .footer-section-2 strong {
   font-size: 14px;
-  display: block;
 }
 
 .main-ftr h3 {
   font-size: 16px;
   text-transform: uppercase;
-  font-weight: 600;
+  font-weight: bold;
   color: #fff;
-  padding-bottom: 20px;
-  margin-bottom: 0px;
-  border-bottom: 1px dashed #49453f;
-  width: 61%;
-}
-
-@media (max-width: 991.98px) {
-  .main-ftr h3 {
-    width: 75%;
-  }
 }
 
 .main-ftr a {
@@ -14218,8 +14218,19 @@ ul {
   padding-left: 0px;
 }
 
+.main-ftr .Opening-hours li {
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+@media (max-width: 767.98px) {
+  .main-ftr .footer-space {
+    padding-top: 30px !important;
+  }
+}
+
 .main-ftr .inner-ftr {
-  padding-bottom: 50px;
+  padding-bottom: 13px;
 }
 
 .main-ftr a {
@@ -14227,52 +14238,11 @@ ul {
 }
 
 .main-ftr strong a {
-  color: #b49f4f !important;
-}
-
-.main-ftr .footer-top-head {
-  background-color: #000;
-  margin-bottom: 40px;
-}
-
-.main-ftr .footer-top-head .footer-top {
-  padding: 60px 0px 40px 0px;
-}
-
-.main-ftr .footer-bottom li {
-  width: 61%;
-}
-
-@media (max-width: 991.98px) {
-  .main-ftr .footer-bottom li {
-    width: 75%;
-  }
-}
-
-.main-ftr .footer-bottom .footer-menu li {
-  color: #fff;
-  padding-left: 15px;
-}
-
-.main-ftr .footer-bottom .footer-menu li :after {
-  content: "";
-  position: absolute;
-  width: 6px;
-  height: 7px;
-  background-color: #fff;
-  left: 15px;
-  border-radius: 24px;
-  margin-top: 9px;
-}
-
-@media (max-width: 767.98px) {
-  .main-ftr .footer-section-space {
-    padding-top: 40px;
-  }
+  color: #da2327 !important;
 }
 
 .copyright {
-  border-top: 1px solid #2b240f;
+  border-top: 1px solid #252525;
 }
 
 .copyright p {
@@ -14281,6 +14251,8 @@ ul {
   padding: 15px 0px 15px 0px;
   color: #fff;
 }
+
+/********************footer end****************************/
 
 @media (min-width: 992px) {
   .section-fullwidth {
@@ -14352,10 +14324,22 @@ ul {
   font-family: "Kaushan Script", cursive;
 }
 
+@media (max-width: 767.98px) {
+  .header-bottom .contact-bnner .head-taj h2 {
+    font-size: 30px;
+  }
+}
+
 .header-bottom .contact-bnner .head-taj p {
   color: #fff;
   font-weight: normal;
   margin: 20px 0px 36px 0px;
+}
+
+@media (max-width: 767.98px) {
+  .header-bottom .contact-bnner .head-taj p {
+    font-size: 16px;
+  }
 }
 
 .deliver-area .code-area {
@@ -14390,9 +14374,14 @@ ul {
 .deliver-area .code-area .postal-code h2 {
   font-size: 42px;
   color: #fff;
-  line-height: 42px;
   margin-bottom: 20px;
   font-family: "Kaushan Script", cursive;
+}
+
+@media (max-width: 767.98px) {
+  .deliver-area .code-area .postal-code h2 {
+    font-size: 30px;
+  }
 }
 
 .deliver-area .code-area .postal-code h4 {
@@ -14422,6 +14411,12 @@ ul {
   }
 }
 
+@media (max-width: 767.98px) {
+  .deliver-area .menu-left h2 {
+    margin-top: -50px;
+  }
+}
+
 .deliver-area .menu-left .menu-left-item {
   margin-top: 50px;
 }
@@ -14430,6 +14425,12 @@ ul {
   .deliver-area .menu-left .menu-left-item {
     margin-top: 85px;
     margin-bottom: 30px;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .deliver-area .menu-left .menu-left-item {
+    margin-top: 50px;
   }
 }
 
@@ -14443,8 +14444,21 @@ ul {
   border-radius: inherit;
 }
 
+@media (max-width: 767.98px) {
+  .deliver-area .menu-left .menu-left-item .order-taj .badge {
+    padding: 3px;
+    font-size: 11px;
+  }
+}
+
 .deliver-area .menu-left .menu-left-item .order-taj .green-badge {
   padding: 6px 10px !important;
+}
+
+@media (max-width: 767.98px) {
+  .deliver-area .menu-left .menu-left-item .order-taj .green-badge {
+    padding: 3px !important;
+  }
 }
 
 .deliver-area .menu-left .menu-left-item li {
@@ -14472,6 +14486,12 @@ ul {
   box-shadow: 0px 10px 30px 0px rgba(0, 0, 0, 0.3) !important;
 }
 
+@media (max-width: 767.98px) {
+  .drinks-option {
+    padding: 30px 20px 40px 20px;
+  }
+}
+
 .drinks-option h2 {
   font-size: 36px;
   font-weight: 500;
@@ -14496,6 +14516,14 @@ ul {
   .drinks-option .cans img {
     margin-left: 30px;
     height: 58%;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .drinks-option .cans img {
+    height: 100%;
+    padding-top: 30px;
+    margin-left: 0px;
   }
 }
 
@@ -14666,6 +14694,13 @@ ul {
   }
 }
 
+@media (max-width: 767.98px) {
+  .deal-section {
+    margin-top: 60px;
+    padding-bottom: 50px;
+  }
+}
+
 .deal-section p {
   font-size: 18px;
   color: #000;
@@ -14735,6 +14770,12 @@ ul {
   }
 }
 
+@media (max-width: 767.98px) {
+  .delivery-section h2 {
+    font-size: 30px;
+  }
+}
+
 .delivery-section p {
   margin: 0px;
   font-size: 26px;
@@ -14744,6 +14785,12 @@ ul {
 @media (min-width: 768px) and (max-width: 991.98px) {
   .delivery-section p {
     font-size: 20px;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .delivery-section p {
+    font-size: 17px;
   }
 }
 
@@ -14758,15 +14805,34 @@ ul {
   }
 }
 
+@media (max-width: 767.98px) {
+  .delivery-section a {
+    font-size: 17px;
+  }
+}
+
 .delivery-section i {
   font-size: 20px;
   color: #b7781b;
   padding-right: 5px;
 }
 
+@media (max-width: 767.98px) {
+  .delivery-section i {
+    font-size: 16px;
+    vertical-align: middle;
+  }
+}
+
 .delivery-section .space {
   border-left: 1px solid;
   padding-left: 23px;
+}
+
+@media (max-width: 767.98px) {
+  .delivery-section .space {
+    padding-left: 14px;
+  }
 }
 
 .delivery-section .btn {
@@ -14791,6 +14857,12 @@ ul {
   .discovery-section .discover-content .d-offers {
     max-width: 325px;
     margin: 0 auto;
+    padding: 40px 20px 40px 20px;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .discovery-section .discover-content .d-offers {
     padding: 40px 20px 40px 20px;
   }
 }
@@ -14837,6 +14909,15 @@ ul {
   }
 }
 
+@media (max-width: 767.98px) {
+  .discovery-section .discover-content .d-offers img {
+    right: 0;
+    top: 0;
+    padding-top: 20px;
+    width: 100%;
+  }
+}
+
 .discovery-section .discover-content h2:after {
   position: absolute;
   content: "";
@@ -14859,6 +14940,12 @@ ul {
   margin-top: 50px;
 }
 
+@media (max-width: 767.98px) {
+  .discovery-section .discover-content .d-offer-box {
+    margin-left: 0px;
+  }
+}
+
 .discovery-section .discover-content .d-offer-box .d-box {
   background-color: #fff;
   border: 1px solid #e1e1e1;
@@ -14879,6 +14966,12 @@ ul {
 @media (min-width: 768px) and (max-width: 991.98px) {
   .discovery-section .discover-content .d-offer-box .d-box .d-content h4 {
     font-size: 17px;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .discovery-section .discover-content .d-offer-box .d-box .d-content h4 {
+    font-size: 18px;
   }
 }
 
@@ -14908,6 +15001,12 @@ ul {
   background-size: cover;
 }
 
+@media (max-width: 767.98px) {
+  .reservation {
+    padding: 50px 0px;
+  }
+}
+
 .reservation .form-box {
   background-color: #fff;
   box-shadow: 0px 15px 20px 0px rgba(0, 0, 0, 0.2);
@@ -14918,6 +15017,12 @@ ul {
 @media (min-width: 768px) and (max-width: 991.98px) {
   .reservation .form-box {
     bottom: -34%;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .reservation .form-box {
+    bottom: 0%;
   }
 }
 

@@ -340,7 +340,7 @@
                                         
                                         
                         </div>
-                         <div class="col-lg-4 col-md-12 col-sm-12  order-3 order-md-34 ">
+                         <div class="col-lg-4 col-md-12 col-sm-12  order-3 order-md-3 ">
                             <div class="menu-left">
                                     <img src="images/theme-3/product-ban-kab.png">
                                     <h2>Kebabs</h2>
@@ -730,7 +730,7 @@
                             <div class="col-lg-9 col-md-12 col-sm-12">
                                 <div class="d-offer-box">
                                     <div class="row">
-                                        <div class="col-6">
+                                        <div class="col-lg-6 col-md-6 col-sm-12">
                                             <div class="d-box">
                                                 <div class="d-content">
                                                     <h4>Chicken Bucket</h4>
@@ -749,7 +749,7 @@
                                             </div>
                                             
                                         </div>
-                                        <div class="col-6">
+                                        <div class="col-lg-6 col-md-6 col-sm-12">
                                             <div class="d-box">
                                                 <div class="d-content">
                                                     <h4>Chicken Bucket</h4>
@@ -768,7 +768,7 @@
                                             </div>
                                             
                                         </div>
-                                        <div class="col-6">
+                                        <div class="col-lg-6 col-md-6 col-sm-12">
                                             <div class="d-box">
                                                 <div class="d-content">
                                                     <h4>Chicken Bucket</h4>
@@ -787,7 +787,7 @@
                                             </div>
                                             
                                         </div>
-                                        <div class="col-6">
+                                        <div class="col-lg-6 col-md-6 col-sm-12">
                                             <div class="d-box">
                                                 <div class="d-content">
                                                     <h4>Chicken Bucket</h4>
