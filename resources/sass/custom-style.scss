@@ -550,7 +550,7 @@ ul {
     .contact-bnner {
         text-align: center; 
         padding: 30px 65px;
-        margin-top: 12% !important;
+        margin-top: 9% !important;
         margin: 0 auto;
          max-width: 830px;
        
@@ -558,7 +558,7 @@ ul {
             margin-top: 10% !important;
         }
         @include media-breakpoint-down(sm) {
-            margin-top: 5% !important;
+            margin-top: 19% !important;
             padding: 20px 30px;
         }
     	
@@ -607,10 +607,8 @@ ul {
         }
         @include media-breakpoint-down(sm) {
                 margin-top: -62% !important;
-                right: 41px;
                 margin-bottom: 60px;
                 background-size: contain;
-                width: 413px;
                 margin-bottom: 0px;
         }
         .postal-code {
@@ -621,25 +619,28 @@ ul {
             padding-top: 15%;
             @include media-breakpoint-down(sm) {
                 width: 60% !important;
-                padding-top: 38% !important;
+                padding-top: 55% !important;
             }
             h2 {
-                font-size: 42px;
+                font-size: 35px;
                 color: #fff;         
                 margin-bottom: 20px;
                 font-family: 'Kaushan Script', cursive;
                 @include media-breakpoint-down(sm) {
-                    font-size: 25px;
+                    font-size: 18px;
                     margin-bottom: 14px;
                 }
             
 
             }
+            .btn-outline-light {
+                padding: 5px;
+            }
             h4 {
                 font-size: 22px;
                 color: #fff;
                 @include media-breakpoint-down(sm) {
-                     font-size: 16px;
+                     font-size: 15px;
                 }
             }
             .form-control {
