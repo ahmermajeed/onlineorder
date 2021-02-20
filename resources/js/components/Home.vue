@@ -317,9 +317,10 @@
                                                         <input type="text"  class="form-control" v-model="postal_code" placeholder="Enter your Postal code">
                                                     </div>
                                                     <div class="form-group text-center">
+                                                        
                                                         <button type="button" class="btn btn-outline-light"  v-on:click="checkPostCode">
-                                                            <span>Submit! </span>
-                                                        </button>
+                                                        <span>Submit! </span>
+                                                         </button>
                                                     </div>
                                                     <div class="form-group text-center mb-0">
                                                         <p class="error">{{error_message}} </p>

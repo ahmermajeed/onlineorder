@@ -87,8 +87,9 @@
                                 <h2>The Passion for the Perfect Taste</h2>
                                 <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
                                 <div class="form-group text-center">
+                                    
                                     <button type="button" class="btn btn-outline-light"  v-on:click="checkPostCode">
-                                      <span>Explore MOre </span>
+                                    <span>Explore MOre</span>
                                     </button>
                                 </div>
                                 <div class="form-group text-center mb-0">

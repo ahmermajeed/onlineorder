@@ -13963,6 +13963,7 @@ ul {
 @media (max-width: 767.98px) {
   .header-top .header-bottom-section .justify-content-end {
     justify-content: flex-end !important;
+    margin-top: -19%;
   }
 }
 
@@ -14030,7 +14031,7 @@ ul {
     left: 0;
     top: 0;
     width: 100%;
-    height: 100%;
+    height: 112%;
     background-color: #fff;
     z-index: 100;
     pointer-events: none;
@@ -14056,9 +14057,16 @@ ul {
 /********************footer start****************************/
 
 .main-ftr {
+  padding-top: 50px;
   padding-top: 12%;
   font-size: 12px;
   background-color: #14100f;
+}
+
+@media (max-width: 767.98px) {
+  .main-ftr {
+    padding-top: 20px;
+  }
 }
 
 .main-ftr li {
@@ -14066,6 +14074,7 @@ ul {
 }
 
 .main-ftr i {
+  vertical-align: middle;
   vertical-align: sub;
 }
 
@@ -14114,6 +14123,18 @@ ul {
 
 .main-ftr .footer-section-3 .Opening {
   margin-top: 70px;
+}
+
+@media (max-width: 767.98px) {
+  .main-ftr .footer-section-3 .Opening {
+    margin: 20px 0px 20px 0px;
+  }
+}
+
+@media (max-width: 991.98px) {
+  .main-ftr .footer-section-3 .Opening a {
+    display: flex;
+  }
 }
 
 .main-ftr .footer-menu {
@@ -14199,6 +14220,12 @@ ul {
   background-color: #f6993f;
 }
 
+@media (max-width: 767.98px) {
+  .main-ftr .footer-section-2 {
+    text-align: left !important;
+  }
+}
+
 .main-ftr .footer-section-2 strong {
   font-size: 14px;
 }
@@ -14273,7 +14300,7 @@ ul {
 }
 
 .header-bottom {
-  background-image: url(/images/big-banner.jpg?2e47d7f8123e42bdfb502b45085c0928);
+  background-image: url(/images/big-banner-1.jpg?8eb5c75c36a35041f37527992347edbb);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: inherit;
@@ -14363,12 +14390,30 @@ ul {
   }
 }
 
+@media (max-width: 767.98px) {
+  .deliver-area .code-area {
+    margin-top: -62% !important;
+    right: 41px;
+    margin-bottom: 60px;
+    background-size: contain;
+    width: 413px;
+    margin-bottom: 0px;
+  }
+}
+
 .deliver-area .code-area .postal-code {
   width: 320px;
   margin: 0 auto;
   box-shadow: none;
   text-align: center;
   padding-top: 15%;
+}
+
+@media (max-width: 767.98px) {
+  .deliver-area .code-area .postal-code {
+    width: 60% !important;
+    padding-top: 38% !important;
+  }
 }
 
 .deliver-area .code-area .postal-code h2 {
@@ -14380,13 +14425,20 @@ ul {
 
 @media (max-width: 767.98px) {
   .deliver-area .code-area .postal-code h2 {
-    font-size: 30px;
+    font-size: 25px;
+    margin-bottom: 14px;
   }
 }
 
 .deliver-area .code-area .postal-code h4 {
   font-size: 22px;
   color: #fff;
+}
+
+@media (max-width: 767.98px) {
+  .deliver-area .code-area .postal-code h4 {
+    font-size: 16px;
+  }
 }
 
 .deliver-area .code-area .postal-code .form-control {
@@ -15085,7 +15137,7 @@ ul {
   margin: 0px;
   text-transform: uppercase;
   padding-top: 7px;
-  color: #d4b041;
+  color: #b7781b;
 }
 
 .reservation .form-box img {
@@ -15283,7 +15335,7 @@ ul {
 .main-popup-section .order-product .btn-warning {
   padding: 4px 10px 2px 10px;
   color: #fff !important;
-  background-color: #d4b041;
+  background-color: #d72327;
   border: none;
   float: right;
   font-size: 12px;
@@ -15414,7 +15466,7 @@ ul {
   font-size: 14px;
   font-weight: 700;
   padding-top: 7px;
-  color: #d4b041;
+  color: #b7781b;
 }
 
 .inner-section .form-feedback-section .form-feedback .reactions {
@@ -15920,14 +15972,14 @@ ul {
 }
 
 .check-out-page .checkoutpage .order-check label {
-  color: #d4b041;
+  color: #b7781b;
 }
 
 .check-out-page .checkoutpage .cash-delivery label {
   width: 48%;
   padding: 8px 10px;
   border: 1px solid #e1e1e1;
-  color: #d4b041;
+  color: #b7781b;
   font-size: 16px;
   font-weight: 700;
   position: relative;
@@ -15967,7 +16019,7 @@ ul {
 .check-out-page .checkoutpage .check-form label {
   font-size: 14px;
   font-weight: bold;
-  color: #d4b041;
+  color: #b7781b;
 }
 
 .check-out-page .checkoutpage .check-form .form-control {

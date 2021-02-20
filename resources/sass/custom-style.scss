@@ -184,6 +184,7 @@ ul {
         justify-content: center !important;
         @include media-breakpoint-down(sm){
                justify-content: flex-end !important;
+               margin-top: -19%;
             }
             @include media-breakpoint-only(md) {
                 justify-content: flex-end !important;
@@ -252,7 +253,7 @@ ul {
                 left: 0;
                 top: 0;
                 width: 100%;
-                height: 100%;
+                height: 112%;
                 background-color: #fff;
                 z-index: 100;
                 pointer-events: none;
@@ -281,15 +282,21 @@ ul {
 
 /********************footer start****************************/
 .main-ftr {
+    padding-top: 50px;
     padding-top: 12%;
     font-size: 12px;
     background-color: #14100f;
+    @include media-breakpoint-down(sm) {
+        padding-top: 20px;
+    }
 
     li {
         list-style: none;
     }
 
     i {
+
+        vertical-align: middle;
         vertical-align: sub;
     }
 
@@ -309,7 +316,6 @@ ul {
 
         .Opening {
             padding-left: 0px;
-
 
             li {
                 margin-bottom: 20px;
@@ -341,6 +347,16 @@ ul {
         }
         .Opening {
             margin-top: 70px;
+            @include media-breakpoint-down(sm) {
+                margin: 20px 0px 20px 0px;
+            }
+            a {
+                @include media-breakpoint-down(md) {
+                    display: flex;
+                }
+             
+            }
+            
         }
     }
 
@@ -437,6 +453,9 @@ ul {
     }
 
     .footer-section-2 {
+        @include media-breakpoint-down(sm) {
+                text-align: left !important;
+        }
 
         strong {
             font-size: 14px;
@@ -514,7 +533,7 @@ ul {
     }
 }
 .header-bottom {
-    background-image: url("images/theme-3/big-banner.jpg");
+    background-image: url("images/theme-3/big-banner-1.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: inherit;
@@ -545,7 +564,7 @@ ul {
     	
         .head-taj{
             h2{
-                color: #b7781b;
+                color: $brown;
                 font-weight: 500;
                 font-size: 46px;
                  font-style: italic;
@@ -586,20 +605,32 @@ ul {
             right: 0px;
             margin-bottom: 60px;
         }
+        @include media-breakpoint-down(sm) {
+                margin-top: -62% !important;
+                right: 41px;
+                margin-bottom: 60px;
+                background-size: contain;
+                width: 413px;
+                margin-bottom: 0px;
+        }
         .postal-code {
             width: 320px;
             margin: 0 auto;
             box-shadow: none;
             text-align: center;
             padding-top: 15%;
+            @include media-breakpoint-down(sm) {
+                width: 60% !important;
+                padding-top: 38% !important;
+            }
             h2 {
                 font-size: 42px;
-                color: #fff;
-                
+                color: #fff;         
                 margin-bottom: 20px;
                 font-family: 'Kaushan Script', cursive;
                 @include media-breakpoint-down(sm) {
-                    font-size: 30px;
+                    font-size: 25px;
+                    margin-bottom: 14px;
                 }
             
 
@@ -607,6 +638,9 @@ ul {
             h4 {
                 font-size: 22px;
                 color: #fff;
+                @include media-breakpoint-down(sm) {
+                     font-size: 16px;
+                }
             }
             .form-control {
                 border: 1px solid #a10302;
@@ -621,7 +655,7 @@ ul {
         }
          h2 {
             margin-top: -64px;
-            color: #b7781b;
+            color: $brown;
             margin-left: 25px;
              @include media-breakpoint-down(md) {
                     margin-top: -95px;
@@ -925,7 +959,7 @@ ul {
         font-style: italic;
         font-size: 72px;
         font-weight: 500;
-        color: #b7781b;
+        color: $brown;
          margin-bottom: 20px;
          font-family: 'Kaushan Script', cursive;
          @include media-breakpoint-only(md) {
@@ -1182,7 +1216,7 @@ ul {
                     margin: 0px;
                     text-transform: uppercase;
                     padding-top: 7px;
-                    color: $yellowdark;
+                    color: $brown;
                 }
             }
             
@@ -1365,7 +1399,7 @@ ul {
         .btn-warning {
             padding: 4px 10px 2px 10px;
             color: #fff !important;
-            background-color: $yellowdark;
+            background-color: $btn-color1;
             border: none;
             float: right;
             font-size: 12px;
@@ -1487,7 +1521,7 @@ ul {
                 font-size: 14px;
                 font-weight: 700;
                 padding-top: 7px;
-                color: $yellowdark;
+                color: $brown;
             }
 
             .reactions {
@@ -1973,7 +2007,7 @@ ul {
                 padding-bottom: 12px;
             }
             label{
-                color: $yellowdark;
+                color: $brown;
             }
         }
         .cash-delivery{
@@ -1981,7 +2015,7 @@ ul {
                 width: 48%;
                 padding: 8px 10px;
                 border: 1px solid #e1e1e1;
-                 color: $yellowdark;
+                 color: $brown;
                 font-size: 16px;
                 font-weight: 700;
                 position: relative;
@@ -2011,7 +2045,7 @@ ul {
             label {
                 font-size: 14px;
                 font-weight: bold;
-                color: $yellowdark;
+                color: $brown;
             }
             .form-control {
               

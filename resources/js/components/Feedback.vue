@@ -79,7 +79,7 @@
                             </div>
                             <div class="row">
                                 <div class="col-md-12 text-center">
-                                    <button type="submit" class="custom-btn btn btn-warning">Submit</button>
+                                    <button type="submit" class="custom-btn btn btn-outline-light">Submit</button>
                                 </div>
                             </div>
                         </form>

@@ -38,7 +38,7 @@
                                             <div class="p-cart product-dec">
                                                 <p style="font-size: 12px;" v-if="product.sizes.length"  v-for="(size, size_index) in product.sizes" > {{size.size}} : £{{size.price}}</p>
                                                 <p  v-if="!product.sizes.length" ><span>£</span>{{product.price}}</p>
-                                                <a href="#" class="custom-btn2  btn btn-warning"  @click.prevent="viewProduct(product.id)">
+                                                <a href="#" class="custom-btn2 btn-warning "  @click.prevent="viewProduct(product.id)">
                                                     Add to cart <i class="fas fa-long-arrow-alt-right"></i></i>
                                                 </a>
                                             </div>
@@ -61,7 +61,7 @@
                                         </div>
                                         <div class="p-cart">
                                             <p><span>£</span>{{item.price}}</p>
-                                              <a href="#" class="custom-btn2 btn btn-warning"  @click.prevent="viewDeal(item.id)"> Add to cart <i class="fas fa-long-arrow-alt-right"></i></i>
+                                              <a href="#" class="custom-btn2 btn-warning"  @click.prevent="viewDeal(item.id)"> Add to cart <i class="fas fa-long-arrow-alt-right"></i></i>
                                                </a>
                                         </div>
                                     </div>
@@ -114,7 +114,7 @@
                                     </table>
                                 </div>
                                 <div class="cart-btn mt-3 mb-3 text-center">
-                                     <button class="anima-btn custom-btn move-eff btn btn-warning" @click="placeOrder()"><span>Checkout</span> <!-- <i class="fas fa-long-arrow-alt-right"></i> --></button>
+                                     <button class="anima-btn custom-btn move-eff btn  btn-danger" @click="placeOrder()"><span>Checkout</span> <!-- <i class="fas fa-long-arrow-alt-right"></i> --></button>
                                 </div> 
                             </div>
                             
@@ -192,7 +192,7 @@
                      <span class="products-value">£{{priceFormat(total_amount)}}</span>
                 </span>
                    
-                    <span class="text chek-out-btn btn btn-warning" @click="opencartlist()">Checkout</span>
+                    <span class="text chek-out-btn btn  btn-danger" @click="opencartlist()">Checkout</span>
                     
                    <!--   <button class=" chek-out-btn anima-btn custom-btn move-eff btn btn-rounded-danger " @click="opencartlist()"><span>Checkout</span><i class="fas fa-long-arrow-alt-right"></i></button>  -->
                 </div>
@@ -231,7 +231,7 @@
                 </ul>
                 </div>
                 <div class="confirm-btn">
-                    <button class="anima-btn btn btn-warning btn move-eff" @click="placeOrder()"><span>Confirm Order</span></button>
+                    <button class="anima-btn btn  btn-danger btn move-eff" @click="placeOrder()"><span>Confirm Order</span></button>
                 </div>
             </div>
         </div>
