@@ -4,71 +4,99 @@
         <section class="section-fullwidth deliver-area ">
             <div class="container">
                   <div class="row">
-                    <div class="col-md-4 col-12">
+                    <div class="col-md-3 col-12">
                        <div class="card-offer text-center">
                            <div class="card-content">
-                             <h3>Pizza Offer 1</h3>
-                             <p>Any 2 x 12” Pizzas, 10 Hot Wings,Chips &Bottle of Drinks</p>
-                             <img src="../../../images/card-img.png">
+                             <h3>Fried Meal Deal</h3>
+                             <p class="mb-5">1 Piece Chicken and Chips <br> With Donar Ontop and A Choice of Drink.</p>
+                             <!-- <img src="../../../images/card-img.png"> -->
                            </div>
-                           <div class="row pries-bar">
-                                <div class="col-12 col-lg-8 order-btn">
-                                    <button type="button" class="btn btn-outline-secondary">Order Now!</button>
-                                    <a href="#" class=""></a>
-                                </div>
-                                <div class="col-12 col-lg-4 pt-2 pt-lg-0">
-                                    <div class="pries">
-                                        <p>£21.00</p>
+                           <div class="row">
+                                <div class="price-bar">
+                                    <div class="col-12 col-lg-12 order-btn">
+                                        <button type="button" class="btn btn-outline-secondary">Order Now!</button>
+                                        <a href="#" class=""></a>
                                     </div>
-                                </div>
+                                   <div class="col-12 col-lg-12 pt-2 pt-lg-0">
+                                      <div class="pries">
+                                          <p>From £4.00</p>
+                                      </div>
+                                  </div>
+                              </div>
                            </div>
+                          
 
                       </div>
                     </div>
-                    <div class="col-md-4 col-12">
+                    <div class="col-md-3 col-12">
                        <div class="card-offer text-center">
                            <div class="card-content">
-                              <h3>Pizza Offer 2</h3>
-                             <p>Any 2 x 12” Pizzas, 10 Hot Wings,Chips &Bottle of Drinks</p>
-                             <img src="../../../images/card-img.png">
+                              <h3>Fish Meal Deal 1</h3>
+                             <p class="mb-5">Fish and Chips with donar ontop and a choice of drink.</p>
+                             <!-- <img src="../../../images/card-img.png"> -->
                            </div>
-                           <div class="row pries-bar">
-                                <div class="col-12 col-lg-8 order-btn">
-                                    <button type="button" class="btn btn-outline-secondary">Order Now!</button>
-                                    <a href="#" class=""></a>
-                                </div>
-                                <div class="col-12 col-lg-4 pt-2 pt-lg-0">
-                                    <div class="pries">
-                                        <p>£25.00</p>
-
+                             <div class="row">
+                                  <div class="price-bar">
+                                      <div class="col-12 col-lg-12 order-btn">
+                                          <button type="button" class="btn btn-outline-secondary">Order Now!</button>
+                                          <a href="#" class=""></a>
+                                      </div>
+                                     <div class="col-12 col-lg-12 pt-2 pt-lg-0">
+                                        <div class="pries">
+                                            <p>From £4.60</p>
+                                        </div>
                                     </div>
                                 </div>
-                           </div>
+                             </div>
 
                       </div>
                     </div>
-                    <div class="col-md-4 col-12">
+                    <div class="col-md-3 col-12">
                        <div class="card-offer text-center">
                            <div class="card-content">
 
-                             <h3>Pizza Offer 2</h3>
-                             <p>Any 2 x 12” Pizzas, 10 Hot Wings,Chips &Bottle of Drinks</p>
-                             <img src="../../../images/card-img.png">
+                             <h3>Family Meal Deal For 2</h3>
+                             <p class="mb-5">A Choice of any 2 burgers, A bag of chips, Large bottle of coke.</p>
+                             <!-- <img src="../../../images/card-img.png"> -->
                            </div>
-                           <div class="row pries-bar">
-                                <div class="col-12 col-lg-8 order-btn">
-                                    <button type="button" class="btn btn-outline-secondary">Order Now!</button>
-                                    <a href="#" class=""></a>
-                                </div>
-                                <div class="col-12 col-lg-4 pt-2 pt-lg-0">
-                                    <div class="pries">
-                                        <p>£29.00</p>
+                               <div class="row">
+                                    <div class="price-bar">
+                                        <div class="col-12 col-lg-12 order-btn">
+                                            <button type="button" class="btn btn-outline-secondary">Order Now!</button>
+                                            <a href="#" class=""></a>
+                                        </div>
+                                       <div class="col-12 col-lg-12 pt-2 pt-lg-0">
+                                          <div class="pries">
+                                              <p>From £8.90</p>
+                                          </div>
+                                      </div>
+                                  </div>
+                               </div>
 
-                                    </div>
+                      </div>
+                    </div>
 
-                                </div>
+                    <div class="col-md-3 col-12">
+                       <div class="card-offer text-center">
+                           <div class="card-content">
 
+                             <h3>Family Meal Deal For 4</h3>
+                             <p class="mb-5">A Choice of any 4 burgers, A large bag of chips, 2 piece chicken, 5 piece nibbles Large bottle of coke.</p>
+                             <!-- <img src="../../../images/card-img.png"> -->
                            </div>
+                              <div class="row">
+                                   <div class="price-bar">
+                                       <div class="col-12 col-lg-12 order-btn">
+                                           <button type="button" class="btn btn-outline-secondary">Order Now!</button>
+                                           <a href="#" class=""></a>
+                                       </div>
+                                      <div class="col-12 col-lg-12 pt-2 pt-lg-0">
+                                         <div class="pries">
+                                             <p>From £20.00</p>
+                                         </div>
+                                     </div>
+                                 </div>
+                              </div>
 
                       </div>
                     </div>

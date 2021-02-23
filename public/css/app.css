@@ -13869,7 +13869,7 @@ ul {
 }
 
 .header-top-section {
-  background-color: #212121;
+  background-color: #0E2D81;
   padding: 12px 0px 12px 0px;
 }
 
@@ -13926,6 +13926,7 @@ ul {
 
 .header-bottom-section {
   padding: 10px 0px 10px 0px;
+  background: #000;
 }
 
 .header-bottom-section .main-menu .order-now a {
@@ -13934,7 +13935,7 @@ ul {
 
 .header-bottom-section .main-menu a {
   font-size: 14px;
-  color: #000 !important;
+  color: #fff !important;
 }
 
 .header-bottom-section .main-menu ul {
@@ -14346,6 +14347,7 @@ ul {
   border-radius: 8px;
   color: #fff;
   padding: 75px 40px 30px 40px;
+  height: 500px;
 }
 
 @media (max-width: 1199.98px) {
@@ -14363,6 +14365,7 @@ ul {
 @media (max-width: 767.98px) {
   .deliver-area .card-offer {
     margin-top: 30px;
+    height: 300px !important;
   }
 }
 
@@ -14393,11 +14396,6 @@ ul {
     max-width: 100%;
     margin-left: 0;
   }
-}
-
-.deliver-area .card-offer .order-btn {
-  border-right: 1px solid;
-  padding-left: 27px;
 }
 
 @media (max-width: 991.98px) {
@@ -16136,6 +16134,30 @@ ul {
 .postal-code-details form {
   width: 100%;
   text-align: center;
+}
+
+.card-content h3 {
+  font-size: 25px;
+}
+
+.price-bar {
+  bottom: 20px;
+  left: 60px;
+  position: absolute;
+}
+
+@media (max-width: 767.98px) {
+  .price-bar {
+    left: 90px;
+  }
+}
+
+.deliver-area .card-offer {
+  height: 500px;
+}
+
+.price-bar .order-btn {
+  margin-bottom: 20px;
 }
 
 /***************Deal-section-end*******************/
