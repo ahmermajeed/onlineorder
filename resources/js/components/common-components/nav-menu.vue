@@ -8,31 +8,10 @@
                 <div class="header-top-section">
                     <div class="container">
                         <div class="row">
-                            <div class="col-7 col-md-6">
-                                <div class="add-info">
-                                    <ul>
-                                         <li class="mail-space"><i class="icon-mail-2"></i>
-                                            <span>
-                                                <a href="mailto:info@alibabakebab.co.uk">info@alibabakebab.co.uk</a>
-                                            </span>
-                                        </li>
-                                        <!-- <li><i class="icon-placeholder"></i>
-                                            <span>
-                                                 <a href="javascript:;">10 Peckham Park Road, London SE15 6TW </a>
-                                            </span>
-                                        </li> -->
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="col-5 col-md-6">
-                                <div class="header-icon float-right">
-                                   <ul>
-                                       <li><a href="#"><i class="icon-facebook"></i></a></li>
-                                       <li><a href="#"><i class="icon-twitter"></i></a></li>
-                                       <li><a href="#"><i class="icon-instagram-symbol"></i></a></li>
-                                       <li><a href="#"><i class="icon-linkedin"></i></a></li>
-                                   </ul>
-                                </div>
+                            <div class="col-md-12">
+                                <p>
+                                    Due to covid-19 we had to minimise on staff and have been really busy. Please be patient for your delivery as we will try and get it to you as soon as possible.
+                                </p>
                             </div>
                         </div>
                     </div>
@@ -43,7 +22,7 @@
                             <div class="col-6 col-md-3">
                                 <router-link :to="{ path: '/'}">
                                      <a class="navbar-brand js-scroll-trigger main-logo" href="javascript:;">
-                                        <img src="/images/theme-1/Ali-baba-logo.png">
+                                        <img src="/images/logo.png">
                                     </a>
                                 </router-link>
                             </div>

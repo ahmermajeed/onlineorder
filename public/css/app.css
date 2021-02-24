@@ -13871,8 +13871,14 @@ ul {
 }
 
 .header-top-section {
-  background-color: #212121;
+  background-color: #da2128;
   padding: 12px 0px 12px 0px;
+}
+
+.header-top-section p {
+  font-size: 15px;
+  text-align: center;
+  color: #fff;
 }
 
 .header-top-section a {
