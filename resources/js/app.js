@@ -12,6 +12,8 @@ Vue.use(VueRouter);
 
 import BootstrapVue from 'bootstrap-vue';
 import { ModalPlugin } from 'bootstrap-vue'
+import VueCarousel from 'vue-carousel';
+
 
 
 import VeeValidate from 'vee-validate';
@@ -23,6 +25,8 @@ Vue.use(VeeValidate, config);
 
 Vue.use(ModalPlugin);
 Vue.use(BootstrapVue);
+Vue.use(VueCarousel);
+
 
 Vue.use(Vuex);
 Vue.component('VueCtkDateTimePicker', VueCtkDateTimePicker)

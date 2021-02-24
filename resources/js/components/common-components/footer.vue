@@ -1,75 +1,63 @@
 <template>
     <div>
-        <footer>
-            <div class="main-ftr">
-                <div class="inner-ftr">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-lg-3 col-md-3 footer-section-1 footer-space order-1">
-                                <h3>Opening Hours</h3>
-                                <ul class="Opening">
-                                    <li><a href="#"><span><i class="icon-smartphone-1"></i></span>0203 490 2727</a></li>
-                                    <li><a href="#"><span><i class="icon-mail-2"></i></span>info@alibabakebab.co.uk</a></li>
-                                    <li><a href="#"><span><i class="icon-placeholder"></i></span>10 Peckham Park Road, London SE15 6TW
-                                    </a></li>
-                                </ul>
-                            </div>
-                            <div class="col-lg-6 col-md-6 footer-section-2 order-3 order-md-2">
-                                <div class="text-center">
-                                   <a href="#"><img src="/images/Ali-baba-logo.png"></a>
-                                </div>
-                                <div class="footer-menu text-center">
-                                    <ul>
-                                      <li><a href="#">Home</a></li>
-                                      <li><a href="#">About us</a></li>
-                                      <li><a href="#">Feedback</a></li>
-                                      <li><a href="#">Allergy Information</a></li>
-                                      <li><a href="#">Our Menu</a></li>
-                                    </ul>
-                                </div>
-                                <div class="follow-us text-center">
-                                    <h3>Follow</h3>
-                                </div>
-                                <div class="icons text-center">
-                                    <ul>
-                                        <li class="linked"><a href="#"><i class="icon-linkedin"></i></a></li>
-                                        <li class="twitter"><a href="#"><i class="icon-twitter"></i></a></li>
-                                        <li class="pinterest"><a href="#"><i class="icon-pinterest-logo"></i></a></li>
-                                        <li class="google-plus"><a href="#"><i class="icon-google-plus-logo"></i></a></li>
-                                        <li class="wifi"><a href="#"><i class="icon-rss-feed-symbol"></i></a></li>
-                                    </ul>
-
-                                </div>
-                            </div>
-                            <div class="col-lg-3 col-md-3 footer-section-3 footer-space order-2 order-md-3">
-                                <h3>Opening Hours</h3>
-                                <ul class="Opening-hours">
-                                    <li>
-
-                                        <strong><a href="#">Open 7 days a week</a></strong>
-                                    </li>
-                                    <li>
-                                        <a href="#">2pm till late</a>
-                                    </li>
-                                    <li>
-                                        <strong><a href="#">Delivery Hours</a></strong>
-                                    </li>
-                                    <li>
-                                        <a href="#">5pm till late </a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
+            <div id="footer_bg">
+              <div id="footer-container">
+                <div class="container"> </div>
+              </div>
+              <div class="footer-inner-items">
+                <div id="footer-container">
+                  <div class="col-sm-12" style="text-align:center;"> <img src="images/footer/logo.png" title="Bhaji fresh Takeaway" alt="Bhaji fresh Takeaway" class="img-responsive" style="margin:auto;" id="footer_logo"> </div>
+                  <div class="col-sm-12" style="text-align:center;"> <img src="images/footer/underline.png" class="rounded mx-auto d-block" style="width:35%;margin-bottom: 25px;"> </div>
+                  <div class="col-sm-12" style="text-align:center;">
+                    <p>As all of our dishes are freshly cooked for each customer we are able to adjust the 
+                      heat of each dish to your preferred taste - mild,medium or hot. </p>
+                    <b> We do not use any food colourings whatsoever. </b> 
+                    <b> Our dishes may contain GLUTEN, CRUSTACEANS, MOLLUSCS, FISH, EGGS, PEANUTS, NUTS, SOYA BEANS, MILK, CELERY, SESAME SEEDS, MUSTARD. If you are allergic to certain ingredients please notify our staff before ordering. </b> </div>
+                    <div class="col-sm-12">
+                    <img src="images/footer/footer_line.png" class="img-responsive" id="newline">
+                  <div class="col-sm-4" style="text-align:center;">
+                    <h2>OPEN TIME</h2>
+                    <p>Open <span>7 days</span> a week<br>
+                      Mon-Saturday <span>5pm till 11pm</span><br>
+                      Sun <span>5pm till 10.30pm</span></p>
+                  </div>
+                  <div class="col-sm-4" id="footer_middle"> <!--<b>Free delivery</b> <span>within 4 miles radius</span> on orders <span>over £12</span>--> </div>
+                  <div class="col-sm-4">
+                    <h2>CONTACT</h2>
+                    <div id="store-address-postcode"><a href="tel:01925573274" id="header_a">01925573274</a>
+                    <br>200 Knutsford Rd, Warrington,
+            Latchford, WA4 1AU
+            (Opposite Victoria Park), <!--WA4 1AU--></div>
+                    <!--<div id="store-mail-code"> 
+                 <a href="mailbox@bhajifresh.com">mailbox@bhajifresh.com</a>
+                 </div>--> 
+                    
+                  </div>
+                  </div>
+                  <!--<div class="col-sm-4" id="card-item-dis">
+                   
+                    We Accept Credit and Debit Cards </div>-->
+                  <div class="clear"></div>
                 </div>
-
-                <div class="copyright text-center">
-                    <div class="container">
-                        <p>Copyright © 2020 | All rights reserved</p>
-                    </div>
+              </div>
+              <div class="footer-last-links" id="bottom-links">
+                <div class="container">
+                  <div id="links">
+                    <ul>
+                      <li><a href="/" title="Home">Home</a></li>
+                      <li><a href="/privacy-policy/" title="Privacy Policy">Privacy Policy</a></li>
+                      <li><a title="Cookie Policy" href="/cookie-policy/">Cookie Policy</a></li>
+                      <li><a href="/service-disclaimer/" title="Service Disclaimer">Service Disclaimer</a></li>
+                      <!--<li><a href="/index.php?route=information/sitemap" title="Site Map">Site Map</a></li>-->
+                      <li><a href="/index.php?route=information/contact" title="Contact Us">Contact Us</a></li>
+                    </ul>
+                  </div>
+                  <div class="powered">
+                    <p>Bhaji Fresh Takeaway © 2021. All rights reserved.  Designed By <a href="http://www.etakeawaymax.co.uk/" target="_blank">Takeaway Apps, EPOS - eTakeaway Max</a></p>
+                  </div>
                 </div>
+              </div>
             </div>
 
-        </footer>
     </div>
 </template>

@@ -2253,4 +2253,173 @@ ul {
     width: 100%;
     text-align: center;
 }
+
+
+// Bhaji Css start
+.banner-header .VueCarousel-wrapper img {
+    width: 100%;
+}
+
+// About Us
+#wback_0 {
+    /* background: url(images/about-us/welcome_bg.png) no-repeat 0px 0px; */
+    padding: 49px;
+    background-size: cover;
+}
+#wback_0 {
+    margin: auto;
+    padding: 15px 0;
+    position: relative;
+    z-index: 10;
+}
+.wback {
+    clear: both;
+}
+#wback_0.wback .wmessage {
+    margin: 0 auto;
+}
+.wmessage {
+    text-align: justify;
+    margin: auto;
+    position: relative;
+}
+#wback_0 #welcome_head {
+    text-align: center;
+    font-size: 50px;
+    font-family: 'Metro Retro NF';
+}
+#content h1 {
+    color: #181917;
+    font-family: "Lora", serif;
+    font-size: 30px;
+    line-height: 25px;
+}
+#wback_0 #welcome_p {
+    letter-spacing: 1px;
+    line-height: 26px;
+    font-size: 15px;
+    font-family: 'Candara';
+}
+#wback_0 #welcome_p1 {
+    letter-spacing: 1px;
+    padding-top: 10px;
+    font-size: 16px;
+    font-family: 'Candara';
+    margin-bottom: 20px;
+}
+.new_img img {
+    border: 3px solid #f0892b;
+    box-shadow: 0px 0px 17px 0px rgb(0 0 0 / 49%);
+}
+.img-responsive {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+img.img-responsive.img-awards {
+    /* width: 50%; */
+    margin: 0px auto;
+    padding: 17px 0px;
+}
+
+// Order Online
+#carousel0 {
+    background: url(images/order/order_bg.png) no-repeat 0px 0px;
+    background-size: cover;
+    padding: 100px;
+}
+#carousel0 #welcome_head {
+    color: #FFF;
+    text-align: center;
+    font-size: 50px;
+    font-family: 'Metro Retro NF';
+}
+#carousel0 #order_h {
+    border-bottom: 2px dotted;
+    color: #fff;
+    padding-bottom: 8px;
+    font-family: 'Candara';
+    font-size: 30px;
+    line-height: 25px;
+    margin-top: 20px;
+}
+#carousel0 img {
+    max-width: none !important;
+}
+.order-list img {
+    padding: 0px;
+    width: 100%;
+    margin: auto;
+    max-width: 292px;
+}
+#carousel0 p {
+    color: #fff;
+    text-align: right;
+    font-family: 'Candara';
+    font-size: 14px;
+}
+// Footer
+#footer_bg {
+    background: url(images/footer/footer_bg.png) no-repeat 0px 0px;
+    background-size: cover;
+    font-family: 'Candara';
+}
+#footer_bg {
+    width: 100%;
+    margin-top: 20px;
+    color: #989697;
+    line-height: 30px;
+    font-size: 16px;
+}
+#footer_bg {
+    padding-bottom: 30px !important;
+}
+#footer_bg #footer-container {
+    margin: 0 auto;
+    max-width: 1000px;
+    padding-top: 5px;
+}
+.home_page_tel .container, #footer_bg .container {
+    filter: none;
+}
+
+.home_page_tel .container {
+    padding: 0;
+    max-width: 1000px;
+}
+.home_page_tel .container, #hedtopright .container {
+    max-width: 100% !important;
+}
+.footer-inner-items {
+    border-bottom: 1px solid #fff;
+    padding-bottom: 20px;
+}
+#footer_bg .col-sm-12 p {
+    letter-spacing: 1px;
+    line-height: 23px;
+}
+#footer_bg p {
+    color: #fff;
+    margin-bottom: 0;
+    text-align: center;
+    padding: 0;
+    font-size: 16px;
+    line-height: 26px;
+}
+#footer_bg .col-sm-12 b {
+    font-size: 20px;
+    font-weight: bold;
+    color: #fff;
+}
+#footer_bg h2 {
+    color: #FFF;
+    font-weight: bold;
+}
+#footer_bg h2 {
+    color: #FFF;
+    font-weight: bold;
+}
+.footer-inner-items .col-sm-4 span {
+    color: #ef7f1a;
+}
 /***************Deal-section-end*******************/
