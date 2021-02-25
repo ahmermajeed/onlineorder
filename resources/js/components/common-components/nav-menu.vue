@@ -65,14 +65,16 @@
             <!-- </nav> -->
             <div class="row">
                 <div class="banner-header">
-                    <carousel :per-page="1" :autoplayTimeout="3000" :loop="true" :mouse-drag="true" :autoplay="true">
+                    <img src="images/banner/banner-1.jpg">
+
+ <!--                    <carousel :per-page="1" :autoplayTimeout="3000" :loop="true" :mouse-drag="true" :autoplay="true">
                       <slide>
                         <img src="images/banner/banner-1.jpg">
                       </slide>
                       <slide>
                        <img src="images/banner/banner-2.jpg">
                       </slide>
-                    </carousel>
+                    </carousel> -->
                 </div>
             </div>
 

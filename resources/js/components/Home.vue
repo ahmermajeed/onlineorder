@@ -15,7 +15,7 @@
 				      <div class="container">
 				      <div class="row">
 				      	<div class="col-md-6 center-img">
-				      	   <img alt="" src="images/about-us/welcome_banner.png">
+				      	   <img class="img-responsive" alt="" src="images/about-us/welcome_banner.png">
 				      	</div>
 				      	<div class="col-md-6">
 				      	   <p id="welcome_p">
@@ -53,57 +53,68 @@
 			    <div class="col-sm-12" style="text-align:center">
 			        <img src="images/order/underline.png" class="rounded mx-auto d-block" style="width:35%;margin-bottom: 50px;">
 			    </div>
-			    <div class="row">
-			    	<div class="col-md-12">
-			    		<div class="order-images">
-						    <div class="row">
-					            <div class="col-md-6">
+			    <div class="order-section-container">
+				    <div class="row">
+				    	<div class="col-md-12">
+				    		<div class="order-images">
+							    <div class="row">
 					            	<div class="col-md-6">
-					            		<div class="col-md-12 order-list">
+					            		<div class="order-list">
 					            			<h1 id="order_h">
 					            				£5.39&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;VINDALOO</h1>
-					            			<div class="col-md-3">
-					            				<img class="round" src="images/order/order1.png"></div>
-					            			<div class="col-md-9">
-					            				<p>
-					            					Involving a greater use of chillies,garlic,tomato,lemon, ginger &amp; black pepper</p>
+					            				<div class="row">
+							            			<div class="col-md-3">
+							            				<img class="round" src="images/order/order1.png"></div>
+							            			<div class="col-md-9">
+							            				<p>
+							            					Involving a greater use of chillies,garlic,tomato,lemon, ginger &amp; black pepper</p>
+							            			</div>
+							            			<div class="col-md-12">
+							            				<img src="images/order/order_button.png">
+							            			</div>
+							            		</div>
 					            			</div>
-					            			<div class="col-md-12">
-					            				<img src="images/order/order_button.png"></div>
-					            		</div>
-					            		<div class="col-md-12">
-					            			<h1 id="order_h">
-					            				£7.69&nbsp;&nbsp;&nbsp;&nbsp;AYAAN SPECIAL</h1>
-					            			<div class="col-md-3">
-					            				<a href="menu/#"><img class="round" src="images/order/order2.png"></a></div>
-					            			<div class="col-md-9">
-					            				<p>
-					            					Grilled chicken cooked with garlic,onion,peppers, keema &amp; potato.</p>
-					            			</div>
-					            			<div class="col-md-12">
-					            				<img src="images/order/order_button.png"></div>
-					            		</div>
-					            		<div class="col-md-12">
-					            			<h1 id="order_h">
-					            				£7.69&nbsp;JALPURI CHICKEN</h1>
-					            			<div class="col-md-3">
-					            				<a href="menu/#"><img class="round" src="images/order/order3.png"></a></div>
-					            			<div class="col-md-9">
-					            				<p>
-					            					Chicken cooked in the flavour of spinach,special mixed sauces, spring onions,coriander, garlic, ginger, green pepper &amp; tomatoes.</p>
-					            			</div>
-					            			<div class="col-md-12">
-					            				<a href="menu/#"><img src="images/order/order_button.png"></a></div>
-					            		</div>
-					            	</div>
-					            </div>
-					            <div class="col-md-6">
-					                <img src="images/order/order_slider.png">
-					            </div>
-						    </div>
+
+	        			            		<div class="order-list">
+	        			            			<h1 id="order_h">
+	        			            				£7.69&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;AYAAN SPECIAL</h1>
+	    			            				<div class="row">
+	    					            			<div class="col-md-3">
+	    					            				<img class="round" src="images/order/order2.png"></div>
+	    					            			<div class="col-md-9">
+	    					            				<p>
+	    					            					Grilled chicken cooked with garlic,onion,peppers, keema & potato.</p>
+	    					            			</div>
+	    					            			<div class="col-md-12">
+	    					            				<img src="images/order/order_button.png">
+	    					            			</div>
+	    					            		</div>
+	        			            		</div>	
+
+	        			            		<div class="order-list">
+	        			            			<h1 id="order_h">
+	        			            				£7.69&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;JALPURI CHICKEN</h1>
+	    			            				<div class="row">
+	    					            			<div class="col-md-3">
+	    					            				<img class="round" src="images/order/order3.png"></div>
+	    					            			<div class="col-md-9">
+	    					            				<p>
+	    					            					Chicken cooked in the flavour of spinach,special mixed sauces, spring onions,coriander, garlic, ginger, green pepper &amp; tomatoes.</p>
+	    					            			</div>
+	    					            			<div class="col-md-12">
+	    					            				<img src="images/order/order_button.png">
+	    					            			</div>
+	    					            		</div>
+	        			            		</div>						            	
+							            </div>
+						            <div class="col-md-6">
+						                <img src="images/order/order_slider.png" class="img-responsive slider-img">
+						            </div>
+							    </div>
+					    	</div>
 				    	</div>
-			    	</div>
-			    </div>
+				    </div>
+				</div>
 			</div>
 		</section>
 		<!-- Order Online Section end -->
@@ -114,30 +125,11 @@
 </template>
 
 <script>
-    import VueGallery from 'vue-gallery';
-    import { Carousel, Slide } from 'vue-carousel';
 
-    import {
-        Hooper,
-        Navigation as HooperNavigation,
-    } from 'hooper';
-
-    import 'hooper/dist/hooper.css';
     export default {
-        components: {
-            Hooper,
-            Slide,
-            HooperNavigation,
-            'gallery': VueGallery,
-            Carousel,
-            Slide,
-        },
+
         data: function () {
             return {
-                images: [
-                    '../../images/mainbanner1.jpeg',
-                    '../../images/image00003.jpg',
-                ],
                 stories: [],
                 index: null,
                 showPopup: false,
