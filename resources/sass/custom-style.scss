@@ -577,18 +577,53 @@ ul {
                 }
             }
             p {
+                font-size: 14px;
+                line-height: 1.3;
+                margin: 0;
+                padding: 0;
                 @include media-breakpoint-down(lg) {
                     font-size: 16px;
                 }
             }
-            img {
-                float: left !important;
-                margin-left: -40px;
-                margin-top: 20px;
-                @include media-breakpoint-down(md) {
-                    max-width: 100%;
-                    margin-left: 0;
-                }
+            .img-circular1 {
+                width: 150px;
+                height: 150px;
+                background-image: url('/images/food/deal1.png');
+                background-size: cover;
+                display: block;
+                position: absolute;
+                bottom: 116px;
+                left: 64px;
+            }
+            .img-circular2 {
+                width: 150px;
+                height: 150px;
+                background-image: url('/images/food/deal2.png');
+                background-size: cover;
+                display: block;
+                position: absolute;
+                bottom: 116px;
+                left: 64px;
+            }
+            .img-circular3 {
+                width: 150px;
+                height: 150px;
+                background-image: url('/images/food/deal3.png');
+                background-size: cover;
+                display: block;
+                position: absolute;
+                bottom: 116px;
+                left: 64px;
+            }
+            .img-circular4 {
+                width: 150px;
+                height: 150px;
+                background-image: url('/images/food/deal4.png');
+                background-size: cover;
+                display: block;
+                position: absolute;
+                bottom: 116px;
+                left: 64px;
             }
         }
 

@@ -14379,23 +14379,61 @@ ul {
   }
 }
 
+.deliver-area .card-offer .card-content p {
+  font-size: 14px;
+  line-height: 1.3;
+  margin: 0;
+  padding: 0;
+}
+
 @media (max-width: 1199.98px) {
   .deliver-area .card-offer .card-content p {
     font-size: 16px;
   }
 }
 
-.deliver-area .card-offer .card-content img {
-  float: left !important;
-  margin-left: -40px;
-  margin-top: 20px;
+.deliver-area .card-offer .card-content .img-circular1 {
+  width: 150px;
+  height: 150px;
+  background-image: url("/images/food/deal1.png");
+  background-size: cover;
+  display: block;
+  position: absolute;
+  bottom: 116px;
+  left: 64px;
 }
 
-@media (max-width: 991.98px) {
-  .deliver-area .card-offer .card-content img {
-    max-width: 100%;
-    margin-left: 0;
-  }
+.deliver-area .card-offer .card-content .img-circular2 {
+  width: 150px;
+  height: 150px;
+  background-image: url("/images/food/deal2.png");
+  background-size: cover;
+  display: block;
+  position: absolute;
+  bottom: 116px;
+  left: 64px;
+}
+
+.deliver-area .card-offer .card-content .img-circular3 {
+  width: 150px;
+  height: 150px;
+  background-image: url("/images/food/deal3.png");
+  background-size: cover;
+  display: block;
+  position: absolute;
+  bottom: 116px;
+  left: 64px;
+}
+
+.deliver-area .card-offer .card-content .img-circular4 {
+  width: 150px;
+  height: 150px;
+  background-image: url("/images/food/deal4.png");
+  background-size: cover;
+  display: block;
+  position: absolute;
+  bottom: 116px;
+  left: 64px;
 }
 
 @media (max-width: 991.98px) {
