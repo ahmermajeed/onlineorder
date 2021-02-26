@@ -16229,5 +16229,13 @@ ul {
   margin-bottom: 20px;
 }
 
+.postal-code-modal .modal-content .modal-header .modal-title {
+  font-size: 20px;
+}
+
+.modal-sm {
+  max-width: 310px;
+}
+
 /***************Deal-section-end*******************/
 
