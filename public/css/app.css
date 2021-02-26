@@ -16504,5 +16504,96 @@ img.img-responsive.img-awards {
   font-size: 13px;
 }
 
+#wback_1 {
+  padding: 0px;
+}
+
+.wmessage {
+  text-align: justify;
+  margin: auto;
+  position: relative;
+}
+
+#wback_1 #welcome_head {
+  text-align: center;
+  font-size: 50px;
+  font-family: "Metro Retro NF";
+}
+
+#wback_1 #nopadding {
+  padding: 0px;
+}
+
+#wback_1 #special1 {
+  background: #d54a07;
+  padding: 0px;
+}
+
+#wback_1 h2 {
+  font-family: "Candara";
+  text-align: center;
+  margin: 8px !important;
+  font-weight: bold;
+  color: #fff;
+  font-size: 23px;
+}
+
+#wback_1 h2 a {
+  color: #fff;
+  font-size: 23px;
+}
+
+#wback_1 p {
+  padding: 0px 20px;
+  font-size: 13px;
+  color: #fff;
+  text-align: center;
+  font-family: "Candara";
+}
+
+#wback_1 #special_img1 {
+  width: 100%;
+}
+
+#wback_1 #special2 {
+  background: #f88e0d;
+  padding: 0px;
+}
+
+#wback_1 #special_img1 {
+  width: 100%;
+}
+
+#wback_1 h2 {
+  font-family: "Candara";
+  text-align: center;
+  margin: 8px !important;
+  font-weight: bold;
+  color: #fff;
+  font-size: 23px;
+}
+
+#wback_1 h2 a {
+  color: #fff;
+  font-size: 23px;
+}
+
+#wback_1 p {
+  padding: 0px 20px;
+  font-size: 13px;
+  color: #fff;
+  text-align: center;
+  font-family: "Candara";
+}
+
+#wback_1 p a {
+  color: #fff;
+  font-size: 18px;
+}
+
+div#wback_2 img {
+  margin: auto;
+}
+
 /***************Deal-section-end*******************/
 

@@ -1,6 +1,10 @@
 <template>
     <div>
-        <header-menu></header-menu>
+    	<!-- Header section start -->
+        	<header-menu></header-menu>
+    	<!-- Header section end -->
+
+        <!-- About section start -->
 		<section>
 			<div class="row">
 				<div class="wback" id="wback_0">
@@ -119,8 +123,55 @@
 		</section>
 		<!-- Order Online Section end -->
 
-   
-        <footer-menu></footer-menu>
+		<!-- Our Specialitiies section start -->
+
+			<section>
+				<div class="wback" id="wback_1">
+				<div class="wmessage">
+				<!--<h1>Welcome to Bhaji Fresh Takeaway</h1>-->
+				<h1 id="welcome_head">
+					OUR SPECIALITIES</h1>
+				<div class="col-sm-12" style="text-align:center">
+					<img class="rounded mx-auto d-block" src="catalog/view/theme/default/stylesheet/images/underline.png" style="width:35%;margin-bottom: 50px;"></div>
+				<div class="col-sm-4">
+					<div class="col-sm-12" id="nopadding">
+						<div class="col-sm-12" id="special1">
+							<div class="col-sm-6">
+								<h2>
+									<a href="menu/#cat_6">BUTTER CHICKEN</a></h2>
+								<p>
+									<a href="menu/#cat_6">A delicate dish made with mild spices and butter ghee.</a></p>
+							</div>
+							<div class="col-sm-6">
+								<a href="menu/#cat_6"><img class="img-responsive" id="special_img1" src="catalog/view/theme/default/stylesheet/images/special1.png"></a></div>
+						</div>
+						<div class="col-sm-12" id="special2">
+							<div class="col-sm-6">
+								<a href="menu/#cat_6"><img class="img-responsive" id="special_img1" src="catalog/view/theme/default/stylesheet/images/special2.png"></a></div>
+							<div class="col-sm-6">
+								<h2>
+									<a href="menu/#cat_6">GRILLED FISH CURRY</a></h2>
+								<p>
+									<a href="menu/#cat_6">Onions, peppers, green chillies, garlic, coriander and garnished with chef’s special sauce.</a></p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-sm-4">
+					<img class="img-responsive" src="catalog/view/theme/default/stylesheet/images/slide.png" style="width:63%;"></div>
+
+				<div style="clear:both;"></div>
+				</div>
+				<div class="bottonimg"></div>
+				</div>
+			</section>
+
+		<!-- Our Specialitiies section end -->
+
+		<!-- Footer section start -->
+        	<footer-menu></footer-menu>
+		<!-- Footer section end -->
+
     </div>
 </template>
 
