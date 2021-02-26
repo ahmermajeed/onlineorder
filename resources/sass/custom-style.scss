@@ -2633,4 +2633,30 @@ img.img-responsive.img-awards {
 div#wback_2 img {
     margin: auto;
 }
+.our-specialities-section {
+    padding: 100px;
+}
+.our-specialities-section .center-images {
+    margin: 0 auto;
+}
+#nopadding #special1 #special_img1:hover {
+    transform: scale(1.2);
+    transition: all 0.3s ease 0s;
+    -moz-transform: scale(1.2);
+    -webkit-transform: scale(1.2);
+    -khtml-transform: scale(1.2);
+    z-index: 1;
+    width: 100%;
+    position: relative;
+}
+#nopadding #special2 #special_img1:hover {
+    transform: scale(1.2);
+    transition: all 0.3s ease 0s;
+    -moz-transform: scale(1.2);
+    -webkit-transform: scale(1.2);
+    -khtml-transform: scale(1.2);
+    z-index: 1;
+    width: 100%;
+    position: relative;
+}
 /***************Deal-section-end*******************/

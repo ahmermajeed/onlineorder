@@ -126,14 +126,14 @@
 		<!-- Our Specialitiies section start -->
 
 			<section>
-				<div class="wback" id="wback_1">
+				<div class="wback our-specialities-section" id="wback_1">
 				<div class="wmessage">
 				<!--<h1>Welcome to Bhaji Fresh Takeaway</h1>-->
 				<h1 id="welcome_head">
 					OUR SPECIALITIES</h1>
 				<div class="col-sm-12" style="text-align:center">
-					<img class="rounded mx-auto d-block" src="catalog/view/theme/default/stylesheet/images/underline.png" style="width:35%;margin-bottom: 50px;"></div>
-				<div class="col-sm-4">
+					<img class="rounded mx-auto d-block" src="images/our-specialities/underline.png" style="width:35%;margin-bottom: 50px;"></div>
+				<div class="col-sm-4 center-images">
 					<div class="col-sm-12" id="nopadding">
 						<div class="col-sm-12" id="special1">
 							<div class="col-sm-6">
@@ -143,11 +143,11 @@
 									<a href="menu/#cat_6">A delicate dish made with mild spices and butter ghee.</a></p>
 							</div>
 							<div class="col-sm-6">
-								<a href="menu/#cat_6"><img class="img-responsive" id="special_img1" src="catalog/view/theme/default/stylesheet/images/special1.png"></a></div>
+								<a href="menu/#cat_6"><img class="img-responsive" id="special_img1" src="images/our-specialities/special1.png"></a></div>
 						</div>
 						<div class="col-sm-12" id="special2">
 							<div class="col-sm-6">
-								<a href="menu/#cat_6"><img class="img-responsive" id="special_img1" src="catalog/view/theme/default/stylesheet/images/special2.png"></a></div>
+								<a href="menu/#cat_6"><img class="img-responsive" id="special_img1" src="images/our-specialities/special2.png"></a></div>
 							<div class="col-sm-6">
 								<h2>
 									<a href="menu/#cat_6">GRILLED FISH CURRY</a></h2>
@@ -158,7 +158,7 @@
 					</div>
 				</div>
 				<div class="col-sm-4">
-					<img class="img-responsive" src="catalog/view/theme/default/stylesheet/images/slide.png" style="width:63%;"></div>
+					<img class="img-responsive" src="images/our-specialities/slide.png" style="width:63%;"></div>
 
 				<div style="clear:both;"></div>
 				</div>
