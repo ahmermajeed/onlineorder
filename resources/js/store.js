@@ -9,7 +9,9 @@ export default new Vuex.Store({
     state: {
         cartArray:[{}],
         delivery_charges:'',
-        postal_code:'',
+        postal_code: localStorage.getItem('postal_code') ? localStorage.getItem('postal_code') : '',
+        order_type: localStorage.getItem('order_type') ? localStorage.getItem('order_type') : '',
+
     },
 
     // You can use it as a state getter function (probably the best solution)
@@ -22,7 +24,14 @@ export default new Vuex.Store({
         },
         getPostalCode(state){
             return state.postal_code;
-        }
+        },
+        getOrderType(state){
+            if (state.order_type == "" || state.order_type == null) {
+                return localStorage.getItem('order_type');
+            } else {
+                return state.order_type;
+            }
+        },
     },
 
     // Mutation for when you use it as state property
@@ -35,7 +44,13 @@ export default new Vuex.Store({
         },
         setPostalCode(state,data){
             state.postal_code = data
-        }
+        },
+        setOrderType(state,data){
+            localStorage.setItem('order_type', data);
+            state.order_type = localStorage.getItem('order_type');
+            console.log(state.order_type)
+
+        },
 
     },
 });

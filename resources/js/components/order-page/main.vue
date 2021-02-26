@@ -77,6 +77,8 @@
                                 <img src="../../../images/cart.png">
                             </div>
                     
+                            <h5 v-if="getAllCartArray.length == 1" class="mt-2">No item in your cart</h5>
+
                             <div class="food-allergy" @click="foodAllergyPopup">
                                 <p>
                                 <img src="/images/information.png" alt="">
@@ -85,23 +87,33 @@
 
                             <form class="form-cart">
                                 <div class="switch-field">
-                                    <input type="radio" id="radio-one" name="switch-one" value="yes" checked/>
-                                    <label for="radio-one"> 
-                                    <img src="/images/delivery.png" alt="">
-                                    </i>Delivery 
+                                    <input type="radio" v-model="orderType" @change="showPostalCode" id="radio-one" name="switch-one"
+                                           value="Delivery"/>
+                                    <label for="radio-one">
+                                        <img src="/images/delivery.png" alt="">
+                                        </i>Delivery
                                         <span>30 - 45 mins</span></label>
-                                    <input type="radio" id="radio-two" name="switch-one" value="no" />
+                                    <input type="radio" v-model="orderType" @change="showPostalCode" id="radio-two" name="switch-one"
+                                           value="Pickup"/>
                                     <label for="radio-two">
-                                    <img src="/images/shopping-basket.png" alt="">
+                                        <img src="/images/shopping-basket.png" alt="">
                                         Collection
-                                        <span>10 mins</span></label>
+                                        <span>20 mins</span></label>
                                 </div>
+
+                                    <div class="form-group" style="position: relative; top: 12px;" v-if="showPostal">
+                                        <label for=""><span>Enter your Postcode:</span></label>
+                                        <input type="text"  class="form-control" v-model="postalCode" placeholder="Enter your Postcode">
+                                        <p style="color:red;font-size: 11px;margin-top: 5px;">{{errorMessage}} </p>
+                                    </div>
+
+
                             </form>
 
 
                             <div class="lp-sidebar-body">
                                 <div class="img-box text-center">
-                                    <h5 v-if="getAllCartArray.length == 1" class="mt-2">No item in your cart</h5>
+                
                                 </div>
                                 <div class="table-holder">
                                     <table class=tbl_cart_list>
@@ -304,6 +316,12 @@
                 editDeal:false,
                 editDealsData:{},
                 foodAllergyModal: false,
+                orderType: '',
+                showPostal : false,
+                postalCode: '',
+                errorMessage: ''
+
+
             };
         },
         mounted() {
@@ -316,12 +334,31 @@
                     var value = this.$store.getters.getAllCartArray[key];
                 }
             }
+
+            this.orderType = this.$store.getters.getOrderType;
+
+            this.postalCode = this.$store.getters.getPostalCode;
+
+            if(this.orderType == "Delivery") {
+                this.showPostal = true
+            }
+
+
             this.scrollToMain();
             window.addEventListener("scroll", this.handleScroll);
 
 
         },
         methods: {
+
+            showPostalCode() {
+                let self = this;
+
+                if(self.orderType == "Delivery")
+                    self.showPostal = true
+                else
+                    self.showPostal = false
+            },
 
             scrollToMain() {
                 let element = document.getElementById("product-scroll");
@@ -465,7 +502,42 @@
 
 
             placeOrder(){
-                this.$router.push({name: 'check-out'})
+                let vm = this;
+
+                if (this.orderType == '') {
+                    vm.errorMessage = 'Please Select Order Type';
+                    setTimeout(function(){ vm.errorMessage = ""; }, 2000);
+                } else if(this.orderType == 'Delivery' && this.postalCode == "") {
+                    vm.errorMessage = 'Please Enter Your Postcode';
+                    setTimeout(function(){ vm.errorMessage = ""; }, 2000);
+
+                } else {
+
+                    axios({
+                        method: 'post',
+                        url: '/api/check-postal',
+                        data: {
+                            order_type: this.orderType,
+                            postal_code:this.postalCode
+                        },
+                    }).then(function (response) {
+
+                        if(response.data.error === undefined){
+                            vm.errorMessage = response.data.data.amount;
+                            vm.$store.commit('setDeliveryCharges', response.data.data.amount);
+                            vm.$store.commit('setOrderType', vm.orderType);
+                            vm.$store.commit('setPostalCode', vm.postalCode);
+                            vm.$router.push({name: 'check-out'})
+
+                        }else {
+                            vm.errorMessage = 'We are not providing food in your area';
+                        }
+                    })
+                    .catch(function (response) {
+                        //handle error
+                        console.log(response);
+                    });
+                }
            },
             removeFromCart(index){
                 console.log('tets');
