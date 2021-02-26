@@ -14364,8 +14364,9 @@ ul {
 
 @media (max-width: 767.98px) {
   .deliver-area .card-offer {
-    margin-top: 30px;
-    height: 300px !important;
+    height: 450px !important;
+    position: relative;
+    margin-bottom: 20px;
   }
 }
 
@@ -14389,6 +14390,7 @@ ul {
 @media (max-width: 1199.98px) {
   .deliver-area .card-offer .card-content p {
     font-size: 16px;
+    margin-bottom: 15px;
   }
 }
 
@@ -14398,9 +14400,16 @@ ul {
   background-image: url("/images/food/deal1.png");
   background-size: cover;
   display: block;
-  position: absolute;
-  bottom: 116px;
-  left: 64px;
+  position: relative;
+  margin: 0 auto;
+  margin-bottom: 20px;
+}
+
+@media (max-width: 767.98px) {
+  .deliver-area .card-offer .card-content .img-circular1 {
+    position: relative;
+    bottom: 0;
+  }
 }
 
 .deliver-area .card-offer .card-content .img-circular2 {
@@ -14409,9 +14418,16 @@ ul {
   background-image: url("/images/food/deal2.png");
   background-size: cover;
   display: block;
-  position: absolute;
-  bottom: 116px;
-  left: 64px;
+  position: relative;
+  margin: 0 auto;
+  margin-bottom: 20px;
+}
+
+@media (max-width: 767.98px) {
+  .deliver-area .card-offer .card-content .img-circular2 {
+    position: relative;
+    bottom: 0;
+  }
 }
 
 .deliver-area .card-offer .card-content .img-circular3 {
@@ -14420,9 +14436,16 @@ ul {
   background-image: url("/images/food/deal3.png");
   background-size: cover;
   display: block;
-  position: absolute;
-  bottom: 116px;
-  left: 64px;
+  position: relative;
+  margin: 0 auto;
+  margin-bottom: 20px;
+}
+
+@media (max-width: 767.98px) {
+  .deliver-area .card-offer .card-content .img-circular3 {
+    position: relative;
+    bottom: 0;
+  }
 }
 
 .deliver-area .card-offer .card-content .img-circular4 {
@@ -14431,9 +14454,16 @@ ul {
   background-image: url("/images/food/deal4.png");
   background-size: cover;
   display: block;
-  position: absolute;
-  bottom: 116px;
-  left: 64px;
+  position: relative;
+  margin: 0 auto;
+  margin-bottom: 20px;
+}
+
+@media (max-width: 767.98px) {
+  .deliver-area .card-offer .card-content .img-circular4 {
+    position: relative;
+    bottom: 0;
+  }
 }
 
 @media (max-width: 991.98px) {
@@ -16175,7 +16205,8 @@ ul {
 }
 
 .card-content h3 {
-  font-size: 25px;
+  font-size: 20px;
+  margin-bottom: 20px;
 }
 
 .price-bar {

@@ -565,8 +565,9 @@ ul {
         }
 
         @include media-breakpoint-down(sm) {
-            margin-top: 30px;
-            height: 300px !important;
+            height: 450px !important;
+            position: relative;
+            margin-bottom: 20px;
         }
 
         .card-content {
@@ -583,6 +584,7 @@ ul {
                 padding: 0;
                 @include media-breakpoint-down(lg) {
                     font-size: 16px;
+                    margin-bottom: 15px;
                 }
             }
             .img-circular1 {
@@ -591,9 +593,13 @@ ul {
                 background-image: url('/images/food/deal1.png');
                 background-size: cover;
                 display: block;
-                position: absolute;
-                bottom: 116px;
-                left: 64px;
+                position: relative;
+                margin: 0 auto;
+                margin-bottom: 20px;
+                @include media-breakpoint-down(sm) {
+                    position: relative;
+                    bottom: 0;
+                }
             }
             .img-circular2 {
                 width: 150px;
@@ -601,9 +607,13 @@ ul {
                 background-image: url('/images/food/deal2.png');
                 background-size: cover;
                 display: block;
-                position: absolute;
-                bottom: 116px;
-                left: 64px;
+                position: relative;
+                margin: 0 auto;
+                margin-bottom: 20px;
+                @include media-breakpoint-down(sm) {
+                    position: relative;
+                    bottom: 0;
+                }
             }
             .img-circular3 {
                 width: 150px;
@@ -611,9 +621,13 @@ ul {
                 background-image: url('/images/food/deal3.png');
                 background-size: cover;
                 display: block;
-                position: absolute;
-                bottom: 116px;
-                left: 64px;
+                position: relative;
+                margin: 0 auto;
+                margin-bottom: 20px;
+                @include media-breakpoint-down(sm) {
+                    position: relative;
+                    bottom: 0;
+                }
             }
             .img-circular4 {
                 width: 150px;
@@ -621,9 +635,13 @@ ul {
                 background-image: url('/images/food/deal4.png');
                 background-size: cover;
                 display: block;
-                position: absolute;
-                bottom: 116px;
-                left: 64px;
+                position: relative;
+                margin: 0 auto;
+                margin-bottom: 20px;
+                @include media-breakpoint-down(sm) {
+                    position: relative;
+                    bottom: 0;
+                }
             }
         }
 
@@ -2151,7 +2169,8 @@ ul {
     text-align: center;
 }
 .card-content h3 {
-    font-size: 25px;
+    font-size: 20px;
+    margin-bottom: 20px;
 }
 .price-bar {
     bottom: 20px;

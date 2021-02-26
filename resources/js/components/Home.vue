@@ -8,8 +8,9 @@
                        <div class="card-offer text-center">
                            <div class="card-content">
                              <h3>Fried Meal Deal</h3>
+                             <div class="img-circular1"></div>
+
                              <p>1 Piece Chicken and Chips <br> With Donar Ontop and A Choice of Drink.</p>
-                             <!-- <div class="img-circular1"></div> -->
                            </div>
                            <div class="row">
                                 <div class="price-bar">
@@ -32,8 +33,9 @@
                        <div class="card-offer text-center">
                            <div class="card-content">
                               <h3>Fish Meal Deal 1</h3>
+                             <div class="img-circular2"></div>
+
                              <p>Fish and Chips with donar ontop and a choice of drink.</p>
-                             <!-- <div class="img-circular2"></div> -->
                            </div>
                              <div class="row">
                                   <div class="price-bar">
@@ -55,9 +57,10 @@
                        <div class="card-offer text-center">
                            <div class="card-content">
 
-                             <h3>Family Meal Deal For 2</h3>
+                             <h3>Deal For 2</h3>
+                             <div class="img-circular3"></div>
+
                              <p>A Choice of any 2 burgers, A bag of chips, Large bottle of coke.</p>
-                             <!-- <div class="img-circular3"></div> -->
                            </div>
                                <div class="row">
                                     <div class="price-bar">
@@ -80,9 +83,10 @@
                        <div class="card-offer text-center">
                            <div class="card-content">
 
-                             <h3>Family Meal Deal For 4</h3>
+                             <h3>Deal For 4</h3>
+                             <div class="img-circular4"></div>
+
                              <p>A Choice of any 4 burgers, A large bag of chips, 2 piece chicken, 5 piece nibbles Large bottle of coke.</p>
-                             <!-- <div class="img-circular4"></div> -->
                            </div>
                               <div class="row">
                                    <div class="price-bar">
