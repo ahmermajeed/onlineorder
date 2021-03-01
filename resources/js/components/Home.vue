@@ -4,7 +4,7 @@
         <section class="section-fullwidth deliver-area ">
             <div class="container">
                   <div class="row">
-                        <div class="col-lg-4 col-md-12 col-sm-12  order-2 order-md-1 ">
+                        <div class="col-lg-4 col-md-12 col-sm-12  order-2 order-lg-1  ">
                             <div class="menu-left">
                                     <img src="images/theme-3/product-ban-1.png">
                                     <h2>Burgers</h2>
@@ -304,7 +304,7 @@
                             
                             
                         </div>
-                        <div class="col-lg-4 col-md-12 col-sm-12 order-1 order-md-2">
+                        <div class="col-lg-4 col-md-12 col-sm-12 order-1 order-lg-2">
                             <div class="code-area">
                                 <div class="postal-code">
                                     <div class="search-res" v-if="this.$route.name !='online-order'">
@@ -341,7 +341,7 @@
                                         
                                         
                         </div>
-                         <div class="col-lg-4 col-md-12 col-sm-12  order-3 order-md-3  ">
+                         <div class="col-lg-4 col-md-12 col-sm-12  order-3 order-lg-3">
                             <div class="menu-left">
                                     <img src="images/theme-3/product-ban-kab.png">
                                     <h2>Kebabs</h2>

@@ -606,7 +606,7 @@ ul {
             margin-bottom: 60px;
         }
         @include media-breakpoint-down(sm) {
-                margin-top: -62% !important;
+                margin-top: -75% !important;
                 margin-bottom: 60px;
                 background-size: contain;
                 margin-bottom: 0px;
@@ -619,7 +619,7 @@ ul {
             padding-top: 15%;
             @include media-breakpoint-down(sm) {
                 width: 60% !important;
-                padding-top: 55% !important;
+                padding-top: 61% !important;
             }
             h2 {
                 font-size: 35px;
