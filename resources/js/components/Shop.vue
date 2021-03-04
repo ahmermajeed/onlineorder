@@ -16,7 +16,7 @@
 							<div class="header_wrapper">
 								<div class="ice_logo">
 			                        <router-link :to="{ path: '/'}">
-										<a href="javascript:;"><img src="images/banner/logo.png" alt="dessert-king-logo"></a>
+										<a href="javascript:;"><img src="images/banner/logo-white.png" alt="dessert-king-logo"></a>
 									</router-link>
 								</div>
 									<div class="ice_menu_wraper">
@@ -301,34 +301,6 @@
 										<a href="shop_single.html" class="ice_btn">add to cart</a>
 									</div>
 								</div>
-								<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 pull-left">
-									<div class="special_section text-center wow slideup">
-										<div class="special_img">
-										<img src="images/special/5.jpg" alt="icecream-parlour-special" class="img-responsive">
-										</div>
-										<h2 class="ice_sub_heading"><a href="shop_single.html"><i class="icon-check-alt"></i> Green tea ice cream</a></h2>
-										<p>It is a paradisematic country, in which roasted parts of sentences fly into your mouth.Pityful a rethoric question.</p>
-										<div class="wishlist_wrapper">
-											<span class="pull-left">$70.00</span>
-											<a href="" class="pull-right"><i class="icon-heart-outlined"></i> add to wishlist</a>
-										</div>
-										<a href="javascript:;" @click.prevent="openPostalCode" class="ice_btn">add to cart</a>
-									</div>
-								</div>
-								<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 pull-left">
-									<div class="special_section text-center wow slideup">
-										<div class="special_img">
-											<img src="images/special/6.jpg" alt="" class="img-responsive">
-										</div>
-										<h2 class="ice_sub_heading"><a href="shop_single.html"><i class="icon-check-alt"></i> Chocolate ice cream</a></h2>
-										<p>It is a paradisematic country, in which roasted parts of sentences fly into your mouth.Pityful a rethoric question.</p>
-										<div class="wishlist_wrapper">
-											<span class="pull-left">$70.00</span>
-											<a href="" class="pull-right"><i class="icon-heart-outlined"></i> add to wishlist</a>
-										</div>
-										<a href="javascript:;" @click.prevent="openPostalCode" class="ice_btn">add to cart</a>
-									</div>
-								</div>
 							</div>
 						</div>
 					</div>
@@ -401,7 +373,7 @@
 								</li>
 								<li>
 	                                <router-link :to="{ path: '/blog'}">
-										<a href="javascript:;">Blog</a>
+										<a href="javascript:;"><i class="icon-check-alt"></i>Blog</a>
 									</router-link>
 								</li>
 							</ul>

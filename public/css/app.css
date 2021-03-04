@@ -4308,6 +4308,7 @@ a.search_close:after {
 .widget.widget_address > ul > li .address_detail p{
 	color: #ffffff;
 	padding-top:5px;
+    font-size: 15px;
 }
 .ice_footer_wrapper .widget .address_detail a {
     color: #fff !Important;
@@ -4326,6 +4327,10 @@ a.search_close:after {
 	float: left;
 	background-color: #9d2929;
 	padding: 15px 0;
+}
+.ice_copyright_wrapper a {
+    color: #fff;
+    font-weight: 700;
 }
 .ice_copyright_wrapper .copyright{
 	width: 100%;
@@ -7065,6 +7070,20 @@ ul.social_icon > li > a i:before {
 }
 .slider_content .breadcrumb {
     background-color: transparent;
+    justify-content: center;
+}
+.widget.widget_page ul li a {
+	text-transform: capitalize;
+	color: #ffffff !important;
+}
+.widget.widget_page ul li a i{
+	margin-left: 0px;
+	font-size: 16px;
+	color: #ffffff;
+	margin-right: 10px;
+}
+.blog_wrapper .col-lg-6.col-md-6.col-sm-12.col-xs-12 {
+    float: left;
 }
 /* Additional css*/@charset "UTF-8";/*!
  * animate.css -http://daneden.me/animate
@@ -7224,7 +7243,7 @@ ul.social_icon > li > a i:before {
 @font-face {
   font-family: "icomoon";
   src: url(/fonts/icomoon.eot?85a354c908290f4bf853be119d77d6d0);
-  src: url(/fonts/icomoon.eot?85a354c908290f4bf853be119d77d6d0) format("embedded-opentype"), url(/fonts/icomoon.ttf?2f179c761814f1e21196ef4e55494d9f) format("truetype"), url(/fonts/icomoon.woff?cdf76133daa73ecb22d12ef0cdedfed0) format("woff"), url(/fonts/icomoon.svg?e01192b6fa1bfd5dbaa3411a69fcdd53) format("svg");
+  src: url(/fonts/icomoon.eot?85a354c908290f4bf853be119d77d6d0) format("embedded-opentype"), url(/fonts/icomoon.ttf?2f179c761814f1e21196ef4e55494d9f) format("truetype"), url(/fonts/icomoon.woff?cdf76133daa73ecb22d12ef0cdedfed0) format("woff"), url(/fonts/icomoon.svg?ce84c3ce64637deb355415bcb190f812) format("svg");
   font-weight: normal;
   font-style: normal;
   font-display: block;

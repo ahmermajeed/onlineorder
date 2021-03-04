@@ -55,7 +55,25 @@
                                   <div class="collapse navbar-collapse justify-content-end" id="navbarResponsiv">
                                     <ul class="nav ">
 
-                                        <li class="nav-item active"> <router-link :to="{ path: '/'}"><a class="nav-link js-scroll-trigger" href="#about">Home</a></router-link></li>
+                                        <li class="nav-item active"> <router-link :to="{ path: '/'}"><a class="nav-link js-scroll-trigger">Home</a></router-link></li>
+
+                                        <li class="nav-item active"> 
+                                            <router-link :to="{ path: '/about-us'}">
+                                                <a class="nav-link js-scroll-trigger">About</a>
+                                            </router-link>
+                                        </li>
+
+                                        <li class="nav-item active"> 
+                                            <router-link :to="{ path: '/blog'}">
+                                                <a class="nav-link js-scroll-trigger">Blog</a>
+                                            </router-link>
+                                        </li>                                        
+
+                                        <li class="nav-item active"> 
+                                            <router-link :to="{ path: '/shop'}">
+                                                <a class="nav-link js-scroll-trigger">Shop</a>
+                                            </router-link>
+                                        </li>
                                        
                                     </ul>
                                   </div>

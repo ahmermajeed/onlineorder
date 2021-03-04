@@ -16,7 +16,7 @@
 								<div class="header_wrapper">
 									<div class="ice_logo">
 				                        <router-link :to="{ path: '/'}">
-											<a href="javascript:;"><img src="images/banner/logo.png" alt="dessert-king-logo"></a>
+											<a href="javascript:;"><img src="images/banner/logo-white.png" alt="dessert-king-logo"></a>
 										</router-link>
 									</div>
 									<div class="ice_menu_wraper">
@@ -103,29 +103,29 @@
 											<input type="text" name="search" value="" class="search-feild" id="sidebar_search">
 											<label for="sidebar_search">search...</label>
 										</p>
-										<a href="" class="search_btn"><i class="flaticon-magnifier-tool"></i></a>
+										<a href="" class="search_btn"><i class="icon-search"></i></a>
 									</form>
 								</div>
 								<div class="widget widget_category">
 									<h2 class="widget-title ice_sub_heading">category</h2>
 									<ul>
 										<li>
-											<a><i class="flaticon-check"></i>Handmade Ice Cream</a>
+											<a><i class="icon-check-alt"></i>Handmade Ice Cream</a>
 										</li>
 										<li>
-											<a><i class="flaticon-check"></i>Cups, Cones and Candies</a>
+											<a><i class="icon-check-alt"></i>Cups, Cones and Candies</a>
 										</li>
 										<li>
-											<a><i class="flaticon-check"></i>Frozen Custurd and Scotch </a>
+											<a><i class="icon-check-alt"></i>Frozen Custurd and Scotch </a>
 										</li>
 										<li>
-											<a><i class="flaticon-check"></i>Butter Scotch and Candies</a>
+											<a><i class="icon-check-alt"></i>Butter Scotch and Candies</a>
 										</li>
 										<li>
-											<a><i class="flaticon-check"></i>Candies and Frozen Custurd</a>
+											<a><i class="icon-check-alt"></i>Candies and Frozen Custurd</a>
 										</li>
 										<li>
-											<a><i class="flaticon-check"></i>Frozen Custurd and Scotch </a>
+											<a><i class="icon-check-alt"></i>Frozen Custurd and Scotch </a>
 										</li>
 									</ul>
 								</div>
@@ -139,8 +139,8 @@
 											<div class="news_detail">
 												<h4><a href="">There are many</a></h4>
 												<ul>
-													<li><a><i class="flaticon-favorite-heart-button"></i>1500</a></li>
-													<li><a><i class="flaticon-comment-black-oval-bubble-shape"></i>250</a></li>
+													<li><a><i class="icon-heart"></i>1500</a></li>
+													<li><a><i class="icon-bubble"></i>250</a></li>
 												</ul>
 											</div>
 										</li>
@@ -151,8 +151,8 @@
 											<div class="news_detail">
 												<h4><a href="">There are many Very</a></h4>
 												<ul>
-													<li><a><i class="flaticon-favorite-heart-button"></i>1500</a></li>
-													<li><a><i class="flaticon-comment-black-oval-bubble-shape"></i>250</a></li>
+													<li><a><i class="icon-heart"></i>1500</a></li>
+													<li><a><i class="icon-bubble"></i>250</a></li>
 												</ul>
 											</div>
 										</li>
@@ -163,8 +163,8 @@
 											<div class="news_detail">
 												<h4><a href="">There are many Versio</a></h4>
 												<ul>
-													<li><a><i class="flaticon-favorite-heart-button"></i>1500</a></li>
-													<li><a><i class="flaticon-comment-black-oval-bubble-shape"></i>250</a></li>
+													<li><a><i class="icon-heart"></i>1500</a></li>
+													<li><a><i class="icon-bubble"></i>250</a></li>
 												</ul>
 											</div>
 										</li>
@@ -186,12 +186,12 @@
 								</div>
 								<div class="widget widget_social">
 									<ul class="social_icon">
-										<li><a href=""><i class="flaticon-facebook-letter-logo"></i></a></li>
-										<li><a href=""><i class="flaticon-linkedin-logo"></i></a></li>
-										<li><a href=""><i class="flaticon-twitter-logo-silhouette"></i></a></li>
-										<li><a href=""><i class="flaticon-google-plus-logo"></i></a></li>
-										<li><a href=""><i class="flaticon-instagram-logo"></i></a></li>
-										<li><a href=""><i class="flaticon-pinterest-logo"></i></a></li>
+										<li><a href=""><i class="icon-facebook"></i></a></li>
+										<li><a href=""><i class="icon-linkedin"></i></a></li>
+										<li><a href=""><i class="icon-twitter"></i></a></li>
+										<li><a href=""><i class="icon-google-plus-logo"></i></a></li>
+										<li><a href=""><i class="icon-instagram-symbol"></i></a></li>
+										<li><a href=""><i class="icon-pinterest-logo"></i></a></li>
 									</ul>
 								</div>
 							</div>
@@ -216,14 +216,14 @@
 												</ul>
 												<p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur.</p>
 												<ul class="share_wrapper">
-													<li><a href="#"><i class="flaticon-favorite-heart-button"></i>360</a></li>
-													<li><a href="#"><i class="flaticon-comment-black-oval-bubble-shape"></i>26</a></li>
+													<li><a href="#"><i class="icon-heart"></i>360</a></li>
+													<li><a href="#"><i class="icon-bubble"></i>26</a></li>
 													<li class="share"><a href="#"><i class="flaticon-share"></i>share</a>
 														<ul class="social_icon">
-															<li><a href="#"><i class="flaticon-facebook-letter-logo"></i></a></li>
-															<li><a href="#"><i class="flaticon-twitter-logo-silhouette"></i></a></li>
-															<li><a href="#"><i class="flaticon-linkedin-logo"></i></a></li>
-															<li><a href="#"><i class="flaticon-google-plus-logo"></i></a></li>
+															<li><a href="#"><i class="icon-facebook"></i></a></li>
+															<li><a href="#"><i class="icon-twitter"></i></a></li>
+															<li><a href="#"><i class="icon-linkedin"></i></a></li>
+															<li><a href="#"><i class="icon-google-plus-logo"></i></a></li>
 														</ul>
 													</li>
 												</ul>
@@ -245,14 +245,14 @@
 												</ul>
 												<p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur.</p>
 												<ul class="share_wrapper">
-													<li><a href="#"><i class="flaticon-favorite-heart-button"></i>360</a></li>
-													<li><a href="#"><i class="flaticon-comment-black-oval-bubble-shape"></i>26</a></li>
+													<li><a href="#"><i class="icon-heart"></i>360</a></li>
+													<li><a href="#"><i class="icon-bubble"></i>26</a></li>
 													<li class="share"><a href="#"><i class="flaticon-share"></i>share</a>
 														<ul class="social_icon">
-															<li><a href="#"><i class="flaticon-facebook-letter-logo"></i></a></li>
-															<li><a href="#"><i class="flaticon-twitter-logo-silhouette"></i></a></li>
-															<li><a href="#"><i class="flaticon-linkedin-logo"></i></a></li>
-															<li><a href="#"><i class="flaticon-google-plus-logo"></i></a></li>
+															<li><a href="#"><i class="icon-facebook"></i></a></li>
+															<li><a href="#"><i class="icon-twitter"></i></a></li>
+															<li><a href="#"><i class="icon-linkedin"></i></a></li>
+															<li><a href="#"><i class="icon-google-plus-logo"></i></a></li>
 														</ul>
 													</li>
 												</ul>
@@ -274,14 +274,14 @@
 												</ul>
 												<p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.</p>
 												<ul class="share_wrapper">
-													<li><a href="#"><i class="flaticon-favorite-heart-button"></i>360</a></li>
-													<li><a href="#"><i class="flaticon-comment-black-oval-bubble-shape"></i>26</a></li>
+													<li><a href="#"><i class="icon-heart"></i>360</a></li>
+													<li><a href="#"><i class="icon-bubble"></i>26</a></li>
 													<li class="share"><a href="#"><i class="flaticon-share"></i>share</a>
 														<ul class="social_icon">
-															<li><a href="#"><i class="flaticon-facebook-letter-logo"></i></a></li>
-															<li><a href="#"><i class="flaticon-twitter-logo-silhouette"></i></a></li>
-															<li><a href="#"><i class="flaticon-linkedin-logo"></i></a></li>
-															<li><a href="#"><i class="flaticon-google-plus-logo"></i></a></li>
+															<li><a href="#"><i class="icon-facebook"></i></a></li>
+															<li><a href="#"><i class="icon-twitter"></i></a></li>
+															<li><a href="#"><i class="icon-linkedin"></i></a></li>
+															<li><a href="#"><i class="icon-google-plus-logo"></i></a></li>
 														</ul>
 													</li>
 												</ul>
@@ -305,14 +305,14 @@
 												</ul>
 												<p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.</p>
 												<ul class="share_wrapper">
-													<li><a href="#"><i class="flaticon-favorite-heart-button"></i>360</a></li>
-													<li><a href="#"><i class="flaticon-comment-black-oval-bubble-shape"></i>26</a></li>
+													<li><a href="#"><i class="icon-heart"></i>360</a></li>
+													<li><a href="#"><i class="icon-bubble"></i>26</a></li>
 													<li class="share"><a href="#"><i class="flaticon-share"></i>share</a>
 														<ul class="social_icon">
-															<li><a href="#"><i class="flaticon-facebook-letter-logo"></i></a></li>
-															<li><a href="#"><i class="flaticon-twitter-logo-silhouette"></i></a></li>
-															<li><a href="#"><i class="flaticon-linkedin-logo"></i></a></li>
-															<li><a href="#"><i class="flaticon-google-plus-logo"></i></a></li>
+															<li><a href="#"><i class="icon-facebook"></i></a></li>
+															<li><a href="#"><i class="icon-twitter"></i></a></li>
+															<li><a href="#"><i class="icon-linkedin"></i></a></li>
+															<li><a href="#"><i class="icon-google-plus-logo"></i></a></li>
 														</ul>
 													</li>
 												</ul>
@@ -334,14 +334,14 @@
 												</ul>
 												<p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur.</p>
 												<ul class="share_wrapper">
-													<li><a href="#"><i class="flaticon-favorite-heart-button"></i>360</a></li>
-													<li><a href="#"><i class="flaticon-comment-black-oval-bubble-shape"></i>26</a></li>
+													<li><a href="#"><i class="icon-heart"></i>360</a></li>
+													<li><a href="#"><i class="icon-bubble"></i>26</a></li>
 													<li class="share"><a href="#"><i class="flaticon-share"></i>share</a>
 														<ul class="social_icon">
-															<li><a href="#"><i class="flaticon-facebook-letter-logo"></i></a></li>
-															<li><a href="#"><i class="flaticon-twitter-logo-silhouette"></i></a></li>
-															<li><a href="#"><i class="flaticon-linkedin-logo"></i></a></li>
-															<li><a href="#"><i class="flaticon-google-plus-logo"></i></a></li>
+															<li><a href="#"><i class="icon-facebook"></i></a></li>
+															<li><a href="#"><i class="icon-twitter"></i></a></li>
+															<li><a href="#"><i class="icon-linkedin"></i></a></li>
+															<li><a href="#"><i class="icon-google-plus-logo"></i></a></li>
 														</ul>
 													</li>
 												</ul>
@@ -363,14 +363,14 @@
 												</ul>
 												<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit.</p>
 												<ul class="share_wrapper">
-													<li><a href="#"><i class="flaticon-favorite-heart-button"></i>360</a></li>
-													<li><a href="#"><i class="flaticon-comment-black-oval-bubble-shape"></i>26</a></li>
+													<li><a href="#"><i class="icon-heart"></i>360</a></li>
+													<li><a href="#"><i class="icon-bubble"></i>26</a></li>
 													<li class="share"><a href="#"><i class="flaticon-share"></i>share</a>
 														<ul class="social_icon">
-															<li><a href="#"><i class="flaticon-facebook-letter-logo"></i></a></li>
-															<li><a href="#"><i class="flaticon-twitter-logo-silhouette"></i></a></li>
-															<li><a href="#"><i class="flaticon-linkedin-logo"></i></a></li>
-															<li><a href="#"><i class="flaticon-google-plus-logo"></i></a></li>
+															<li><a href="#"><i class="icon-facebook"></i></a></li>
+															<li><a href="#"><i class="icon-twitter"></i></a></li>
+															<li><a href="#"><i class="icon-linkedin"></i></a></li>
+															<li><a href="#"><i class="icon-google-plus-logo"></i></a></li>
 														</ul>
 													</li>
 												</ul>
@@ -449,7 +449,7 @@
 									</li>
 									<li>
 		                                <router-link :to="{ path: '/blog'}">
-											<a href="javascript:;">Blog</a>
+											<a href="javascript:;"><i class="icon-check-alt"></i>Blog</a>
 										</router-link>
 									</li>
 								</ul>

@@ -16,7 +16,7 @@
 								<div class="header_wrapper">
 									<div class="ice_logo">
 				                        <router-link :to="{ path: '/'}">
-											<a href="javascript:;"><img src="images/banner/logo.png" alt="dessert-king-logo"></a>
+											<a href="javascript:;"><img src="images/banner/logo-white.png" alt="dessert-king-logo"></a>
 										</router-link>
 									</div>
 										<div class="ice_menu_wraper">
@@ -328,7 +328,7 @@
 								</li>
 								<li>
 	                                <router-link :to="{ path: '/blog'}">
-										<a href="javascript:;">Blog</a>
+										<a href="javascript:;"><i class="icon-check-alt"></i>Blog</a>
 									</router-link>
 								</li>
 								
