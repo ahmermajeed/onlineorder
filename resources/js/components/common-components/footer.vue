@@ -27,15 +27,15 @@
                   <div id="links">
                     <ul>
                       <li><a href="/" title="Home">Home</a></li>
-                      <li><a href="/privacy-policy/" title="Privacy Policy">Privacy Policy</a></li>
-                      <li><a title="Cookie Policy" href="/cookie-policy/">Cookie Policy</a></li>
+                      <li><a href="gallery" title="Privacy Policy">Gallery</a></li>
+                      <li><a title="Cookie Policy" href="feedback">Feedback</a></li>
                       <li><a href="/service-disclaimer/" title="Service Disclaimer">Service Disclaimer</a></li>
-                      <!--<li><a href="/index.php?route=information/sitemap" title="Site Map">Site Map</a></li>-->
+                      <li><a href="/index.php?route=information/sitemap" title="Site Map">Site Map</a></li>
                       <li><a href="/index.php?route=information/contact" title="Contact Us">Contact Us</a></li>
                     </ul>
                   </div>
                   <div class="powered">
-                    <p>Bhaji Fresh Takeaway © 2021. All rights reserved.  Designed By <a href="http://www.etakeawaymax.co.uk/" target="_blank">Takeaway Apps, EPOS - eTakeaway Max</a></p>
+                    <p>Bhaji Fresh Takeaway © 2021. All rights reserved.  Designed By <a href="http://www.bhajifresh.co.uk/" target="_blank">Bhaji Fresh</a></p>
                   </div>
                 </div>
               </div>
