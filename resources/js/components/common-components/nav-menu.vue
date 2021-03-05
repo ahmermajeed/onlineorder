@@ -35,6 +35,11 @@
                                     <ul class="nav ">
 
                                         <li class="nav-item active"> <router-link :to="{ path: '/'}"><a class="nav-link js-scroll-trigger" href="#about">Home</a></router-link></li>
+                                        <li class="nav-item "> 
+                                            <router-link :to="{ path: '/gallery'}">
+                                                <a class="nav-link js-scroll-trigger" >Gallery</a>
+                                            </router-link>
+                                        </li>
                                         <li class="nav-item "> <router-link :to="{ path: '/feedback'}"><a class="nav-link js-scroll-trigger" >Feedback</a></router-link></li>
                                         <li class="nav-item">
                                             <a href="#" @click="openAllergy" class="nav-link">Allergy Information</a>

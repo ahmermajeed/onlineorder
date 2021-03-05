@@ -78,6 +78,11 @@ const router = new VueRouter({
             name: 'online-order',
             component: require('./components/order-page/main.vue').default,
         },
+        {
+            path: '/gallery',
+            name: 'gallery',
+            component: require('./components/Gallery.vue').default,
+        },
     ],
     scrollBehavior (to, from, savedPosition) {
         return { x: 0, y: 600 ,

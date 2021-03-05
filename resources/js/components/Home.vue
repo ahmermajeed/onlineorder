@@ -125,10 +125,9 @@
 
 		<!-- Our Specialitiies section start -->
 
-			<section>
+<!-- 			<section>
 				<div class="wback our-specialities-section" id="wback_1">
 				<div class="wmessage">
-				<!--<h1>Welcome to Bhaji Fresh Takeaway</h1>-->
 				<h1 id="welcome_head">
 					OUR SPECIALITIES</h1>
 				<div class="col-sm-12" style="text-align:center">
@@ -164,7 +163,7 @@
 				</div>
 				<div class="bottonimg"></div>
 				</div>
-			</section>
+			</section> -->
 
 		<!-- Our Specialitiies section end -->
 
