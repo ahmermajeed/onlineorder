@@ -14233,8 +14233,15 @@ ul {
   }
 }
 
+.header-bottom .food .num-img {
+  border: 1px solid #ccc;
+  border-radius: 15px;
+  background: #112d81;
+}
+
 .header-bottom .food .num-img a {
   display: inline-block;
+  color: #fff;
 }
 
 @media (max-width: 767.98px) {

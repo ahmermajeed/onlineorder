@@ -458,8 +458,12 @@ ul {
             }
         }
         .num-img {
+            border: 1px solid #ccc;
+            border-radius: 15px;
+            background: #112d81;
             a {
                 display: inline-block;
+                color: #fff;
                 img {
                     @include media-breakpoint-down(sm) {
                         max-width: 120px;
