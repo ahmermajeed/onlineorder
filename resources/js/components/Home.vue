@@ -13,7 +13,7 @@
                            </div>
                            <div class="row pries-bar">
                                 <div class="col-12 col-lg-8 order-btn">
-                                    <button type="button" class="btn btn-outline-secondary">Order Now!</button>
+                                    <button type="button" class="btn btn-outline-secondary" @click.prevent="openPostalCode">Order Now!</button>
                                     <a href="#" class=""></a>
                                 </div>
                                 <div class="col-12 col-lg-4 pt-2 pt-lg-0">
@@ -35,7 +35,7 @@
                            </div>
                            <div class="row pries-bar">
                                 <div class="col-12 col-lg-8 order-btn">
-                                    <button type="button" class="btn btn-outline-secondary">Order Now!</button>
+                                    <button type="button" class="btn btn-outline-secondary" @click.prevent="openPostalCode">Order Now!</button>
                                     <a href="#" class=""></a>
                                 </div>
                                 <div class="col-12 col-lg-4 pt-2 pt-lg-0">
@@ -58,7 +58,7 @@
                            </div>
                            <div class="row pries-bar">
                                 <div class="col-12 col-lg-8 order-btn">
-                                    <button type="button" class="btn btn-outline-secondary">Order Now!</button>
+                                    <button type="button" class="btn btn-outline-secondary" @click.prevent="openPostalCode">Order Now!</button>
                                     <a href="#" class=""></a>
                                 </div>
                                 <div class="col-12 col-lg-4 pt-2 pt-lg-0">
@@ -450,149 +450,6 @@
                 </div>
                 <div class="menus pattern ">
 
-                    <!-- <div class="menu-area">
-                        <div class="row">
-                            <div class="col-md-6">
-                                <div class="menu-card">
-                                    <h3 class="tt">Traditional Fish & Chips</h3>
-                                    <ul>
-                                        <li>
-                                            <h3>Fresh Large COD <span>£6.00</span> </h3>
-
-                                        </li>
-                                        <li class="special">
-                                            <h3>Fresh Large COD & Chips <span>£7.80</span></h3>
-
-                                        </li>
-                                        <li>
-                                            <h3>Masala COD Fish <span>£6.0</span></h3>
-
-                                        </li>
-                                        <li>
-                                            <h3>Masala COD Fish in Nan  <span>£7.80</span></h3>
-
-                                        </li>
-
-                                        <li>
-                                            <h3>Fish Cake  <span>£1.50</span></h3>
-
-                                        </li>
-
-                                        <li>
-                                            <h3>Sausage <span>£1.50</span></h3>
-
-                                        </li>
-
-
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="menu-card">
-                                    <h3 class="tt">S. F. Chicken</h3>
-                                    <ul>
-                                        <li>
-                                            <h3>1 Piece Chicken <span>£1.50</span></h3>
-
-                                        </li>
-                                        <li class="special">
-                                            <h3>2 Pieces Chicken <span>£2.80</span></h3>
-
-                                        </li>
-                                        <li>
-                                            <h3>3 Pieces Chicken<span>£4.00</span></h3>
-
-                                        </li>
-                                        <li>
-                                            <h3>1 Piece Chicken & Chips <span>£2.60</span></h3>
-
-                                        </li>
-
-                                        <li>
-                                            <h3>2 Pieces Chicken & Chips <span>£3.80</span></h3>
-
-                                        </li>
-                                        <li>
-                                            <h3>3 Pieces Chicken & Chips <span>£4.80</span></h3>
-
-                                        </li>
-
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="menu-card">
-                                    <h3 class="tt">Pizzas</h3>
-                                    <ul>
-                                        <li>
-                                            <h3>Margherita <span>Starting From £ 5.50*</span></h3>
-                                        </li>
-                                        <li class="special">
-                                            <h3>Garlic Margherita <span>Starting From £ 5.50*</span></h3>
-
-                                        </li>
-                                        <li>
-                                            <h3>Hawaiian Lou <span>Starting From £ 5.50*</span></h3>
-
-                                        </li>
-                                        <li>
-                                            <h3>Farmhouse Bite <span>Starting From £ 5.50*</span></h3>
-
-                                        </li>
-
-                                        <li>
-                                            <h3>Vegetable Supreme <span>Starting From £ 5.50*</span></h3>
-
-                                        </li>
-
-                                        <li>
-                                            <h3>Fiery Veg<span>Starting From £ 5.50*</span></h3>
-
-                                        </li>
-
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="menu-card">
-                                    <h3 class="tt">Pizzas</h3>
-                                    <ul>
-                                        <li>
-                                            <h3>Seafood Sensation<span>Starting From £ 6.00*</span></h3>
-
-                                        </li>
-                                        <li class="special">
-                                            <h3>California Chicken<span>Starting From £ 5.50*</span></h3>
-
-                                        </li>
-                                        <li>
-                                            <h3>Tuna Special<span>Starting From £ 5.50*</span></h3>
-
-                                        </li>
-                                        <li>
-                                            <h3>Carribean Dream<span>)Starting From £ 6.00*</span></h3>
-
-                                        </li>
-                                        <li>
-                                            <h3>Mexicano<span>Starting From £  6.00*</span></h3>
-
-                                        </li>
-                                        <li>
-                                            <h3>Donner Pizza<span>Starting From £  6.00*</span></h3>
-
-                                        </li>
-
-                                    </ul>
-                                </div>
-                            </div>
-
-                        </div>
-                        <div class="row">
-                            <div class="col-md-12 text-center mt-5">
-                                <a href="#" class="custom-btn">View All <i class="fas fa-arrow-right"></i></a>
-                            </div>
-                        </div>
-                    </div> -->
                 </div>
             </div>
             <div class="family-section">
@@ -619,7 +476,7 @@
 
                                          <div class="row pries-bar mt-3">
                                             <div class="col-8 order-btn">
-                                                <button type="button" class="btn btn-outline-secondary">Order Now!</button>
+                                                <button type="button" class="btn btn-outline-secondary" @click.prevent="openPostalCode">Order Now!</button>
                                                 <a href="#" class=""></a>
                                             </div>
                                             <div class="col-4">
@@ -659,7 +516,7 @@
 
                                          <div class="row pries-bar mt-3">
                                             <div class="col-8 order-btn">
-                                                <button type="button" class="btn btn-outline-secondary">Order Now!</button>
+                                                <button type="button" class="btn btn-outline-secondary" @click.prevent="openPostalCode">Order Now!</button>
                                                 <a href="#" class=""></a>
                                             </div>
                                             <div class="col-4">
@@ -960,6 +817,7 @@
             </div>
         </section>
         <footer-menu></footer-menu>
+        <postal-code-popup  @HideModalValue="hideModal"   :showModalProp="showPostalCode"></postal-code-popup>
     </div>
 </template>
 
@@ -989,6 +847,7 @@
                 index: null,
                 showPopup: false,
                 menu: false,
+                showPostalCode: false,
                 allergy: false
             };
         },
@@ -1005,6 +864,12 @@
                         _this.stories =  response.data.data;
                         _this.loading  = false;
                     });
+            },
+            openPostalCode() {
+                this.showPostalCode = true;
+            },
+             hideModal() {
+                this.showPostalCode = false;
             },
 
         }
