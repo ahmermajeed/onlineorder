@@ -114,18 +114,18 @@
                 <div class="row">
                     <div class="col-lg-6 col-md-6 col-sm-12 px-0">
                         <div class="rating-content">
-                            <div class="row">
+                            <!-- <div class="row">
                                 <div class="col-lg-2  col-sm-3 col-md-3 px-1 payment-type">
                                     <p class="rounded-circle">Card payment <br> integration</p>
 
                                 </div>
                                 <div class="col-lg-10 col-sm-9 col-md-9 px-1 delivry-content">
-                                    <!-- <p>Free Delivery</p> -->
+                                     <p>Free Delivery</p>
                                     <span>Default 10% off when ordering online<br>20% off for new customers and first order only</span>
 
                                 </div>
 
-                            </div>
+                            </div> -->
                             <div class="located-num">
                                 <strong>0121 440 3393</strong>
                                 <p>231 Edward Road</p>
@@ -135,10 +135,10 @@
                         </div>
 
                     </div>
-                    <div class="col-lg-6 col-md-6 col-sm-12 px-0">
+             <!--        <div class="col-lg-6 col-md-6 col-sm-12 px-0">
                          <img src="../../../images/rating-img.png">
 
-                    </div>
+                    </div> -->
 
                 </div>
 
@@ -791,7 +791,7 @@
             </div>
 
         </section>
-        <section class="section-fullwidth deal-section">
+  <!--       <section class="section-fullwidth deal-section">
             <div class="container">
                 <div class="deal-content">
                     <div class="offers-head">
@@ -843,7 +843,7 @@
             </div>
 
 
-        </section>
+        </section> -->
 
        <!--  <section class="covid-section mt-5">
             <div class="container">

@@ -126,7 +126,7 @@
                                                     <strong>{{extra.group_name}}:</strong> {{extra.choice}}
                                                 </div>
                                                 <td  v-if="!cart.extras">£ {{priceFormat(cart.price * cart.quantity) }}</td>
-                                            <td class="order-priecs"  v-if="cart.extras">£{{priceFormat(cart.single_product_total_amount)}} </td>
+                                                <td class="order-priecs"  v-if="cart.extras">£{{priceFormat(cart.single_product_total_amount)}} </td>
                                                
                                             </td>
                                             <td class="order-quty">
@@ -138,11 +138,12 @@
                                                 </div> 
                                                 
                                             </td>
+                                            <td>
                                              <span class="mealactions">
                                                     <a href="#"  @click.prevent="updateProduct(cart.product_id,cart,product_index)"> <i v-b-tooltip.hover title="Edit Meal"  class="icon-edit-1"></i></a>
                                                     <a href="#" class="close-icon" @click.prevent="removeFromCart(product_index)"> <i v-b-tooltip.hover title="Remove Meal" class="icon-delete" ></i></a>
                                                 </span>
-                                            
+                                           </td> 
 
                                             
                                         </tr>
