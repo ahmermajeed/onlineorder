@@ -13,7 +13,7 @@
                                     <ul>
                                          <li class="mail-space"><i class="icon-mail-2"></i>
                                             <span>
-                                                <a href="mailto:info@alibabakebab.co.uk">info@alibabakebab.co.uk</a>
+                                                <a href="mailto:info@pizzapassions.com">info@pizzapassions.com</a>
                                             </span>
                                         </li>
                                         <!-- <li><i class="icon-placeholder"></i>
@@ -43,7 +43,7 @@
                             <div class="col-6 col-md-3">
                                 <router-link :to="{ path: '/'}">
                                      <a class="navbar-brand js-scroll-trigger main-logo" href="javascript:;">
-                                        <img src="/images/theme-1/Ali-baba-logo.png">
+                                        <img src="/images/pizzapassions-logo.png">
                                     </a>
                                 </router-link>
                             </div>
@@ -103,7 +103,7 @@
                                         </div>
 
                                         <div class="num-img text-center">
-                                           <a href="tel: 0203 490 2727"> 0203 490 2727</a>
+                                           <a href="tel:0289 031 9242"> 0289 031 9242</a>
                                         </div>
 
                                     </div>

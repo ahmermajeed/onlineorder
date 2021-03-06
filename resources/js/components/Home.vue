@@ -90,14 +90,14 @@
                                 </div>
                                 <div class="col-lg-10 col-sm-9 col-md-9 px-1 delivry-content">
                                     <p>Free Delivery</p>
-                                    <span>Min. Order £20 within 3 miles.<br>Under £20, £3 delivery charge will apply</span>
+                                    <span>Min. Order £2.<br>We accept all major cards.</span>
 
                                 </div>
 
                             </div>
                             <div class="located-num">
-                                <strong>0203 490 2727</strong>
-                                <p>10 Peckham Park Road, London SE15 6TW</p>
+                                <strong>0289 031 9242</strong>
+                                <p>3-5 Bradbury Place, Belfast, BT71RQ</p>
                             </div>
 
 
@@ -639,18 +639,16 @@
                                     </div>
                                     <div class="col-lg-8 col-md-10">
                                         <h3>
-                                           Ali Baba Family Special 1
+                                        Family Deal
                                         </h3>
                                         <ul>
-                                            <li>1 Lamb Shish,</li>
-                                            <li>1 Chicken Shish,</li>
-                                            <li>1 Kofta,1 Lamb Doner,</li>
-                                            <li>1 Chicken Doner,</li>
-                                           <li>1 Portion Grilled Wings & Bottle of Drink</li>
+                                            <li>2x12" Pizza</li>
+                                            <li>Garlic Bread</li>
+                                            <li>Chips</li>
                                         </ul>
                                         
                                         
-                                         <img src="/images/theme-1/familys-line.png">
+                                         <!-- <img src="/images/theme-1/familys-line.png"> -->
                                        
 
                                          <div class="row pries-bar">
@@ -660,7 +658,7 @@
                                             </div>
                                             <div class="col-4">
                                                 <div class="pries">
-                                                    <p>£40.00</p>
+                                                    <p>£20.99</p>
 
                                                 </div>
 
@@ -684,15 +682,14 @@
                                     </div>
                                     <div class="col-lg-8 col-md-10">
                                         <h3>
-                                           Ali Baba Family Special 2
+                                           Party Deal
                                         </h3>
                                          <ul>
-                                             <li>1 Lamb Shish,1 Chicken Shish,</li>
-                                             <li>1 Kofta,1 Lamb Doner,1 Chicken Doner,</li>
-                                             <li>8pcs Grilled Wings, 4pcs Chicken,</li>
-                                            <li>2x12" Pizzas <span>(from set menu),</span> & Bottle of Drink</li>
+                                             <li>5x12" Pizza</li>
+                                             <li>2 x Garlic Bread</li>
+                                             <li>2 x Chips</li>
                                          </ul>
-                                         <img src="/images/theme-1/familys-line.png">
+                                         <!-- <img src="/images/theme-1/familys-line.png"> -->
 
                                          <div class="row pries-bar">
                                             <div class="col-8 order-btn">
@@ -740,19 +737,17 @@
                      <div class="row justify-content-md-center">
                         <div class="col-lg-4 col-md-6 col-sm-6">
                             <div class="offers">
-                                <h5>Chicken Bucket</h5>
-                                <h6>Family Pack 1</h6>
-                                <p>8 Pieces Chicken<br>4 Hot Wings<br>3 Fries <br>Bottle of drink</p>
-                                <div class="pries"><strong>£16.00</strong></div>
+                                <h5>Meal For 1</h5>
+                                <p>9" Pizza <br> Topped Chips or Twister Fries <br> Garlic Bread <br> 1x Dip, 1xCan</p>
+                                <div class="pries"><strong>£10.99</strong></div>
 
                             </div>
                         </div>
                         <div class="col-lg-4 col-md-6 col-sm-6">
                             <div class="offers">
-                                <h5>Chicken Bucket</h5>
-                                <h6>Family Pack 2</h6>
-                                <p>12 Pieces Chicken<br>6 Hot Wings<br>4 Fries <br>Bottle of drink</p>
-                                <div class="pries"><strong>£19.00</strong></div>
+                                <h5>Meal For 2</h5>
+                                <p>12" Pizza<br> Two sides or 2x Chips <br> 2x Can</p>
+                                <div class="pries"><strong>£16.99</strong></div>
 
                             </div>
                         </div>
@@ -964,7 +959,7 @@
                             <div class="form-box">
                                 <div class="title">
                                     <h3>Contact us</h3>
-                                    <p>10 Peckham Park Road, London SE15 6TW</p>
+                                    <p>3-5 Bradbury Place, Belfast, BT71RQ</p>
 
                                 </div>
                                 <form>

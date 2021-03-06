@@ -8,15 +8,15 @@
                             <div class="col-lg-3 col-md-3 footer-section-1 footer-space order-1">
                                 <h3>Opening Hours</h3>
                                 <ul class="Opening">
-                                    <li><a href="#"><span><i class="icon-smartphone-1"></i></span>0203 490 2727</a></li>
-                                    <li><a href="#"><span><i class="icon-mail-2"></i></span>info@alibabakebab.co.uk</a></li>
-                                    <li><a href="#"><span><i class="icon-placeholder"></i></span>10 Peckham Park Road, London SE15 6TW
+                                    <li><a href="#"><span><i class="icon-smartphone-1"></i></span>0289 031 9242</a></li>
+                                    <li><a href="#"><span><i class="icon-mail-2"></i></span>info@pizzapassions.com</a></li>
+                                    <li><a href="#"><span><i class="icon-placeholder"></i></span>3-5 Bradbury Place, Belfast, BT71RQ
                                     </a></li>
                                 </ul>
                             </div>
                             <div class="col-lg-6 col-md-6 footer-section-2 order-3 order-md-2">
                                 <div class="text-center">
-                                   <a href="#"><img src="/images/Ali-baba-logo.png"></a>
+                                   <a href="#"><img src="/images/pizzapassions-logo.png"></a>
                                 </div>
                                 <div class="footer-menu text-center">
                                     <ul>
@@ -45,17 +45,22 @@
                                 <h3>Opening Hours</h3>
                                 <ul class="Opening-hours">
                                     <li>
-
-                                        <strong><a href="#">Open 7 days a week</a></strong>
+                                        <strong><a href="#">Monday to Saturday</a></strong>
                                     </li>
                                     <li>
-                                        <a href="#">2pm till late</a>
+                                        <a href="#">5PM - 2AM</a>
                                     </li>
                                     <li>
-                                        <strong><a href="#">Delivery Hours</a></strong>
+                                        <strong><a href="#">Sunday</a></strong>
                                     </li>
                                     <li>
-                                        <a href="#">5pm till late </a>
+                                        <a href="#">5PM - 1AM</a>
+                                    </li>
+                                    <li>
+                                        <strong><a href="#">Min Delivery Charges</a></strong>
+                                    </li>
+                                    <li>
+                                        <a href="#">£2</a>
                                     </li>
                                 </ul>
                             </div>
