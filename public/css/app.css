@@ -16067,7 +16067,7 @@ ul {
 .form-cart .switch-field label {
   background-color: #fff;
   color: rgba(0, 0, 0, 0.6);
-  font-size: 14px;
+  font-size: 13px;
   line-height: 1;
   text-align: center;
   padding: 8px 16px;
@@ -16152,6 +16152,10 @@ ul {
 .postal-code-details form {
   width: 100%;
   text-align: center;
+}
+
+.modal-content .modal-header .modal-title {
+  font-size: 15px;
 }
 
 /***************Deal-section-end*******************/
