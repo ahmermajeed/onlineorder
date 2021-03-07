@@ -16629,5 +16629,13 @@ div#wback_2 img {
   margin-bottom: 20px;
 }
 
+.modal-content .modal-header .modal-title {
+  font-size: 17px;
+}
+
+.modal-sm {
+  max-width: 320px;
+}
+
 /***************Deal-section-end*******************/
 
