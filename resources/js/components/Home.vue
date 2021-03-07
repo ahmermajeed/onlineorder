@@ -7,8 +7,8 @@
                     <div class="col-md-4 col-12">
                        <div class="card-offer text-center">
                            <div class="card-content">
-                             <h3>Pizza Offer 1</h3>
-                             <p>Any 2 x 10” Pizzas, 10 Hot Wings,Chips & Bottle of Drinks</p>
+                             <h3>Family Deal</h3>
+                             <p>2x12" Pizza, Garlic Bread, Chips &nbsp;</p>
                              <img src="../../../images/card-img.png">
                            </div>
                            <div class="row pries-bar">
@@ -18,7 +18,7 @@
                                 </div>
                                 <div class="col-12 col-lg-4 pt-2 pt-lg-0">
                                     <div class="pries">
-                                        <p>£21.00</p>
+                                        <p>£20.99</p>
                                     </div>
                                 </div>
                            </div>
@@ -29,8 +29,8 @@
                     <div class="col-md-4 col-12">
                        <div class="card-offer text-center">
                            <div class="card-content">
-                              <h3>Pizza Offer 2</h3>
-                             <p>Any 2 x 12” Pizzas, 10 Hot Wings,Chips & Bottle of Drinks</p>
+                              <h3>Pizza &amp; Chicken</h3>
+                             <p>14" Pizza, Regular Chicken, Garlic Bread, Chips</p>
                              <img src="../../../images/card-img.png">
                            </div>
                            <div class="row pries-bar">
@@ -40,7 +40,7 @@
                                 </div>
                                 <div class="col-12 col-lg-4 pt-2 pt-lg-0">
                                     <div class="pries">
-                                        <p>£25.00</p>
+                                        <p>£17.99</p>
                                     </div>
                                 </div>
                            </div>
@@ -51,9 +51,8 @@
                        <div class="card-offer text-center">
                            <div class="card-content">
 
-                             <h3>Pizza Offer 3</h3>
-                             <p>Any 2 x 15
-                             ” Pizzas, 10 Hot Wings,Chips & Bottle of Drinks</p>
+                             <h3>Party Deal</h3>
+                             <p>5x12" Pizza, 2x Garlic Bread, 2x Chips</p>
                              <img src="../../../images/card-img.png">
                            </div>
                            <div class="row pries-bar">
@@ -63,7 +62,7 @@
                                 </div>
                                 <div class="col-12 col-lg-4 pt-2 pt-lg-0">
                                     <div class="pries">
-                                        <p>£29.00</p>
+                                        <p>£60.00</p>
 
                                     </div>
 

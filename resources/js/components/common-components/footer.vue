@@ -20,11 +20,11 @@
                                 </div>
                                 <div class="footer-menu text-center">
                                     <ul>
-                                      <li><a href="#">Home</a></li>
-                                      <li><a href="#">About us</a></li>
-                                      <li><a href="#">Feedback</a></li>
-                                      <li><a href="#">Allergy Information</a></li>
-                                      <li><a href="#">Our Menu</a></li>
+                                      <li><a href="/">Home</a></li>
+                                      <!-- <li><a href="#">About us</a></li> -->
+                                      <li><a href="/feedback">Feedback</a></li>
+                                      <!-- <li><a href="#">Allergy Information</a></li> -->
+                                      <li><a href="#" @click.prevent="openPostalCode">Our Menu</a></li>
                                     </ul>
                                 </div>
                                 <div class="follow-us text-center">
@@ -70,11 +70,34 @@
 
                 <div class="copyright text-center">
                     <div class="container">
-                        <p>Copyright © 2020 | All rights reserved</p>
+                        <p>Copyright © 2021 | All rights reserved</p>
                     </div>
                 </div>
             </div>
 
         </footer>
+        <postal-code-popup  @HideModalValue="hideModal"   :showModalProp="showPostalCode"></postal-code-popup>
     </div>
 </template>
+
+
+<script>
+    export default {
+        data: function () {
+            return {
+                showPostalCode: false,
+            };
+        },
+        mounted() {
+        },
+        methods: {
+            openPostalCode() {
+                this.showPostalCode = true;
+            },
+             hideModal() {
+                this.showPostalCode = false;
+            },
+
+        }
+    }
+</script>
