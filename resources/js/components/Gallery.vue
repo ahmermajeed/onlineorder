@@ -9,7 +9,6 @@
             <div class="row">
                 <div class="wback" id="wback_0">
                    <div class="wmessage">
-                      <!--<h1>Welcome to Bhaji Fresh Takeaway</h1>-->
                       <h1 id="welcome_head">
                          GALLERY
                       </h1>

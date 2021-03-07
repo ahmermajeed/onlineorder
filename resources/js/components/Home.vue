@@ -9,7 +9,6 @@
 			<div class="row">
 				<div class="wback" id="wback_0">
 				   <div class="wmessage">
-				      <!--<h1>Welcome to Bhaji Fresh Takeaway</h1>-->
 				      <h1 id="welcome_head">
 				         ABOUT US
 				      </h1>
@@ -23,7 +22,7 @@
 				      	</div>
 				      	<div class="col-md-6">
 				      	   <p id="welcome_p">
-				      	      Bhaji Fresh, an award-winning takeaway in Warrington providing you a great selection of all your favourite <span style="color:#ff7900;">Bangladeshi &amp; Indian dishes.</span> Gaze at your dishes being made in our open plan kitchen, Browse the menu from starters to mains and see what tickles your taste buds.You could also choose to collect your order at a time that suits you if you would prefer a leisurely stroll or drive to collect. Don’t forget to let us know if you enjoyed your meal by leaving feedback.
+				      	      WaterHead Tandoori, an award-winning takeaway in Warrington providing you a great selection of all your favourite <span style="color:#ff7900;">Bangladeshi &amp; Indian dishes.</span> Gaze at your dishes being made in our open plan kitchen, Browse the menu from starters to mains and see what tickles your taste buds.You could also choose to collect your order at a time that suits you if you would prefer a leisurely stroll or drive to collect. Don’t forget to let us know if you enjoyed your meal by leaving feedback.
 				      	   </p>
 				      	</div>
 				     

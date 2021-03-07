@@ -6,7 +6,7 @@
               </div>
               <div class="footer-inner-items">
                 <div id="footer-container">
-                  <div class="col-md-12" style="text-align:center;"> <img src="images/footer/logo.png" title="Bhaji fresh Takeaway" alt="Bhaji fresh Takeaway" class="img-responsive" style="margin:auto;" id="footer_logo"> </div>
+                  <div class="col-md-12" style="text-align:center;"> <img src="images/logo.png" title="WaterHead Tandoori" alt="WaterHead Tandoori" class="img-responsive" style="margin:auto;" id="footer_logo"> </div>
                   <div class="col-sm-12" style="text-align:center;"> <img src="images/footer/underline.png" class="rounded mx-auto d-block" style="width:35%;margin-bottom: 25px;"> </div>
                   <div class="col-sm-12" style="text-align:center;">
                     <p>As all of our dishes are freshly cooked for each customer we are able to adjust the 
@@ -29,13 +29,12 @@
                       <li><a href="/" title="Home">Home</a></li>
                       <li><a href="gallery" title="Privacy Policy">Gallery</a></li>
                       <li><a title="Cookie Policy" href="feedback">Feedback</a></li>
-                      <li><a href="/service-disclaimer/" title="Service Disclaimer">Service Disclaimer</a></li>
-                      <li><a href="/index.php?route=information/sitemap" title="Site Map">Site Map</a></li>
-                      <li><a href="/index.php?route=information/contact" title="Contact Us">Contact Us</a></li>
+                      <li><a title="Cookie Policy" href="feedback">Feedback</a></li>
+                      <li><a title="Cookie Policy" href="feedback">Feedback</a></li>
                     </ul>
                   </div>
                   <div class="powered">
-                    <p>Bhaji Fresh Takeaway © 2021. All rights reserved.  Designed By <a href="http://www.bhajifresh.co.uk/" target="_blank">Bhaji Fresh</a></p>
+                    <p>WaterHead Tandoori Takeaway © 2021. All rights reserved.  Designed By <a href="http://www.waterhead.co.uk.com/" target="_blank">WaterHead Tandoori</a></p>
                   </div>
                 </div>
               </div>
