@@ -29,12 +29,10 @@
                       <li><a href="/" title="Home">Home</a></li>
                       <li><a href="gallery" title="Privacy Policy">Gallery</a></li>
                       <li><a title="Cookie Policy" href="feedback">Feedback</a></li>
-                      <li><a title="Cookie Policy" href="feedback">Feedback</a></li>
-                      <li><a title="Cookie Policy" href="feedback">Feedback</a></li>
                     </ul>
                   </div>
                   <div class="powered">
-                    <p>WaterHead Tandoori Takeaway © 2021. All rights reserved.  Designed By <a href="http://www.waterhead.co.uk.com/" target="_blank">WaterHead Tandoori</a></p>
+                    <p>WaterHead Tandoori © 2021. All rights reserved.  Designed By <a href="http://www.waterhead.co.uk.com/" target="_blank">WaterHead Tandoori</a></p>
                   </div>
                 </div>
               </div>
