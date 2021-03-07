@@ -915,10 +915,7 @@
 
     
 
-    .cart .order .table-holder {
-        overflow-y: scroll;
-        max-height: 50vh;
-    }
+
     .cart .order .table-holder::-webkit-scrollbar {
         width:3px;
     }

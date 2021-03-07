@@ -20674,5 +20674,17 @@ ul {
   text-align: center;
 }
 
+.btn.btn-rounded-danger {
+  height: auto;
+  padding: 12px !important;
+  line-height: 1;
+}
+
+.btn.btn-outline-success {
+  height: auto;
+  padding: 12px !important;
+  line-height: 1;
+}
+
 /***************Deal-section-end*******************/
 
