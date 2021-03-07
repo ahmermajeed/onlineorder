@@ -114,10 +114,11 @@
                                 <div class="col-lg-8 col-md-8 col-sm-12 mt-0 px-0">
                                     <div class="postal-code">
                                         <div class="search-res" v-if="this.$route.name !='online-order'">
+                                            
                                         <div class="info-txt mb-2 mb-md-4">
                                             <h4>Save 25% on orders over £30</h4>
                                         </div>
-                                        <h3>Enter Your Postal Code.</h3>
+               <!--                          <h3>Enter Your Postal Code.</h3>
                                         <form >
                                             <div class="row">
                                                 <div class="col-12">
@@ -134,7 +135,7 @@
                                                     </div>
                                                 </div>
                                             </div>
-                                        </form>
+                                        </form> -->
                                     </div>
 
                                     </div>
