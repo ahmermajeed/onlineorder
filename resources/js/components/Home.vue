@@ -127,8 +127,8 @@
 
                             </div> -->
                             <div class="located-num">
-                                <strong>0121 440 3393</strong>
-                                <p>231 Edward Road</p>
+                                <strong>0121 68 444 25</strong>
+                                <p>306 Hobmoor Road, Birmingham, B10 9HH</p>
                             </div>
 
 
@@ -319,55 +319,7 @@
                                                    </div>
 
                                                 </div>
-                                            </div>
-
-                                            <div class="box-borders">
-                                                 <div class="row">
-                                                    <div class="col-8">
-                                                        <p>Mix Doner Meat & Chips</p>
-                                                    </div>
-                                                   <div class="col-2 text-right">
-                                                       <span>£2.50</span>
-                                                   </div>                                 
-                                                   <div class="col-2 text-right">
-                                                       <span>£4.50</span>
-                                                   </div>
-
-                                                </div>
-
-                                            </div>
-
-                                            <div class="box-borders">
-                                                 <div class="row">
-                                                    <div class="col-8">
-                                                        <p>Cheese Burger</p>
-                                                    </div>
-                                                   <div class="col-2 text-right">
-                                                       <span>£2.50</span>
-                                                   </div>                                 
-                                                   <div class="col-2 text-right">
-                                                       <span>£4.50</span>
-                                                   </div>
-
-                                                </div>
-
-                                            </div>
-
-                                            <div class="box-borders">
-                                                 <div class="row">
-                                                    <div class="col-8">
-                                                        <p>Double Cheese Burger</p>
-                                                    </div>
-                                                   <div class="col-2 text-right">
-                                                       <span>£2.50</span>
-                                                   </div>                                 
-                                                   <div class="col-2 text-right">
-                                                       <span>£5.00</span>
-                                                   </div>
-
-                                                </div>
-
-                                            </div>                                    
+                                            </div>                                
 
                                     </div>
 
@@ -1040,7 +992,7 @@
                             <div class="form-box">
                                 <div class="title">
                                     <h3>Contact us</h3>
-                                    <p>231 Edward Road</p>
+                                    <p>306 Hobmoor Road, Birmingham, B10 9HH</p>
 
                                 </div>
                                 <form>

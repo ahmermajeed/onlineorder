@@ -8,15 +8,16 @@
                             <div class="col-lg-3 col-md-3 footer-section-1 footer-space order-1">
                                 <h3>Opening Hours</h3>
                                 <ul class="Opening">
-                                    <li><a href="#"><span><i class="icon-smartphone-1"></i></span>0121 440 3393</a></li>
-                                    <li><a href="#"><span><i class="icon-mail-2"></i></span>hello@bigsajoriginal.co.uk</a></li>
-                                    <li><a href="#"><span><i class="icon-placeholder"></i></span>231 edward rd
+                                    <li><a href="#"><span><i class="icon-smartphone-1"></i></span>0121 68 444 25</a></li>
+                                    <li><a href="#"><span><i class="icon-mail-2"></i></span>hello@yogisweettooth.co.uk</a></li>
+                                    <li><a href="#"><span><i class="icon-placeholder"></i></span>
+                                        306 Hobmoor Road, Birmingham, B10 9HH
                                     </a></li>
                                 </ul>
                             </div>
                             <div class="col-lg-6 col-md-6 footer-section-2 order-3 order-md-2">
                                 <div class="text-center">
-                                   <a href="#"><img src="/images/big-saj-logo.jpg"></a>
+                                   <a href="#"><img src="/images/yogi-logo.png"></a>
                                 </div>
                                 <div class="footer-menu text-center">
                                     <ul>
@@ -48,16 +49,10 @@
                                         <strong><a href="#">Open 7 days a week</a></strong>
                                     </li>
                                     <li>
-                                        <a href="#">Mon > Sat – 12pm till 11</a>
+                                        <a href="#">Monday - Sunday</a>
                                     </li>
                                      <li>
-                                        <a href="#">Sunday – 1pm till 11</a>
-                                    </li>
-                                    <li>
-                                        <strong><a href="#">Delivery Hours</a></strong>
-                                    </li>
-                                    <li>
-                                        <a href="#">5pm till late – every day</a>
+                                        <a href="#">2PM - 12AM</a>
                                     </li>
                                 </ul>
                             </div>

@@ -13811,7 +13811,7 @@ a {
 
 .btn.btn-rounded-danger {
   color: #fff !important;
-  background: #112d81;
+  background: #899306;
 }
 
 .btn-outline-dark {
@@ -13869,7 +13869,7 @@ ul {
 }
 
 .header-top-section {
-  background-color: #0E2D81;
+  background-color: #919b1d;
   padding: 12px 0px 12px 0px;
 }
 
@@ -13926,7 +13926,7 @@ ul {
 
 .header-bottom-section {
   padding: 10px 0px 10px 0px;
-  background: #000;
+  background: #bdd7e3;
 }
 
 .header-bottom-section .main-menu .order-now a {
@@ -13935,7 +13935,7 @@ ul {
 
 .header-bottom-section .main-menu a {
   font-size: 14px;
-  color: #fff !important;
+  color: #4c5d36 !important;
 }
 
 .header-bottom-section .main-menu ul {
@@ -14225,6 +14225,7 @@ ul {
 .header-bottom .food .item-img img {
   height: 180px;
   width: auto;
+  margin-bottom: 10px;
 }
 
 @media (max-width: 767.98px) {
@@ -14269,7 +14270,7 @@ ul {
 }
 
 .header-bottom .postal-code {
-  background-image: url(/images/postal-baners.png?fb85d11aafa1be368a1533bdc3ca16cb);
+  background-image: url(/images/postal-baners.png?02145af8ab10ecb3f717e525565cb28f);
   background-repeat: no-repeat;
   text-align: center;
   color: #fff;
@@ -14339,6 +14340,7 @@ ul {
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+  background: #bdd7e3;
 }
 
 @media (max-width: 767.98px) {
@@ -14574,7 +14576,7 @@ ul {
 }
 
 .rating-area .located-num strong {
-  color: #112d81;
+  color: #fff;
   line-height: 45px;
 }
 
@@ -14616,10 +14618,11 @@ ul {
   background-position: top;
   background-size: cover;
   overflow: hidden;
+  background: #bdd7e3;
 }
 
 .menu-box .menus-pattern-second {
-  background-image: url(/images/pizzas-baner.jpg?810d5b2226233a4a22d4d6ccdee14b27);
+  background-image: url(/images/pizzas-baner.jpg?d45cc254fe9c33e102c64d598af71aad);
   background-repeat: no-repeat;
   background-position: top;
   border-top-left-radius: 80px;
@@ -14675,7 +14678,7 @@ ul {
   width: 75%;
   height: 110px;
   top: 43px;
-  left: 45px;
+  left: -13px;
   border-top-left-radius: 80px;
   z-index: 1;
 }
@@ -14694,7 +14697,7 @@ ul {
 }
 
 .menu-box .menus-pattern-first {
-  background-image: url(/images/menu-patterns-first.jpg?df0a9f5ccfd47dd3a549af9b8e9bf602);
+  background-image: url(/images/pizzas-baner.jpg?d45cc254fe9c33e102c64d598af71aad);
   background-repeat: no-repeat;
   background-position: top;
   border-top-right-radius: 80px;
