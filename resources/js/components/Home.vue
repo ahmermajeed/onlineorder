@@ -560,7 +560,7 @@
                         <div class="col-lg-4 col-md-6 col-sm-6">
                             <div class="offers">
                                 <h5>Meal For 1</h5>
-                                <p>9" Pizza <br> Topped Chips or Twister Fries <br> Garlic Bread <br> 1x Dip, 1xCan</p>
+                                <p>9" Pizza <br> Topped Chips or Twister Fries <br> Garlic Bread <br> 1x Dip, 1x Can</p>
                                 <div class="pries"><strong>£10.99</strong></div>
 
                             </div>
