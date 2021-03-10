@@ -124,14 +124,14 @@
                                             <!--                                            <a href="#" @click="openAllergy" class="nav-link">Allergy Information</a>-->
                                             <!--                                        </li>-->
 
-                                            <li class="nav-item">
+                                    <!--         <li class="nav-item">
                                                 <a
                                                     href="#"
                                                     class="nav-link"
                                                     @click="openMenu"
                                                     >Our Menu</a
                                                 >
-                                            </li>
+                                            </li> -->
 
                                             <!--                            <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#services">Menu</a></li>-->
                                             <!--                            <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#contact">GALLERY</a></li>-->
