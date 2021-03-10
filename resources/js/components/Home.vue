@@ -4,13 +4,13 @@
         <section class="section-fullwidth deliver-area ">
             <div class="container">
                   <div class="row">
-                    <div class="col-md-3 col-12">
+                    <div class="col-md-4 col-12">
                        <div class="card-offer text-center">
                            <div class="card-content">
-                             <h3>Fried Meal Deal</h3>
+                             <h3>Cookie Dough</h3>
                              <div class="img-circular1"></div>
 
-                             <p>1 Piece Chicken and Chips <br> With Donar Ontop and A Choice of Drink.</p>
+                             <p>Milk Chocolate <br> White Chocolate <br> Double Chocolate</p>
                            </div>
                            <div class="row">
                                 <div class="price-bar">
@@ -20,7 +20,7 @@
                                     </div>
                                    <div class="col-12 col-lg-12 pt-2 pt-lg-0">
                                       <div class="pries">
-                                          <p>From £4.00</p>
+                                          <p>Each for £4.50</p>
                                       </div>
                                   </div>
                               </div>
@@ -29,13 +29,13 @@
 
                       </div>
                     </div>
-                    <div class="col-md-3 col-12">
+                    <div class="col-md-4 col-12">
                        <div class="card-offer text-center">
                            <div class="card-content">
-                              <h3>Fish Meal Deal 1</h3>
+                              <h3>Drinks</h3>
                              <div class="img-circular2"></div>
 
-                             <p>Fish and Chips with donar ontop and a choice of drink.</p>
+                             <p>Mojito <br> American Drinks Instore</p>
                            </div>
                              <div class="row">
                                   <div class="price-bar">
@@ -45,7 +45,7 @@
                                       </div>
                                      <div class="col-12 col-lg-12 pt-2 pt-lg-0">
                                         <div class="pries">
-                                            <p>From £4.60</p>
+                                            <p>Each for £3.50</p>
                                         </div>
                                     </div>
                                 </div>
@@ -53,14 +53,14 @@
 
                       </div>
                     </div>
-                    <div class="col-md-3 col-12">
+                    <div class="col-md-4 col-12">
                        <div class="card-offer text-center">
                            <div class="card-content">
 
-                             <h3>Deal For 2</h3>
+                             <h3>Tea's</h3>
                              <div class="img-circular3"></div>
 
-                             <p>A Choice of any 2 burgers, A bag of chips, Large bottle of coke.</p>
+                             <p>Pink Tea <br> Kashmiri Tea <br> Hot Chocolate</p>
                            </div>
                                <div class="row">
                                     <div class="price-bar">
@@ -70,7 +70,7 @@
                                         </div>
                                        <div class="col-12 col-lg-12 pt-2 pt-lg-0">
                                           <div class="pries">
-                                              <p>From £8.90</p>
+                                              <p>From £1.50</p>
                                           </div>
                                       </div>
                                   </div>
@@ -79,31 +79,6 @@
                       </div>
                     </div>
 
-                    <div class="col-md-3 col-12">
-                       <div class="card-offer text-center">
-                           <div class="card-content">
-
-                             <h3>Deal For 4</h3>
-                             <div class="img-circular4"></div>
-
-                             <p>A Choice of any 4 burgers, A large bag of chips, 2 piece chicken, 5 piece nibbles Large bottle of coke.</p>
-                           </div>
-                              <div class="row">
-                                   <div class="price-bar">
-                                       <div class="col-12 col-lg-12 order-btn">
-                                           <button type="button" @click.prevent="openPostalCode" class="btn btn-outline-secondary">Order Now!</button>
-                                           <a href="#" class=""></a>
-                                       </div>
-                                      <div class="col-12 col-lg-12 pt-2 pt-lg-0">
-                                         <div class="pries">
-                                             <p>From £20.00</p>
-                                         </div>
-                                     </div>
-                                 </div>
-                              </div>
-
-                      </div>
-                    </div>
                   </div>
             </div>
         </section>

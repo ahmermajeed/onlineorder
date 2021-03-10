@@ -4,7 +4,7 @@
              <h3>Food Allergy</h3>
 
              
-             <p>Please contact our kitchen staff on <a href="tel:01214403393">0121 440 3393</a> for more information.</p>
+             <p>Please contact our kitchen staff on <a href="tel:01216844425">0121 68 444 25</a> for more information.</p>
 
         </b-modal>
     </div>
