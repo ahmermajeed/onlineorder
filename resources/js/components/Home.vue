@@ -3,16 +3,216 @@
         <header-menu></header-menu>
         <section class="section-fullwidth deliver-area ">
             <div class="container">
-                  <div class="row">
-                        <div class="col-lg-4 col-md-12 col-sm-12  order-2 order-lg-1  ">
+                <div class="row">
+                     <div class="col-lg-4 col-md-12 col-sm-12">
                             <div class="menu-left">
-                                    <img src="images/theme-3/product-ban-1.png">
-                                    <h2>Burgers</h2>
+                                    <img src="images/theme-3/product-ban-kab.png">
+                                  
+                                <div class="menu-left-item">
+                                    <div class="order-taj">
+                                        <div class="row">
+                                            <div class="col-6">
+                                                  <h2>Kebabs</h2>
+                                            </div>
+                                            <div class="col-2 text-center ">
+                                                <span class="badge badge-warning">Small</span>
+                                            </div>
+                                            <div class="col-2 text-center ">
+                                                <span class="badge badge-success green-badge">Medium</span>
+                                            </div>
+                                            <div class="col-2 text-center">
+                                                <span class="badge badge-danger">Large</span>
+                                            </div>
+                                            
+                                        </div>
+                                        
+                                       
+                                    </div>
+                                    <div class="row pb-3">
+                                        <div class="col-6">
+                                            <ul>
+                                                <li>
+                                                   Spicy BBQ Donner & Chips
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="col-2  text-center">
+                                            <span class="pries-menu">£2.50</span>
+                                            
+                                        </div>
+                                        <div class="col-2  text-center">
+                                            <span class="pries-menu">£2.50</span>
+                                            
+                                        </div>
+                                        <div class="col-2  text-center">
+                                            <span class="pries-menu">£4.00</span>
+                                            
+                                        </div>
+                                        
+                                    </div>
+                                    <div class="row pb-3">
+                                        <div class="col-6">
+                                            <ul>
+                                                <li>
+                                                   Mix Meat & Chips
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="col-2  text-center">
+                                            <span class="pries-menu">£2.50</span>
+                                            
+                                        </div>
+                                        <div class="col-2  text-center">
+                                            <span class="pries-menu">£2.50</span>
+                                            
+                                        </div>
+                                        <div class="col-2  text-center">
+                                            <span class="pries-menu">£4.00</span>
+                                            
+                                        </div>
+                                        
+                                    </div>
+                                    <div class="row pb-3">
+                                        <div class="col-6">
+                                            <ul>
+                                                <li>
+                                                   Donner Nan
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="col-2  text-center">
+                                            <span class="pries-menu">£2.50</span>
+                                            
+                                        </div>
+                                        <div class="col-2  text-center">
+                                            <span class="pries-menu">£2.50</span>
+                                            
+                                        </div>
+                                        <div class="col-2  text-center">
+                                            <span class="pries-menu">£4.00</span>
+                                            
+                                        </div>
+                                        
+                                    </div>
+                                    <div class="row pb-3">
+                                        <div class="col-6">
+                                            <ul>
+                                                <li>
+                                                   Mix Donner Nan
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="col-2  text-center">
+                                            <span class="pries-menu">£2.50</span>
+                                            
+                                        </div>
+                                        <div class="col-2  text-center">
+                                            <span class="pries-menu">£2.50</span>
+                                            
+                                        </div>
+                                        <div class="col-2  text-center">
+                                            <span class="pries-menu">£4.00</span>
+                                            
+                                        </div>
+                                        
+                                    </div>
+                                    
+
+                                </div>
+                                
+                            </div>
+                            <div class="menu-left offer-sides">
+                                    <img src="images/theme-3/product-ban-sides.png">
+                                   
                                 <div class="menu-left-item">
                                     <div class="order-taj">
                                         <div class="row">
                                             <div class="col-8">
-                                                
+                                                <h2>Sides</h2> 
+                                            </div>
+                                            <div class="col-2 text-center">
+                                                <span class="badge badge-warning">Small</span>
+                                            </div>
+                                            <div class="col-2 text-center">
+                                                <span class="badge badge-danger">Large</span>
+                                            </div>
+                                            
+                                        </div>
+                                        
+                                       
+                                    </div>
+                                   
+                                    <div class="row pb-3">
+                                        <div class="col-8">
+                                            <ul>
+                                                <li>
+                                                  Curry Sauce
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="col-2  text-center">
+                                            <span class="pries-menu">£2.50</span>
+                                            
+                                        </div>
+                                        <div class="col-2  text-center">
+                                            <span class="pries-menu">£4.00</span>
+                                            
+                                        </div>
+                                        
+                                    </div>
+                                    <div class="row pb-3">
+                                        <div class="col-8">
+                                            <ul>
+                                                <li>
+                                                  Mushy Peas
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="col-2  text-center">
+                                            <span class="pries-menu">£2.50</span>
+                                            
+                                        </div>
+                                        <div class="col-2  text-center">
+                                            <span class="pries-menu">£4.00</span>
+                                            
+                                        </div>
+                                        
+                                    </div>
+                                    <div class="row pb-3">
+                                        <div class="col-8">
+                                            <ul>
+                                                <li>
+                                                  Salad
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="col-2  text-center">
+                                            <span class="pries-menu">£2.50</span>
+                                            
+                                        </div>
+                                        <div class="col-2  text-center">
+                                            <span class="pries-menu">£4.00</span>
+                                            
+                                        </div>
+                                        
+                                    </div>
+
+                                </div>
+                                
+                            </div>
+
+                            
+                            
+                     </div>
+                     <div class="col-lg-4 col-md-12 col-sm-12">
+                            <div class="menu-left">
+                                    <img src="images/theme-3/product-ban-1.png">
+                                    
+                                <div class="menu-left-item">
+                                    <div class="order-taj">
+                                        <div class="row">
+                                            <div class="col-8">
+                                              <h2>Burgers</h2>  
                                             </div>
                                             <div class="col-2 text-center">
                                                 <span class="badge badge-success">Single</span>
@@ -63,78 +263,7 @@
                                         </div>
                                         
                                     </div>
-                                    <div class="row pb-3">
-                                        <div class="col-8">
-                                            <ul>
-                                                <li>
-                                                   Fillet Burger
-                                                </li>
-                                            </ul>
-                                        </div>
-                                        <div class="col-2  text-center">
-                                            <span class="pries-menu">£2.50</span>
-                                            
-                                        </div>
-                                        <div class="col-2  text-center">
-                                            <span class="pries-menu">£4.00</span>
-                                            
-                                        </div>
-                                        
-                                    </div>
-                                    <div class="row pb-3">
-                                        <div class="col-8">
-                                            <ul>
-                                                <li>
-                                                  Beef Burger
-                                                </li>
-                                            </ul>
-                                        </div>
-                                        <div class="col-2  text-center">
-                                            <span class="pries-menu">£2.50</span>
-                                            
-                                        </div>
-                                        <div class="col-2  text-center">
-                                            <span class="pries-menu">£4.00</span>
-                                            
-                                        </div>
-                                        
-                                    </div>
-                                    <div class="row pb-3">
-                                        <div class="col-8">
-                                            <ul>
-                                                <li>
-                                                  Fish Burger
-                                                </li>
-                                            </ul>
-                                        </div>
-                                        <div class="col-2  text-center">
-                                            <span class="pries-menu">£2.50</span>
-                                            
-                                        </div>
-                                        <div class="col-2  text-center">
-                                            <span class="pries-menu">£4.00</span>
-                                            
-                                        </div>
-                                        
-                                    </div>
-                                    <div class="row pb-3">
-                                        <div class="col-8">
-                                            <ul>
-                                                <li>
-                                                  Vegi Burger
-                                                </li>
-                                            </ul>
-                                        </div>
-                                        <div class="col-2  text-center">
-                                            <span class="pries-menu">£2.50</span>
-                                            
-                                        </div>
-                                        <div class="col-2  text-center">
-                                            <span class="pries-menu">£4.00</span>
-                                            
-                                        </div>
-                                        
-                                    </div>
+                                   
                                     <div class="row pb-3">
                                         <div class="col-8">
                                             <ul>
@@ -299,317 +428,27 @@
                                     </div>
 
                                 </div>
+                                 
                                 
                             </div>
+                            <div class="form-group text-center mb-0">
+                                        <button type="button" class="btn  btn-warning delve-btn"  v-on:click="checkPostCode">
+                                        <span>View All </span>
+                                     </button>
+                            </div>
                             
                             
-                        </div>
-                        <div class="col-lg-4 col-md-12 col-sm-12 order-1 order-lg-2">
-                            <div class="code-area">
-                                <div class="postal-code">
-                                    <div class="search-res" v-if="this.$route.name !='online-order'">
-                                        <h2>Save 25% on orders over £30</h2>
-                                        <h4>Enter Your Postal Code</h4>
-                                        <form >
-                                            <div class="row">
-                                                <div class="col-12">
-                                                    <div class="form-group">
-                                                        <input type="text"  class="form-control" v-model="postal_code" placeholder="Enter your Postal code">
-                                                    </div>
-                                                    <div class="form-group text-center">
-                                                        
-                                                        <button type="button" class="btn btn-outline-light"  v-on:click="checkPostCode">
-                                                        <span>Submit! </span>
-                                                         </button>
-                                                    </div>
-                                                    <div class="form-group text-center mb-0">
-                                                        <p class="error">{{error_message}} </p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </form>
-                                    </div>
-                                            
-                            </div>
-                            </div>
-                            <div class="form-group text-center">
-                                <button type="button" class="btn  btn-danger"  v-on:click="checkPostCode">
-                                    <span>View All </span>
-                                </button>
-                            </div>
+                     </div>
+                     <div class="col-lg-4 col-md-12 col-sm-12 deliver-back-img ">
+                        
+                            
+                           
                             
                                         
                                         
-                        </div>
-                         <div class="col-lg-4 col-md-12 col-sm-12  order-3 order-lg-3">
-                            <div class="menu-left">
-                                    <img src="images/theme-3/product-ban-kab.png">
-                                    <h2>Kebabs</h2>
-                                <div class="menu-left-item">
-                                    <div class="order-taj">
-                                        <div class="row">
-                                            <div class="col-6">
-                                                
-                                            </div>
-                                            <div class="col-2 text-center ">
-                                                <span class="badge badge-warning">Small</span>
-                                            </div>
-                                            <div class="col-2 text-center ">
-                                                <span class="badge badge-success green-badge">Medium</span>
-                                            </div>
-                                            <div class="col-2 text-center">
-                                                <span class="badge badge-danger">Large</span>
-                                            </div>
-                                            
-                                        </div>
-                                        
-                                       
-                                    </div>
-                                    
-                                    
-                                    <div class="row pb-3">
-                                        <div class="col-6">
-                                            <ul>
-                                                <li>
-                                                   Rizzy Burger
-                                                </li>
-                                            </ul>
-                                        </div>
-                                        <div class="col-2  text-center">
-                                            <span class="pries-menu">£2.50</span>
-                                            
-                                        </div>
-                                        <div class="col-2  text-center">
-                                            <span class="pries-menu">£2.50</span>
-                                            
-                                        </div>
-                                        <div class="col-2  text-center">
-                                            <span class="pries-menu">£4.00</span>
-                                            
-                                        </div>
-                                        
-                                    </div>
-                                    <div class="row pb-3">
-                                        <div class="col-6">
-                                            <ul>
-                                                <li>
-                                                   Kebab Meat & Chips
-                                                </li>
-                                            </ul>
-                                        </div>
-                                        <div class="col-2  text-center">
-                                            <span class="pries-menu">£2.50</span>
-                                            
-                                        </div>
-                                        <div class="col-2  text-center">
-                                            <span class="pries-menu">£2.50</span>
-                                            
-                                        </div>
-                                        <div class="col-2  text-center">
-                                            <span class="pries-menu">£4.00</span>
-                                            
-                                        </div>
-                                        
-                                    </div>
-                                    <div class="row pb-3">
-                                        <div class="col-6">
-                                            <ul>
-                                                <li>
-                                                   Chicken Meat & Chips
-                                                </li>
-                                            </ul>
-                                        </div>
-                                        <div class="col-2  text-center">
-                                            <span class="pries-menu">£2.50</span>
-                                            
-                                        </div>
-                                        <div class="col-2  text-center">
-                                            <span class="pries-menu">£2.50</span>
-                                            
-                                        </div>
-                                        <div class="col-2  text-center">
-                                            <span class="pries-menu">£4.00</span>
-                                            
-                                        </div>
-                                        
-                                    </div>
-                                    <div class="row pb-3">
-                                        <div class="col-6">
-                                            <ul>
-                                                <li>
-                                                   Spicy BBQ Donner & Chips
-                                                </li>
-                                            </ul>
-                                        </div>
-                                        <div class="col-2  text-center">
-                                            <span class="pries-menu">£2.50</span>
-                                            
-                                        </div>
-                                        <div class="col-2  text-center">
-                                            <span class="pries-menu">£2.50</span>
-                                            
-                                        </div>
-                                        <div class="col-2  text-center">
-                                            <span class="pries-menu">£4.00</span>
-                                            
-                                        </div>
-                                        
-                                    </div>
-                                    <div class="row pb-3">
-                                        <div class="col-6">
-                                            <ul>
-                                                <li>
-                                                   Mix Meat & Chips
-                                                </li>
-                                            </ul>
-                                        </div>
-                                        <div class="col-2  text-center">
-                                            <span class="pries-menu">£2.50</span>
-                                            
-                                        </div>
-                                        <div class="col-2  text-center">
-                                            <span class="pries-menu">£2.50</span>
-                                            
-                                        </div>
-                                        <div class="col-2  text-center">
-                                            <span class="pries-menu">£4.00</span>
-                                            
-                                        </div>
-                                        
-                                    </div>
-                                    <div class="row pb-3">
-                                        <div class="col-6">
-                                            <ul>
-                                                <li>
-                                                   Donner Nan
-                                                </li>
-                                            </ul>
-                                        </div>
-                                        <div class="col-2  text-center">
-                                            <span class="pries-menu">£2.50</span>
-                                            
-                                        </div>
-                                        <div class="col-2  text-center">
-                                            <span class="pries-menu">£2.50</span>
-                                            
-                                        </div>
-                                        <div class="col-2  text-center">
-                                            <span class="pries-menu">£4.00</span>
-                                            
-                                        </div>
-                                        
-                                    </div>
-                                    <div class="row pb-3">
-                                        <div class="col-6">
-                                            <ul>
-                                                <li>
-                                                   Mix Donner Nan
-                                                </li>
-                                            </ul>
-                                        </div>
-                                        <div class="col-2  text-center">
-                                            <span class="pries-menu">£2.50</span>
-                                            
-                                        </div>
-                                        <div class="col-2  text-center">
-                                            <span class="pries-menu">£2.50</span>
-                                            
-                                        </div>
-                                        <div class="col-2  text-center">
-                                            <span class="pries-menu">£4.00</span>
-                                            
-                                        </div>
-                                        
-                                    </div>
-                                    
-
-                                </div>
-                                
-                            </div>
-                            <div class="menu-left offer-sides">
-                                    <img src="images/theme-3/product-ban-sides.png">
-                                    <h2>Sides</h2>
-                                <div class="menu-left-item">
-                                    <div class="order-taj">
-                                        <div class="row">
-                                            <div class="col-8">
-                                                
-                                            </div>
-                                            <div class="col-2 text-center">
-                                                <span class="badge badge-warning">Small</span>
-                                            </div>
-                                            <div class="col-2 text-center">
-                                                <span class="badge badge-danger">Large</span>
-                                            </div>
-                                            
-                                        </div>
-                                        
-                                       
-                                    </div>
-                                   
-                                    <div class="row pb-3">
-                                        <div class="col-8">
-                                            <ul>
-                                                <li>
-                                                  Curry Sauce
-                                                </li>
-                                            </ul>
-                                        </div>
-                                        <div class="col-2  text-center">
-                                            <span class="pries-menu">£2.50</span>
-                                            
-                                        </div>
-                                        <div class="col-2  text-center">
-                                            <span class="pries-menu">£4.00</span>
-                                            
-                                        </div>
-                                        
-                                    </div>
-                                    <div class="row pb-3">
-                                        <div class="col-8">
-                                            <ul>
-                                                <li>
-                                                  Mushy Peas
-                                                </li>
-                                            </ul>
-                                        </div>
-                                        <div class="col-2  text-center">
-                                            <span class="pries-menu">£2.50</span>
-                                            
-                                        </div>
-                                        <div class="col-2  text-center">
-                                            <span class="pries-menu">£4.00</span>
-                                            
-                                        </div>
-                                        
-                                    </div>
-                                    <div class="row pb-3">
-                                        <div class="col-8">
-                                            <ul>
-                                                <li>
-                                                  Salad
-                                                </li>
-                                            </ul>
-                                        </div>
-                                        <div class="col-2  text-center">
-                                            <span class="pries-menu">£2.50</span>
-                                            
-                                        </div>
-                                        <div class="col-2  text-center">
-                                            <span class="pries-menu">£4.00</span>
-                                            
-                                        </div>
-                                        
-                                    </div>
-
-                                </div>
-                                
-                            </div>
-
-                            
-                            
-                        </div>
-                  </div>
+                     </div>
+                         
+                </div>
             </div>
         </section>
 
@@ -619,9 +458,13 @@
                     <div class="row">
                         <div class="col-12">
                             <div class="row">
-                                <div class="col-lg-7 col-md-6 col-sm-12">
-                                    <h2>Drinks</h2>
-                                    <p>Pepsi, 7up, Coke, Cherry Coke Rubicon Mango Guava / Passion,<br>Dr Pepper Pinapple Soda, Sprite, Fanta Orange /Fruit Twist,<br>Rubena Blackcurrant / Strawberry, Ginger Beer</p>
+                                <div class="col-lg-6 col-md-6 col-sm-12">
+                                    <div class="drink-cont-sec">
+                                        <h2>Drinks</h2>
+                                          <p>Pepsi, 7up, Coke, Cherry Coke Rubicon Mango Guava / Passion,<br>Dr Pepper Pinapple Soda, Sprite, Fanta Orange /Fruit Twist,<br>Rubena Blackcurrant / Strawberry, Ginger Beer</p>
+                                        
+                                    </div>
+                                    
                                     <ul>
                                         <li>
                                             Cocca-Cola big Bottle 1.25l<span>£2.20</span>
@@ -630,7 +473,7 @@
                                            Cocca-Cola Bottle 500ml<span>£2.20</span>
                                         </li>
                                     </ul>
-                                    <button type="button" class="btn btn-outline-light"  v-on:click="checkPostCode">
+                                    <button type="button" class="btn btn-warning"  v-on:click="checkPostCode">
                                     <span>Order now </span>
                                     </button>
                                 </div>
@@ -638,8 +481,8 @@
                                     <img src="images/theme-3/coca.png">
                                     
                                 </div>
-                                <div class="col-lg-3 col-md-4 col-sm-6 cans cans">
-                                    <img src="images/theme-3/cans.png">
+                                <div class="col-lg-4 col-md-4 col-sm-6 cans cans">
+                                    <img src="images/theme-4/canes.png">
                                 </div>
                                 
                             </div>
@@ -658,31 +501,31 @@
                 <div class="container">
                 <div class="deal-content">
                      <div class="row">
-                        <div class="col-lg-4 col-md-4 col-sm-6">
+                        <div class="col-lg-4 col-md-4 col-sm-6 px-0">
                             <div class="offers">
                                 <h2>Wraps</h2>
                                 <p>Rizzy Wrap<br>Legend Wrap (L)<br>Fillet Wrap<br>Vegi Wrap</p>
-                                <button type="button" class="btn  btn-danger"v-on:click="checkPostCode">
+                                <button type="button" class="btn  btn-warning"v-on:click="checkPostCode">
                                     <span>View All </span>
                                 </button>
 
                             </div>
                         </div> 
-                        <div class="col-lg-4 col-md-4 col-sm-6">
-                            <div class="offers">
+                        <div class="col-lg-4 col-md-4 col-sm-6 px-0">
+                            <div class="offers  sec-two">
                                 <h2>Wraps</h2>
                                 <p>Rizzy Wrap<br>Legend Wrap (L)<br>Fillet Wrap<br>Vegi Wrap</p>
-                                <button type="button" class="btn  btn-danger"v-on:click="checkPostCode">
+                                <button type="button" class="btn btn-warning"v-on:click="checkPostCode">
                                     <span>View All </span>
                                 </button>
 
                             </div>
                         </div> 
-                        <div class="col-lg-4 col-md-4 col-sm-6">
+                        <div class="col-lg-4 col-md-4 col-sm-6 px-0">
                             <div class="offers">
                                 <h2>Wraps</h2>
                                 <p>Rizzy Wrap<br>Legend Wrap (L)<br>Fillet Wrap<br>Vegi Wrap</p>
-                                <button type="button" class="btn  btn-danger"v-on:click="checkPostCode">
+                                <button type="button" class="btn  btn-warning"v-on:click="checkPostCode">
                                     <span>View All </span>
                                 </button>
                             </div>
@@ -707,7 +550,7 @@
                         </div>
                         
                     </div>
-                    <button type="button" class="btn btn-outline-light"  v-on:click="checkPostCode">
+                    <button type="button" class="btn  btn-warning"  v-on:click="checkPostCode">
                         <span>Contact now </span>
                      </button>
                     

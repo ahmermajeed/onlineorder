@@ -8,14 +8,14 @@
         </hooper>
         <div class="space-70"></div>
     </div> 
-</template> 
+</template>  
     
 <script>
     import VueGallery from 'vue-gallery';
     import { 
         Hooper,
         Slide, 
-        Navigation as HooperNavigation
+        Navigation as HooperNavigation 
     } from 'hooper';
  
     import 'hooper/dist/hooper.css';  
@@ -28,7 +28,7 @@
         },
         methods: {
             getSlider(){
-                let  _this = this
+                let  _this = this 
                 _this.loading  = true;
                 axios.get('/api/slider')
                     .then((response) => {

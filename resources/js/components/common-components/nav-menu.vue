@@ -82,69 +82,54 @@
             <div class="header-bottom section-fullwidth">
                 <div class="container">
                     <div class="row">
-                        <div class="contact-bnner">
-                            <div class="head-taj mb-3">
-                                <h2>The Passion for the Perfect Taste</h2>
-                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
-                                <div class="form-group text-center">
-                                    
-                                    <button type="button" class="btn btn-outline-light"  v-on:click="checkPostCode">
-                                    <span>Explore MOre</span>
-                                    </button>
-                                </div>
-                                <div class="form-group text-center mb-0">
-                                    <p class="error">{{error_message}} </p>
-                                </div>
-                            </div>
-                            <!-- <div class="row">
-                                <div class="col-lg-4 col-md-4 col-sm-12 mt-0 px-0">
-                                    <div class="food">
+                        <div class=" col-8">
+                           <div class="contact-bnner">
+                                <div class="head-taj mb-3">
+                                    <h2>The Passion for the Perfect Taste</h2>
+                                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+                                    <div class="form-group ">
                                         
-                                        <div class="item-img text-center">
-                                             <img src="/images/theme-2/taj-halal.png">
-                                        </div>
-                                        
-                                        <div class="num-img text-center">
-                                           <a href="tel: 02476441200">02476441200</a>
-                                        </div>
-                                        
+                                        <button type="button" class="btn  btn-warning"  v-on:click="checkPostCode">
+                                        <span>Explore MOre</span>
+                                        </button>
                                     </div>
-
-                                    
+                                    <div class="form-group text-center mb-0">
+                                        <p class="error">{{error_message}} </p>
+                                    </div>
                                 </div>
-                                <div class="col-lg-8 col-md-8 col-sm-12  mt-0 px-0">
-                                    <div class="postal-code">
-                                        <div class="search-res" v-if="this.$route.name !='online-order'">
-                                        <h3>Enter Your Postal Code</h3>
-                                        <form >
-                                            <div class="row">
-                                                <div class="col-12">
-                                                    <div class="form-group">
-                                                        <input type="text"  class="form-control" v-model="postal_code" placeholder="Enter your Postal code">
-                                                    </div>
-                                                    <div class="form-group text-center">
-                                                        <button type="button" class="btn btn-warning"  v-on:click="checkPostCode">
-                                                            <span>Submit! </span>
-                                                        </button>
-                                                    </div>
-                                                    <div class="form-group text-center mb-0">
+                          
+                            </div> 
+                        </div>
+                        <div class="col-1"></div>
+                        <div class="col-3">
+                            <div class="postal-code">
+                                <div class="search-res" v-if="this.$route.name !='online-order'">
+                                    <img src="images/theme-4/form-banner.png">
+                                    <div class="info-txt mb-2 mb-md-3">
+                                            <h2>Save 25% on orders over £30</h2>
+                                    </div>
+                                    <h3>Enter Your Postal Code.</h3>
+                                    <form >
+                                        <div class="row">
+                                            <div class="col-12">
+                                                <div class="form-group">
+                                                     <input type="text"  class="form-control" v-model="postal_code" placeholder="Enter your Postal code">
+                                                </div>
+                                                <div class="form-group text-center">
+                                                    <button type="button" class="btn  btn-warning"  v-on:click="checkPostCode">
+                                                        <span>Submit! </span>
+                                                    </button>
+                                                </div>
+                                                <div class="form-group text-center mb-0">
                                                         <p class="error">{{error_message}} </p>
-                                                    </div>
                                                 </div>
                                             </div>
-                                        </form>
-                                    </div>
-                                        
-                                    </div>
-                                    
-                                    
+                                        </div>
+                                    </form>
                                 </div>
-                                   
-                            </div> -->
-                        </div>
                             
-                        
-                        
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
