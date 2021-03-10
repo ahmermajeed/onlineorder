@@ -23,9 +23,9 @@
                                 <div class="col-12">
                                     <div class="check-head">
                                         <h2>Checkout</h2>
-                                    
+
                                     </div>
-                                    
+
                                 </div>
                                <!-- <div class="col-sm-6">
                                     <label class="customradiobutton radioiconed radio-inline mr-3">
@@ -72,7 +72,7 @@
                                             </label>
                                         </div>
 
-                                      
+
 
                                        <!-- <div class="col-sm-6">
                                             <label>Time</label>
@@ -108,7 +108,7 @@
                                               </label>
                                           </div>
                                     </div>
-                                 
+
                                 </div>
                             </div>
 
@@ -130,7 +130,7 @@
                                     <input type="text" class="form-control"  v-model="form.number" placeholder="Enter Number">
                                 </div>
 
-                                
+
                             </div>
 
                             <div class="row border-dashed payment-sec">
@@ -207,7 +207,7 @@
                     <div class="order cart-box" id="cart-stiky">
                         <h3>Your Order </h3>
                         <div class="check-out-list">
-                           
+
 
                             <div class="table-holder">
 
@@ -216,7 +216,7 @@
                                     <tr v-for="(cart, product_index) in getAllCartArray"  v-if="product_index  > 0">
                                         <!-- <td class=highlighted>
                                         </td> -->
-                                        
+
                                         <td class="order-name">
                                             <div class="check-order">{{cart.product_name}}</div>
                                             <div  v-if="cart.extras" v-for="(extra, extra_index) in cart.extras" >
@@ -306,6 +306,8 @@
                 discountedAmount:0,
                 discountedPercentAge:10,
                 finalAmount:0,
+                slots : []
+
 
 
             };
@@ -327,7 +329,19 @@
 
         },
         methods: {
-           getOffers(){
+
+            getTimeSlots(){
+                let  _this = this;
+                _this.loading  = true;
+                axios.get('/api/get-time-slots/'+_this.interval)
+                    .then((response) => {
+                        _this.slots =  response.data;
+
+                        _this.loading  = false;
+                    });
+            },
+
+            getOffers(){
                 let  _this = this;
                 _this.loading  = true;
                 axios.get('/api/offer')
@@ -497,5 +511,5 @@
 
 
 <style>
-    
+
 </style>
