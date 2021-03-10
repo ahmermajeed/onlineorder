@@ -13935,7 +13935,7 @@ ul {
 
 .header-bottom-section .main-menu a {
   font-size: 14px;
-  color: #fff !important;
+  color: #000 !important;
 }
 
 .header-bottom-section .main-menu ul {
@@ -16070,12 +16070,6 @@ ul {
 .add-deal-section {
   padding-bottom: 10px !important;
   margin-bottom: 15px;
-}
-
-@media (max-width: 767.98px) {
-  .desktop-tab-section {
-    display: none;
-  }
 }
 
 .food-allergy {

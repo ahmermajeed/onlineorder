@@ -169,7 +169,7 @@ ul {
 
         a {
             font-size: 14px;
-            color: #fff !important;
+            color: #000 !important;
         }
 
         ul {
@@ -2044,11 +2044,6 @@ ul {
 .add-deal-section {
     padding-bottom: 10px !important;
     margin-bottom: 15px;
-}
-.desktop-tab-section {
-    @include media-breakpoint-down(sm) {
-        display: none;
-    }
 }
 
 .food-allergy {
