@@ -13869,7 +13869,7 @@ ul {
 }
 
 .header-top-section {
-  background-color: #0E2D81;
+  background-color: #0e2d81;
   padding: 12px 0px 12px 0px;
 }
 
@@ -13935,7 +13935,7 @@ ul {
 
 .header-bottom-section .main-menu a {
   font-size: 14px;
-  color: #000 !important;
+  color: #fff !important;
 }
 
 .header-bottom-section .main-menu ul {
@@ -13985,6 +13985,7 @@ ul {
 
 .header-bottom-section .main-menu .navbar-collapse.show {
   pointer-events: inherit;
+  background: #000;
 }
 
 /********************footer start****************************/
