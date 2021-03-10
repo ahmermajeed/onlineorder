@@ -1,7 +1,7 @@
 <template>
     <div>
         <header-menu></header-menu>
-        <section class="inner-section main-popup-section" id="product-scroll " >
+        <section class="inner-section main-popup-section" id="product-scroll" >
             <div class="container" >
                 <div class="row">
                     <div class=" col-lg-3 col-md-4 col-sm-12 listing-page-sidebar lp-sidebar-left">
@@ -2137,7 +2137,9 @@
         margin-top: 0;
         padding-top: 0 !important;
         border-right: 1px solid rgba(0,0,0,0);
-        display: none;
+    }
+    .cart-menu-fixed .offset-categories {
+        width: 100% !important;
     }
 
     .business > div.dishes-wrapper {
@@ -2150,13 +2152,18 @@
     .cart-menu-fixed .business > div.dishes-wrapper {
         padding-top: 190px !important;
     }
-
     @media (max-width: 767px) {
-        .cart-menu-fixed .offset-categories{
-            width:100%;
+        .cart-menu-fixed .offset-categories {
+            width: 100%;
+            z-index: 2;
         }
+
         .cart-menu-fixed .business > div.dishes-wrapper {
             padding-top: 210px !important;
+        }
+        .mealactions a {
+            display: inline-block;
+            margin-right: 24px;
         }
     }
 
