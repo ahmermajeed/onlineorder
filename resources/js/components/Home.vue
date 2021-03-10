@@ -154,17 +154,14 @@
                                 <div class="first-menu title-styl">
 
 
-                                    <h2>Burgers</h2>
+                                    <h2>Milk Shakes</h2>
                                     <div class="menu-content">
                                         <div class="row">
-                                            <div class="col-8">
+                                            <div class="col-10">
                                                 <p></p>
                                             </div>
                                             <div class="col-2 text-right">
-                                                <span class="badge badge-pill badge-primary">Single</span>
-                                            </div>
-                                            <div class="col-2 text-right">
-                                                <span class="badge badge-primary">Meal</span>
+                                                <span class="badge badge-pill badge-primary">Price</span>
                                             </div>
 
                                         </div>
@@ -173,153 +170,126 @@
 
                                             <div class="box-borders">
                                                 <div class="row">
-                                                    <div class="col-8">
-                                                        <p>Rizzy Burger </p>
-                                                    </div>
-                                                    <div class="col-2 text-right">
-                                                        <span>£2.50</span>
+                                                    <div class="col-10">
+                                                        <p>Snickers</p>
                                                     </div>
                                                     <div class="col-2 text-right">
                                                         <span>£4.00</span>
                                                     </div>
-
                                                 </div>
                                             </div>
 
                                             <div class="box-borders">
                                                 <div class="row">
-                                                    <div class="col-8">
-                                                        <p>Legend Burger</p>
+                                                    <div class="col-10">
+                                                        <p>Oreo</p>
                                                     </div>
                                                     <div class="col-2 text-right">
-                                                        <span>£2.50</span>
-                                                    </div>                                 
-                                                    <div class="col-2 text-right">
-                                                        <span>£4.50</span>
-                                                    </div>
-
-                                                </div>
-                                            </div>
-
-                                            <div class="box-borders">
-                                                <div class="row">
-                                                    <div class="col-8">
-                                                        <p>Fillet Burger</p>
-                                                    </div>
-                                                   <div class="col-2 text-right">
-                                                       <span>£2.50</span>
-                                                   </div>                                 
-                                                   <div class="col-2 text-right">
-                                                       <span>£4.50</span>
-                                                   </div>
-
-                                                </div>
-                                            </div>
-
-                                            <div class="box-borders">
-                                                <div class="row">
-                                                    <div class="col-8">
-                                                        <p>Beef Burger</p>
-                                                    </div>
-                                                    <div class="col-2 text-right">
-                                                        <span>£2.50</span>
-                                                    </div>                                 
-                                                    <div class="col-2 text-right">
-                                                        <span>£4.50</span>
+                                                        <span>£4.00</span>
                                                     </div>
                                                 </div>
                                             </div>
 
                                             <div class="box-borders">
                                                 <div class="row">
-                                                    <div class="col-8">
-                                                        <p>Fish Burger</p>
+                                                    <div class="col-10">
+                                                        <p>Ferrero Rocher</p>
                                                     </div>
                                                     <div class="col-2 text-right">
-                                                        <span>£2.50</span>
-                                                    </div>                                 
-                                                    <div class="col-2 text-right">
-                                                        <span>£4.50</span>
+                                                        <span>£4.00</span>
                                                     </div>
-
                                                 </div>
                                             </div>
 
                                             <div class="box-borders">
                                                 <div class="row">
-                                                    <div class="col-8">
-                                                        <p>Vegi Burger</p>
+                                                    <div class="col-10">
+                                                        <p>Kinder - Both</p>
                                                     </div>
                                                     <div class="col-2 text-right">
-                                                       <span>£2.50</span>
-                                                    </div>                                 
-                                                    <div class="col-2 text-right">
-                                                       <span>£4.50</span>
+                                                        <span>£4.00</span>
                                                     </div>
-
-                                                  </div>
-                                            </div>
-                                            <div class="box-borders">
-                                                <div class="row">
-                                                    <div class="col-8">
-                                                        <p>Steak Burger</p>
-                                                    </div>
-                                                    <div class="col-2 text-right">
-                                                        <span>£2.50</span>
-                                                    </div>                                 
-                                                    <div class="col-2 text-right">
-                                                        <span>£4.50</span>
-                                                    </div>
-
                                                 </div>
                                             </div>
 
                                             <div class="box-borders">
                                                 <div class="row">
-                                                    <div class="col-8">
-                                                        <p>Mix Doner</p>
+                                                    <div class="col-10">
+                                                        <p>Areo - Mint/ Orange</p>
                                                     </div>
                                                     <div class="col-2 text-right">
-                                                        <span>£2.50</span>
-                                                    </div>                                 
-                                                    <div class="col-2 text-right">
-                                                        <span>£4.50</span>
+                                                        <span>£4.00</span>
                                                     </div>
-
-                                                 </div>
-
+                                                </div>
                                             </div>
 
                                             <div class="box-borders">
                                                 <div class="row">
-                                                    <div class="col-8">
-                                                        <p>Donner Burger</p>
+                                                    <div class="col-10">
+                                                        <p>Malteser's</p>
                                                     </div>
                                                     <div class="col-2 text-right">
-                                                        <span>£2.50</span>
-                                                    </div>                                 
-                                                    <div class="col-2 text-right">
-                                                        <span>£4.50</span>
+                                                        <span>£4.00</span>
                                                     </div>
-
                                                 </div>
-
                                             </div>
 
                                             <div class="box-borders">
                                                 <div class="row">
-                                                    <div class="col-8">
-                                                        <p>Chicken Donner Burger</p>
+                                                    <div class="col-10">
+                                                        <p>Daim</p>
                                                     </div>
-                                                   <div class="col-2 text-right">
-                                                       <span>£2.50</span>
-                                                   </div>                                 
-                                                   <div class="col-2 text-right">
-                                                       <span>£4.50</span>
-                                                   </div>
-
+                                                    <div class="col-2 text-right">
+                                                        <span>£4.00</span>
+                                                    </div>
                                                 </div>
-                                            </div>                                
+                                            </div>       
+
+                                            <div class="box-borders">
+                                                <div class="row">
+                                                    <div class="col-10">
+                                                        <p>Flake</p>
+                                                    </div>
+                                                    <div class="col-2 text-right">
+                                                        <span>£4.00</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="box-borders">
+                                                <div class="row">
+                                                    <div class="col-10">
+                                                        <p>Lion Bar</p>
+                                                    </div>
+                                                    <div class="col-2 text-right">
+                                                        <span>£4.00</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="box-borders">
+                                                <div class="row">
+                                                    <div class="col-10">
+                                                        <p>Smarties</p>
+                                                    </div>
+                                                    <div class="col-2 text-right">
+                                                        <span>£4.00</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="box-borders">
+                                                <div class="row">
+                                                    <div class="col-10">
+                                                        <p>Crunchie</p>
+                                                    </div>
+                                                    <div class="col-2 text-right">
+                                                        <span>£4.00</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                                            
 
                                     </div>
 
@@ -331,17 +301,17 @@
                         <div class="menus-pattern-second">
                             <div class="menu-second-before"></div>
                             <div class="second-menu title-styl">
-                                <h2>Fish and Chips</h2>
+                                <h2>Ice Cream</h2>
                                 <div class="menu-content">
                                     <div class="row ">
                                         <div class="col-8">
                                             <!-- <p>All pizzas topped with Cheese & Tomato Paste</p> -->
                                         </div>
                                         <div class="col-2 text-center">
-                                            <span class="badge badge-primary">MEDIUM</span>
+                                            <span class="badge badge-primary">1 Scoop</span>
                                         </div>
                                         <div class="col-2 text-center">
-                                            <span class="badge badge-warning">LARGE</span>
+                                            <span class="badge badge-warning">2 Scoop</span>
                                         </div>
 
                                     </div>
@@ -350,13 +320,13 @@
                                         <div class="box-borders">
                                             <div class="row">
                                                 <div class="col-8">
-                                                    <p>Cone Of Chips</p>
+                                                    <p>Vanilla</p>
                                                 </div>
                                                 <div class="col-2  text-center">
-                                                    <span> - </span>
+                                                    <span>£1.50</span>
                                                 </div>
                                                 <div class="col-2  text-center">
-                                                    <span>£1.20</span>
+                                                    <span>£2.50</span>
                                                 </div>
 
                                             </div>
@@ -365,127 +335,145 @@
                                         <div class="box-borders">
                                             <div class="row">
                                                 <div class="col-8">
-                                                  <p>Chips</span></p>
+                                                  <p>Strawberry</span></p>
                                                 </div>
                                                 <div class="col-2  text-center">
-                                                    <span>£1.80</span>
+                                                    <span>£1.50</span>
                                                 </div>
                                                 <div class="col-2  text-center">
-                                                    <span>£2.40</span>
+                                                    <span>£2.50</span>
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="box-borders">
-                                            <div class="row">
-                                              <div class="col-8">
-                                                <p>Fries</span></p>
-                                              </div>
-                                              <div class="col-2  text-center">
-                                                  <span>£1.80</span>
-                                              </div>
-                                              <div class="col-2  text-center">
-                                                  <span>£2.50</span>
-                                              </div>
 
-                                            </div>
-                                        </div>
                                         <div class="box-borders">
                                             <div class="row">
-                                               <div class="col-8">
-                                                 <p>Fish</span></p>
-                                               </div>
-                                               <div class="col-2  text-center">
-                                                   <span>£1.80</span>
-                                               </div>
-                                               <div class="col-2  text-center">
-                                                   <span>£2.50</span>
-                                               </div>
+                                                <div class="col-8">
+                                                  <p>Banana</span></p>
+                                                </div>
+                                                <div class="col-2  text-center">
+                                                    <span>£1.50</span>
+                                                </div>
+                                                <div class="col-2  text-center">
+                                                    <span>£2.50</span>
+                                                </div>
                                             </div>
                                         </div>
-                                        <div class="box-borders">
-                                            <div class="row">
-                                                 <div class="col-8">
-                                                 <p>Fish & Chips</span></p>
-                                               </div>
-                                               <div class="col-2  text-center">
-                                                   <span>£1.80</span>
-                                               </div>
-                                               <div class="col-2  text-center">
-                                                   <span>£2.50</span>
-                                               </div>
 
-                                            </div>
-                                        </div>
                                         <div class="box-borders">
                                             <div class="row">
-                                               <div class="col-8">
-                                               <p>Cod</span></p>
-                                             </div>
-                                             <div class="col-2  text-center">
-                                                 <span>£1.80</span>
-                                             </div>
-                                             <div class="col-2  text-center">
-                                                 <span>£2.50</span>
-                                             </div>
-
+                                                <div class="col-8">
+                                                  <p>Chocolate</span></p>
+                                                </div>
+                                                <div class="col-2  text-center">
+                                                    <span>£1.50</span>
+                                                </div>
+                                                <div class="col-2  text-center">
+                                                    <span>£2.50</span>
+                                                </div>
                                             </div>
                                         </div>
+
                                         <div class="box-borders">
                                             <div class="row">
-                                             <div class="col-8">
-                                             <p>Cod & Chips</span></p>
-                                           </div>
-                                           <div class="col-2  text-center">
-                                               <span>£1.80</span>
-                                           </div>
-                                           <div class="col-2  text-center">
-                                               <span>£2.50</span>
-                                           </div>
-
+                                                <div class="col-8">
+                                                  <p>Coconut</span></p>
+                                                </div>
+                                                <div class="col-2  text-center">
+                                                    <span>£1.50</span>
+                                                </div>
+                                                <div class="col-2  text-center">
+                                                    <span>£2.50</span>
+                                                </div>
                                             </div>
                                         </div>
+
+
                                         <div class="box-borders">
                                             <div class="row">
-                                           <div class="col-8">
-                                           <p>Scallop</span></p>
-                                         </div>
-                                         <div class="col-2  text-center">
-                                             <span>£1.80</span>
-                                         </div>
-                                         <div class="col-2  text-center">
-                                             <span>£2.50</span>
-                                         </div>
-
+                                                <div class="col-8">
+                                                  <p>White Chocolate Chip</span></p>
+                                                </div>
+                                                <div class="col-2  text-center">
+                                                    <span>£1.50</span>
+                                                </div>
+                                                <div class="col-2  text-center">
+                                                    <span>£2.50</span>
+                                                </div>
                                             </div>
                                         </div>
+
                                         <div class="box-borders">
                                             <div class="row">
-                                              <div class="col-8">
-                                              <p>Spring Roll</span></p>
-                                            </div>
-                                            <div class="col-2  text-center">
-                                                <span>£1.80</span>
-                                            </div>
-                                            <div class="col-2  text-center">
-                                                <span>£2.50</span>
-                                            </div>
-
+                                                <div class="col-8">
+                                                  <p>Bubble Gum</span></p>
+                                                </div>
+                                                <div class="col-2  text-center">
+                                                    <span>£1.50</span>
+                                                </div>
+                                                <div class="col-2  text-center">
+                                                    <span>£2.50</span>
+                                                </div>
                                             </div>
                                         </div>
+
                                         <div class="box-borders">
                                             <div class="row">
-                                              <div class="col-8">
-                                              <p>Fish Cake</span></p>
-                                            </div>
-                                            <div class="col-2  text-center">
-                                                <span>£1.80</span>
-                                            </div>
-                                            <div class="col-2  text-center">
-                                                <span>£2.50</span>
-                                            </div>
-
+                                                <div class="col-8">
+                                                  <p>Honey Comb</span></p>
+                                                </div>
+                                                <div class="col-2  text-center">
+                                                    <span>£1.50</span>
+                                                </div>
+                                                <div class="col-2  text-center">
+                                                    <span>£2.50</span>
+                                                </div>
                                             </div>
                                         </div>
+
+                                        <div class="box-borders">
+                                            <div class="row">
+                                                <div class="col-8">
+                                                  <p>Haxelnut</span></p>
+                                                </div>
+                                                <div class="col-2  text-center">
+                                                    <span>£1.50</span>
+                                                </div>
+                                                <div class="col-2  text-center">
+                                                    <span>£2.50</span>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="box-borders">
+                                            <div class="row">
+                                                <div class="col-8">
+                                                  <p>Cookies &amp; Cream</span></p>
+                                                </div>
+                                                <div class="col-2  text-center">
+                                                    <span>£1.50</span>
+                                                </div>
+                                                <div class="col-2  text-center">
+                                                    <span>£2.50</span>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="box-borders">
+                                            <div class="row">
+                                                <div class="col-8">
+                                                  <p>Ferrero Rocher</span></p>
+                                                </div>
+                                                <div class="col-2  text-center">
+                                                    <span>£1.50</span>
+                                                </div>
+                                                <div class="col-2  text-center">
+                                                    <span>£2.50</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+
 
                                 </div>
 
