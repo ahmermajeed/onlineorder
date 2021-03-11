@@ -160,7 +160,7 @@
                 </div>
             </div>
             <!-- </nav> -->
-            <div class="header-bottom section-fullwidth">
+            <div class="header-bottom section-fullwidth" v-if="this.$route.name != 'online-order'">
                 <div class="container">
                     <div class="row">
                         <div class="col-lg-4 col-xl-5"></div>
@@ -195,10 +195,7 @@
                                         <div class="postal-code">
                                             <div
                                                 class="search-res"
-                                                v-if="
-                                                    this.$route.name !=
-                                                        'online-order'
-                                                "
+                                              
                                             >
                                               <!--   <div
                                                     class="info-txt mb-2 mb-md-4"

@@ -43,7 +43,7 @@
                                           <button type="button" class="btn btn-outline-secondary" @click.prevent="openPostalCode">Order Now!</button>
                                           <a href="#" class=""></a>
                                       </div>
-                                     <div class="col-12 col-lg-12 pt-2 pt-lg-0">
+                                     <div class="col-12 col-lg-12">
                                         <div class="pries">
                                             <p>Each for £3.50</p>
                                         </div>

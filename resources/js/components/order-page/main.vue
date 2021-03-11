@@ -1,7 +1,7 @@
 <template>
     <div>
         <header-menu></header-menu>
-        <section class="inner-section main-popup-section" id="product-scroll " >
+        <section class="inner-section main-popup-section" id="product-scroll">
             <div class="container" >
                 <div class="row">
                     <div class=" col-lg-3 col-md-4 col-sm-12 listing-page-sidebar lp-sidebar-left">
@@ -22,7 +22,7 @@
                     </div>
                     <div class="col-lg-5 col-md-8 col-sm-12">
                         <div class="product-list order-product">
-                            <!--                            for products-->
+                            <!-- for products-->
                             <div class="product"  v-for="(item, index) in products" v-if="item.products.length">
                                  <div class="row">
                                         <div class="col-md-12">
@@ -46,7 +46,7 @@
                                  </div>
                             </div>
 
-                            <!--                            for Deals-->
+                            <!-- for Deals-->
                             <div class="product deals-pro"  v-for="(item, index) in deals" >
                                 <div class="row">
                                     <div class="col-md-12">
@@ -125,7 +125,7 @@
                                                 <div  class="strong-open"  v-if="cart.extras" v-for="(extra, extra_index) in cart.extras" >
                                                     <strong>{{extra.group_name}}:</strong> {{extra.choice}}
                                                 </div>
-                                                <td  v-if="!cart.extras">£ {{priceFormat(cart.price * cart.quantity) }}</td>
+                                                <td  v-if="!cart.extras" class="p-0">£ {{priceFormat(cart.price * cart.quantity) }}</td>
                                                 <td class="order-priecs"  v-if="cart.extras">£{{priceFormat(cart.single_product_total_amount)}} </td>
                                                
                                             </td>
@@ -195,8 +195,8 @@
             </div>
         </section>
         <div class="loading" v-if="loading">Loading&#8230;</div>
-        <div class="container-fluid desktop-tab-section"
-        :class="{'cart-menu-fixed': scrolled}"  v-on="handleScroll()">
+ <div class="container-fluid"
+      :class="{'cart-menu-fixed': scrolled}" v-on="handleScroll()">
             <div class="row full">
 
                     <div class="offset-categories">
@@ -221,7 +221,7 @@
                     </div>
             </div>
             <div class="mobile-cart-button" v-bind:class="{ cartheight: cart_height }" v-if="getAllCartArray.length > 1">
-                <div class="inner">
+   <!--              <div class="inner">
                     <span class="products-count"><svg xmlns="http://www.w3.org/2000/svg" class="svg-stroke-container" width="24" height="24">
                         <path fill="#707070" d="M12 2.75a4.75 4.75 0 014.744 4.5h3.103a1 1 0 01.99 1.141l-1.714 12a1 1 0 01-.99.859H5.867a1 1 0 01-.99-.859l-1.714-12a1 1 0 01.99-1.141h3.103A4.75 4.75 0 0112 2.75zm5.559 14.75H6.44a.4.4 0 00-.396.457l.208 1.45a.4.4 0 00.396.343H17.35a.4.4 0 00.396-.343l.208-1.45a.4.4 0 00-.396-.457zm1.25-8.75H5.19a.4.4 0 00-.396.457l.922 6.45a.4.4 0 00.396.343h11.775a.4.4 0 00.396-.343l.922-6.45a.4.4 0 00-.396-.457zM12 4.25a3.251 3.251 0 00-3.193 2.638.305.305 0 00.3.362h5.796a.297.297 0 00.292-.35A3.251 3.251 0 0012 4.25z"></path>
                     </svg>{{getAllCartArray.length - 1}}
@@ -230,7 +230,15 @@
                    
                     <span class="text chek-out-btn btn btn-rounded-danger" @click="opencartlist()">Checkout</span>
                     
-                   <!--   <button class=" chek-out-btn anima-btn custom-btn move-eff btn btn-rounded-danger " @click="opencartlist()"><span>Checkout</span><i class="fas fa-long-arrow-alt-right"></i></button>  -->
+                     <button class=" chek-out-btn anima-btn custom-btn move-eff btn btn-rounded-danger " @click="opencartlist()"><span>Checkout</span><i class="fas fa-long-arrow-alt-right"></i></button> 
+                </div> -->
+                <div class="inner">
+                    <span class="products-count"><svg xmlns="http://www.w3.org/2000/svg" class="svg-stroke-container" width="24" height="24">
+                        <path fill="#707070"
+                              d="M12 2.75a4.75 4.75 0 014.744 4.5h3.103a1 1 0 01.99 1.141l-1.714 12a1 1 0 01-.99.859H5.867a1 1 0 01-.99-.859l-1.714-12a1 1 0 01.99-1.141h3.103A4.75 4.75 0 0112 2.75zm5.559 14.75H6.44a.4.4 0 00-.396.457l.208 1.45a.4.4 0 00.396.343H17.35a.4.4 0 00.396-.343l.208-1.45a.4.4 0 00-.396-.457zm1.25-8.75H5.19a.4.4 0 00-.396.457l.922 6.45a.4.4 0 00.396.343h11.775a.4.4 0 00.396-.343l.922-6.45a.4.4 0 00-.396-.457zM12 4.25a3.251 3.251 0 00-3.193 2.638.305.305 0 00.3.362h5.796a.297.297 0 00.292-.35A3.251 3.251 0 0012 4.25z"></path>
+                    </svg>{{getAllCartArray.length - 1}}</span>
+                    <span class="text" @click="opencartlist()">Checkout</span>
+                    <span class="products-value">£{{priceFormat(total_amount)}}</span>
                 </div>
                 <div class="mb-cart-box">
                 <ul class="border-all" v-for="(cart, product_index) in getAllCartArray"  v-if="product_index  > 0">
@@ -500,46 +508,52 @@
             },
 
 
-
-
             placeOrder(){
-                let vm = this;
+               let vm = this;
 
-                if (this.orderType == '') {
-                    vm.errorMessage = 'Please Select Order Type';
-                    setTimeout(function(){ vm.errorMessage = ""; }, 2000);
-                } else if(this.orderType == 'Delivery' && this.postalCode == "") {
-                    vm.errorMessage = 'Please Enter Your Postcode';
-                    setTimeout(function(){ vm.errorMessage = ""; }, 2000);
+               if (this.orderType == '') {
+                   vm.errorMessage = 'Please Select Order Type';
+                   setTimeout(function(){ vm.errorMessage = ""; }, 2000);
+               } else if(this.orderType == 'Delivery' && this.postalCode == "") {
+                   vm.errorMessage = 'Please Enter Your Postcode';
+                   setTimeout(function(){ vm.errorMessage = ""; }, 2000);
 
-                } else {
+               } else {
 
-                    axios({
-                        method: 'post',
-                        url: '/api/check-postal',
-                        data: {
-                            order_type: this.orderType,
-                            postal_code:this.postalCode
-                        },
-                    }).then(function (response) {
+                   if(this.orderType === 'Pickup'){
+                       vm.$router.push({name: 'check-out'});
+                   }else {
+                       axios({
+                           method: 'post',
+                           url: '/api/check-postal',
+                           data: {
+                               order_type: this.orderType,
+                               postal_code:this.postalCode
+                           },
+                       }).then(function (response) {
 
-                        if(response.data.error === undefined){
-                            vm.errorMessage = response.data.data.amount;
-                            vm.$store.commit('setDeliveryCharges', response.data.data.amount);
-                            vm.$store.commit('setOrderType', vm.orderType);
-                            vm.$store.commit('setPostalCode', vm.postalCode);
-                            vm.$router.push({name: 'check-out'})
+                           if(response.data.error === undefined){
+                               vm.errorMessage = response.data.data.amount;
+                               vm.$store.commit('setDeliveryCharges', response.data.data.amount);
+                               vm.$store.commit('setOrderType', vm.orderType);
+                               vm.$store.commit('setPostalCode', vm.postalCode);
+                               vm.$router.push({name: 'check-out'})
 
-                        }else {
-                            vm.errorMessage = 'We are not providing food in your area';
-                        }
-                    })
-                    .catch(function (response) {
-                        //handle error
-                        console.log(response);
-                    });
-                }
-           },
+                           }else {
+                               vm.errorMessage = 'We are not providing food in your area';
+                           }
+                       })
+                           .catch(function (response) {
+                               //handle error
+                               console.log(response);
+                           });
+
+                   }
+
+               }
+          },
+
+
             removeFromCart(index){
                 console.log('tets');
                 let cart_data = this.$store.getters.getAllCartArray;
@@ -1963,8 +1977,8 @@
         .mobile-cart-button{
             position: fixed;
             bottom: 0;
-            background-color: #01a8fb ;
-            border-color: #01a8fb ;
+            background-color: #bdd7e3 !important;
+            border-color: #bdd7e3 !important;
             font-weight: 600;
             font-size: 16px;
             width: 100%;
@@ -2137,9 +2151,10 @@
         margin-top: 0;
         padding-top: 0 !important;
         border-right: 1px solid rgba(0,0,0,0);
-        display: none;
     }
-
+    .cart-menu-fixed .offset-categories {
+        width: 100% !important;
+    }
     .business > div.dishes-wrapper {
         padding-top: 2px !important;
     }
@@ -2152,11 +2167,17 @@
     }
 
     @media (max-width: 767px) {
-        .cart-menu-fixed .offset-categories{
-            width:100%;
+        .cart-menu-fixed .offset-categories {
+            width: 100%;
+            z-index: 2;
         }
+
         .cart-menu-fixed .business > div.dishes-wrapper {
             padding-top: 210px !important;
+        }
+        .mealactions a {
+            display: inline-block;
+            margin-right: 24px;
         }
     }
 
