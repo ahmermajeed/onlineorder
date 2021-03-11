@@ -31,14 +31,14 @@
                 <div class="header-bottom-section">
                     <div class="container">
                         <div class="row align-items-center">
-                            <div class="col-lg-3 col-md-3 col-sm-3">
+                            <div class="col-2 col-md-2">
                                 <router-link :to="{ path: '/'}">
                                      <a class="navbar-brand js-scroll-trigger main-logo" href="javascript:;">
-                                        <img src="/images/theme-3/big-logo.png">
+                                        <img src="/images/theme-4/food-master.png">
                                     </a>
                                 </router-link>
                             </div>
-                            <div class="col-lg-6 col-md-9 col-sm-6">
+                            <div class="col-8 col-md-8">
                                 <nav class="navbar navbar-expand-lg navbar-light justify-content-end main-menu p-0">
                                   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsiv" aria-controls="navbarResponsiv" aria-expanded="false" aria-label="Toggle navigation">
                                     <span class="navbar-toggler-icon"></span>
@@ -51,7 +51,7 @@
                                         <li class="nav-item "> <router-link :to="{ path: '/feedback'}"><a class="nav-link js-scroll-trigger" >Feedback</a></router-link></li>
                                         <li class="nav-item">
                                             <a href="#" @click="openAllergy" class="nav-link">Allergy Information</a>
-                                        </li>
+                                        </li> 
 
                                         <li class="nav-item">
                                             <a href="#" class="nav-link" @click="openMenu">Our Menu</a>
@@ -64,13 +64,12 @@
                                   </div>
                                 </nav>
                             </div>
-                            <div class="col-lg-3 col-md-3 col-sm-3 header-top-section">
-                                <div class="header-icon float-right">
+                            <div class="col-2 col-md-2 header-top-section">
+                                <div class="header-icon float-right"> 
                                    <ul>
                                        <li><a href="#"><i class="icon-facebook"></i></a></li>
                                        <li><a href="#"><i class="icon-twitter"></i></a></li>
                                        <li><a href="#"><i class="icon-instagram-symbol"></i></a></li>
-                                       <li><a href="#"><i class="icon-linkedin"></i></a></li>
                                    </ul> 
                                 </div>
                             </div>  
@@ -82,7 +81,7 @@
             <div class="header-bottom section-fullwidth">
                 <div class="container">
                     <div class="row">
-                        <div class=" col-8">
+                        <div class="  col-lg-8 col-md-7 col-sm-12">
                            <div class="contact-bnner">
                                 <div class="head-taj mb-3">
                                     <h2>The Passion for the Perfect Taste</h2>
@@ -101,7 +100,7 @@
                             </div> 
                         </div>
                         <div class="col-1"></div>
-                        <div class="col-3">
+                        <div class="col-lg-3 col-md-4 col-sm-12">
                             <div class="postal-code">
                                 <div class="search-res" v-if="this.$route.name !='online-order'">
                                     <img src="images/theme-4/form-banner.png">

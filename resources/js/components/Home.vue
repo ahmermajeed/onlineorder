@@ -564,10 +564,13 @@
                     <div class="discover-content">
                          <div class="row">
                             <div class="col-lg-3 col-md-12 col-sm-12">
-                                <div class="d-offers">
+                                <div class="d-offers text-center">
                                    <h2>Discover Our Offers</h2>
-                                   <p>Check out our offers<br> and follow us on <br><span>Facebook</span>and<span>Instagram</span></p>
-                                   <img src="images/theme-3/d-offer.png">
+                                   <p>Check out our offers and follow us on <br><span>Facebook</span>and<span>Instagram</span></p>
+                                   <img src="images/theme-4/discovery-img.png">
+                                   <button type="button" class="btn btn-warning"  v-on:click="checkPostCode">
+                                          <span>Submit! </span>
+                                    </button>
 
                                 </div>
                             </div> 
@@ -579,12 +582,13 @@
                                                 <div class="d-content">
                                                     <h4>Chicken Bucket</h4>
                                                     <p>6 Pieces Chicken<br>Chips (L)<br>1.5ltr Pepsi</p>
-                                                    <div class="pries">
-                                                        <strong>£21.00</strong>
-                                                    </div>
+                                                    
                                                     
                                                 </div>
                                                 <div class="d-img">
+                                                    <div class="pries text-right">
+                                                        <strong>£21.00</strong>
+                                                    </div>
                                                         <img src="images/theme-3/d-pro.png">
                                                         
                                                 </div>
@@ -598,12 +602,13 @@
                                                 <div class="d-content">
                                                     <h4>Chicken Bucket</h4>
                                                     <p>6 Pieces Chicken<br>Chips (L)<br>1.5ltr Pepsi</p>
-                                                    <div class="pries">
-                                                        <strong>£21.00</strong>
-                                                    </div>
+                                                    
                                                     
                                                 </div>
                                                 <div class="d-img">
+                                                    <div class="pries text-right">
+                                                        <strong>£21.00</strong>
+                                                    </div>
                                                         <img src="images/theme-3/d-pro.png">
                                                         
                                                 </div>
@@ -617,12 +622,13 @@
                                                 <div class="d-content">
                                                     <h4>Chicken Bucket</h4>
                                                     <p>6 Pieces Chicken<br>Chips (L)<br>1.5ltr Pepsi</p>
-                                                    <div class="pries">
-                                                        <strong>£21.00</strong>
-                                                    </div>
+                                                    
                                                     
                                                 </div>
                                                 <div class="d-img">
+                                                    <div class="pries text-right">
+                                                        <strong>£21.00</strong>
+                                                    </div>
                                                         <img src="images/theme-3/d-pro.png">
                                                         
                                                 </div>
@@ -636,12 +642,13 @@
                                                 <div class="d-content">
                                                     <h4>Chicken Bucket</h4>
                                                     <p>6 Pieces Chicken<br>Chips (L)<br>1.5ltr Pepsi</p>
-                                                    <div class="pries">
-                                                        <strong>£21.00</strong>
-                                                    </div>
+                                                    
                                                     
                                                 </div>
                                                 <div class="d-img">
+                                                    <div class="pries text-right">
+                                                        <strong>£21.00</strong>
+                                                    </div>
                                                         <img src="images/theme-3/d-pro.png">
                                                         
                                                 </div>
@@ -650,12 +657,9 @@
                                             </div>
                                             
                                         </div>
-                                    
                                     
                                     </div>
-                                    <button type="button" class="btn  btn-danger"  v-on:click="checkPostCode">
-                                          <span>Submit! </span>
-                                    </button>
+                                    
                                 
                                     
                                 </div>
@@ -855,53 +859,51 @@
             <div class="container">
                 <div class="table-booked pattern">
                     <div class="row">
-                        <div class="col-lg-2 col-md-1 col-sm-1">
-                              <!--   <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2429.2156154533595!2d-1.822215984654894!3d52.49333647980907!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4870bae64827134d%3A0x2e1a51de3c022c50!2s888a%20Washwood%20Heath%20Rd%2C%20Ward%20End%2C%20Birmingham%20B8%202NB%2C%20UK!5e0!3m2!1sen!2s!4v1592827053509!5m2!1sen!2s" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0" width="100%" height="450"></iframe> -->
-                        </div>
-                        <div class="col-lg-8 col-md-10 col-sm-12">
+                        <div class="col-12">
                             <div class="form-box">
                                 <div class="row">
-                                    <div class="col-lg-4 col-md-5 col-sm-5">
-                                        <img src="images/theme-3/contact-img.png">
-                                         
-                                    </div>
-                                    <div class="col-lg-6 col-md-7 col-sm-7">
+                                    <div class="col-lg-4 col-md-12 col-sm-12">
+                                        
                                         <form>
                                             <div class="frm-body">
+                                                <h2>Let's go!<br><span>Join with our Platform</span></h2>
+                                                    <img src="images/theme-4/contact-after.png">
                                                 <div class="form-row">
-                                                    <h2>Let's go!<br>Join with our Platform</h2>
-                                                    <div class="form-group col-md-6">
+                                                    
+                                                    <div class="form-group col-md-12">
                                                        
                                                         <input type="text" class="form-control" id="" placeholder="Enter Your Name">
                                                     </div>
-                                                    <div class="form-group col-md-6">
+                                                    <div class="form-group col-md-12">
                                                        
                                                         <input type="email" class="form-control" id="" placeholder="Enter  email ">
                                                     </div>
-                                                </div>
-                                                <div class="form-row">
-                                                    <div class="form-group col-md-6">
+                                               
+                                                    <div class="form-group col-md-12">
                                                         
                                                         <input type="text" class="form-control" id="" placeholder="Enter Address">
                                                     </div>
-                                                    <div class="form-group col-md-6">
+                                                    <div class="form-group col-md-12">
                                                         
                                                         <input type="phone" class="form-control" id="" placeholder="Enter Number">
                                                     </div>
                                                 </div>
                                             </div>
-                                             <div class="frm-ftr view-btn text-left ">
-                                                   <button class="btn  btn-danger">Submit</button>
+                                             <div class="frm-ftr view-btn text-center ">
+                                                   <button class="btn  btn-warning">Submit</button>
                                             </div>
 
                                         </form>
+                                    </div>
+                                    <div class="col-lg-8 col-md-12 col-sm-12 map-img">
+                                       <img src="images/theme-4/map-cont.png">
                                     </div>
                                     
                                 </div>
                                 
                             </div>
                         </div>
-                        <div class="col-lg-2 col-md-1 col-sm-1"></div>
+                       
                         
                     </div>
                 </div>
