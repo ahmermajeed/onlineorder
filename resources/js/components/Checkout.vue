@@ -21,63 +21,33 @@
 
 
                                 <div class="col-12">
-                                    <div class="check-head">
-                                        <h2>Checkout</h2>
-                                    
-                                    </div>
-                                    
+
+
+                                </div>
+
+
+
+                                <div class="col-sm-12">
+                                    <label>{{orderType}} Date</label>
+                                    <select class="form-control" v-model="form.deliveryTime">
+                                        <option>As soon as possible</option>
+                                        <option v-for="slot in slots">{{slot}}</option>
+                                    </select>
+                                    <br>
                                 </div>
                                <!-- <div class="col-sm-6">
                                     <label class="customradiobutton radioiconed radio-inline mr-3">
                                         <input type="radio" value="Pickup" @change.prevent="showOrderType('pickup')"  v-model="form.order_type"><i class="fa fa-sign-language"></i> Pick up
                                     </label>
                                 </div>-->
-                                <div class="col-sm-12 cash-delivery section-delivery">
-                                    <h3>Order (Choose your Order Type) </h3> <span></span>
-                                    <label class="customradiobutton radioiconed radio-inline mr-3">
-                                        <input type="radio" value="Delivery" v-model="form.order_type" @change.prevent="showOrderType('getdelivery')" ><i class="fa fa-truck"></i> Delivery
 
-                                    </label>
-                                </div>
 
                                 <div class="col-12">
-                                    <div class="row" v-show="order_card == 'pickup'">
-                                        <div class="col-sm-6">
-                                            <label>Date</label>
-                                            <b-form-datepicker id="example-datepicker" v-model="value" class="mb-2"></b-form-datepicker>
-                                        </div>
-                                        <div class="col-sm-6">
-                                            <label>Time</label>
-                                            <b-form-timepicker v-model="value" locale="en"></b-form-timepicker>
-                                        </div>
 
 
 
+                                    <div class="row" v-show="orderType != 'Pickup'">
 
-                                    </div>
-
-                                    <div class="row" v-show="order_card == 'getdelivery'">
-
-                                        <div class="col-sm-12">
-                                            <label>Date</label>
-                                            <!--<b-form-datepicker id="example-datepicker" v-model="value" class="mb-2"></b-form-datepicker>-->
-                                            <VueCtkDateTimePicker min-date="todayDate" v-model="form.deliveryTime" />
-                                            <br>
-                                        </div>
-
-
-                                        <div class="col-sm-12 ">
-                                            <label class="customradiobutton radioiconed radio-inline mr-3">
-                                                <input type="radio" value="Asap" v-model="form.asap"  >Asap
-                                            </label>
-                                        </div>
-
-                                      
-
-                                       <!-- <div class="col-sm-6">
-                                            <label>Time</label>
-                                            <b-form-timepicker v-model="value" locale="en"></b-form-timepicker>
-                                        </div>-->
 
                                         <div class="col-12">
                                             <h3> Delivery Details</h3>
@@ -101,14 +71,8 @@
                                             <input type="text"   v-model="form.postal_code" class="form-control" placeholder="wc2h 9ah">
                                         </div>
                                     </div>
-                                    <div class="row">
-                                        <div class="col-sm-12 cash-delivery section-delivery">
-                                              <label class="customradiobutton radioiconed radio-inline">
-                                                  <input type="radio" value="collection" class="mr-2">Collection
-                                              </label>
-                                          </div>
-                                    </div>
-                                 
+
+
                                 </div>
                             </div>
 
@@ -130,7 +94,7 @@
                                     <input type="text" class="form-control"  v-model="form.number" placeholder="Enter Number">
                                 </div>
 
-                                
+
                             </div>
 
                             <div class="row border-dashed payment-sec">
@@ -207,7 +171,7 @@
                     <div class="order cart-box" id="cart-stiky">
                         <h3>Your Order </h3>
                         <div class="check-out-list">
-                           
+
 
                             <div class="table-holder">
 
@@ -216,7 +180,7 @@
                                     <tr v-for="(cart, product_index) in getAllCartArray"  v-if="product_index  > 0">
                                         <!-- <td class=highlighted>
                                         </td> -->
-                                        
+
                                         <td class="order-name">
                                             <div class="check-order">{{cart.product_name}}</div>
                                             <div  v-if="cart.extras" v-for="(extra, extra_index) in cart.extras" >
@@ -277,6 +241,7 @@
                 cat_count: false,
                 total_amount:0,
                 card : false,
+                orderType:'',
                 order_card : false,
                 form: {
                     address: '',
@@ -306,9 +271,14 @@
                 discountedAmount:0,
                 discountedPercentAge:10,
                 finalAmount:0,
+                interval: 45,
 
 
             };
+        },
+
+        created(){
+            this.getTimeSlots();
         },
         mounted() {
             if(this.$store.getters.getAllCartArray.length > 0) {
@@ -321,32 +291,38 @@
             twentyMinutesLater.setMinutes(twentyMinutesLater.getMinutes() + 50);
 
             this.form.deliveryTime = twentyMinutesLater;
+            this.orderType = this.$store.getters.getOrderType;
 
             this.scrollToMain();
             this.getOffers();
 
+
         },
         methods: {
-           getOffers(){
-                let  _this = this;
-                _this.loading  = true;
+
+            getOffers() {
+                let _this = this;
+                _this.loading = true;
                 axios.get('/api/offer')
                     .then((response) => {
-                        _this.offers =  response.data.data;
+                        _this.offers = response.data.data;
 
-                        _this.loading  = false;
+                        _this.loading = false;
                     });
             },
 
-            priceFormat (num) {
-                return  parseFloat(num).toFixed(2);
+            priceFormat(num) {
+                return parseFloat(num).toFixed(2);
             },
-            showCard(val){
+
+            showCard(val) {
                 this.card = val;
             },
-            showOrderType(val){
+
+            showOrderType(val) {
                 this.order_card = val;
             },
+
             scrollToMain() {
                 let element = document.getElementById("error_msg");
                 element.scrollIntoView({behavior: "instant", block: "start"});
@@ -357,8 +333,7 @@
                 element.scrollIntoView({behavior: "instant", block: "start"});
             },
 
-            placeOrder()
-            {
+            placeOrder() {
                 let error = [];
                 let _this = this;
                 if (this.form.order_type != '') {
@@ -391,7 +366,7 @@
 
                     if (this.form.payment_type === "") {
                         error.push('Please Add Your Payment Type');
-                    }else if(this.form.payment_type == 'Credit/Debit Card') {
+                    } else if (this.form.payment_type == 'Credit/Debit Card') {
                         if (this.form.card_holder_name === "") {
                             error.push('Please Add Card Holder Name');
                         }
@@ -410,16 +385,14 @@
                         }
                     }
 
-                } else {
-                    error.push('Please Choose Your Order Type');
-                }
+                } 
                 this.errorMessage = error;
 
                 if (this.errorMessage.length > 0) {
                     _this.scrollToTop();
-                }else {
+                } else {
                     let vm = this;
-                    if(this.form.order_type == 'Pickup'){
+                    if (vm.orderType == 'Pickup') {
                         vm.form.address = '---';
                         vm.form.street = '---';
                         vm.form.postal_code = '---';
@@ -434,7 +407,7 @@
                         'delivery_address': vm.form.address + " " + vm.form.street + " " + vm.form.postal_code,
                         'order_details': this.$store.getters.getAllCartArray,
                         'user_data': this.form,
-                        'order_type': this.form.order_type
+                        'order_type': vm.orderType
                     };
                     console.log(data);
                     setTimeout(() => {
@@ -463,7 +436,19 @@
 
                     }, 1000);
                 }
-                }
+            },
+
+            getTimeSlots() {
+                let _this = this;
+                _this.loading = true;
+                axios.get('/api/get-time-slots/' + _this.interval)
+                    .then((response) => {
+                        _this.slots = response.data;
+
+                        _this.loading = false;
+                    });
+            },
+
 
 
 
@@ -497,5 +482,5 @@
 
 
 <style>
-    
+
 </style>

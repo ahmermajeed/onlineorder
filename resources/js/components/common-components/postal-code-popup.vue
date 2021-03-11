@@ -1,16 +1,16 @@
 <template>
     <div>
-        <b-modal 
-            id="postal-code-popup"  
-            @hidden="onHidden" 
-            centered  
-            ok-variant="primary" 
-            title-tag="h6"   
+        <b-modal
+            id="postal-code-popup"
+            @hidden="onHidden"
+            centered
+            ok-variant="primary"
+            title-tag="h6"
             size="sm"
-            :hide-footer=true  
-            ref="myModalRef" 
-            custom-modal 
-            no-close-on-backdrop 
+            :hide-footer=true
+            ref="myModalRef"
+            custom-modal
+            no-close-on-backdrop
             modal-class="postal-code-modal custom-modal">
 
             <template #modal-title>Choose your order type</template>
@@ -44,7 +44,7 @@
                 </form>
 
             </div>
-            
+
 
         </b-modal>
     </div>
@@ -95,44 +95,52 @@
                     setTimeout(function(){ vm.errorMessage = ""; }, 2000);
                 } else {
 
-                    /*if(vm.order_type == "Pickup")
-                        vm.postal_code = "B8"*/
 
-                    axios({
-                        method: 'post',
-                        url: '/api/check-postal',
-                        data: {
-                            order_type: this.order_type,
-                            postal_code:this.postal_code
-                        },
-                    }).then(function (response) {
-                        if(response.data.error === undefined){
-                            vm.error_message = response.data.data.amount;
-                            vm.$store.commit('setDeliveryCharges', response.data.data.amount);
-                            vm.$store.commit('setOrderType', vm.order_type);
-                            vm.$store.commit('setPostalCode', vm.postal_code);
-                            vm.$router.push({path: 'online-order'})
+                    if(vm.order_type == "Pickup"){
+                        vm.$store.commit('setOrderType', 'Pickup');
 
-                        }else {
-                            vm.error_message = 'We are not providing food in your area.';
-                        }
-                    })
-                        .catch(function (response) {
-                            //handle error
-                            console.log(response);
-                        });
+                        vm.$router.push({path: 'online-order'})
+                    }else {
+                        axios({
+                            method: 'post',
+                            url: '/api/check-postal',
+                            data: {
+                                order_type: this.order_type,
+                                postal_code:this.postal_code
+                            },
+                        }).then(function (response) {
+                            if(response.data.error === undefined){
+                                vm.error_message = response.data.data.amount;
+                                vm.$store.commit('setDeliveryCharges', response.data.data.amount);
+                                vm.$store.commit('setOrderType', vm.order_type);
+                                vm.$store.commit('setPostalCode', vm.postal_code);
+                                vm.$router.push({path: 'online-order'})
+
+                            }else {
+                                vm.error_message = 'We are not providing food in your area.';
+                            }
+                        })
+                            .catch(function (response) {
+                                //handle error
+                                console.log(response);
+                            });
+                    }
+
+
+
                 }
 
             },
 
             showPostalCode() {
                 let self = this;
-
-                if(self.order_type == "Delivery")
+                if(self.order_type == "Delivery"){
                     self.showPostal = true
-                else
+                }
+                else{
                     self.showPostal = false
-            }
+                }
+           }
         },
         watch: {
             showModalProp(value) {

@@ -10,7 +10,7 @@
                                 <div class="lp-sidebar-title cate-heading">
                                     <h3>Categories</h3>
                                 </div>
-                                
+
                                 <div class="list-group list-group-flush cate-list">
                                     <a href="#"   @click.prevent="getProductAgainstCategories(false)" class="list-group-item">All<span class="float-right badge badge-light round"></span> </a>
 
@@ -76,7 +76,7 @@
                                 <h3 class="text-left">Your Cart</h3>
                                 <img src="../../../images/cart.png">
                             </div>
-                    
+
                             <h5 v-if="getAllCartArray.length == 1" class="mt-2">No item in your cart</h5>
 
                             <div class="food-allergy" @click="foodAllergyPopup">
@@ -113,7 +113,7 @@
 
                             <div class="lp-sidebar-body">
                                 <div class="img-box text-center">
-                
+
                                 </div>
                                 <div class="table-holder">
                                     <table class=tbl_cart_list>
@@ -126,8 +126,7 @@
                                                     <strong>{{extra.group_name}}:</strong> {{extra.choice}}
                                                 </div>
                                                 <td  v-if="!cart.extras" class="p-0">£ {{priceFormat(cart.price * cart.quantity) }}</td>
-                                                <td class="order-priecs"  >£{{priceFormat(cart.single_product_total_amount)}} </td>
-                                               
+                                                <td class="order-priecs"  v-if="cart.extras">£{{priceFormat(cart.single_product_total_amount)}} </td>
                                             </td>
                                             <td class="order-quty">
 
@@ -135,25 +134,25 @@
                                                     <a class="icon-up"  href="#" @click.prevent="quantityAddInCart(product_index)"> <i class="icon-plus"  ></i></a>
                                                     <span class="text-center">{{ cart.quantity}}  <!-- <i>X</i> --></span>
                                                     <a  class="icon-down"  href="#"  @click.prevent="quantityMinusInCart(product_index)"> <i class="icon-subtract"></i></a>
-                                                </div> 
-                                                
+                                                </div>
+
                                             </td>
                                             <td>
                                              <span class="mealactions">
                                                     <a href="#"  @click.prevent="updateProduct(cart.product_id,cart,product_index)"> <i v-b-tooltip.hover title="Edit Meal"  class="icon-edit-1"></i></a>
                                                     <a href="#" class="close-icon" @click.prevent="removeFromCart(product_index)"> <i v-b-tooltip.hover title="Remove Meal" class="icon-delete" ></i></a>
                                                 </span>
-                                           </td> 
+                                           </td>
 
-                                            
+
                                         </tr>
                                     </table>
                                 </div>
                                 <div class="cart-btn mt-3 mb-3 text-center">
                                      <button class="anima-btn custom-btn move-eff btn btn-rounded-danger" @click="placeOrder()"><span>Checkout</span> <!-- <i class="fas fa-long-arrow-alt-right"></i> --></button>
-                                </div> 
+                                </div>
                             </div>
-                            
+
                         </div>
                         <div class="mobile-cart-button" v-bind:class="{ cartheight: cart_height }" v-if="getAllCartArray.length > 1">
                 <div class="inner">
@@ -163,7 +162,7 @@
                     <span class="products-value">£{{priceFormat(total_amount)}}</span>
                     <span class="text" @click="opencartlist()">Checkout</span>
 
-                    
+
                 </div>
                 <ul v-for="(cart, product_index) in getAllCartArray"  v-if="product_index  > 0">
                     <li>
@@ -227,24 +226,24 @@
                     </svg>{{getAllCartArray.length - 1}}
                      <span class="products-value">£{{priceFormat(total_amount)}}</span>
                 </span>
-                   
+
                     <span class="text chek-out-btn btn btn-rounded-danger" @click="opencartlist()">Checkout</span>
-                    
+
                    <!--   <button class=" chek-out-btn anima-btn custom-btn move-eff btn btn-rounded-danger " @click="opencartlist()"><span>Checkout</span><i class="fas fa-long-arrow-alt-right"></i></button>  -->
                 </div>
                 <div class="mb-cart-box">
                 <ul class="border-all" v-for="(cart, product_index) in getAllCartArray"  v-if="product_index  > 0">
                     <li>
-                       
+
                         <!-- <span class="meal">
                              <span class="qty">
                                <i class="fa fa-angle-up" @click="quantityAddInCart(product_index)"></i>
-                              
+
                                <i class="fa fa-angle-down" @click="quantityMinusInCart(product_index)"></i>
                         </span> -->
                          <h3> {{ cart.quantity}} {{cart.product_name}}</h3>
-                        
-                           
+
+
                             <ul class="" v-if="cart.extras" v-for="(extra, extra_index) in cart.extras">
                                 <li><h3 class="font-weight:800px;">{{extra.group_name}}:
                                 {{extra.choice}}</h3> </li>
@@ -252,17 +251,17 @@
 
 <!--                                <a href="#"  @click="updateProduct(cart.product_id,cart,product_index)"><i v-b-tooltip.hover title="Edit Meal" class="fas fa-pen">
 
-</i></a>-->       
+</i></a>-->
                             <span class="price">£{{priceFormat(cart.single_product_total_amount)}}</span>
                               <a href="#"  @click.prevent="removeFromCart(product_index)"> <i                                 v-b-tooltip.hover title="Remove Meal" class="icon-delete"></i></a>
 
-                               
+
                             </span>
-                                
+
                             </ul>
-                            
+
                         </span>
-                       
+
                     </li>
                 </ul>
                 </div>
@@ -462,7 +461,7 @@
                             $('html,body').animate({
                                 scrollTop: $(".product").offset().top},
                                 'slow');
-                        });           
+                        });
 
                     });
             },
@@ -514,30 +513,38 @@
 
                 } else {
 
-                    axios({
-                        method: 'post',
-                        url: '/api/check-postal',
-                        data: {
-                            order_type: this.orderType,
-                            postal_code:this.postalCode
-                        },
-                    }).then(function (response) {
+                    if(this.orderType === 'Pickup'){
+                        vm.$router.push({name: 'check-out'});
+                    }else {
+                        axios({
+                            method: 'post',
+                            url: '/api/check-postal',
+                            data: {
+                                order_type: this.orderType,
+                                postal_code:this.postalCode
+                            },
+                        }).then(function (response) {
 
-                        if(response.data.error === undefined){
-                            vm.errorMessage = response.data.data.amount;
-                            vm.$store.commit('setDeliveryCharges', response.data.data.amount);
-                            vm.$store.commit('setOrderType', vm.orderType);
-                            vm.$store.commit('setPostalCode', vm.postalCode);
-                            vm.$router.push({name: 'check-out'})
+                            if(response.data.error === undefined){
+                                vm.errorMessage = response.data.data.amount;
+                                vm.$store.commit('setDeliveryCharges', response.data.data.amount);
+                                vm.$store.commit('setOrderType', vm.orderType);
+                                vm.$store.commit('setPostalCode', vm.postalCode);
+                                vm.$router.push({name: 'check-out'})
 
-                        }else {
-                            vm.errorMessage = 'We are not providing food in your area';
-                        }
-                    })
-                    .catch(function (response) {
-                        //handle error
-                        console.log(response);
-                    });
+                            }else {
+                                vm.errorMessage = 'We are not providing food in your area';
+                            }
+                        })
+                            .catch(function (response) {
+                                //handle error
+                                console.log(response);
+                            });
+
+                    }
+
+
+
                 }
            },
             removeFromCart(index){
@@ -980,7 +987,7 @@
         background:#fff;
     }
 
-    
+
     #cart-stiky > img {
         max-width:100%;
     }
@@ -995,7 +1002,7 @@
         background: #ccc;
     }
 
-    
+
 
     .cart .order .table-holder {
         overflow-y: scroll;
@@ -1830,7 +1837,7 @@
         float:right;
     }
 
-    
+
     @-webkit-keyframes spinner {
         0% {
             -webkit-transform: rotate(0deg);
