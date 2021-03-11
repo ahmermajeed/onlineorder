@@ -152,13 +152,14 @@
                                         </div>
                                     </div>
                                     <div class="row mt-3">
-                                        <div class="col-sm-4" v-if="finalAmount >= 10">
+<!--                                        v-if="finalAmount >= 10"-->
+                                        <div class="col-sm-4" >
                                             <button class="subscribe btn btn-rounded-danger btn-block" type="button" @click="placeOrder()"> Confirm  </button>
                                         </div>
 
-                                        <div class="col-sm-12" v-else>
-                                            <p style="color:red;text-align:center"> Your Order Must be greater than £10 </p>
-                                        </div>
+<!--                                        <div class="col-sm-12" v-else>-->
+<!--                                            <p style="color:red;text-align:center"> Your Order Must be greater than £10 </p>-->
+<!--                                        </div>-->
 
                                     </div>
                                 </div>
@@ -259,7 +260,7 @@
                     expiration_month:'',
                     expiration_year:'',
                     cvc:'',
-                    deliveryTime: '',
+                    deliveryTime: 'As soon as possible',
                     asap: ''
                 },
                 foods: [{ text: 'Select One', value: null }, 'Carrots', 'Beans', 'Tomatoes', 'Corn'],
@@ -277,10 +278,9 @@
             };
         },
 
-        created(){
-            this.getTimeSlots();
-        },
         mounted() {
+            this.getTimeSlots();
+
             if(this.$store.getters.getAllCartArray.length > 0) {
                 let total = 0;
                 for( var key in this.$store.getters.getAllCartArray ) {
@@ -290,7 +290,8 @@
             var twentyMinutesLater = new Date();
             twentyMinutesLater.setMinutes(twentyMinutesLater.getMinutes() + 50);
 
-            this.form.deliveryTime = twentyMinutesLater;
+            this.form.deliveryTime = 'As soon as possible';
+
             this.orderType = this.$store.getters.getOrderType;
 
             this.scrollToMain();
@@ -385,7 +386,7 @@
                         }
                     }
 
-                } 
+                }
                 this.errorMessage = error;
 
                 if (this.errorMessage.length > 0) {
