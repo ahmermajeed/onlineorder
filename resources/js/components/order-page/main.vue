@@ -182,7 +182,7 @@
             </div>
         </section>
         <div class="loading" v-if="loading">Loading&#8230;</div>
-        <div class="container-fluid"
+        <div class="container-fluid cart-menu-fixed"
         :class="{'cart-menu-fixed': scrolled}"  v-on="handleScroll()">
             <div class="row full">
 
@@ -2055,7 +2055,9 @@
         margin-top: 0;
         padding-top: 0 !important;
         border-right: 1px solid rgba(0,0,0,0);
-        display: none;
+    }
+    .cart-menu-fixed .offset-categories{
+        width: 100%;
     }
 
     .business > div.dishes-wrapper {
@@ -2070,11 +2072,17 @@
     }
 
     @media (max-width: 767px) {
-        .cart-menu-fixed .offset-categories{
-            width:100%;
+        .cart-menu-fixed .offset-categories {
+            width: 100%;
+            z-index: 2;
         }
+
         .cart-menu-fixed .business > div.dishes-wrapper {
             padding-top: 210px !important;
+        }
+        .mealactions a {
+            display: inline-block;
+            margin-right: 24px;
         }
     }
 

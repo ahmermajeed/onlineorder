@@ -84,7 +84,7 @@
                 </div>
             </div>
             <!-- </nav> -->
-            <div class="header-bottom section-fullwidth">
+            <div class="header-bottom section-fullwidth" v-if="this.$route.name !='online-order'">
                 <div class="container">
                     <div class="row">
                         <div class="col-lg-4 col-xl-5">
@@ -112,7 +112,7 @@
                                 </div>
                                 <div class="col-lg-8 col-md-8 col-sm-12 mt-0 px-0">
                                     <div class="postal-code">
-                                        <div class="search-res" v-if="this.$route.name !='online-order'">
+                                        <div class="search-res" >
                                  
                                     </div>
 
