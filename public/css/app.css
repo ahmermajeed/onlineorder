@@ -15984,19 +15984,6 @@ ul {
   border-radius: 20px !important;
 }
 
-@media (max-width: 767.98px) {
-  .mobile-cart-button .inner span.text:after {
-    position: absolute !important;
-    top: 19px;
-    left: 45% !important;
-    font-size: 20px !important;
-    content: "\E902" !important;
-    color: #909090;
-    font-family: "icomoon" !important;
-    transform: rotate(178deg);
-  }
-}
-
 /***************check out end **********************/
 
 /***************Deal-section-start*******************/
