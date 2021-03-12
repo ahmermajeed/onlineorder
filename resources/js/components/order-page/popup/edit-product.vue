@@ -65,13 +65,16 @@
                                 </div>
                                 <div class="select-num text-right">
                                     <div class="qunt-btn">
-                                         <button type="button" class="btn-minus" @click.prevent="minusQuantity()">
-                                       <i class="icon-subtract"></i>
-                                        </button>
-                                        <span class="btn-badge-count">{{product_quantity}}</span>   
                                         <button type="button" class="btn-plus"  @click.prevent="plusQuantity()" >
                                             <i class="icon-plus"></i>
                                         </button>
+                                     
+                                        <span class="btn-badge-count">{{product_quantity}}</span> 
+
+                                        <button type="button" class="btn-minus" @click.prevent="minusQuantity()">
+                                       <i class="icon-subtract"></i>
+                                        </button> 
+                                      
                                     </div>
                                     
                                 </div>

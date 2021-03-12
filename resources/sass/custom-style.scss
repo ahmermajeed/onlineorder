@@ -2104,27 +2104,6 @@ ul {
     }
 }
 
-
-
-.mobile-cart-button .inner span.text:after {
-    @include media-breakpoint-down(sm) {
-             position: absolute !important;
-            top: 19px;
-            left: 45% !important;
-            font-size: 20px !important;
-           content: "\e902" !important;
-            color: #909090;
-            font-family: 'icomoon' !important;
-            transform: rotate(178deg);
-        }
-
-   
-}
-
-
-
-
-
 /***************check out end **********************/
 
 /***************Deal-section-start*******************/
@@ -2260,5 +2239,14 @@ ul {
 }
 .modal-content .modal-header .modal-title {
     font-size: 15px;
+}
+.cart-menu-fixed .offset-categories {
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+    width: calc(100% - 25%);
+    margin-top: 0;
+    padding-top: 0 !important;
+    border-right: 1px solid rgba(0,0,0,0);
 }
 /***************Deal-section-end*******************/
