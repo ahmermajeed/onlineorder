@@ -88,7 +88,7 @@
                     </div>
                     <div class="row mt-3">
                         <div class="col text-right">
-                            <button  @click.prevent="addToCart()" class="custom-btn add-count-button btn  btn-danger">Update</button>
+                            <button  @click.prevent="addToCart()" class="custom-btn add-count-button btn  btn-warning">Update</button>
                         </div>
                     </div>
                 </form>

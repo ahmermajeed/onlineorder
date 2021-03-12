@@ -10,7 +10,7 @@
                             <input type="text"  class="form-control form-control-rounded" v-model="postal_code" placeholder="Enter your Postal code">
                         </div>
 
-                        <button type="button" class="btn  btn-danger"  v-on:click="checkPostCode">
+                        <button type="button" class="btn  btn-warning"  v-on:click="checkPostCode">
                             <span>Submit!</span>
                         </button>
                         <p class="error mt-2">{{error_message}} </p>

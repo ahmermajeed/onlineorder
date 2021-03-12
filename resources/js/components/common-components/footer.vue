@@ -5,13 +5,13 @@
                 <div class="inner-ftr">
                     <div class="container">
                         <div class="row">
-                            <div class="col-lg-3 col-md-2 footer-section-1 footer-space">
+                            <div class="col-lg-3 col-md-12 footer-section-1 footer-space">
                                 <div class="BIG SIG">
                                    <a href="#"><img src="images/theme-4/food-master.png"></a> 
                                    <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</p> 
                                 </div>
                             </div>
-                            <div class="col-lg-9 col-md-6 footer-section-2 ">
+                            <div class="col-lg-9 col-md-12 footer-section-2 ">
                                 <div class="footer-section-right">
                                     <div class="row">
                                     <div class="col-lg-12">
@@ -23,7 +23,7 @@
                                            </ul>
                                         </div>
                                     </div>
-                                    <div class="col-lg-4">
+                                    <div class="col-lg-4 col-md-4 col-sm-12">
                                        <div class="footer-menu-link">
                                             <h3>QUICK LINK</h3>
                                             <ul class="Opening-hours">
@@ -42,7 +42,7 @@
                                             </ul> 
                                         </div> 
                                     </div>
-                                    <div class="col-lg-4">
+                                    <div class="col-lg-4 col-md-4 col-sm-12">
                                         <div class="footer-section-3 footer-space-3 text-center">
                                             <h3>Opening Hours</h3>
                                         <ul class="Opening-hours">
@@ -61,7 +61,7 @@
                                         </ul>
                                         </div> 
                                     </div>
-                                    <div class="col-lg-4">
+                                    <div class="col-lg-4 col-md-4 col-sm-12">
                                         <div class="follow-us">
                                             <h3>Follow</h3>
                                         </div>

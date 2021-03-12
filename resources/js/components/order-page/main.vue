@@ -114,7 +114,7 @@
                                     </table>
                                 </div>
                                 <div class="cart-btn mt-3 mb-3 text-center">
-                                     <button class="anima-btn custom-btn move-eff btn  btn-danger" @click="placeOrder()"><span>Checkout</span> <!-- <i class="fas fa-long-arrow-alt-right"></i> --></button>
+                                     <button class="anima-btn custom-btn move-eff btn btn-warning" @click="placeOrder()"><span>Checkout</span> <!-- <i class="fas fa-long-arrow-alt-right"></i> --></button>
                                 </div> 
                             </div>
                             
@@ -192,7 +192,7 @@
                      <span class="products-value">£{{priceFormat(total_amount)}}</span>
                 </span>
                    
-                    <span class="text chek-out-btn btn  btn-danger" @click="opencartlist()">Checkout</span>
+                    <span class="text chek-out-btn btn  btn-warning" @click="opencartlist()">Checkout</span>
                     
                    <!--   <button class=" chek-out-btn anima-btn custom-btn move-eff btn btn-rounded-danger " @click="opencartlist()"><span>Checkout</span><i class="fas fa-long-arrow-alt-right"></i></button>  -->
                 </div>
@@ -231,7 +231,7 @@
                 </ul>
                 </div>
                 <div class="confirm-btn">
-                    <button class="anima-btn btn  btn-danger btn move-eff" @click="placeOrder()"><span>Confirm Order</span></button>
+                    <button class="anima-btn btn  btn-warning btn move-eff" @click="placeOrder()"><span>Confirm Order</span></button>
                 </div>
             </div>
         </div>

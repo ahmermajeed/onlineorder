@@ -333,6 +333,9 @@ ul {
     }
     .footer-section-3 { 
         margin-right: 42%;
+         @include media-breakpoint-only(md) {
+            margin-right: 0%;
+         }
         @include media-breakpoint-down(sm) {
                 margin-right: 0px;
                 text-align: left !important;
@@ -383,6 +386,9 @@ ul {
         }
         a {
            padding-right: 28px;
+           @include media-breakpoint-down(md) {
+                padding-right: 12px;
+            }
         }
 
 
@@ -390,6 +396,11 @@ ul {
             border-top: 1px solid #b7b7b7;
             border-bottom: 1px solid #b7b7b7;
             padding: 9px 0px 9px 0px;
+            width: 82%;
+            @include media-breakpoint-down(md) {
+                width: 100%;
+                margin-top: 30px;
+            }
 
             @include media-breakpoint-down(sm) {
                 padding-top: 20px;
@@ -415,13 +426,15 @@ ul {
             text-transform: uppercase;
             font-weight: bold;
             margin-bottom: 0px;
-            padding: 20px 0px 20px 0px;
         }
+
     }
 
 
 
     .icons {
+         padding-top: 20px;
+
         i {
             color: #fff;
         }
@@ -484,8 +497,11 @@ ul {
             @include media-breakpoint-down(sm) {
                     margin-left: 0px;
             }
+            @include media-breakpoint-down(md) {
+                  margin-left: 0px;
             }
         }
+    }
 
         h3 {
             font-size: 16px;
@@ -1638,7 +1654,7 @@ ul {
                 font-size: 14px;
                 font-weight: 700;
                 padding-top: 7px;
-                color: $brown;
+                color: $orange;
             }
 
             .reactions {
@@ -1671,9 +1687,7 @@ ul {
                     text-align: right;
 
                     @include media-breakpoint-down(sm) {
-                        width: 33%;
-                        float: none;
-                        text-align: right;
+                       
                         margin-top: 15px;
                     }
 
@@ -2132,7 +2146,7 @@ ul {
                 width: 48%;
                 padding: 8px 10px;
                 border: 1px solid #e1e1e1;
-                 color: $brown;
+                 color: $orange;
                 font-size: 16px;
                 font-weight: 700;
                 position: relative;
@@ -2162,7 +2176,7 @@ ul {
             label {
                 font-size: 14px;
                 font-weight: bold;
-                color: $brown;
+                color: $orange;
             }
             .form-control {
               

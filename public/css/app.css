@@ -14112,6 +14112,12 @@ ul {
   margin-right: 42%;
 }
 
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .main-ftr .footer-section-3 {
+    margin-right: 0%;
+  }
+}
+
 @media (max-width: 767.98px) {
   .main-ftr .footer-section-3 {
     margin-right: 0px;
@@ -14169,10 +14175,24 @@ ul {
   padding-right: 28px;
 }
 
+@media (max-width: 991.98px) {
+  .main-ftr .footer-menu a {
+    padding-right: 12px;
+  }
+}
+
 .main-ftr .footer-menu ul {
   border-top: 1px solid #b7b7b7;
   border-bottom: 1px solid #b7b7b7;
   padding: 9px 0px 9px 0px;
+  width: 82%;
+}
+
+@media (max-width: 991.98px) {
+  .main-ftr .footer-menu ul {
+    width: 100%;
+    margin-top: 30px;
+  }
 }
 
 @media (max-width: 767.98px) {
@@ -14201,7 +14221,10 @@ ul {
   text-transform: uppercase;
   font-weight: bold;
   margin-bottom: 0px;
-  padding: 20px 0px 20px 0px;
+}
+
+.main-ftr .icons {
+  padding-top: 20px;
 }
 
 .main-ftr .icons i {
@@ -14263,6 +14286,12 @@ ul {
 }
 
 @media (max-width: 767.98px) {
+  .main-ftr .footer-section-2 .footer-section-right {
+    margin-left: 0px;
+  }
+}
+
+@media (max-width: 991.98px) {
   .main-ftr .footer-section-2 .footer-section-right {
     margin-left: 0px;
   }
@@ -15594,7 +15623,7 @@ ul {
   font-size: 14px;
   font-weight: 700;
   padding-top: 7px;
-  color: #b7781b;
+  color: #ff6a00;
 }
 
 .inner-section .form-feedback-section .form-feedback .reactions {
@@ -15634,9 +15663,6 @@ ul {
 
 @media (max-width: 767.98px) {
   .inner-section .form-feedback-section .form-feedback .reactions .react {
-    width: 33%;
-    float: none;
-    text-align: right;
     margin-top: 15px;
   }
 }
@@ -16107,7 +16133,7 @@ ul {
   width: 48%;
   padding: 8px 10px;
   border: 1px solid #e1e1e1;
-  color: #b7781b;
+  color: #ff6a00;
   font-size: 16px;
   font-weight: 700;
   position: relative;
@@ -16147,7 +16173,7 @@ ul {
 .check-out-page .checkoutpage .check-form label {
   font-size: 14px;
   font-weight: bold;
-  color: #b7781b;
+  color: #ff6a00;
 }
 
 .check-out-page .checkoutpage .check-form .form-control {
