@@ -102,6 +102,11 @@ ul {
     font-weight: 600;
     color: #fff100;
 }
+.family-card .pries p {
+    font-size: 20px;
+    font-weight: 600;
+    color: #e91e63;
+}
 .main-logo {
     img {
         max-width: 100%;
@@ -951,7 +956,7 @@ ul {
 
             h3 {
                 color: #919b1d;
-                font-size: 24px;
+                font-size: 22px;
                 margin-bottom: 10px;
 
                 @include media-breakpoint-only(md) {

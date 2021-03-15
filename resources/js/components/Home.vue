@@ -70,7 +70,7 @@
                                         </div>
                                        <div class="col-12 col-lg-12 pt-2 pt-lg-0">
                                           <div class="pries">
-                                              <p>From £1.50</p>
+                                              <p>£2.00 All</p>
                                           </div>
                                       </div>
                                   </div>
@@ -617,13 +617,13 @@
                                     </div>
                                     <div class="col-lg-8 col-md-10">
                                         <h3>
-                                           For the O.A.PS
+                                            Handmade and Home-Baked 
                                         </h3>
                                         <ul>
-                                            <li>Victoria Sponge Cake</li>
-                                            <li>Red Velvet Cake</li>
-                                            <li>Ferrero Rocher Cheese Cake</li>
-                                           <li>Strawberry Cheese Cake</li>
+                                            <li>Triple Chocolate Cake</li>
+                                            <li>Biscof Cake</li>
+                                            <li>Oreo Cake</li>
+                                           <li>Coconut Cake</li>
                                         </ul>
                                         
                                         
@@ -637,7 +637,7 @@
                                             </div>
                                             <div class="col-4">
                                                 <div class="pries">
-                                                    <p>£3.00</p>
+                                                    <p>£3.50</p>
 
                                                 </div>
 
