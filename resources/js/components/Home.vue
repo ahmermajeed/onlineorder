@@ -862,6 +862,18 @@
         mounted() {
             this.getStory();
             console.log('Component mounted.')
+
+            this.getCategories();
+            var scripts = [
+                "https://apps.elfsight.com/p/platform.js",
+
+            ];
+            scripts.forEach(script => {
+                let tag = document.createElement("script");
+                tag.setAttribute("src", script);
+                document.head.appendChild(tag);
+
+            });
         },
         methods: {
             getStory(){
@@ -881,46 +893,79 @@
                 else
                     self.showPostal = false
             },
+            checkPostCode(){
 
-                        checkPostCode(){
+                       let vm = this;
 
-                let vm = this;
+                       if (this.order_type == '') {
+                           vm.error_message = 'Please Select Order Type';
+                           setTimeout(function(){ vm.errorMessage = ""; }, 2000);
+                       } else if(this.order_type == 'Delivery' && this.postal_code == "") {
+                           vm.error_message = 'Please Enter Your Post Code';
+                           setTimeout(function(){ vm.errorMessage = ""; }, 2000);
+                       } else {
 
-                if (this.order_type == '') {
-                    vm.error_message = 'Please Select Order Type';
-                    setTimeout(function(){ vm.errorMessage = ""; }, 2000);
-                } else if(this.order_type == 'Delivery' && this.postal_code == "") {
-                    vm.error_message = 'Please Enter Your Post Code';
-                    setTimeout(function(){ vm.errorMessage = ""; }, 2000);
-                } else {
 
-                    /*if(vm.order_type == "Pickup")
-                        vm.postal_code = "B8"*/
+                           if(vm.order_type == "Pickup"){
+                               vm.$store.commit('setOrderType', 'Pickup');
 
-                    axios({
-                        method: 'post',
-                        url: '/api/check-postal',
-                        data: {
-                            order_type: this.order_type,
-                            postal_code:this.postal_code
-                        },
-                    }).then(function (response) {
-                        if(response.data.error === undefined){
-                            vm.error_message = response.data.data.amount;
-                            vm.$store.commit('setDeliveryCharges', response.data.data.amount);
-                            vm.$store.commit('setOrderType', vm.order_type);
-                            vm.$store.commit('setPostalCode', vm.postal_code);
-                            vm.$router.push({path: 'online-order'})
+                               vm.$router.push({path: 'online-order'})
+                           }else {
+                               axios({
+                                   method: 'post',
+                                   url: '/api/check-postal',
+                                   data: {
+                                       order_type: this.order_type,
+                                       postal_code:this.postal_code
+                                   },
+                               }).then(function (response) {
+                                   if(response.data.error === undefined){
+                                       vm.error_message = response.data.data.amount;
+                                       vm.$store.commit('setDeliveryCharges', response.data.data.amount);
+                                       vm.$store.commit('setOrderType', vm.order_type);
+                                       vm.$store.commit('setPostalCode', vm.postal_code);
+                                       vm.$router.push({path: 'online-order'})
 
-                        }else {
-                            vm.error_message = 'We are not providing food in your Area';
-                        }
-                    })
-                        .catch(function (response) {
-                            //handle error
-                            console.log(response);
-                        });
+                                   }else {
+                                       vm.error_message = 'We are not providing food in your area.';
+                                   }
+                               })
+                                   .catch(function (response) {
+                                       //handle error
+                                       console.log(response);
+                                   });
+                           }
+
+
+
+                       }
+
+                   },
+
+            getCategories(){
+                let  _this = this;
+                _this.loading  = true;
+                axios.get('/api/categories')
+                    .then((response) => {
+                        _this.categories =  response.data.data;
+                        console.log(this.categories);
+                        _this.loading  = false;
+
+                    });
+            },
+
+            returnPriceValue(product){
+                let price_string = '';
+                if(product.sizes.length){
+
+                    for(var price in  product.sizes){
+                        price_string = product.sizes[0].price;
+                    }
+                }else {
+                    price_string = product.price;
                 }
+
+                return '£'+price_string
 
             },
 

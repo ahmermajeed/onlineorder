@@ -76,9 +76,41 @@
                                 <h3 class="text-left">Your Cart</h3>
                                 <img src="../../../images/cart.png">
                             </div>
+
+                            <h5 v-if="getAllCartArray.length == 1" class="mt-2">No item in your cart</h5>
+
+                            <div class="food-allergy" @click="foodAllergyPopup">
+                                <p>
+                                    <img src="/images/information.png" alt="">
+                                    </i>Click here if you or someone you are ordering for has a food allergy
+                                </p>
+                            </div>
+                            <div class="col-md-12">
+                            <form class="form-cart">
+                                <div class="switch-field">
+                                    <input type="radio" v-model="orderType" @change="showPostalCode" id="radio-one" name="switch-one"
+                                           value="Delivery"/>
+                                    <label for="radio-one">
+                                        <img src="/images/delivery.png" alt="">
+                                        </i>Delivery
+                                        <span>30 - 45 mins</span></label>
+                                    <input type="radio" v-model="orderType" @change="showPostalCode" id="radio-two" name="switch-one"
+                                           value="Pickup"/>
+                                    <label for="radio-two">
+                                        <img src="/images/shopping-basket.png" alt="">
+                                        Collection
+                                        <span>20 mins</span></label>
+                                </div>
+
+                                    <div class="form-group" style="position: relative; top: 12px;" v-if="showPostal">
+                                        <label for=""><span>Enter your Postcode:</span></label>
+                                        <input type="text"  class="form-control" v-model="postalCode" placeholder="Enter your Postcode">
+                                        <p style="color:red;font-size: 11px;margin-top: 5px;">{{errorMessage}} </p>
+                                    </div>
+                            </form>
                             <div class="lp-sidebar-body">
                                 <div class="img-box text-center">
-                                    <h5 v-if="getAllCartArray.length == 1" class="mt-2">No item in your cart</h5>
+                            
                                 </div>
                                 <div class="table-holder">
                                     <table class=tbl_cart_list>
@@ -90,8 +122,8 @@
                                                 <div  class="strong-open"  v-if="cart.extras" v-for="(extra, extra_index) in cart.extras" >
                                                     <strong>{{extra.group_name}}:</strong> {{extra.choice}}
                                                 </div>
-                                                <td  v-if="!cart.extras">£ {{priceFormat(cart.price * cart.quantity) }}</td>
-                                            <td class="order-priecs"  v-if="cart.extras">£{{priceFormat(cart.single_product_total_amount)}} </td>
+                                                <td  v-if="!cart.extras" class="p-0">£ {{priceFormat(cart.price * cart.quantity) }}</td>
+                                                <td class="order-priecs"  v-if="cart.extras">£{{priceFormat(cart.single_product_total_amount)}} </td>
                                                
                                             </td>
                                             <td class="order-quty">
@@ -103,20 +135,23 @@
                                                 </div> 
                                                 
                                             </td>
+                                            <td>
                                              <span class="mealactions">
                                                     <a href="#"  @click.prevent="updateProduct(cart.product_id,cart,product_index)"> <i v-b-tooltip.hover title="Edit Meal"  class="icon-edit-1"></i></a>
                                                     <a href="#" class="close-icon" @click.prevent="removeFromCart(product_index)"> <i v-b-tooltip.hover title="Remove Meal" class="icon-delete" ></i></a>
                                                 </span>
-                                            
+                                           </td> 
 
                                             
                                         </tr>
                                     </table>
                                 </div>
                                 <div class="cart-btn mt-3 mb-3 text-center">
-                                     <button class="anima-btn custom-btn move-eff btn  btn-danger" @click="placeOrder()"><span>Checkout</span> <!-- <i class="fas fa-long-arrow-alt-right"></i> --></button>
+                                     <button class="btn btn-outline-light" @click="placeOrder()"><span>Checkout</span></button>
                                 </div> 
                             </div>
+                        </div>
+
                             
                         </div>
                         <div class="mobile-cart-button" v-bind:class="{ cartheight: cart_height }" v-if="getAllCartArray.length > 1">
@@ -196,16 +231,16 @@
                     
                    <!--   <button class=" chek-out-btn anima-btn custom-btn move-eff btn btn-rounded-danger " @click="opencartlist()"><span>Checkout</span><i class="fas fa-long-arrow-alt-right"></i></button>  -->
                 </div>
-                <div class="mb-cart-box">
+<!--                 <div class="mb-cart-box">
                 <ul class="border-all" v-for="(cart, product_index) in getAllCartArray"  v-if="product_index  > 0">
                     <li>
                        
-                        <!-- <span class="meal">
+                        <span class="meal">
                              <span class="qty">
                                <i class="fa fa-angle-up" @click="quantityAddInCart(product_index)"></i>
                               
                                <i class="fa fa-angle-down" @click="quantityMinusInCart(product_index)"></i>
-                        </span> -->
+                        </span>
                          <h3> {{ cart.quantity}} {{cart.product_name}}</h3>
                         
                            
@@ -214,9 +249,9 @@
                                 {{extra.choice}}</h3> </li>
                                 <span class="mealactions">
 
-<!--                                <a href="#"  @click="updateProduct(cart.product_id,cart,product_index)"><i v-b-tooltip.hover title="Edit Meal" class="fas fa-pen">
+                                <a href="#"  @click="updateProduct(cart.product_id,cart,product_index)"><i v-b-tooltip.hover title="Edit Meal" class="fas fa-pen">
 
-</i></a>-->       
+</i></a>       
                             <span class="price">£{{priceFormat(cart.single_product_total_amount)}}</span>
                               <a href="#"  @click.prevent="removeFromCart(product_index)"> <i                                 v-b-tooltip.hover title="Remove Meal" class="icon-delete"></i></a>
 
@@ -229,7 +264,34 @@
                        
                     </li>
                 </ul>
+                </div> -->
+
+
+                <div class="mb-cart-box">
+                    <ul  v-for="(cart, product_index) in getAllCartArray" v-if="product_index  > 0">
+                        <li>
+                        <span class="qty mob">
+                            <i style="font-size: 17px;" @click="quantityAddInCart(product_index)">+</i>
+                               <span>{{ cart.quantity}}</span>
+                            <i style="font-size: 17px;" @click="quantityMinusInCart(product_index)">-</i>
+
+                        </span>
+                            <span class="meal">
+                            {{cart.product_name}}
+                            <ul v-if="cart.extras" v-for="(extra, extra_index) in cart.extras">
+                                <li><b>{{extra.group_name}}:</b> {{extra.choice}}</li>
+                            </ul>
+                            <span class="mealactions">
+
+                                <a href="#"  @click="updateProduct(cart.product_id,cart,product_index)"><i v-b-tooltip.hover title="Edit Meal" class="fas fa-pen"> </i></a>
+                               <a href="#" @click.prevent="removeFromCart(product_index)"> <i v-b-tooltip.hover title="Remove Meal" class="fa fa-times"></i></a>
+                            </span>
+                        </span>
+                            <span class="price">£{{priceFormat(cart.single_product_total_amount)}}</span>
+                        </li>
+                    </ul>
                 </div>
+                
                 <div class="confirm-btn">
                     <button class="anima-btn btn  btn-danger btn move-eff" @click="placeOrder()"><span>Confirm Order</span></button>
                 </div>
@@ -237,7 +299,7 @@
         </div>
 
 
-
+        <food-allergy @HideModalValue="hideModal" :showModalProp="foodAllergyModal"></food-allergy>
 
         <add-product @HideModalValue="hideModal" :showModalProp="product" :list="list" :has_sizes="has_sizes"></add-product>
 
@@ -281,7 +343,11 @@
                 dealsModal:false,
                 editDeal:false,
                 editDealsData:{},
-                //lastPosition: 0
+                foodAllergyModal: false,
+                orderType: '',
+                showPostal : false,
+                postalCode: '',
+                errorMessage: ''
             };
         },
         mounted() {
@@ -294,12 +360,31 @@
                     var value = this.$store.getters.getAllCartArray[key];
                 }
             }
+
+
+            this.orderType = this.$store.getters.getOrderType;
+
+            this.postalCode = this.$store.getters.getPostalCode;
+
+            if(this.orderType == "Delivery") {
+                this.showPostal = true
+            }
+
             this.scrollToMain();
             window.addEventListener("scroll", this.handleScroll);
 
 
         },
         methods: {
+
+            showPostalCode() {
+                let self = this;
+
+                if(self.orderType == "Delivery")
+                    self.showPostal = true
+                else
+                    self.showPostal = false
+            },
 
             scrollToMain() {
                 let element = document.getElementById("product-scroll");
@@ -358,6 +443,7 @@
                 this.deals_data = {};
                 this.editDeal = false;
                 this.editDealsData ={};
+                this.foodAllergyModal = false;
             },
 
             getCategories(){
@@ -436,9 +522,51 @@
 
 
 
-            placeOrder(){
-                this.$router.push({name: 'check-out'})
-           },
+              placeOrder(){
+                 let vm = this;
+
+                 if (this.orderType == '') {
+                     vm.errorMessage = 'Please Select Order Type';
+                     setTimeout(function(){ vm.errorMessage = ""; }, 2000);
+                 } else if(this.orderType == 'Delivery' && this.postalCode == "") {
+                     vm.errorMessage = 'Please Enter Your Postcode';
+                     setTimeout(function(){ vm.errorMessage = ""; }, 2000);
+
+                 } else {
+
+                     if(this.orderType === 'Pickup'){
+                         vm.$router.push({name: 'check-out'});
+                     }else {
+                         axios({
+                             method: 'post',
+                             url: '/api/check-postal',
+                             data: {
+                                 order_type: this.orderType,
+                                 postal_code:this.postalCode
+                             },
+                         }).then(function (response) {
+
+                             if(response.data.error === undefined){
+                                 vm.errorMessage = response.data.data.amount;
+                                 vm.$store.commit('setDeliveryCharges', response.data.data.amount);
+                                 vm.$store.commit('setOrderType', vm.orderType);
+                                 vm.$store.commit('setPostalCode', vm.postalCode);
+                                 vm.$router.push({name: 'check-out'})
+
+                             }else {
+                                 vm.errorMessage = 'We are not providing food in your area';
+                             }
+                         })
+                             .catch(function (response) {
+                                 //handle error
+                                 console.log(response);
+                             });
+
+                     }
+
+                 }
+            },
+
             removeFromCart(index){
                 console.log('tets');
                 let cart_data = this.$store.getters.getAllCartArray;
@@ -492,7 +620,12 @@
                     this.scrolled = false;
                     // move down
                 }
-            }
+            },
+
+
+            foodAllergyPopup() {
+                this.foodAllergyModal = true;
+            },
 
         },
         computed: {
@@ -2042,11 +2175,49 @@
     }
 
     @media (max-width: 767px) {
-        .cart-menu-fixed .offset-categories{
-            width:100%;
+        .cart-menu-fixed .offset-categories {
+            width: 100%;
+            z-index: 2;
         }
+
         .cart-menu-fixed .business > div.dishes-wrapper {
             padding-top: 210px !important;
+        }
+        .mealactions a {
+            display: inline-block;
+            margin-right: 14px;
+        }
+        .mb-cart-box ul li span.qty {
+            flex: 0 0 50px;
+            min-width: 50px;
+            position: relative;
+            padding-left: 25px;
+        }
+        .mb-cart-box svg {
+            -webkit-filter: brightness(0);
+            filter: brightness(0);
+            display: inline-block;
+            vertical-align: sub;
+        }
+
+        .mb-cart-box ul li span.meal {
+            width: 220px;
+            margin-left: 10px;
+            display: inline-table;
+        }
+        .mb-cart-box ul li span.meal .mealactions {
+            display: inline-block;
+            margin-top: 2px;
+            margin-left: 10px;
+        }
+        .mb-cart-box ul li price {
+            padding: 5px;
+            color: #000;
+            margin-left: 10px;
+
+        }
+        .qty.mob span {
+            padding: 15px;
         }
     }
 

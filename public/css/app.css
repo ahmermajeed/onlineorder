@@ -16199,6 +16199,27 @@ ul {
 
 /***************Choose Order type*******************/
 
+.food-allergy {
+  border: 1px solid #bad1e2;
+  width: 90%;
+  margin: 0 auto;
+  padding: 6px;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  background: #ebf3f9;
+  cursor: pointer;
+}
+
+.food-allergy p {
+  font-size: 12px !important;
+  color: #4498b9 !important;
+}
+
+.food-allergy p img {
+  width: auto !important;
+  margin-right: 11px;
+}
+
 .form-cart .switch-field {
   display: flex;
   margin-bottom: -17px;

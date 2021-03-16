@@ -300,6 +300,11 @@
 
             };
         },
+
+        created(){
+            this.getTimeSlots();
+        },
+        
         mounted() {
             if(this.$store.getters.getAllCartArray.length > 0) {
                 let total = 0;
@@ -311,7 +316,7 @@
             twentyMinutesLater.setMinutes(twentyMinutesLater.getMinutes() + 50);
 
             this.form.deliveryTime = twentyMinutesLater;
-
+            this.orderType = this.$store.getters.getOrderType;
             this.scrollToMain();
             this.getOffers();
 

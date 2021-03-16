@@ -70,7 +70,7 @@ const router = new VueRouter({
         },
 
         {
-            path: '/online-order/:id',
+            path: '/online-order/',
             name: 'online-order',
             component: require('./components/order-page/main.vue').default,
         },
