@@ -84,47 +84,54 @@
                 this.order_type = ''
                 },
 
-            checkPostCode(){
+                checkPostCode(){
 
-                let vm = this;
+                           let vm = this;
 
-                if (this.order_type == '') {
-                    vm.error_message = 'Please Select Order Type';
-                    setTimeout(function(){ vm.errorMessage = ""; }, 2000);
-                } else if(this.order_type == 'Delivery' && this.postal_code == "") {
-                    vm.error_message = 'Please Enter Your Post Code';
-                    setTimeout(function(){ vm.errorMessage = ""; }, 2000);
-                } else {
+                           if (this.order_type == '') {
+                               vm.error_message = 'Please Select Order Type';
+                               setTimeout(function(){ vm.errorMessage = ""; }, 2000);
+                           } else if(this.order_type == 'Delivery' && this.postal_code == "") {
+                               vm.error_message = 'Please Enter Your Post Code';
+                               setTimeout(function(){ vm.errorMessage = ""; }, 2000);
+                           } else {
 
-                    /*if(vm.order_type == "Pickup")
-                        vm.postal_code = "B8"*/
 
-                    axios({
-                        method: 'post',
-                        url: '/api/check-postal',
-                        data: {
-                            order_type: this.order_type,
-                            postal_code:this.postal_code
-                        },
-                    }).then(function (response) {
-                        if(response.data.error === undefined){
-                            vm.error_message = response.data.data.amount;
-                            vm.$store.commit('setDeliveryCharges', response.data.data.amount);
-                            vm.$store.commit('setOrderType', vm.order_type);
-                            vm.$store.commit('setPostalCode', vm.postal_code);
-                            vm.$router.push({path: 'online-order'})
+                               if(vm.order_type == "Pickup"){
+                                   vm.$store.commit('setOrderType', 'Pickup');
 
-                        }else {
-                            vm.error_message = 'We are not providing food in your Area';
-                        }
-                    })
-                        .catch(function (response) {
-                            //handle error
-                            console.log(response);
-                        });
-                }
+                                   vm.$router.push({path: 'online-order'})
+                               }else {
+                                   axios({
+                                       method: 'post',
+                                       url: '/api/check-postal',
+                                       data: {
+                                           order_type: this.order_type,
+                                           postal_code:this.postal_code
+                                       },
+                                   }).then(function (response) {
+                                       if(response.data.error === undefined){
+                                           vm.error_message = response.data.data.amount;
+                                           vm.$store.commit('setDeliveryCharges', response.data.data.amount);
+                                           vm.$store.commit('setOrderType', vm.order_type);
+                                           vm.$store.commit('setPostalCode', vm.postal_code);
+                                           vm.$router.push({path: 'online-order'})
 
-            },
+                                       }else {
+                                           vm.error_message = 'We are not providing food in your area.';
+                                       }
+                                   })
+                                       .catch(function (response) {
+                                           //handle error
+                                           console.log(response);
+                                       });
+                               }
+
+
+
+                           }
+
+                       },
 
             showPostalCode() {
                 let self = this;
