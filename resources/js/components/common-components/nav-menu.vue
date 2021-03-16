@@ -13,14 +13,14 @@
                                     <ul>
                                          <li class="mail-space"><i class="icon-mail-2"></i>
                                             <span>
-                                                <a href="mailto:info@dessertking.co.uk">info@dessertking.co.uk</a>
+                                                <a href="mailto:info@dessertking.co.uk">info@thedessertking.co.uk</a>
                                             </span>
                                         </li>
-                                        <!-- <li><i class="icon-placeholder"></i>
+                                        <li><i class="icon-placeholder"></i>
                                             <span>
-                                                 <a href="javascript:;">10 Peckham Park Road, London SE15 6TW </a>
+                                                 <a href="javascript:;">223-225 Edward Road, Birmingham, B12 9Lh</a>
                                             </span>
-                                        </li> -->
+                                        </li>
                                     </ul>
                                 </div>
                             </div>

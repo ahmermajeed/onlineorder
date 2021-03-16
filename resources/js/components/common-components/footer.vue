@@ -8,9 +8,9 @@
                             <div class="col-lg-3 col-md-3 footer-section-1 footer-space order-1">
                                 <h3>Opening Hours</h3>
                                 <ul class="Opening">
-                                    <li><a href="#"><span><i class="icon-smartphone-1"></i></span>0000 000 0000</a></li>
-                                    <li><a href="#"><span><i class="icon-mail-2"></i></span>info@dessertking.co.uk</a></li>
-                                    <li><a href="#"><span><i class="icon-placeholder"></i></span>Dessert King address
+                                    <li><a href="tel:0121 337 7378"><span><i class="icon-smartphone-1"></i></span>0121 337 7378</a></li>
+                                    <li><a href="#"><span><i class="icon-mail-2"></i></span>info@thedessertking.co.uk</a></li>
+                                    <li><a href="#"><span><i class="icon-placeholder"></i></span>223-225 Edward Road, Birmingham, B12 9Lh.
                                     </a></li>
                                 </ul>
                             </div>
@@ -49,14 +49,9 @@
                                         <strong><a href="#">Open 7 days a week</a></strong>
                                     </li>
                                     <li>
-                                        <a href="#">2pm till late</a>
+                                        <a href="#">4PM till 12AM</a>
                                     </li>
-                                    <li>
-                                        <strong><a href="#">Delivery Hours</a></strong>
-                                    </li>
-                                    <li>
-                                        <a href="#">5pm till late </a>
-                                    </li>
+                                   
                                 </ul>
                             </div>
                         </div>
@@ -65,7 +60,7 @@
 
                 <div class="copyright text-center">
                     <div class="container">
-                        <p>Copyright © 2020 | All rights reserved</p>
+                        <p>Copyright © 2021 | All rights reserved</p>
                     </div>
                 </div>
             </div>
