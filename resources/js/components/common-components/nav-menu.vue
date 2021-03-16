@@ -85,7 +85,7 @@
                         <div class="contact-bnner">
                             <div class="head-taj mb-3">
                                 <h2>The Passion for the Perfect Taste</h2>
-                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+                                <p>The only thing we're serious about is food.</p>
                                 <div class="form-group text-center">
                                     
                                     <button type="button" class="btn btn-outline-light"  v-on:click="checkPostCode">
