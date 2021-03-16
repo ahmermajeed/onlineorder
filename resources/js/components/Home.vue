@@ -7,7 +7,7 @@
                         <div class="col-lg-4 col-md-12 col-sm-12  order-2 order-lg-1  ">
                             <div class="menu-left">
                                     <img src="images/theme-3/product-ban-1.png">
-                                    <h2>Burgers</h2>
+                                    <h2>Fresh Fried Chicken Burgers</h2>
                                 <div class="menu-left-item">
                                     <div class="order-taj">
                                         <div class="row">
@@ -15,7 +15,7 @@
                                                 
                                             </div>
                                             <div class="col-2 text-center">
-                                                <span class="badge badge-success">Single</span>
+                                                <span class="badge badge-success">Quater</span>
                                             </div>
                                             <div class="col-2 text-center">
                                                 <span class="badge badge-danger">Meal</span>
@@ -31,16 +31,16 @@
                                         <div class="col-8">
                                             <ul>
                                                 <li>
-                                                   Rizzy Burger
+                                                   Fried Classic Fillet Burger
                                                 </li>
                                             </ul>
                                         </div>
                                         <div class="col-2  text-center">
-                                            <span class="pries-menu">£2.50</span>
+                                            <span class="pries-menu">£3.75</span>
                                             
                                         </div>
                                         <div class="col-2  text-center">
-                                            <span class="pries-menu">£4.00</span>
+                                            <span class="pries-menu">£4.75</span>
                                             
                                         </div>
                                         
@@ -49,16 +49,16 @@
                                         <div class="col-8">
                                             <ul>
                                                 <li>
-                                                   Legend Burger
+                                                   Mountain Burger
                                                 </li>
                                             </ul>
                                         </div>
                                         <div class="col-2  text-center">
-                                            <span class="pries-menu">£2.50</span>
+                                            <span class="pries-menu">£4.25</span>
                                             
                                         </div>
                                         <div class="col-2  text-center">
-                                            <span class="pries-menu">£4.00</span>
+                                            <span class="pries-menu">£5.25</span>
                                             
                                         </div>
                                         
@@ -67,16 +67,16 @@
                                         <div class="col-8">
                                             <ul>
                                                 <li>
-                                                   Fillet Burger
+                                                   Mexicano Burger
                                                 </li>
                                             </ul>
                                         </div>
                                         <div class="col-2  text-center">
-                                            <span class="pries-menu">£2.50</span>
+                                            <span class="pries-menu">£4.50</span>
                                             
                                         </div>
                                         <div class="col-2  text-center">
-                                            <span class="pries-menu">£4.00</span>
+                                            <span class="pries-menu">£5.50</span>
                                             
                                         </div>
                                         
@@ -85,16 +85,16 @@
                                         <div class="col-8">
                                             <ul>
                                                 <li>
-                                                  Beef Burger
+                                                  Hot Mama Burger
                                                 </li>
                                             </ul>
                                         </div>
                                         <div class="col-2  text-center">
-                                            <span class="pries-menu">£2.50</span>
+                                            <span class="pries-menu">£4.50</span>
                                             
                                         </div>
                                         <div class="col-2  text-center">
-                                            <span class="pries-menu">£4.00</span>
+                                            <span class="pries-menu">£5.50</span>
                                             
                                         </div>
                                         
@@ -103,16 +103,16 @@
                                         <div class="col-8">
                                             <ul>
                                                 <li>
-                                                  Fish Burger
+                                                  King King Burger
                                                 </li>
                                             </ul>
                                         </div>
                                         <div class="col-2  text-center">
-                                            <span class="pries-menu">£2.50</span>
+                                            <span class="pries-menu">£4.50</span>
                                             
                                         </div>
                                         <div class="col-2  text-center">
-                                            <span class="pries-menu">£4.00</span>
+                                            <span class="pries-menu">£5.50</span>
                                             
                                         </div>
                                         
@@ -121,16 +121,16 @@
                                         <div class="col-8">
                                             <ul>
                                                 <li>
-                                                  Vegi Burger
+                                                  Ranch Burger
                                                 </li>
                                             </ul>
                                         </div>
                                         <div class="col-2  text-center">
-                                            <span class="pries-menu">£2.50</span>
+                                            <span class="pries-menu">£4.25</span>
                                             
                                         </div>
                                         <div class="col-2  text-center">
-                                            <span class="pries-menu">£4.00</span>
+                                            <span class="pries-menu">£5.25</span>
                                             
                                         </div>
                                         
@@ -139,16 +139,16 @@
                                         <div class="col-8">
                                             <ul>
                                                 <li>
-                                                  Steak Burger
+                                                  Piri Piri Burger
                                                 </li>
                                             </ul>
                                         </div>
                                         <div class="col-2  text-center">
-                                            <span class="pries-menu">£2.50</span>
+                                            <span class="pries-menu">£4.25</span>
                                             
                                         </div>
                                         <div class="col-2  text-center">
-                                            <span class="pries-menu">£4.00</span>
+                                            <span class="pries-menu">£5.25</span>
                                             
                                         </div>
                                         
@@ -157,16 +157,16 @@
                                         <div class="col-8">
                                             <ul>
                                                 <li>
-                                                  Donner Burger
+                                                  Big Daddy Burger
                                                 </li>
                                             </ul>
                                         </div>
                                         <div class="col-2  text-center">
-                                            <span class="pries-menu">£2.50</span>
+                                            <span class="pries-menu">-</span>
                                             
                                         </div>
                                         <div class="col-2  text-center">
-                                            <span class="pries-menu">£4.00</span>
+                                            <span class="pries-menu">£5.50</span>
                                             
                                         </div>
                                         
@@ -175,16 +175,16 @@
                                         <div class="col-8">
                                             <ul>
                                                 <li>
-                                                  Chicken Donner Burger
+                                                  Cheese Lover Burger
                                                 </li>
                                             </ul>
                                         </div>
                                         <div class="col-2  text-center">
-                                            <span class="pries-menu">£2.50</span>
+                                            <span class="pries-menu">£5.00</span>
                                             
                                         </div>
                                         <div class="col-2  text-center">
-                                            <span class="pries-menu">£4.00</span>
+                                            <span class="pries-menu">£6.00</span>
                                             
                                         </div>
                                         
@@ -193,16 +193,16 @@
                                         <div class="col-8">
                                             <ul>
                                                 <li>
-                                                  Cheese Burger
+                                                  Supreme Burger
                                                 </li>
                                             </ul>
                                         </div>
                                         <div class="col-2  text-center">
-                                            <span class="pries-menu">£2.50</span>
+                                            <span class="pries-menu">£4.25</span>
                                             
                                         </div>
                                         <div class="col-2  text-center">
-                                            <span class="pries-menu">£4.00</span>
+                                            <span class="pries-menu">£5.25</span>
                                             
                                         </div>
                                         
@@ -211,16 +211,16 @@
                                         <div class="col-8">
                                             <ul>
                                                 <li>
-                                                  Double Cheese Burger
+                                                  BBQ Burger
                                                 </li>
                                             </ul>
                                         </div>
                                         <div class="col-2  text-center">
-                                            <span class="pries-menu">£2.50</span>
+                                            <span class="pries-menu">-</span>
                                             
                                         </div>
                                         <div class="col-2  text-center">
-                                            <span class="pries-menu">£4.00</span>
+                                            <span class="pries-menu">£5.00</span>
                                             
                                         </div>
                                         
@@ -229,16 +229,16 @@
                                         <div class="col-8">
                                             <ul>
                                                 <li>
-                                                  Shami Burger
+                                                  Sweet Chilli Burger
                                                 </li>
                                             </ul>
                                         </div>
                                         <div class="col-2  text-center">
-                                            <span class="pries-menu">£2.50</span>
+                                            <span class="pries-menu">£4.25</span>
                                             
                                         </div>
                                         <div class="col-2  text-center">
-                                            <span class="pries-menu">£4.00</span>
+                                            <span class="pries-menu">£5.25</span>
                                             
                                         </div>
                                         
@@ -247,57 +247,18 @@
                                         <div class="col-8">
                                             <ul>
                                                 <li>
-                                                  Chicken Grilled Burger
+                                                  Spicy Korean Burger
                                                 </li>
                                             </ul>
                                         </div>
                                         <div class="col-2  text-center">
-                                            <span class="pries-menu">£2.50</span>
+                                            <span class="pries-menu">£5.00</span>
                                             
                                         </div>
                                         <div class="col-2  text-center">
-                                            <span class="pries-menu">£4.00</span>
-                                            
+                                            <span class="pries-menu">£6.00</span>
                                         </div>
-                                        
                                     </div>
-                                    <div class="row pb-3">
-                                        <div class="col-8">
-                                            <ul>
-                                                <li>
-                                                  Masala Fish Burger
-                                                </li>
-                                            </ul>
-                                        </div>
-                                        <div class="col-2  text-center">
-                                            <span class="pries-menu">£2.50</span>
-                                            
-                                        </div>
-                                        <div class="col-2  text-center">
-                                            <span class="pries-menu">£4.00</span>
-                                            
-                                        </div>
-                                        
-                                    </div>
-                                    <div class="row pb-3">
-                                        <div class="col-8">
-                                            <ul>
-                                                <li>
-                                                  Mix Kebab Burger
-                                                </li>
-                                            </ul>
-                                        </div>
-                                        <div class="col-2  text-center">
-                                            <span class="pries-menu">£2.50</span>
-                                            
-                                        </div>
-                                        <div class="col-2  text-center">
-                                            <span class="pries-menu">£4.00</span>
-                                            
-                                        </div>
-                                        
-                                    </div>
-
                                 </div>
                                 
                             </div>
@@ -344,7 +305,7 @@
                          <div class="col-lg-4 col-md-12 col-sm-12  order-3 order-lg-3">
                             <div class="menu-left">
                                     <img src="images/theme-3/product-ban-kab.png">
-                                    <h2>Kebabs</h2>
+                                    <h2>Wok Section</h2>
                                 <div class="menu-left-item">
                                     <div class="order-taj">
                                         <div class="row">
@@ -352,13 +313,13 @@
                                                 
                                             </div>
                                             <div class="col-2 text-center ">
-                                                <span class="badge badge-warning">Small</span>
+                                                <span class="badge badge-warning">Chciken</span>
                                             </div>
                                             <div class="col-2 text-center ">
-                                                <span class="badge badge-success green-badge">Medium</span>
+                                                <span class="badge badge-success green-badge">Prawn</span>
                                             </div>
                                             <div class="col-2 text-center">
-                                                <span class="badge badge-danger">Large</span>
+                                                <span class="badge badge-danger">Vegitable</span>
                                             </div>
                                             
                                         </div>
@@ -371,20 +332,20 @@
                                         <div class="col-6">
                                             <ul>
                                                 <li>
-                                                   Rizzy Burger
+                                                   Szechuan
                                                 </li>
                                             </ul>
                                         </div>
                                         <div class="col-2  text-center">
-                                            <span class="pries-menu">£2.50</span>
+                                            <span class="pries-menu">£5.50</span>
                                             
                                         </div>
                                         <div class="col-2  text-center">
-                                            <span class="pries-menu">£2.50</span>
+                                            <span class="pries-menu">£6.00</span>
                                             
                                         </div>
                                         <div class="col-2  text-center">
-                                            <span class="pries-menu">£4.00</span>
+                                            <span class="pries-menu">£5.00</span>
                                             
                                         </div>
                                         
@@ -393,20 +354,20 @@
                                         <div class="col-6">
                                             <ul>
                                                 <li>
-                                                   Kebab Meat & Chips
+                                                   Satay Sauce
                                                 </li>
                                             </ul>
                                         </div>
                                         <div class="col-2  text-center">
-                                            <span class="pries-menu">£2.50</span>
+                                            <span class="pries-menu">£5.50</span>
                                             
                                         </div>
                                         <div class="col-2  text-center">
-                                            <span class="pries-menu">£2.50</span>
+                                            <span class="pries-menu">£6.00</span>
                                             
                                         </div>
                                         <div class="col-2  text-center">
-                                            <span class="pries-menu">£4.00</span>
+                                            <span class="pries-menu">£5.00</span>
                                             
                                         </div>
                                         
@@ -415,20 +376,20 @@
                                         <div class="col-6">
                                             <ul>
                                                 <li>
-                                                   Chicken Meat & Chips
+                                                   Chinese Curry Sauce
                                                 </li>
                                             </ul>
                                         </div>
                                         <div class="col-2  text-center">
-                                            <span class="pries-menu">£2.50</span>
+                                            <span class="pries-menu">£5.50</span>
                                             
                                         </div>
                                         <div class="col-2  text-center">
-                                            <span class="pries-menu">£2.50</span>
+                                            <span class="pries-menu">£6.00</span>
                                             
                                         </div>
                                         <div class="col-2  text-center">
-                                            <span class="pries-menu">£4.00</span>
+                                            <span class="pries-menu">£5.00</span>
                                             
                                         </div>
                                         
@@ -437,20 +398,20 @@
                                         <div class="col-6">
                                             <ul>
                                                 <li>
-                                                   Spicy BBQ Donner & Chips
+                                                   Sweet &amp; Sour
                                                 </li>
                                             </ul>
                                         </div>
                                         <div class="col-2  text-center">
-                                            <span class="pries-menu">£2.50</span>
+                                            <span class="pries-menu">£5.50</span>
                                             
                                         </div>
                                         <div class="col-2  text-center">
-                                            <span class="pries-menu">£2.50</span>
+                                            <span class="pries-menu">£6.00</span>
                                             
                                         </div>
                                         <div class="col-2  text-center">
-                                            <span class="pries-menu">£4.00</span>
+                                            <span class="pries-menu">£5.00</span>
                                             
                                         </div>
                                         
@@ -459,20 +420,20 @@
                                         <div class="col-6">
                                             <ul>
                                                 <li>
-                                                   Mix Meat & Chips
+                                                   Black Bean Sauce
                                                 </li>
                                             </ul>
                                         </div>
                                         <div class="col-2  text-center">
-                                            <span class="pries-menu">£2.50</span>
+                                            <span class="pries-menu">£5.50</span>
                                             
                                         </div>
                                         <div class="col-2  text-center">
-                                            <span class="pries-menu">£2.50</span>
+                                            <span class="pries-menu">£6.00</span>
                                             
                                         </div>
                                         <div class="col-2  text-center">
-                                            <span class="pries-menu">£4.00</span>
+                                            <span class="pries-menu">£5.00</span>
                                             
                                         </div>
                                         
@@ -481,20 +442,20 @@
                                         <div class="col-6">
                                             <ul>
                                                 <li>
-                                                   Donner Nan
+                                                   Chop Suey
                                                 </li>
                                             </ul>
                                         </div>
                                         <div class="col-2  text-center">
-                                            <span class="pries-menu">£2.50</span>
+                                            <span class="pries-menu">£5.50</span>
                                             
                                         </div>
                                         <div class="col-2  text-center">
-                                            <span class="pries-menu">£2.50</span>
+                                            <span class="pries-menu">£6.00</span>
                                             
                                         </div>
                                         <div class="col-2  text-center">
-                                            <span class="pries-menu">£4.00</span>
+                                            <span class="pries-menu">£5.00</span>
                                             
                                         </div>
                                         
@@ -503,20 +464,20 @@
                                         <div class="col-6">
                                             <ul>
                                                 <li>
-                                                   Mix Donner Nan
+                                                   Sweet Chilli
                                                 </li>
                                             </ul>
                                         </div>
                                         <div class="col-2  text-center">
-                                            <span class="pries-menu">£2.50</span>
+                                            <span class="pries-menu">£5.50</span>
                                             
                                         </div>
                                         <div class="col-2  text-center">
-                                            <span class="pries-menu">£2.50</span>
+                                            <span class="pries-menu">£6.00</span>
                                             
                                         </div>
                                         <div class="col-2  text-center">
-                                            <span class="pries-menu">£4.00</span>
+                                            <span class="pries-menu">£5.00</span>
                                             
                                         </div>
                                         
@@ -528,7 +489,7 @@
                             </div>
                             <div class="menu-left offer-sides">
                                     <img src="images/theme-3/product-ban-sides.png">
-                                    <h2>Sides</h2>
+                                    <h2>Extra/Appetizers</h2>
                                 <div class="menu-left-item">
                                     <div class="order-taj">
                                         <div class="row">
@@ -536,7 +497,7 @@
                                                 
                                             </div>
                                             <div class="col-2 text-center">
-                                                <span class="badge badge-warning">Small</span>
+                                                <span class="badge badge-warning">Regular</span>
                                             </div>
                                             <div class="col-2 text-center">
                                                 <span class="badge badge-danger">Large</span>
@@ -551,16 +512,16 @@
                                         <div class="col-8">
                                             <ul>
                                                 <li>
-                                                  Curry Sauce
+                                                    Chips
                                                 </li>
                                             </ul>
                                         </div>
                                         <div class="col-2  text-center">
-                                            <span class="pries-menu">£2.50</span>
+                                            <span class="pries-menu">£1.60</span>
                                             
                                         </div>
                                         <div class="col-2  text-center">
-                                            <span class="pries-menu">£4.00</span>
+                                            <span class="pries-menu">£2.30</span>
                                             
                                         </div>
                                         
@@ -569,16 +530,16 @@
                                         <div class="col-8">
                                             <ul>
                                                 <li>
-                                                  Mushy Peas
+                                                  Wedges
                                                 </li>
                                             </ul>
                                         </div>
                                         <div class="col-2  text-center">
-                                            <span class="pries-menu">£2.50</span>
+                                            <span class="pries-menu">£2.00</span>
                                             
                                         </div>
                                         <div class="col-2  text-center">
-                                            <span class="pries-menu">£4.00</span>
+                                            <span class="pries-menu">£3.00</span>
                                             
                                         </div>
                                         
@@ -587,7 +548,7 @@
                                         <div class="col-8">
                                             <ul>
                                                 <li>
-                                                  Salad
+                                                  Salt &amp; Pepper Chips
                                                 </li>
                                             </ul>
                                         </div>
@@ -596,7 +557,7 @@
                                             
                                         </div>
                                         <div class="col-2  text-center">
-                                            <span class="pries-menu">£4.00</span>
+                                            <span class="pries-menu">£3.50</span>
                                             
                                         </div>
                                         
@@ -621,13 +582,13 @@
                             <div class="row">
                                 <div class="col-lg-7 col-md-6 col-sm-12">
                                     <h2>Drinks</h2>
-                                    <p>Pepsi, 7up, Coke, Cherry Coke Rubicon Mango Guava / Passion,<br>Dr Pepper Pinapple Soda, Sprite, Fanta Orange /Fruit Twist,<br>Rubena Blackcurrant / Strawberry, Ginger Beer</p>
+                                    <p>Coke Zero, Coke, Mirinda Strawberry, Mirinda Orange, Mango, Pepsi, Pepsi Max.<br>Yazoo Shakes, Water, Mugo Mugo 330ml<br>Bottles 0.5ltr (Coke), Bottles 1.5ltr (Coke, 7up, &amp; Pepsi)</p>
                                     <ul>
                                         <li>
-                                            Cocca-Cola big Bottle 1.25l<span>£2.20</span>
+                                            Coke 0.5ltr<span>£1.50</span>
                                         </li>
                                         <li>
-                                           Cocca-Cola Bottle 500ml<span>£2.20</span>
+                                           Coke, 7up, &amp; Pepsi<span>£2.50</span>
                                         </li>
                                     </ul>
                                     <button type="button" class="btn btn-outline-light"  v-on:click="checkPostCode">
@@ -658,33 +619,26 @@
                 <div class="container">
                 <div class="deal-content">
                      <div class="row">
-                        <div class="col-lg-4 col-md-4 col-sm-6">
+                        <div class="col-lg-6 col-md-6 col-sm-6">
                             <div class="offers">
-                                <h2>Wraps</h2>
-                                <p>Rizzy Wrap<br>Legend Wrap (L)<br>Fillet Wrap<br>Vegi Wrap</p>
+                                <h2>Family Box</h2>
+                                <p>10pc Fried Chicken,<br>8 Fried Wings, <br>4 Chips, Dips, <br>Pepsi 1.5ltr.</p>
+                                <div class="pries mb-3"><strong>£25.99</strong></div>
                                 <button type="button" class="btn  btn-danger"v-on:click="checkPostCode">
                                     <span>View All </span>
                                 </button>
 
                             </div>
                         </div> 
-                        <div class="col-lg-4 col-md-4 col-sm-6">
+                        <div class="col-lg-6 col-md-6 col-sm-6">
                             <div class="offers">
-                                <h2>Wraps</h2>
-                                <p>Rizzy Wrap<br>Legend Wrap (L)<br>Fillet Wrap<br>Vegi Wrap</p>
+                                <h2>ChicknWok Special Box</h2>
+                                <p>2 chicknwok box specials,<br> 2 1/4 Burger Meals,<br>6pc salt &amp; Pepper wings &amp; <br>pepsi 1.5ltr.</p>
+                                <div class="pries mb-3"><strong>£19.99</strong></div>
                                 <button type="button" class="btn  btn-danger"v-on:click="checkPostCode">
                                     <span>View All </span>
                                 </button>
 
-                            </div>
-                        </div> 
-                        <div class="col-lg-4 col-md-4 col-sm-6">
-                            <div class="offers">
-                                <h2>Wraps</h2>
-                                <p>Rizzy Wrap<br>Legend Wrap (L)<br>Fillet Wrap<br>Vegi Wrap</p>
-                                <button type="button" class="btn  btn-danger"v-on:click="checkPostCode">
-                                    <span>View All </span>
-                                </button>
                             </div>
                         </div> 
                      </div>
@@ -698,12 +652,12 @@
                     <h2>Delivering Till Late</h2>
                     <div class="row">
                         <div class="col-6 text-right">
-                            <p><i class="icon-placeholder"></i>231 Edward Rd</p>
+                            <p><i class="icon-placeholder"></i><!-- 231 Edward Rd --></p>
                         </div>
                      
                         <div class="col-6 text-left">
                             <p class="space"><i class="icon-smartphone-1"></i>
-                                <a href="tel:0121 440 3393">0121 440 3393</a></p>
+                                <a href="tel:01484 530000">01484 530000</a></p>
                         </div>
                         
                     </div>
@@ -723,7 +677,7 @@
                             <div class="col-lg-3 col-md-12 col-sm-12">
                                 <div class="d-offers">
                                    <h2>Discover Our Offers</h2>
-                                   <p>Check out our offers<br> and follow us on <br><span>Facebook</span>and<span>Instagram</span></p>
+                                   <p>Check out our offers<br> and follow us on <br><span>Facebook</span> and <span>Instagram</span></p>
                                    <img src="images/theme-3/d-offer.png">
 
                                 </div>
@@ -734,10 +688,10 @@
                                         <div class="col-lg-6 col-md-6 col-sm-12">
                                             <div class="d-box">
                                                 <div class="d-content">
-                                                    <h4>Chicken Bucket</h4>
-                                                    <p>6 Pieces Chicken<br>Chips (L)<br>1.5ltr Pepsi</p>
+                                                    <h4>Loaded Box</h4>
+                                                    <p>1/4 Filler Burger,<br>1pc Fried Chicken,<br>Chips &amp; Drink</p>
                                                     <div class="pries">
-                                                        <strong>£21.00</strong>
+                                                        <strong>£5.00</strong>
                                                     </div>
                                                     
                                                 </div>
@@ -753,10 +707,10 @@
                                         <div class="col-lg-6 col-md-6 col-sm-12">
                                             <div class="d-box">
                                                 <div class="d-content">
-                                                    <h4>Chicken Bucket</h4>
-                                                    <p>6 Pieces Chicken<br>Chips (L)<br>1.5ltr Pepsi</p>
+                                                    <h4>Boanless Bos</h4>
+                                                    <p>3pc Fried Chicken Strips,<br>5pc Chicken Popcorn<br>Chips &amp; Drink</p>
                                                     <div class="pries">
-                                                        <strong>£21.00</strong>
+                                                        <strong>£5.00</strong>
                                                     </div>
                                                     
                                                 </div>
@@ -769,44 +723,23 @@
                                             </div>
                                             
                                         </div>
-                                        <div class="col-lg-6 col-md-6 col-sm-12">
+                                        <div class="col-lg-12 col-md-12 col-sm-12">
                                             <div class="d-box">
                                                 <div class="d-content">
-                                                    <h4>Chicken Bucket</h4>
-                                                    <p>6 Pieces Chicken<br>Chips (L)<br>1.5ltr Pepsi</p>
+                                                    <h4>Piri Piri Box</h4>
+                                                    <p>3pc Piri Piri Wings,<br>Fried Piri Burger<br>Chips &amp; Drink</p>
                                                     <div class="pries">
-                                                        <strong>£21.00</strong>
+                                                        <strong>£6.00</strong>
                                                     </div>
                                                     
                                                 </div>
-                                                <div class="d-img">
-                                                        <img src="images/theme-3/d-pro.png">
-                                                        
-                                                </div>
-                                                
-                                                
+                                                <div class="d-img" style="width: 30%;">
+                                                    <img src="images/theme-3/d-pro.png">
+                                                </div>                                             
                                             </div>
                                             
                                         </div>
-                                        <div class="col-lg-6 col-md-6 col-sm-12">
-                                            <div class="d-box">
-                                                <div class="d-content">
-                                                    <h4>Chicken Bucket</h4>
-                                                    <p>6 Pieces Chicken<br>Chips (L)<br>1.5ltr Pepsi</p>
-                                                    <div class="pries">
-                                                        <strong>£21.00</strong>
-                                                    </div>
-                                                    
-                                                </div>
-                                                <div class="d-img">
-                                                        <img src="images/theme-3/d-pro.png">
-                                                        
-                                                </div>
-                                                
-                                                
-                                            </div>
-                                            
-                                        </div>
+          
                                     
                                     
                                     </div>

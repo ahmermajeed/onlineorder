@@ -36,24 +36,24 @@
                                 <h3>Opening Hours</h3>
                                 <ul class="Opening-hours">
                                     <li>
-                                        <strong><a href="#">Open 7 days a week</a></strong>
+                                        <strong><a href="#">Wednesday to Monday</a></strong>
                                     </li>
                                     <li>
-                                        <a href="#">2pm till late</a>
+                                        <a href="#">03:00PM Till Late</a>
                                     </li>
                                     <li>
-                                        <strong><a href="#">Delivery Hours</a></strong>
+                                        <strong><a href="#">Closed Tuesday</a></strong>
                                     </li>
                                     <li>
-                                        <a href="#">5pm till late </a>
+                                        <strong><a href="#">Delivery Service Available</a></strong>
                                     </li>
                                 </ul> 
                             </div>
                             <div class="col-lg-3 col-md-3 footer-section-3 footer-space order-2 order-md-3">
                                 <ul class="Opening">
-                                    <li><a href="#"><span><i class="icon-smartphone-1"></i></span>02476441200</a></li>
-                                    <li><a href="#"><span><i class="icon-mail-2"></i></span>info@mjstakeaway.co.uk.com</a></li>
-                                    <li><a href="#"><span><i class="icon-placeholder"></i></span>10 Peckham Park Road,London SE15 6TW</a></li>
+                                    <li><a href="tel:01484 530000"><span><i class="icon-smartphone-1"></i></span>01484 530000</a></li>
+                                    <li><a href="#"><span><i class="icon-mail-2"></i></span>chiknwok@hotmail.com</a></li>
+                                    <li><a href="#"><span><i class="icon-placeholder"></i></span><!-- 10 Peckham Park Road,London SE15 6TW --></a></li>
                                 </ul>
                             </div>
                         </div>
@@ -62,7 +62,7 @@
                 
                 <div class="copyright text-center"> 
                     <div class="container">
-                        <p>Copyright © 2020 | All rights reserved</p>
+                        <p>Copyright © 2021 | All rights reserved</p>
                     </div>
                 </div>
             </div>
