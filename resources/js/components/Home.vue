@@ -13,7 +13,7 @@
                            </div>
                            <div class="row pries-bar">
                                 <div class="col-12 col-lg-8 order-btn">
-                                    <button type="button" class="btn btn-outline-secondary">Order Now!</button>
+                                    <button type="button" class="btn btn-outline-secondary"  @click.prevent="openPostalCode">Order Now!</button>
                                     <a href="#" class=""></a>
                                 </div>
                                 <div class="col-12 col-lg-4 pt-2 pt-lg-0">
@@ -35,7 +35,7 @@
                            </div>
                            <div class="row pries-bar">
                                 <div class="col-12 col-lg-8 order-btn">
-                                    <button type="button" class="btn btn-outline-secondary">Order Now!</button>
+                                    <button type="button" class="btn btn-outline-secondary"  @click.prevent="openPostalCode" >Order Now!</button>
                                     <a href="#" class=""></a>
                                 </div>
                                 <div class="col-12 col-lg-4 pt-2 pt-lg-0">
@@ -58,7 +58,7 @@
                            </div>
                            <div class="row pries-bar">
                                 <div class="col-12 col-lg-8 order-btn">
-                                    <button type="button" class="btn btn-outline-secondary">Order Now!</button>
+                                    <button type="button" class="btn btn-outline-secondary"  @click.prevent="openPostalCode">Order Now!</button>
                                     <a href="#" class=""></a>
                                 </div>
                                 <div class="col-12 col-lg-4 pt-2 pt-lg-0">
@@ -655,7 +655,7 @@
 
                                          <div class="row pries-bar">
                                             <div class="col-8 order-btn">
-                                                <button type="button" class="btn btn-outline-secondary">Order Now!</button>
+                                                <button type="button" class="btn btn-outline-secondary"  @click.prevent="openPostalCode">Order Now!</button>
                                                 <a href="#" class=""></a>
                                             </div>
                                             <div class="col-4">
@@ -696,7 +696,7 @@
 
                                          <div class="row pries-bar">
                                             <div class="col-8 order-btn">
-                                                <button type="button" class="btn btn-outline-secondary">Order Now!</button>
+                                                <button type="button" class="btn btn-outline-secondary"  @click.prevent="openPostalCode">Order Now!</button>
                                                 <a href="#" class=""></a>
                                             </div>
                                             <div class="col-4">
@@ -719,10 +719,7 @@
                         </div>
 
                     </div>
-                    <div class="view-btn text-center order-btn">
-                       <a href="#" class="btn btn-rounded-danger"> VIEW ALL</a>
-
-                     </div>
+               
 
                 </div>
 
@@ -995,6 +992,7 @@
             </div>
         </section>
         <footer-menu></footer-menu>
+        <postal-code-popup  @HideModalValue="hideModal"   :showModalProp="showPostalCode"></postal-code-popup>
     </div>
 </template>
 
@@ -1024,7 +1022,11 @@
                 index: null,
                 showPopup: false,
                 menu: false,
-                allergy: false
+                allergy: false,
+                postal_code: '',
+                error_message: '',
+                showPopup: false,
+                showPostalCode: false,
             };
         },
         mounted() {
@@ -1040,6 +1042,14 @@
                         _this.stories =  response.data.data;
                         _this.loading  = false;
                     });
+            },
+            openPostalCode() {
+                this.showPopup = false;
+                this.showPostalCode = true;
+            },
+                hideModal() {
+                this.showPopup = false;
+                this.showPostalCode = false;
             },
 
         }

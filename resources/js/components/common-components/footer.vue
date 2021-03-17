@@ -65,7 +65,7 @@
 
                 <div class="copyright text-center">
                     <div class="container">
-                        <p>Copyright © 2020 | All rights reserved</p>
+                        <p>Copyright © 2021 | All rights reserved</p>
                     </div>
                 </div>
             </div>
