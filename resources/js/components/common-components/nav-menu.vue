@@ -50,10 +50,6 @@
                                         <li class="nav-item "> <router-link :to="{ path: '/about-us'}"><a class="nav-link js-scroll-trigger" >About us</a></router-link></li>
                                         <li class="nav-item "> <router-link :to="{ path: '/feedback'}"><a class="nav-link js-scroll-trigger" >Feedback</a></router-link></li>
                                         <li class="nav-item">
-                                            <a href="#" @click="openAllergy" class="nav-link">Allergy Information</a>
-                                        </li>
-
-                                        <li class="nav-item">
                                             <a href="#" class="nav-link" @click="openMenu">Our Menu</a>
                                         </li>
 
@@ -88,7 +84,7 @@
                                 <p>The only thing we're serious about is food.</p>
                                 <div class="form-group text-center">
                                     
-                                    <button type="button" class="btn btn-outline-light"  v-on:click="checkPostCode">
+                                    <button type="button" class="btn btn-outline-light">
                                     <span>Explore MOre</span>
                                     </button>
                                 </div>

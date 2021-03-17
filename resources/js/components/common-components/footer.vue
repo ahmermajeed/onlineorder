@@ -27,9 +27,8 @@
                                     <ul>
                                       
                                       <li><a href="#">About us</a></li>
-                                      <li><a href="#">Our Menu</a></li>
+                                      <li><a href="#" @click="openMenu">Our Menu</a></li>
                                       <li><a href="#">Feedback</a></li>
-                                      <li><a href="#">Allergy Information</a></li>
                                       
                                     </ul>
                                 </div>
@@ -68,5 +67,30 @@
             </div>
             
         </footer>
+        <download-menu @HideModalValue="hideModal" :showModalProp="showPopup" :isMenu="menu" :isAllergy="allergy" ></download-menu>
     </div>
 </template>
+
+<script>
+    export default {
+        data() {
+            return {
+                showPopup: false,
+                showPostalCode: false,
+                menu: false,
+            }
+        },
+        methods: {
+
+            hideModal() {
+                this.showPopup = false;
+                this.showPostalCode = false;
+            },
+
+            openMenu() {
+                this.showPopup = true;
+                this.menu = true;
+            },
+        },
+    }
+</script>

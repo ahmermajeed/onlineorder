@@ -147,7 +147,7 @@
                                     </table>
                                 </div>
                                 <div class="cart-btn mt-3 mb-3 text-center">
-                                     <button class="btn btn-outline-light" @click="placeOrder()"><span>Checkout</span></button>
+                                     <button class="btn btn-outline-red" @click="placeOrder()"><span>Checkout</span></button>
                                 </div> 
                             </div>
                         </div>

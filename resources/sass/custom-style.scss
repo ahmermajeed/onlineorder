@@ -85,6 +85,13 @@ a {
     font-weight: bold;
     border: none;
 }
+.btn-outline-red {
+    background-color: #d72327 !important;
+    outline: none !important;
+    color: #fff !important;
+    font-weight: bold;
+    border: none;
+}
 
 /*.btn-outline-secondary {
     border-radius: 17px;
@@ -2328,5 +2335,8 @@ ul {
 }
 .postal-code-details .form-group span {
     color: #fff;
+}
+.check-out-page .container {
+    max-width: 1150px;
 }
 /***************Choose Order type end*******************/
