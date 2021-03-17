@@ -740,7 +740,6 @@
                      <div class="row justify-content-md-center">
                         <div class="col-lg-4 col-md-6 col-sm-6">
                             <div class="offers">
-                                <h5>Chicken Bucket</h5>
                                 <h6>Family Pack 1</h6>
                                 <p>8 Pieces Chicken<br>4 Hot Wings<br>3 Fries <br>Bottle of drink</p>
                                 <div class="pries"><strong>£16.00</strong></div>
@@ -749,20 +748,13 @@
                         </div>
                         <div class="col-lg-4 col-md-6 col-sm-6">
                             <div class="offers">
-                                <h5>Chicken Bucket</h5>
                                 <h6>Family Pack 2</h6>
                                 <p>12 Pieces Chicken<br>6 Hot Wings<br>4 Fries <br>Bottle of drink</p>
                                 <div class="pries"><strong>£19.00</strong></div>
 
                             </div>
                         </div>
-
                      </div>
-
-                </div>
-                <div class="view-btn text-center ">
-                       <a href="#" class="btn btn-rounded-danger"> VIEW ALL</a>
-
                 </div>
             </div>
 

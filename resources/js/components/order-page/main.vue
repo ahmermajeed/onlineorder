@@ -1,7 +1,7 @@
 <template>
     <div>
         <header-menu></header-menu>
-        <section class="inner-section main-popup-section" id="product-scroll " >
+        <section class="inner-section main-popup-section" id="product-scroll">
             <div class="container" >
                 <div class="row">
                     <div class=" col-lg-3 col-md-4 col-sm-12 listing-page-sidebar lp-sidebar-left">
@@ -113,7 +113,7 @@
                                                 <div  class="strong-open"  v-if="cart.extras" v-for="(extra, extra_index) in cart.extras" >
                                                     <strong>{{extra.group_name}}:</strong> {{extra.choice}}
                                                 </div>
-                                                <td  v-if="!cart.extras">£ {{priceFormat(cart.price * cart.quantity) }}</td>
+                                                <td  v-if="!cart.extras" class="p-0">£ {{priceFormat(cart.price * cart.quantity) }}</td>
                                             <td class="order-priecs"  v-if="cart.extras">£{{priceFormat(cart.single_product_total_amount)}} </td>
                                                
                                             </td>
@@ -219,16 +219,10 @@
                     
                    <!--   <button class=" chek-out-btn anima-btn custom-btn move-eff btn btn-rounded-danger " @click="opencartlist()"><span>Checkout</span><i class="fas fa-long-arrow-alt-right"></i></button>  -->
                 </div>
-                <div class="mb-cart-box">
+<!--                 <div class="mb-cart-box">
                 <ul class="border-all" v-for="(cart, product_index) in getAllCartArray"  v-if="product_index  > 0">
                     <li>
                        
-                        <!-- <span class="meal">
-                             <span class="qty">
-                               <i class="fa fa-angle-up" @click="quantityAddInCart(product_index)"></i>
-                              
-                               <i class="fa fa-angle-down" @click="quantityMinusInCart(product_index)"></i>
-                        </span> -->
                          <h3> {{ cart.quantity}} {{cart.product_name}}</h3>
                         
                            
@@ -236,10 +230,7 @@
                                 <li><h3 class="font-weight:800px;">{{extra.group_name}}:
                                 {{extra.choice}}</h3> </li>
                                 <span class="mealactions">
-
-<!--                                <a href="#"  @click="updateProduct(cart.product_id,cart,product_index)"><i v-b-tooltip.hover title="Edit Meal" class="fas fa-pen">
-
-</i></a>-->       
+     
                             <span class="price">£{{priceFormat(cart.single_product_total_amount)}}</span>
                               <a href="#"  @click.prevent="removeFromCart(product_index)"> <i                                 v-b-tooltip.hover title="Remove Meal" class="icon-delete"></i></a>
 
@@ -252,7 +243,33 @@
                        
                     </li>
                 </ul>
+                </div> -->
+
+                <div class="mb-cart-box">
+                    <ul  v-for="(cart, product_index) in getAllCartArray" v-if="product_index  > 0">
+                        <li>
+                        <span class="qty mob">
+                            <i style="font-size: 17px;" @click="quantityAddInCart(product_index)">+</i>
+                               <span>{{ cart.quantity}}</span>
+                            <i style="font-size: 17px;" @click="quantityMinusInCart(product_index)">-</i>
+
+                        </span>
+                            <span class="meal">
+                            {{cart.product_name}}
+                            <ul v-if="cart.extras" v-for="(extra, extra_index) in cart.extras">
+                                <li><b>{{extra.group_name}}:</b> {{extra.choice}}</li>
+                            </ul>
+                            <span class="mealactions">
+
+                                <a href="#"  @click="updateProduct(cart.product_id,cart,product_index)"><i v-b-tooltip.hover title="Edit Meal" class="fas fa-pen"> </i></a>
+                               <a href="#" @click.prevent="removeFromCart(product_index)"> <i v-b-tooltip.hover title="Remove Meal" class="fa fa-times"></i></a>
+                            </span>
+                        </span>
+                            <span class="price">£{{priceFormat(cart.single_product_total_amount)}}</span>
+                        </li>
+                    </ul>
                 </div>
+
                 <div class="confirm-btn">
                     <button class="anima-btn btn btn-rounded-danger btn move-eff" @click="placeOrder()"><span>Confirm Order</span></button>
                 </div>
@@ -1881,7 +1898,7 @@
         .mobile-cart-button{
             position: fixed;
             bottom: 0;
-            background-color: #01a8fb ;
+            background-color: #f7d8d9 !important ;
             border-color: #01a8fb ;
             font-weight: 600;
             font-size: 16px;
@@ -1905,24 +1922,6 @@
         }
         .mobile-cart-button .inner span{
             color: #000;
-        }
-        .mobile-cart-button .inner span.text:after{
-            margin-left:5px;
-            content: "\f105";
-            display: inline-block;
-            font: normal normal normal 14px/1 Font Awesome 5 Free;
-            font-size: inherit;
-            text-rendering: auto;
-            -webkit-font-smoothing: antialiased;
-        }
-        .mobile-cart-button.cartheight .inner span.text:after{
-            margin-left:5px;
-            content: "\f107";
-            display: inline-block;
-            font: normal normal normal 14px/1 Font Awesome 5 Free;
-            font-size: inherit;
-            text-rendering: auto;
-            -webkit-font-smoothing: antialiased;
         }
 
         .mobile-cart-button svg{
@@ -2055,7 +2054,10 @@
         margin-top: 0;
         padding-top: 0 !important;
         border-right: 1px solid rgba(0,0,0,0);
-        display: none;
+    }
+
+    .cart-menu-fixed .offset-categories {
+        width: 100% !important;
     }
 
     .business > div.dishes-wrapper {
@@ -2070,11 +2072,49 @@
     }
 
     @media (max-width: 767px) {
-        .cart-menu-fixed .offset-categories{
-            width:100%;
+        .cart-menu-fixed .offset-categories {
+            width: 100%;
+            z-index: 2;
         }
+
         .cart-menu-fixed .business > div.dishes-wrapper {
             padding-top: 210px !important;
+        }
+        .mealactions a {
+            display: inline-block;
+            margin-right: 0;
+        }
+        .mb-cart-box ul li span.qty {
+            flex: 0 0 50px;
+            min-width: 50px;
+            position: relative;
+            padding-left: 25px;
+        }
+        .mb-cart-box svg {
+            -webkit-filter: brightness(0);
+            filter: brightness(0);
+            display: inline-block;
+            vertical-align: sub;
+        }
+
+        .mb-cart-box ul li span.meal {
+            width: 220px;
+            margin-left: 10px;
+            display: inline-table;
+        }
+        .mb-cart-box ul li span.meal .mealactions {
+            display: inline-block;
+            margin-top: 2px;
+            margin-left: 10px;
+        }
+        .mb-cart-box ul li price {
+            padding: 5px;
+            color: #000;
+            margin-left: 10px;
+
+        }
+        .qty.mob span {
+            padding: 15px;
         }
     }
 

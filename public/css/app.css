@@ -14234,8 +14234,15 @@ ul {
   }
 }
 
+.header-bottom .food .num-img {
+  border: 1px solid #e3342f;
+  border-radius: 15px;
+  background: #e3342f;
+}
+
 .header-bottom .food .num-img a {
   display: inline-block;
+  color: #fff;
 }
 
 @media (max-width: 767.98px) {
@@ -15977,19 +15984,6 @@ ul {
   border-radius: 20px !important;
 }
 
-@media (max-width: 767.98px) {
-  .mobile-cart-button .inner span.text:after {
-    position: absolute !important;
-    top: 19px;
-    left: 45% !important;
-    font-size: 20px !important;
-    content: "\E902" !important;
-    color: #909090;
-    font-family: "icomoon" !important;
-    transform: rotate(178deg);
-  }
-}
-
 /***************check out end **********************/
 
 /***************Deal-section-start*******************/
@@ -16049,7 +16043,7 @@ ul {
 .form-cart .switch-field label {
   background-color: #fff;
   color: rgba(0, 0, 0, 0.6);
-  font-size: 14px;
+  font-size: 13px;
   line-height: 1;
   text-align: center;
   padding: 8px 16px;
@@ -16134,6 +16128,10 @@ ul {
 .postal-code-details form {
   width: 100%;
   text-align: center;
+}
+
+.postal-code-modal .modal-content .modal-header .modal-title {
+  font-size: 16px;
 }
 
 /***************Deal-section-end*******************/

@@ -3,7 +3,7 @@
         <b-modal id="food-allergy" centered @hidden="onHidden" :hide-footer=true title-tag="h4" ok-variant="primary" ref="myModalRef" custom-modal no-close-on-backdrop class="custom-modal">
             <b-alert show variant="danger" v-if="error_message" style="text-transform: capitalize;">{{error_message}}</b-alert>
              <h3>Food Allergy</h3>
-             <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatum corporis non consequatur error enim quia sit nulla molestias ab possimus nisi eaque, rem incidunt aliquid, iusto facilis. Officiis, error autem?</p>
+             <p>If you suffer from a food allergy or intolerance, please let your server know upon placing your order.Some products may contain traces of boans and nuts.</p>
 
         </b-modal>
     </div>

@@ -70,16 +70,11 @@ const router = new VueRouter({
         },
 
         {
-            path: '/online-order/:id',
+            path: '/online-order',
             name: 'online-order',
             component: require('./components/order-page/main.vue').default,
         },
     ],
-    scrollBehavior (to, from, savedPosition) {
-        return { x: 0, y: 600 ,
-            behavior: 'smooth',
-        }
-    }
 });
 
 new Vue({
