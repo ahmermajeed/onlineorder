@@ -296,10 +296,15 @@
                 discountedAmount:0,
                 discountedPercentAge:10,
                 finalAmount:0,
+                orderType:''
 
 
             };
         },
+        created(){
+            this.getTimeSlots();
+        },
+        
         mounted() {
             if(this.$store.getters.getAllCartArray.length > 0) {
                 let total = 0;
@@ -311,6 +316,8 @@
             twentyMinutesLater.setMinutes(twentyMinutesLater.getMinutes() + 50);
 
             this.form.deliveryTime = twentyMinutesLater;
+
+            this.orderType = this.$store.getters.getOrderType;
 
             this.scrollToMain();
             this.getOffers();
@@ -347,8 +354,7 @@
                 element.scrollIntoView({behavior: "instant", block: "start"});
             },
 
-            placeOrder()
-            {
+            placeOrder() {
                 let error = [];
                 let _this = this;
                 if (this.form.order_type != '') {
@@ -381,7 +387,7 @@
 
                     if (this.form.payment_type === "") {
                         error.push('Please Add Your Payment Type');
-                    }else if(this.form.payment_type == 'Credit/Debit Card') {
+                    } else if (this.form.payment_type == 'Credit/Debit Card') {
                         if (this.form.card_holder_name === "") {
                             error.push('Please Add Card Holder Name');
                         }
@@ -400,16 +406,14 @@
                         }
                     }
 
-                } else {
-                    error.push('Please Choose Your Order Type');
                 }
                 this.errorMessage = error;
 
                 if (this.errorMessage.length > 0) {
                     _this.scrollToTop();
-                }else {
+                } else {
                     let vm = this;
-                    if(this.form.order_type == 'Pickup'){
+                    if (vm.orderType == 'Pickup') {
                         vm.form.address = '---';
                         vm.form.street = '---';
                         vm.form.postal_code = '---';
@@ -424,7 +428,7 @@
                         'delivery_address': vm.form.address + " " + vm.form.street + " " + vm.form.postal_code,
                         'order_details': this.$store.getters.getAllCartArray,
                         'user_data': this.form,
-                        'order_type': this.form.order_type
+                        'order_type': vm.orderType
                     };
                     console.log(data);
                     setTimeout(() => {
@@ -453,7 +457,18 @@
 
                     }, 1000);
                 }
-                }
+            },
+
+            getTimeSlots() {
+                let _this = this;
+                _this.loading = true;
+                axios.get('/api/get-time-slots/' + _this.interval)
+                    .then((response) => {
+                        _this.slots = response.data;
+
+                        _this.loading = false;
+                    });
+            },
 
 
 

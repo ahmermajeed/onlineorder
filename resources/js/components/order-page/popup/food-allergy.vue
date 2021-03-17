@@ -3,7 +3,7 @@
         <b-modal id="food-allergy" centered @hidden="onHidden" :hide-footer=true title-tag="h4" ok-variant="primary" ref="myModalRef" custom-modal no-close-on-backdrop class="custom-modal">
             <b-alert show variant="danger" v-if="error_message" style="text-transform: capitalize;">{{error_message}}</b-alert>
              <h3>Food Allergy</h3>
-             <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatum corporis non consequatur error enim quia sit nulla molestias ab possimus nisi eaque, rem incidunt aliquid, iusto facilis. Officiis, error autem?</p>
+             <p>Please contact our kitchen staff on <a href="tel:0289 031 9242">0289 031 9242</a> for more information.</p>
 
         </b-modal>
     </div>

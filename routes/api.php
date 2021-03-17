@@ -79,6 +79,6 @@ Route::get('downloadMenu', 'Api\ProductController@downloadMenu');
 /** Get Offers*/
 Route::resource('offer', 'Api\OfferController');
 
-
-
 Route::post('add-choice', 'Api\ChoicesGroupController@addChoice');
+
+Route::get('get-time-slots/{duration}','Api\DeliveryChargesController@getTimeSlots');

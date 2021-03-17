@@ -485,11 +485,52 @@
             },
 
 
+              placeOrder(){
+                 let vm = this;
+
+                 if (this.orderType == '') {
+                     vm.errorMessage = 'Please Select Order Type';
+                     setTimeout(function(){ vm.errorMessage = ""; }, 2000);
+                 } else if(this.orderType == 'Delivery' && this.postalCode == "") {
+                     vm.errorMessage = 'Please Enter Your Postcode';
+                     setTimeout(function(){ vm.errorMessage = ""; }, 2000);
+
+                 } else {
+
+                     if(this.orderType === 'Pickup'){
+                         vm.$router.push({name: 'check-out'});
+                     }else {
+                         axios({
+                             method: 'post',
+                             url: '/api/check-postal',
+                             data: {
+                                 order_type: this.orderType,
+                                 postal_code:this.postalCode
+                             },
+                         }).then(function (response) {
+
+                             if(response.data.error === undefined){
+                                 vm.errorMessage = response.data.data.amount;
+                                 vm.$store.commit('setDeliveryCharges', response.data.data.amount);
+                                 vm.$store.commit('setOrderType', vm.orderType);
+                                 vm.$store.commit('setPostalCode', vm.postalCode);
+                                 vm.$router.push({name: 'check-out'})
+
+                             }else {
+                                 vm.errorMessage = 'We are not providing food in your area';
+                             }
+                         })
+                             .catch(function (response) {
+                                 //handle error
+                                 console.log(response);
+                             });
+
+                     }
+
+                 }
+            },
 
 
-            placeOrder(){
-                this.$router.push({name: 'check-out'})
-           },
             removeFromCart(index){
                 console.log('tets');
                 let cart_data = this.$store.getters.getAllCartArray;
