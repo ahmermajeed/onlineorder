@@ -385,15 +385,15 @@
 							<ul>
 								<li>
 									<div class="address_icon"><i class="icon-location"></i></div>
-									<div class="address_detail"><h3>Address</h3> <p>Rainbow Drive Youngstown</p></div>
+									<div class="address_detail"><h3>Address</h3> <p>223-225 Edward Road, Birmingham, B12 9Lh.</p></div>
 								</li>
 								<li>
 									<div class="address_icon"><i class="icon-phone1"></i></div>
-									<div class="address_detail"><h3>Contact Numbers</h3> <p>1800 450 1245</p></div>
+									<div class="address_detail"><h3>Contact Numbers</h3> <p>0121 337 7378</p></div>
 								</li>
 								<li>
 									<div class="address_icon"><i class="icon-clock"></i></div>
-									<div class="address_detail"><h3>Office Timings</h3> <p>Mon - Fri 9.00am : 6.00pm</p></div>
+									<div class="address_detail"><h3>Office Timings</h3> <p>4PM till 12AM</p></div>
 								</li>
 							</ul>
 						</div>

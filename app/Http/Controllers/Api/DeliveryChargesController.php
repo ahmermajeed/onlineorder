@@ -7,6 +7,8 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Validator;
 use Symfony\Component\HttpFoundation\Response;
+use Carbon\Carbon;
+
 
 class DeliveryChargesController extends Controller
 {
@@ -48,5 +50,35 @@ class DeliveryChargesController extends Controller
             $output = ['error' => ['code' => 401, 'message' => "No record found"]];
             return response()->json($output, $code);
         }
+    }
+
+    public function getTimeSlots($duration)
+    {
+        $returnArray = array();
+
+        for ($j = 0; $j <= 2; $j++) {
+
+            $currentDateTime = Carbon::now();
+            $currentDateTime->addDay($j);
+            $day = $currentDateTime->format('l');
+
+            $time = array();// Define output
+            $StartTime = strtotime("12:30"); //Get Timestamp
+            $EndTime = strtotime("23:55"); //Get Timestamp
+
+            $AddMins = $duration * 60;
+
+            while ($StartTime <= $EndTime) //Run loop
+            {
+                $time[] = $day. " ". date("G:i", $StartTime);
+                $StartTime += $AddMins; //Endtime check
+            }
+
+            array_push($returnArray, $time);
+        }
+
+        $final_array = $this->_repository->array_flatten($returnArray);
+
+        return $final_array;
     }
 }

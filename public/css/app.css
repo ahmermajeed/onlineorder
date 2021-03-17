@@ -20515,19 +20515,6 @@ ul {
   border-radius: 20px !important;
 }
 
-@media (max-width: 767.98px) {
-  .mobile-cart-button .inner span.text:after {
-    position: absolute !important;
-    top: 19px;
-    left: 45% !important;
-    font-size: 20px !important;
-    content: "\E902" !important;
-    color: #909090;
-    font-family: "icomoon" !important;
-    transform: rotate(178deg);
-  }
-}
-
 /***************check out end **********************/
 
 /***************Deal-section-start*******************/
@@ -20587,7 +20574,7 @@ ul {
 .form-cart .switch-field label {
   background-color: #fff;
   color: rgba(0, 0, 0, 0.6);
-  font-size: 14px;
+  font-size: 13px;
   line-height: 1;
   text-align: center;
   padding: 8px 16px;
@@ -20672,6 +20659,29 @@ ul {
 .postal-code-details form {
   width: 100%;
   text-align: center;
+}
+
+.btn.btn-rounded-danger {
+  height: auto;
+  padding: 12px !important;
+  line-height: 1;
+}
+
+.btn.btn-outline-success {
+  height: auto;
+  padding: 12px !important;
+  line-height: 1;
+}
+
+.cart-menu-fixed .offset-categories {
+  width: 100% !important;
+}
+
+.modal-content input[type=radio],
+input[type=checkbox] {
+  width: 20px;
+  margin-right: 10px;
+  margin-top: -9px;
 }
 
 /***************Deal-section-end*******************/
