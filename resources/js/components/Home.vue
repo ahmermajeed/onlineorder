@@ -7,7 +7,7 @@
 	</div>
 	<div class="ice_main_wrapper">
 		<div class="ice_banner_wrapper">
-			<img src="images/banner/banner_bg.jpg" alt="icecream-parlour-banner" class="img-responsive">
+			<img src="images/banner/banner_bg-black.png" alt="icecream-parlour-banner" class="img-responsive">
 			<div class="banner_content">
 				<div class="container">
 					<div class="row">

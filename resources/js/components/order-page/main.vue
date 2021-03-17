@@ -2160,6 +2160,19 @@
         .qty.mob span {
             padding: 15px;
         }
+        .offset-categories {
+            position: fixed;
+            top: -100%;
+            z-index: 1000;
+            width: calc(100% - 0%);
+            margin-top: 0;
+            padding-top: 0 !important;
+            border-right: 1px solid rgba(0,0,0,0);
+        }
+        .modal-body .description form {
+            display: flex;
+            flex-direction: column;
+        }
     }
 
 </style>

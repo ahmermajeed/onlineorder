@@ -13,7 +13,7 @@
                                     <ul>
                                          <li class="mail-space"><i class="icon-mail-2"></i>
                                             <span>
-                                                <a href="mailto:info@dessertking.co.uk">info@thedessertking.co.uk</a>
+                                                <a href="mailto:info@thedessertking.co.uk">info@thedessertking.co.uk</a>
                                             </span>
                                         </li>
                                         <li><i class="icon-placeholder"></i>
@@ -43,7 +43,7 @@
                             <div class="col-6 col-md-3">
                                 <router-link :to="{ path: '/'}">
                                      <a class="navbar-brand js-scroll-trigger main-logo" href="javascript:;">
-                                        <img src="/images/banner/logo.png">
+                                        <img src="/images/logo-black.png">
                                     </a>
                                 </router-link>
                             </div>
