@@ -92,9 +92,9 @@ class OrderController extends Controller
         foreach ($requestData['order_details'] as $key => $value){
             if($value['product_type'] == 'product'){
                 $product = Products::where('id',$value['product_id'])->select('id_category')->first();
-                if(isset($categories[$product->id_category])){
-                    $requestData['order_details'][$key]['product_name'] = $categories[$product->id_category]." ".$value['product_name'];
-                }
+//                if(isset($categories[$product->id_category])){
+//                    $requestData['order_details'][$key]['product_name'] = $categories[$product->id_category]." ".$value['product_name'];
+//                }
             }
 
         }
