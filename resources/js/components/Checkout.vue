@@ -257,9 +257,7 @@
                 finalAmount:0,
                 orderType:'',
                 interval: 45,
-
-
-
+                slots: []
             };
         },
 

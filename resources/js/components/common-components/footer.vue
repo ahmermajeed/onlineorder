@@ -23,8 +23,6 @@
                                       <li><a href="#">Home</a></li>
                                       <li><a href="#">About us</a></li>
                                       <li><a href="#">Feedback</a></li>
-                                      <li><a href="#">Allergy Information</a></li>
-                                      <li><a href="#">Our Menu</a></li>
                                     </ul>
                                 </div>
                                 <div class="follow-us text-center">

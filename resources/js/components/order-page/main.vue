@@ -96,6 +96,11 @@
                                         Collection
                                         <span>10 mins</span></label>
                                 </div>
+                                <div class="form-group" style="position: relative; top: 12px;" v-if="showPostal">
+                                    <label for=""><span>Enter your Postcode:</span></label>
+                                    <input type="text"  class="form-control" v-model="postalCode" placeholder="Enter your Postcode">
+                                    <p style="color:red;font-size: 11px;margin-top: 5px;">{{errorMessage}} </p>
+                                </div>
                             </form>
 
 
@@ -165,11 +170,12 @@
                             <ul v-if="cart.extras" v-for="(extra, extra_index) in cart.extras">
                                 <li><b>{{extra.group_name}}:</b> {{extra.choice}}</li>
                             </ul>
+                        </span>
+
                             <span class="mealactions">
                                 <i v-b-tooltip.hover title="Edit Meal"  class="fas fa-pen"></i>
                                 <a href="#" @click.prevent="removeFromCart(product_index)"> <i v-b-tooltip.hover title="Remove Meal" class="icon-delete"></i></a>
                             </span>
-                        </span>
                         <span class="price">£{{priceFormat(cart.single_product_total_amount)}}</span>
                     </li>
                 </ul>
@@ -259,12 +265,13 @@
                             <ul v-if="cart.extras" v-for="(extra, extra_index) in cart.extras">
                                 <li><b>{{extra.group_name}}:</b> {{extra.choice}}</li>
                             </ul>
+                        </span>
+
                             <span class="mealactions">
 
                                 <a href="#"  @click="updateProduct(cart.product_id,cart,product_index)"><i v-b-tooltip.hover title="Edit Meal" class="fas fa-pen"> </i></a>
                                <a href="#" @click.prevent="removeFromCart(product_index)"> <i v-b-tooltip.hover title="Remove Meal" class="fa fa-times"></i></a>
                             </span>
-                        </span>
                             <span class="price">£{{priceFormat(cart.single_product_total_amount)}}</span>
                         </li>
                     </ul>
@@ -322,6 +329,10 @@
                 editDeal:false,
                 editDealsData:{},
                 foodAllergyModal: false,
+                postalCode: '',
+                showPostal:'',
+                errorMessage:''
+
             };
         },
         mounted() {
@@ -334,12 +345,30 @@
                     var value = this.$store.getters.getAllCartArray[key];
                 }
             }
+
+            this.orderType = this.$store.getters.getOrderType;
+
+            this.postalCode = this.$store.getters.getPostalCode;
+
+            if(this.orderType == "Delivery") {
+                this.showPostal = true
+            }
+
             this.scrollToMain();
             window.addEventListener("scroll", this.handleScroll);
 
 
         },
         methods: {
+
+            showPostalCode() {
+                let self = this;
+
+                if(self.orderType == "Delivery")
+                    self.showPostal = true
+                else
+                    self.showPostal = false
+            },
 
             scrollToMain() {
                 let element = document.getElementById("product-scroll");
@@ -477,9 +506,51 @@
 
 
 
-            placeOrder(){
-                this.$router.push({name: 'check-out'})
-           },
+           placeOrder(){
+              let vm = this;
+
+              if (this.orderType == '') {
+                  vm.errorMessage = 'Please Select Order Type';
+                  setTimeout(function(){ vm.errorMessage = ""; }, 2000);
+              } else if(this.orderType == 'Delivery' && this.postalCode == "") {
+                  vm.errorMessage = 'Please Enter Your Postcode';
+                  setTimeout(function(){ vm.errorMessage = ""; }, 2000);
+
+              } else {
+
+                  if(this.orderType === 'Pickup'){
+                      vm.$router.push({name: 'check-out'});
+                  }else {
+                      axios({
+                          method: 'post',
+                          url: '/api/check-postal',
+                          data: {
+                              order_type: this.orderType,
+                              postal_code:this.postalCode
+                          },
+                      }).then(function (response) {
+
+                          if(response.data.error === undefined){
+                              vm.errorMessage = response.data.data.amount;
+                              vm.$store.commit('setDeliveryCharges', response.data.data.amount);
+                              vm.$store.commit('setOrderType', vm.orderType);
+                              vm.$store.commit('setPostalCode', vm.postalCode);
+                              vm.$router.push({name: 'check-out'})
+
+                          }else {
+                              vm.errorMessage = 'We are not providing food in your area';
+                          }
+                      })
+                          .catch(function (response) {
+                              //handle error
+                              console.log(response);
+                          });
+
+                  }
+
+              }
+         },
+
             removeFromCart(index){
                 console.log('tets');
                 let cart_data = this.$store.getters.getAllCartArray;
@@ -2082,7 +2153,13 @@
         }
         .mealactions a {
             display: inline-block;
-            margin-right: 0;
+            margin-right: 7px;
+            position: relative;
+            top: -6px;
+        }
+        span.price {
+            position: relative;
+            top: -4px;
         }
         .mb-cart-box ul li span.qty {
             flex: 0 0 50px;
@@ -2098,9 +2175,12 @@
         }
 
         .mb-cart-box ul li span.meal {
-            width: 220px;
+            width: 140px;
             margin-left: 10px;
-            display: inline-table;
+            display: inline-block;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
         }
         .mb-cart-box ul li span.meal .mealactions {
             display: inline-block;
@@ -2115,6 +2195,15 @@
         }
         .qty.mob span {
             padding: 15px;
+        }
+        .offset-categories {
+            position: fixed;
+            top: -100%;
+            z-index: 1000;
+            width: calc(100% - 0%);
+            margin-top: 0;
+            padding-top: 0 !important;
+            border-right: 1px solid rgba(0,0,0,0);
         }
     }
 
