@@ -24,7 +24,7 @@
                                       <!-- <li><a href="#">About us</a></li> -->
                                       <li><a href="/feedback">Feedback</a></li>
                                       <!-- <li><a href="#">Allergy Information</a></li> -->
-                                      <li><a href="#" @click.prevent="openPostalCode">Our Menu</a></li>
+                                      <li><a href="#" @click.prevent="openPostalCode">Order Online</a></li>
                                     </ul>
                                 </div>
                                 <div class="follow-us text-center">

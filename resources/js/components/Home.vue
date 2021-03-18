@@ -538,11 +538,6 @@
                         </div>
 
                     </div>
-                    <div class="view-btn text-center order-btn">
-                       <a href="#" class="btn btn-rounded-danger"> VIEW ALL</a>
-
-                     </div>
-
                 </div>
 
             </div>

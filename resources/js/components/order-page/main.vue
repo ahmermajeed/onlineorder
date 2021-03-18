@@ -84,18 +84,27 @@
                             </div>
 
                             <form class="form-cart">
-                                <div class="switch-field">
-                                    <input type="radio" id="radio-one" name="switch-one" value="yes" checked/>
-                                    <label for="radio-one"> 
-                                    <img src="/images/delivery.png" alt="">
-                                    </i>Delivery 
-                                        <span>30 - 45 mins</span></label>
-                                    <input type="radio" id="radio-two" name="switch-one" value="no" />
-                                    <label for="radio-two">
-                                    <img src="/images/shopping-basket.png" alt="">
-                                        Collection
-                                        <span>10 mins</span></label>
+                                 <div class="switch-field">
+                                     <input type="radio" v-model="orderType" @change="showPostalCode" id="radio-one" name="switch-one"
+                                            value="Delivery"/>
+                                     <label for="radio-one">
+                                         <img src="/images/delivery.png" alt="">
+                                         </i>Delivery
+                                         <span>30 - 45 mins</span></label>
+                                     <input type="radio" v-model="orderType" @change="showPostalCode" id="radio-two" name="switch-one"
+                                            value="Pickup"/>
+                                     <label for="radio-two">
+                                         <img src="/images/shopping-basket.png" alt="">
+                                         Collection
+                                         <span>20 mins</span></label>
+                                 </div>
+
+                                <div class="form-group" style="position: relative; top: 12px;" v-if="showPostal">
+                                    <label for=""><span>Enter your Postcode:</span></label>
+                                    <input type="text"  class="form-control" v-model="postalCode" placeholder="Enter your Postcode">
+                                    <p style="color:red;font-size: 11px;margin-top: 5px;">{{errorMessage}} </p>
                                 </div>
+
                             </form>
 
 
@@ -106,17 +115,17 @@
                                 <div class="table-holder">
                                     <table class=tbl_cart_list>
                                         <tr class="section-border" v-for="(cart, product_index) in getAllCartArray"  v-if="product_index  > 0">
-                                            <!-- <td class=highlighted>
-                                            </td> -->
                                             <td class="order-name">
                                                 <div class="cart-order">{{cart.product_name}}</div>
                                                 <div  class="strong-open"  v-if="cart.extras" v-for="(extra, extra_index) in cart.extras" >
                                                     <strong>{{extra.group_name}}:</strong> {{extra.choice}}
                                                 </div>
-                                                <td  v-if="!cart.extras" class="p-0">£ {{priceFormat(cart.price * cart.quantity) }}</td>
+                                            </td>
+
+                                            <td  v-if="!cart.extras" class="p-0">£ {{priceFormat(cart.price * cart.quantity) }}</td>
+                                            
                                             <td class="order-priecs"  v-if="cart.extras">£{{priceFormat(cart.single_product_total_amount)}} </td>
                                                
-                                            </td>
                                             <td class="order-quty">
 
                                                <div class="priec-order">
@@ -165,11 +174,11 @@
                             <ul v-if="cart.extras" v-for="(extra, extra_index) in cart.extras">
                                 <li><b>{{extra.group_name}}:</b> {{extra.choice}}</li>
                             </ul>
-                            <span class="mealactions">
+                        </span>
+                           <span class="mealactions">
                                 <i v-b-tooltip.hover title="Edit Meal"  class="fas fa-pen"></i>
                                 <a href="#" @click.prevent="removeFromCart(product_index)"> <i v-b-tooltip.hover title="Remove Meal" class="icon-delete"></i></a>
                             </span>
-                        </span>
                         <span class="price">£{{priceFormat(cart.single_product_total_amount)}}</span>
                     </li>
                 </ul>
@@ -268,12 +277,13 @@
                             <ul v-if="cart.extras" v-for="(extra, extra_index) in cart.extras">
                                 <li><b>{{extra.group_name}}:</b> {{extra.choice}}</li>
                             </ul>
+                        </span>
+
                             <span class="mealactions">
 
                                 <a href="#"  @click="updateProduct(cart.product_id,cart,product_index)"><i v-b-tooltip.hover title="Edit Meal" class="fas fa-pen"> </i></a>
                                <a href="#" @click.prevent="removeFromCart(product_index)"> <i v-b-tooltip.hover title="Remove Meal" class="fa fa-times"></i></a>
                             </span>
-                        </span>
                             <span class="price">£{{priceFormat(cart.single_product_total_amount)}}</span>
                         </li>
                     </ul>
@@ -332,6 +342,10 @@
                 editDeal:false,
                 editDealsData:{},
                 foodAllergyModal: false,
+                showPostal : false,
+                errorMessage:'',
+                orderType:'',
+                error_message:''
             };
         },
         mounted() {
@@ -344,12 +358,30 @@
                     var value = this.$store.getters.getAllCartArray[key];
                 }
             }
+
+            this.orderType = this.$store.getters.getOrderType;
+
+            this.postalCode = this.$store.getters.getPostalCode;
+
+            if(this.orderType == "Delivery") {
+                this.showPostal = true
+            }
+
             this.scrollToMain();
             window.addEventListener("scroll", this.handleScroll);
 
 
         },
         methods: {
+
+            showPostalCode() {
+                let self = this;
+
+                if(self.orderType == "Delivery")
+                    self.showPostal = true
+                else
+                    self.showPostal = false
+            },
 
             scrollToMain() {
                 let element = document.getElementById("product-scroll");
@@ -2150,7 +2182,7 @@
         }
         .mealactions a {
             display: inline-block;
-            margin-right: 24px;
+            margin-right: 14px;
         }
 
         .mb-cart-box ul li span.qty {
@@ -2167,9 +2199,12 @@
         }
 
         .mb-cart-box ul li span.meal {
-            width: 220px;
+            width: 140px;
             margin-left: 10px;
-            display: inline-table;
+            display: inline-block;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
         }
         .mb-cart-box ul li span.meal .mealactions {
             display: inline-block;
@@ -2184,6 +2219,15 @@
         }
         .qty.mob span {
             padding: 15px;
+        }
+        .offset-categories {
+            position: fixed;
+            top: -100%;
+            z-index: 1000;
+            width: calc(100% - 0%);
+            margin-top: 0;
+            padding-top: 0 !important;
+            border-right: 1px solid rgba(0,0,0,0);
         }
     }
 
