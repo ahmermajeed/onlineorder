@@ -96,6 +96,12 @@
                                         Collection
                                         <span>10 mins</span></label>
                                 </div>
+
+                                    <div class="form-group" style="position: relative; top: 12px;" v-if="showPostal">
+                                        <label for=""><span>Enter your Postcode:</span></label>
+                                        <input type="text"  class="form-control" v-model="postalCode" placeholder="Enter your Postcode">
+                                        <p style="color:red;font-size: 11px;margin-top: 5px;">{{errorMessage}} </p>
+                                    </div>
                             </form>
 
 
@@ -165,11 +171,12 @@
                             <ul v-if="cart.extras" v-for="(extra, extra_index) in cart.extras">
                                 <li><b>{{extra.group_name}}:</b> {{extra.choice}}</li>
                             </ul>
+                        </span>
+
                             <span class="mealactions">
                                 <i v-b-tooltip.hover title="Edit Meal"  class="fas fa-pen"></i>
                                 <a href="#" @click.prevent="removeFromCart(product_index)"> <i v-b-tooltip.hover title="Remove Meal" class="icon-delete"></i></a>
                             </span>
-                        </span>
                         <span class="price">£{{priceFormat(cart.single_product_total_amount)}}</span>
                     </li>
                 </ul>
@@ -256,15 +263,16 @@
                         </span>
                             <span class="meal">
                             {{cart.product_name}}
-                            <ul v-if="cart.extras" v-for="(extra, extra_index) in cart.extras">
-                                <li><b>{{extra.group_name}}:</b> {{extra.choice}}</li>
-                            </ul>
+                                <ul v-if="cart.extras" v-for="(extra, extra_index) in cart.extras">
+                                    <li><b>{{extra.group_name}}:</b> {{extra.choice}}</li>
+                                </ul>
+                            </span>
+
                             <span class="mealactions">
 
                                 <a href="#"  @click="updateProduct(cart.product_id,cart,product_index)"><i v-b-tooltip.hover title="Edit Meal" class="fas fa-pen"> </i></a>
                                <a href="#" @click.prevent="removeFromCart(product_index)"> <i v-b-tooltip.hover title="Remove Meal" class="fa fa-times"></i></a>
                             </span>
-                        </span>
                             <span class="price">£{{priceFormat(cart.single_product_total_amount)}}</span>
                         </li>
                     </ul>
@@ -322,6 +330,8 @@
                 editDeal:false,
                 editDealsData:{},
                 foodAllergyModal: false,
+                showPostal : false,
+                errorMessage:''
             };
         },
         mounted() {
@@ -349,6 +359,15 @@
 
         },
         methods: {
+
+            showPostalCode() {
+                let self = this;
+
+                if(self.orderType == "Delivery")
+                    self.showPostal = true
+                else
+                    self.showPostal = false
+            },
 
             scrollToMain() {
                 let element = document.getElementById("product-scroll");
@@ -2126,7 +2145,13 @@
         }
         .mealactions a {
             display: inline-block;
-            margin-right: 14px;
+            margin-right: 7px;
+            position: relative;
+            top: -6px;
+        }
+        span.price {
+            position: relative;
+            top: -4px;
         }
         .mb-cart-box ul li span.qty {
             flex: 0 0 50px;
@@ -2142,9 +2167,12 @@
         }
 
         .mb-cart-box ul li span.meal {
-            width: 220px;
             margin-left: 10px;
-            display: inline-table;
+            width: 130px;
+            display: inline-block;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
         }
         .mb-cart-box ul li span.meal .mealactions {
             display: inline-block;

@@ -55,7 +55,7 @@
 
                                     <div class="col-sm-6">
                                         <label>Street *</label>
-                                        <input type="text"  v-model="form.street" class="form-control" placeholder="street">
+                                        <input type="text"  v-model="form.street" class="form-control" placeholder="Street">
                                     </div>
                                     <div class="col-sm-6">
                                         <label  class="col-form-label">Town *</label>
@@ -176,7 +176,7 @@
                                         </div>
                                     </td>
                                     <td class="order-quty">
-                                        <span>{{ cart.quantity}}  <i>X</i></span>
+                                        <span>{{ cart.quantity}}</span>
                                     </td>
 
                                     <td class="amount" v-if="!cart.extras">£ {{priceFormat(cart.price * cart.quantity) }}</td>
@@ -257,6 +257,7 @@
                 finalAmount:0,
                 interval: 45,
                 orderType: '',
+                slots:[]
             };
         },
 
