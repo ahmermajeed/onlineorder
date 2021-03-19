@@ -10,7 +10,7 @@
                                 <ul class="Opening">
                                     <li><a href="#"><span><i class="icon-smartphone-1"></i></span>0121 440 3393</a></li>
                                     <li><a href="#"><span><i class="icon-mail-2"></i></span>hello@bigsajoriginal.co.uk</a></li>
-                                    <li><a href="#"><span><i class="icon-placeholder"></i></span>231 edward rd
+                                    <li><a href="#"><span><i class="icon-placeholder"></i></span>231 Edward Rd
                                     </a></li>
                                 </ul>
                             </div>
@@ -23,8 +23,7 @@
                                       <li><a href="#">Home</a></li>
                                       <li><a href="#">About us</a></li>
                                       <li><a href="#">Feedback</a></li>
-                                      <li><a href="#">Allergy Information</a></li>
-                                      <li><a href="#">Our Menu</a></li>
+                                      <li><a href="javascript:;" @click="openMenu">Our Menu</a></li>
                                     </ul>
                                 </div>
                                 <div class="follow-us text-center">
@@ -73,5 +72,31 @@
             </div>
 
         </footer>
+
+        <download-menu @HideModalValue="hideModal" :showModalProp="showPopup" :isMenu="menu" :isAllergy="allergy" ></download-menu>
     </div>
 </template>
+
+<script>
+    export default {
+        data() {
+            return {
+                showPopup: false,
+                menu: false,
+                allergy: false
+            }
+        },
+        methods: {
+
+            hideModal() {
+                this.showPopup = false;
+            },
+
+            openMenu() {
+                this.showPopup = true;
+                this.menu = true;
+            },     
+        },
+    }
+</script>
+

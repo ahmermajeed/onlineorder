@@ -653,6 +653,7 @@ ul {
         .order-btn {
             @include media-breakpoint-down(md) {
                 border-right: 0;
+                margin: 0;
             }
         }
     }
@@ -2166,7 +2167,8 @@ ul {
     left: 60px;
     position: absolute;
     @include media-breakpoint-down(sm) {
-        left: 90px;
+        left: 70px;
+        bottom: 11px;
     }
 }
 .deliver-area {
@@ -2183,5 +2185,8 @@ ul {
 .modal-sm {
     max-width: 310px;
     margin: 0 auto;
+}
+.navbar-light .navbar-toggler-icon {
+    background-image: url(../../../images/theme-1/menu-bars.svg);
 }
 /***************Deal-section-end*******************/

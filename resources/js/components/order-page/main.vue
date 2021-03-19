@@ -177,11 +177,12 @@
                             <ul v-if="cart.extras" v-for="(extra, extra_index) in cart.extras">
                                 <li><b>{{extra.group_name}}:</b> {{extra.choice}}</li>
                             </ul>
+                        </span>
+
                             <span class="mealactions">
                                 <i v-b-tooltip.hover title="Edit Meal"  class="fas fa-pen"></i>
                                 <a href="#" @click.prevent="removeFromCart(product_index)"> <i v-b-tooltip.hover title="Remove Meal" class="icon-delete"></i></a>
                             </span>
-                        </span>
                         <span class="price">£{{priceFormat(cart.single_product_total_amount)}}</span>
                     </li>
                 </ul>
@@ -277,15 +278,16 @@
                         </span>
                             <span class="meal">
                             {{cart.product_name}}
-                            <ul v-if="cart.extras" v-for="(extra, extra_index) in cart.extras">
-                                <li><b>{{extra.group_name}}:</b> {{extra.choice}}</li>
-                            </ul>
+                                <ul v-if="cart.extras" v-for="(extra, extra_index) in cart.extras">
+                                    <li><b>{{extra.group_name}}:</b> {{extra.choice}}</li>
+                                </ul>
+                            </span>
+
                             <span class="mealactions">
 
                                 <a href="#"  @click="updateProduct(cart.product_id,cart,product_index)"><i v-b-tooltip.hover title="Edit Meal" class="fas fa-pen"> </i></a>
                                <a href="#" @click.prevent="removeFromCart(product_index)"> <i v-b-tooltip.hover title="Remove Meal" class="fa fa-times"></i></a>
                             </span>
-                        </span>
                             <span class="price">£{{priceFormat(cart.single_product_total_amount)}}</span>
                         </li>
                     </ul>
@@ -2180,7 +2182,13 @@
         }
         .mealactions a {
             display: inline-block;
-            margin-right: 24px;
+            margin-right: 7px;
+            position: relative;
+            top: -6px;
+        }
+        span.price {
+            position: relative;
+            top: -4px;
         }
         .mb-cart-box ul li span.qty {
             flex: 0 0 50px;
@@ -2196,9 +2204,12 @@
         }
 
         .mb-cart-box ul li span.meal {
-            width: 220px;
+            width: 130px;
             margin-left: 10px;
-            display: inline-table;
+            display: inline-block;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
         }
         .mb-cart-box ul li span.meal .mealactions {
             display: inline-block;
@@ -2213,6 +2224,15 @@
         }
         .qty.mob span {
             padding: 15px;
+        }
+        .offset-categories {
+            position: fixed;
+            top: -100%;
+            z-index: 1000;
+            width: calc(100% - 0%);
+            margin-top: 0;
+            padding-top: 0 !important;
+            border-right: 1px solid rgba(0,0,0,0);
         }
     }
 

@@ -14477,6 +14477,7 @@ ul {
 @media (max-width: 991.98px) {
   .deliver-area .card-offer .order-btn {
     border-right: 0;
+    margin: 0;
   }
 }
 
@@ -16206,7 +16207,8 @@ ul {
 
 @media (max-width: 767.98px) {
   .price-bar {
-    left: 90px;
+    left: 70px;
+    bottom: 11px;
   }
 }
 
@@ -16225,6 +16227,10 @@ ul {
 .modal-sm {
   max-width: 310px;
   margin: 0 auto;
+}
+
+.navbar-light .navbar-toggler-icon {
+  background-image: url(/images/menu-bars.svg?338210bbdd742d465c61556d0dcfad5e);
 }
 
 /***************Deal-section-end*******************/
