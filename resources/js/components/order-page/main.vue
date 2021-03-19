@@ -2208,7 +2208,13 @@
         }
         .mealactions a {
             display: inline-block;
-            margin-right: 14px;
+            margin-right: 7px;
+            position: relative;
+            top: -6px;
+        }
+        span.price {
+            position: relative;
+            top: -4px;
         }
         .mb-cart-box ul li span.qty {
             flex: 0 0 50px;
@@ -2224,12 +2230,16 @@
         }
 
         .mb-cart-box ul li span.meal {
-            width: 220px;
-            margin-left: 10px;
+            width: 130px;
             display: inline-block;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            margin-right: 7px;
+            margin-left: 10px;
         }
         .mb-cart-box ul li span.meal .mealactions {
-            display: inline-block;
+            display: block;
             margin-top: 2px;
             margin-left: 10px;
         }
@@ -2241,6 +2251,15 @@
         }
         .qty.mob span {
             padding: 15px;
+        }
+        .offset-categories {
+            position: fixed;
+            top: -100%;
+            z-index: 1000;
+            width: calc(100% - 0%);
+            margin-top: 0;
+            padding-top: 0 !important;
+            border-right: 1px solid rgba(0,0,0,0);
         }
 
     }
