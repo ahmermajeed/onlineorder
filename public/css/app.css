@@ -14020,9 +14020,9 @@ ul {
 }
 
 .header-top .header-bottom-section .main-menu .navbar-toggler {
-  border-color: #ccc;
+  border-color: #fff;
   position: relative;
-  background-color: rgba(255, 255, 255, 0.6);
+  background-color: #fff;
 }
 
 .header-top .header-bottom-section .main-menu .navbar-toggler[aria-expanded=false] {
@@ -14465,6 +14465,7 @@ ul {
   margin-top: -64px;
   color: #b7781b;
   margin-left: 25px;
+  font-size: 25px;
 }
 
 @media (max-width: 991.98px) {
@@ -14476,6 +14477,7 @@ ul {
 @media (max-width: 767.98px) {
   .deliver-area .menu-left h2 {
     margin-top: -50px;
+    font-size: 20px;
   }
 }
 
@@ -14767,7 +14769,7 @@ ul {
   font-size: 18px;
   color: #000;
   line-height: 30px;
-  margin-bottom: 125px;
+  margin-bottom: 80px;
   margin-top: 12px;
 }
 
@@ -14780,6 +14782,7 @@ ul {
 @media (max-width: 767.98px) {
   .deal-section p {
     font-size: 15px;
+    margin-top: 12px;
   }
 }
 
@@ -14936,6 +14939,12 @@ ul {
   margin-bottom: 20px;
 }
 
+@media (max-width: 767.98px) {
+  .discovery-section .discover-content .d-offers h2 {
+    font-size: 30px;
+  }
+}
+
 .discovery-section .discover-content .d-offers h2 :after {
   position: absolute;
   content: "";
@@ -14944,6 +14953,12 @@ ul {
   background-color: red;
   top: 22%;
   left: 11%;
+}
+
+@media (max-width: 767.98px) {
+  .discovery-section .discover-content .d-offers h2 :after {
+    top: 16%;
+  }
 }
 
 .discovery-section .discover-content .d-offers p {
@@ -16319,6 +16334,14 @@ ul {
 
 .check-out-page .container {
   max-width: 1150px;
+}
+
+.error-message {
+  color: red;
+  background: white;
+  border-radius: 8px;
+  margin-top: 10px;
+  font-size: 15px;
 }
 
 /***************Choose Order type end*******************/

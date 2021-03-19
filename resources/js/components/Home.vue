@@ -11,7 +11,7 @@
                                 <div class="menu-left-item">
                                     <div class="order-taj">
                                         <div class="row">
-                                            <div class="col-8">
+                                            <div class="col-7">
                                                 
                                             </div>
                                             <div class="col-2 text-center">
@@ -28,7 +28,7 @@
                                     
                                     
                                     <div class="row pb-3">
-                                        <div class="col-8">
+                                        <div class="col-7">
                                             <ul>
                                                 <li>
                                                    Fried Classic Fillet Burger
@@ -46,7 +46,7 @@
                                         
                                     </div>
                                     <div class="row pb-3">
-                                        <div class="col-8">
+                                        <div class="col-7">
                                             <ul>
                                                 <li>
                                                    Mountain Burger
@@ -64,7 +64,7 @@
                                         
                                     </div>
                                     <div class="row pb-3">
-                                        <div class="col-8">
+                                        <div class="col-7">
                                             <ul>
                                                 <li>
                                                    Mexicano Burger
@@ -82,7 +82,7 @@
                                         
                                     </div>
                                     <div class="row pb-3">
-                                        <div class="col-8">
+                                        <div class="col-7">
                                             <ul>
                                                 <li>
                                                   Hot Mama Burger
@@ -100,7 +100,7 @@
                                         
                                     </div>
                                     <div class="row pb-3">
-                                        <div class="col-8">
+                                        <div class="col-7">
                                             <ul>
                                                 <li>
                                                   King King Burger
@@ -118,7 +118,7 @@
                                         
                                     </div>
                                     <div class="row pb-3">
-                                        <div class="col-8">
+                                        <div class="col-7">
                                             <ul>
                                                 <li>
                                                   Ranch Burger
@@ -136,7 +136,7 @@
                                         
                                     </div>
                                     <div class="row pb-3">
-                                        <div class="col-8">
+                                        <div class="col-7">
                                             <ul>
                                                 <li>
                                                   Piri Piri Burger
@@ -154,7 +154,7 @@
                                         
                                     </div>
                                     <div class="row pb-3">
-                                        <div class="col-8">
+                                        <div class="col-7">
                                             <ul>
                                                 <li>
                                                   Big Daddy Burger
@@ -172,7 +172,7 @@
                                         
                                     </div>
                                     <div class="row pb-3">
-                                        <div class="col-8">
+                                        <div class="col-7">
                                             <ul>
                                                 <li>
                                                   Cheese Lover Burger
@@ -190,7 +190,7 @@
                                         
                                     </div>
                                     <div class="row pb-3">
-                                        <div class="col-8">
+                                        <div class="col-7">
                                             <ul>
                                                 <li>
                                                   Supreme Burger
@@ -208,7 +208,7 @@
                                         
                                     </div>
                                     <div class="row pb-3">
-                                        <div class="col-8">
+                                        <div class="col-7">
                                             <ul>
                                                 <li>
                                                   BBQ Burger
@@ -226,7 +226,7 @@
                                         
                                     </div>
                                     <div class="row pb-3">
-                                        <div class="col-8">
+                                        <div class="col-7">
                                             <ul>
                                                 <li>
                                                   Sweet Chilli Burger
@@ -244,7 +244,7 @@
                                         
                                     </div>
                                     <div class="row pb-3">
-                                        <div class="col-8">
+                                        <div class="col-7">
                                             <ul>
                                                 <li>
                                                   Spicy Korean Burger
@@ -297,7 +297,7 @@
                                                         <span>Submit! <i class="fas fa-long-arrow-alt-right"></i></span>
 
                                                     </button>
-                                                    <p style="color:red">{{error_message}} </p>
+                                                    <p class="error-message">{{error_message}} </p>
                                                 </form>
                                             </div>
 
@@ -306,12 +306,7 @@
                                             
                             </div>
                             </div>
-                            <div class="form-group text-center">
-                                <button type="button" class="btn  btn-danger"  v-on:click="checkPostCode">
-                                    <span>View All </span>
-                                </button>
-                            </div>
-                            
+                                                 
                                         
                                         
                         </div>
@@ -322,7 +317,7 @@
                                 <div class="menu-left-item">
                                     <div class="order-taj">
                                         <div class="row">
-                                            <div class="col-6">
+                                            <div class="col-5">
                                                 
                                             </div>
                                             <div class="col-2 text-center ">
@@ -342,7 +337,7 @@
                                     
                                     
                                     <div class="row pb-3">
-                                        <div class="col-6">
+                                        <div class="col-5">
                                             <ul>
                                                 <li>
                                                    Szechuan
@@ -364,7 +359,7 @@
                                         
                                     </div>
                                     <div class="row pb-3">
-                                        <div class="col-6">
+                                        <div class="col-5">
                                             <ul>
                                                 <li>
                                                    Satay Sauce
@@ -386,7 +381,7 @@
                                         
                                     </div>
                                     <div class="row pb-3">
-                                        <div class="col-6">
+                                        <div class="col-5">
                                             <ul>
                                                 <li>
                                                    Chinese Curry Sauce
@@ -408,7 +403,7 @@
                                         
                                     </div>
                                     <div class="row pb-3">
-                                        <div class="col-6">
+                                        <div class="col-5">
                                             <ul>
                                                 <li>
                                                    Sweet &amp; Sour
@@ -430,7 +425,7 @@
                                         
                                     </div>
                                     <div class="row pb-3">
-                                        <div class="col-6">
+                                        <div class="col-5">
                                             <ul>
                                                 <li>
                                                    Black Bean Sauce
@@ -452,7 +447,7 @@
                                         
                                     </div>
                                     <div class="row pb-3">
-                                        <div class="col-6">
+                                        <div class="col-5">
                                             <ul>
                                                 <li>
                                                    Chop Suey
@@ -474,7 +469,7 @@
                                         
                                     </div>
                                     <div class="row pb-3">
-                                        <div class="col-6">
+                                        <div class="col-5">
                                             <ul>
                                                 <li>
                                                    Sweet Chilli
@@ -506,7 +501,7 @@
                                 <div class="menu-left-item">
                                     <div class="order-taj">
                                         <div class="row">
-                                            <div class="col-8">
+                                            <div class="col-7">
                                                 
                                             </div>
                                             <div class="col-2 text-center">
@@ -522,7 +517,7 @@
                                     </div>
                                    
                                     <div class="row pb-3">
-                                        <div class="col-8">
+                                        <div class="col-7">
                                             <ul>
                                                 <li>
                                                     Chips
@@ -540,7 +535,7 @@
                                         
                                     </div>
                                     <div class="row pb-3">
-                                        <div class="col-8">
+                                        <div class="col-7">
                                             <ul>
                                                 <li>
                                                   Wedges
@@ -558,7 +553,7 @@
                                         
                                     </div>
                                     <div class="row pb-3">
-                                        <div class="col-8">
+                                        <div class="col-7">
                                             <ul>
                                                 <li>
                                                   Salt &amp; Pepper Chips
@@ -604,9 +599,10 @@
                                            Coke, 7up, &amp; Pepsi<span>£2.50</span>
                                         </li>
                                     </ul>
-                                    <button type="button" class="btn btn-outline-light"  v-on:click="checkPostCode">
+                                    
+                                <!--     <button type="button" class="btn btn-outline-light"  v-on:click="checkPostCode">
                                     <span>Order now </span>
-                                    </button>
+                                    </button> -->
                                 </div>
                                 <div class="col-lg-2 col-md-2 col-sm-6">
                                     <img src="images/theme-3/coca.png">
@@ -637,9 +633,7 @@
                                 <h2>Family Box</h2>
                                 <p>10pc Fried Chicken,<br>8 Fried Wings, <br>4 Chips, Dips, <br>Pepsi 1.5ltr.</p>
                                 <div class="pries mb-3"><strong>£25.99</strong></div>
-                                <button type="button" class="btn  btn-danger"v-on:click="checkPostCode">
-                                    <span>View All </span>
-                                </button>
+                                
 
                             </div>
                         </div> 
@@ -648,9 +642,7 @@
                                 <h2>ChicknWok Special Box</h2>
                                 <p>2 chicknwok box specials,<br> 2 1/4 Burger Meals,<br>6pc salt &amp; Pepper wings &amp; <br>pepsi 1.5ltr.</p>
                                 <div class="pries mb-3"><strong>£19.99</strong></div>
-                                <button type="button" class="btn  btn-danger"v-on:click="checkPostCode">
-                                    <span>View All </span>
-                                </button>
+                              
 
                             </div>
                         </div> 
@@ -664,20 +656,16 @@
                 <div class="deliver-area text-center">
                     <h2>Delivering Till Late</h2>
                     <div class="row">
-                        <div class="col-6 text-right">
-                            <p><i class="icon-placeholder"></i><!-- 231 Edward Rd --></p>
-                        </div>
+<!--                         <div class="col-5 text-right">
+                            <p><i class="icon-placeholder"></i>231 Edward Rd</p>
+                        </div> -->
                      
-                        <div class="col-6 text-left">
-                            <p class="space"><i class="icon-smartphone-1"></i>
+                        <div class="col-12">
+                            <p class=""><i class="icon-smartphone-1"></i>
                                 <a href="tel:01484 530000">01484 530000</a></p>
                         </div>
                         
-                    </div>
-                    <button type="button" class="btn btn-outline-light"  v-on:click="checkPostCode">
-                        <span>Contact now </span>
-                     </button>
-                    
+                    </div>                   
                       
                 </div>
             </div>
@@ -753,9 +741,9 @@
                                     
                                     
                                     </div>
-                                    <button type="button" class="btn  btn-danger"  v-on:click="checkPostCode">
+                                <!--     <button type="button" class="btn  btn-danger">
                                           <span>Submit! </span>
-                                    </button>
+                                    </button> -->
                                 
                                     
                                 </div>

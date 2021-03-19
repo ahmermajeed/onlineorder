@@ -243,9 +243,9 @@ ul {
         }
 
         .navbar-toggler {
-            border-color: #ccc;
+            border-color: #fff;
             position: relative;
-                background-color: rgba(255, 255, 255, 0.6);
+            background-color: #fff;
             &[aria-expanded="false"] {
                 z-index: 0;
             }
@@ -665,11 +665,13 @@ ul {
             margin-top: -64px;
             color: $brown;
             margin-left: 25px;
+            font-size: 25px;
              @include media-breakpoint-down(md) {
                     margin-top: -95px;
             }
             @include media-breakpoint-down(sm) {
-                    margin-top: -50px;
+                margin-top: -50px;
+                font-size: 20px;
             }
         }
         .menu-left-item {
@@ -925,7 +927,7 @@ ul {
         font-size: 18px;
         color: #000;
         line-height: 30px;
-        margin-bottom: 125px;
+        margin-bottom: 80px;
         margin-top: 12px;
         @include media-breakpoint-only(md) {
             margin-bottom: 70px;
@@ -933,6 +935,7 @@ ul {
 
         @include media-breakpoint-down(sm) {
             font-size: 15px;
+            margin-top: 12px;
         }
     }
 
@@ -1046,6 +1049,9 @@ ul {
             font-weight: 600;
             text-transform: uppercase;
             margin-bottom: 20px;
+            @include media-breakpoint-down(sm) {
+                font-size: 30px;
+            }
             :after {
                 position: absolute;
                 content: "";
@@ -1054,6 +1060,9 @@ ul {
                 background-color: red;
                 top: 22%;
                 left: 11%;
+                @include media-breakpoint-down(sm) {
+                    top: 16%;
+                }
             }
         }
         p {
@@ -2338,5 +2347,12 @@ ul {
 }
 .check-out-page .container {
     max-width: 1150px;
+}
+.error-message {
+    color: red;
+    background: white;
+    border-radius: 8px;
+    margin-top: 10px;
+    font-size: 15px;
 }
 /***************Choose Order type end*******************/

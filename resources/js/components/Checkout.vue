@@ -176,7 +176,7 @@
                                   </div>
                               </td>
                               <td class="order-quty">
-                                  <span>{{ cart.quantity}}  <i>X</i></span>
+                                  <span>{{ cart.quantity}}</span>
                               </td>
 
                               <td class="amount" v-if="!cart.extras">£ {{priceFormat(cart.price * cart.quantity) }}</td>

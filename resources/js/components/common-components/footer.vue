@@ -52,7 +52,7 @@
                                 <ul class="Opening">
                                     <li><a href="tel:01484 530000"><span><i class="icon-smartphone-1"></i></span>01484 530000</a></li>
                                     <li><a href="#"><span><i class="icon-mail-2"></i></span>chiknwok@hotmail.com</a></li>
-                                    <li><a href="#"><span><i class="icon-placeholder"></i></span><!-- 10 Peckham Park Road,London SE15 6TW --></a></li>
+                            <!--         <li><a href="#"><span><i class="icon-placeholder"></i></span>10 Peckham Park Road,London SE15 6TW</a></li> -->
                                 </ul>
                             </div>
                         </div>
