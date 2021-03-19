@@ -45,19 +45,9 @@
                                 <h3>Opening Hours</h3>
                                 <ul class="Opening-hours">
                                     <li>
-                                        <a href="#">Monday, Wednesday, Thursday, Sunday</a>
-                                    </li>
+                                        <strong><a href="#">Open 7 days a week</a></strong>         </li>
                                     <li>
-                                        <a href="#">14:30 - 22:59</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">Friday - Saturday</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">14:30 - 23:20</a>
-                                    </li>
-                                    <li>
-                                        <strong><a href="#">Tuesday CLOSED</a></strong>       
+                                        <a href="#">4PM till 12AM</a>
                                     </li>
                                 </ul>
                             </div>
