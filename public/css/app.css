@@ -14415,6 +14415,13 @@ ul {
   }
 }
 
+@media (max-width: 767.98px) {
+  .deliver-area .card-offer .card-content img {
+    max-width: 100%;
+    margin-left: -43px;
+  }
+}
+
 .deliver-area .card-offer .order-btn {
   border-right: 1px solid;
   padding-left: 27px;

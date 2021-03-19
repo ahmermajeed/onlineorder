@@ -2181,10 +2181,15 @@
             padding-top: 210px !important;
         }
         .mealactions a {
-            display: inline-block;
-            margin-right: 14px;
+            margin-right: 24px;
+            margin-right: 7px;
+            position: relative;
+            top: -6px;;
         }
-
+        span.price {
+            position: relative;
+            top: -4px;
+        }
         .mb-cart-box ul li span.qty {
             flex: 0 0 50px;
             min-width: 50px;
@@ -2199,12 +2204,13 @@
         }
 
         .mb-cart-box ul li span.meal {
-            width: 140px;
+            width: 120px;
             margin-left: 10px;
             display: inline-block;
             white-space: nowrap;
             overflow: hidden;
             text-overflow: ellipsis;
+            margin-right: 10px;
         }
         .mb-cart-box ul li span.meal .mealactions {
             display: inline-block;

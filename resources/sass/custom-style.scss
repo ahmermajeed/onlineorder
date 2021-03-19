@@ -626,7 +626,11 @@ ul {
                 @include media-breakpoint-down(md) {
 		            max-width: 100%;
 		            margin-left: 0;
-		        }
+		        } 
+                @include media-breakpoint-down(sm) {
+                    max-width: 100%;
+                    margin-left: -43px;
+                }
             }
         }
 
