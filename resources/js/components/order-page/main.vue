@@ -84,23 +84,28 @@
                             </div>
 
                             <form class="form-cart">
+                                
                                 <div class="switch-field">
-                                    <input type="radio" id="radio-one" name="switch-one" value="yes" checked/>
-                                    <label for="radio-one"> 
-                                    <img src="/images/delivery.png" alt="">
-                                    </i>Delivery 
+                                    <input type="radio" v-model="orderType" @change="showPostalCode" id="radio-one" name="switch-one"
+                                           value="Delivery"/>
+                                    <label for="radio-one">
+                                        <img src="/images/delivery.png" alt="">
+                                        </i>Delivery
                                         <span>30 - 45 mins</span></label>
-                                    <input type="radio" id="radio-two" name="switch-one" value="no" />
+                                    <input type="radio" v-model="orderType" @change="showPostalCode" id="radio-two" name="switch-one"
+                                           value="Pickup"/>
                                     <label for="radio-two">
-                                    <img src="/images/shopping-basket.png" alt="">
+                                        <img src="/images/shopping-basket.png" alt="">
                                         Collection
-                                        <span>10 mins</span></label>
+                                        <span>20 mins</span></label>
                                 </div>
+                                
                                 <div class="form-group" style="position: relative; top: 12px;" v-if="showPostal">
                                     <label for=""><span>Enter your Postcode:</span></label>
                                     <input type="text"  class="form-control" v-model="postalCode" placeholder="Enter your Postcode">
                                     <p style="color:red;font-size: 11px;margin-top: 5px;">{{errorMessage}} </p>
                                 </div>
+
                             </form>
 
 
