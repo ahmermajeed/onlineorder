@@ -656,12 +656,12 @@
                 <div class="deliver-area text-center">
                     <h2>Delivering Till Late</h2>
                     <div class="row">
-<!--                         <div class="col-5 text-right">
-                            <p><i class="icon-placeholder"></i>231 Edward Rd</p>
-                        </div> -->
+                        <div class="col-6 text-right">
+                            <p><i class="icon-placeholder"></i>53 Colne Road, Huddersfield, HD1 3AY.</p>
+                        </div>
                      
-                        <div class="col-12">
-                            <p class=""><i class="icon-smartphone-1"></i>
+                        <div class="col-6 text-left">
+                            <p class="space"><i class="icon-smartphone-1"></i>
                                 <a href="tel:01484 530000">01484 530000</a></p>
                         </div>
                         

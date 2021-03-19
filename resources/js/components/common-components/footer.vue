@@ -35,10 +35,16 @@
                                 <h3>Opening Hours</h3>
                                 <ul class="Opening-hours">
                                     <li>
-                                        <strong><a href="#">Wednesday to Monday</a></strong>
+                                        <a href="#">Monday, Wednesday, Thursday, Sunday</a>       
                                     </li>
                                     <li>
-                                        <a href="#">03:00PM Till Late</a>
+                                        <a href="#">14:30 - 22:59</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Friday - Saturday</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">14:30 - 23:20</a>
                                     </li>
                                     <li>
                                         <strong><a href="#">Closed Tuesday</a></strong>
@@ -52,7 +58,7 @@
                                 <ul class="Opening">
                                     <li><a href="tel:01484 530000"><span><i class="icon-smartphone-1"></i></span>01484 530000</a></li>
                                     <li><a href="#"><span><i class="icon-mail-2"></i></span>chiknwok@hotmail.com</a></li>
-                            <!--         <li><a href="#"><span><i class="icon-placeholder"></i></span>10 Peckham Park Road,London SE15 6TW</a></li> -->
+                                    <li><a href="#"><span><i class="icon-placeholder"></i></span>53 Colne Road, Huddersfield, HD1 3AY.</a></li>
                                 </ul>
                             </div>
                         </div>

@@ -983,13 +983,13 @@ ul {
     }
     p {
         margin: 0px;
-        font-size: 26px;
+        font-size: 21px;
         color: #fff;
         @include media-breakpoint-only(md) {
            font-size: 20px;
         }
         @include media-breakpoint-down(sm) {
-            font-size: 17px;
+            font-size: 15px;
             
         }
     } 
@@ -2210,27 +2210,6 @@ ul {
     }
 }
 
-
-
-.mobile-cart-button .inner span.text:after {
-    @include media-breakpoint-down(sm) {
-             position: absolute !important;
-            top: 19px;
-            left: 45% !important;
-            font-size: 20px !important;
-           content: "\e902" !important;
-            color: #909090;
-            font-family: 'icomoon' !important;
-            transform: rotate(178deg);
-        }
-
-   
-}
-
-
-
-
-
 /***************check out end **********************/
 
 /***************Deal-section-start*******************/
@@ -2354,5 +2333,8 @@ ul {
     border-radius: 8px;
     margin-top: 10px;
     font-size: 15px;
+}
+.Opening-hours li:nth-child(odd) a {
+    color: #b7781b !important;
 }
 /***************Choose Order type end*******************/
