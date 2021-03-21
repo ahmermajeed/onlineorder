@@ -10,7 +10,8 @@
                                 <ul class="Opening">
                                     <li><a href="tel:0121 337 7378"><span><i class="icon-smartphone-1"></i></span>0121 337 7378</a></li>
                                     <li><a href="#"><span><i class="icon-mail-2"></i></span>info@thedessertking.co.uk</a></li>
-                                    <li><a href="#"><span><i class="icon-placeholder"></i></span>223-225 Edward Road, Birmingham, B12 9Lh.
+                                    <li><a href="#"><span><i class="icon-placeholder"></i></span>
+                                        <span class="full-address">223-225 Edward Road, Balsall Heath, B12 9LH, Birmingham</span>
                                     </a></li>
                                 </ul>
                             </div>
@@ -23,8 +24,6 @@
                                       <li><a href="#">Home</a></li>
                                       <li><a href="#">About us</a></li>
                                       <li><a href="#">Feedback</a></li>
-                                      <li><a href="#">Allergy Information</a></li>
-                                      <li><a href="#">Our Menu</a></li>
                                     </ul>
                                 </div>
                                 <div class="follow-us text-center">
@@ -47,8 +46,11 @@
                                     <li>
                                         <strong><a href="#">Open 7 days a week</a></strong>         </li>
                                     <li>
-                                        <a href="#">4PM till 12AM</a>
+                                        <a href="#">Mon, Tue, Wed, Thurs, Sun</a>
                                     </li>
+                                    <li>4:00PM - 4:00AM</li>
+                                    <li>Fri - Sat</li>
+                                    <li>4:00PM - 5:00AM</li>
                                 </ul>
                             </div>
                         </div>

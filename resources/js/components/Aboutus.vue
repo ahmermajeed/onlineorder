@@ -317,7 +317,7 @@
 									</router-link>
 								</li>
 								<li>
-									<router-link :to="{ path: '/aboutus'}">
+									<router-link :to="{ path: '/about-us'}">
 										<a href="javascript:;"><i class="icon-check-alt"></i>About Us</a>
 									</router-link>
 								</li>
@@ -341,7 +341,7 @@
 							<ul>
 								<li>
 									<div class="address_icon"><i class="icon-location"></i></div>
-									<div class="address_detail"><h3>Address</h3> <p>223-225 Edward Road, Birmingham, B12 9Lh.</p></div>
+									<div class="address_detail"><h3>Address</h3> <p>223-225 Edward Road, Balsall Heath, B12 9LH, Birmingham</p></div>
 								</li>
 								<li>
 									<div class="address_icon"><i class="icon-phone1"></i></div>
@@ -349,7 +349,12 @@
 								</li>
 								<li>
 									<div class="address_icon"><i class="icon-clock"></i></div>
-									<div class="address_detail"><h3>Office Timings</h3> <p>Mon - Fri 9.00am : 6.00pm</p></div>
+									<div class="address_detail"><h3>Office Timings</h3> 
+										<p>Mon, Tue, Wed, Thurs, Sun</p>
+										<p>4:00PM - 4:00AM</p>
+										<p>Fri - Sat</p>
+										<p>4:00PM - 5:00AM</p>
+									</div>
 								</li>
 							</ul>
 						</div>
