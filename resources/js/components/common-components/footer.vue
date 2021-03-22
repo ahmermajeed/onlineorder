@@ -8,22 +8,23 @@
                             <div class="col-lg-3 col-md-3 footer-section-1 footer-space order-1">
                                 <h3>Opening Hours</h3>
                                 <ul class="Opening">
-                                    <li><a href="#"><span><i class="icon-smartphone-1"></i></span>0121 440 3393</a></li>
-                                    <li><a href="#"><span><i class="icon-mail-2"></i></span>hello@bigsajoriginal.co.uk</a></li>
-                                    <li><a href="#"><span><i class="icon-placeholder"></i></span>231 Edward Rd
+                                    <li><a href="#"><span><i class="icon-smartphone-1"></i></span>01708 456 681</a></li>
+                                    <li><a href="#"><span><i class="icon-mail-2"></i></span>info@chickychaps.co.uk</a></li>
+                                    <li><a href="#"><span><i class="icon-placeholder"></i></span><span class="full-address">
+                                        130 Upminster Road, Hornchurch, RM12 6PL
+                                    </span>
                                     </a></li>
                                 </ul>
                             </div>
                             <div class="col-lg-6 col-md-6 footer-section-2 order-3 order-md-2">
                                 <div class="text-center">
-                                   <a href="#"><img src="/images/big-saj-logo.jpg"></a>
+                                   <a href="#"><img src="/images/chickychaps.png"></a>
                                 </div>
                                 <div class="footer-menu text-center">
                                     <ul>
                                       <li><a href="#">Home</a></li>
                                       <li><a href="#">About us</a></li>
                                       <li><a href="#">Feedback</a></li>
-                                      <li><a href="javascript:;" @click="openMenu">Our Menu</a></li>
                                     </ul>
                                 </div>
                                 <div class="follow-us text-center">
@@ -44,20 +45,13 @@
                                 <h3>Opening Hours</h3>
                                 <ul class="Opening-hours">
                                     <li>
-                                        <strong><a href="#">Open 7 days a week</a></strong>
+                                        <strong><a href="#">Sunday Closed</a></strong>
                                     </li>
                                     <li>
-                                        <a href="#">Mon > Sat – 12pm till 11</a>
+                                        <a href="#">Mon - Thurs – 12PM - 9PM</a>
                                     </li>
-                                     <li>
-                                        <a href="#">Sunday – 1pm till 11</a>
-                                    </li>
-                                    <li>
-                                        <strong><a href="#">Delivery Hours</a></strong>
-                                    </li>
-                                    <li>
-                                        <a href="#">5pm till late – every day</a>
-                                    </li>
+                                    <li>Friday - 12PM - 10PM</li>
+                                    <li>Saturday - 1PM - 10PM</li>
                                 </ul>
                             </div>
                         </div>
