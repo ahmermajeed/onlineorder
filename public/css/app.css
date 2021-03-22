@@ -13926,7 +13926,7 @@ ul {
 
 .header-bottom-section {
   padding: 10px 0px 10px 0px;
-  background: #000;
+  background: #fff;
 }
 
 .header-bottom-section .main-menu .order-now a {
@@ -13935,7 +13935,7 @@ ul {
 
 .header-bottom-section .main-menu a {
   font-size: 14px;
-  color: #fff !important;
+  color: #000 !important;
 }
 
 .header-bottom-section .main-menu ul {
@@ -14188,9 +14188,21 @@ ul {
 }
 
 .header-bottom {
-  background-image: url(/images/mains-banner.png?076b933933d67d3faea173e8b3826835);
+  background-image: url(/images/mains-banner.png?aaa2d372c9e380d025b0c134a5645083);
   background-repeat: no-repeat;
   background-size: cover;
+  height: 400px;
+}
+
+.header-bottom .header-detial h2 {
+  color: #fff;
+  margin-bottom: 10px;
+}
+
+.header-bottom .header-detial p {
+  color: #fff;
+  font-size: 26px;
+  margin-bottom: 20px;
 }
 
 @media (max-width: 767.98px) {
@@ -16230,8 +16242,34 @@ ul {
 }
 
 .navbar-light .navbar-toggler-icon {
-  background-image: url(/images/menu-bars.svg?338210bbdd742d465c61556d0dcfad5e);
+  background-image: url(/images/menu-bars.svg?031bee8a8d6f9b895903035c863ea40b);
 }
 
 /***************Deal-section-end*******************/
+
+.about-us {
+  text-align: center;
+}
+
+.about-us h2 {
+  color: red;
+  margin-bottom: 40px;
+}
+
+.about-us p {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.gallery-images img {
+  margin-bottom: 30px;
+  border-radius: 48px;
+  transition: 0.3s;
+}
+
+.gallery-images img:hover {
+  transform: scale(0.9);
+  opacity: 0.8;
+  cursor: pointer;
+}
 
