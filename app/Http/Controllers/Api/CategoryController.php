@@ -2,11 +2,12 @@
 
 namespace App\Http\Controllers\Api;
 
+use App\Data\Models\Category;
 use App\Data\Models\Products;
 use App\Data\Repositories\CategoryRepository;
-use App\Data\Repositories\GalleryRepository;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use Validator;
 use Symfony\Component\HttpFoundation\Response;
 
 class CategoryController extends Controller
@@ -36,5 +37,71 @@ class CategoryController extends Controller
             'message' => "Categories Retrieved Successfully",
         ];
         return response()->json($output, Response::HTTP_OK);
+    }
+
+    public function store(Request $request ) {
+
+        $requestData = $request->all();
+
+        $validator = Validator::make($requestData, [
+            'name' => 'required',
+            'description' => 'required'
+        ]);
+
+        if ($validator->fails()) {
+            $code = 401;
+            $output = ['error' => ['code' => $code, 'message' => $validator->errors()->first()]];
+            return response()->json($output, $code);
+        }
+
+        $data = $this->_repository->addNewRecord($requestData);
+
+        return response()->json([
+            'status' => true,
+            'created' => true,
+            'data' => $data
+        ]);
+    }
+
+    public function update(Request $request, $id)
+    {
+        $requestData = $request->all();
+        $requestData['id'] = $id;
+
+        $validator = Validator::make($requestData, [
+            'id' => 'required|exists:categories,id'
+        ]);
+
+        if ($validator->fails()) {
+            $code = 401;
+            $output = ['error' => ['code' => $code, 'message' => $validator->errors()->first()]];
+            return response()->json($output, $code);
+        }
+
+        $data = $this->_repository->updateRecord($requestData, $id);
+
+        $output = ['data' => $data, 'message' => "Your category has been updated successfully "];
+        return response()->json($output, Response::HTTP_OK);
+    }
+
+    public function destroy($id) {
+
+        $category = Category::find($id);
+
+        $products = $category->products();
+
+        foreach($products->get() as $product) {
+            $product->groups()->delete();
+            $product->sizes()->delete();
+        }
+
+        $products->delete();
+        $category->delete();
+
+        return response()->json([
+            'status' => true,
+            'deleted' => true,
+            'data' => []
+        ]);
     }
 }

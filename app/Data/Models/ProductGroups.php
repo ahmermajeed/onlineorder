@@ -21,6 +21,6 @@ class ProductGroups extends Model
     protected $with = ['group'];
 
     public function group() {
-        return $this->hasOne('ChoicesGroup','id','id_group') ;
+        return $this->hasOne('App\ChoicesGroup','id','id_group') ;
     }
 }

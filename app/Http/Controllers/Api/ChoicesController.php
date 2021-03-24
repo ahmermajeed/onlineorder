@@ -2,22 +2,20 @@
 
 namespace App\Http\Controllers\Api;
 
+use App\Data\Models\Choices;
 use App\Data\Models\ChoicesGroup;
-use App\Data\Models\ProductGroups;
-use App\Data\Repositories\CategoryRepository;
-use App\Data\Repositories\ChoicesGroupRepository;
-use App\Data\Repositories\GalleryRepository;
+use App\Data\Repositories\ChoicesRepository;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Validator;
 use Symfony\Component\HttpFoundation\Response;
 
-class ChoicesGroupController extends Controller
+class ChoicesController extends Controller
 {
     protected $_repository;
     const PER_PAGE = 10;
 
-    public function __construct(ChoicesGroupRepository $repository)
+    public function __construct(ChoicesRepository $repository)
     {
         $this->_repository = $repository;
     }
@@ -42,8 +40,9 @@ class ChoicesGroupController extends Controller
 
         $validator =  Validator::make($requestData, [
             'name' => 'required',
-            'type' => 'required',
-            'display_type' => 'required'
+            'price' => 'required',
+            'id_group' => 'required',
+            'preselect' => 'required'
         ]);
 
         if ($validator->fails()) {
@@ -52,7 +51,7 @@ class ChoicesGroupController extends Controller
             return response()->json($output, $code);
         }
 
-        $choices = new ChoicesGroup();
+        $choices = new Choices();
         $choices->fill($request->all());
         $choices->save();
 
@@ -71,7 +70,7 @@ class ChoicesGroupController extends Controller
         $requestData['id'] = $id;
 
         $validator =  Validator::make($requestData, [
-            'id' => 'required|exists:choices_group,id'
+            'id' => 'required|exists:choices,id'
         ]);
 
         if ($validator->fails()) {
@@ -88,13 +87,9 @@ class ChoicesGroupController extends Controller
 
     public function destroy($id) {
 
-        $groups = ChoicesGroup::find($id);
+        $groups = Choices::find($id);
 
         if($groups) {
-            $groups->choices()->delete();
-
-            ProductGroups::where('id_group', $id)->delete();
-
             $groups->delete();
         }
 

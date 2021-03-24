@@ -25,7 +25,6 @@ Route::group(['prefix' => 'auth'], function () {
 /** Slider Routes */
 Route::resource('slider', 'Api\SliderController');
 
-
 /** Gallery Routes */
 Route::resource('gallery', 'Api\GalleryController');
 
@@ -35,17 +34,24 @@ Route::post('check-postal', 'Api\DeliveryChargesController@checkPostalCode');
 /** Categories Routes */
 Route::resource('categories', 'Api\CategoryController');
 
+/** Products Routes */
+Route::resource('products', 'Api\ProductController');
+
+/** Choices Groups Routes */
+Route::resource('choices-group', 'Api\ChoicesGroupController');
+
+/** Choices Routes */
+Route::resource('choices', 'Api\ChoicesController');
+
+Route::post('add-group-to-product', 'Api\ProductController@addGroupToProduct');
+
+Route::post('remove-group-to-product', 'Api\ProductController@removeGroupFromProduct');
+
 /** Stories Routes */
 Route::resource('our-story', 'Api\OurStoryController');
 
 /** Restaurant Information */
 Route::get('restaurant_info', 'Api\RestaurantController@getRestaurantInfo');
-
-/** Choices Groups Routes */
-Route::resource('choices-group', 'Api\ChoicesGroupController');
-
-/** Products Routes */
-Route::resource('products', 'Api\ProductController');
 
 /** Products Routes */
 Route::resource('deals', 'Api\DealController');

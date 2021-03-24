@@ -12,6 +12,8 @@ class ChoicesGroup extends Model
 
     protected $with = ['choices'];
 
+    protected $fillable = ['name', 'type', 'display_type'];
+
     public function choices()
     {
         return $this->hasMany(Choices::class,'id_group', 'id');

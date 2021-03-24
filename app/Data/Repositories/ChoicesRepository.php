@@ -2,14 +2,15 @@
 
 namespace App\Data\Repositories;
 
-use App\Data\Models\Category;
+use App\Data\Models\Choices;
+use App\Data\Models\ChoicesGroup;
+use function App\Helpers\paginator;
 
-class CategoryRepository
+class ChoicesRepository
 {
     protected $model;
 
-    public function __construct(Category $model)
-    {
+    public function __construct(Choices $model) {
         $this->model = $model;
     }
 
@@ -19,15 +20,16 @@ class CategoryRepository
      * @param array $input
      * @return array|mixed
      */
-    public function findByAll($pagination = false, $perPage = 10, $input = [])
+    public function findByAll($pagination = false,$perPage = 10, $input = [])
     {
 
         $data = array();
-        $model = $this->model->where('status', 1);
+        $model = $this->model;
 
-        if (isset($input['id']) && !empty($input['id'])) {
-            $model = $model->where('id', $input['id']);
+        if (isset($input['id_group']) && !empty($input['id_group'])) {
+            $model = $model->where('id_group', $input['id_group']);
         }
+
         if ($pagination) {
             $model = $model->paginate($perPage);
             $data['data'] = $model->items();
@@ -39,11 +41,6 @@ class CategoryRepository
         return $data;
     }
 
-    /**
-     * @param $request
-     * @param $id
-     * @return mixed
-     */
     public function updateRecord($request, $id)
     {
         $data = $this->model->findOrFail($id);
@@ -51,14 +48,4 @@ class CategoryRepository
         return $data;
     }
 
-    /**
-     * @param $request
-     * @param $id
-     * @return mixed
-     */
-    public function addNewRecord($request)
-    {
-        $data = $this->model->create($request);
-        return $data;
-    }
 }

@@ -36,4 +36,12 @@ class ChoicesGroupRepository
 
         return $data;
     }
+
+    public function updateRecord($request, $id)
+    {
+        $data = $this->model->findOrFail($id);
+        $data->fill($request)->save();
+        return $data;
+    }
+
 }

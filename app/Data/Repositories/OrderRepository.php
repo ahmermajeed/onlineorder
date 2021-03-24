@@ -99,7 +99,7 @@ class OrderRepository
                 $userAddress = UserAddress::create(['user_id'=>$userData->id,'address'=>isset($data['user_data']['address'])?$data['user_data']['address']:'','street'=>isset($data['user_data']['street']) ? $data['user_data']['street']:'','town'=>isset($data['user_data']['town']) ? $data['user_data']['town']:'','postal_code'=>isset($data['user_data']['postal_code']) ? $data['user_data']['postal_code']:'','active'=>1]);
             }
             $transaction_id = rand(10000000,99999999);
-            Mail::to($data['user_data']['email'])->send(new OrderPlace($data));
+        //    Mail::to($data['user_data']['email'])->send(new OrderPlace($data));
         }
 
 

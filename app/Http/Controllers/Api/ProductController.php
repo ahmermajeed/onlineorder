@@ -2,9 +2,9 @@
 
 namespace App\Http\Controllers\Api;
 
+use App\Data\Models\ProductGroups;
 use App\Data\Models\Products;
-use App\Data\Repositories\CategoryRepository;
-use App\Data\Repositories\GalleryRepository;
+use App\Data\Models\ProductSizes;
 use App\Data\Repositories\ProductRepository;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
@@ -33,6 +33,46 @@ class ProductController extends Controller
             'message' => "Categories Retrieved Successfully",
         ];
         return response()->json($output, Response::HTTP_OK);
+    }
+
+    public function store(Request $request ) {
+
+        $requestData = $request->all();
+
+        $validator =  Validator::make($requestData, [
+            'name' => 'required',
+            'description' => 'required',
+            'id_category' => 'required',
+            'price' => 'required',
+            'inputs.*.size' => 'required',
+            'inputs.*.price' => 'required'
+        ]);
+
+        if ($validator->fails()) {
+            $code = 401;
+            $output = ['error' => ['code' => $code, 'message' => $validator->errors()->first()]];
+            return response()->json($output, $code);
+        }
+
+        $product = new Products();
+        $product->fill($request->all());
+        $product->save();
+
+        if($product->id) {
+            if (count($requestData['inputs']) > 0) {
+                foreach ($requestData['inputs'] as $input) {
+                    ProductSizes::create(['id_product' => $product->id, 'size' => $input['size'], 'price' => $input['price']]);
+                }
+            }
+        }
+
+        return response()->json([
+            'status' => true,
+            'created' => true,
+            'data' => [
+                'id' => $product->id
+            ]
+        ]);
     }
 
     public function update(Request $request, $id)
@@ -79,4 +119,79 @@ class ProductController extends Controller
         $output = ['data' => $file, 'message' =>  "Success"];
         return response()->json($output, Response::HTTP_OK);
     }
+
+    /**
+     * Delete resource
+     *
+     * @param Product Destroy $request
+     *
+     * @return \Illuminate\Http\JsonResponse
+     */
+    public function destroy($id) {
+
+        $product = Products::find($id);
+
+        if($product) {
+            $product->groups()->delete();
+            $product->sizes()->delete();
+
+            $product->delete();
+        }
+
+        return response()->json([
+            'status' => true,
+            'deleted' => true,
+            'data' => []
+        ]);
+    }
+
+    public function addGroupToProduct(Request $request) {
+
+        $requestData = $request->all();
+
+        $validator =  Validator::make($requestData, [
+            'id_group' => 'required',
+            'id_product' => 'required',
+        ]);
+
+        if ($validator->fails()) {
+            $code = 401;
+            $output = ['error' => ['code' => $code, 'message' => $validator->errors()->first()]];
+            return response()->json($output, $code);
+        }
+
+        $product = new ProductGroups();
+        $product->fill($request->all());
+        $product->save();
+
+        return response()->json([
+            'status' => true,
+            'deleted' => true,
+            'data' => $product
+        ]);
+    }
+
+    public function removeGroupFromProduct(Request $request) {
+
+        $requestData = $request->all();
+
+        $validator =  Validator::make($requestData, [
+            'id_group' => 'required',
+            'id_product' => 'required',
+        ]);
+
+        if ($validator->fails()) {
+            $code = 401;
+            $output = ['error' => ['code' => $code, 'message' => $validator->errors()->first()]];
+            return response()->json($output, $code);
+        }
+
+        ProductGroups::where(['id_product' => $requestData['id_product'], 'id_group' => $requestData['id_group']])->delete();
+
+        return response()->json([
+            'status' => true,
+            'deleted' => true
+        ]);
+    }
+
 }

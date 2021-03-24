@@ -11,9 +11,17 @@ class Products extends Model
 
     protected $hidden = ['pivot'];
 
-    protected $with= ['sizes'];
+    protected $with= ['sizes', 'groups'];
 
-    protected $fillable = ['name', 'price', 'description', 'image', 'status'];
+    protected $appends = ['image_url'];
+
+    protected $fillable = ['name', 'price', 'description', 'image', 'status', 'id_category'];
+
+    public function getImageUrlAttribute()
+    {
+        $url = "https://placeimg.com/640/480/any";
+        return $url;
+    }
 
     public function groups()
     {
@@ -23,13 +31,5 @@ class Products extends Model
     public function sizes()
     {
         return $this->hasMany(ProductSizes::class,'id_product','id');
-    }
-
-    protected $appends = ['image_url'];
-
-    public function getImageUrlAttribute()
-    {
-        $url = "https://placeimg.com/640/480/any";
-        return $url;
     }
 }

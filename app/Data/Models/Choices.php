@@ -8,5 +8,6 @@ class Choices extends Model
 {
     protected $table = 'choices';
 
+    protected $fillable = ['name', 'price', 'preselect', 'id_group'];
 
 }
