@@ -127,6 +127,11 @@ class LoginController extends Controller
 
     protected function authenticated(Request $request, $user)
     {
+        if($request['device_type'] == 'web'){
+            $user->access_token = $user->createToken('myApp')->accessToken;
+            return $user;
+        }
+
         if($request['device_token']) {
             $userDevice = UserDevices::where('device_token', $request['device_token'])->first();
 

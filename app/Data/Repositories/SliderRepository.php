@@ -26,6 +26,12 @@ class SliderRepository
         $data = array();
         $model = $this->model;
 
+
+
+        if(isset($input['gallery_id'])){
+            $model = $model->where('gallery_id',$input['gallery_id']);
+        }
+
         if ($pagination) {
             $model = $model->paginate($perPage);
             $data['data'] = $model->items();

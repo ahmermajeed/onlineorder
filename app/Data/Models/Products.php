@@ -11,9 +11,9 @@ class Products extends Model
 
     protected $hidden = ['pivot'];
 
-    protected $with= ['sizes', 'groups'];
+    protected $with= ['sizes'];
 
-    protected $fillable = ['name', 'price', 'description', 'image', 'status','id_category'];
+    protected $fillable = ['name', 'price', 'description', 'image', 'status'];
 
     public function groups()
     {

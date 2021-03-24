@@ -44,13 +44,8 @@ Route::get('restaurant_info', 'Api\RestaurantController@getRestaurantInfo');
 /** Choices Groups Routes */
 Route::resource('choices-group', 'Api\ChoicesGroupController');
 
-/** Choices Groups Routes */
-Route::post('add-choice', 'Api\ChoicesGroupController@addChoicesToGroup');
-
 /** Products Routes */
 Route::resource('products', 'Api\ProductController');
-
-Route::post('add-product-choice', 'Api\ProductGroupsController@store');
 
 /** Products Routes */
 Route::resource('deals', 'Api\DealController');
@@ -79,6 +74,5 @@ Route::get('downloadMenu', 'Api\ProductController@downloadMenu');
 /** Get Offers*/
 Route::resource('offer', 'Api\OfferController');
 
-Route::post('add-choice', 'Api\ChoicesGroupController@addChoice');
-
 Route::get('get-time-slots/{duration}','Api\DeliveryChargesController@getTimeSlots');
+Route::post('register', 'UserController@register');

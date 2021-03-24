@@ -25,6 +25,7 @@ class GalleryRepository
         $data = array();
         $model = $this->model;
 
+
         if ($pagination) {
             $model = $model->paginate($perPage);
             $data['data'] = $model->items();

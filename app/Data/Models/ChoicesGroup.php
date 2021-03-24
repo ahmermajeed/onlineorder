@@ -8,8 +8,6 @@ class ChoicesGroup extends Model
 {
     protected $table = 'choices_group';
 
-    protected $fillable = ["name", "type", "display_type"];
-
     protected $hidden = ['pivot'];
 
     protected $with = ['choices'];

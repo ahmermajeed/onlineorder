@@ -4,11 +4,10 @@ namespace App\Http\Controllers\Api;
 
 use App\Data\Repositories\DeliveryChargesRepository;
 use App\Http\Controllers\Controller;
+use Carbon\Carbon;
 use Illuminate\Http\Request;
 use Validator;
 use Symfony\Component\HttpFoundation\Response;
-use Carbon\Carbon;
-
 
 class DeliveryChargesController extends Controller
 {
@@ -24,7 +23,7 @@ class DeliveryChargesController extends Controller
         $requestData = $request->all();
 
         $validator =  Validator::make($requestData, [
-            'postal_code' => 'required'
+            'order_type' => 'required'
         ]);
 
         if ($validator->fails()) {
@@ -33,7 +32,10 @@ class DeliveryChargesController extends Controller
             return response()->json($output, $code);
         }
 
-        $data = $this->_repository->checkPostalCode($requestData);
+        if($requestData['order_type'] == "Delivery")
+            $data = $this->_repository->checkPostalCode($requestData);
+        else
+            $data = true;
 
         if($data) {
 
@@ -52,7 +54,7 @@ class DeliveryChargesController extends Controller
         }
     }
 
-    public function getTimeSlots($duration)
+    function getTimeSlots($duration)
     {
         $returnArray = array();
 
@@ -81,6 +83,5 @@ class DeliveryChargesController extends Controller
 
         return $final_array;
     }
-
 
 }

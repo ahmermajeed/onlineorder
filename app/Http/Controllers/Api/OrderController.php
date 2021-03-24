@@ -81,13 +81,11 @@ class OrderController extends Controller
             'order_details.*.product_id' => 'required|numeric',
             'order_details.*.product_name' => 'required',
             'order_details.*.quantity' => 'required',
-            'user_data.card_number' => 'required_if:payment,credit_card',
-            'user_data.expiration_month' => 'required_if:payment,credit_card',
-            'user_data.expiration_year' => 'required_if:payment,credit_card',
-            'user_data.cvc' => 'required_if:payment,credit_card'
+            'card_no' => 'required_if:payment,credit_card',
+            'ccExpiryMonth' => 'required_if:payment,credit_card',
+            'ccExpiryYear' => 'required_if:payment,credit_card',
+            'cvvNumber' => 'required_if:payment,credit_card'
         ]);
-
-
 
         foreach ($requestData['order_details'] as $key => $value){
             if($value['product_type'] == 'product'){
@@ -105,12 +103,11 @@ class OrderController extends Controller
             return response()->json($output, $code);
         }
 
-        if($requestData['payment'] == "credit_card") {
-            $response = $this->paypalPayment($requestData);
+        if ($requestData['payment'] == "credit_card") {
+            $charge = $this->stripeCharge($requestData);
 
-            if ($response->isSuccessful()) {
+            if($charge['status'] == "succeeded")
                 $data = $this->_repository->placeOrder($requestData);
-            }
 
         } else {
             $data = $this->_repository->placeOrder($requestData);
@@ -161,24 +158,19 @@ class OrderController extends Controller
                 ],
             ]);
 
-            print_r($token);
-            exit;
-
             if (!isset($token['id'])) {
                 return redirect()->route('addmoney.paymentstripe');
             }
             $charge = $stripe->charges()->create([
                 'card' => $token['id'],
-                'currency' => 'USD',
-                'amount' => 20.49,
+                'currency' => 'GBP',
+                'amount' => $data['total_amount_with_fee'],
                 'description' => 'wallet',
             ]);
 
             if ($charge['status'] == 'succeeded') {
-                echo "<pre>";
-                print_r($charge);
-                exit();
-                return redirect()->route('addmoney.paymentstripe');
+                return  ["status" => $charge['status'], "data" => $charge];
+     //           return redirect()->route('addmoney.paymentstripe');
             } else {
                 \Session::put('error', 'Money not add in wallet!!');
                 return redirect()->route('addmoney.paymentstripe');
