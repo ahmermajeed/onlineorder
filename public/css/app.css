@@ -14188,7 +14188,6 @@ ul {
 }
 
 .header-bottom {
-  background-image: url(/images/mains-banner.png?aaa2d372c9e380d025b0c134a5645083);
   background-repeat: no-repeat;
   background-size: cover;
   height: 400px;
@@ -14348,7 +14347,6 @@ ul {
 }
 
 .deliver-area {
-  background-image: url(/images/offer-main.jpg?38df2f3183be85967b752a503e826378);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -16271,5 +16269,51 @@ ul {
   transform: scale(0.9);
   opacity: 0.8;
   cursor: pointer;
+}
+
+.VueCarousel-slide {
+  position: relative;
+}
+
+.VueCarousel-slide .header-detial {
+  position: absolute;
+  top: 140px;
+  max-width: 380px;
+  margin: 0 auto;
+  left: 0;
+  right: 0;
+  text-align: center;
+}
+
+.VueCarousel-slide .header-detial h2 {
+  color: #fff;
+}
+
+.VueCarousel-slide .header-detial p {
+  color: #fff;
+  margin-bottom: 20px;
+}
+
+.VueCarousel img {
+  width: 100%;
+}
+
+.image-stack {
+  position: relative;
+  width: 100%;
+}
+
+.image-stack-item.item-top {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 80%;
+  z-index: -1;
+}
+
+.image-stack-item.item-bottom {
+  padding-top: 20px;
+  padding-right: 20%;
+  width: 80%;
 }
 

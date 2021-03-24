@@ -9,6 +9,8 @@ import VueCtkDateTimePicker from 'vue-ctk-date-time-picker';
 import 'vue-ctk-date-time-picker/dist/vue-ctk-date-time-picker.css';
 import Viewer from 'v-viewer'
 import 'viewerjs/dist/viewer.css'
+import VueCarousel from 'vue-carousel';
+
 
 
 Vue.use(VueRouter);
@@ -27,6 +29,8 @@ Vue.use(VeeValidate, config);
 Vue.use(ModalPlugin);
 Vue.use(BootstrapVue);
 Vue.use(Viewer)
+Vue.use(VueCarousel);
+
 
 
 Vue.use(Vuex);

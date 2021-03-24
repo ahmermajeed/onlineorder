@@ -1,65 +1,28 @@
 <template>
     <div>
         <header-menu></header-menu>
-        <!-- Welcome section -->
-        <section class="section-fullwidth deliver-area">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-12">
-                        <div class="about-us">
-                           <h2>
-                               Welcome To Our Pizza
-                           </h2>
-                           <p>
-                               Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit saepe, temporibus eos adipisci facere veniam rem ipsum, eligendi odit sequi est sint, similique dolorum quos a accusantium odio! Quidem, commodi.
-                           </p> 
-                        </div>                     
-                    </div>
-                </div>
-            </div>
-        </section>
         
+        <!-- banner start -->
+        <section class="hero-sec">
+            <banner></banner>
+        </section>
+        <!-- banner end -->
+
+        <!-- Welcome section -->
+        <section class="section-fullwidth">
+            <welcome></welcome>
+        </section>        
         <!-- Welcome section end -->
 
         <!-- Gallery Section -->
-        <section class="section-fullwidth deliver-area">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-12">
-                        <div class="about-us">
-                            <h2>
-                                Our Gallery
-                            </h2>
-                            <div class="gallery-images">
-                                <div class="row">
-                                    <viewer :images="images">
-                                        <img class="col-md-4" v-for="src in images"  :src="src" :key="src">
-                                    </viewer>
-                                </div>
-                            </div>
-                        </div>                     
-                    </div>
-                </div>
-            </div>
+        <section class="section-fullwidth">
+            <gallery></gallery>
         </section> 
         <!-- Gallery Section end -->
 
         <!-- About section -->
-        <section class="section-fullwidth deliver-area">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-12">
-                        <div class="about-us">
-                           <h2>
-                               About Us
-                           </h2>
-                           <p>
-                               Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit saepe, temporibus eos adipisci facere veniam rem ipsum, eligendi odit sequi est sint, similique dolorum quos a accusantium odio! Quidem, commodi.
-                           </p> 
-                        </div>                     
-                    </div>
-                </div>
-            </div>
+        <section class="section-fullwidth">
+            <about-us></about-us>
         </section>
         <!-- About section end -->
 

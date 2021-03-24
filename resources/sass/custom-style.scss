@@ -421,7 +421,6 @@ ul {
     }
 }
 .header-bottom {
-    background-image: url('images/new-design/mains-banner.png');
     background-repeat: no-repeat;
     background-size: cover;
     height: 400px;
@@ -559,7 +558,6 @@ ul {
 }
 
 .deliver-area {
-    background-image: url('images/theme-1/offer-main.jpg');
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -2223,4 +2221,43 @@ ul {
         opacity: 0.8;
         cursor: pointer;
     }
+}
+.VueCarousel-slide {
+    position: relative;
+    .header-detial {
+        position: absolute;
+        top: 140px;
+        max-width: 380px;
+        margin: 0 auto;
+        left: 0;
+        right: 0;
+        text-align: center;
+        h2 {
+            color: #fff;
+        }
+        p {
+            color: #fff;
+            margin-bottom: 20px;
+        }
+    }
+}
+.VueCarousel img {
+    width: 100%;
+}
+.image-stack {
+    position: relative;
+    width: 100%;
+}
+.image-stack-item.item-top {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 80%; // this is an arbitrary width, depends on the design
+    z-index: -1;
+}
+
+.image-stack-item.item-bottom {
+    padding-top: 20px; // arbitrary value
+    padding-right: 20%; // arbitrary value
+    width: 80%; // arbitrary value
 }
