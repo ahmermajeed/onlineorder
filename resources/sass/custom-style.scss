@@ -2204,11 +2204,11 @@ ul {
 .about-us {
     text-align: center;
     h2 {
-        color: red;
+        color: $secondary;
         margin-bottom: 40px;
     }
     p {
-        max-width: 700px;
+        max-width: 300px;
         margin: 0 auto;
     }
 }
@@ -2250,14 +2250,25 @@ ul {
 }
 .image-stack-item.item-top {
     position: absolute;
-    right: 0;
-    top: 0;
-    width: 80%; // this is an arbitrary width, depends on the design
-    z-index: -1;
+    right: -150px;
+    top: 120px;
+    width: 80%;
+    z-index: 0;
+}
+
+.image-stack-item.item-top img, .image-stack-item.item-bottom img {
+    border: 7px solid;
+    -webkit-border-image: -webkit-gradient(linear, left top, left bottom, from(#ec2f4b), to(#ec2f4b), color-stop(0.5, #fff), color-stop(0.5, #ec2f4b)) 21 30 30 21 repeat repeat;
 }
 
 .image-stack-item.item-bottom {
     padding-top: 20px; // arbitrary value
     padding-right: 20%; // arbitrary value
     width: 80%; // arbitrary value
+}
+.home-page section:nth-child(even) {
+    background-color: $foreground-color;
+}
+.home-page section:nth-child(odd) {
+    background-color: $background-color;
 }

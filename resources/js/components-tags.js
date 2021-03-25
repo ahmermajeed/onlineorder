@@ -8,6 +8,8 @@ Vue.component('footer-menu', require('./components/common-components/footer.vue'
 Vue.component('alert', require('./components/common-components/Alert.vue').default);
 Vue.component('banner', require('./components/common-components/banner.vue').default);
 Vue.component('welcome', require('./components/common-components/welcome.vue').default);
+Vue.component('gallery', require('./components/common-components/gallery.vue').default);
+Vue.component('about-us', require('./components/common-components/about-us.vue').default);
 
 
 Vue.component('add-product', require('./components/order-page/popup/add-product.vue').default);
