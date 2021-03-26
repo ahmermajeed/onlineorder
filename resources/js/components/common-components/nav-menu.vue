@@ -6,26 +6,30 @@
                 <div class="header-bottom-section">
                     <div class="container">
                         <div class="row align-items-center">
-                            <div class="col-6 col-md-3">
+                            <div class="col-6 col-md-2">
                                 <router-link :to="{ path: '/'}">
-                                     <a class="navbar-brand js-scroll-trigger main-logo" href="javascript:;">
-                                        <img src="/images/bigsaj.png">
+                                     <!-- <a class="navbar-brand js-scroll-trigger main-logo" href="javascript:;">
+                                        <span>My Logo</span>
+                                    </a> -->
+                                    <a class="navbar-brand js-scroll-trigger main-logo" href="javascript:;">
+                                        <img src="images/new-design/logo.png" alt="">
                                     </a>
                                 </router-link>
                             </div>
-                            <div class="col-6 col-md-9 right">
-                                <nav class="navbar navbar-expand-lg navbar-light justify-content-end main-menu p-0">
+                            <div class="col-6 col-md-10">
+                                <nav class="navbar navbar-expand-lg navbar-light main-menu p-0">
                                   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsiv" aria-controls="navbarResponsiv" aria-expanded="false" aria-label="Toggle navigation">
                                     <span class="navbar-toggler-icon"></span>
                                   </button>
-                                  <div class="collapse navbar-collapse justify-content-end" id="navbarResponsiv">
+                                  <div class="collapse navbar-collapse" id="navbarResponsiv">
                                     <ul class="nav">
                                         <li class="nav-item active"> <router-link :to="{ path: '/'}"><a class="nav-link js-scroll-trigger" href="#about">Home</a></router-link></li>
                                         <li class="nav-item "> <router-link :to="{ path: '/about-us'}"><a class="nav-link js-scroll-trigger" >About us</a></router-link></li>
                                         <li class="nav-item "> <router-link :to="{ path: '/feedback'}"><a class="nav-link js-scroll-trigger" >Feedback</a></router-link></li>
-                                        <li class="nav-item">
-                                            <a href="#" class="nav-link" @click="openMenu">Our Menu</a>
-                                        </li>
+                                    </ul>
+                                  </div>
+                                    <div class="collapse navbar-collapse justify-content-end" id="navbarResponsiv">
+                                    <ul class="nav">
                                         <li class="nav-item">
                                             <div class="order-now">
                                                 <a href="#" class="btn btn-rounded-default btn-rounded-danger"  @click.prevent="openPostalCode"> Order Online</a>
@@ -39,26 +43,6 @@
                     </div>
                 </div>
             </div>
-            <!-- </nav> -->
-<!--             <div class="header-bottom section-fullwidth" v-if="this.$route.name !='online-order'">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-lg-12 col-xl-12">
-                            <div class="header-detial">
-                                <h2>Food Delivery at your Door Step</h2>
-                                <p>Feel Amazed by our food</p>
-                                <a 
-                                    href="#" 
-                                    class="btn btn-rounded-default btn-rounded-danger"  
-                                    @click.prevent="openPostalCode"> 
-                                    Order Now
-                                </a>
-                            </div>                         
-                        </div>
-                    </div>
-                </div>
-            </div> -->
-
         </header>
 
 

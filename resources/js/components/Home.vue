@@ -9,7 +9,8 @@
         <!-- banner end -->
 
         <!-- Welcome section -->
-        <section class="section-fullwidth">
+        <section class="section-fullwidth welcome-banner-parallax" style="background-image: url(/images/new-design/welcome-image/welcome-banner.png);
+">
             <welcome></welcome>
         </section>        
         <!-- Welcome section end -->
@@ -27,54 +28,8 @@
         <!-- About section end -->
 
 
-        <section class="section-fullwidth reservation">
-            <div class="container">
-                <div class="table-booked pattern">
-                    <div class="row">
-                        <div class="col-lg-3 col-md-2 col-sm-1">
-                              
-                        </div>
-                        <div class="col-lg-6 col-md-8 col-sm-12">
-                            <div class="form-box">
-                                <div class="title">
-                                    <h3>Contact us</h3>
-                                    <p>231 Edward Road</p>
-
-                                </div>
-                                <form>
-                                    <div class="frm-body">
-                                        <div class="form-row">
-                                            <div class="form-group col-md-12">
-                                                <label for=""> Name</label>
-                                                <input type="text" class="form-control" id="" placeholder="Enter Your Name">
-                                            </div>
-                                            <div class="form-group col-md-12">
-                                                <label>Email</label>
-                                                <input type="email" class="form-control" id="" placeholder="Enter  email ">
-                                            </div>
-                                        </div>
-                                        <div class="form-row">
-                                            <div class="form-group col-md-12">
-                                                <label for="">Address</label>
-                                                <input type="text" class="form-control" id="" placeholder="Enter Address">
-                                            </div>
-                                            <div class="form-group col-md-12">
-                                                <label>Number</label>
-                                                <input type="phone" class="form-control" id="" placeholder="Enter Number">
-                                            </div>
-                                        </div>
-                                    </div>
-                                     <div class="frm-ftr view-btn text-center ">
-	                    				   <button class="btn btn-rounded-danger">Submit</button>
-	                				</div>
-
-                                </form>
-                            </div>
-                        </div>
-                        <div class="col-lg-3 col-md-2 col-sm-1"></div>
-                    </div>
-                </div>
-            </div>
+        <section class="section-fullwidth">
+            <contact></contact>
         </section>
         <footer-menu></footer-menu>
           <postal-code-popup  @HideModalValue="hideModal"   :showModalProp="showPostalCode"></postal-code-popup>

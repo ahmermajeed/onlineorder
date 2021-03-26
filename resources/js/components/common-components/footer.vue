@@ -1,6 +1,7 @@
 <template>
     <div>
         <footer>
+            <section>
             <div class="main-ftr">
                 <div class="inner-ftr">
                     <div class="container">
@@ -8,22 +9,21 @@
                             <div class="col-lg-3 col-md-3 footer-section-1 footer-space order-1">
                                 <h3>Opening Hours</h3>
                                 <ul class="Opening">
-                                    <li><a href="#"><span><i class="icon-smartphone-1"></i></span>0121 440 3393</a></li>
-                                    <li><a href="#"><span><i class="icon-mail-2"></i></span>hello@bigsajoriginal.co.uk</a></li>
-                                    <li><a href="#"><span><i class="icon-placeholder"></i></span>231 Edward Rd
+                                    <li><a href="#"><span><i class="icon-smartphone-1"></i></span>0000 000 0000</a></li>
+                                    <li><a href="#"><span><i class="icon-mail-2"></i></span>hello@youremail.co.uk</a></li>
+                                    <li><a href="#"><span><i class="icon-placeholder"></i></span>your address
                                     </a></li>
                                 </ul>
                             </div>
                             <div class="col-lg-6 col-md-6 footer-section-2 order-3 order-md-2">
                                 <div class="text-center">
-                                   <a href="#"><img src="/images/big-saj-logo.jpg"></a>
+                                   <a href="#"><img src="/images/new-design/logo.png"></a>
                                 </div>
                                 <div class="footer-menu text-center">
                                     <ul>
                                       <li><a href="#">Home</a></li>
                                       <li><a href="#">About us</a></li>
                                       <li><a href="#">Feedback</a></li>
-                                      <li><a href="javascript:;" @click="openMenu">Our Menu</a></li>
                                     </ul>
                                 </div>
                                 <div class="follow-us text-center">
@@ -70,6 +70,7 @@
                     </div>
                 </div>
             </div>
+            </section>
 
         </footer>
 

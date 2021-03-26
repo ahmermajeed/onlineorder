@@ -2,18 +2,8 @@
 	<div>
 		<div class="container">
 		    <div class="row">
-		    	<div class="col-md-6">
-		    		<div class="image-stack">
-			    		<div class="image-stack-item item-top">
-			    			<img src="images/new-design/welcome-image/1.png" alt="">
-			    		</div>
-			    		<div class="image-stack-item item-bottom">
-			    			<img src="images/new-design/welcome-image/2.png" alt="">
-			    		</div>
-			    	</div>
-			    </div>
-		    	<div class="col-md-6">
-		    		<div class="about-us">
+		    	<div class="col-md-12">
+		    		<div class="welcome-para">
 		    		   <h2>
 		    		       Welcome To Our Pizza
 		    		   </h2>

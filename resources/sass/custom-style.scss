@@ -158,7 +158,7 @@ ul {
 
 .header-bottom-section {
     padding: 10px 0px 10px 0px;
-    background: #fff;
+    background: $foreground-color;
 
     .main-menu {
         .order-now {
@@ -222,7 +222,6 @@ ul {
             }
             &.show {
                 pointer-events: inherit;
-                background: #000;
             }
         }
     }
@@ -231,7 +230,6 @@ ul {
 /********************footer start****************************/
 .main-ftr {
     padding-top: 50px;
-    background-image: url(../../../images/theme-1/footer-banner.png);
 
     li {
         list-style: none;
@@ -2208,8 +2206,10 @@ ul {
         margin-bottom: 40px;
     }
     p {
-        max-width: 300px;
         margin: 0 auto;
+    }
+    img {
+        width: 100%;
     }
 }
 .gallery-images img {
@@ -2271,4 +2271,75 @@ ul {
 }
 .home-page section:nth-child(odd) {
     background-color: $background-color;
+}
+.contact-form {
+    background: #fff;
+    padding: 40px;
+    @include media-breakpoint-down(sm) {
+        padding: 20px;
+    }
+}
+.address-detail p {
+    font-size: 12px;
+}
+.main-logo span {
+    font-size: 20px;
+    font-family: inherit;
+}
+.about-us h2:after {
+    position: absolute;
+    content: '';
+    top: 50px;
+    width: 150px;
+    background: #e3342f;
+    height: 2px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+}
+.map iframe {
+    width: 100% !important;
+}
+.welcome-img img {
+    width: 100%;
+}
+.about-us-image img {
+    width: 100%;
+}
+.welcome-banner-parallax {
+  /* The image used */
+  /* Set a specific height */
+  min-height: 500px;
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  opacity: 0.9;
+      background-color: #000 !important;
+}
+
+.welcome-para {
+    text-align: center;
+    background: #fff;
+    padding: 40px;
+    border-radius: 58px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+.welcome-para h2 {
+    color: $secondary;
+    margin-bottom: 20px;
+}
+.welcome-para h2:after {
+    position: absolute;
+    content: '';
+    top: 80px;
+    width: 150px;
+    background: #e3342f;
+    height: 2px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
 }
