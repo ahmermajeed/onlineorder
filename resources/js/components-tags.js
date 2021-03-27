@@ -11,6 +11,7 @@ Vue.component('welcome', require('./components/common-components/welcome.vue').d
 Vue.component('gallery', require('./components/common-components/gallery.vue').default);
 Vue.component('about-us', require('./components/common-components/about-us.vue').default);
 Vue.component('contact', require('./components/Contact.vue').default);
+Vue.component('food-standard-agency', require('./components/FoodStandardAgency.vue').default);
 
 
 Vue.component('add-product', require('./components/order-page/popup/add-product.vue').default);

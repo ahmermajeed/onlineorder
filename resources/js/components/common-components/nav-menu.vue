@@ -32,7 +32,7 @@
                                     <ul class="nav">
                                         <li class="nav-item">
                                             <div class="order-now">
-                                                <a href="#" class="btn btn-rounded-default btn-rounded-danger"  @click.prevent="openPostalCode"> Order Online</a>
+                                                <a href="#" class="btn btn-rounded-white" @click.prevent="openPostalCode"> Order Online</a>
                                             </div>
                                         </li>
                                     </ul>

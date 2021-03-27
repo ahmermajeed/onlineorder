@@ -8,12 +8,11 @@
         </section>
         <!-- banner end -->
 
-        <!-- Welcome section -->
-        <section class="section-fullwidth welcome-banner-parallax" style="background-image: url(/images/new-design/welcome-image/welcome-banner.png);
-">
-            <welcome></welcome>
+        <!-- About section -->
+        <section class="section-fullwidth welcome-banner-parallax" style="background-image: url(/images/new-design/welcome-image/welcome-banner.png);">
+            <about-us></about-us>
         </section>        
-        <!-- Welcome section end -->
+        <!-- About section end -->
 
         <!-- Gallery Section -->
         <section class="section-fullwidth">
@@ -21,17 +20,25 @@
         </section> 
         <!-- Gallery Section end -->
 
-        <!-- About section -->
-        <section class="section-fullwidth">
-            <about-us></about-us>
-        </section>
-        <!-- About section end -->
+  
 
-
-        <section class="section-fullwidth">
+        <!-- Contact section -->
+        <section class="section-fullwidth pb-0">
             <contact></contact>
         </section>
-        <footer-menu></footer-menu>
+        <!-- Contact section end-->
+
+        <!-- Food Rating -->
+        <section class="section-fullwidth">
+            <food-standard-agency></food-standard-agency>
+        </section> 
+        <!-- Food Rating end -->
+
+        <!-- Footet section -->
+        <section>
+            <footer-menu></footer-menu>
+        </section>
+        <!-- Footet section end -->
           <postal-code-popup  @HideModalValue="hideModal"   :showModalProp="showPostalCode"></postal-code-popup>
     </div>
 </template>

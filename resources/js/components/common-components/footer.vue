@@ -1,7 +1,4 @@
 <template>
-    <div>
-        <footer>
-            <section>
             <div class="main-ftr">
                 <div class="inner-ftr">
                     <div class="container">
@@ -69,10 +66,7 @@
                         <p>Copyright © 2021 | All rights reserved</p>
                     </div>
                 </div>
-            </div>
-            </section>
 
-        </footer>
 
         <download-menu @HideModalValue="hideModal" :showModalProp="showPopup" :isMenu="menu" :isAllergy="allergy" ></download-menu>
     </div>
