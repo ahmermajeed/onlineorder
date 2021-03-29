@@ -12,6 +12,7 @@ Vue.component('gallery', require('./components/common-components/gallery.vue').d
 Vue.component('about-us', require('./components/common-components/about-us.vue').default);
 Vue.component('contact', require('./components/Contact.vue').default);
 Vue.component('food-standard-agency', require('./components/FoodStandardAgency.vue').default);
+Vue.component('food-deliveries', require('./components/FoodDeliveries.vue').default);
 
 
 Vue.component('add-product', require('./components/order-page/popup/add-product.vue').default);

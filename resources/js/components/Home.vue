@@ -14,6 +14,18 @@
         </section>        
         <!-- About section end -->
 
+        <!-- Food Rating -->
+        <section class="section-fullwidth">
+            <food-standard-agency></food-standard-agency>
+        </section> 
+        <!-- Food Rating end -->
+
+        <!-- Food Deliveries -->
+        <section class="section-fullwidth">
+            <food-deliveries></food-deliveries>
+        </section> 
+        <!-- Food Deliveries end -->
+
         <!-- Gallery Section -->
         <section class="section-fullwidth">
             <gallery></gallery>
@@ -28,11 +40,7 @@
         </section>
         <!-- Contact section end-->
 
-        <!-- Food Rating -->
-        <section class="section-fullwidth">
-            <food-standard-agency></food-standard-agency>
-        </section> 
-        <!-- Food Rating end -->
+
 
         <!-- Footet section -->
         <section>
