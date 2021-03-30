@@ -16,7 +16,7 @@
 				         <img class="rounded mx-auto d-block" src="images/about-us/underline.png" style="width:35%;margin-bottom: 50px;">
 				      </div>
 				      <div class="container">
-				      <div class="row">
+				      <div class="row about-info">
 				      	<div class="col-md-6 center-img">
 				      	   <img class="img-responsive" alt="" src="images/about-us/welcome_banner.png">
 				      	</div>
@@ -66,13 +66,15 @@
 					            			<h1 id="order_h">
 					            				£5.39&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;VINDALOO</h1>
 					            				<div class="row">
-							            			<div class="col-md-3">
-							            				<img class="round" src="images/order/order1.png"></div>
-							            			<div class="col-md-9">
-							            				<p>
-							            					Involving a greater use of chillies,garlic,tomato,lemon, ginger &amp; black pepper</p>
-							            			</div>
-							            			<div class="col-md-12">
+                                                    <div class="online-order-section">
+    							            			<div class="col-md-3">
+    							            				<img class="round" src="images/order/order1.png"></div>
+    							            			<div class="col-md-9">
+    							            				<p>
+    							            					Involving a greater use of chillies,garlic,tomato,lemon, ginger &amp; black pepper</p>
+    							            			</div>
+                                                    </div>
+							            			<div class="col-md-12 order-btn">
 							            				<img src="images/order/order_button.png">
 							            			</div>
 							            		</div>
@@ -82,12 +84,15 @@
 	        			            			<h1 id="order_h">
 	        			            				£7.69&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;AYAAN SPECIAL</h1>
 	    			            				<div class="row">
+                                                    <div class="online-order-section">
+
 	    					            			<div class="col-md-3">
 	    					            				<img class="round" src="images/order/order2.png"></div>
 	    					            			<div class="col-md-9">
 	    					            				<p>
 	    					            					Grilled chicken cooked with garlic,onion,peppers, keema & potato.</p>
 	    					            			</div>
+                                                </div>
 	    					            			<div class="col-md-12">
 	    					            				<img src="images/order/order_button.png">
 	    					            			</div>
@@ -98,19 +103,22 @@
 	        			            			<h1 id="order_h">
 	        			            				£7.69&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;JALPURI CHICKEN</h1>
 	    			            				<div class="row">
+                                                    <div class="online-order-section">
+
 	    					            			<div class="col-md-3">
 	    					            				<img class="round" src="images/order/order3.png"></div>
 	    					            			<div class="col-md-9">
 	    					            				<p>
 	    					            					Chicken cooked in the flavour of spinach,special mixed sauces, spring onions,coriander, garlic, ginger, green pepper &amp; tomatoes.</p>
 	    					            			</div>
+                                                </div>
 	    					            			<div class="col-md-12">
 	    					            				<img src="images/order/order_button.png">
 	    					            			</div>
 	    					            		</div>
 	        			            		</div>						            	
 							            </div>
-						            <div class="col-md-6">
+						            <div class="col-md-6 order-pic">
 						                <img src="images/order/order_slider.png" class="img-responsive slider-img">
 						            </div>
 							    </div>
