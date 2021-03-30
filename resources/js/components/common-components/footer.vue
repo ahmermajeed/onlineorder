@@ -41,9 +41,7 @@
                                     <ul>
                                       <li><a href="#">About us</a></li>
                                       <li><a href="#">Our Menu</a></li>
-                                      <li><a href="#">Feedback</a></li>
-                                      <li><a href="#">Allergy Information</a></li>
-                                      
+                                      <li><a href="#">Feedback</a></li>                                     
                                     </ul> 
                                 </div>
                             </div>
@@ -63,9 +61,9 @@
                             <div class="col-lg-4 col-md-4 footer-section-3 footer-section-space">
                                 <h3>Opening Hours</h3>
                                 <ul class="Opening">
-                                    <li><a href="#"><span><i class="icon-smartphone-1"></i></span>02476441200</a></li>
-                                    <li><a href="#"><span><i class="icon-mail-2"></i></span>info@mjstakeaway.co.uk.com</a></li>
-                                    <li><a href="#"><span><i class="icon-placeholder"></i></span>10 Peckham Park Road,London SE15 6TW</a></li>
+                                    <li><a href="#"><span><i class="icon-smartphone-1"></i></span>0208 262 6476</a></li>
+                                    <li><a href="#"><span><i class="icon-mail-2"></i></span>tajgrill100@gmail.com</a></li>
+                                    <li><a href="#"><span><i class="icon-placeholder"></i></span>508 High road/ Ilford Essex/ IG1 1UE</a></li>
                                 </ul>
                             </div>
                         </div> 

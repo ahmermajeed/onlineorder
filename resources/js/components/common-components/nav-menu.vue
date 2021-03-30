@@ -58,24 +58,21 @@
                                         <li class="nav-item active"> <router-link :to="{ path: '/'}"><a class="nav-link js-scroll-trigger" href="#about">Home</a></router-link></li>
                                         <li class="nav-item "> <router-link :to="{ path: '/About us'}"><a class="nav-link js-scroll-trigger" >About us</a></router-link></li>
                                         <li class="nav-item "> <router-link :to="{ path: '/feedback'}"><a class="nav-link js-scroll-trigger" >Feedback</a></router-link></li>
-                                        <li class="nav-item">
-                                            <a href="#" @click="openAllergy" class="nav-link">Allergy Information</a>
-                                        </li>
-
-                                        <li class="nav-item">
-                                            <a href="#" class="nav-link" @click="openMenu">Our Menu</a>
-                                        </li>
-
-                                        <!--                            <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#services">Menu</a></li>-->
-                                        <!--                            <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#contact">GALLERY</a></li>-->
-                                        <li class="nav-item">
-                                            <div class="order-now">
-                                                 <!-- <a href="#" class="btn btn-outline-danger"  @click.prevent="openPostalCode"> 
-                                                Order Online </i></i>
-                                                     </a> -->
-                                                <a href="#" class="btn btn-warning "  @click.prevent="openPostalCode"> Order Online</a>
-                                            </div> 
-                                        </li>
+        
+                                     <li class="nav-item">
+                                         <div class="order-now">
+                                         
+                                             <a
+                                                 href="#"
+                                                 class="btn btn-rounded-default btn-rounded-danger"
+                                                 @click.prevent="
+                                                     openPostalCode
+                                                 "
+                                             >
+                                                 Order Online</a
+                                             >
+                                         </div>
+                                     </li>
                                     </ul>
                                   </div>
                                 </nav>
@@ -94,10 +91,10 @@
                         <div class="col-lg-8 col-md-10 col-sm-12">
                             <div class="contact-bnner">
                                 <div class="head-taj mb-3">
-                                    <h2>Save 25% on orders over £30</h2>
+                                    <h2>Save 10% on orders over £30</h2>
                                 </div>
                                <div class="row">
-                                <div class="col-lg-4 col-md-4 col-sm-12 mt-0 px-0">
+                                <div class="col-lg-12 col-md-12 col-sm-12 mt-0 px-0">
                                     <div class="food">
                                         
                                         <div class="item-img text-center">
@@ -112,33 +109,7 @@
 
                                     
                                 </div>
-                                <div class="col-lg-8 col-md-8 col-sm-12  mt-0 px-0">
-                                    <div class="postal-code">
-                                        <div class="search-res" v-if="this.$route.name !='online-order'">
-                                        <h3>Enter Your Postal Code</h3>
-                                        <form >
-                                            <div class="row">
-                                                <div class="col-12">
-                                                    <div class="form-group">
-                                                        <input type="text"  class="form-control" v-model="postal_code" placeholder="Enter your Postal code">
-                                                    </div>
-                                                    <div class="form-group text-center">
-                                                        <button type="button" class="btn btn-warning"  v-on:click="checkPostCode">
-                                                            <span>Submit! </span>
-                                                        </button>
-                                                    </div>
-                                                    <div class="form-group text-center mb-0">
-                                                        <p class="error">{{error_message}} </p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </form>
-                                    </div>
-                                        
-                                    </div>
-                                    
-                                    
-                                </div>
+                              
                                    
                                </div>
                             </div>
@@ -156,7 +127,10 @@
 
 
         <download-menu @HideModalValue="hideModal" :showModalProp="showPopup" :isMenu="menu" :isAllergy="allergy" ></download-menu>
-        <postal-code-popup  @HideModalValue="hideModal"   :showModalProp="showPostalCode"></postal-code-popup>
+          <postal-code-popup
+            @HideModalValue="hideModal"
+            :showModalProp="showPostalCode"
+        ></postal-code-popup>
 
     </div>
 
@@ -192,40 +166,45 @@
                 this.allergy = true;
                 this.menu = false;
             },
-            openPostalCode() {
-                this.showPopup = false;
-                this.allergy = false;
-                this.menu = false;
-                this.showPostalCode = true;
-            },
-            checkPostCode() {
-                let vm = this;
-                if (this.postal_code == '') {
-                    vm.error_message = 'Please Enter Your Postal Code';
-                } else {
-                    axios({
-                        method: 'post',
-                        url: '/api/check-postal',
-                        data: {
-                            postal_code: this.postal_code
-                        },
-                    }).then(function (response) {
-                        if (response.data.error === undefined) {
-                            vm.error_message = response.data.data.amount;
-                            vm.$store.commit('setDeliveryCharges', response.data.data.amount);
-                            vm.$router.push({path: 'online-order/' + vm.postal_code})
-
-                        } else {
-                            vm.error_message = 'We are not providing food in your Area';
-                        }
-                    })
-                        .catch(function (response) {
-                            //handle error
-                            console.log(response);
-                        });
-                }
-
-            },
+          openPostalCode() {
+              this.showPopup = false
+              this.allergy = false
+              this.menu = false
+              this.showPostalCode = true
+          },
+           checkPostCode() {
+               let vm = this
+               if (this.postal_code == '') {
+                   vm.error_message = 'Please Enter Your Postal Code'
+               } else {
+                   axios({
+                       method: 'post',
+                       url: '/api/check-postal',
+                       data: {
+                           postal_code: this.postal_code,
+                       },
+                   })
+                       .then(function(response) {
+                           if (response.data.error === undefined) {
+                               vm.error_message = response.data.data.amount
+                               vm.$store.commit(
+                                   'setDeliveryCharges',
+                                   response.data.data.amount
+                               )
+                               vm.$router.push({
+                                   path: 'online-order/' + vm.postal_code,
+                               })
+                           } else {
+                               vm.error_message =
+                                   'We are not providing food in your Area'
+                           }
+                       })
+                       .catch(function(response) {
+                           //handle error
+                           console.log(response)
+                       })
+               }
+           },
 
             getGeneralSetting() {
                 axios({
