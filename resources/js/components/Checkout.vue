@@ -296,11 +296,20 @@
                 discountedAmount:0,
                 discountedPercentAge:10,
                 finalAmount:0,
+                interval: 45,
+
 
 
             };
         },
+
+        created(){
+            this.getTimeSlots();
+        },
+        
         mounted() {
+            this.getTimeSlots();
+
             if(this.$store.getters.getAllCartArray.length > 0) {
                 let total = 0;
                 for( var key in this.$store.getters.getAllCartArray ) {
@@ -310,7 +319,9 @@
             var twentyMinutesLater = new Date();
             twentyMinutesLater.setMinutes(twentyMinutesLater.getMinutes() + 50);
 
-            this.form.deliveryTime = twentyMinutesLater;
+           this.form.deliveryTime = 'As soon as possible';
+
+           this.orderType = this.$store.getters.getOrderType;
 
             this.scrollToMain();
             this.getOffers();
@@ -347,113 +358,121 @@
                 element.scrollIntoView({behavior: "instant", block: "start"});
             },
 
-            placeOrder()
-            {
-                let error = [];
-                let _this = this;
-                if (this.form.order_type != '') {
-                    if (this.form.email === "") {
-                        error.push('Please Add Your Email Address');
-                    }
-                    if (this.form.name === "") {
-                        error.push('Please Add Your Name');
-                    }
-                    if (this.form.number === "") {
-                        error.push('Please Add Your Number');
-                    }
-                    if (this.form.order_type === 'Delivery') {
-                        if (this.form.address === "") {
-                            error.push('Please Add Your Delivery Address');
-                        }
-                        if (this.form.street === "") {
-                            error.push('Please Add Your Street Adress');
-                        }
-                        if (this.form.town === "") {
-                            error.push('Please Add Your Town Name');
-                        }
-                        if (this.form.postal_code === "") {
-                            error.push('Please Add Your Postal Code');
-                        }
-                        if (this.form.deliveryTime === "") {
-                            error.push('Please select delivery date and time');
-                        }
-                    }
+           placeOrder() {
+               let error = [];
+               let _this = this;
+               if (this.form.order_type != '') {
+                   if (this.form.email === "") {
+                       error.push('Please Add Your Email Address');
+                   }
+                   if (this.form.name === "") {
+                       error.push('Please Add Your Name');
+                   }
+                   if (this.form.number === "") {
+                       error.push('Please Add Your Number');
+                   }
+                   if (this.form.order_type === 'Delivery') {
+                       if (this.form.address === "") {
+                           error.push('Please Add Your Delivery Address');
+                       }
+                       if (this.form.street === "") {
+                           error.push('Please Add Your Street Adress');
+                       }
+                       if (this.form.town === "") {
+                           error.push('Please Add Your Town Name');
+                       }
+                       if (this.form.postal_code === "") {
+                           error.push('Please Add Your Postal Code');
+                       }
+                       if (this.form.deliveryTime === "") {
+                           error.push('Please select delivery date and time');
+                       }
+                   }
 
-                    if (this.form.payment_type === "") {
-                        error.push('Please Add Your Payment Type');
-                    }else if(this.form.payment_type == 'Credit/Debit Card') {
-                        if (this.form.card_holder_name === "") {
-                            error.push('Please Add Card Holder Name');
-                        }
-                        if (this.form.card_number === "") {
-                            error.push('Please Add Card Number');
-                        }
-                        if (this.form.expiration_month === "") {
-                            error.push('Please Add Your Expiration Month');
-                        }
+                   if (this.form.payment_type === "") {
+                       error.push('Please Add Your Payment Type');
+                   } else if (this.form.payment_type == 'Credit/Debit Card') {
+                       if (this.form.card_holder_name === "") {
+                           error.push('Please Add Card Holder Name');
+                       }
+                       if (this.form.card_number === "") {
+                           error.push('Please Add Card Number');
+                       }
+                       if (this.form.expiration_month === "") {
+                           error.push('Please Add Your Expiration Month');
+                       }
 
-                        if (this.form.expiration_year === "") {
-                            error.push('Please Add Expiration Year');
-                        }
-                        if (this.form.cvc === "") {
-                            error.push('Please Add Your Cvc');
-                        }
-                    }
+                       if (this.form.expiration_year === "") {
+                           error.push('Please Add Expiration Year');
+                       }
+                       if (this.form.cvc === "") {
+                           error.push('Please Add Your Cvc');
+                       }
+                   }
 
-                } else {
-                    error.push('Please Choose Your Order Type');
-                }
-                this.errorMessage = error;
+               }
+               this.errorMessage = error;
 
-                if (this.errorMessage.length > 0) {
-                    _this.scrollToTop();
-                }else {
-                    let vm = this;
-                    if(this.form.order_type == 'Pickup'){
-                        vm.form.address = '---';
-                        vm.form.street = '---';
-                        vm.form.postal_code = '---';
-                    }
+               if (this.errorMessage.length > 0) {
+                   _this.scrollToTop();
+               } else {
+                   let vm = this;
+                   if (vm.orderType == 'Pickup') {
+                       vm.form.address = '---';
+                       vm.form.street = '---';
+                       vm.form.postal_code = '---';
+                   }
 
-                    let data = {
-                        'user_id': 11,
-                        'total_amount_with_fee': this.total_amount - this.discountedAmount,
-                        'delivery_fees': '0',
-                        'discounted_amount': this.discountedAmount,
-                        'payment': 'cod',
-                        'delivery_address': vm.form.address + " " + vm.form.street + " " + vm.form.postal_code,
-                        'order_details': this.$store.getters.getAllCartArray,
-                        'user_data': this.form,
-                        'order_type': this.form.order_type
-                    };
-                    console.log(data);
-                    setTimeout(() => {
-                        if (this.validForm) {
-                            vm.loading = true;
-                            let cart = this.$store.getters.getAllCartArray.splice(0, 1);
-                            axios({
-                                method: 'post',
-                                url: '/api/placeOrder',
-                                data: data
-                            })
-                                .then(function (response) {
-                                    vm.loading = false;
-                                    //handle success
-                                    console.log(response);
-                                    vm.$router.push({name: 'thankyou'});
-                                    //vm.$store.commit('setAllCartArray', {});
+                   let data = {
+                       'user_id': 11,
+                       'total_amount_with_fee': this.total_amount - this.discountedAmount,
+                       'delivery_fees': '0',
+                       'discounted_amount': this.discountedAmount,
+                       'payment': 'cod',
+                       'delivery_address': vm.form.address + " " + vm.form.street + " " + vm.form.postal_code,
+                       'order_details': this.$store.getters.getAllCartArray,
+                       'user_data': this.form,
+                       'order_type': vm.orderType
+                   };
+                   console.log(data);
+                   setTimeout(() => {
+                       if (this.validForm) {
+                           vm.loading = true;
+                           let cart = this.$store.getters.getAllCartArray.splice(0, 1);
+                           axios({
+                               method: 'post',
+                               url: '/api/placeOrder',
+                               data: data
+                           })
+                               .then(function (response) {
+                                   vm.loading = false;
+                                   //handle success
+                                   console.log(response);
+                                   vm.$router.push({name: 'thankyou'});
+                                   //vm.$store.commit('setAllCartArray', {});
 
-                                })
-                                .catch(function (response) {
-                                    //handle error
-                                    console.log(response);
+                               })
+                               .catch(function (response) {
+                                   //handle error
+                                   console.log(response);
 
-                                });
-                        }
+                               });
+                       }
 
-                    }, 1000);
-                }
-                }
+                   }, 1000);
+               }
+           },
+
+           getTimeSlots() {
+               let _this = this;
+               _this.loading = true;
+               axios.get('/api/get-time-slots/' + _this.interval)
+                   .then((response) => {
+                       _this.slots = response.data;
+
+                       _this.loading = false;
+                   });
+           },
 
 
 

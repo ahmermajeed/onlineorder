@@ -13,7 +13,7 @@
                                     <ul>
                                          <li class="mail-space"><i class="icon-mail-2"></i>
                                             <span>
-                                                <a href="mailto:Info@yourdomain.com">Info@yourdomain.com</a>
+                                                <a href="mailto:tajgrill100@gmail.com">tajgrill100@gmail.com</a>
                                             </span>
                                         </li>
                                         <!-- <li><i class="icon-placeholder"></i>
@@ -43,7 +43,7 @@
                             <div class="col-6 col-md-3">
                                 <router-link :to="{ path: '/'}">
                                      <a class="navbar-brand js-scroll-trigger main-logo" href="javascript:;">
-                                        <img src="/images/theme-2/taj-logo.png">
+                                        <img src="/images/theme-2/taj-grill-logo.png">
                                     </a>
                                 </router-link>
                             </div>
@@ -102,7 +102,7 @@
                                         </div>
                                         
                                         <div class="num-img text-center">
-                                           <a href="tel: 02476441200">02476441200</a>
+                                           <a href="tel: 0208 262 6476">0208 262 6476</a>
                                         </div>
                                         
                                     </div>

@@ -523,7 +523,7 @@
                             <div class="form-box">
                                 <div class="row">
                                     <div class="col-lg-6 col-md-7 col-sm-12">
-                                        <img src="images/theme-2/contact-banner-taj.png">
+                                        <img src="images/theme-2/taj-grill-contact.png">
                                         
                                     </div>
                                     <div class="col-lg-6 col-md-5 col-sm-12">

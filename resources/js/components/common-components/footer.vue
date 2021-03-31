@@ -8,7 +8,7 @@
                             <div class="row">
                                 <div class="col-lg-6 col-md-6 col-sm-12 footer-section-1 text-right">
                                     <div>
-                                       <a href="#"><img src="/images/theme-2/taj-footer-logo.png"></a> 
+                                       <a href="#"><img src="/images/theme-2/taj-grill-footer-logo.png"></a> 
                                     </div>
                                 </div>
                                 <div class="col-lg-6 col-md-6 col-sm-12 footer-section-1">
@@ -35,7 +35,7 @@
                         
                         <div class="footer-bottom">
                         <div class="row">
-                            <div class="col-lg-4 col-md-4">
+                            <div class="col-lg-3 col-md-3">
                                 <div class="footer-menu">
                                     <h3>Opening Hours</h3>
                                     <ul>
@@ -45,7 +45,7 @@
                                     </ul> 
                                 </div>
                             </div>
-                             <div class="col-lg-4 col-md-4 footer-section-2 footer-section-space text-center">
+                             <div class="col-lg-3 col-md-3 footer-section-2 footer-section-space text-center">
                                 <h3>Opening Hours</h3>
                                 <ul class="Opening-hours">
                                     <li>
@@ -58,12 +58,21 @@
                                     </li>
                                 </ul>
                             </div>
-                            <div class="col-lg-4 col-md-4 footer-section-3 footer-section-space">
-                                <h3>Opening Hours</h3>
+                            <div class="col-lg-3 col-md-3 footer-section-3 footer-section-space">
+                                <h3>Opening Hours- Taj Grill 1</h3>
                                 <ul class="Opening">
                                     <li><a href="#"><span><i class="icon-smartphone-1"></i></span>0208 262 6476</a></li>
                                     <li><a href="#"><span><i class="icon-mail-2"></i></span>tajgrill100@gmail.com</a></li>
                                     <li><a href="#"><span><i class="icon-placeholder"></i></span>508 High road/ Ilford Essex/ IG1 1UE</a></li>
+                                </ul>
+                            </div>
+
+                            <div class="col-lg-3 col-md-3 footer-section-3 footer-section-space">
+                                <h3>Opening Hours - Taj Grill 2</h3>
+                                <ul class="Opening">
+                                    <li><a href="#"><span><i class="icon-smartphone-1"></i></span>0208 478 8352</a></li>
+                                    <li><a href="#"><span><i class="icon-mail-2"></i></span>tajgrill100@gmail.com</a></li>
+                                    <li><a href="#"><span><i class="icon-placeholder"></i></span>72 Ilford Lane, Ilford Essex, IG1 2LA</a></li>
                                 </ul>
                             </div>
                         </div> 
@@ -74,7 +83,7 @@
                 
                 <div class="copyright text-center">
                     <div class="container">
-                        <p>Copyright © 2020 | All rights reserved</p>
+                        <p>Copyright © 2021 | All rights reserved</p>
                     </div>
                 </div>
             </div>
