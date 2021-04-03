@@ -2241,6 +2241,9 @@ ul {
 }
 .header-bottom.section-fullwidth {
     padding: 130px 0px 90px;
+    @include media-breakpoint-down(sm) {
+        padding: 190px 0px 90px;
+    }
 }
 .postal-code-modal .note p {
     font-size: 13px;
@@ -2263,4 +2266,12 @@ ul {
 .postal-code-modal .form-cart .switch-field input:checked + label {
     color: #804000;
     background-color: #ffffe6;
+}
+.postal-code-modal .modal-content .modal-body {
+    @include media-breakpoint-down(sm) {
+       padding: 20px 15px;
+    }
+}
+.food-allergy-popup strong {
+    font-size: 15px;
 }

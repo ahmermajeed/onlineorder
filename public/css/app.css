@@ -16168,6 +16168,12 @@ ul {
   padding: 130px 0px 90px;
 }
 
+@media (max-width: 767.98px) {
+  .header-bottom.section-fullwidth {
+    padding: 190px 0px 90px;
+  }
+}
+
 .postal-code-modal .note p {
   font-size: 13px;
 }
@@ -16193,5 +16199,15 @@ ul {
 .postal-code-modal .form-cart .switch-field input:checked + label {
   color: #804000;
   background-color: #ffffe6;
+}
+
+@media (max-width: 767.98px) {
+  .postal-code-modal .modal-content .modal-body {
+    padding: 20px 15px;
+  }
+}
+
+.food-allergy-popup strong {
+  font-size: 15px;
 }
 

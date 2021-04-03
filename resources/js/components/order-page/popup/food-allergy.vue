@@ -1,10 +1,12 @@
 <template>
     <div>
-        <b-modal id="food-allergy" centered @hidden="onHidden" :hide-footer=true title-tag="h4" ok-variant="primary" ref="myModalRef" custom-modal no-close-on-backdrop class="custom-modal">
+        <b-modal id="food-allergy" centered @hidden="onHidden" :hide-footer=true title-tag="h4" ok-variant="primary" ref="myModalRef" custom-modal no-close-on-backdrop class="custom-modal"
+        modal-class="food-allergy-popup">
              <h3>Food Allergy</h3>
 
              
-             <p>Please contact our kitchen staff on <a href="tel:0208 262 6476">0208 262 6476</a> for more information.</p>
+             <p>Please contact our kitchen staff on <strong>TAJ GRILL & CATERING: </strong><a href="tel:0208 262 6476">0208 262 6476</a> <strong>TAJ GRILL 1: </strong>
+             <a href="tel:0208 478 8352">0208 478 8352</a>for more information.</p>
 
         </b-modal>
     </div>
