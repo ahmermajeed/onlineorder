@@ -123,7 +123,7 @@
                                                 <div  class="strong-open"  v-if="cart.extras" v-for="(extra, extra_index) in cart.extras" >
                                                     <strong>{{extra.group_name}}:</strong> {{extra.choice}}
                                                 </div>
-                                                <td  v-if="!cart.extras">£ {{priceFormat(cart.price * cart.quantity) }}</td>
+                                                <td  v-if="!cart.extras" class="p-0">£ {{priceFormat(cart.price * cart.quantity) }}</td>
                                             <td class="order-priecs"  v-if="cart.extras">£{{priceFormat(cart.single_product_total_amount)}} </td>
                                                
                                             </td>

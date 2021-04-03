@@ -17,7 +17,8 @@
                                              <strong>£17.00</strong>
                                          </div>
                                         <div class="row pries-bar">
-                                             <button type="button" class="btn btn-warning ">Order Now!</button>
+                                             <button type="button" class="btn btn-warning"
+                                             @click.prevent="openPostalCode">Order Now!</button>
                                             <a href="#" class=""></a>
                                         </div>
                                    </div>
@@ -41,7 +42,7 @@
                                              <strong>£22.00</strong>
                                          </div>
                                         <div class="row pries-bar">
-                                             <button type="button" class="btn btn-warning ">Order Now!</button>
+                                             <button type="button" class="btn btn-warning" @click.prevent="openPostalCode">Order Now!</button>
                                             <a href="#" class=""></a>
                                         </div>
                                    </div>
@@ -65,7 +66,7 @@
                                             <strong>£35.00</strong>
                                          </div>
                                         <div class="row pries-bar">
-                                             <button type="button" class="btn btn-warning ">Order Now!</button>
+                                             <button type="button" class="btn btn-warning" @click.prevent="openPostalCode">Order Now!</button>
                                             <a href="#" class=""></a>
                                         </div>
                                    </div>
@@ -567,6 +568,10 @@
             </div>
         </section>
         <footer-menu></footer-menu>
+             <postal-code-popup
+            @HideModalValue="hideModal"
+            :showModalProp="showPostalCode"
+        ></postal-code-popup>
     </div>
 </template>
 
@@ -596,7 +601,10 @@
                 index: null,
                 showPopup: false,
                 menu: false,
-                allergy: false
+                allergy: false,
+                postal_code: '',
+                error_message: '',
+                showPostalCode: false,
             };
         },
         mounted() {
@@ -612,6 +620,16 @@
                         _this.stories =  response.data.data;
                         _this.loading  = false;
                     });
+            },
+            openPostalCode() {
+              this.showPopup = false
+              this.allergy = false
+              this.menu = false
+              this.showPostalCode = true
+          },
+           hideModal() {
+                this.showPopup = false;
+                this.showPostalCode = false;
             },
 
         }

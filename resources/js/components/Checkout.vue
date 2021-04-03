@@ -6,249 +6,208 @@
         <div class="loading" v-if="loading">Loading&#8230;</div>
         <div class="container">
             <div class="row">
-                <div class="col-sm-12 checkoutpage col-lg-8 col-md-8 col-sm-8 checkout-cart-form">
-                    <div class="row">
-                        <div class="col-sm-12 offset-sm-0 col-md-10 offset-md-1">
+              <div class="col-sm-12 checkoutpage col-lg-8 col-md-8 col-sm-8 checkout-cart-form">
+                  <div class="row">
+                      <div class="col-sm-12 offset-sm-0 col-md-10 offset-md-1">
 
-                        <ul id="error_msg" >
-                            <li  v-for="(errorMessage) in errorMessage" style="color: red;" >{{errorMessage}}</li>
-                        </ul>
-                        </div>
-
-
-                        <div class="col-sm-12  col-md-10 ">
-                            <div class="row section-border order-check">
+                      <ul id="error_msg" >
+                          <li  v-for="(errorMessage) in errorMessage" style="color: red;" >{{errorMessage}}</li>
+                      </ul>
+                      </div>
 
 
-                                <div class="col-12">
-                                    <div class="check-head">
-                                        <h2>Checkout</h2>
-                                    
-                                    </div>
-                                    
-                                </div>
-                               <!-- <div class="col-sm-6">
-                                    <label class="customradiobutton radioiconed radio-inline mr-3">
-                                        <input type="radio" value="Pickup" @change.prevent="showOrderType('pickup')"  v-model="form.order_type"><i class="fa fa-sign-language"></i> Pick up
-                                    </label>
-                                </div>-->
-                                <div class="col-sm-12 cash-delivery section-delivery">
-                                    <h3>Order (Choose your Order Type) </h3> <span></span>
-                                    <label class="customradiobutton radioiconed radio-inline mr-3">
-                                        <input type="radio" value="Delivery" v-model="form.order_type" @change.prevent="showOrderType('getdelivery')" ><i class="fa fa-truck"></i> Delivery
+                      <div class="col-sm-12  col-md-10 ">
+                          <div class="row section-border order-check">
 
-                                    </label>
-                                </div>
 
-                                <div class="col-12">
-                                    <div class="row" v-show="order_card == 'pickup'">
-                                        <div class="col-sm-6">
-                                            <label>Date</label>
-                                            <b-form-datepicker id="example-datepicker" v-model="value" class="mb-2"></b-form-datepicker>
-                                        </div>
-                                        <div class="col-sm-6">
-                                            <label>Time</label>
-                                            <b-form-timepicker v-model="value" locale="en"></b-form-timepicker>
-                                        </div>
+                              <div class="col-12">
+
+
+                              </div>
 
 
 
-
-                                    </div>
-
-                                    <div class="row" v-show="order_card == 'getdelivery'">
-
-                                        <div class="col-sm-12">
-                                            <label>Date</label>
-                                            <!--<b-form-datepicker id="example-datepicker" v-model="value" class="mb-2"></b-form-datepicker>-->
-                                            <VueCtkDateTimePicker min-date="todayDate" v-model="form.deliveryTime" />
-                                            <br>
-                                        </div>
+                              <div class="col-sm-12">
+                                  <label>{{orderType}} Date</label>
+                                  <select class="form-control" v-model="form.deliveryTime">
+                                      <option>As soon as possible</option>
+                                      <option v-for="slot in slots">{{slot}}</option>
+                                  </select>
+                                  <br>
+                              </div>
+                 
 
 
-                                        <div class="col-sm-12 ">
-                                            <label class="customradiobutton radioiconed radio-inline mr-3">
-                                                <input type="radio" value="Asap" v-model="form.asap"  >Asap
-                                            </label>
-                                        </div>
-
-                                       <!-- <div class="col-sm-6">
-                                            <label>Time</label>
-                                            <b-form-timepicker v-model="value" locale="en"></b-form-timepicker>
-                                        </div>-->
-
-                                        <div class="col-12">
-                                            <h3> Delivery Details</h3>
-                                        </div>
-                                        <div class="col-sm-6">
-                                            <label>Address </label>
-                                            <input type="text"  name="address" required   v-model="form.address" class="form-control" placeholder="Address">
-                                        </div>
-
-                                        <div class="col-sm-6">
-                                            <label>Street *</label>
-                                            <input type="text"  v-model="form.street" class="form-control" placeholder="street">
-                                        </div>
-                                        <div class="col-sm-6">
-                                            <label  class="col-form-label">Town *</label>
-                                            <input type="text"  v-model="form.town" class="form-control" placeholder="abc town">
-                                        </div>
-
-                                        <div class="col-sm-6">
-                                            <label  class="col-form-label">Postal Code *</label>
-                                            <input type="text"   v-model="form.postal_code" class="form-control" placeholder="wc2h 9ah">
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="row  section-border check-form">
-                                <div class="col-12">
-                                    <h3> Personal Details</h3>
-                                </div>
-                                <div class="col-sm-4">
-                                    <label  class="col-form-label">Name</label>
-                                    <input type="text" class="form-control" placeholder="Enter Name" v-model="form.name">
-                                </div>
-                                <div class="col-sm-4">
-                                    <label  class="col-form-label">Email</label>
-                                    <input type="text" class="form-control"  v-model="form.email" placeholder="abc@example.com">
-                                </div>
-
-                                <div class="col-sm-4">
-                                    <label  class="col-form-label">Number</label>
-                                    <input type="text" class="form-control"  v-model="form.number" placeholder="Enter Number">
-                                </div>
-
-                                
-                            </div>
-
-                            <div class="row border-dashed payment-sec">
-                                <div class="col-sm-12 cash-delivery">
-                                    <h3>Payment</h3>
-                                    <label class="customradiobutton radioiconed radio-inline mr-3">
-                                        <input type="radio" value="COD"  @change.prevent="showCard(false)"  v-model="form.payment_type" ><i class="fas fa-wallet"></i> Cash on Delivery
-                                    </label>
-                                </div>
-<!--                                <div class="col-sm-6">-->
-<!--                                    <label class="customradiobutton radioiconed radio-inline mr-3">-->
-<!--                                        <input type="radio" value="Credit/Debit Card" v-model="form.payment_type" @change.prevent="showCard(true)" ><i class="fas fa-credit-card"></i> Credit/Debit Card-->
-<!--                                    </label>-->
-<!--                                </div>-->
-
-                                <div class="col-12">
-                                    <div class="row" v-show="card">
-                                        <div class="col-sm-7">
-                                            <form role="form">
-                                                <div class="form-group">
-                                                    <label>Full name (on the card)</label>
-                                                    <input type="text" class="form-control" name="username" placeholder="" required="" v-model="form.card_holder_name">
-                                                </div> <!-- form-group.// -->
-
-                                                <div class="form-group">
-                                                    <label>Card number</label>
-                                                    <div class="input-group">
-                                                        <input type="text" class="form-control" name="cardNumber" placeholder="" v-model="form.card_number">
-                                                        <div class="input-group-append">
-                                                    <span class="input-group-text text-muted">
-
-                                                    </span>
-                                                        </div>
-                                                    </div>
-                                                </div> <!-- form-group.// -->
-
-                                                <div class="row">
-                                                    <div class="col-sm-8">
-                                                        <div class="form-group">
-                                                            <label><span class="hidden-xs">Expiration</span> </label>
-                                                            <div class="input-group">
-                                                                <input type="number" class="form-control"    min="0"  placeholder="MM" name="" v-model="form.expiration_month">
-                                                                <input type="number" class="form-control"   min="0"  placeholder="YY" name="" v-model="form.expiration_year">
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-sm-4">
-                                                        <div class="form-group">
-                                                            <label data-toggle="tooltip" title="" data-original-title="3 digits code on back side of the card">CVV <i class="fa fa-question-circle"></i></label>
-                                                            <input type="number"  min="0" class="form-control" required="" v-model="form.cvc">
-                                                        </div> <!-- form-group.// -->
-                                                    </div>
-                                                </div> <!-- row.// -->
-                                            </form>
-                                        </div>
-                                    </div>
-                                    <div class="row mt-3">
-                                        <div class="col-sm-4" v-if="finalAmount >= 10">
-                                            <button class="subscribe btn btn-warning btn-block" type="button" @click="placeOrder()"> Confirm  </button>
-                                        </div>
-
-                                        <div class="col-sm-12" v-else>
-                                            <p style="color:red;text-align:center"> Your Order Must be greater than £10 </p>
-                                        </div>
-
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-xs-12 full cart col-lg-4 col-md-4 col-sm-12 cart  checkout-cart-desktop"   v-if="getAllCartArray.length > 1"  >
-                    <div class="order cart-box" id="cart-stiky">
-                        <h3>Your Order </h3>
-                        <div class="check-out-list">
-                           
-
-                            <div class="table-holder">
-
-                                <table class=tbl_cart_list>
-                                     <h4>Order Details</h4>
-                                    <tr v-for="(cart, product_index) in getAllCartArray"  v-if="product_index  > 0">
-                                        <!-- <td class=highlighted>
-                                        </td> -->
-                                        
-                                        <td class="order-name">
-                                            <div class="check-order">{{cart.product_name}}</div>
-                                            <div  v-if="cart.extras" v-for="(extra, extra_index) in cart.extras" >
-                                                <strong>{{extra.group_name}}:</strong> {{extra.choice}}
-                                            </div>
-                                        </td>
-                                        <td class="order-quty">
-                                            <span>{{ cart.quantity}}  <i>X</i></span>
-                                        </td>
-
-                                        <td class="amount" v-if="!cart.extras">£ {{priceFormat(cart.price * cart.quantity) }}</td>
-                                        <td class="text-right" v-if="cart.extras">£{{priceFormat(cart.single_product_total_amount)}} </td>
-                                    </tr>
-                                </table>
-                            </div>
-                            <div class="cart-money-detail">
-                                <ul>
-                                    <li class="fees"></li>
-                                    <li>
-                                        <span>Sub Total</span>
-                                        <span>£{{priceFormat(total_amount)}}</span>
-                                    </li>
-
-                                    <li>
-                                        <span>Discount</span>
-                                        <span>  {{discountedAmount}} </span>
-                                    </li>
-
-                                    <li>
-                                        <span>Total</span>
-                                        <span>£{{priceFormat(finalAmount)}}</span>
-                                    </li>
+                              <div class="col-12">
 
 
-                                </ul>
-                            </div>
-<!--                            <div class="cart-btn mt-2">-->
-<!--                                <button class=" custom-btn" @click="placeOrder()">Checkout</button>-->
-<!--                            </div>-->
-                        </div>
-                    </div>
-                </div>
+
+                                  <div class="row" v-show="orderType != 'Pickup'">
+
+
+                                      <div class="col-12">
+                                          <h3> Delivery Details</h3>
+                                      </div>
+                                      <div class="col-sm-6">
+                                          <label>Address </label>
+                                          <input type="text"  name="address" required   v-model="form.address" class="form-control" placeholder="Address">
+                                      </div>
+
+                                      <div class="col-sm-6">
+                                          <label>Street *</label>
+                                          <input type="text"  v-model="form.street" class="form-control" placeholder="street">
+                                      </div>
+                                      <div class="col-sm-6">
+                                          <label  class="col-form-label">Town *</label>
+                                          <input type="text"  v-model="form.town" class="form-control" placeholder="abc town">
+                                      </div>
+
+                                      <div class="col-sm-6 mb-2">
+                                          <label  class="col-form-label">Postal Code *</label>
+                                          <input type="text"   v-model="form.postal_code" class="form-control" placeholder="wc2h 9ah">
+                                      </div>
+                                  </div>
+
+
+                              </div>
+                          </div>
+
+                          <div class="row  section-border check-form">
+                              <div class="col-12">
+                                  <h3> Personal Details</h3>
+                              </div>
+                              <div class="col-sm-4">
+                                  <label  class="col-form-label">Name</label>
+                                  <input type="text" class="form-control" placeholder="Enter Name" v-model="form.name">
+                              </div>
+                              <div class="col-sm-4">
+                                  <label  class="col-form-label">Email</label>
+                                  <input type="text" class="form-control"  v-model="form.email" placeholder="abc@example.com">
+                              </div>
+
+                              <div class="col-sm-4">
+                                  <label  class="col-form-label">Number</label>
+                                  <input type="text" class="form-control"  v-model="form.number" placeholder="Enter Number">
+                              </div>
+
+
+                          </div>
+
+                          <div class="row border-dashed payment-sec">
+                              <div class="col-sm-12 cash-delivery">
+                                  <h3>Payment</h3>
+                                  <label class="customradiobutton radioiconed radio-inline mr-3">
+                                      <input type="radio" value="COD"  @change.prevent="showCard(false)"  v-model="form.payment_type" ><i class="fas fa-wallet"></i> Cash on Delivery
+                                  </label>
+                              </div>
+
+
+                              <div class="col-12">
+                                  <div class="row" v-show="card">
+                                      <div class="col-sm-7">
+                                          <form role="form">
+                                              <div class="form-group">
+                                                  <label>Full name (on the card)</label>
+                                                  <input type="text" class="form-control" name="username" placeholder="" required="" v-model="form.card_holder_name">
+                                              </div> <!-- form-group.// -->
+
+                                              <div class="form-group">
+                                                  <label>Card number</label>
+                                                  <div class="input-group">
+                                                      <input type="text" class="form-control" name="cardNumber" placeholder="" v-model="form.card_number">
+                                                      <div class="input-group-append">
+                                                  <span class="input-group-text text-muted">
+
+                                                  </span>
+                                                      </div>
+                                                  </div>
+                                              </div> <!-- form-group.// -->
+
+                                              <div class="row">
+                                                  <div class="col-sm-8">
+                                                      <div class="form-group">
+                                                          <label><span class="hidden-xs">Expiration</span> </label>
+                                                          <div class="input-group">
+                                                              <input type="number" class="form-control"    min="0"  placeholder="MM" name="" v-model="form.expiration_month">
+                                                              <input type="number" class="form-control"   min="0"  placeholder="YY" name="" v-model="form.expiration_year">
+                                                          </div>
+                                                      </div>
+                                                  </div>
+                                                  <div class="col-sm-4">
+                                                      <div class="form-group">
+                                                          <label data-toggle="tooltip" title="" data-original-title="3 digits code on back side of the card">CVV <i class="fa fa-question-circle"></i></label>
+                                                          <input type="number"  min="0" class="form-control" required="" v-model="form.cvc">
+                                                      </div> <!-- form-group.// -->
+                                                  </div>
+                                              </div> <!-- row.// -->
+                                          </form>
+                                      </div>
+                                  </div>
+                                  <div class="row mt-3">
+                                      <div class="col-sm-4" >
+                                          <button class="btn btn-warning" type="button" @click="placeOrder()"> Confirm  </button>
+                                      </div>
+
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+
+              <div class="col-xs-12 full cart col-lg-4 col-md-4 col-sm-12 cart  checkout-cart-desktop"   v-if="getAllCartArray.length > 1"  >
+                  <div class="order cart-box" id="cart-stiky">
+                      <h3>Your Order </h3>
+                      <div class="check-out-list">
+
+
+                          <div class="table-holder">
+
+                              <table class=tbl_cart_list>
+                                   <h4>Order Details</h4>
+                                  <tr v-for="(cart, product_index) in getAllCartArray"  v-if="product_index  > 0">
+                                      <!-- <td class=highlighted>
+                                      </td> -->
+
+                                      <td class="order-name">
+                                          <div class="check-order">{{cart.product_name}}</div>
+                                          <div  v-if="cart.extras" v-for="(extra, extra_index) in cart.extras" >
+                                              <strong>{{extra.group_name}}:</strong> {{extra.choice}}
+                                          </div>
+                                      </td>
+                                      <td class="order-quty">
+                                          <span>{{ cart.quantity}}</span>
+                                      </td>
+
+                                      <td class="amount" v-if="!cart.extras">£ {{priceFormat(cart.price * cart.quantity) }}</td>
+                                      <td class="text-right" v-if="cart.extras">£{{priceFormat(cart.single_product_total_amount)}} </td>
+                                  </tr>
+                              </table>
+                          </div>
+                          <div class="cart-money-detail">
+                              <ul>
+                                  <li class="fees"></li>
+                                  <li>
+                                      <span>Sub Total</span>
+                                      <span>£{{priceFormat(total_amount)}}</span>
+                                  </li>
+
+                                  <li>
+                                      <span>Discount</span>
+                                      <span>  {{discountedAmount}} </span>
+                                  </li>
+
+                                  <li>
+                                      <span>Total</span>
+                                      <span>£{{priceFormat(finalAmount)}}</span>
+                                  </li>
+
+
+                              </ul>
+                          </div>
+                      </div>
+                  </div>
+              </div>
 
 
             </div>
