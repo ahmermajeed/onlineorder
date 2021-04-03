@@ -2231,4 +2231,36 @@ ul {
 
 .postal-code-modal .modal-content .modal-header .modal-title {
     font-size: 21px;
+    color:  #804000;
+}
+.postal-code-modal .modal-content  {
+    border-radius: 0.3rem;
+}
+.postal-code-modal .modal-dialog  {
+    max-width: 600px;
+}
+.header-bottom.section-fullwidth {
+    padding: 130px 0px 90px;
+}
+.postal-code-modal .note p {
+    font-size: 13px;
+}
+.postal-code-modal .note p img {
+    width: 18px;
+    margin-right: 5px;
+}
+.postal-code-modal .form-cart .switch-field span {
+    font-size: 15px;
+    line-height: 1.4;
+}
+.postal-code-modal .form-cart .switch-field label {
+    color: #804000;
+    font-size: 16px;
+    font-weight: bold;
+    border: 1px solid #d4b041 !important;
+    width: 50%;
+}
+.postal-code-modal .form-cart .switch-field input:checked + label {
+    color: #804000;
+    background-color: #ffffe6;
 }

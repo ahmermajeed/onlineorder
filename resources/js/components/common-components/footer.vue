@@ -59,7 +59,7 @@
                                 </ul>
                             </div>
                             <div class="col-lg-3 col-md-3 footer-section-3 footer-section-space">
-                                <h3>Opening Hours- Taj Grill 1</h3>
+                                <h3>Opening Hours- Taj Grill &amp; Catering</h3>
                                 <ul class="Opening">
                                     <li><a href="#"><span><i class="icon-smartphone-1"></i></span>0208 262 6476</a></li>
                                     <li><a href="#"><span><i class="icon-mail-2"></i></span>tajgrill100@gmail.com</a></li>
@@ -68,7 +68,7 @@
                             </div>
 
                             <div class="col-lg-3 col-md-3 footer-section-3 footer-section-space">
-                                <h3>Opening Hours - Taj Grill 2</h3>
+                                <h3>Opening Hours - Taj Grill 1</h3>
                                 <ul class="Opening">
                                     <li><a href="#"><span><i class="icon-smartphone-1"></i></span>0208 478 8352</a></li>
                                     <li><a href="#"><span><i class="icon-mail-2"></i></span>tajgrill100@gmail.com</a></li>

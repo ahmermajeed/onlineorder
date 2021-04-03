@@ -59,7 +59,7 @@
                                         <li class="nav-item "> <router-link :to="{ path: '/About us'}"><a class="nav-link js-scroll-trigger" >About us</a></router-link></li>
                                         <li class="nav-item "> <router-link :to="{ path: '/feedback'}"><a class="nav-link js-scroll-trigger" >Feedback</a></router-link></li>
         
-                                     <li class="nav-item">
+                                 <!--     <li class="nav-item">
                                          <div class="order-now">
                                          
                                              <a
@@ -72,6 +72,15 @@
                                                  Order Online</a
                                              >
                                          </div>
+                                     </li> -->
+                                     <li>
+                                          <button 
+                                            type="button" 
+                                            class="btn btn-warning"
+                                            style="margin-left: 20px;"
+                                            @click.prevent="openPostalCode">
+                                            Order Now!
+                                          </button>
                                      </li>
                                     </ul>
                                   </div>
@@ -101,9 +110,9 @@
                                              <img src="/images/theme-2/taj-halal.png">
                                         </div>
                                         
-                                        <div class="num-img text-center">
+                                       <!--  <div class="num-img text-center">
                                            <a href="tel: 0208 262 6476">0208 262 6476</a>
-                                        </div>
+                                        </div> -->
                                         
                                     </div>
 

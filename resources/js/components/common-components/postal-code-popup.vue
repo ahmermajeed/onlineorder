@@ -6,46 +6,33 @@
             centered  
             ok-variant="primary" 
             title-tag="h6"   
-            size="sm"
+            size="md"
             :hide-footer=true  
             ref="myModalRef" 
             custom-modal 
             no-close-on-backdrop 
             modal-class="postal-code-modal custom-modal">
 
-            <template #modal-title>Choose your order type</template>
+            <template #modal-title>Select your Resturant</template>
+        
             <div class="form-cart order-selection">
-                <label><span>Select order type:</span></label>
                 <div class="switch-field" >
-                    <input type="radio" id="radio-one" @change="showPostalCode" v-model="order_type" name="switch-one" value="Delivery"/>
-                    <label for="radio-one">
-                    <img src="/images/delivery.png" alt="">
-                    </i>Delivery
-                        <span>30 - 45 mins</span></label>
-                    <input type="radio" id="radio-two" name="switch-one" @change="showPostalCode" value="Pickup"  v-model="order_type" />
-                    <label for="radio-two">
-                    <img src="/images/shopping-basket.png" alt="">
-                        Collection
-                        <span>20 mins</span></label>
+                    <input type="radio" id="radio-btn-one" @change="pushToOrderPage" name="switch-btn-one" value="tajCatering"/>
+                    <label for="radio-btn-one">
+                    <img src="/images/theme-2/food-serving.png" alt="">
+                      Taj Grill &amp; Catering
+                        <span>508 High Road SevenKings IG1 1UE 0208 262 6476</span></label>
+                    <input type="radio" id="radio-btn-two" name="switch-btn-one" @change="pushToOrderPage" value="tajGrill" />
+                    <label for="radio-btn-two">
+                    <img src="/images/theme-2/food-serving.png" alt="">
+                        Taj Grill 1
+                      <span>72 Ilford Lane Ilford Essex IG1 2LA 0208 478 8352</span></label>
                 </div>
-            </div>
-            <div class="row postal-code-details">
-                <form>
-                    <div class="form-group" v-if="showPostal">
-                        <label for=""><span>Enter your Postcode:</span></label>
-                        <input type="text"  class="form-control" v-model="postal_code" placeholder="Enter your Postcode">
-                    </div>
-
-                    <button type="button" class="btn btn-rounded-default btn-rounded-danger"  v-on:click="checkPostCode">
-                        <span>Submit <i class="fas fa-long-arrow-alt-right"></i></span>
-
-                    </button>
-                    <p style="color: red;font-size: 12px;margin-top: 10px;">{{error_message}} </p>
-                </form>
-
-            </div>
-            
-
+            </div>   
+            <div class="note">
+              <p><img src="images/theme-2/info.png" alt="">We are taking only collection orders.</p>
+            </div>  
+          
         </b-modal>
     </div>
 </template>
@@ -132,14 +119,9 @@
 
                    },
 
-            showPostalCode() {
-                let self = this;
-
-                if(self.order_type == "Delivery")
-                    self.showPostal = true
-                else
-                    self.showPostal = false
-            }
+            pushToOrderPage() {
+              this.$router.push({ path: 'online-order' })
+            },
         },
         watch: {
             showModalProp(value) {

@@ -22,7 +22,7 @@
                     </div>
                     <div class="col-lg-5 col-md-8 col-sm-12">
                         <div class="product-list order-product">
-                            <!--                            for products-->
+                            <!-- for products-->
                             <div class="product"  v-for="(item, index) in products" v-if="item.products.length">
                                  <div class="row">
                                         <div class="col-md-12">
@@ -46,7 +46,7 @@
                                  </div>
                             </div>
 
-                            <!--                            for Deals-->
+                            <!-- for Deals-->
                             <div class="product deals-pro"  v-for="(item, index) in deals" >
                                 <div class="row">
                                     <div class="col-md-12">

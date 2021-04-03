@@ -102,10 +102,10 @@
                                 </div>
 
                             </div>
-                            <div class="located-num text-center">
+                       <!--      <div class="located-num text-center">
                                 <strong>0208 262 6476</strong>
                                 <p><i class="icon-placeholder"></i>  508 High road/ Ilford Essex/ IG1 1UE</p>
-                            </div>
+                            </div> -->
 
 
                         </div>
