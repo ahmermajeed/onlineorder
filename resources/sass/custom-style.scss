@@ -108,11 +108,11 @@ ul {
     }
 }
 .header-top-section {
-    background-color: #0e2d81;
+    background-color: #fff;
     padding: 12px 0px 12px 0px;
 
     a {
-        color: #fff !important;
+        color: #000 !important;
     }
 
     .add-info {
@@ -132,7 +132,7 @@ ul {
             vertical-align: middle;
         }
         i {
-            color: #fff;
+            color: #000;
             font-size: 18px;
             @include media-breakpoint-down(sm) {
                 font-size: 16px;
@@ -461,7 +461,7 @@ ul {
         .num-img {
             border: 1px solid #ccc;
             border-radius: 15px;
-            background: #112d81;
+            background: #000;
             a {
                 display: inline-block;
                 color: #fff;
@@ -2190,3 +2190,7 @@ ul {
     background-image: url(../../../images/theme-1/menu-bars.svg);
 }
 /***************Deal-section-end*******************/
+.main-logo span {
+    font-size: 30px;
+    color: #fff;
+}

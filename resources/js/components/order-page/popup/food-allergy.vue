@@ -4,7 +4,7 @@
              <h3>Food Allergy</h3>
 
              
-             <p>Please contact our kitchen staff on <a href="tel:01214403393">0121 440 3393</a> for more information.</p>
+             <p>Please be advised that food prepared here may contain milk, eggs, wheat, soybean, peanuts, fish, and shellfish. For more information please contact to our kitchen staff at <a href="tel:0208 6698 448">0208 6698 448</a></p>
 
         </b-modal>
     </div>

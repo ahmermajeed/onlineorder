@@ -13,7 +13,7 @@
                                     <ul>
                                          <li class="mail-space"><i class="icon-mail-2"></i>
                                             <span>
-                                                <a href="mailto:hello@bigsajoriginal.co.uk">hello@bigsajoriginal.co.uk</a>
+                                                <a href="mailto:hello@equinox.co.uk">hello@equinox.co.uk</a>
                                             </span>
                                         </li>
                                         <!-- <li><i class="icon-placeholder"></i>
@@ -43,7 +43,7 @@
                             <div class="col-6 col-md-3">
                                 <router-link :to="{ path: '/'}">
                                      <a class="navbar-brand js-scroll-trigger main-logo" href="javascript:;">
-                                        <img src="/images/bigsaj.png">
+                                        <span>EQUINOX</span>
                                     </a>
                                 </router-link>
                             </div>
@@ -104,7 +104,7 @@
                                         </div>
 
                                         <div class="num-img text-center">
-                                           <a href="tel: 0121 440 3393"> 0121 440 3393</a>
+                                           <a href="tel: 0208 6698 448"> 0208 6698 448</a>
                                         </div>
 
                                     </div>
@@ -116,26 +116,9 @@
                                         <div class="search-res" >
                                             
                                         <div class="info-txt mb-2 mb-md-4">
-                                            <h4>Save 25% on orders over £30</h4>
+                                            <h4>Save 10% on orders over £30</h4>
                                         </div>
-               <!--                          <h3>Enter Your Postal Code.</h3>
-                                        <form >
-                                            <div class="row">
-                                                <div class="col-12">
-                                                    <div class="form-group">
-                                                        <input type="text"  class="form-control" v-model="postal_code" placeholder="Enter your Postal code">
-                                                    </div>
-                                                    <div class="form-group text-center">
-                                                        <button type="button" class="btn btn-rounded-default"  v-on:click="checkPostCode">
-                                                            <span>Submit! </span>
-                                                        </button>
-                                                    </div>
-                                                    <div class="form-group text-center mb-0">
-                                                        <p class="error">{{error_message}} </p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </form> -->
+               
                                     </div>
 
                                     </div>

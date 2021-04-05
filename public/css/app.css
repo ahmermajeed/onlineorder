@@ -13869,12 +13869,12 @@ ul {
 }
 
 .header-top-section {
-  background-color: #0e2d81;
+  background-color: #fff;
   padding: 12px 0px 12px 0px;
 }
 
 .header-top-section a {
-  color: #fff !important;
+  color: #000 !important;
 }
 
 .header-top-section .add-info .mail-space {
@@ -13898,7 +13898,7 @@ ul {
 }
 
 .header-top-section .add-info i {
-  color: #fff;
+  color: #000;
   font-size: 18px;
 }
 
@@ -14237,7 +14237,7 @@ ul {
 .header-bottom .food .num-img {
   border: 1px solid #ccc;
   border-radius: 15px;
-  background: #112d81;
+  background: #000;
 }
 
 .header-bottom .food .num-img a {
@@ -16230,8 +16230,13 @@ ul {
 }
 
 .navbar-light .navbar-toggler-icon {
-  background-image: url(/images/menu-bars.svg?338210bbdd742d465c61556d0dcfad5e);
+  background-image: url(/images/menu-bars.svg?031bee8a8d6f9b895903035c863ea40b);
 }
 
 /***************Deal-section-end*******************/
+
+.main-logo span {
+  font-size: 30px;
+  color: #fff;
+}
 
