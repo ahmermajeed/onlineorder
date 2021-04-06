@@ -31,7 +31,6 @@
                        <div class="card-offer text-center">
                            <div class="card-content">
                               <h3>Cheeseburger Meal</h3>
-                             <div class="img-circular2"></div>
                            </div>
                              <div class="row">
                                   <div class="price-bar">
@@ -54,7 +53,6 @@
                            <div class="card-content">
 
                              <h3>Cod Bites Meal</h3>
-                             <div class="img-circular3"></div>
                            </div>
                                <div class="row">
                                     <div class="price-bar">
@@ -78,7 +76,6 @@
                            <div class="card-content">
 
                              <h3>Scampi Meal</h3>
-                             <div class="img-circular4"></div>
                            </div>
                               <div class="row">
                                    <div class="price-bar">

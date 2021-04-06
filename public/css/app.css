@@ -14355,7 +14355,7 @@ ul {
   border-radius: 8px;
   color: #fff;
   padding: 75px 40px 30px 40px;
-  height: 500px;
+  height: 280px;
 }
 
 @media (max-width: 1199.98px) {
@@ -16210,10 +16210,6 @@ ul {
     left: 70px;
     bottom: 11px;
   }
-}
-
-.deliver-area .card-offer {
-  height: 500px;
 }
 
 .price-bar .order-btn {
