@@ -7,7 +7,7 @@
 	</div>
 	<div class="ice_main_wrapper">
 		<div class="ice_banner_wrapper">
-			<img src="images/banner/banner_bg-black.png" alt="icecream-parlour-banner" class="img-responsive">
+			<img src="images/banner/main-banner.png" alt="icecream-parlour-banner" class="img-responsive">
 			<div class="banner_content">
 				<div class="container">
 					<div class="row">
@@ -15,7 +15,7 @@
 							<div class="header_wrapper">
 								<div class="ice_logo">
 			                        <router-link :to="{ path: '/'}">
-										<a href="javascript:;"><img src="images/banner/logo-white.png" alt="dessert-king-logo"></a>
+										<a href="javascript:;"><img src="images/banner/logo-main.png" alt="dessert-king-logo"></a>
 									</router-link>
 								</div>
 								<div class="ice_menu_wraper">
@@ -36,12 +36,8 @@
 											</router-link>
 											</li>
 											<li>
-				                                <router-link :to="{ path: '/blog'}">
-													<a href="javascript:;">Blog</a>
-												</router-link>
-											</li>
-											<li>
-												<router-link :to="{ path: '/shop'}">				<a href="javascript:;">Shop</a>				
+												<router-link :to="{ path: '/shop'}">				
+													<a href="javascript:;">Shop</a>				
 												</router-link>	
 											</li>
 											<li><a href="javascript:;" @click.prevent="openPostalCode">Order Online</a></li>
@@ -72,20 +68,11 @@
 							</div>
 							<div class="slider_content">
 								<h1>All YOu Need Is Love & Ice Cream</h1>
+								<a href="javascript:;" class="btn btn-rounded-danger mt-3" @click.prevent="openPostalCode">Order Now</a>
 							</div>
 						</div>
 					</div>
 				</div>
-			</div>
-			<div class="overlay">
-				<div class="chery c1"><img src="images/banner/1.png" alt="icecream-parlour-banner"></div>
-				<div class="chery c2"><img src="images/banner/1.png" alt="icecream-parlour-banner"></div>
-				<div class="chery c3"><img src="images/banner/1.png" alt="icecream-parlour-banner"></div>
-				<div class="chery c4"><img src="images/banner/1.png" alt="icecream-parlour-banner"></div>
-				<div class="chery c5"><img src="images/banner/1.png" alt="icecream-parlour-banner"></div>
-				<div class="chery c6"><img src="images/banner/1.png" alt="icecream-parlour-banner"></div>
-				<div class="chery c7"><img src="images/banner/1.png" alt="icecream-parlour-banner"></div>
-				<div class="chery c8"><img src="images/banner/1.png" alt="icecream-parlour-banner"></div>
 			</div>
 		</div>
 
@@ -302,215 +289,6 @@
 			</div>
 		</div>
 
-<!-- 		<div class="ice_video_wrapper">
-			<div class="container">
-				<div class="row">
-					<div class="col-lg-8 col-md-8 col-lg-offset-2 col-md-offset-2 col-sm-12 col-xs-12 col-sm-offset-0 col-sx-offset-0">
-						<div class="video_detail text-center">
-							<a href="https://www.youtube.com/embed/Zy33XDwGVxc" class="video"><i class="icon-play3"></i></a>
-							<h1 class="ice_heading_white">How We Make Best Ice Cream</h1>
-							<p class="white">It is a paradisematic country, in which roasted parts of sentences fly into your mouth.Pityful a entences fly into your mouth.Pityful a rethoric question.</p>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div> -->
-
-		<div class="ice_main_section2">
-			<div class="container">
-				<div class="row">
-					<div class="col-lg- col-md-6 col-sm-12 col-xs-12 col-lg-offset-3 col-md-offset-3 col-sm-offset-0 col-sx-offset-0">
-						<div class="heading_wrapper text-center wow slidedown">
-							<h1 class="ice_heading">Our Blogs</h1>
-							<p>It is a paradisematic country, in which roasted parts of sentences fly into your mouth.Pityful a rethoric question.</p>
-						</div>
-					</div>
-					<div class="blog_wrapper">
-						<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 pull-left">
-							<div class="blog_Section wow slideup">
-								<div class="blog_img ice_hover">
-									<img src="images/blog/1.jpg" alt="icecream-parlour-blog-1" class="img-responsive">
-									<div class="overlay">
-										<a href="blog_single.html"><i class="fa fa-link"></i></a>
-									</div>
-								</div>
-								<div class="blog_detail">
-									<h2 class="ice_sub_heading"><a href="blog_single.html">We Post Amazing Post Blogs </a></h2>
-									<ul>
-										<li><span>by</span><a href="#" class="link">admin</a></li>
-										<li><a href="#" class="link">24 Nov 2017</a></li>
-										<li><span>in</span><a href="#" class="link">Mechanic</a></li>
-									</ul>
-									<p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur.</p>
-									<ul class="share_wrapper">
-										<li><a href="#"><i class="flaticon-favorite-heart-button"></i>360</a></li>
-										<li><a href="#"><i class="icon-bubble"></i>26</a></li>
-										<li class="share"><a href="#"><i class="icon-share2"></i>share</a>
-											<ul class="social_icon">
-												<li><a href="#"><i class="icon-facebook"></i></a></li>
-												<li><a href="#"><i class="icon-twitter"></i></a></li>
-												<li><a href="#"><i class="icon-linkedin"></i></a></li>
-												<li><a href="#"><i class="icon-google-plus-logo"></i></a></li>
-											</ul>
-										</li>
-									</ul>
-								</div>
-							</div>
-							<div class="blog_Section wow slideup">
-								<div class="blog_img ice_hover">
-									<img src="images/blog/4.jpg" alt="icecream-parlour-blog-2" class="img-responsive">
-									<div class="overlay">
-										<a href="blog_single.html"><i class="fa fa-link"></i></a>
-									</div>
-								</div>
-								<div class="blog_detail">
-									<h2 class="ice_sub_heading"><a href="blog_single.html">	Jeni's Splendid Ice Creams </a></h2>
-									<ul>
-										<li><span>by</span><a href="#" class="link">admin</a></li>
-										<li><a href="#" class="link">24 Nov 2017</a></li>
-										<li><span>in</span><a href="#" class="link">Mechanic</a></li>
-									</ul>
-									<p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur.at Hampden-Sydney College in Virginia, looked up one of the more.</p>
-									<ul class="share_wrapper">
-										<li><a href="#"><i class="flaticon-favorite-heart-button"></i>360</a></li>
-										<li><a href="#"><i class="icon-bubble"></i>26</a></li>
-										<li class="share"><a href="#"><i class="icon-share2"></i>share</a>
-											<ul class="social_icon">
-												<li><a href="#"><i class="icon-facebook"></i></a></li>
-												<li><a href="#"><i class="icon-twitter"></i></a></li>
-												<li><a href="#"><i class="icon-linkedin"></i></a></li>
-												<li><a href="#"><i class="icon-google-plus-logo"></i></a></li>
-											</ul>
-										</li>
-									</ul>
-								</div>
-							</div>
-						</div>
-						<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 pull-left">
-							<div class="blog_Section wow slideup">
-								<div class="blog_img ice_hover">
-									<img src="images/blog/2.jpg" alt="icecream-parlour-blog-3" class="img-responsive">
-									<div class="overlay">
-										<a href="blog_single.html"><i class="fa fa-link"></i></a>
-									</div>
-								</div>
-								<div class="blog_detail">
-									<h2 class="ice_sub_heading"><a href="blog_single.html">	Ice Cream Journal </a></h2>
-									<ul>
-										<li><span>by</span><a href="#" class="link">admin</a></li>
-										<li><a href="#" class="link">24 Nov 2017</a></li>
-										<li><span>in</span><a href="#" class="link">Mechanic</a></li>
-									</ul>
-									<p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.</p>
-									<ul class="share_wrapper">
-										<li><a href="#"><i class="flaticon-favorite-heart-button"></i>360</a></li>
-										<li><a href="#"><i class="icon-bubble"></i>26</a></li>
-										<li class="share"><a href="#"><i class="icon-share2"></i>share</a>
-											<ul class="social_icon">
-												<li><a href="#"><i class="icon-facebook"></i></a></li>
-												<li><a href="#"><i class="icon-twitter"></i></a></li>
-												<li><a href="#"><i class="icon-linkedin"></i></a></li>
-												<li><a href="#"><i class="icon-google-plus-logo"></i></a></li>
-											</ul>
-										</li>
-									</ul>
-								</div>
-							</div>
-							<div class="blog_Section wow slideup">
-								<div class="blog_img ice_hover">
-									<img src="images/blog/5.jpg" alt="icecream-parlour-blog4" class="img-responsive">
-									<div class="overlay">
-										<a href="blog_single.html"><i class="fa fa-link"></i></a>
-									</div>
-								</div>
-								<div class="blog_detail">
-									<h2 class="ice_sub_heading"><a href="blog_single.html">	Reddit - Ice cream </a></h2>
-									<ul>
-										<li><span>by</span><a href="#" class="link">admin</a></li>
-										<li><a href="#" class="link">24 Nov 2017</a></li>
-										<li><span>in</span><a href="#" class="link">Mechanic</a></li>
-									</ul>
-									<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum culpa qui officia deserunt mollit anim id est laborum</p>
-									<ul class="share_wrapper">
-										<li><a href="#"><i class="flaticon-favorite-heart-button"></i>360</a></li>
-										<li><a href="#"><i class="icon-bubble"></i>26</a></li>
-										<li class="share"><a href="#"><i class="icon-share2"></i>share</a>
-											<ul class="social_icon">
-												<li><a href="#"><i class="icon-facebook"></i></a></li>
-												<li><a href="#"><i class="icon-twitter"></i></a></li>
-												<li><a href="#"><i class="icon-linkedin"></i></a></li>
-												<li><a href="#"><i class="icon-google-plus-logo"></i></a></li>
-											</ul>
-										</li>
-									</ul>
-								</div>
-							</div>
-						</div>
-						<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12  col-lg-offset-0 col-md-offset-0 col-sm-offset-3 col-sx-offset-0 pull-left">
-							<div class="blog_Section wow slideup">
-								<div class="blog_img ice_hover">
-									<img src="images/blog/3.jpg" alt="icecream-parlour-blog5" class="img-responsive">
-									<div class="overlay">
-										<a href="blog_single.html"><i class="fa fa-link"></i></a>
-									</div>
-								</div>
-								<div class="blog_detail">
-									<h2 class="ice_sub_heading"><a href="blog_single.html">Ice Cream Rolls | Youtube </a></h2>
-									<ul>
-										<li><span>by</span><a href="#" class="link">admin</a></li>
-										<li><a href="#" class="link">24 Nov 2017</a></li>
-										<li><span>in</span><a href="#" class="link">Mechanic</a></li>
-									</ul>
-									<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
-									<ul class="share_wrapper">
-										<li><a href="#"><i class="flaticon-favorite-heart-button"></i>360</a></li>
-										<li><a href="#"><i class="icon-bubble"></i>26</a></li>
-										<li class="share"><a href="#"><i class="icon-share2"></i>share</a>
-											<ul class="social_icon">
-												<li><a href="#"><i class="icon-facebook"></i></a></li>
-												<li><a href="#"><i class="icon-twitter"></i></a></li>
-												<li><a href="#"><i class="icon-linkedin"></i></a></li>
-												<li><a href="#"><i class="icon-google-plus-logo"></i></a></li>
-											</ul>
-										</li>
-									</ul>
-								</div>
-							</div>
-							<div class="blog_Section wow slideup">
-								<div class="blog_img ice_hover">
-									<img src="images/blog/6.jpg" alt="icecream-parlour-blog6" class="img-responsive">
-									<div class="overlay">
-										<a href="blog_single.html"><i class="fa fa-link"></i></a>
-									</div>
-								</div>
-								<div class="blog_detail">
-									<h2 class="ice_sub_heading"><a href="blog_single.html">	Smitten Ice Cream</a></h2>
-									<ul>
-										<li><span>by</span><a href="#" class="link">admin</a></li>
-										<li><a href="#" class="link">24 Nov 2017</a></li>
-										<li><span>in</span><a href="#" class="link">Mechanic</a></li>
-									</ul>
-									<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.</p>
-									<ul class="share_wrapper">
-										<li><a href="#"><i class="flaticon-favorite-heart-button"></i>360</a></li>
-										<li><a href="#"><i class="icon-bubble"></i>26</a></li>
-										<li class="share"><a href="#"><i class="icon-share2"></i>share</a>
-											<ul class="social_icon">
-												<li><a href="#"><i class="icon-facebook"></i></a></li>
-												<li><a href="#"><i class="icon-twitter"></i></a></li>
-												<li><a href="#"><i class="icon-linkedin"></i></a></li>
-												<li><a href="#"><i class="icon-google-plus-logo"></i></a></li>
-											</ul>
-										</li>
-									</ul>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-
 		<div class="ice_footer_wrapper">
 			<div class="container">
 				<div class="row">
@@ -521,10 +299,8 @@
 							</div>
 							<p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical.</p>
 							<ul class="social_icon">
-								<li><a href="#"><i class="icon-facebook"></i></a></li>
-								<li><a href="#"><i class="icon-twitter"></i></a></li>
-								<li><a href="#"><i class="icon-linkedin"></i></a></li>
-								<li><a href="#"><i class="icon-google-plus-logo"></i></a></li>
+								<li><a href="https://m.facebook.com/dessertkinguk/" target="_blank"><i class="icon-facebook"></i></a></li>
+								<li><a href="https://instagram.com/dessertkinguk?igshid=1izqw2ubf5qw1" target="_blank"><i class="icon-instagram-symbol"></i></a></li>
 							</ul>
 						</div>
 					</div>
@@ -562,11 +338,6 @@
 										<a href="javascript:;"><i class="icon-check-alt"></i>Shop</a>
 									</router-link>
 								</li>
-								<li>
-									<router-link :to="{ path: '/blog'}">
-										<a href="javascript:;"><i class="icon-check-alt"></i>Blog</a>
-									</router-link>
-								</li>
 							</ul>
 						</div>
 					</div>
@@ -585,10 +356,8 @@
 								<li>
 									<div class="address_icon"><i class="icon-clock"></i></div>
 									<div class="address_detail"><h3>Office Timings</h3>
-										<p>Mon, Tue, Wed, Thurs, Sun</p>
-										<p>4:00PM - 4:00AM</p>
-										<p>Fri - Sat</p>
-										<p>4:00PM - 5:00AM</p>
+										<p>Mon - Sun</p>
+										<p>1:00 PM - 5:30AM</p>
 									</div>
 								</li>
 							</ul>

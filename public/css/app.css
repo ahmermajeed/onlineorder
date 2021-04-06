@@ -3131,6 +3131,7 @@ input:focus, textarea:focus, select:focus, button:focus {
 .header_wrapper{
 	width: 100%;
 	float: left;
+	padding-left: 110px;
 	padding-top: 35px;
 	transition: all 0.5s ease-in-out;
 	-moz-transition: all 0.5s ease-in-out;
@@ -3156,7 +3157,7 @@ input:focus, textarea:focus, select:focus, button:focus {
     -moz-border-radius-bottom-right: 20px;
     border-top-right-radius: 20px;
     border-bottom-right-radius: 20px;
-        background-image: -webkit-radial-gradient(-23px 50%, circle closest-corner, rgba(0, 0, 0, 0) 0, rgba(0, 0, 0, 0) 55px, white 56px, white 57px);
+        background-image: -webkit-radial-gradient(-23px 50%, circle closest-corner, rgba(0, 0, 0, 0) 0, rgba(0, 0, 0, 0) 55px, black 56px, black 57px);
 }
 /**menu css start**/
 .ice_menu {
@@ -3174,7 +3175,7 @@ input:focus, textarea:focus, select:focus, button:focus {
 .ice_menu > ul > li {
     display: inline-block;
 	position:relative;
-	padding: 21px 25px;
+	padding: 21px 23px;
 }
 .ice_menu > ul > li:after {
     content: '';
@@ -3202,7 +3203,7 @@ input:focus, textarea:focus, select:focus, button:focus {
     display: inline-block;
     text-decoration: none;
     text-transform: uppercase;
-    color: #000;
+    color: #fff;
     font-size: 18px;
     font-family: 'Philosopher', sans-serif;
     line-height: 24px;
@@ -3334,7 +3335,7 @@ input:focus, textarea:focus, select:focus, button:focus {
     display: inline-block;
 }
 .search_wrapper > ul > li > a > i {
-    color: #b02b2b;
+    color: #fff;
 }
 .search_wrapper > ul > li > a > i:before{
 	margin-left: 0px;
@@ -6584,7 +6585,7 @@ ul.social_icon > li > a i:before {
 		display:block;
 		height:100% !important;
 	    overflow-y: scroll;
-	    background-color: #fff;
+	    background-color: #000;
 	    z-index: 99;
 		transition: all 0.5s ease-in-out;
 		-moz-transition: all 0.5s ease-in-out;
@@ -7007,6 +7008,7 @@ ul.social_icon > li > a i:before {
 	.banner_content .slider_content h1 {
 		font-size: 20px;
 		line-height: 30px;
+		margin-top: 70px;
 	}
 	.home_version2 .banner_content .slider_content {
 		padding-top: 100px;
