@@ -10,7 +10,8 @@
                                 <ul class="Opening">
                                     <li><a href="#"><span><i class="icon-smartphone-1"></i></span>0208 6698 448</a></li>
                                     <li><a href="#"><span><i class="icon-mail-2"></i></span>hello@equinox.co.uk</a></li>
-                                    <li><a href="#"><span><i class="icon-placeholder"></i></span>15 Ross Parade, Wallington, SM6 8QG
+                                    <li><a href="#"><span><i class="icon-placeholder"></i></span>
+                                        <span class="address">15 Ross Parade, Wallington, SM6 8QG</span>
                                     </a></li>
                                 </ul>
                             </div>
@@ -43,11 +44,9 @@
                                 <h3>Opening Hours</h3>
                                 <ul class="Opening-hours">
                                     <li>
-                                        <strong><a href="#">Open 7 days a week</a></strong>
+                                        <a href="#">4:00PM - 9:45 PM</a>
                                     </li>
-                                    <li>
-                                        <a href="#">Mon > Sat – 12pm till 11</a>
-                                    </li>
+                                    <li><strong>Sunday Closed</strong></li>
                         
                                 </ul>
                             </div>

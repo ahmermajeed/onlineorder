@@ -249,6 +249,7 @@ ul {
             background-color: #fff;
             border-radius: 4px;
             box-shadow: 0px 10px 15px 0px rgba(0, 0, 0, 0.2);
+            position: relative;
         }
 
         .Opening {
@@ -257,6 +258,7 @@ ul {
             li {
                 padding-bottom: 10px;
                 padding-top: 18px;
+                position: relative;
             }
 
             img {
@@ -570,7 +572,7 @@ ul {
         }
 
         @include media-breakpoint-down(sm) {
-            height: 450px !important;
+            height: 250px !important;
             position: relative;
             margin-bottom: 20px;
         }
@@ -2189,4 +2191,12 @@ ul {
 .main-logo span {
     font-size: 30px;
     color: #fff;
+}
+.main-ftr .footer-section-1 span.address {
+    position: absolute;
+    display: block;
+    left: 38px;
+    background-color: transparent;
+    top: 0;
+    box-shadow: none !important;
 }
