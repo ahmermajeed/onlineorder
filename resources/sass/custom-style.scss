@@ -455,8 +455,6 @@ ul {
         }
         .item-img {
             img {
-                height: 180px;
-                width: auto;
                 margin-bottom: 10px;
                 @include media-breakpoint-down(sm) {
                     height: 120px;
