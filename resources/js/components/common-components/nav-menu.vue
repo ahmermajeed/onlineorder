@@ -171,11 +171,6 @@
                                         class="col-lg-4 col-md-4 col-sm-12 mt-0 px-0"
                                     >
                                         <div class="food">
-                                            <div class="hala-img ">
-                                                <img
-                                                    src="/images/theme-1/halal.png"
-                                                />
-                                            </div>
                                             <div class="item-img text-center">
                                                 <img
                                                     src="/images/theme-1/banner-item.png"
