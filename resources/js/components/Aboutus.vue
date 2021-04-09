@@ -36,11 +36,6 @@
 														<a href="javascript:;">about</a>
 													</router-link>
 													</li>
-													<li>
-						                                <router-link :to="{ path: '/blog'}">
-															<a href="javascript:;">Blog</a>
-														</router-link>
-													</li>
 													<li>							    
 														<router-link :to="{ path: '/shop'}">
 															<a href="javascript:;">Shop</a>
@@ -326,11 +321,7 @@
 										<a href="javascript:;"><i class="icon-check-alt"></i>Shop</a>
 									</router-link>
 								</li>
-								<li>
-	                                <router-link :to="{ path: '/blog'}">
-										<a href="javascript:;"><i class="icon-check-alt"></i>Blog</a>
-									</router-link>
-								</li>
+							
 								
 							</ul>
 						</div>
@@ -350,10 +341,8 @@
 								<li>
 									<div class="address_icon"><i class="icon-clock"></i></div>
 									<div class="address_detail"><h3>Office Timings</h3> 
-										<p>Mon, Tue, Wed, Thurs, Sun</p>
-										<p>4:00PM - 4:00AM</p>
-										<p>Fri - Sat</p>
-										<p>4:00PM - 5:00AM</p>
+									<p>Mon - Sun</p>
+									<p>1:00 PM - 5:30AM</p>
 									</div>
 								</li>
 							</ul>

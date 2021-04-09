@@ -2951,16 +2951,6 @@ input:focus, textarea:focus, select:focus, button:focus {
 	float: left;
 	position: relative;
 }
-.ice_banner_wrapper:after{
-    position: absolute;
-    content: '';
-    background-image: url(/../../../images/banner/shape.png);
-    background-position: bottom;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    height: 180px;
-}
 .ice_banner_wrapper .banner_content{
 	position: absolute;
 	top: 0;
@@ -7086,6 +7076,9 @@ ul.social_icon > li > a i:before {
 }
 .blog_wrapper .col-lg-6.col-md-6.col-sm-12.col-xs-12 {
     float: left;
+}
+.home-banner-content {
+	height: 750px;
 }
 /* Additional css*/@charset "UTF-8";/*!
  * animate.css -http://daneden.me/animate
