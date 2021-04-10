@@ -27,10 +27,8 @@
                             <div class="col-5 col-md-6">
                                 <div class="header-icon float-right">
                                    <ul>
-                                       <li><a href="#"><i class="icon-facebook"></i></a></li>
-                                       <li><a href="#"><i class="icon-twitter"></i></a></li>
-                                       <li><a href="#"><i class="icon-instagram-symbol"></i></a></li>
-                                       <li><a href="#"><i class="icon-linkedin"></i></a></li>
+                                       <li><a href="https://m.facebook.com/dessertkinguk/" target="_blank"><i class="icon-facebook"></i></a></li>
+                                       <li><a href="https://instagram.com/dessertkinguk?igshid=1izqw2ubf5qw1" target="_blank"><i class="icon-instagram-symbol"></i></a></li>
                                    </ul>
                                 </div>
                             </div>
@@ -61,20 +59,7 @@
                                             <router-link :to="{ path: '/about-us'}">
                                                 <a class="nav-link js-scroll-trigger">About</a>
                                             </router-link>
-                                        </li>
-
-                                        <li class="nav-item active"> 
-                                            <router-link :to="{ path: '/blog'}">
-                                                <a class="nav-link js-scroll-trigger">Blog</a>
-                                            </router-link>
-                                        </li>                                        
-
-                                        <li class="nav-item active"> 
-                                            <router-link :to="{ path: '/shop'}">
-                                                <a class="nav-link js-scroll-trigger">Shop</a>
-                                            </router-link>
-                                        </li>
-                                       
+                                        </li>                                       
                                     </ul>
                                   </div>
                                 </nav>

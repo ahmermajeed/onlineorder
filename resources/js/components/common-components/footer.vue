@@ -21,9 +21,9 @@
                                 </div>
                                 <div class="footer-menu text-center">
                                     <ul>
-                                      <li><a href="#">Home</a></li>
-                                      <li><a href="#">About us</a></li>
-                                      <li><a href="#">Feedback</a></li>
+                                      <li><a href="/">Home</a></li>
+                                      <li><a href="/about-us">About us</a></li>
+                                      <li><a href="/feedback">Feedback</a></li>
                                     </ul>
                                 </div>
                                 <div class="follow-us text-center">
@@ -31,11 +31,8 @@
                                 </div>
                                 <div class="icons text-center">
                                     <ul>
-                                        <li class="linked"><a href="#"><i class="icon-linkedin"></i></a></li>
-                                        <li class="twitter"><a href="#"><i class="icon-twitter"></i></a></li>
-                                        <li class="pinterest"><a href="#"><i class="icon-pinterest-logo"></i></a></li>
-                                        <li class="google-plus"><a href="#"><i class="icon-google-plus-logo"></i></a></li>
-                                        <li class="wifi"><a href="#"><i class="icon-rss-feed-symbol"></i></a></li>
+                                        <li class="linked"><a href="https://m.facebook.com/dessertkinguk/" target="_blank"><i class="icon-facebook"></i></a></li>
+                                        <li class="twitter"><a href="https://instagram.com/dessertkinguk?igshid=1izqw2ubf5qw1" target="_blank"><i class="icon-instagram-symbol"></i></a></li>
                                     </ul>
 
                                 </div>
@@ -44,13 +41,11 @@
                                 <h3>Opening Hours</h3>
                                 <ul class="Opening-hours">
                                     <li>
-                                        <strong><a href="#">Open 7 days a week</a></strong>         </li>
+                                        <strong>Open 7 days a week</strong></li>
                                     <li>
-                                        <a href="#">Mon, Tue, Wed, Thurs, Sun</a>
+                                       <p>Mon - Sun</p> 
                                     </li>
-                                    <li>4:00PM - 4:00AM</li>
-                                    <li>Fri - Sat</li>
-                                    <li>4:00PM - 5:00AM</li>
+                                    <li><p>1:00 PM - 5:30AM</p></li>
                                 </ul>
                             </div>
                         </div>

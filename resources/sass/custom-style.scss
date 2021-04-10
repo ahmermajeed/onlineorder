@@ -251,12 +251,21 @@ ul {
             background-color: #fff;
             border-radius: 4px;
             box-shadow: 0px 10px 15px 0px rgba(0, 0, 0, 0.2);
+            &.full-address {
+                position: absolute;
+                box-shadow: none;
+                background-color: transparent;
+                top: 0;
+                left: 36px;
+                width: 100%;
+            }
         }
 
         .Opening {
             padding-left: 0px;
 
             li {
+                position: relative;
                 padding-bottom: 10px;
                 padding-top: 18px;
             }
