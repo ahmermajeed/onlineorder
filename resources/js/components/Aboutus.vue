@@ -71,35 +71,7 @@
             </div>
         </div>
 
-        <div class="container-fluid bottom-section mt-0">
-            <div class="row">
-                <div class="col-12">
-                    <div class="footer mt-0">
-                        <div class="row">
-                            <div class="col-md-5 footer-left">
-                                <p>&copy; 2020 <span>All rights reserved</span></p>
-                                <p><span>Site by</span> <a href="#">PapaGes</a></p>
-                            </div>
-                            <div class="col-md-2 footer-logo">
-                                <img src="public/images/mainlogo.png" alt="logo">
-                            </div>
-                            <div class="col-md-5 footer-right">
-                                <p><span>Email:</span> <a href="#">support@papages.com</a></p>
-                                <p><span>Phone:</span> +44 121 242 2020</p>
-                                <div class="footer-social">
-                                    <a href="#"><i class="fa fa-facebook-f"></i></a>
-                                    <a href="#"><i class="fa fa-twitter"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-
-
-
+        <footer-menu></footer-menu>
     </div>
 </template>
 

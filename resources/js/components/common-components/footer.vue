@@ -39,9 +39,9 @@
                                 <div class="footer-menu">
                                     <h3>Opening Hours</h3>
                                     <ul>
-                                      <li><a href="#">About us</a></li>
-                                      <li><a href="#">Our Menu</a></li>
-                                      <li><a href="#">Feedback</a></li>                                     
+                                      <li><a href="/">Home</a></li>
+                                      <li><a href="/about-us">About us</a></li>
+                                      <li><a href="/feedback">Feedback</a></li>                                     
                                     </ul> 
                                 </div>
                             </div>
