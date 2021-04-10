@@ -83,30 +83,15 @@
                                 </i>Click here if you or someone you are ordering for has a food allergy</p>
                             </div>
 
-                            <form class="form-cart">
-                                <div class="switch-field">
-                                    <input type="radio" v-model="orderType" @change="showPostalCode" id="radio-one" name="switch-one"
-                                           value="Delivery"/>
-                                    <label for="radio-one">
-                                        <img src="/images/delivery.png" alt="">
-                                        </i>Delivery
-                                        <span>30 - 45 mins</span></label>
-                                    <input type="radio" v-model="orderType" @change="showPostalCode" id="radio-two" name="switch-one"
-                                           value="Pickup"/>
-                                    <label for="radio-two">
-                                        <img src="/images/shopping-basket.png" alt="">
-                                        Collection
-                                        <span>20 mins</span></label>
-                                </div>
-
-                                    <div class="form-group" style="position: relative; top: 12px;" v-if="showPostal">
-                                        <label for=""><span>Enter your Postcode:</span></label>
-                                        <input type="text"  class="form-control" v-model="postalCode" placeholder="Enter your Postcode">
-                                        <p style="color:red;font-size: 11px;margin-top: 5px;">{{errorMessage}} </p>
-                                    </div>
-
-
-                            </form>
+                        <div class="cart-section">
+                            <div class="selected-branch">
+                                <h6><strong>Your Selected Branch:</strong></h6>
+                                <p>Taj Grill &amp; Catering</p>
+                            </div>
+                           <div class="note cart-note">
+                             <p><img src="images/theme-2/info.png" alt="">We are taking only collection orders.</p>
+                           </div> 
+                       </div>
 
 
                             <div class="lp-sidebar-body">
@@ -361,6 +346,10 @@
 
         },
         methods: {
+
+            pushToOrderPage() {
+              this.$router.push({ path: 'online-order' })
+            },
 
             showPostalCode() {
                 let self = this;

@@ -14307,7 +14307,7 @@ ul {
 
 .header-bottom .food {
   background-color: #fff;
-  padding: 10px 0px 0px 0px;
+  padding: 20px;
   box-shadow: 10px 0px 30px 10px rgba(0, 0, 0, 0.2) !important;
   position: relative;
   z-index: 1;
@@ -16022,7 +16022,7 @@ ul {
   margin: 0 auto;
   padding: 6px;
   margin-top: 20px;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
   background: #ebf3f9;
   cursor: pointer;
 }
@@ -16209,5 +16209,41 @@ ul {
 
 .food-allergy-popup strong {
   font-size: 15px;
+}
+
+.cart-section .form-cart.order-selection {
+  padding: 20px;
+}
+
+.cart-note.note p {
+  font-size: 14px !important;
+  padding: 0 20px;
+}
+
+.cart-section .form-cart .switch-field span {
+  font-size: 13px;
+}
+
+.cart-section .form-cart .switch-field label {
+  font-size: 14px;
+}
+
+.selected-branch {
+  padding: 0 50px;
+}
+
+.selected-branch h6 strong {
+  font-size: 16px;
+}
+
+.selected-branch p {
+  text-align: center;
+  padding: 0 50px;
+  font-size: 16px !important;
+  margin-bottom: 6px;
+}
+
+.cart-note img {
+  margin-right: 11px;
 }
 
