@@ -35,11 +35,6 @@
 												<a href="javascript:;">about</a>
 											</router-link>
 											</li>
-											<li>
-												<router-link :to="{ path: '/shop'}">				
-													<a href="javascript:;">Shop</a>				
-												</router-link>	
-											</li>
 											<li><a href="javascript:;" @click.prevent="openPostalCode">Order Online</a></li>
 										</ul>
 									</div>
@@ -264,11 +259,6 @@
 								<li>
 									<router-link :to="{ path: '/about-us'}">
 										<a href="javascript:;"><i class="icon-check-alt"></i>About Us</a>
-									</router-link>
-								</li>
-								<li>
-									<router-link :to="{ path: '/shop'}">
-										<a href="javascript:;"><i class="icon-check-alt"></i>Shop</a>
 									</router-link>
 								</li>
 							</ul>

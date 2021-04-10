@@ -115,7 +115,7 @@ input:focus, textarea:focus, select:focus, button:focus {
 }
 .ice_sub_heading,.ice_sub_heading_white,.widget-title{
 	font-size: 22px;
-	color: #b02b2b;
+	color: #000;
 	display: inline-block;
 	text-transform: capitalize;
 }
@@ -416,7 +416,7 @@ input:focus, textarea:focus, select:focus, button:focus {
 .ice_menu > ul > li {
     display: inline-block;
 	position:relative;
-	padding: 21px 23px;
+	padding: 21px 40px;
 }
 .ice_menu > ul > li:after {
     content: '';
