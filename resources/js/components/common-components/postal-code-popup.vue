@@ -123,7 +123,6 @@
             pushToOrderPage() {
                 let vm = this;
                 vm.$store.commit('setOrderType', vm.order_type);
-                alert(vm.order_type);
                 window.location.href = '/online-order';
 
                 // this.$router.push({ path: '/online-order' })
