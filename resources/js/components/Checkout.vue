@@ -35,7 +35,7 @@
                                   </select>
                                   <br>
                               </div>
-                 
+
 
 
                               <div class="col-12">
@@ -265,7 +265,7 @@
         created(){
             this.getTimeSlots();
         },
-        
+
         mounted() {
             this.getTimeSlots();
 
@@ -279,8 +279,7 @@
             twentyMinutesLater.setMinutes(twentyMinutesLater.getMinutes() + 50);
 
            this.form.deliveryTime = 'As soon as possible';
-
-           this.orderType = this.$store.getters.getOrderType;
+           this.orderType =  'Collection'; //this.$store.getters.getOrderType;
 
             this.scrollToMain();
             this.getOffers();
@@ -465,5 +464,5 @@
 
 
 <style>
-    
+
 </style>

@@ -1,38 +1,38 @@
 <template>
     <div>
-        <b-modal 
-            id="postal-code-popup"  
-            @hidden="onHidden" 
-            centered  
-            ok-variant="primary" 
-            title-tag="h6"   
+        <b-modal
+            id="postal-code-popup"
+            @hidden="onHidden"
+            centered
+            ok-variant="primary"
+            title-tag="h6"
             size="md"
-            :hide-footer=true  
-            ref="myModalRef" 
-            custom-modal 
-            no-close-on-backdrop 
+            :hide-footer=true
+            ref="myModalRef"
+            custom-modal
+            no-close-on-backdrop
             modal-class="postal-code-modal custom-modal">
 
             <template #modal-title>Select your Resturant</template>
-        
+
             <div class="form-cart order-selection">
                 <div class="switch-field" >
-                    <input type="radio" id="radio-btn-one" @change="pushToOrderPage" name="switch-btn-one" value="tajCatering"/>
+                    <input t v-model="order_type"  type="radio" id="radio-btn-one" @change="pushToOrderPage" name="switch-btn-one" value="Taj Grill Catering 508 High Road SevenKings IG1 1UE 0208 262 6476"/>
                     <label for="radio-btn-one">
                     <img src="/images/theme-2/food-serving.png" alt="">
                       Taj Grill &amp; Catering
                         <span>508 High Road SevenKings IG1 1UE 0208 262 6476</span></label>
-                    <input type="radio" id="radio-btn-two" name="switch-btn-one" @change="pushToOrderPage" value="tajGrill" />
+                    <input v-model="order_type" type="radio" id="radio-btn-two" name="switch-btn-one" @change="pushToOrderPage" value="Taj Grill 1 72 Ilford Lane Ilford Essex IG1 2LA 0208 478 8352" />
                     <label for="radio-btn-two">
                     <img src="/images/theme-2/food-serving.png" alt="">
                         Taj Grill 1
                       <span>72 Ilford Lane Ilford Essex IG1 2LA 0208 478 8352</span></label>
                 </div>
-            </div>   
+            </div>
             <div class="note">
               <p><img src="images/theme-2/info.png" alt="">We are taking only collection orders.</p>
-            </div>  
-          
+            </div>
+
         </b-modal>
     </div>
 </template>
@@ -46,7 +46,8 @@
                 postal_code:'',
                 error_message:'',
                 order_type : '',
-                showPostal: false
+                showPostal: false,
+
 
             };
         },
@@ -120,7 +121,12 @@
                    },
 
             pushToOrderPage() {
-              this.$router.push({ path: 'online-order' })
+                let vm = this;
+                vm.$store.commit('setOrderType', vm.order_type);
+                alert(vm.order_type);
+                window.location.href = '/online-order';
+
+                // this.$router.push({ path: '/online-order' })
             },
         },
         watch: {
