@@ -306,7 +306,7 @@
                 cat_count: false,
                 total_amount:0,
                 cart_height:false,
-                limitPosition: 380,
+                limitPosition: 300,
                 scrolled: false,
                 editIndex:'',
                 deals:[],
@@ -1958,8 +1958,8 @@
         .mobile-cart-button{
             position: fixed;
             bottom: 0;
-            background-color: #01a8fb ;
-            border-color: #01a8fb ;
+            background-color: #b7921a !important;
+            border-color: #b7921a;
             font-weight: 600;
             font-size: 16px;
             width: 100%;
@@ -2191,7 +2191,27 @@
 
         }
         .qty.mob span {
-            padding: 15px;
+            padding: 5px;
+        }
+        .offset-categories {
+          position: fixed;
+          top: -100%;
+          z-index: 1000;
+          width: calc(100% - 0%);
+          margin-top: 0;
+          padding-top: 0 !important;
+          border-right: 1px solid rgba(0,0,0,0);
+        }
+        .inner-section .sidebar-area .filter-content {
+            display: none;
+        }
+        .mb-cart-box ul li {
+            display: flex;
+            font-size: 14px;
+            border-bottom: 1px dashed #414141;
+            padding: 10px 0;
+            width: 100%;
+            justify-content: space-between;
         }
     }
 

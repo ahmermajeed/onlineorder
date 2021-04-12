@@ -17,11 +17,8 @@
                                     </div>
                                     <div class="icons">
                                         <ul>
-                                            <li class="linked"><a href="#"><i class="icon-linkedin"></i></a></li>
-                                            <li class="twitter"><a href="#"><i class="icon-twitter"></i></a></li>
-                                            <li class="pinterest"><a href="#"><i class="icon-pinterest-logo"></i></a></li>
-                                            <li class="google-plus"><a href="#"><i class="icon-google-plus-logo"></i></a></li>
-                                            <li class="wifi"><a href="#"><i class="icon-rss-feed-symbol"></i></a></li>
+                                            <li class="linked"><a href="https://www.facebook.com/TAJGRILL72/" target="_blank"><i class="icon-facebook"></i></a></li>
+                                            <li class="twitter"><a href="https://instagram.com/taj_grill?igshid=1efcbpwsoxx7t" target="_blank"><i class="icon-instagram-symbol"></i></a></li>
                                         </ul>
                                         
                                     </div>

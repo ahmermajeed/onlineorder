@@ -27,10 +27,8 @@
                             <div class="col-5 col-md-6">
                                 <div class="header-icon float-right">
                                    <ul>
-                                       <li><a href="#"><i class="icon-facebook"></i></a></li>
-                                       <li><a href="#"><i class="icon-twitter"></i></a></li>
-                                       <li><a href="#"><i class="icon-instagram-symbol"></i></a></li>
-                                       <li><a href="#"><i class="icon-linkedin"></i></a></li>
+                                       <li><a href="https://www.facebook.com/TAJGRILL72/"><i class="icon-facebook" target="_blank"></i></a></li>
+                                       <li><a href="https://instagram.com/taj_grill?igshid=1efcbpwsoxx7t" target="_blank"><i class="icon-instagram-symbol"></i></a></li>
                                    </ul> 
                                 </div>
                             </div>     

@@ -5,7 +5,7 @@
              <h3>Food Allergy</h3>
 
              
-             <p>Please contact our kitchen staff on <strong>TAJ GRILL & CATERING: </strong><a href="tel:0208 262 6476">0208 262 6476</a> <strong>TAJ GRILL 1: </strong>
+             <p>Please contact our kitchen staff on <strong>TAJ GRILL & CATERING: </strong><a href="tel:0208 262 6476">0208 262 6476 </a> <strong>TAJ GRILL 1: </strong>
              <a href="tel:0208 478 8352">0208 478 8352</a>for more information.</p>
 
         </b-modal>
