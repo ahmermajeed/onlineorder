@@ -10,7 +10,7 @@
                                 <div class="lp-sidebar-title cate-heading">
                                     <h3>Categories</h3>
                                 </div>
-                                
+
                                 <div class="list-group list-group-flush cate-list">
                                     <a href="#"   @click.prevent="getProductAgainstCategories(false)" class="list-group-item">All<span class="float-right badge badge-light round"></span> </a>
 
@@ -86,11 +86,11 @@
                         <div class="cart-section">
                             <div class="selected-branch">
                                 <h6><strong>Your Selected Branch:</strong></h6>
-                                <p>Taj Grill &amp; Catering</p>
+                                <p>{{shopname}}</p>
                             </div>
                            <div class="note cart-note">
                              <p><img src="images/theme-2/info.png" alt="">We are taking only collection orders.</p>
-                           </div> 
+                           </div>
                        </div>
 
 
@@ -110,7 +110,7 @@
                                                 </div>
                                                 <td  v-if="!cart.extras" class="p-0">£ {{priceFormat(cart.price * cart.quantity) }}</td>
                                             <td class="order-priecs"  v-if="cart.extras">£{{priceFormat(cart.single_product_total_amount)}} </td>
-                                               
+
                                             </td>
                                             <td class="order-quty">
 
@@ -118,24 +118,24 @@
                                                     <a class="icon-up"  href="#" @click.prevent="quantityAddInCart(product_index)"> <i class="icon-plus"  ></i></a>
                                                     <span class="text-center">{{ cart.quantity}}  <!-- <i>X</i> --></span>
                                                     <a  class="icon-down"  href="#"  @click.prevent="quantityMinusInCart(product_index)"> <i class="icon-subtract"></i></a>
-                                                </div> 
-                                                
+                                                </div>
+
                                             </td>
                                              <span class="mealactions">
                                                     <a href="#"  @click.prevent="updateProduct(cart.product_id,cart,product_index)"> <i v-b-tooltip.hover title="Edit Meal"  class="icon-edit-1"></i></a>
                                                     <a href="#" class="close-icon" @click.prevent="removeFromCart(product_index)"> <i v-b-tooltip.hover title="Remove Meal" class="icon-delete" ></i></a>
                                                 </span>
-                                            
 
-                                            
+
+
                                         </tr>
                                     </table>
                                 </div>
                                 <div class="cart-btn mt-3 mb-3 text-center">
                                      <button class="anima-btn custom-btn move-eff btn btn-warning" @click="placeOrder()"><span>Checkout</span> <!-- <i class="fas fa-long-arrow-alt-right"></i> --></button>
-                                </div> 
+                                </div>
                             </div>
-                            
+
                         </div>
                         <div class="mobile-cart-button" v-bind:class="{ cartheight: cart_height }" v-if="getAllCartArray.length > 1">
                 <div class="inner">
@@ -145,7 +145,7 @@
                     <span class="products-value">£{{priceFormat(total_amount)}}</span>
                     <span class="text" @click="opencartlist()">Checkout</span>
 
-                    
+
                 </div>
                 <ul v-for="(cart, product_index) in getAllCartArray"  v-if="product_index  > 0">
                     <li>
@@ -209,34 +209,34 @@
                     </svg>{{getAllCartArray.length - 1}}
                      <span class="products-value">£{{priceFormat(total_amount)}}</span>
                 </span>
-                   
+
                     <span class="text chek-out-btn btn btn-warning" @click="opencartlist()">Checkout</span>
-                    
+
                    <!--   <button class=" chek-out-btn anima-btn custom-btn move-eff btn btn-rounded-danger " @click="opencartlist()"><span>Checkout</span><i class="fas fa-long-arrow-alt-right"></i></button>  -->
                 </div>
 <!--                 <div class="mb-cart-box">
                 <ul class="border-all" v-for="(cart, product_index) in getAllCartArray"  v-if="product_index  > 0">
                     <li>
-                       
-        
+
+
                          <h3> {{ cart.quantity}} {{cart.product_name}}</h3>
-                        
-                           
+
+
                             <ul class="" v-if="cart.extras" v-for="(extra, extra_index) in cart.extras">
                                 <li><h3 class="font-weight:800px;">{{extra.group_name}}:
                                 {{extra.choice}}</h3> </li>
                                 <span class="mealactions">
-     
+
                             <span class="price">£{{priceFormat(cart.single_product_total_amount)}}</span>
                               <a href="#"  @click.prevent="removeFromCart(product_index)"> <i                                 v-b-tooltip.hover title="Remove Meal" class="icon-delete"></i></a>
 
-                               
+
                             </span>
-                                
+
                             </ul>
-                            
+
                         </span>
-                       
+
                     </li>
                 </ul>
                 </div> -->
@@ -318,10 +318,15 @@
                 orderType: '',
                 showPostal : false,
                 postalCode: '',
-                errorMessage: ''
+                errorMessage: '',
+                shopname: ''
             };
         },
         mounted() {
+
+            this.shopname = this.$store.getters.getOrderType;
+
+
             this.getCategories();
             this.getProductAgainstCategories(false);
             this.getDeals(false)
@@ -339,7 +344,7 @@
             if(this.orderType == "Delivery") {
                 this.showPostal = true
             }
-            
+
             this.scrollToMain();
             window.addEventListener("scroll", this.handleScroll);
 
@@ -494,52 +499,14 @@
             },
 
 
+            placeOrder() {
+                let vm = this;
+                vm.$store.commit('setDeliveryCharges', '0');
+                vm.$store.commit('setPostalCode', 'b8');
+                vm.$router.push({name: 'check-out'})
 
 
-         placeOrder(){
-            let vm = this;
-
-            if (this.orderType == '') {
-                vm.errorMessage = 'Please Select Order Type';
-                setTimeout(function(){ vm.errorMessage = ""; }, 2000);
-            } else if(this.orderType == 'Delivery' && this.postalCode == "") {
-                vm.errorMessage = 'Please Enter Your Postcode';
-                setTimeout(function(){ vm.errorMessage = ""; }, 2000);
-
-            } else {
-
-                if(this.orderType === 'Pickup'){
-                    vm.$router.push({name: 'check-out'});
-                }else {
-                    axios({
-                        method: 'post',
-                        url: '/api/check-postal',
-                        data: {
-                            order_type: this.orderType,
-                            postal_code:this.postalCode
-                        },
-                    }).then(function (response) {
-
-                        if(response.data.error === undefined){
-                            vm.errorMessage = response.data.data.amount;
-                            vm.$store.commit('setDeliveryCharges', response.data.data.amount);
-                            vm.$store.commit('setOrderType', vm.orderType);
-                            vm.$store.commit('setPostalCode', vm.postalCode);
-                            vm.$router.push({name: 'check-out'})
-
-                        }else {
-                            vm.errorMessage = 'We are not providing food in your area';
-                        }
-                    })
-                        .catch(function (response) {
-                            //handle error
-                            console.log(response);
-                        });
-
-                }
-
-            }
-       },
+            },
 
             removeFromCart(index){
                 console.log('tets');
@@ -975,7 +942,7 @@
         background:#fff;
     }
 
-    
+
     #cart-stiky > img {
         max-width:100%;
     }
@@ -990,7 +957,7 @@
         background: #ccc;
     }
 
-    
+
 
     .cart .order .table-holder {
         overflow-y: scroll;
@@ -1825,7 +1792,7 @@
         float:right;
     }
 
-    
+
     @-webkit-keyframes spinner {
         0% {
             -webkit-transform: rotate(0deg);
