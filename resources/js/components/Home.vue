@@ -82,7 +82,7 @@
 						</div>
 					</div>
 					<div class="ice_special">
-						<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 pull-left">
+						<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 pull-left">
 							<div class="special_section text-center wow slideright">
 								<div class="special_img">
 									<img src="images/special/1.jpg" alt="icecream-parlour-special" class="img-responsive">
@@ -96,7 +96,7 @@
 								<a href="javascript:;" @click.prevent="openPostalCode" class="ice_btn">add to cart</a>
 							</div>
 						</div>
-						<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 pull-left">
+						<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 pull-left">
 							<div class="special_section text-center">
 								<div class="special_img">
 									<img src="images/special/2.jpg" alt="icecream-parlour-special2" class="img-responsive">
@@ -110,10 +110,24 @@
 								<a href="javascript:;" @click.prevent="openPostalCode" class="ice_btn">add to cart</a>
 							</div>
 						</div>
-						<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 col-lg-offset-0 col-md-offset-0 col-sm-offset-3 col-sx-offset-0 pull-left">
+						<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 pull-left">
+							<div class="special_section text-center">
+								<div class="special_img">
+									<img src="images/special/3.jpg" alt="icecream-parlour-special2" class="img-responsive">
+								</div>
+								<h2 class="ice_sub_heading"><a href="javascript:;"><i class="icon-check-alt"></i> Grape-Nuts</a></h2>
+								<p>It is a paradisematic country, in which roasted parts of sentences fly into your mouth.Pityful a rethoric question.</p>
+								<div class="wishlist_wrapper">
+									<span class="pull-left">$70.00</span>
+									<a href="#" class="pull-right"><i class="icon-heart-outlined"></i> add to wishlist</a>
+								</div>
+								<a href="javascript:;" @click.prevent="openPostalCode" class="ice_btn">add to cart</a>
+							</div>
+						</div>
+						<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 col-lg-offset-0 col-md-offset-0 col-sm-offset-3 col-sx-offset-0 pull-left">
 							<div class="special_section text-center wow slideleft">
 								<div class="special_img">
-									<img src="images/special/3.jpg" alt="icecream-parlour-special3" class="img-responsive">
+									<img src="images/special/4.jpg" alt="icecream-parlour-special3" class="img-responsive">
 								</div>
 								<h2 class="ice_sub_heading"><a href="javascript:;"><i class="icon-check-alt"></i>  Butter Brickle</a></h2>
 								<p>It is a paradisematic country, in which roasted parts of sentences fly into your mouth.Pityful a rethoric question.</p>
@@ -128,94 +142,7 @@
 				</div>
 			</div>
 		</div>
-		<div class="ice_main_section2">
-			<div class="container">
-				<div class="row">
-					<div class="col-lg- col-md-6 col-sm-12 col-xs-12 col-lg-offset-3 col-md-offset-3 col-sm-offset-0 col-sx-offset-0">
-						<div class="heading_wrapper text-center wow slidedown">
-							<h1 class="ice_heading">our services</h1>
-							<p>It is a paradisematic country, in which roasted parts of sentences fly into your mouth.Pityful a rethoric question.</p>
-						</div>
-					</div>
-					<div class="service_wrapper">
-						<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 pull-left">
-							<div class="service_section text-center wow zoomIn" style="background-image: url('images/service/4.png');">
-								<span class="flaticon-ice-cream"></span>
-								<h2 class="ice_sub_heading"><a href="#" class="white">Ice Cream Parlour</a></h2>
-								<p class="white">It is a paradisematic country, in which roasted parts.</p>
-							</div>
-						</div>
-						<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 pull-left">
-							<div class="service_section text-center wow zoomIn"  data-wow-delay="0.2s" style="background-image: url('images/service/4.png');">
-								<span class="flaticon-restaurant-cutlery-circular-symbol-of-a-spoon-and-a-fork-in-a-circle"></span>
-								<h2 class="ice_sub_heading"><a href="#" class="white">restaurant</a></h2>
-								<p class="white">It is a paradisematic country, in which roasted parts.</p>
-							</div>
-						</div> 
-						<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 pull-left">
-							<div class="service_section text-center wow zoomIn"  data-wow-delay="0.4s" style="background-image: url('images/service/4.png');">
-								<span class="flaticon-wine-glasses"></span>
-								<h2 class="ice_sub_heading"><a href="#" class="white">Bar Club Hall</a></h2>
-								<p class="white">It is a paradisematic country, in which roasted parts.</p>
-							</div>
-						</div>
-						<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 pull-left">
-							<div class="service_section text-center wow zoomIn"  data-wow-delay="0.6s" style="background-image: url('images/service/4.png');">
-								<span class="flaticon-stair-of-a-swimming-pool"></span>
-								<h2 class="ice_sub_heading"><a href="#" class="white">Ice Cream Parlour</a></h2>
-								<p class="white">It is a paradisematic country, in which roasted parts.</p>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-
-		<div class="ice_main_section1">
-			<div class="container">
-				<div class="row">
-					<div class="col-lg- col-md-6 col-sm-12 col-xs-12 col-lg-offset-3 col-md-offset-3 col-sm-offset-0 col-sx-offset-0">
-						<div class="heading_wrapper text-center wow slidedown">
-							<h1 class="ice_heading">Handmade Ice Creams</h1>
-							<p>It is a paradisematic country, in which roasted parts of sentences fly into your mouth.Pityful a rethoric question.</p>
-						</div>
-					</div>
-					<div class="ice_cream_wrapper">
-						<div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
-							<div class="handmade_section wow slideleft">
-								<h2 class="ice_sub_heading">Handmade Cones</h2>
-								<ul>
-									<li>
-										<div class="product_detail">
-											<a href="javascript:;" class="pull-left ice_sub_heading">Vannila Scotch</a>
-											<span class="pull-right ice_sub_heading">6.5$</span>
-										</div>
-										<p>There are many variations of passages of Lorem Ipsum available.</p>
-									</li>
-									<li>
-										<div class="product_detail">
-											<a href="javascript:;" class="pull-left ice_sub_heading">Strawberry Gems</a>
-											<span class="pull-right ice_sub_heading">7.5$</span>
-										</div>
-										<p>There are many variations of passages of Lorem Ipsum available.</p>
-									</li>
-									<li>
-										<div class="product_detail">
-											<a href="javascript:;" class="pull-left ice_sub_heading">Butter Scotch</a>
-											<span class="pull-right ice_sub_heading">9.5$</span>
-										</div>
-										<p>There are many variations of passages of Lorem Ipsum available.</p>
-									</li>
-								</ul>
-							</div>
-						</div>
-						<div class="handmade_img wow slideright">
-							<img src="images/handmade/1.png" alt="icecream-parlour-handmade1">
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
+	
 
 		<div class="ice_footer_wrapper">
 			<div class="container">

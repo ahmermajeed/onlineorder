@@ -969,14 +969,16 @@ a.search_close:after {
 }
 .special_section  h2.ice_sub_heading > a {
     color: #b02b2b;
+    font-size: 17px
 }
 .ice_special .special_section p {
-    padding: 0 19px 30px;
+    padding: 0 15px 15px 15px;
+    font-size: 15px;
 }
 .special_section .wishlist_wrapper {
     width: 100%;
     float: left;
-    padding: 0 20px 30px;
+    padding: 0px 45px 15px;
 }
 
 .special_section .wishlist_wrapper span {
