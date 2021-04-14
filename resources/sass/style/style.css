@@ -416,7 +416,7 @@ input:focus, textarea:focus, select:focus, button:focus {
 .ice_menu > ul > li {
     display: inline-block;
 	position:relative;
-	padding: 21px 40px;
+	padding: 21px 25px;
 }
 .ice_menu > ul > li:after {
     content: '';

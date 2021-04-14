@@ -36,6 +36,50 @@
 											</router-link>
 											</li>
 											<li><a href="javascript:;" @click.prevent="openPostalCode">Order Online</a></li>
+											<li>
+												<div class="cart-icon" v-click-outside="onClickOutside">
+												    <a href="#" v-on:click="openCart = !openCart">
+												        <i class="fa fa-shopping-cart"></i>
+												        <span class="cart-count">12</span>
+												    </a>
+
+												    <div class="show-cart" v-if="openCart" id="hide">
+												        <div class="card-body">
+												            <div class="row">
+												                <div class="scroll style-3">
+												                    <div class="col-md-12 item-row" style="border-bottom: 1px dashed rgb(204, 204, 204);">
+												                        <div class="row">
+												                            <div class="col-md-8">
+												                                <div class="item-list">
+												                                    <h5>Family Pack 1</h5>
+												                                    <p>8pcs Chicken, 4 Hot Wings, 3 Fries, Bottle of Drink</p>
+												                                </div>
+												                            </div>
+												                            <div class="col-md-4">
+												                                <div class="edit-options">
+												                                    <span class="remove-item mr-2"  v-b-tooltip.hover title="remove"><i class="fa fa-times"></i></span>
+												                                    <span class="edit-item" v-b-tooltip.hover title="edit"><i class="fas fa-pen"></i></span>
+												                                </div>
+												                            </div>
+												                        </div>
+												                    </div>
+												                </div>
+												         
+												            </div>
+												            <div class="view-total-menu">
+												                <div class="col-md-12">
+												                    <div class="total"><strong>Total: </strong>43.95</div>
+												                     <a href="javascript:;" class="view-cart-menu">
+												                        <strong>View Menu</strong>
+												                    </a>
+												                </div>
+												                
+												            </div>
+												        </div>
+												    </div>
+												</div>
+
+											</li>
 										</ul>
 									</div>
 									<div class="pull-right search_wrapper">
@@ -238,7 +282,14 @@
 	</div>
 </template>
 <script>
+import vClickOutside from 'v-click-outside'
+
     export default {
+
+    	directives: {
+    	   clickOutside: vClickOutside.directive
+    	 },
+
         data() {
             return {
                 postal_code: '',
@@ -246,10 +297,15 @@
                 showPopup: false,
                 showPostalCode: false,
                 menu: false,
-                allergy: false
+                allergy: false,
+                openCart: false
             }
         },
         methods: {
+
+        	onClickOutside (event) {
+        	    this.openCart = false
+        	},
 
             hideModal() {
                 this.showPopup = false;
