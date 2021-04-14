@@ -186,6 +186,42 @@
 				</div>
 			</div>
 		</div>
+
+
+		<div class="ice_main_section2">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg- col-md-6 col-sm-12 col-xs-12 col-lg-offset-3 col-md-offset-3 col-sm-offset-0 col-sx-offset-0">
+						<div class="heading_wrapper text-center wow slidedown">
+							<h1 class="ice_heading">our gallery</h1>
+							<p>It is a paradisematic country, in which roasted parts of sentences fly into your mouth.Pityful a rethoric question.</p>
+						</div>
+					</div>
+					<div class="service_wrapper">
+						<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 pull-left">
+							<img src="images/service/6.jpg" alt="">
+							<!-- <div class="service_section text-center wow zoomIn" style="background-image: url('images/service/6.jpg');">
+							</div> -->
+						</div>
+						<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 pull-left">
+							<img src="images/service/7.jpg" alt="">
+							<!-- <div class="service_section text-center wow zoomIn"  data-wow-delay="0.2s" style="background-image: url('images/service/7.jpg');">
+							</div> -->
+						</div> 
+						<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 pull-left">
+							<img src="images/service/8.jpg" alt="">
+						<!-- 	<div class="service_section text-center wow zoomIn"  data-wow-delay="0.4s" style="background-image: url('images/service/8.jpg');">
+							</div> -->
+						</div>
+						<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 pull-left">
+							<img src="images/service/9.jpg" alt="">
+							<!-- <div class="service_section text-center wow zoomIn"  data-wow-delay="0.6s" style="background-image: url('images/service/9.jpg');">
+							</div> -->
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
 	
 
 		<div class="ice_footer_wrapper">
