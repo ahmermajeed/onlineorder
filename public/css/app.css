@@ -20907,5 +20907,14 @@ span.cart-count.product-list-cart {
   }
 }
 
+.social_icon.social-media-footer li {
+  width: auto !important;
+  margin-right: 10px;
+}
+
+.service_wrapper.our-gallery {
+  margin-bottom: 20px;
+}
+
 /***************Deal-section-end*******************/
 

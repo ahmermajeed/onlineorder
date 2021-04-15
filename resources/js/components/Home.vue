@@ -193,30 +193,22 @@
 				<div class="row">
 					<div class="col-lg- col-md-6 col-sm-12 col-xs-12 col-lg-offset-3 col-md-offset-3 col-sm-offset-0 col-sx-offset-0">
 						<div class="heading_wrapper text-center wow slidedown">
-							<h1 class="ice_heading">our gallery</h1>
-							<p>It is a paradisematic country, in which roasted parts of sentences fly into your mouth.Pityful a rethoric question.</p>
+							<h1 class="ice_heading">What we offer</h1>
+							<p>Here at dessert king, we have a variety of desserts such as waffles, crepes,cookie doughs, sundaes, milkshakes and much more !</p>
 						</div>
 					</div>
-					<div class="service_wrapper">
+					<div class="service_wrapper our-gallery">
 						<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 pull-left">
 							<img src="images/service/6.jpg" alt="">
-							<!-- <div class="service_section text-center wow zoomIn" style="background-image: url('images/service/6.jpg');">
-							</div> -->
 						</div>
 						<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 pull-left">
 							<img src="images/service/7.jpg" alt="">
-							<!-- <div class="service_section text-center wow zoomIn"  data-wow-delay="0.2s" style="background-image: url('images/service/7.jpg');">
-							</div> -->
 						</div> 
 						<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 pull-left">
 							<img src="images/service/8.jpg" alt="">
-						<!-- 	<div class="service_section text-center wow zoomIn"  data-wow-delay="0.4s" style="background-image: url('images/service/8.jpg');">
-							</div> -->
 						</div>
 						<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 pull-left">
 							<img src="images/service/9.jpg" alt="">
-							<!-- <div class="service_section text-center wow zoomIn"  data-wow-delay="0.6s" style="background-image: url('images/service/9.jpg');">
-							</div> -->
 						</div>
 					</div>
 				</div>
@@ -241,16 +233,10 @@
 					</div>
 					<div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
 						<div class="widget widget_news">
-							<h2 class="ice_sub_heading widget-title">latest news</h2>
-							<ul>
-								<li>
-									<div class="news_img"><a href="#"><img src="images/footer/1.jpg" alt="icecream-parlour-footer-latest-post"></a></div>
-									<div class="news_detail"><a href="#">22 jul 2017</a> <p>Li nov lingua franca va simplic Europan. simplice Europan.</p></div>
-								</li>
-								<li>
-									<div class="news_img"><a href="#"><img src="images/footer/2.jpg" alt="icecream-parlour-footer-latest-post"></a></div>
-									<div class="news_detail"><a href="#">22 jul 2017</a> <p>Li nov lingua franca va simplic Europan. simplice Europan.</p></div>
-								</li>
+							<h2 class="ice_sub_heading widget-title">Social Media</h2>
+							<ul class="social_icon social-media-footer">
+								<li><a href="https://m.facebook.com/dessertkinguk/" target="_blank"><i class="icon-facebook"></i></a></li>
+								<li><a href="https://instagram.com/dessertkinguk?igshid=1izqw2ubf5qw1" target="_blank"><i class="icon-instagram-symbol"></i></a></li>
 							</ul>
 						</div>
 					</div>
@@ -294,9 +280,6 @@
 						</div>
 					</div>
 				</div>
-			</div>
-			<div class="overlay">
-				<img src="images/footer/ice.png" alt="icecream-parlour-footer-overlay">
 			</div>
 		</div>
 		<div class="ice_copyright_wrapper text-center">
