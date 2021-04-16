@@ -20916,5 +20916,15 @@ span.cart-count.product-list-cart {
   margin-bottom: 20px;
 }
 
+.form-cart strong {
+  font-size: 12px;
+}
+
+@media (max-width: 767.98px) {
+  .inner-section .sidebar-area .filter-content {
+    display: none;
+  }
+}
+
 /***************Deal-section-end*******************/
 

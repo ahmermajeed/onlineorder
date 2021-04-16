@@ -2435,4 +2435,14 @@ span.cart-count {
 .service_wrapper.our-gallery {
     margin-bottom: 20px;
 }
+.form-cart strong {
+    font-size: 12px;
+}
+.inner-section .sidebar-area .filter-content {
+    @include media-breakpoint-down(sm) {
+        display: none;
+    }
+}
+
+
 /***************Deal-section-end*******************/
