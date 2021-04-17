@@ -20722,6 +20722,7 @@ a.circle span.cnt {
   background: #000;
   border: 1px solid #000;
   border-radius: 8px;
+  z-index: 1;
 }
 
 @media (max-width: 767.98px) {
@@ -20924,6 +20925,40 @@ span.cart-count.product-list-cart {
   .inner-section .sidebar-area .filter-content {
     display: none;
   }
+}
+
+.order-page-menu.cart-icon .svg-inline--fa {
+  font-size: 32px;
+}
+
+.order-page-menu span.cart-count {
+  position: relative;
+  top: -9px;
+  left: -4px;
+  border: 1px solid #000;
+}
+
+@media (max-width: 767.98px) {
+  .order-page-menu span.cart-count {
+    display: inline-block !important;
+  }
+}
+
+.item-quantity strong {
+  font-size: 16px;
+}
+
+.order-page-menu.cart-icon .edit-options .svg-inline--fa {
+  font-size: 12px;
+}
+
+.item-list .item-quantity {
+  color: #fff;
+  font-weight: 800;
+}
+
+.item-list {
+  margin-bottom: 10px;
 }
 
 /***************Deal-section-end*******************/

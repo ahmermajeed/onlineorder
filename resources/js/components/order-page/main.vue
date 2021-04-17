@@ -337,6 +337,7 @@
                 showPostal : false,
                 errorMessage:'',
                 postalCode: '',
+                orderType:''
             };
         },
         mounted() {
