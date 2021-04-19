@@ -11,6 +11,8 @@ export default new Vuex.Store({
         delivery_charges:'',
         postal_code: localStorage.getItem('postal_code') ? localStorage.getItem('postal_code') : '',
         order_type: localStorage.getItem('order_type') ? localStorage.getItem('order_type') : '',
+        user_data: localStorage.getItem('user_data') ? localStorage.getItem('user_data') : '',
+        
 
     },
 
@@ -32,6 +34,13 @@ export default new Vuex.Store({
                 return state.order_type;
             }
         },
+        getUserData(state){
+            if (state.user_data == "" || state.user_data == null) {
+                return localStorage.getItem('user_data');
+            } else {
+                return state.user_data;
+            }
+        }
     },
 
     // Mutation for when you use it as state property
@@ -51,6 +60,10 @@ export default new Vuex.Store({
             console.log(state.order_type)
 
         },
+        setUserData(state,data){
+            localStorage.setItem('user_data',data);
+            state.order_type = localStorage.getItem('user_data');
+        }
 
     },
 });

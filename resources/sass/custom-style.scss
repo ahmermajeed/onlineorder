@@ -2375,6 +2375,7 @@ span.cart-count {
     color: #fff;
     padding: 0px 4px;
     vertical-align: top;
+    text-align: center;
     @include media-breakpoint-down(sm) {
         position: relative;
         right: 0;
@@ -2406,3 +2407,9 @@ span.cart-count {
         margin-top: 15px;
     }   
 }
+.item-quantity strong {
+    font-size: 12px;
+}
+.view-total-menu .view-cart-menu {
+    color: #000 !important;
+} 
