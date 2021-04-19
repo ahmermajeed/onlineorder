@@ -2289,6 +2289,7 @@ span.cart-count {
     color: #fff;
     padding: 0px 4px;
     vertical-align: top;
+    text-align: center;
 }
 .view-total-menu .total {
     display: inline-block;
@@ -2341,6 +2342,8 @@ span.cart-count {
     color: #4c5d36 !important;
     margin-left: 10px;
 }
-
+.item-quantity strong {
+    font-size: 12px;
+}
 
 /***************Deal-section-end*******************/
