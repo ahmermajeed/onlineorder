@@ -119,94 +119,46 @@
 				<div class="row">
 					<div class="col-lg- col-md-6 col-sm-12 col-xs-12 col-lg-offset-3 col-md-offset-3 col-sm-offset-0 col-sx-offset-0">
 						<div class="heading_wrapper text-center wow slidedown">
-							<h1 class="ice_heading_white">Todays Special</h1>
-							<p class="white">It is a paradisematic country, in which roasted parts of sentences fly into your mouth.Pityful a rethoric question.</p>
+							<h1 class="ice_heading_white">Best Sellers</h1>
+							<p class="white">Here at dessert king, we have a variety of desserts such as waffles, crepes,cookie doughs, sundaes, milkshakes and much more !</p>
 						</div>
 					</div>
 					<div class="ice_special">
 						<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 pull-left">
 							<div class="special_section text-center wow slideright">
-								<div class="special_img">
-									<img src="images/special/1.jpg" alt="icecream-parlour-special" class="img-responsive">
+								<div class="special_img best-seller">
+									<img src="images/special/7.jpg" alt="icecream-parlour-special" class="img-responsive">
 								</div>
-								<h2 class="ice_sub_heading"><a href="javascript:;"><i class="icon-check-alt"></i>  Cherry Ice Cream</a></h2>
-								<p>It is a paradisematic country, in which roasted parts of sentences fly into your mouth.Pityful a rethoric question.</p>
-								<div class="wishlist_wrapper">
-									<span class="pull-left">$70.00</span>
-									<a href="#" class="pull-right"><i class="icon-heart-outlined"></i> add to wishlist</a>
-								</div>
-								<a href="javascript:;" @click.prevent="openPostalCode" class="ice_btn">add to cart</a>
+								<h2 class="ice_sub_heading"><a href="javascript:;"><i class="icon-check-alt"></i> VIP Shakes </a></h2>
+								<p>A large selection of delicious shakes inspired by different chocolate bars and/or candy.</p>
 							</div>
 						</div>
 						<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 pull-left">
 							<div class="special_section text-center">
-								<div class="special_img">
-									<img src="images/special/2.jpg" alt="icecream-parlour-special2" class="img-responsive">
+								<div class="special_img best-seller">
+									<img src="images/special/9.jpg" alt="icecream-parlour-special2" class="img-responsive">
 								</div>
-								<h2 class="ice_sub_heading"><a href="javascript:;"><i class="icon-check-alt"></i> Grape-Nuts</a></h2>
-								<p>It is a paradisematic country, in which roasted parts of sentences fly into your mouth.Pityful a rethoric question.</p>
-								<div class="wishlist_wrapper">
-									<span class="pull-left">$70.00</span>
-									<a href="#" class="pull-right"><i class="icon-heart-outlined"></i> add to wishlist</a>
-								</div>
-								<a href="javascript:;" @click.prevent="openPostalCode" class="ice_btn">add to cart</a>
+								<h2 class="ice_sub_heading"><a href="javascript:;"><i class="icon-check-alt"></i> Waffles</a></h2>
+								<p>A tasty variety of waffles accompanied with a scoop of vanilla ice cream.</p>
 							</div>
 						</div>
 						<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 pull-left">
 							<div class="special_section text-center">
-								<div class="special_img">
+								<div class="special_img best-seller">
 									<img src="images/special/3.jpg" alt="icecream-parlour-special2" class="img-responsive">
 								</div>
-								<h2 class="ice_sub_heading"><a href="javascript:;"><i class="icon-check-alt"></i> Grape-Nuts</a></h2>
-								<p>It is a paradisematic country, in which roasted parts of sentences fly into your mouth.Pityful a rethoric question.</p>
-								<div class="wishlist_wrapper">
-									<span class="pull-left">$70.00</span>
-									<a href="#" class="pull-right"><i class="icon-heart-outlined"></i> add to wishlist</a>
-								</div>
-								<a href="javascript:;" @click.prevent="openPostalCode" class="ice_btn">add to cart</a>
+								<h2 class="ice_sub_heading"><a href="javascript:;"><i class="icon-check-alt"></i> Cookie Dough</a></h2>
+								<p>Delicious cookie dough available in 10 different flavours. A scoop of vanilla ice cream is also included.</p>
 							</div>
 						</div>
 						<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 col-lg-offset-0 col-md-offset-0 col-sm-offset-3 col-sx-offset-0 pull-left">
 							<div class="special_section text-center wow slideleft">
-								<div class="special_img">
-									<img src="images/special/4.jpg" alt="icecream-parlour-special3" class="img-responsive">
+								<div class="special_img best-seller">
+									<img src="images/special/8.jpg" alt="icecream-parlour-special3" class="img-responsive">
 								</div>
-								<h2 class="ice_sub_heading"><a href="javascript:;"><i class="icon-check-alt"></i>  Butter Brickle</a></h2>
-								<p>It is a paradisematic country, in which roasted parts of sentences fly into your mouth.Pityful a rethoric question.</p>
-								<div class="wishlist_wrapper">
-									<span class="pull-left">$70.00</span>
-									<a href="#" class="pull-right"><i class="icon-heart-outlined"></i> add to wishlist</a>
-								</div>
-								<a href="javascript:;" @click.prevent="openPostalCode" class="ice_btn">add to cart</a>
+								<h2 class="ice_sub_heading"><a href="javascript:;"><i class="icon-check-alt"></i> Pancakes</a></h2>
+								<p>Fluffy and delicious stacks of pancakes available in a variety of flavors.</p>
 							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-
-
-		<div class="ice_main_section2">
-			<div class="container">
-				<div class="row">
-					<div class="col-lg- col-md-6 col-sm-12 col-xs-12 col-lg-offset-3 col-md-offset-3 col-sm-offset-0 col-sx-offset-0">
-						<div class="heading_wrapper text-center wow slidedown">
-							<h1 class="ice_heading">What we offer</h1>
-							<p>Here at dessert king, we have a variety of desserts such as waffles, crepes,cookie doughs, sundaes, milkshakes and much more !</p>
-						</div>
-					</div>
-					<div class="service_wrapper our-gallery">
-						<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 pull-left">
-							<img src="images/service/6.jpg" alt="">
-						</div>
-						<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 pull-left">
-							<img src="images/service/7.jpg" alt="">
-						</div> 
-						<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 pull-left">
-							<img src="images/service/8.jpg" alt="">
-						</div>
-						<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 pull-left">
-							<img src="images/service/9.jpg" alt="">
 						</div>
 					</div>
 				</div>
@@ -222,7 +174,7 @@
 							<div class="ice_logo">
 								<a href="index.html"><img src="images/banner/logo.png" alt="icecream-parlour-footer-logo"></a>
 							</div>
-							<p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical.</p>
+							<p>Here at dessert king, we have a variety of desserts such as waffles, crepes,cookie doughs, sundaes, milkshakes and much more !</p>
 							<ul class="social_icon">
 								<li><a href="https://m.facebook.com/dessertkinguk/" target="_blank"><i class="icon-facebook"></i></a></li>
 								<li><a href="https://instagram.com/dessertkinguk?igshid=1izqw2ubf5qw1" target="_blank"><i class="icon-instagram-symbol"></i></a></li>
