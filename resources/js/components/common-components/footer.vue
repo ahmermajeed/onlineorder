@@ -10,7 +10,9 @@
                                 <ul class="Opening">
                                     <li><a href="#"><span><i class="icon-smartphone-1"></i></span>0289 031 9242</a></li>
                                     <li><a href="#"><span><i class="icon-mail-2"></i></span>info@pizzapassions.com</a></li>
-                                    <li><a href="#"><span><i class="icon-placeholder"></i></span>3-5 Bradbury Place, Belfast, BT71RQ
+                                    <li><a href="#" class="address-link">
+                                        <span><i class="icon-placeholder"></i></span>
+                                        <span class="address">3-5 Bradbury Place, Belfast, BT71RQ</span>
                                     </a></li>
                                 </ul>
                             </div>

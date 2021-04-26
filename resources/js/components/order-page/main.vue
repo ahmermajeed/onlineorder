@@ -113,7 +113,7 @@
                                     <h5 v-if="getAllCartArray.length == 1" class="mt-2">No item in your cart</h5>
                                 </div>
                                 <div class="table-holder">
-                                    <table class=tbl_cart_list>
+                                    <table class="tbl_cart_list">
                                         <tr class="section-border" v-for="(cart, product_index) in getAllCartArray"  v-if="product_index  > 0">
                                             <td class="order-name">
                                                 <div class="cart-order">{{cart.product_name}}</div>
@@ -135,10 +135,14 @@
                                                 </div> 
                                                 
                                             </td>
-                                             <span class="mealactions">
-                                                    <a href="#"  @click.prevent="updateProduct(cart.product_id,cart,product_index)"> <i v-b-tooltip.hover title="Edit Meal"  class="icon-edit-1"></i></a>
-                                                    <a href="#" class="close-icon" @click.prevent="removeFromCart(product_index)"> <i v-b-tooltip.hover title="Remove Meal" class="icon-delete" ></i></a>
-                                                </span>
+                                            <td>
+                                                <span class="mealactions">
+                                                       <a href="#"  @click.prevent="updateProduct(cart.product_id,cart,product_index)"> <i v-b-tooltip.hover title="Edit Meal"  class="icon-edit-1"></i></a>
+                                                       <a href="#" class="close-icon" @click.prevent="removeFromCart(product_index)"> <i v-b-tooltip.hover title="Remove Meal" class="icon-delete" ></i></a>
+                                                   </span>
+                                                
+                                            </td>
+                                     
                                             
 
                                             
@@ -1080,7 +1084,6 @@
     }
 
     .cart .order table tr td:nth-child(3) {
-        min-width: 140px;
     }
     .cart .order table tr td:nth-child(4) {
         overflow:hidden;
