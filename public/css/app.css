@@ -15533,7 +15533,7 @@ ul {
 }
 
 .order .order-name .cart-order {
-  width: 80px;
+  width: 200px;
   float: left;
   font-size: 12px;
   font-weight: bold;
@@ -15547,8 +15547,9 @@ ul {
 }
 
 .order .order-name .strong-open {
-  width: 80px;
+  width: 100%;
   float: left;
+  text-transform: capitalize;
 }
 
 .order .priec-order {
@@ -15558,7 +15559,7 @@ ul {
   margin: 0px;
   border: 1px solid #d7d7d7;
   border-radius: 4px;
-  width: 95%;
+  width: 100%;
 }
 
 .order .priec-order i {
@@ -15584,9 +15585,10 @@ ul {
 
 .order .priec-order span {
   background-color: #fff;
-  width: 32px;
+  width: 22px;
   max-width: 40px;
-  display: inline-block;
+  display: inline-block !important;
+  line-height: 2 !important;
 }
 
 @media (min-width: 768px) and (max-width: 991.98px) {
@@ -15601,7 +15603,7 @@ ul {
 
 .order .mealactions {
   width: 50px;
-  padding: 26px 0px !important;
+  padding: 10px 0px !important;
   margin-left: 10px;
   margin-top: 14px;
 }
