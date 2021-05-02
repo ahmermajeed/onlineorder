@@ -13806,15 +13806,15 @@ a {
 
 .btn.btn-rounded-default {
   color: #fff !important;
-  background: #632c91;
-  background-image: linear-gradient(to right, #632c91 0%, #9c2122 100%);
+  background: #c2272d;
+  background-image: linear-gradient(to right, #c2272d 0%, #9c2122 100%);
   background-repeat: repeat-x;
 }
 
 .btn.btn-rounded-danger {
   color: #fff !important;
-  background: #632c91;
-  background-image: linear-gradient(to right, #632c91 0%, #9c2122 100%);
+  background: #c2272d;
+  background-image: linear-gradient(to right, #c2272d 0%, #9c2122 100%);
   background-repeat: repeat-x;
 }
 
@@ -13873,7 +13873,7 @@ ul {
 }
 
 .header-top-section {
-  background-color: #f66f2b;
+  background-color: #3443a0;
   padding: 12px 0px 12px 0px;
 }
 
@@ -13941,8 +13941,12 @@ ul {
   color: #000 !important;
 }
 
+.header-bottom-section .main-menu .order-page-menu a {
+  color: #3443a0 !important;
+}
+
 .header-bottom-section .main-menu ul {
-  /*margin-top: 11px;*/
+  margin-top: 30px;
 }
 
 .header-bottom-section .main-menu .order-now {
@@ -14190,8 +14194,8 @@ ul {
 }
 
 .header-bottom {
-  background-image: url(/images/mains-banner.jpg?1503bcd7054add883e166decd2bc7ca8);
-  background-repeat: no-repeat;
+  background-image: url(/images/banner-dixy.png?06a638fe02a47a8d11e229737cbaa4be);
+  background-repeat: inherit;
   background-size: cover;
 }
 
@@ -16185,8 +16189,8 @@ a.circle span.cnt {
   width: 250px;
   left: -180px;
   top: 15px;
-  background: #f66f2b;
-  border: 1px solid #f66f2b;
+  background: #3443a0;
+  border: 1px solid #3443a0;
   border-radius: 8px;
   z-index: 1;
 }
@@ -16440,6 +16444,14 @@ span.address {
   top: -21px;
   background-color: transparent !important;
   box-shadow: none !important;
+}
+
+.navbar-brand {
+  width: 150px;
+}
+
+.footer-img {
+  width: 150px;
 }
 
 /***************Deal-section-end*******************/

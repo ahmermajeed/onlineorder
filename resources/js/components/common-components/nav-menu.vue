@@ -13,14 +13,9 @@
                                     <ul>
                                          <li class="mail-space"><i class="icon-mail-2"></i>
                                             <span>
-                                                <a href="mailto:info@pizzapassions.com">info@pizzapassions.com</a>
+                                                <a href="mailto:info@dixychicken.com">info@dixychicken.com</a>
                                             </span>
                                         </li>
-                                        <!-- <li><i class="icon-placeholder"></i>
-                                            <span>
-                                                 <a href="javascript:;">10 Peckham Park Road, London SE15 6TW </a>
-                                            </span>
-                                        </li> -->
                                     </ul>
                                 </div>
                             </div>
@@ -43,7 +38,7 @@
                             <div class="col-6 col-md-3">
                                 <router-link :to="{ path: '/'}">
                                      <a class="navbar-brand js-scroll-trigger main-logo" href="javascript:;">
-                                        <img src="/images/pizzapassions-logo.png">
+                                        <img src="/images/dixy-chicken/logo2.png">
                                     </a>
                                 </router-link>
                             </div>
@@ -131,7 +126,7 @@
                         <div class="col-lg-4 col-xl-5">
 
                         </div>
-                        <div class="col-lg-8 col-xl-7">
+              <!--           <div class="col-lg-8 col-xl-7">
                             <div class="contact-bnner">
                                <div class="row">
                                 <div class="col-lg-4 col-md-4 col-sm-12 mt-0 px-0">
@@ -144,7 +139,7 @@
                                         </div>
 
                                         <div class="num-img text-center">
-                                           <a href="tel:0289 031 9242"> 0289 031 9242</a>
+                                           <a href="tel:0121 201 3242"> 0121 201 3242</a>
                                         </div>
 
                                     </div>
@@ -165,7 +160,7 @@
                                </div>
                             </div>
 
-                        </div>
+                        </div> -->
                     </div>
                 </div>
             </div>
