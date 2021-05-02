@@ -324,7 +324,7 @@
         },
         mounted() {
 
-            this.shopname = this.$store.getters.getOrderType;
+            this.shopname = this.$store.getters.getShopName;
 
 
             this.getCategories();
@@ -376,17 +376,25 @@
 
                 let  _this = this;
                 var url = '';
+
+                var shopName = this.$store.getters.getShopName;
+                var mainUrl = 'http://taj.softdemo.co.uk/api/';
+                if(shopName != 'Taj Grill Catering 508 High Road SevenKings IG1 1UE 0208 262 6476'){
+                    mainUrl = 'http://tajshop2.softdemo.co.uk/api/';
+                }
+
+
                 if(cart.product_type === "deal")
                 {
                     this.editDealsData = cart;
                     _this.loading  = true;
-                     url = '/api/deals/'+id;
+                     url = mainUrl+'deals/'+id;
 
                 }else {
 
                     this.editList = cart;
                     _this.loading  = true;
-                    url = '/api/products/'+id;
+                    url = mainUrl+'products/'+id;
                 }
                 axios.get(url)
                     .then((response) => {
@@ -426,9 +434,15 @@
             },
 
             getCategories(){
+
+                var shopName = this.$store.getters.getShopName;
+                var url = 'http://taj.softdemo.co.uk/api/categories';
+                if(shopName != 'Taj Grill Catering 508 High Road SevenKings IG1 1UE 0208 262 6476'){
+                     url = 'http://tajshop2.softdemo.co.uk/api/categories';
+                }
                 let  _this = this;
                 _this.loading  = true;
-                axios.get('/api/categories')
+                axios.get(url)
                     .then((response) => {
                         _this.categories =  response.data.data;
                         _this.loading  = false;
@@ -441,7 +455,14 @@
             getDeals(){
                 let  _this = this;
                 _this.loading  = true;
-                axios.get('/api/deals')
+
+                var shopName = this.$store.getters.getShopName;
+                var mainUrl = 'http://taj.softdemo.co.uk/api/';
+                if(shopName != 'Taj Grill Catering 508 High Road SevenKings IG1 1UE 0208 262 6476'){
+                    mainUrl = 'http://tajshop2.softdemo.co.uk/api/';
+                }
+
+                axios.get(mainUrl+'deals')
                     .then((response) => {
                         // console.log( response.data.data);
                         _this.products = [];
@@ -452,9 +473,13 @@
             },
 
             getProductAgainstCategories(id){
+                var shopName = this.$store.getters.getShopName;
+                var url = 'http://taj.softdemo.co.uk/api/categories';
+                if(shopName != 'Taj Grill Catering 508 High Road SevenKings IG1 1UE 0208 262 6476'){
+                    url = 'http://tajshop2.softdemo.co.uk/api/categories';
+                }
                 let  _this = this;
                 _this.loading  = true;
-                var url = '/api/categories';
                 if(id){
                     url = url + '?id=' + id;
                 }
@@ -474,9 +499,17 @@
                 }
             },
             viewProduct(id){
+
+                var shopName = this.$store.getters.getShopName;
+                var mainUrl = 'http://taj.softdemo.co.uk/api/';
+                if(shopName != 'Taj Grill Catering 508 High Road SevenKings IG1 1UE 0208 262 6476'){
+                    mainUrl = 'http://tajshop2.softdemo.co.uk/api/';
+                }
+
+
                 let  _this = this;
                 _this.loading  = true;
-                let url = '/api/products/'+id;
+                let url = mainUrl+'products/'+id;
                 axios.get(url)
                     .then((response) => {
                         _this.list =  response.data.data;
@@ -489,7 +522,12 @@
             viewDeal(id){
                 let  _this = this;
                 _this.loading  = true;
-                let url = '/api/deals/'+id;
+                var shopName = this.$store.getters.getShopName;
+                var mainUrl = 'http://taj.softdemo.co.uk/api/';
+                if(shopName != 'Taj Grill Catering 508 High Road SevenKings IG1 1UE 0208 262 6476'){
+                    mainUrl = 'http://tajshop2.softdemo.co.uk/api/';
+                }
+                let url = mainUrl+'deals/'+id;
                 axios.get(url)
                     .then((response) => {
                         _this.deals_data =  response.data.data;

@@ -42,8 +42,7 @@
 
 
 
-                                  <div class="row" v-show="orderType != 'Pickup'">
-
+                                  <div class="row" v-show="orderType != 'Collection'">
 
                                       <div class="col-12">
                                           <h3> Delivery Details</h3>
@@ -375,10 +374,11 @@
                    _this.scrollToTop();
                } else {
                    let vm = this;
-                   if (vm.orderType == 'Pickup') {
+                   if (vm.orderType == 'Collection') {
                        vm.form.address = '---';
                        vm.form.street = '---';
                        vm.form.postal_code = '---';
+
                    }
 
                    let data = {
@@ -392,14 +392,21 @@
                        'user_data': this.form,
                        'order_type': vm.orderType
                    };
-                   console.log(data);
+
+
+
+                   var shopName = this.$store.getters.getShopName;
+                   var mainUrl = 'http://taj.softdemo.co.uk/api/';
+                   if(shopName != 'Taj Grill Catering 508 High Road SevenKings IG1 1UE 0208 262 6476'){
+                       mainUrl = 'http://tajshop2.softdemo.co.uk/api/';
+                   }
                    setTimeout(() => {
                        if (this.validForm) {
                            vm.loading = true;
                            let cart = this.$store.getters.getAllCartArray.splice(0, 1);
                            axios({
                                method: 'post',
-                               url: '/api/placeOrder',
+                               url: mainUrl+'placeOrder',
                                data: data
                            })
                                .then(function (response) {

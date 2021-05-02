@@ -12,7 +12,8 @@ export default new Vuex.Store({
         postal_code: localStorage.getItem('postal_code') ? localStorage.getItem('postal_code') : '',
         order_type: localStorage.getItem('order_type') ? localStorage.getItem('order_type') : '',
         user_data: localStorage.getItem('user_data') ? localStorage.getItem('user_data') : '',
-        
+        shop_name: localStorage.getItem('shop_name') ? localStorage.getItem('shop_name') : '',
+
 
     },
 
@@ -40,7 +41,15 @@ export default new Vuex.Store({
             } else {
                 return state.user_data;
             }
-        }
+        },
+
+        getShopName(state){
+            if (state.shop_name == "" || state.shop_name == null) {
+                return localStorage.getItem('shop_name');
+            } else {
+                return state.shop_name;
+            }
+        },
     },
 
     // Mutation for when you use it as state property
@@ -63,7 +72,13 @@ export default new Vuex.Store({
         setUserData(state,data){
             localStorage.setItem('user_data',data);
             state.order_type = localStorage.getItem('user_data');
-        }
+        },
+        setShopName(state,data){
+            localStorage.setItem('shop_name', data);
+            state.shop_name = localStorage.getItem('shop_name');
+            console.log(state.shop_name)
+
+        },
 
     },
 });

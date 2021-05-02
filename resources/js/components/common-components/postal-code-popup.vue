@@ -100,7 +100,8 @@
                                    if(response.data.error === undefined){
                                        vm.error_message = response.data.data.amount;
                                        vm.$store.commit('setDeliveryCharges', response.data.data.amount);
-                                       vm.$store.commit('setOrderType', vm.order_type);
+                                       vm.$store.commit('setOrderType', 'Pickup');
+                                       vm.$store.commit('setShopName', vm.order_type);
                                        vm.$store.commit('setPostalCode', vm.postal_code);
                                        vm.$router.push({path: 'online-order'})
 
@@ -122,7 +123,8 @@
 
             pushToOrderPage() {
                 let vm = this;
-                vm.$store.commit('setOrderType', vm.order_type);
+                vm.$store.commit('setOrderType', 'Pickup');
+                vm.$store.commit('setShopName', vm.order_type);
                 window.location.href = '/online-order';
 
                 // this.$router.push({ path: '/online-order' })
