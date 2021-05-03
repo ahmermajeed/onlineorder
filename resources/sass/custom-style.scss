@@ -1621,7 +1621,7 @@ ul {
             font-weight: 600;
         }
         .cart-order {
-            width: 80px;
+            width: 200px;
             float: left;
             font-size: 12px;
             font-weight: bold;
@@ -1631,8 +1631,11 @@ ul {
             }
         }
         .strong-open{
-            width: 80px;
+            width: 100%;
             float: left;
+            strong {
+                text-transform: capitalize;
+            }
         }
         
 
@@ -1644,7 +1647,7 @@ ul {
             margin: 0px;
             border: 1px solid #d7d7d7;
             border-radius: 4px;
-            width: 95%;
+            width: 100%;
              i {
                 padding: 0px !important;
                 color: #a2a2a2;
@@ -1665,9 +1668,10 @@ ul {
             }
             span {
                 background-color: #fff;
-                width: 32px;
+                width: 22px;
                 max-width: 40px;
-                display: inline-block;
+                display: inline-block !important;
+                line-height: 2 !important;
             }
        
          .order-quty {
@@ -1686,7 +1690,7 @@ ul {
        
         .mealactions { 
                 width: 50px;
-                padding: 26px 0px !important;
+                padding: 10px 0px !important;
                 margin-left: 10px;
                 margin-top: 14px;
                  @include media-breakpoint-only(md) {
@@ -2325,6 +2329,7 @@ a.circle span.cnt {
     background: aliceblue;
     border: 1px solid #ddd;
     border-radius: 8px;
+    text-align: center;
     @include media-breakpoint-down(sm) {
       left: 60px;
       top: 20px;
@@ -2346,12 +2351,12 @@ a.circle span.cnt {
 }
 .show-cart .scroll {
     max-height: 210px;
-    overflow-y: scroll;
+    overflow-y: auto;
     overflow-x: hidden;
 
 }
 .item-list h5 {
-    font-size: 16px;
+    font-size: 14px;
 }
 .view-total-menu {
     background: #ebf3f9;
@@ -2413,3 +2418,26 @@ span.cart-count {
 .view-total-menu .view-cart-menu {
     color: #000 !important;
 } 
+/*
+ *  STYLE 3
+ */
+
+.style-3::-webkit-scrollbar-track
+{
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+    background-color: #F5F5F5;
+}
+
+.style-3::-webkit-scrollbar
+{
+    width: 6px;
+    background-color: #F5F5F5;
+}
+
+.style-3::-webkit-scrollbar-thumb
+{
+    background-color: #000000;
+}
+.order-priecs {
+    margin-bottom: 10px;
+}
