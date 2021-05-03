@@ -16409,3 +16409,7 @@ span.cart-count {
   margin-bottom: 10px;
 }
 
+.selected-item-row .item-list {
+  text-align: left;
+}
+
