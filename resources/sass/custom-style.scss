@@ -2499,4 +2499,105 @@ span.address {
 .footer-img {
     width: 150px;
 }
+.food-standard-bar {
+    background: #6eb33f;
+    padding: 10px;
+    position: relative;
+}   
+.food-agency-rating img {
+    width: 100%;
+}
+.food-agency-rating h2 {
+    color: #fff;
+    margin-bottom: 30px;
+}
+.food-standard-bar img {
+    width: 235px;
+    margin-right: 50px;
+}
+.food-standard-bar .title {
+    font-size: 40px;
+    color: #211e1e;
+    font-weight: 600;
+    @include media-breakpoint-down(sm) {
+        font-size: 20px;
+        display: block;
+    }
+}
+.food-standard-bar .rating-count {
+    height: 35px;
+    width: 35px;
+    font-size: 20px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    text-align: center;
+    border: 2px solid #000;
+    font-weight: 600;
+    margin-left: 10px;
+    background: linear-gradient(to top right, #6ab63c 0%, #caddb9 100%);
+    @include media-breakpoint-down(sm) {
+        margin-bottom: 20px;
+    }
+}
+
+.food-standard-bar .rating-count.active {
+    background: #000;
+    color: #efefef;
+    height: 50px;
+    width: 50px;
+    font-size: 30px;
+    position: relative;
+}
+.food-standard-bar .rating-count .rating-text {
+    display: none;
+}
+.food-standard-bar .rating-count.active .rating-text {
+    position: absolute;
+    font-size: 11px;
+    display: block;
+    left: 0;
+    right: 0;
+    text-transform: capitalize;
+    display: block;
+    line-height: 1.2;
+}
+.food-standard-bar .note {
+    color: #fff;
+    font-size: 12px;
+    margin-top: 10px;
+}
+.deliver-areas {
+    background: #ddd;
+    border-radius: 18px;
+    padding: 20px;
+    background-image: url(/images/new-design/delivery/map.png);
+    max-width: 1500px;
+    overflow-x: auto;
+    overflow-y: hidden;
+    white-space: nowrap;
+}
+.deliver-areas h2 {
+    font-size: 24px;
+    display: inline-block;
+}
+.deliver-areas .postal-code {
+    display: inline-block;
+    float: right;
+    max-width: 500px;
+}
+.deliver-areas .postal-code span {
+    width: 40px;
+    height: 40px;
+    font-size: 14px;
+    background-color: #000;
+    border-radius: 50%;
+    display: inline-block;
+    text-align: center;
+    border: 2px solid #000;
+    font-weight: 600;
+    margin-left: 10px;
+    color: #fff;
+    line-height: 2.5;
+}
 /***************Deal-section-end*******************/
