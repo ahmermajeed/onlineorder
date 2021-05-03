@@ -16541,11 +16541,12 @@ span.address {
   background: #ddd;
   border-radius: 18px;
   padding: 20px;
-  background-image: url(/images/new-design/delivery/map.png);
+  background-image: url(/images/dixy-chicken/map.png);
   max-width: 1500px;
   overflow-x: auto;
   overflow-y: hidden;
   white-space: nowrap;
+  margin-bottom: 70px;
 }
 
 .deliver-areas h2 {
@@ -16572,6 +16573,10 @@ span.address {
   margin-left: 10px;
   color: #fff;
   line-height: 2.5;
+}
+
+.food-agency-rating {
+  margin-bottom: 30px;
 }
 
 /***************Deal-section-end*******************/
