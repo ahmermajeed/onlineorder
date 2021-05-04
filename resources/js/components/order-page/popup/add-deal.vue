@@ -22,7 +22,7 @@
                                 <label>
                                     <input type="radio"  :value="product.name+'##@@'+0"   v-model="productData[item.name +' '+n]" >
                                     {{product.name}}
-                                    
+
                                     <span class="checkmark"></span>
                                 </label>
                             </li>
@@ -32,11 +32,11 @@
                         <div  v-for="(item, index) in item.products[0].groups">
                             <h4>{{item.name}}</h4>
                             <ul class="selectionlist radio-list" >
-                                <li v-for="(choice,choice_index) in item.choices">
+                                <li v-for="(choice,choice_index) in item.choices" v-if="choice.name!='Create Your Own'">
                                     <label>
                                         <input type="radio"  :value="choice.name+'##@@'+priceFormat(choice.price=== undefined ? 0: choice.price)"   v-model="productData[item.name +' '+n]" @click="productSum(item.name,priceFormat(choice.price=== undefined ? 0: choice.price))">
                                         {{choice.name}}
-                                        
+
                                         <span class="checkmark"></span>
                                     </label>
                                     <span style="float:right"> £  {{choice.price}}</span>
@@ -66,15 +66,15 @@
                                         <button type="button" class="btn-plus"  @click.prevent="plusQuantity()" >
                                             <i class="icon-plus"></i>
                                         </button>
-                                      
-                                        <span class="btn-badge-count">{{product_quantity}}</span> 
+
+                                        <span class="btn-badge-count">{{product_quantity}}</span>
 
                                         <button type="button" class="btn-minus" @click.prevent="minusQuantity()">
                                        <i class="icon-subtract"></i>
                                         </button>
-                                     
+
                                     </div>
-                                    
+
                                 </div>
                             </div>
                         </div>
@@ -84,7 +84,7 @@
                                 <h4 class="text-left">Total Amount : </h4>
                                <span class="text-right">{{priceFormat(total_amount_of_single_product * product_quantity)}}</span>
                             </div>
-                               
+
                         </div>
                     </div>
 
