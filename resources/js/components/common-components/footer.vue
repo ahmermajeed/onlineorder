@@ -8,24 +8,22 @@
                             <div class="col-lg-3 col-md-3 footer-section-1 footer-space order-1">
                                 <h3>Opening Hours</h3>
                                 <ul class="Opening">
-                                    <li><a href="#"><span><i class="icon-smartphone-1"></i></span>0289 031 9242</a></li>
-                                    <li><a href="#"><span><i class="icon-mail-2"></i></span>info@pizzapassions.com</a></li>
+                                    <li><a href="#"><span><i class="icon-smartphone-1"></i></span> 01562 74 7727</a></li>
+                                    <li><a href="#"><span><i class="icon-mail-2"></i></span>Info@Tastyland.Co.Uk</a></li>
                                     <li><a href="#" class="address-link">
                                         <span><i class="icon-placeholder"></i></span>
-                                        <span class="address">3-5 Bradbury Place, Belfast, BT71RQ</span>
+                                        <span class="address">Worcestershire Country 31A Comberton Hill, Kidderminster DY10 1QN, UK</span>
                                     </a></li>
                                 </ul>
                             </div>
                             <div class="col-lg-6 col-md-6 footer-section-2 order-3 order-md-2">
                                 <div class="text-center">
-                                   <a href="#"><img src="/images/pizzapassions-logo.png"></a>
+                                   <a href="#"><img src="/images/tasty-land/logo.jpg"></a>
                                 </div>
                                 <div class="footer-menu text-center">
                                     <ul>
                                       <li><a href="/">Home</a></li>
-                                      <!-- <li><a href="#">About us</a></li> -->
                                       <li><a href="/feedback">Feedback</a></li>
-                                      <!-- <li><a href="#">Allergy Information</a></li> -->
                                       <li><a href="#" @click.prevent="openPostalCode">Order Online</a></li>
                                     </ul>
                                 </div>
@@ -47,22 +45,22 @@
                                 <h3>Opening Hours</h3>
                                 <ul class="Opening-hours">
                                     <li>
-                                        <strong><a href="#">Monday to Saturday</a></strong>
+                                        <strong><a href="#">Monday - Tuesday</a></strong>
                                     </li>
                                     <li>
-                                        <a href="#">5PM - 2AM</a>
+                                        <a href="#">11AM - 11PM</a>
                                     </li>
                                     <li>
-                                        <strong><a href="#">Sunday</a></strong>
+                                        <strong><a href="#">Wednesday - Thursday & Sunday</a></strong>
                                     </li>
                                     <li>
-                                        <a href="#">5PM - 1AM</a>
+                                        <a href="#">11AM - 1AM</a>
                                     </li>
                                     <li>
-                                        <strong><a href="#">Min Delivery Charges</a></strong>
+                                        <strong><a href="#">Friday - Saturday</a></strong>
                                     </li>
                                     <li>
-                                        <a href="#">£2</a>
+                                        <a href="#">11AM - 3AM</a>
                                     </li>
                                 </ul>
                             </div>
