@@ -18,7 +18,7 @@
                     <h4>{{item.name}} {{n}} </h4>
                     <div  v-for="(product, index) in item.products">
                         <ul class="selectionlist radio-list">
-                            <li>
+                            <li v-if="product.name!== 'Create Your Own'">
                                 <label>
                                     <input type="radio"  :value="product.name+'##@@'+0"   v-model="productData[item.name +' '+n]" >
                                     {{product.name}}
@@ -32,7 +32,7 @@
                         <div  v-for="(item, index) in item.products[0].groups">
                             <h4>{{item.name}}</h4>
                             <ul class="selectionlist radio-list" >
-                                <li v-for="(choice,choice_index) in item.choices" v-if="choice.name!='Create Your Own'">
+                                <li v-for="(choice,choice_index) in item.choices" v-if="choice.name!== 'Create Your Own'">
                                     <label>
                                         <input type="radio"  :value="choice.name+'##@@'+priceFormat(choice.price=== undefined ? 0: choice.price)"   v-model="productData[item.name +' '+n]" @click="productSum(item.name,priceFormat(choice.price=== undefined ? 0: choice.price))">
                                         {{choice.name}}
