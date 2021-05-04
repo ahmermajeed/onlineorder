@@ -14624,7 +14624,6 @@ ul {
 .menu-box .menus-pattern-second .menu-second-before:before {
   content: "";
   position: absolute;
-  background-image: url(/images/pizza-before.png?f4e0a4172a72d697e03f4be3bd8f0cb7);
   background-repeat: no-repeat;
   width: 75%;
   height: 110px;
@@ -14682,7 +14681,7 @@ ul {
 .menu-box .menus-pattern-first .menu-first-before:before {
   content: "";
   position: absolute;
-  background-image: url(/images/first-menu-before.png?0d7257079027dc9a1c4419270df9bae3);
+  background-image: url(/images/first-menu-before.png?a1681fc4b5026ce89d000d8471700273);
   background-repeat: no-repeat;
   width: 100%;
   height: 219px;
@@ -14871,7 +14870,7 @@ ul {
 }
 
 .deal-section .offers {
-  background-image: url(/images/deal-img.png?2f25bc1b074a4cf868d07c39ce17ab79);
+  background-image: url(/images/deal-img.jpg?8ea520032d2a1e05e1a616c25c7354ea);
   background-repeat: no-repeat;
   background-position: -10px 0;
   border-radius: 6px;
@@ -16439,6 +16438,7 @@ span.address {
   position: absolute;
   width: 210px;
   top: -21px;
+  left: 36px;
   background-color: transparent !important;
   box-shadow: none !important;
 }
