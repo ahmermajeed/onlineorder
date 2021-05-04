@@ -8,13 +8,13 @@
 
             <div class="product-gallery" >
                 <h4> £ {{deals_data.price}}  </h4>
-            </div> 
+            </div>
             <div class="description">
                 <div class="info-item section-border mb-4 ">
                     <h4 class="text-left float-none">Description</h4>
                     <p>{{deals_data.description}}</p>
                 </div>
-                
+
             </div>
 
 
@@ -22,12 +22,12 @@
                 <div v-for="(n,index) in item.quantity">
                     <h4>{{item.name}} {{n}} </h4>
                     <div  v-for="(product, index) in item.products">
-                        <ul class="selectionlist radio-list">
+                        <ul class="selectionlist radio-list"  v-if="product.name!== 'Create Your Own'">
                             <li>
                                 <label>
                                     <input type="radio"  :value="product.name"   v-model="productData[item.name +' '+n]" >
                                     {{product.name}}
-                                    
+
                                     <span class="checkmark"></span>
                                 </label>
                             </li>
@@ -55,13 +55,13 @@
                                         <button type="button" class="btn-plus"  @click.prevent="plusQuantity()" >
                                             <i class="icon-plus"></i>
                                         </button>
-                                      
-                                        <span class="btn-badge-count">{{product_quantity}}</span>   
+
+                                        <span class="btn-badge-count">{{product_quantity}}</span>
                                          <button type="button" class="btn-minus" @click.prevent="minusQuantity()">
                                        <i class="icon-subtract"></i>
                                         </button>
                                     </div>
-                                    
+
                                 </div>
                             </div>
                         </div>
@@ -71,7 +71,7 @@
                                 <h4 class="text-left">Total Amount : </h4>
                                <span class="text-right">{{priceFormat(total_amount_of_single_product * product_quantity)}}</span>
                             </div>
-                               
+
                         </div>
                     </div>
 
