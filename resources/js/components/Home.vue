@@ -83,10 +83,7 @@
                     <div class="col-lg-6 col-md-6 col-sm-12 px-0">
                         <div class="rating-content">
                             <div class="row">
-                                <div class="col-lg-2  col-sm-3 col-md-3 px-1 payment-type">
-                                    <p class="rounded-circle">Cash<br> only</p>
-
-                                </div>
+                              
                                 <div class="col-lg-10 col-sm-9 col-md-9 px-1 delivry-content">
                                     <p>Free Delivery</p>
                                     <span>Min. Order £2.<br>We accept all major cards.</span>
