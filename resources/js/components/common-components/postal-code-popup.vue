@@ -5,16 +5,19 @@
             @hidden="onHidden" 
             centered  
             ok-variant="primary" 
-            title-tag="h4"
-            size="sm"   
+            title-tag="h4"  
+            title="Choose your order type" 
             :hide-footer=true  
+            size="sm"
             ref="myModalRef" 
             custom-modal 
             no-close-on-backdrop 
             modal-class="postal-code-modal custom-modal">
-            <template #modal-title>Enter Your Postal Code</template>
+
+      
+
             <div class="form-cart order-selection">
-                <label><span>Select order type:</span></label>
+                <label><span>Choose your order type:</span></label>
                 <div class="switch-field" >
                     <input type="radio" id="radio-one" @change="showPostalCode" v-model="order_type" name="switch-one" value="Delivery"/>
                     <label for="radio-one">
@@ -28,12 +31,15 @@
                         <span>20 mins</span></label>
                 </div>
             </div>
+
             <div class="row postal-code-details">
                 <form>
                     <div class="form-group" v-if="showPostal">
                         <label for=""><span>Enter your Postcode:</span></label>
                         <input type="text"  class="form-control" v-model="postal_code" placeholder="Enter your Postcode">
                     </div>
+
+             
 
                     <button type="button" class="btn btn-rounded-default btn-rounded-danger"  v-on:click="checkPostCode">
                         <span>Submit! <i class="fas fa-long-arrow-alt-right"></i></span>
@@ -43,6 +49,8 @@
                 </form>
 
             </div>
+
+
             
 
         </b-modal>
@@ -82,21 +90,25 @@
                 this.order_type = ''
                 },
 
-            checkPostCode(){
+ 
+ checkPostCode(){
 
-                let vm = this;
+            let vm = this;
 
-                if (this.order_type == '') {
-                    vm.error_message = 'Please Select Order Type';
-                    setTimeout(function(){ vm.errorMessage = ""; }, 2000);
-                } else if(this.order_type == 'Delivery' && this.postal_code == "") {
-                    vm.error_message = 'Please Enter Your Post Code';
-                    setTimeout(function(){ vm.errorMessage = ""; }, 2000);
-                } else {
+            if (this.order_type == '') {
+                vm.error_message = 'Please Select Order Type';
+                setTimeout(function(){ vm.errorMessage = ""; }, 2000);
+            } else if(this.order_type == 'Delivery' && this.postal_code == "") {
+                vm.error_message = 'Please Enter Your Post Code';
+                setTimeout(function(){ vm.errorMessage = ""; }, 2000);
+            } else {
 
-                    /*if(vm.order_type == "Pickup")
-                        vm.postal_code = "B8"*/
 
+                if(vm.order_type == "Pickup"){
+                    vm.$store.commit('setOrderType', 'Pickup');
+
+                    vm.$router.push({path: 'online-order'})
+                }else {
                     axios({
                         method: 'post',
                         url: '/api/check-postal',
@@ -113,7 +125,7 @@
                             vm.$router.push({path: 'online-order'})
 
                         }else {
-                            vm.error_message = 'We are not providing food in your Area';
+                            vm.error_message = 'We are not providing food in your area.';
                         }
                     })
                         .catch(function (response) {
@@ -122,16 +134,21 @@
                         });
                 }
 
-            },
 
-            showPostalCode() {
-                let self = this;
 
-                if(self.order_type == "Delivery")
-                    self.showPostal = true
-                else
-                    self.showPostal = false
             }
+
+        },
+
+         showPostalCode() {
+             let self = this;
+
+             if(self.order_type == "Delivery")
+                 self.showPostal = true
+             else
+                 self.showPostal = false
+         }
+         
         },
         watch: {
             showModalProp(value) {

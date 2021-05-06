@@ -254,10 +254,16 @@
                 discountedAmount:0,
                 discountedPercentAge:10,
                 finalAmount:0,
-
-
+                orderType:'',
+                interval: 45,
+                slots:[]
             };
         },
+
+        created(){
+            this.getTimeSlots();
+        },
+        
         mounted() {
             if(this.$store.getters.getAllCartArray.length > 0) {
                 let total = 0;
@@ -412,16 +418,16 @@
                 }
             },
 
-                getTimeSlots() {
-                    let _this = this;
-                    _this.loading = true;
-                    axios.get('/api/get-time-slots/' + _this.interval)
-                        .then((response) => {
-                            _this.slots = response.data;
+            getTimeSlots() {
+                let _this = this;
+                _this.loading = true;
+                axios.get('/api/get-time-slots/' + _this.interval)
+                    .then((response) => {
+                        _this.slots = response.data;
 
-                            _this.loading = false;
-                        });
-                },
+                        _this.loading = false;
+                    });
+            },
 
 
 

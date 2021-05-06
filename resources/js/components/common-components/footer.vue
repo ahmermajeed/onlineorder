@@ -33,6 +33,38 @@
                   </div>
                   <div class="powered">
                     <p>WaterHead Tandoori © 2021. All rights reserved.  Designed By <a href="http://www.waterhead.co.uk.com/" target="_blank">WaterHead Tandoori</a></p>
+                    <p class="footer-info"><strong>Open 7 days a week</strong>
+                      <ul>
+                        <li>
+                          <span>Sunday To Thursday: 4:30PM till 10:30PM</span>
+                        </li>
+                        <li><span>Friday To Saturday: 4:30PM till 11:00PM</span></li>
+                      </ul>
+                    </p>
+
+                    <p class="footer-info"><strong>Special 10% Discount</strong>
+                      <ul>
+                        <li>
+                          <span>For NHS, Police, Fire Service, Ambulance(I.D Requried, excluding set meal) </span>
+                        </li>
+                      </ul>
+                    </p>
+
+                    <p class="footer-info"><strong>Location: </strong>
+                      <ul>
+                        <li>
+                          <span>491 Huddersfield Road, Waterhead, Oldham, OL4 2JG</span>
+                        </li>
+                      </ul>
+                    </p>
+
+                    <p class="footer-info"><strong>Email: </strong>
+                      <ul>
+                        <li>
+                          <span>www.waterheadtandoori.co.uk</span>
+                        </li>
+                      </ul>
+                    </p>
                   </div>
                 </div>
               </div>

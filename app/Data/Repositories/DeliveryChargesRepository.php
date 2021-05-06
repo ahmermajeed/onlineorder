@@ -55,7 +55,7 @@ class DeliveryChargesRepository
     }
 
 
-    public function array_flatten($array = null) {
+      public function array_flatten($array = null) {
         $result = array();
 
         if (!is_array($array)) {

@@ -116,38 +116,37 @@
                                 <div class="table-holder">
                                     <table class=tbl_cart_list>
                                         <tr class="section-border" v-for="(cart, product_index) in getAllCartArray"  v-if="product_index  > 0">
-                                            <!-- <td class=highlighted>
-                                            </td> -->
+                                          
                                             <td class="order-name">
                                                 <div class="cart-order">{{cart.product_name}}</div>
                                                 <div  class="strong-open"  v-if="cart.extras" v-for="(extra, extra_index) in cart.extras" >
                                                     <strong>{{extra.group_name}}:</strong> {{extra.choice}}
-                                                </div>
-                                                <td  v-if="!cart.extras">£ {{priceFormat(cart.price * cart.quantity) }}</td>
-                                            <td class="order-priecs"  v-if="cart.extras">£{{priceFormat(cart.single_product_total_amount)}} </td>
-                                               
+                                                </div>                                               
                                             </td>
-                                            <td class="order-quty">
-
-                                               <div class="priec-order">
-                                                    <a class="icon-up"  href="#" @click.prevent="quantityAddInCart(product_index)"> <i class="icon-plus"  ></i></a>
-                                                    <span class="text-center">{{ cart.quantity}}  <!-- <i>X</i> --></span>
-                                                    <a  class="icon-down"  href="#"  @click.prevent="quantityMinusInCart(product_index)"> <i class="icon-subtract"></i></a>
-                                                </div> 
-                                                
-                                            </td>
-                                             <span class="mealactions">
+                                        
+                                            <td>
+                                                <span  v-if="!cart.extras" class="p-0 order-priecs">£ {{priceFormat(cart.price * cart.quantity) }}
+                                                </span>
+                                                <span class="order-priecs"  v-if="cart.extras">£{{priceFormat(cart.single_product_total_amount)}} 
+                                                </span>
+                                                <span class="order-quty">
+                                                   <div class="priec-order">
+                                                        <a class="icon-up"  href="#" @click.prevent="quantityAddInCart(product_index)"> <i class="icon-plus"  ></i></a>
+                                                        <span class="text-center">{{ cart.quantity}}  <!-- <i>X</i> --></span>
+                                                        <a  class="icon-down"  href="#"  @click.prevent="quantityMinusInCart(product_index)"> <i class="icon-subtract"></i></a>
+                                                    </div>
+                                                </span>
+                                                <span class="mealactions">
                                                     <a href="#"  @click.prevent="updateProduct(cart.product_id,cart,product_index)"> <i v-b-tooltip.hover title="Edit Meal"  class="icon-edit-1"></i></a>
                                                     <a href="#" class="close-icon" @click.prevent="removeFromCart(product_index)"> <i v-b-tooltip.hover title="Remove Meal" class="icon-delete" ></i></a>
                                                 </span>
-                                            
-
+                                            </td>
                                             
                                         </tr>
                                     </table>
                                 </div>
                                 <div class="cart-btn mt-3 mb-3 text-center">
-                                     <button class="anima-btn custom-btn move-eff btn btn-rounded-danger" @click="placeOrder()"><span>Checkout</span> <!-- <i class="fas fa-long-arrow-alt-right"></i> --></button>
+                                     <button class="anima-btn custom-btn move-eff btn btn-rounded-danger" @click="placeOrder()"><span>Checkout</span></button>
                                 </div> 
                             </div>
                             
@@ -266,7 +265,7 @@
                 </div> -->
 
                 <div class="mb-cart-box">
-                    <ul  v-for="(cart, product_index) in getAllCartArray" v-if="product_index  > 0">
+                    <ul class="cart-list" v-for="(cart, product_index) in getAllCartArray" v-if="product_index  > 0">
                         <li>
                         <span class="qty mob">
                             <i style="font-size: 17px;" @click="quantityAddInCart(product_index)">+</i>
@@ -1081,9 +1080,6 @@
         border-top: 1px solid #eee;
     }
 
-    .cart .order table tr td:nth-child(3) {
-        min-width: 140px;
-    }
     .cart .order table tr td:nth-child(4) {
         overflow:hidden;
     }
@@ -1141,6 +1137,8 @@
     }
     .cart .order table tr td:nth-child(2) span{
         display:block;
+        text-align: right;
+        margin-right: 2px;
     }
     .cart .order table tr td:nth-child(2) span i{
         font-style: normal;
@@ -2083,6 +2081,7 @@
             min-width: 50px;
             position: relative;
             padding-left: 25px;
+            padding-right: 25px;
         }
         .cartheight>ul>li>span.qty .qtyincrement{
             display: inline-block;
@@ -2192,9 +2191,7 @@
         }
 
         .mb-cart-box ul li span.meal {
-            width: 220px;
-            margin-left: 10px;
-            display: inline-table;
+            margin-right: 20px;
         }
         .mb-cart-box ul li span.meal .mealactions {
             display: inline-block;
@@ -2209,6 +2206,36 @@
         }
         .qty.mob span {
             padding: 15px;
+        }
+
+        .offset-categories {
+          position: fixed;
+          top: -100%;
+          z-index: 1000;
+          width: calc(100% - 0%);
+          margin-top: 0;
+          padding-top: 0 !important;
+          border-right: 1px solid rgba(0,0,0,0);
+        }
+        .inner-section .sidebar-area .filter-content {
+            display: none;
+        }
+        .mb-cart-box ul li {
+            display: flex;
+            font-size: 14px;
+            border-bottom: 1px dashed #414141;
+            padding: 10px 0;
+            width: 100%;
+            justify-content: space-between;
+        }
+
+        .cartheight .mb-cart-box ul.cart-list {
+            list-style: none;
+            border-bottom: 1px dashed #ccc;
+            margin-bottom: 10px;
+        }
+        .mb-cart-box ul li {
+            text-align: center;
         }
     }
 
