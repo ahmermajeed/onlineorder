@@ -431,10 +431,14 @@ ul {
     }
 }
 .header-bottom {
-    background-image: url('images/tasty-land/banner.jpg');
+    background-image: url('images/tasty-land/banner.jpeg');
     background-repeat: no-repeat;
     background-size: cover;
-    height: 450px;
+    height: 570px;
+    @include media-breakpoint-down(sm) {
+        background-size: contain;
+        height: 170px;
+    }
     .contact-bnner {
         @include media-breakpoint-down(sm) {
             width: 100%;

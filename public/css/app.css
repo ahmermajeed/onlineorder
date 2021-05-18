@@ -14190,10 +14190,17 @@ ul {
 }
 
 .header-bottom {
-  background-image: url(/images/banner.jpg?8e433f89b43a084a30d5a928a81729c2);
+  background-image: url(/images/banner.jpeg?d33c08a844017f047dda7bc44f58492f);
   background-repeat: no-repeat;
   background-size: cover;
-  height: 450px;
+  height: 570px;
+}
+
+@media (max-width: 767.98px) {
+  .header-bottom {
+    background-size: contain;
+    height: 170px;
+  }
 }
 
 @media (max-width: 767.98px) {
