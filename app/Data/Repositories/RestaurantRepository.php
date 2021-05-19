@@ -36,7 +36,7 @@ class RestaurantRepository
         $data = $this->model->findOrFail(1);
         $data->fill($request)->save();
 
-        if($request['address'] != null) {
+        if(isset($request['address'])) {
             $data->address->fill($request['address']);
             $data->address->save();
         }
