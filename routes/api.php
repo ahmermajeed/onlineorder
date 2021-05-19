@@ -53,6 +53,8 @@ Route::resource('our-story', 'Api\OurStoryController');
 /** Restaurant Information */
 Route::get('restaurant_info', 'Api\RestaurantController@getRestaurantInfo');
 
+Route::post('update_restaurant_info', 'Api\RestaurantController@updateRestaurantInfo');
+
 /** Products Routes */
 Route::resource('deals', 'Api\DealController');
 

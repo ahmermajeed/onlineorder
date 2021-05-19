@@ -25,4 +25,15 @@ class RestaurantController extends Controller
         ];
         return response()->json($output, Response::HTTP_OK);
     }
+
+    public function updateRestaurantInfo(Request $request)
+    {
+        $requestData = $request->all();
+
+        $data = $this->_repository->updateRecord($requestData);
+
+        $output = ['data' => $data, 'message' => "your restaurant has been updated successfully"];
+        return response()->json($output, Response::HTTP_OK);
+    }
+
 }

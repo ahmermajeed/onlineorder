@@ -25,4 +25,22 @@ class RestaurantRepository
         $data = $this->model->first();
         return $data;
     }
+
+    /**
+     * @param $request
+     * @param $id
+     * @return mixed
+     */
+    public function updateRecord($request)
+    {
+        $data = $this->model->findOrFail(1);
+        $data->fill($request)->save();
+
+        if($request['address'] != null) {
+            $data->address->fill($request['address']);
+            $data->address->save();
+        }
+
+        return $data;
+    }
 }
