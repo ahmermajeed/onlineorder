@@ -13,7 +13,7 @@
                                     <ul>
                                          <li class="mail-space"><i class="icon-mail-2"></i>
                                             <span>
-                                                <a href="mailto:info@flameinn.com">Info@flameinn.co.uk</a>
+                                                <a href="mailto:info@flameinn.com">Info@flameinn.co.Uk</a>
                                             </span>
                                         </li>
                                     </ul>
