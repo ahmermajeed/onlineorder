@@ -13,7 +13,7 @@
                                     <ul>
                                          <li class="mail-space"><i class="icon-mail-2"></i>
                                             <span>
-                                                <a href="mailto:info@tasty-land.com">Info@Tastyland.Co.Uk</a>
+                                                <a href="mailto:info@flameinn.com">Info@flameinn.co.uk</a>
                                             </span>
                                         </li>
                                     </ul>
@@ -38,7 +38,7 @@
                             <div class="col-6 col-md-3">
                                 <router-link :to="{ path: '/'}">
                                      <a class="navbar-brand js-scroll-trigger main-logo" href="javascript:;">
-                                        <img src="/images/tasty-land/logo.jpg">
+                                        <img src="/images/flame-inn/Flameinn-logo.png">
                                     </a>
                                 </router-link>
                             </div>

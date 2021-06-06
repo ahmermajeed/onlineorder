@@ -13873,7 +13873,7 @@ ul {
 }
 
 .header-top-section {
-  background-color: #e64a4e;
+  background-color: #000;
   padding: 12px 0px 12px 0px;
 }
 
@@ -14190,7 +14190,7 @@ ul {
 }
 
 .header-bottom {
-  background-image: url(/images/banner.jpeg?d33c08a844017f047dda7bc44f58492f);
+  background-image: url(/images/banner.jpg?0db47d053c8f26d0975bb1b752d0c87d);
   background-repeat: no-repeat;
   background-size: cover;
   height: 570px;
@@ -16455,4 +16455,50 @@ span.address {
 }
 
 /***************Deal-section-end*******************/
+
+section.photo-gal-sec {
+  padding: 50px 0;
+  text-align: center;
+}
+
+section.photo-gal-sec .img-box img {
+  width: 100%;
+  height: auto;
+}
+
+section.photo-gal-sec .title h4 {
+  font-size: 28px;
+  color: #b7921a;
+  text-decoration: underline;
+  text-transform: capitalize;
+  font-weight: 400;
+}
+
+section.photo-gal-sec .title h3 {
+  font-size: 38px;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+section.photo-gal-sec .title p {
+  font-size: 14px;
+  line-height: 28px;
+  letter-spacing: 2px;
+  color: #333333;
+  margin-bottom: 30px;
+}
+
+@media (max-width: 767.98px) {
+  .VueCarousel-wrapper video {
+    width: 375px !important;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .photo-gal-sec .col-3 {
+    flex: 0 0 100%;
+    max-width: 100%;
+    margin-bottom: 10px;
+  }
+}
 
