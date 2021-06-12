@@ -16,9 +16,13 @@
                                     </a></li>
                                 </ul>
                             </div>
-                            <div class="col-lg-6 col-md-6 footer-section-2 order-3 order-md-2">
+                            <div class="col-lg-6 col-md-6 footer-section-2 order-3 order-md-2 footer-logo">
                                 <div class="text-center">
-                                   <a href="#"><img src="/images/tasty-land/logo.jpg"></a>
+                                   <a href="#">
+                                        <span>
+                                            Masala Indian Cuisine
+                                        </span>
+                                    </a>
                                 </div>
                                 <div class="footer-menu text-center">
                                     <ul>

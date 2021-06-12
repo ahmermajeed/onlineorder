@@ -38,7 +38,7 @@
                             <div class="col-6 col-md-3">
                                 <router-link :to="{ path: '/'}">
                                      <a class="navbar-brand js-scroll-trigger main-logo" href="javascript:;">
-                                        <img src="/images/tasty-land/logo.jpg">
+                                        <span>Masala Indian Cuisine</span>
                                     </a>
                                 </router-link>
                             </div>
