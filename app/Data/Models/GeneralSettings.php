@@ -25,6 +25,8 @@ class GeneralSettings extends Model
         'printer_ip_3',
         'printer_ip_4',
         'printer_ip_5',
-        'shop_status'
+        'shop_status',
+        'stripe_publishable_key',
+        'stripe_secret_key'
     ];
 }
