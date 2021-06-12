@@ -82,3 +82,5 @@ Route::resource('offer', 'Api\OfferController');
 
 Route::get('get-time-slots/{duration}','Api\DeliveryChargesController@getTimeSlots');
 Route::post('register', 'UserController@register');
+
+Route::resource('tableReservation', 'Api\TableReservationController');
