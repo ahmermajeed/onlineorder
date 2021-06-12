@@ -8,11 +8,11 @@
                             <div class="col-lg-3 col-md-3 footer-section-1 footer-space order-1">
                                 <h3>Opening Hours</h3>
                                 <ul class="Opening">
-                                    <li><a href="#"><span><i class="icon-smartphone-1"></i></span> 01562 74 7727</a></li>
-                                    <li><a href="#"><span><i class="icon-mail-2"></i></span>Info@Tastyland.Co.Uk</a></li>
+                                    <li><a href="#"><span><i class="icon-smartphone-1"></i></span>01262 671736 / 01262 674 628</a></li>
+                                    <li><a href="#"><span><i class="icon-mail-2"></i></span>info@masalabridlington.co.uk</a></li>
                                     <li><a href="#" class="address-link">
                                         <span><i class="icon-placeholder"></i></span>
-                                        <span class="address">Worcestershire Country 31A Comberton Hill, Kidderminster DY10 1QN, UK</span>
+                                        <span class="address">10-11 Marlborough terrace Bridlington, Y015 2PA</span>
                                     </a></li>
                                 </ul>
                             </div>
@@ -45,22 +45,16 @@
                                 <h3>Opening Hours</h3>
                                 <ul class="Opening-hours">
                                     <li>
-                                        <strong><a href="#">Monday - Tuesday</a></strong>
+                                        <strong><a href="#">Sunday - Thursday</a></strong>
                                     </li>
                                     <li>
-                                        <a href="#">11AM - 11PM</a>
-                                    </li>
-                                    <li>
-                                        <strong><a href="#">Wednesday - Thursday & Sunday</a></strong>
-                                    </li>
-                                    <li>
-                                        <a href="#">11AM - 1AM</a>
+                                        <a href="#">5PM - 11PM</a>
                                     </li>
                                     <li>
                                         <strong><a href="#">Friday - Saturday</a></strong>
                                     </li>
                                     <li>
-                                        <a href="#">11AM - 3AM</a>
+                                        <a href="#">5PM - Midnight</a>
                                     </li>
                                 </ul>
                             </div>
