@@ -13928,6 +13928,7 @@ ul {
 
 .header-bottom-section {
   padding: 10px 0px 10px 0px;
+  background-color: #000;
 }
 
 .header-bottom-section .main-menu .order-now a {
@@ -13936,7 +13937,7 @@ ul {
 
 .header-bottom-section .main-menu a {
   font-size: 14px;
-  color: #000 !important;
+  color: #fff !important;
 }
 
 .header-bottom-section .main-menu ul {

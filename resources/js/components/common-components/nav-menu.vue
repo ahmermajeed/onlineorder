@@ -38,7 +38,8 @@
                             <div class="col-6 col-md-3">
                                 <router-link :to="{ path: '/'}">
                                      <a class="navbar-brand js-scroll-trigger main-logo" href="javascript:;">
-                                        <span>Masala Indian Cuisine</span>
+                                        <!-- <span>Masala Indian Cuisine</span> -->
+                                        <img src="/images/masala-logo-1.png" alt="">
                                     </a>
                                 </router-link>
                             </div>

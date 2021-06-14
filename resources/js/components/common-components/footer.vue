@@ -19,9 +19,7 @@
                             <div class="col-lg-6 col-md-6 footer-section-2 order-3 order-md-2 footer-logo">
                                 <div class="text-center">
                                    <a href="#">
-                                        <span>
-                                            Masala Indian Cuisine
-                                        </span>
+                                        <img src="/images/masala-logo.png" alt="">
                                     </a>
                                 </div>
                                 <div class="footer-menu text-center">
