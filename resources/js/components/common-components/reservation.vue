@@ -38,14 +38,14 @@
 		                            </div>
 		                            <div class="col-md-3">
 		                                <label for="">&nbsp;</label>
-		                                <button class="btn btn-rounded-danger btn-block">
+		                                <button class="btn btn-rounded-danger btn-block" v-on:click="seen = !seen">
 		                                    Book Your Table
 		                                </button>
 		                            </div>
 		                        </div>
 		                    </div>
 
-		                    <div class="select-reservation-time boxed">
+		                    <div class="select-reservation-time boxed" v-if="seen" id="hide">
 		                        <h6>Select a Time:</h6>
 		                        <input type="radio" id="time1" name="time" value="time1" @change="showDinerDetail" v-model="dinerDetailsTime">
 		                        <label for="time1"><i class="fas fa-clock mr-2"></i>7:30 PM</label>
@@ -168,7 +168,8 @@
                 time2: null,
                 timerCount: 60,
                 dinerDetails: false,
-                dinerDetailsTime:''
+                dinerDetailsTime:'',
+                seen: false
             };
         },
         mounted() {
