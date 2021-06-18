@@ -457,10 +457,14 @@
 
                     </div>
                 </div>
-
             </div>
-
         </section>
+
+        
+
+        <reservation></reservation>
+
+
         <section class="section-fullwidth deal-section">
             <div class="container">
                 <div class="deal-content">
@@ -498,7 +502,6 @@
                 <div class="table-booked pattern">
                     <div class="row">
                         <div class="col-lg-3 col-md-2 col-sm-1">
-                              <!--   <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2429.2156154533595!2d-1.822215984654894!3d52.49333647980907!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4870bae64827134d%3A0x2e1a51de3c022c50!2s888a%20Washwood%20Heath%20Rd%2C%20Ward%20End%2C%20Birmingham%20B8%202NB%2C%20UK!5e0!3m2!1sen!2s!4v1592827053509!5m2!1sen!2s" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0" width="100%" height="450"></iframe> -->
                         </div>
                         <div class="col-lg-6 col-md-8 col-sm-12">
                             <div class="form-box">
@@ -574,7 +577,7 @@
                 showPopup: false,
                 menu: false,
                 showPostalCode: false,
-                allergy: false
+                allergy: false,
             };
         },
         mounted() {
@@ -591,14 +594,18 @@
                         _this.loading  = false;
                     });
             },
+
             openPostalCode() {
                 this.showPostalCode = true;
             },
-             hideModal() {
+
+            hideModal() {
                 this.showPostalCode = false;
             },
 
-        }
+            
+            },
+     
     }
 </script>
 

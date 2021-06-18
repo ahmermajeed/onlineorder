@@ -52,6 +52,9 @@
 
                                         <li class="nav-item active"> <router-link :to="{ path: '/'}"><a class="nav-link js-scroll-trigger" href="#about">Home</a></router-link></li>
                                         <li class="nav-item "> <router-link :to="{ path: '/feedback'}"><a class="nav-link js-scroll-trigger" >Feedback</a></router-link></li>
+
+                                        <li class="nav-item "> <router-link :to="{ path: '/reservation-table'}"><a class="nav-link js-scroll-trigger" >Reservation</a></router-link></li>
+                                        
                                         <li class="nav-item">
                                             <div class="order-now">
                                                 <a href="#" class="btn btn-rounded-default btn-rounded-danger"  @click.prevent="openPostalCode"> Order Online</a>
@@ -107,7 +110,9 @@
                 </div>
             </div>
             <!-- </nav> -->
-            <div class="header-bottom section-fullwidth" v-if="this.$route.name !='online-order'">
+            <div class="header-bottom section-fullwidth" 
+            v-if="this.$route.name !='online-order' &&
+                  this.$route.name !='reservation-table'">
                 <div class="container">
                     <div class="row">
                         <div class="col-lg-4 col-xl-5">
