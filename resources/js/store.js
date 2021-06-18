@@ -19,9 +19,13 @@ export default new Vuex.Store({
        getAllCartArray(state){
            return     state.cartArray;
        },
-       getDeliveryCharges(state){
-           return state.delivery_charges;
-       },
+        getDeliveryCharges(state){
+            if (state.delivery_charges == "" || state.delivery_charges == null) {
+                return localStorage.getItem('delivery_charges');
+            } else {
+                return state.delivery_charges;
+            }
+        },
        getPostalCode(state){
            return state.postal_code;
        },
@@ -47,6 +51,7 @@ export default new Vuex.Store({
             state.cartArray = data;
         },
         setDeliveryCharges(state,data){
+            localStorage.setItem('delivery_charges', data);
             state.delivery_charges = data
         },
         setPostalCode(state,data){

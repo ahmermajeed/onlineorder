@@ -1,20 +1,20 @@
 <template>
     <div>
-        <b-modal 
-            id="postal-code-popup"  
-            @hidden="onHidden" 
-            centered  
-            ok-variant="primary" 
-            title-tag="h4"  
-            title="Choose your order type" 
-            :hide-footer=true  
+        <b-modal
+            id="postal-code-popup"
+            @hidden="onHidden"
+            centered
+            ok-variant="primary"
+            title-tag="h4"
+            title="Choose your order type"
+            :hide-footer=true
             size="sm"
-            ref="myModalRef" 
-            custom-modal 
-            no-close-on-backdrop 
+            ref="myModalRef"
+            custom-modal
+            no-close-on-backdrop
             modal-class="postal-code-modal custom-modal">
 
-      
+
 
             <div class="form-cart order-selection">
                 <label><span>Choose your order type:</span></label>
@@ -39,7 +39,7 @@
                         <input type="text"  class="form-control" v-model="postal_code" placeholder="Enter your Postcode">
                     </div>
 
-             
+
 
                     <button type="button" class="btn btn-rounded-default btn-rounded-danger"  v-on:click="checkPostCode">
                         <span>Submit! <i class="fas fa-long-arrow-alt-right"></i></span>
@@ -51,7 +51,7 @@
             </div>
 
 
-            
+
 
         </b-modal>
     </div>
@@ -90,7 +90,7 @@
                 this.order_type = ''
                 },
 
- 
+
  checkPostCode(){
 
             let vm = this;
@@ -119,7 +119,8 @@
                     }).then(function (response) {
                         if(response.data.error === undefined){
                             vm.error_message = response.data.data.amount;
-                            vm.$store.commit('setDeliveryCharges', response.data.data.amount);
+                             response.data.data.fix_delivery_charges
+                            vm.$store.commit('setDeliveryCharges', response.data.data.fix_delivery_charges);
                             vm.$store.commit('setOrderType', vm.order_type);
                             vm.$store.commit('setPostalCode', vm.postal_code);
                             vm.$router.push({path: 'online-order'})
@@ -148,7 +149,7 @@
              else
                  self.showPostal = false
          }
-         
+
         },
         watch: {
             showModalProp(value) {

@@ -35,7 +35,7 @@
                            </select>
                            <br>
                        </div>
-          
+
 
 
                        <div class="col-12">
@@ -197,6 +197,13 @@
                                <span>  {{discountedAmount}} </span>
                            </li>
 
+
+
+                           <li v-if="delivery_fees > 0">
+                               <span>Delivery Fees</span>
+                               <span>  £ {{delivery_fees}} </span>
+                           </li>
+
                            <li>
                                <span>Total</span>
                                <span>£{{priceFormat(finalAmount)}}</span>
@@ -257,13 +264,14 @@
                 finalAmount:0,
                 orderType:'',
                 interval: 45,
-                slots:[]
+                slots:[],
+                delivery_fees: this.$store.getters.getDeliveryCharges == 'undefined' ? 0 : this.$store.getters.getDeliveryCharges,
             };
         },
         created(){
             this.getTimeSlots();
         },
-        
+
         mounted() {
             if(this.$store.getters.getAllCartArray.length > 0) {
                 let total = 0;
@@ -381,7 +389,7 @@
                     let data = {
                         'user_id': 11,
                         'total_amount_with_fee': this.total_amount - this.discountedAmount,
-                        'delivery_fees': '0',
+                        'delivery_fees': this.delivery_fees,
                         'discounted_amount': this.discountedAmount,
                         'payment': 'cod',
                         'delivery_address': vm.form.address + " " + vm.form.street + " " + vm.form.postal_code,
@@ -450,7 +458,14 @@
                         this.discountedAmount =  (sum/100 * this.discountedPercentAge).toFixed(2)
                     }
 
-                    this.finalAmount =   this.total_amount - this.discountedAmount
+
+
+                    if(localStorage.getItem('order_type') === "Pickup"){
+                        this.finalAmount =   this.total_amount - this.discountedAmount;
+                    }else {
+                        this.finalAmount =   this.total_amount + this.delivery_fees - this.discountedAmount;
+                    }
+
 
                 }
                 return this.$store.getters.getAllCartArray;
@@ -461,5 +476,5 @@
 
 
 <style>
-    
+
 </style>
