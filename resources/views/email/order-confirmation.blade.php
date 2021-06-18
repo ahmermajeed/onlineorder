@@ -10,16 +10,16 @@
     <title></title>
     <!--[if (mso 16)]>
     <style type="text/css">
-        a {text-decoration: none;}
+    a {text-decoration: none;}
     </style>
     <![endif]-->
     <!--[if gte mso 9]><style>sup { font-size: 100% !important; }</style><![endif]-->
     <!--[if gte mso 9]>
     <xml>
-        <o:OfficeDocumentSettings>
-            <o:AllowPNG></o:AllowPNG>
-            <o:PixelsPerInch>96</o:PixelsPerInch>
-        </o:OfficeDocumentSettings>
+    <o:OfficeDocumentSettings>
+        <o:AllowPNG></o:AllowPNG>
+        <o:PixelsPerInch>96</o:PixelsPerInch>
+    </o:OfficeDocumentSettings>
     </xml>
     <![endif]-->
     <!--[if !mso]><!-- -->
@@ -31,7 +31,7 @@
 <div class="es-wrapper-color">
     <!--[if gte mso 9]>
     <v:background xmlns:v="urn:schemas-microsoft-com:vml" fill="t">
-        <v:fill type="tile" color="#eeeeee"></v:fill>
+    <v:fill type="tile" color="#eeeeee"></v:fill>
     </v:background>
     <![endif]-->
     <table class="es-wrapper" width="100%" cellspacing="0" cellpadding="0">
@@ -88,7 +88,7 @@
                                                         <tbody>
                                                         <tr>
                                                             <td class="esd-block-text es-m-txt-c" align="left">
-                                                                <h1 style="color: #ffffff; line-height: 100%;">PapaGes</h1>
+                                                                <h1 style="color: #ffffff; line-height: 100%;">Pizza Passions.</h1>
                                                             </td>
                                                         </tr>
                                                         </tbody>
@@ -228,9 +228,13 @@
                                                                             <p> £ <?php  echo $v['single_product_total_amount'] ?> </p>
                                                                         </td>
                                                                     </tr>
+
                                                                     <?php  } ?>
+
                                                                     </tbody>
+
                                                                 </table>
+
                                                             </td>
                                                         </tr>
                                                         </tbody>
@@ -312,7 +316,7 @@
                                             </tbody>
                                         </table>
                                         <!--[if mso]></td><td width="20"></td><td width="255" valign="top"><![endif]-->
-{{--                                        estimated--}}
+                                        {{--                                        estimated--}}
 {{--                                        <table class="es-right" cellspacing="0" cellpadding="0" align="right">--}}
 {{--                                            <tbody>--}}
 {{--                                            <tr>--}}

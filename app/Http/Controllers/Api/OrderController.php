@@ -8,6 +8,7 @@ use App\Data\Models\UserDevices;
 use App\Data\Repositories\OrderRepository;
 use App\Http\Controllers\Controller;
 use App\PayPal;
+use Cartalyst\Stripe\Exception\CardErrorException;
 use Edujugon\PushNotification\PushNotification;
 use Illuminate\Http\Request;
 use Omnipay\Common\CreditCard;
@@ -87,15 +88,15 @@ class OrderController extends Controller
             'cvvNumber' => 'required_if:payment,credit_card'
         ]);
 
-        foreach ($requestData['order_details'] as $key => $value){
-            if($value['product_type'] == 'product'){
-                $product = Products::where('id',$value['product_id'])->select('id_category')->first();
-                if(isset($categories[$product->id_category])){
-                    $requestData['order_details'][$key]['product_name'] = $categories[$product->id_category]." ".$value['product_name'];
-                }
-            }
-
-        }
+//        foreach ($requestData['order_details'] as $key => $value){
+//            if($value['product_type'] == 'product'){
+//                $product = Products::where('id',$value['product_id'])->select('id_category')->first();
+//                if(isset($categories[$product->id_category])){
+//                    $requestData['order_details'][$key]['product_name'] = $categories[$product->id_category]." ".$value['product_name'];
+//                }
+//            }
+//
+//        }
 
         if ($validator->fails()) {
             $code = 401;
@@ -108,6 +109,10 @@ class OrderController extends Controller
 
             if($charge['status'] == "succeeded")
                 $data = $this->_repository->placeOrder($requestData);
+            else
+                $code = 401;
+            $output = ['error' => ['code' => 401, 'message' => $charge['message']]];
+            return response()->json($output, $code);
 
         } else {
             $data = $this->_repository->placeOrder($requestData);
@@ -117,6 +122,7 @@ class OrderController extends Controller
 
             $requestData['user_id'] = $data['user_id'];
             $requestData['phone_number'] = $data['phone_number'];
+            $requestData['total_amount'] = $requestData['total_amount_with_fee'];
 
             $this->sendNotification($data);
         }
@@ -128,6 +134,7 @@ class OrderController extends Controller
     /** Send Push Notification */
     public function sendNotification($data)
     {
+
         $devices = UserDevices::get()->pluck('device_token')->toArray();
 
         $push = new PushNotification('fcm');
@@ -137,7 +144,11 @@ class OrderController extends Controller
                 'title' => 'This is the title',
                 'body' => 'New order has been placed to your restaurant',
                 'sound' => 'default',
-                'order_id' => $data->id
+                'order_id' => $data->id,
+                'total_amount'=> $data->total_amount_with_fee,
+                'reference'=>$data->reference,
+                'order_type'=> $data->order_type,
+                'payment'=>$data->payment,
             ]
         ])->setDevicesToken($devices)->send();
 
@@ -151,39 +162,37 @@ class OrderController extends Controller
         try {
             $token = $stripe->tokens()->create([
                 'card' => [
-                    'number' => $data['card_no'],
-                    'exp_month' => $data['ccExpiryMonth'],
-                    'exp_year' => $data['ccExpiryYear'],
-                    'cvc' => $data['cvvNumber'],
+                    'number' => $data['user_data']['card_number'],
+                    'exp_month' => $data['user_data']['expiration_month'],
+                    'exp_year' => $data['user_data']['expiration_year'],
+                    'cvc' => $data['user_data']['cvc'],
                 ],
             ]);
 
             if (!isset($token['id'])) {
-                return redirect()->route('addmoney.paymentstripe');
+
+                $data["status"] = "declined";
+                $data["message"] = "invalid API key";
+
+                return $data;
             }
+
             $charge = $stripe->charges()->create([
                 'card' => $token['id'],
                 'currency' => 'GBP',
                 'amount' => $data['total_amount_with_fee'],
-                'description' => 'wallet',
+                'description' => 'fakeaway online order',
             ]);
 
-            if ($charge['status'] == 'succeeded') {
-                return  ["status" => $charge['status'], "data" => $charge];
-     //           return redirect()->route('addmoney.paymentstripe');
-            } else {
-                \Session::put('error', 'Money not add in wallet!!');
-                return redirect()->route('addmoney.paymentstripe');
-            }
-        } catch (Exception $e) {
-            \Session::put('error', $e->getMessage());
-            return redirect()->route('addmoney.paymentstripe');
-        } catch (\Cartalyst\Stripe\Exception\CardErrorException $e) {
-            \Session::put('error', $e->getMessage());
-            return redirect()->route('addmoney.paywithstripe');
-        } catch (\Cartalyst\Stripe\Exception\MissingParameterException $e) {
-            \Session::put('error', $e->getMessage());
-            return redirect()->route('addmoney.paymentstripe');
+            return $charge;
+
+        } catch (Exception | CardErrorException | MissingParameterException $e) {
+
+            $data["status"] = "declined";
+            $data["message"] = $e->getMessage();
+
+            return $data;
+
         }
 
     }
@@ -199,11 +208,11 @@ class OrderController extends Controller
             'expiryMonth'           => $requestData['user_data']['expiration_month'],
             'expiryYear'            => $requestData['user_data']['expiration_year'],
             'cvv'                   => $requestData['user_data']['cvc'],
-           /* 'billingAddress1'       => '1 Scrubby Creek Road',
-            'billingCountry'        => 'AU',
-            'billingCity'           => 'Scrubby Creek',
-            'billingPostcode'       => '4999',
-            'billingState'          => 'QLD',*/
+            /* 'billingAddress1'       => '1 Scrubby Creek Road',
+             'billingCountry'        => 'AU',
+             'billingCity'           => 'Scrubby Creek',
+             'billingPostcode'       => '4999',
+             'billingState'          => 'QLD',*/
         ));
 
         $response = $paypal->purchase([

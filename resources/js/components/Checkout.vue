@@ -30,8 +30,8 @@
                        <div class="col-sm-12">
                            <label>{{orderType}} Date</label>
                            <select class="form-control" v-model="form.deliveryTime">
-                               <option>As soon as possible</option>
-                               <option v-for="slot in slots">{{slot}}</option>
+                               <option value="ASAP">ASAP</option>
+                               <option :value="slot" v-for="slot in slots">{{slot}}</option>
                            </select>
                            <br>
                        </div>
@@ -250,7 +250,7 @@
                     expiration_month:'',
                     expiration_year:'',
                     cvc:'',
-                    deliveryTime: '',
+                    deliveryTime: 'ASAP',
                     asap: ''
                 },
                 foods: [{ text: 'Select One', value: null }, 'Carrots', 'Beans', 'Tomatoes', 'Corn'],
@@ -282,7 +282,9 @@
             var twentyMinutesLater = new Date();
             twentyMinutesLater.setMinutes(twentyMinutesLater.getMinutes() + 50);
 
-            this.form.deliveryTime = twentyMinutesLater;
+            console.log(this.form.deliveryTime)
+
+            //this.form.deliveryTime = twentyMinutesLater;
 
             this.orderType = this.$store.getters.getOrderType;
 
