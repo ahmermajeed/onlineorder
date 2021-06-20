@@ -9,6 +9,7 @@ use App\Http\Controllers\Controller;
 use App\Http\Requests\PrinterStoreRequest;
 use Illuminate\Http\Request;
 use Symfony\Component\HttpFoundation\Response;
+use Validator;
 
 class PrintersController extends Controller
 {
