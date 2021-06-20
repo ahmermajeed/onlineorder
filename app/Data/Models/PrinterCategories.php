@@ -12,6 +12,8 @@ class PrinterCategories extends Model
 
     protected $with = ['category'];
 
+    public $timestamps = false;
+
     public function category()
     {
         return $this->hasOne(Category::class,'id','id_category');
