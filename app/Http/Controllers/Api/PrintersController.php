@@ -101,7 +101,6 @@ class PrintersController extends Controller
 
         $validator =  Validator::make($requestData, [
             'id' => 'required|exists:printers,id',
-            'price' => 'required'
         ]);
 
         if ($validator->fails()) {
