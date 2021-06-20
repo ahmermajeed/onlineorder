@@ -51,7 +51,7 @@ class PrinterRepository
             PrinterCategories::where('id_printer', $id)->delete();
 
             foreach ($request['categories'] as $input) {
-                PrinterCategories::create(['id_printer' => $printer->id, 'id_category' => $input]);
+                PrinterCategories::create(['id_printer' => $id, 'id_category' => $input]);
             }
         }
 
