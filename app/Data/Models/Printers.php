@@ -8,7 +8,7 @@ class Printers extends Model
 {
     protected $table = 'printers';
 
-    protected $fillable = ['name', 'ip', 'default', 'status'];
+    protected $fillable = ['name', 'ip', 'default', 'status', 'print_count'];
 
     protected $with = ['categories'];
 
