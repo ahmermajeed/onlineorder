@@ -54,7 +54,7 @@ class PrintersController extends Controller
         if($printer->id) {
             if (count($requestData['categories']) > 0) {
                 foreach ($requestData['categories'] as $input) {
-                    PrinterCategories::create(['id_printer' => $printer->id]);
+                    PrinterCategories::create(['id_printer' => $printer->id, 'id_category' => $input]);
                 }
             }
         }
