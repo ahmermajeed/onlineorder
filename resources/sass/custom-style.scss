@@ -426,7 +426,7 @@ ul {
     }
 }
 .header-bottom {
-    background-image: url('images/tasty-land/banner.jpeg');
+    background-image: url('images/tasty-land/banner1.jpeg');
     background-repeat: no-repeat;
     background-size: cover;
     height: 570px;
@@ -649,7 +649,7 @@ ul {
 }
 
 .rating-area {
-    background-image: url('images/tasty-land/deliverys.jpg');
+    background-image: url('images/tasty-land/banner-sm.jpeg');
     background-repeat: no-repeat;
     background-position: top;
     color: #fff;
@@ -709,7 +709,7 @@ ul {
         }
 
         strong {
-            color: #000;
+            color: #fff;
             line-height: 45px;
 
             @include media-breakpoint-down(sm) {

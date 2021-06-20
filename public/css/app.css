@@ -14189,7 +14189,7 @@ ul {
 }
 
 .header-bottom {
-  background-image: url(/images/banner.jpeg?d33c08a844017f047dda7bc44f58492f);
+  background-image: url(/images/banner1.jpeg?da53eb62b6028fc953efa975f08347a5);
   background-repeat: no-repeat;
   background-size: cover;
   height: 570px;
@@ -14464,7 +14464,7 @@ ul {
 }
 
 .rating-area {
-  background-image: url(/images/deliverys.jpg?930aee08d6d87a272b68294c17e96b0c);
+  background-image: url(/images/banner-sm.jpeg?1a5fdfce9a55e694f977e88d20ed5c80);
   background-repeat: no-repeat;
   background-position: top;
   color: #fff;
@@ -14534,7 +14534,7 @@ ul {
 }
 
 .rating-area .located-num strong {
-  color: #000;
+  color: #fff;
   line-height: 45px;
 }
 
