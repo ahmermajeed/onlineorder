@@ -14,7 +14,7 @@ class Orders extends Model
 
     protected $with = ['details'];
 
-    protected $fillable = ['reference', 'user_id', 'total_amount_with_fee', 'delivery_fees', 'payment', 'delivery_address', 'order_type', 'status','discounted_amount'];
+    protected $fillable = ['reference', 'user_id', 'total_amount_with_fee', 'delivery_fees', 'payment', 'delivery_address', 'order_type', 'status','discounted_amount', 'is_pos'];
 
     public function details()
     {

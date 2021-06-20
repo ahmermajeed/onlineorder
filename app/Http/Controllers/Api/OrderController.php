@@ -67,7 +67,6 @@ class OrderController extends Controller
 
     public function placeOrder(Request $request)
     {
-        $categories = [24=>'SMALL PIZZA',25=>'MEDIUM PIZZA',26=>'LARGE PIZZA'];
         $requestData = $request->all();
 
         $validator = Validator::make($requestData, [
@@ -86,16 +85,6 @@ class OrderController extends Controller
             'ccExpiryYear' => 'required_if:payment,credit_card',
             'cvvNumber' => 'required_if:payment,credit_card'
         ]);
-
-//        foreach ($requestData['order_details'] as $key => $value){
-//            if($value['product_type'] == 'product'){
-//                $product = Products::where('id',$value['product_id'])->select('id_category')->first();
-//                if(isset($categories[$product->id_category])){
-//                    $requestData['order_details'][$key]['product_name'] = $categories[$product->id_category]." ".$value['product_name'];
-//                }
-//            }
-//
-//        }
 
         if ($validator->fails()) {
             $code = 401;
@@ -148,6 +137,7 @@ class OrderController extends Controller
                 'reference'=>$data->reference,
                 'order_type'=> $data->order_type,
                 'payment'=>$data->payment,
+                'is_pos' => $data->is_pos
             ]
         ])->setDevicesToken($devices)->send();
 
