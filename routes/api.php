@@ -86,3 +86,6 @@ Route::get('get-time-slots/{duration}','Api\DeliveryChargesController@getTimeSlo
 Route::post('register', 'UserController@register');
 
 Route::resource('tableReservation', 'Api\TableReservationController');
+
+/** Printer Routes */
+Route::resource('printers', 'Api\PrintersController');
