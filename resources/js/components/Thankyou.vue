@@ -1,6 +1,6 @@
 <template>
     <div>
-        <header-menu></header-menu>
+<!--        <header-menu></header-menu>-->
         <section class="inner-section">
             <div class="container">
                 <div class="row">
@@ -11,7 +11,7 @@
                 </div>
             </div>
         </section>
-        <footer-menu></footer-menu>
+<!--        <footer-menu></footer-menu>-->
     </div>
 </template>
 

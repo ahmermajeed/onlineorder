@@ -1,6 +1,6 @@
 <template>
     <div>
-        <header-menu></header-menu>
+<!--        <header-menu></header-menu>-->
 
         <section class="inner-section check-out-page">
         <div class="loading" v-if="loading">Loading&#8230;</div>
@@ -27,46 +27,46 @@
 
 
 
-                       <div class="col-sm-12">
-                           <label>{{orderType}} Date</label>
-                           <select class="form-control" v-model="form.deliveryTime">
-                               <option>As soon as possible</option>
-                               <option v-for="slot in slots">{{slot}}</option>
-                           </select>
-                           <br>
-                       </div>
-          
+<!--                       <div class="col-sm-12">-->
+<!--                           <label>{{orderType}} Date</label>-->
+<!--                           <select class="form-control" v-model="form.deliveryTime">-->
+<!--                               <option>As soon as possible</option>-->
+<!--                               <option v-for="slot in slots">{{slot}}</option>-->
+<!--                           </select>-->
+<!--                           <br>-->
+<!--                       </div>-->
+
 
 
                        <div class="col-12">
 
 
 
-                           <div class="row" v-show="orderType != 'Pickup'">
+<!--                           <div class="row" v-show="orderType != 'Pickup'">-->
 
 
-                               <div class="col-12">
-                                   <h3> Delivery Details</h3>
-                               </div>
-                               <div class="col-sm-6">
-                                   <label>Address </label>
-                                   <input type="text"  name="address" required   v-model="form.address" class="form-control" placeholder="Address">
-                               </div>
+<!--                               <div class="col-12">-->
+<!--                                   <h3> Delivery Details</h3>-->
+<!--                               </div>-->
+<!--                               <div class="col-sm-6">-->
+<!--                                   <label>Address </label>-->
+<!--                                   <input type="text"  name="address" required   v-model="form.address" class="form-control" placeholder="Address">-->
+<!--                               </div>-->
 
-                               <div class="col-sm-6">
-                                   <label>Street *</label>
-                                   <input type="text"  v-model="form.street" class="form-control" placeholder="street">
-                               </div>
-                               <div class="col-sm-6">
-                                   <label  class="col-form-label">Town *</label>
-                                   <input type="text"  v-model="form.town" class="form-control" placeholder="abc town">
-                               </div>
+<!--                               <div class="col-sm-6">-->
+<!--                                   <label>Street *</label>-->
+<!--                                   <input type="text"  v-model="form.street" class="form-control" placeholder="street">-->
+<!--                               </div>-->
+<!--                               <div class="col-sm-6">-->
+<!--                                   <label  class="col-form-label">Town *</label>-->
+<!--                                   <input type="text"  v-model="form.town" class="form-control" placeholder="abc town">-->
+<!--                               </div>-->
 
-                               <div class="col-sm-6 mb-2">
-                                   <label  class="col-form-label">Postal Code *</label>
-                                   <input type="text"   v-model="form.postal_code" class="form-control" placeholder="wc2h 9ah">
-                               </div>
-                           </div>
+<!--                               <div class="col-sm-6 mb-2">-->
+<!--                                   <label  class="col-form-label">Postal Code *</label>-->
+<!--                                   <input type="text"   v-model="form.postal_code" class="form-control" placeholder="wc2h 9ah">-->
+<!--                               </div>-->
+<!--                           </div>-->
 
 
                        </div>
@@ -213,7 +213,7 @@
             </div>
         </div>
         </section>
-        <footer-menu></footer-menu>
+<!--        <footer-menu></footer-menu>-->
 
     </div>
 </template>
@@ -243,7 +243,7 @@
                     expiration_month:'',
                     expiration_year:'',
                     cvc:'',
-                    deliveryTime: '',
+                    deliveryTime: 'As soon as possible',
                     asap: ''
                 },
                 foods: [{ text: 'Select One', value: null }, 'Carrots', 'Beans', 'Tomatoes', 'Corn'],
@@ -263,7 +263,7 @@
         created(){
             this.getTimeSlots();
         },
-        
+
         mounted() {
             if(this.$store.getters.getAllCartArray.length > 0) {
                 let total = 0;
@@ -372,11 +372,10 @@
                     _this.scrollToTop();
                 } else {
                     let vm = this;
-                    if (vm.orderType == 'Pickup') {
+                    // if (vm.orderType == 'Pickup') {
                         vm.form.address = '---';
                         vm.form.street = '---';
                         vm.form.postal_code = '---';
-                    }
 
                     let data = {
                         'user_id': 11,
@@ -387,7 +386,8 @@
                         'delivery_address': vm.form.address + " " + vm.form.street + " " + vm.form.postal_code,
                         'order_details': this.$store.getters.getAllCartArray,
                         'user_data': this.form,
-                        'order_type': vm.orderType
+                        'order_type': "Collection",//vm.orderType,
+                        'is_pos':0
                     };
                     console.log(data);
                     setTimeout(() => {
@@ -461,5 +461,5 @@
 
 
 <style>
-    
+
 </style>

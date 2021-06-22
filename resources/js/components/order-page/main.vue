@@ -1,6 +1,6 @@
 <template>
     <div>
-        <header-menu></header-menu>
+<!--        <header-menu></header-menu>-->
         <section class="inner-section main-popup-section" id="product-scroll">
             <div class="container" >
                 <div class="row">
@@ -10,7 +10,7 @@
                                 <div class="lp-sidebar-title cate-heading">
                                     <h3>Categories</h3>
                                 </div>
-                                
+
                                 <div class="list-group list-group-flush cate-list">
                                     <a href="#"   @click.prevent="getProductAgainstCategories(false)" class="list-group-item">All<span class="float-right badge badge-light round"></span> </a>
 
@@ -20,7 +20,10 @@
                             </div>
                         </div>
                     </div>
+
+
                     <div class="col-lg-5 col-md-8 col-sm-12">
+                        <p  class="mb-4"  style="text-align:center">Table Number {{table_number}}</p>
                         <div class="product-list order-product">
                             <!--                            for products-->
                             <div class="product"  v-for="(item, index) in products" v-if="item.products.length">
@@ -84,26 +87,26 @@
                             </div>
 
                             <form class="form-cart">
-                                 <div class="switch-field">
-                                     <input type="radio" v-model="orderType" @change="showPostalCode" id="radio-one" name="switch-one"
-                                            value="Delivery"/>
-                                     <label for="radio-one">
-                                         <img src="/images/delivery.png" alt="">
-                                         </i>Delivery
-                                         <span>30 - 45 mins</span></label>
-                                     <input type="radio" v-model="orderType" @change="showPostalCode" id="radio-two" name="switch-one"
-                                            value="Pickup"/>
-                                     <label for="radio-two">
-                                         <img src="/images/shopping-basket.png" alt="">
-                                         Collection
-                                         <span>20 mins</span></label>
-                                 </div>
+<!--                                 <div class="switch-field">-->
+<!--                                     <input type="radio" v-model="orderType" @change="showPostalCode" id="radio-one" name="switch-one"-->
+<!--                                            value="Delivery"/>-->
+<!--                                     <label for="radio-one">-->
+<!--                                         <img src="/images/delivery.png" alt="">-->
+<!--                                         </i>Delivery-->
+<!--                                         <span>30 - 45 mins</span></label>-->
+<!--                                     <input type="radio" v-model="orderType" @change="showPostalCode" id="radio-two" name="switch-one"-->
+<!--                                            value="Pickup"/>-->
+<!--                                     <label for="radio-two">-->
+<!--                                         <img src="/images/shopping-basket.png" alt="">-->
+<!--                                         Collection-->
+<!--                                         <span>20 mins</span></label>-->
+<!--                                 </div>-->
 
-                                <div class="form-group" style="position: relative; top: 12px;" v-if="showPostal">
-                                    <label for=""><span>Enter your Postcode:</span></label>
-                                    <input type="text"  class="form-control" v-model="postalCode" placeholder="Enter your Postcode">
-                                    <p style="color:red;font-size: 11px;margin-top: 5px;">{{errorMessage}} </p>
-                                </div>
+<!--                                <div class="form-group" style="position: relative; top: 12px;" v-if="showPostal">-->
+<!--                                    <label for=""><span>Enter your Postcode:</span></label>-->
+<!--                                    <input type="text"  class="form-control" v-model="postalCode" placeholder="Enter your Postcode">-->
+<!--                                    <p style="color:red;font-size: 11px;margin-top: 5px;">{{errorMessage}} </p>-->
+<!--                                </div>-->
 
                             </form>
 
@@ -121,15 +124,15 @@
                                                     <strong>{{extra.group_name}}:</strong> {{extra.choice}}
                                                 </div>
                                             </td>
-<!-- 
+<!--
                                             <td  v-if="!cart.extras" class="p-0">£ {{priceFormat(cart.price * cart.quantity) }}</td> -->
-                                            
+
                                             <!-- <td >£{{priceFormat(cart.single_product_total_amount)}} </td> -->
-                                               
+
                                          <!--    <td class="order-quty">
 
-                                           
-                                                
+
+
                                             </td> -->
                                             <td>
                                                 <span v-if="!cart.extras" class="p-0">
@@ -147,22 +150,22 @@
                                                             <a class="icon-up"  href="#" @click.prevent="quantityAddInCart(product_index)"> <i class="icon-plus"  ></i></a>
                                                             <span class="text-center">{{ cart.quantity}}  <!-- <i>X</i> --></span>
                                                             <a  class="icon-down"  href="#"  @click.prevent="quantityMinusInCart(product_index)"> <i class="icon-subtract"></i></a>
-                                                        </div> 
+                                                        </div>
                                                    </span>
-                                                
-                                            </td>
-                                     
-                                            
 
-                                            
+                                            </td>
+
+
+
+
                                         </tr>
                                     </table>
                                 </div>
                                 <div class="cart-btn mt-3 mb-3 text-center">
                                      <button class="anima-btn custom-btn move-eff btn btn-rounded-danger" @click="placeOrder()"><span>Checkout</span> <!-- <i class="fas fa-long-arrow-alt-right"></i> --></button>
-                                </div> 
+                                </div>
                             </div>
-                            
+
                         </div>
                         <div class="mobile-cart-button" v-bind:class="{ cartheight: cart_height }" v-if="getAllCartArray.length > 1">
                 <div class="inner">
@@ -172,7 +175,7 @@
                     <span class="products-value">£{{priceFormat(total_amount)}}</span>
                     <span class="text" @click="opencartlist()">Checkout</span>
 
-                    
+
                 </div>
                 <ul v-for="(cart, product_index) in getAllCartArray"  v-if="product_index  > 0">
                     <li>
@@ -236,24 +239,24 @@
                     </svg>{{getAllCartArray.length - 1}}
                      <span class="products-value">£{{priceFormat(total_amount)}}</span>
                 </span>
-                   
+
                     <span class="text chek-out-btn btn btn-rounded-danger" @click="opencartlist()">Checkout</span>
-                    
+
                    <!--   <button class=" chek-out-btn anima-btn custom-btn move-eff btn btn-rounded-danger " @click="opencartlist()"><span>Checkout</span><i class="fas fa-long-arrow-alt-right"></i></button>  -->
                 </div>
 <!--                 <div class="mb-cart-box">
                 <ul class="border-all" v-for="(cart, product_index) in getAllCartArray"  v-if="product_index  > 0">
                     <li>
-                       
+
                         <span class="meal">
                              <span class="qty">
                                <i class="fa fa-angle-up" @click="quantityAddInCart(product_index)"></i>
-                              
+
                                <i class="fa fa-angle-down" @click="quantityMinusInCart(product_index)"></i>
                         </span>
                          <h3> {{ cart.quantity}} {{cart.product_name}}</h3>
-                        
-                           
+
+
                             <ul class="" v-if="cart.extras" v-for="(extra, extra_index) in cart.extras">
                                 <li><h3 class="font-weight:800px;">{{extra.group_name}}:
                                 {{extra.choice}}</h3> </li>
@@ -261,17 +264,17 @@
 
                                 <a href="#"  @click="updateProduct(cart.product_id,cart,product_index)"><i v-b-tooltip.hover title="Edit Meal" class="fas fa-pen">
 
-</i></a>       
+</i></a>
                             <span class="price">£{{priceFormat(cart.single_product_total_amount)}}</span>
                               <a href="#"  @click.prevent="removeFromCart(product_index)"> <i                                 v-b-tooltip.hover title="Remove Meal" class="icon-delete"></i></a>
 
-                               
+
                             </span>
-                                
+
                             </ul>
-                            
+
                         </span>
-                       
+
                     </li>
                 </ul>
                 </div> -->
@@ -326,7 +329,7 @@
 
 
 
-        <footer-menu></footer-menu>
+<!--        <footer-menu></footer-menu>-->
     </div>
 
 </template>
@@ -358,7 +361,8 @@
                 showPostal : false,
                 errorMessage:'',
                 orderType:'',
-                error_message:''
+                error_message:'',
+                table_number:0,
             };
         },
         mounted() {
@@ -377,12 +381,14 @@
             this.postalCode = this.$store.getters.getPostalCode;
 
             if(this.orderType == "Delivery") {
-                this.showPostal = true
+
             }
 
             this.scrollToMain();
             window.addEventListener("scroll", this.handleScroll);
 
+           // this.showPostal = false;
+            this.table_number = this.$route.query.table
 
         },
         methods: {
@@ -532,47 +538,47 @@
 
               placeOrder(){
                  let vm = this;
-
-                 if (this.orderType == '') {
-                     vm.errorMessage = 'Please Select Order Type';
-                     setTimeout(function(){ vm.errorMessage = ""; }, 2000);
-                 } else if(this.orderType == 'Delivery' && this.postalCode == "") {
-                     vm.errorMessage = 'Please Enter Your Postcode';
-                     setTimeout(function(){ vm.errorMessage = ""; }, 2000);
-
-                 } else {
-
-                     if(this.orderType === 'Pickup'){
-                         vm.$router.push({name: 'check-out'});
-                     }else {
-                         axios({
-                             method: 'post',
-                             url: '/api/check-postal',
-                             data: {
-                                 order_type: this.orderType,
-                                 postal_code:this.postalCode
-                             },
-                         }).then(function (response) {
-
-                             if(response.data.error === undefined){
-                                 vm.errorMessage = response.data.data.amount;
-                                 vm.$store.commit('setDeliveryCharges', response.data.data.amount);
-                                 vm.$store.commit('setOrderType', vm.orderType);
-                                 vm.$store.commit('setPostalCode', vm.postalCode);
-                                 vm.$router.push({name: 'check-out'})
-
-                             }else {
-                                 vm.errorMessage = 'We are not providing food in your area';
-                             }
-                         })
-                             .catch(function (response) {
-                                 //handle error
-                                 console.log(response);
-                             });
-
-                     }
-
-                 }
+                  vm.$router.push({name: 'check-out'});
+                 // if (this.orderType == '') {
+                 //     vm.errorMessage = 'Please Select Order Type';
+                 //     setTimeout(function(){ vm.errorMessage = ""; }, 2000);
+                 // } else if(this.orderType == 'Delivery' && this.postalCode == "") {
+                 //     vm.errorMessage = 'Please Enter Your Postcode';
+                 //     setTimeout(function(){ vm.errorMessage = ""; }, 2000);
+                 //
+                 // } else {
+                 //
+                 //     if(this.orderType === 'Pickup'){
+                 //         vm.$router.push({name: 'check-out'});
+                 //     }else {
+                 //         axios({
+                 //             method: 'post',
+                 //             url: '/api/check-postal',
+                 //             data: {
+                 //                 order_type: this.orderType,
+                 //                 postal_code:this.postalCode
+                 //             },
+                 //         }).then(function (response) {
+                 //
+                 //             if(response.data.error === undefined){
+                 //                 vm.errorMessage = response.data.data.amount;
+                 //                 vm.$store.commit('setDeliveryCharges', response.data.data.amount);
+                 //                 vm.$store.commit('setOrderType', vm.orderType);
+                 //                 vm.$store.commit('setPostalCode', vm.postalCode);
+                 //                 vm.$router.push({name: 'check-out'})
+                 //
+                 //             }else {
+                 //                 vm.errorMessage = 'We are not providing food in your area';
+                 //             }
+                 //         })
+                 //             .catch(function (response) {
+                 //                 //handle error
+                 //                 console.log(response);
+                 //             });
+                 //
+                 //     }
+                 //
+                 // }
             },
 
 
@@ -1011,7 +1017,7 @@
         background:#fff;
     }
 
-    
+
     #cart-stiky > img {
         max-width:100%;
     }
@@ -1026,7 +1032,7 @@
         background: #ccc;
     }
 
-    
+
 
     .cart .order .table-holder {
         overflow-y: scroll;
@@ -1863,7 +1869,7 @@
         float:right;
     }
 
-    
+
     @-webkit-keyframes spinner {
         0% {
             -webkit-transform: rotate(0deg);
