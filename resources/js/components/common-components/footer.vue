@@ -9,7 +9,7 @@
                                 <h3>Opening Hours</h3>
                                 <ul class="Opening">
                                     <li><a href="#"><span><i class="icon-smartphone-1"></i></span>01262 671736 / 01262 674 628</a></li>
-                                    <li><a href="#"><span><i class="icon-mail-2"></i></span>info@masalabridlington.co.uk</a></li>
+                                    <li><a href="#"><span><i class="icon-mail-2"></i></span>masalabridlington@gmail.com</a></li>
                                     <li><a href="#" class="address-link">
                                         <span><i class="icon-placeholder"></i></span>
                                         <span class="address">10-11 Marlborough terrace Bridlington, Y015 2PA</span>

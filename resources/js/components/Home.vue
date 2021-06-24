@@ -64,7 +64,7 @@
 
                                 </div>
                                 <div class="col-lg-10 col-sm-9 col-md-9 px-1 delivry-content">
-                                    <p>Free Home Delivery<br> In Bridling b/w 5:00pm - 11:00pm</p>
+                                    <p>Free Home Delivery<br> In Bridlington b/w 5:00pm - 11:00pm</p>
 
                                 </div>
 

@@ -13,7 +13,7 @@
                                     <ul>
                                          <li class="mail-space"><i class="icon-mail-2"></i>
                                             <span>
-                                                <a href="mailto:info@tasty-land.com">info@masalabridlington.co.uk</a>
+                                                <a href="mailto:masalabridlington@gmail.com">masalabridlington@gmail.com</a>
                                             </span>
                                         </li>
                                     </ul>
