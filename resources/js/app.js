@@ -12,6 +12,7 @@ Vue.use(VueRouter);
 
 import BootstrapVue from 'bootstrap-vue';
 import { ModalPlugin } from 'bootstrap-vue'
+import VueMq from 'vue-mq';
 
 
 import VeeValidate from 'vee-validate';
@@ -26,6 +27,13 @@ Vue.use(BootstrapVue);
 
 Vue.use(Vuex);
 Vue.component('VueCtkDateTimePicker', VueCtkDateTimePicker)
+Vue.use(VueMq, {
+  breakpoints: { 
+    mobile: 450,
+    tablet: 767,
+    laptop: 1250,
+  }
+});
 
 require('./components-tags');
 const router = new VueRouter({

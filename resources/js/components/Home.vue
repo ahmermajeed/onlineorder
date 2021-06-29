@@ -1,6 +1,31 @@
 <template>
     <div>
         <header-menu></header-menu>
+
+        <section class="hero-sec">
+            <carousel
+                :centerMode="true"
+                :perPage="1"
+                :autoplayTimeout="3000"
+                :loop="true"
+                :mouse-drag="true"
+                :autoplay="true"
+            >
+                <slide class="slide-1">                    
+                    <img src="/images/flame-inn/banner/1.jpeg" />
+                </slide>
+                <slide class="slide-2">
+                    <img src="/images/flame-inn/banner/2.jpeg" />
+                </slide>
+                <slide class="slide-3">
+                    <img src="/images/flame-inn/banner/3.jpeg" />
+                </slide>
+                <slide class="slide-4">
+                    <img src="/images/flame-inn/banner/4.jpeg" />
+                </slide>
+            </carousel>
+        </section>
+
         <section class="photo-gal-sec">
             <div class="container">
                 <div class="row">
@@ -38,7 +63,7 @@
             </div>
         </section>
 
-        <section class="photo-gal-sec hero-sec video-section">
+      <!--   <section class="photo-gal-sec hero-sec video-section">
             <div class="title">
                 <h4>Videos</h4>
                 <h3>Our Menu!</h3>
@@ -116,7 +141,7 @@
                     </slide>
                 </carousel>
             </div>
-        </section>
+        </section> -->
 
         <footer-menu></footer-menu>
         <postal-code-popup  @HideModalValue="hideModal"   :showModalProp="showPostalCode"></postal-code-popup>
