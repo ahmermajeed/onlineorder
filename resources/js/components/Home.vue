@@ -10,8 +10,9 @@
                 :loop="true"
                 :mouse-drag="true"
                 :autoplay="true"
+                :paginationEnabled="false"
             >
-                <slide class="slide-1">                    
+                <slide class="slide-1">
                     <img src="/images/flame-inn/banner/1.jpeg" />
                 </slide>
                 <slide class="slide-2">
@@ -39,12 +40,142 @@
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-3">
+                    <div class="col-12">
                         <div class="img-box">
-                            <img src="/images/flame-inn/menu-img/1.png" />
+                            <carousel
+                                :centerMode="true"
+                                :perPage="4"
+                                :autoplayTimeout="3000"
+                                :loop="true"
+                                :mouse-drag="true"
+                                :paginationEnabled="false"
+                                :autoplay="true"
+                                :easing="'ease'"
+                            >
+                                <slide class="slide-1">
+                                    <img
+                                        src="/images/flame-inn/menu-img/1.png"
+                                    />
+                                </slide>
+                                <slide class="slide-2">
+                                    <img
+                                        src="/images/flame-inn/menu-img/2.png"
+                                    />
+                                </slide>
+                                <slide class="slide-3">
+                                    <img
+                                        src="/images/flame-inn/menu-img/3.png"
+                                    />
+                                </slide>
+                                <slide class="slide-4">
+                                    <img
+                                        src="/images/flame-inn/menu-img/4.png"
+                                    />
+                                </slide>
+                                <slide class="slide-4">
+                                    <img
+                                        src="/images/flame-inn/menu-img/5.png"
+                                    />
+                                </slide>
+                                <slide class="slide-4">
+                                    <img
+                                        src="/images/flame-inn/menu-img/6.png"
+                                    />
+                                </slide>
+                                <slide class="slide-1">
+                                    <img
+                                        src="/images/flame-inn/menu-img/7.png"
+                                    />
+                                </slide>
+                                <slide class="slide-2">
+                                    <img
+                                        src="/images/flame-inn/menu-img/8.png"
+                                    />
+                                </slide>
+                                <slide class="slide-3">
+                                    <img
+                                        src="/images/flame-inn/menu-img/9.png"
+                                    />
+                                </slide>
+                                <slide class="slide-4">
+                                    <img
+                                        src="/images/flame-inn/menu-img/10.png"
+                                    />
+                                </slide>
+                                <slide class="slide-4">
+                                    <img
+                                        src="/images/flame-inn/menu-img/11.png"
+                                    />
+                                </slide>
+                                <slide class="slide-4">
+                                    <img
+                                        src="/images/flame-inn/menu-img/12.png"
+                                    />
+                                </slide>
+                                <slide class="slide-4">
+                                    <img
+                                        src="/images/flame-inn/menu-img/13.png"
+                                    />
+                                </slide>
+                                <slide class="slide-4">
+                                    <img
+                                        src="/images/flame-inn/menu-img/14.png"
+                                    />
+                                </slide>
+                                <slide class="slide-4">
+                                    <img
+                                        src="/images/flame-inn/menu-img/15.png"
+                                    />
+                                </slide>
+                                <slide class="slide-4">
+                                    <img
+                                        src="/images/flame-inn/menu-img/16.png"
+                                    />
+                                </slide>
+                                <slide class="slide-4">
+                                    <img
+                                        src="/images/flame-inn/menu-img/17.png"
+                                    />
+                                </slide>
+                                <slide class="slide-4">
+                                    <img
+                                        src="/images/flame-inn/menu-img/18.png"
+                                    />
+                                </slide>
+                                <slide class="slide-4">
+                                    <img
+                                        src="/images/flame-inn/menu-img/19.png"
+                                    />
+                                </slide>
+                                <slide class="slide-4">
+                                    <img
+                                        src="/images/flame-inn/menu-img/20.png"
+                                    />
+                                </slide>
+                                <slide class="slide-4">
+                                    <img
+                                        src="/images/flame-inn/menu-img/21.png"
+                                    />
+                                </slide>
+                                <slide class="slide-4">
+                                    <img
+                                        src="/images/flame-inn/menu-img/22.png"
+                                    />
+                                </slide>
+                                <slide class="slide-4">
+                                    <img
+                                        src="/images/flame-inn/menu-img/23.png"
+                                    />
+                                </slide>
+                                <slide class="slide-4">
+                                    <img
+                                        src="/images/flame-inn/menu-img/24.png"
+                                    />
+                                </slide>
+                            </carousel>
                         </div>
                     </div>
-                    <div class="col-3">
+                    <!--                     <div class="col-3">
                         <div class="img-box">
                             <img src="/images/flame-inn/menu-img/2.png" />
                         </div>
@@ -58,12 +189,12 @@
                         <div class="img-box">
                             <img src="/images/flame-inn/menu-img/4.png" />
                         </div>
-                    </div>
+                    </div> -->
                 </div>
             </div>
         </section>
 
-      <!--   <section class="photo-gal-sec hero-sec video-section">
+        <!--   <section class="photo-gal-sec hero-sec video-section">
             <div class="title">
                 <h4>Videos</h4>
                 <h3>Our Menu!</h3>
@@ -144,65 +275,64 @@
         </section> -->
 
         <footer-menu></footer-menu>
-        <postal-code-popup  @HideModalValue="hideModal"   :showModalProp="showPostalCode"></postal-code-popup>
+        <postal-code-popup
+            @HideModalValue="hideModal"
+            :showModalProp="showPostalCode"
+        ></postal-code-popup>
     </div>
 </template>
 
 <script>
-    import VueGallery from 'vue-gallery';
-    import { Carousel, Slide } from 'vue-carousel';
+import VueGallery from 'vue-gallery'
+import { Carousel, Slide } from 'vue-carousel'
 
-    export default {
-        components: {
-            Slide,
-            Carousel,
-        },
-        data: function () {
-            return {
-                images: [
-                    '../../images/mainbanner1.jpeg',
-                    '../../images/image00003.jpg',
-                ],
-                stories: [],
-                index: null,
-                showPopup: false,
-                menu: false,
-                showPostalCode: false,
-                allergy: false
-            };
-        },
-        mounted() {
-            this.getStory();
-            this.autoPlayVideo()
-
-        },
-        methods: {
-            getStory(){
-                let  _this = this
-                _this.loading  = true;
-                axios.get('/api/our-story')
-                    .then((response) => {
-                        _this.stories =  response.data.data;
-                        _this.loading  = false;
-                    });
-            },
-            openPostalCode() {
-                this.showPostalCode = true;
-            },
-             hideModal() {
-                this.showPostalCode = false;
-            },
-            autoPlayVideo() {
-                $(document).ready(function() {
-                    if ($(window).width() < 767) {
-                        $('#video_player')[0].load()
-                        $('#video_player')[0].play()
-                        $('#video_player')[0].autoplay = true
-                    }
-                })
-            },
-
+export default {
+    components: {
+        Slide,
+        Carousel,
+    },
+    data: function() {
+        return {
+            images: [
+                '../../images/mainbanner1.jpeg',
+                '../../images/image00003.jpg',
+            ],
+            stories: [],
+            index: null,
+            showPopup: false,
+            menu: false,
+            showPostalCode: false,
+            allergy: false,
         }
-    }
+    },
+    mounted() {
+        this.getStory()
+        this.autoPlayVideo()
+    },
+    methods: {
+        getStory() {
+            let _this = this
+            _this.loading = true
+            axios.get('/api/our-story').then((response) => {
+                _this.stories = response.data.data
+                _this.loading = false
+            })
+        },
+        openPostalCode() {
+            this.showPostalCode = true
+        },
+        hideModal() {
+            this.showPostalCode = false
+        },
+        autoPlayVideo() {
+            $(document).ready(function() {
+                if ($(window).width() < 767) {
+                    $('#video_player')[0].load()
+                    $('#video_player')[0].play()
+                    $('#video_player')[0].autoplay = true
+                }
+            })
+        },
+    },
+}
 </script>
-

@@ -2406,13 +2406,16 @@ section.photo-gal-sec .title p {
 }
 .VueCarousel-wrapper video {
     @include media-breakpoint-down(sm) {
-        width: 375px !important;   
+        width: 375px !important;
     }
 }
 .photo-gal-sec .col-3 {
     @include media-breakpoint-down(sm) {
         flex: 0 0 100%;
         max-width: 100%;
-        margin-bottom: 10px
+        margin-bottom: 10px;
     }
+}
+.img-box .VueCarousel-slide {
+    margin-left: 10px;
 }

@@ -16501,3 +16501,7 @@ section.photo-gal-sec .title p {
   }
 }
 
+.img-box .VueCarousel-slide {
+  margin-left: 10px;
+}
+
