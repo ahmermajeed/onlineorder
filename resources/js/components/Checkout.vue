@@ -463,8 +463,6 @@
                         this.discountedAmount =  (sum/100 * this.discountedPercentAge).toFixed(2)
                     }
 
-
-
                     if(localStorage.getItem('order_type') === "Pickup"){
                         this.finalAmount =   this.total_amount - this.discountedAmount;
                     }else {

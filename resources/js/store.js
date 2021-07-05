@@ -3,12 +3,14 @@ import Vuex from 'vuex';
 
 Vue.use(Vuex);
 
+let deliveryCharges = window.localStorage.getItem('delivery_charges');
+
 export default new Vuex.Store({
 
     // You can use it as state property
     state: {
         cartArray:[{}],
-        delivery_charges:'',
+        delivery_charges: deliveryCharges ? deliveryCharges: '',
         postal_code: localStorage.getItem('postal_code') ? localStorage.getItem('postal_code') : '',
         order_type: localStorage.getItem('order_type') ? localStorage.getItem('order_type') : '',
         user_data: localStorage.getItem('user_data') ? localStorage.getItem('user_data') : '',
@@ -19,13 +21,9 @@ export default new Vuex.Store({
        getAllCartArray(state){
            return     state.cartArray;
        },
-        getDeliveryCharges(state){
-            if (state.delivery_charges == "" || state.delivery_charges == null) {
-                return localStorage.getItem('delivery_charges');
-            } else {
-                return state.delivery_charges;
-            }
-        },
+       getDeliveryCharges(state){
+            return state.delivery_charges;
+       },
        getPostalCode(state){
            return state.postal_code;
        },
@@ -51,8 +49,8 @@ export default new Vuex.Store({
             state.cartArray = data;
         },
         setDeliveryCharges(state,data){
-            localStorage.setItem('delivery_charges', data);
             state.delivery_charges = data
+            window.localStorage.setItem('delivery_charges', data);
         },
         setPostalCode(state,data){
             state.postal_code = data
