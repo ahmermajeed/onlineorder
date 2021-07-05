@@ -10,7 +10,7 @@ export default new Vuex.Store({
     // You can use it as state property
     state: {
         cartArray:[{}],
-        delivery_charges: deliveryCharges ? deliveryCharges: '',
+        delivery_charges: deliveryCharges ? deliveryCharges: 0,
         postal_code: localStorage.getItem('postal_code') ? localStorage.getItem('postal_code') : '',
         order_type: localStorage.getItem('order_type') ? localStorage.getItem('order_type') : '',
         user_data: localStorage.getItem('user_data') ? localStorage.getItem('user_data') : '',
