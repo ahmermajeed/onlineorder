@@ -181,7 +181,7 @@ class OrderController extends Controller
                 'card' => $token['id'],
                 'currency' => 'GBP',
                 'amount' => $data['total_amount_with_fee'],
-                'description' => 'fakeaway online order',
+                'description' => 'pizza passions online order',
             ]);
 
             return $charge;
