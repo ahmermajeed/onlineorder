@@ -97,10 +97,10 @@
                        <div class="col-sm-12 cash-delivery">
                            <h3>Payment</h3>
                            <label class="customradiobutton radioiconed radio-inline mr-3">
-                               <input type="radio" value="COD"  @change.prevent="showCard(false)"  v-model="form.payment_type" ><i class="fas fa-wallet"></i> Cash on Delivery
+                               <input type="radio" value="cod"  @change.prevent="showCard(false)"  v-model="form.payment_type" ><i class="fas fa-wallet"></i> Cash on Delivery
                            </label>
                            <label class="customradiobutton radioiconed radio-inline mr-3">
-                             <input type="radio" value="Credit/Debit Card" v-model="form.payment_type" @change.prevent="showCard(true)" ><i class="fas fa-credit-card"></i> Credit/Debit Card
+                             <input type="radio" value="credit_card" v-model="form.payment_type" @change.prevent="showCard(true)" ><i class="fas fa-credit-card"></i> Credit/Debit Card
                            </label>
                        </div>
 
@@ -359,7 +359,7 @@
 
                     if (this.form.payment_type === "") {
                         error.push('Please Add Your Payment Type');
-                    } else if (this.form.payment_type == 'Credit/Debit Card') {
+                    } else if (this.form.payment_type == 'credit_card') {
                         if (this.form.card_holder_name === "") {
                             error.push('Please Add Card Holder Name');
                         }
@@ -396,7 +396,7 @@
                         'total_amount_with_fee': this.total_amount - this.discountedAmount,
                         'delivery_fees': this.delivery_fees,
                         'discounted_amount': this.discountedAmount,
-                        'payment': 'cod',
+                        'payment': vm.form.payment_type,
                         'delivery_address': vm.form.address + " " + vm.form.street + " " + vm.form.postal_code,
                         'order_details': this.$store.getters.getAllCartArray,
                         'user_data': this.form,
