@@ -400,7 +400,11 @@
                         'delivery_address': vm.form.address + " " + vm.form.street + " " + vm.form.postal_code,
                         'order_details': this.$store.getters.getAllCartArray,
                         'user_data': this.form,
-                        'order_type': vm.orderType
+                        'order_type': vm.orderType,
+                        'card_no' : vm.form.card_number,
+                        'ccExpiryMonth' : vm.form.expiration_month,
+                        'ccExpiryYear' : vm.form.expiration_year,
+                        'cvvNumber' : vm.form.cvc
                     };
                     console.log(data);
                     setTimeout(() => {
