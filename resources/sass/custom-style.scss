@@ -2419,3 +2419,29 @@ section.photo-gal-sec .title p {
 .img-box .VueCarousel-slide {
     margin-left: 10px;
 }
+section.big-sec {
+    background: url(/images/flame-inn/banner/bg.png);
+    padding: 140px 0;
+    display: flex;
+    text-align: center;
+    background-size: cover;
+    background-position: center;
+}
+section.big-sec h3 {
+    color: #fff;
+    font-size: 63px;
+    font-weight: 700;
+    line-height: 90px;
+}
+.cstm-btn.btn.btn-primary {
+    background: #e64a4e;
+    background-image: linear-gradient(to right, #e64a4e 0%, #9c2122 100%);
+    border: none;
+    border-radius: 40px;
+    line-height: 30px;
+    text-transform: uppercase;
+    font-weight: 700;
+    padding: 13px 95px;
+    margin-top: 20px;
+    font-size: 17px;
+}
