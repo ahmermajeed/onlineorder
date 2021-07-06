@@ -329,6 +329,7 @@
             placeOrder() {
                 let error = [];
                 let _this = this;
+
                 if (this.form.order_type != '') {
                     if (this.form.email === "") {
                         error.push('Please Add Your Email Address');
@@ -379,10 +380,17 @@
                     }
 
                 }
-                this.errorMessage = error;
+                _this.errorMessage = error;
+
+
+                console.log(_this.errorMessage)
+
 
                 if (this.errorMessage.length > 0) {
+
+                    _this.loading = false;
                     _this.scrollToTop();
+
                 } else {
                     let vm = this;
                     if (vm.orderType == 'Pickup') {
@@ -427,6 +435,7 @@
                                 .catch(function (response) {
                                     //handle error
                                     console.log(response);
+                                    vm.loading = false;
 
                                 });
                         }
