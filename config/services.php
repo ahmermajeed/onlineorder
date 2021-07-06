@@ -37,4 +37,7 @@ return [
         'sandbox' => true,
     ],
 
+    'stripe' => [
+        'secret'  => 'sk_test_a1B9ldlUSzFS5mc7CV7QEAG6',
+    ],
 ];
