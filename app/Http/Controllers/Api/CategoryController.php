@@ -26,11 +26,40 @@ class CategoryController extends Controller
         $pagination = !empty($requestData['pagination']) ? $requestData['pagination'] : false;
         $per_page = self::PER_PAGE;
         $data = $this->_repository->findByAll($pagination,$per_page,$requestData);
-
         foreach ($data['data'] as $d) {
-            $d['products'] = Products::where('id_category', $d['id'])->get();
-        }
+            $products  = Products::where('id_category', $d['id']);
+            if(isset($requestData['price_type']) && !empty($requestData['price_type'])){
+                $products->select('*',$requestData['price_type'].' as price');
+                $productsData =$products->get()->toArray();
+                foreach ($productsData as $pd => $productData){
+                    $sizeCount =  count($productData['sizes']);
+                    $groupCount = count($productData['groups']);
+                    if ($groupCount > 0) {
+                        if (isset($productData['groups'])) {
+                            foreach($productData['groups'] as $pkey => $groups )
+                            {
+                                foreach ($groups['choices'] as $key => $choice){
+                                    if( count($productsData[$pd]['groups'][$pkey]['choices']) > 0){
+                                        $productsData[$pd]['groups'][$pkey]['choices'][$key]['price'] = $choice[$requestData['price_type']];
+                                    }
+                                }
+                            }
 
+                        }
+                    }
+
+                    if($sizeCount > 0){
+                        foreach ($productData['sizes'] as $sKey => $p_size){
+                            $productsData[$pd]['sizes'][$sKey]['price'] = $p_size[$requestData['price_type']];
+                        }
+                    }
+                }
+                $d['products'] =  $productsData;
+            }else {
+                $d['products'] =  $products->get()->toArray();
+            }
+
+        }
         $output = [
             'data' => $data['data'],
             'pagination' => !empty($data['pagination']) ? $data['pagination'] : false,

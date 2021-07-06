@@ -15,7 +15,7 @@ class Products extends Model
 
     protected $appends = ['image_url'];
 
-    protected $fillable = ['name', 'price', 'description', 'image', 'status', 'id_category'];
+    protected $fillable = ['name', 'price', 'description', 'image', 'status', 'id_category','dine_in','collection','delivery'];
 
     public function getImageUrlAttribute()
     {
@@ -32,4 +32,7 @@ class Products extends Model
     {
         return $this->hasMany(ProductSizes::class,'id_product','id');
     }
+
+
+
 }

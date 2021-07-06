@@ -61,7 +61,14 @@ class ProductController extends Controller
         if($product->id) {
             if (count($requestData['inputs']) > 0) {
                 foreach ($requestData['inputs'] as $input) {
-                    ProductSizes::create(['id_product' => $product->id, 'size' => $input['size'], 'price' => $input['price']]);
+                    ProductSizes::create([
+                        'id_product' => $product->id,
+                        'size' => $input['size'],
+                        'price' => $input['price'],
+                        'dine_in' =>isset($input['dine_in'])?$input['dine_in']:null,
+                        'collection' =>isset($input['collection'])?$input['collection']:null,
+                        'delivery' =>isset($input['dine_in'])?$input['delivery']:null,
+                    ]);
                 }
             }
         }
@@ -100,6 +107,7 @@ class ProductController extends Controller
     public function show($id)
     {
         $data = $this->_repository->findById($id);
+
         $output = ['data' => $data, 'message' => __("messages.success")];
         return response()->json($output, Response::HTTP_OK);
     }
