@@ -107,12 +107,15 @@ class OrderController extends Controller
         if ($requestData['payment'] == "credit_card") {
             $charge = $this->stripeCharge($requestData);
 
-            if($charge['status'] == "succeeded")
+            if($charge['status'] == "succeeded") {
                 $data = $this->_repository->placeOrder($requestData);
-            else
+            }
+            else {
+
                 $code = 401;
-            $output = ['error' => ['code' => 401, 'message' => $charge['message']]];
-            return response()->json($output, $code);
+                $output = ['error' => ['code' => 401, 'message' => $charge['message']]];
+                return response()->json($output, $code);
+            }
 
         } else {
             $data = $this->_repository->placeOrder($requestData);
