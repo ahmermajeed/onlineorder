@@ -9,6 +9,7 @@ use App\Data\Models\UserAddress;
 use App\Mail\OrderPlace;
 use App\User;
 use Illuminate\Support\Facades\Mail;
+use League\CommonMark\Extension\TableOfContents\TableOfContentsBuilder;
 use function App\Helpers\paginator;
 
 class OrderRepository
@@ -91,8 +92,22 @@ class OrderRepository
     {
         $data = $this->model->findOrFail($id);
         $data->fill($request)->save();
-        $phone_number = User::where('id',$data->user_id)->pluck('phone_number')->first();
-        $data->phone_number = !empty($phone_number)?$phone_number:"Number Not Found";
+        $user = User::where('id',$data->user_id)->first();
+        $data->phone_number = "Number Not Found";
+        $data->email = "Not Found";
+        $data->name = "Not Found";
+        $data->table_name ="Not Found";
+        $data->table_id = "Not Found";
+        if($user){
+            $data->phone_number = $user->phone_number;
+            $data->email = $user->email;
+            $data->name = $user->name;
+        }
+        $tableReservation =TableReservation::where('id',$data->table_id)->first();
+        if($tableReservation){
+            $data->table_name = $tableReservation->name;
+            $data->table_id = $tableReservation->id;
+        }
 
 
         return $data;
