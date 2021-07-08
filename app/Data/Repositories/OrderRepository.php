@@ -42,7 +42,6 @@ class OrderRepository
         }
         foreach ($data['data']  as $key =>$value){
             $user = User::find($value['user_id']);
-            echo $value['table_id'];
             $table = TableReservation::where('id',$value['table_id'])->first();
 
             if($user){
