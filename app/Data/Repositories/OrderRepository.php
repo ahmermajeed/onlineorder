@@ -50,7 +50,6 @@ class OrderRepository
                 $data['data'][$key]['email'] = $user->email;
                 $data['data'][$key]['name'] = $user->name;
                 $data['data'][$key]['table_name'] = null;
-                $data['data'][$key]['table_name'] = null;
                 if(isset($input['order_type']) &&  $input['order_type'] == 'Table' && $table){
                     $data['data'][$key]['table_name']  = $table->name;
                }
@@ -91,19 +90,23 @@ class OrderRepository
     public function updateRecord($request, $id)
     {
         $data = $this->model->findOrFail($id);
+
+
         $data->fill($request)->save();
         $user = User::where('id',$data->user_id)->first();
         $data->phone_number = "Number Not Found";
         $data->email = "Not Found";
         $data->name = "Not Found";
         $data->table_name ="Not Found";
-        $data->table_id = "Not Found";
+       
         if($user){
             $data->phone_number = $user->phone_number;
             $data->email = $user->email;
             $data->name = $user->name;
         }
         $tableReservation =TableReservation::where('id',$data->table_id)->first();
+
+
         if($tableReservation){
             $data->table_name = $tableReservation->name;
             $data->table_id = $tableReservation->id;
