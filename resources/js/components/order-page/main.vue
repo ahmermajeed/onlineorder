@@ -388,8 +388,8 @@
             window.addEventListener("scroll", this.handleScroll);
 
            // this.showPostal = false;
-            this.table_number = this.$route.query.table
-
+            this.table_number = this.$route.query.table;
+            window.localStorage.setItem('table_number',this.table_number);
         },
         methods: {
 

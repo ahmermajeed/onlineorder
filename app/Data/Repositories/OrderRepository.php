@@ -4,6 +4,7 @@ namespace App\Data\Repositories;
 
 use App\Data\Models\OrderDetail;
 use App\Data\Models\Orders;
+use App\Data\Models\TableReservation;
 use App\Data\Models\UserAddress;
 use App\Mail\OrderPlace;
 use App\User;
@@ -28,6 +29,9 @@ class OrderRepository
     {
         $data = array();
         $model = $this->model->orderBy('id', 'desc');
+        if(isset($input['order_type']) &&  $input['order_type'] == 'Table'){
+            $model->where('order_type',$input['order_type']);
+        }
 
         if ($pagination) {
             $model = $model->paginate($perPage);
@@ -36,12 +40,19 @@ class OrderRepository
         } else {
             $data['data'] = $model->get();
         }
-
-
         foreach ($data['data']  as $key =>$value){
             $user = User::find($value['user_id']);
+            $table = TableReservation::where('id',$value['table_id'])->first();
             if($user){
                 $data['data'][$key]['phone_number'] = $user->phone_number;
+                $data['data'][$key]['email'] = $user->email;
+                $data['data'][$key]['name'] = $user->name;
+                $data['data'][$key]['table_name'] = null;
+                $data['data'][$key]['table_name'] = null;
+                if(isset($input['order_type']) &&  $input['order_type'] == 'Table' && $table){
+                    $data['data'][$key]['table_name']  = $table->name;
+                    $data['data'][$key]['table_id']  = $value['table_id'];
+               }
             }else {
                 $data['data'][$key]['phone_number'] = 78601;
             }
@@ -102,7 +113,11 @@ class OrderRepository
            // Mail::to($data['user_data']['email'])->send(new OrderPlace($data));
         }
 
-        $placed = $this->model->create(["user_id" => isset($userData->id) ? $userData->id:'1', "reference" => $data['reference'], "total_amount_with_fee" => $data['total_amount_with_fee'], "delivery_fees" => $data['delivery_fees'], "payment" => $data['payment'], "order_type" => $data['order_type'], "delivery_address" => $data['delivery_address'], "status" => "Order Placed",'discounted_amount'=>isset($data['discounted_amount'])?$data['discounted_amount']:0, 'is_pos' => isset($data['is_pos'])?$data['is_pos']:0]);
+
+
+        $placed = $this->model->create(["user_id" => isset($userData->id) ? $userData->id:'1', "reference" => $data['reference'], "total_amount_with_fee" => $data['total_amount_with_fee'], "delivery_fees" => $data['delivery_fees'], "payment" => $data['payment'], "order_type" =>"Set", "delivery_address" => $data['delivery_address'], "status" => "Order Placed",'discounted_amount'=>isset($data['discounted_amount'])?$data['discounted_amount']:0,
+            'is_pos' => isset($data['is_pos'])?$data['is_pos']:0,
+            'table_id'=>isset($data['table_id'])?$data['table_id']:null]);
 
         if($placed) {
             foreach ($data['order_details'] as $detail) {
@@ -116,6 +131,8 @@ class OrderRepository
             }
 
             $placed['phone_number'] =$userData->phone_number;
+            $placed['email'] =$userData->email;
+            $placed['name'] =$userData->name;
         }
 
 

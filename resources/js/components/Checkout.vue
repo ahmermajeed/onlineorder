@@ -386,8 +386,9 @@
                         'delivery_address': vm.form.address + " " + vm.form.street + " " + vm.form.postal_code,
                         'order_details': this.$store.getters.getAllCartArray,
                         'user_data': this.form,
-                        'order_type': "Collection",//vm.orderType,
-                        'is_pos':0
+                        'order_type': "Table",//vm.orderType,
+                        'is_pos':0,
+                        'table_id':window.localStorage.getItem('table_number')
                     };
                     console.log(data);
                     setTimeout(() => {
