@@ -42,7 +42,9 @@ class OrderRepository
         }
         foreach ($data['data']  as $key =>$value){
             $user = User::find($value['user_id']);
+            echo $value['table_id'];
             $table = TableReservation::where('id',$value['table_id'])->first();
+
             if($user){
                 $data['data'][$key]['phone_number'] = $user->phone_number;
                 $data['data'][$key]['email'] = $user->email;
@@ -51,7 +53,6 @@ class OrderRepository
                 $data['data'][$key]['table_name'] = null;
                 if(isset($input['order_type']) &&  $input['order_type'] == 'Table' && $table){
                     $data['data'][$key]['table_name']  = $table->name;
-                    $data['data'][$key]['table_id']  = $value['table_id'];
                }
             }else {
                 $data['data'][$key]['phone_number'] = 78601;
