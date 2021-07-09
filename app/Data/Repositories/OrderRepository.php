@@ -98,7 +98,7 @@ class OrderRepository
         $data->email = "Not Found";
         $data->name = "Not Found";
         $data->table_name ="Not Found";
-       
+
         if($user){
             $data->phone_number = $user->phone_number;
             $data->email = $user->email;
