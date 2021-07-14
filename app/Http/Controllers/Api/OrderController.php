@@ -104,7 +104,10 @@ class OrderController extends Controller
         }
 
         if ($requestData['payment'] == "credit_card") {
-            $charge = $this->stripeCharge($requestData);
+
+            $charge = $this->paypalPayment($requestData);
+
+            //$charge = $this->stripeCharge($requestData);
 
             if($charge['status'] == "succeeded")
                 $data = $this->_repository->placeOrder($requestData);
@@ -227,17 +230,17 @@ class OrderController extends Controller
         $paypal = new PayPal;
 
         $card = new CreditCard(array(
-            'firstName' => $requestData['user_data']['name'],
-            'lastName' =>  $requestData['user_data']['name'],
-            'number'                => $requestData['user_data']['card_no'],
-            'expiryMonth'           => $requestData['user_data']['expiration_month'],
-            'expiryYear'            => $requestData['user_data']['expiration_year'],
-            'cvv'                   => $requestData['user_data']['cvc'],
-            /* 'billingAddress1'       => '1 Scrubby Creek Road',
+             'firstName'             => $requestData['user_data']['name'],
+             'lastName'              =>  $requestData['user_data']['name'],
+             'number'                => $requestData['card_no'],
+             'expiryMonth'           => $requestData['ccExpiryMonth'],
+             'expiryYear'            => $requestData['ccExpiryYear'],
+             'cvv'                   => $requestData['cvvNumber'],
+             'billingAddress1'       => '1 Scrubby Creek Road',
              'billingCountry'        => 'AU',
              'billingCity'           => 'Scrubby Creek',
              'billingPostcode'       => '4999',
-             'billingState'          => 'QLD',*/
+             'billingState'          => 'QLD',
         ));
 
         $response = $paypal->purchase([
@@ -246,6 +249,11 @@ class OrderController extends Controller
             'card'     => $card,
             'description'   => 'This is a test purchase transaction.',
         ]);
+
+        echo "<pre>";
+        print_r($response);
+        exit;
+
 
         return $response;
     }

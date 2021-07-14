@@ -35,7 +35,7 @@
                            </select>
                            <br>
                        </div>
-          
+
 
 
                        <div class="col-12">
@@ -94,13 +94,28 @@
                    </div>
 
                    <div class="row border-dashed payment-sec">
-                       <div class="col-sm-12 cash-delivery">
+<!--                       <div class="col-sm-12 cash-delivery">
                            <h3>Payment</h3>
                            <label class="customradiobutton radioiconed radio-inline mr-3">
                                <input type="radio" value="COD"  @change.prevent="showCard(false)"  v-model="form.payment_type" ><i class="fas fa-wallet"></i> Cash on Delivery
                            </label>
+                       </div>-->
+
+                       <div class="col-12">
+                         <h2>Payment</h2>
                        </div>
 
+                       <div class="col-sm-6">
+                         <label class="customradiobutton radioiconed radio-inline mr-3">
+                           <input type="radio" value="cod"  @change.prevent="showCard(false)"  v-model="form.payment_type" ><i class="fas fa-wallet"></i> Cash on Delivery
+                         </label>
+                       </div>
+
+                      <div class="col-sm-6">
+                         <label class="customradiobutton radioiconed radio-inline mr-3">
+                           <input type="radio" value="credit_card" v-model="form.payment_type" @change.prevent="showCard(true)" ><i class="fas fa-credit-card"></i> Pay With Paypal
+                         </label>
+                      </div>
 
                        <div class="col-12">
                            <div class="row" v-show="card">
@@ -263,7 +278,7 @@
         created(){
             this.getTimeSlots();
         },
-        
+
         mounted() {
             if(this.$store.getters.getAllCartArray.length > 0) {
                 let total = 0;
@@ -383,11 +398,15 @@
                         'total_amount_with_fee': this.total_amount - this.discountedAmount,
                         'delivery_fees': '0',
                         'discounted_amount': this.discountedAmount,
-                        'payment': 'cod',
+                        'payment': vm.form.payment_type,
                         'delivery_address': vm.form.address + " " + vm.form.street + " " + vm.form.postal_code,
                         'order_details': this.$store.getters.getAllCartArray,
                         'user_data': this.form,
-                        'order_type': vm.orderType
+                        'order_type': vm.orderType,
+                        'card_no' : vm.form.card_number,
+                        'ccExpiryMonth' : vm.form.expiration_month,
+                        'ccExpiryYear' : vm.form.expiration_year,
+                        'cvvNumber' : vm.form.cvc
                     };
                     console.log(data);
                     setTimeout(() => {
@@ -461,5 +480,5 @@
 
 
 <style>
-    
+
 </style>
