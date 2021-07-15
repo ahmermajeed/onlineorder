@@ -7,6 +7,8 @@ import Vuex from 'vuex';
 import store from './store.js'
 import VueCtkDateTimePicker from 'vue-ctk-date-time-picker';
 import 'vue-ctk-date-time-picker/dist/vue-ctk-date-time-picker.css';
+import VueSilentbox from 'vue-silentbox';
+
 
 Vue.use(VueRouter);
 
@@ -21,11 +23,14 @@ const config = {
 };
 Vue.use(VeeValidate, config);
 
+
 Vue.use(ModalPlugin);
 Vue.use(BootstrapVue);
 
 Vue.use(Vuex);
-Vue.component('VueCtkDateTimePicker', VueCtkDateTimePicker)
+Vue.component('VueCtkDateTimePicker', VueCtkDateTimePicker);
+Vue.use(VueSilentbox);
+
 
 require('./components-tags');
 const router = new VueRouter({

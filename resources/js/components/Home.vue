@@ -52,6 +52,47 @@
             </div>
         </section>
 
+        <section>
+            <div class="resturant-image">
+                <img src="images/masala-resturant.jpeg" alt="">
+            </div>
+        </section>
+
+        <section class="resturant-detail deliver-area">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h3>About Masala</h3>
+                    </div>
+                    <div class="col-md-6">
+                        <p>Masala  Indian Cuisine, serving to the satisfaction of our customers. We are proud to serve the local community and surrounding. We believe in total customer satisfaction hence why we offer quality in our food.</p>
+                    </div>
+                    <div class="col-md-6">
+                        <p>
+                            We have developed our menu to represent flavours &amp; tastes of India. We source the best quality meat, chicken, vegetables, spices &amp; herbs to create unique flavours &amp; tastes.
+                        </p>
+                        <p>We cater for small and large parties - Call us on <a href="tel:01262 671736">01262 671736</a> to discuss your needs. Masala, happy to serve our local community.</p>
+                    </div>
+
+                    <div class="order-now">
+                        <a href="#" class="btn btn-rounded-default btn-rounded-danger"  @click.prevent="openPostalCode"> Order Online</a>
+                    </div>
+
+                    <div class="row resturant-gallery">
+                        <div class="col-md-4">
+                            <img src="images/masala-resturant-1.jpeg" alt="">
+                        </div> 
+                        <div class="col-md-4">
+                            <img src="images/masala-resturant-2.jpeg" alt="">
+                        </div> 
+                        <div class="col-md-4">
+                            <img src="images/masala-resturant-3.jpeg" alt="">
+                        </div>                        
+                    </div>
+
+                </div>
+            </div>
+        </section>
         <section class="rating-area">
             <div class="container">
             <div class="rating-img">
@@ -322,45 +363,6 @@
                                     </div>                               
                                 </div>
                             </div>
-
-                       <!--      <div class="second-menu title-styl">
-                                <h2>Side Order</h2>
-
-                                <div class="menu-item">
-                                    <div class="box-borders">
-                                        <div class="row">
-                                            <div class="col-10">
-                                                <p>Hot Apple Pie</p>
-                                            </div>
-                                            <div class="col-2 text-center">
-                                                <span>£0.99</span>
-                                            </div>
-                                        </div>
-                                    </div>  
-
-                                    <div class="box-borders">
-                                        <div class="row">
-                                            <div class="col-10">
-                                                <p>BBQ Beans</p>
-                                            </div>
-                                            <div class="col-2 text-center">
-                                                <span>£0.95</span>
-                                            </div>
-                                        </div>
-                                    </div>  
-
-                                    <div class="box-borders">
-                                        <div class="row">
-                                            <div class="col-10">
-                                                <p>Corn on the Cob</p>
-                                            </div>
-                                            <div class="col-2 text-center">
-                                                <span>£1.20</span>
-                                            </div>
-                                        </div>
-                                    </div>                                 
-                                </div>
-                            </div> -->
                         </div>
                     </div>
 
@@ -371,6 +373,19 @@
             </div>
        
 
+        </section>
+
+
+        <section class="masala-gallery deliver-area">
+            <div class="row">
+                <div class="col-md-12">
+                    <h3>Masala Gallery</h3>
+                    <div class="lightbox">
+                        <silent-box :gallery="gallery"></silent-box>
+                    </div>
+                </div>
+            </div>
+          
         </section>
 
         <section class="section-fullwidth reservation">
@@ -428,6 +443,7 @@
 
 <script>
     import VueGallery from 'vue-gallery';
+
     import {
         Hooper,
         Slide,
@@ -435,13 +451,16 @@
     } from 'hooper';
 
     import 'hooper/dist/hooper.css';
+
     export default {
+
         components: {
             Hooper,
             Slide,
             HooperNavigation,
             'gallery': VueGallery,
         },
+
         data: function () {
             return {
                 images: [
@@ -453,13 +472,71 @@
                 showPopup: false,
                 menu: false,
                 showPostalCode: false,
-                allergy: false
-            };
+                allergy: false,
+                gallery: [
+                    {
+                        src: 'images/masala-gallery/1.jpg',
+                        thumbnail:'images/masala-gallery/1.jpg',
+                        thumbnailWidth: '220px',
+                        thumbnailHeight: '220px',
+                    },
+                    {
+                        src: 'images/masala-gallery/2.jpg',
+                        thumbnail:'images/masala-gallery/2.jpg',
+                        thumbnailWidth: '220px',
+                        thumbnailHeight: '220px',
+                    },
+                    {
+                        src: 'images/masala-gallery/3.jpg',
+                        thumbnail:'images/masala-gallery/3.jpg',
+                        thumbnailWidth: '220px',
+                        thumbnailHeight: '220px',
+                    },                    
+                    {
+                        src: 'images/masala-gallery/4.jpg',
+                        thumbnail:'images/masala-gallery/4.jpg',
+                        thumbnailWidth: '220px',
+                        thumbnailHeight: '220px',
+                    },                    
+                    {
+                        src: 'images/masala-gallery/5.jpg',
+                        thumbnail:'images/masala-gallery/5.jpg',
+                        thumbnailWidth: '220px',
+                        thumbnailHeight: '220px',
+                    },                    
+                    {
+                        src: 'images/masala-gallery/6.jpg',
+                        thumbnail:'images/masala-gallery/6.jpg',
+                        thumbnailWidth: '220px',
+                        thumbnailHeight: '220px',
+                    },                    
+                    {
+                        src: 'images/masala-gallery/7.jpg',
+                        thumbnail:'images/masala-gallery/7.jpg',
+                        thumbnailWidth: '220px',
+                        thumbnailHeight: '220px',
+                    },                    
+                    {
+                        src: 'images/masala-gallery/8.jpg',
+                        thumbnail:'images/masala-gallery/8.jpg',
+                        thumbnailWidth: '220px',
+                        thumbnailHeight: '220px',
+                    },                    
+                    {
+                        src: 'images/masala-gallery/9.jpg',
+                        thumbnail:'images/masala-gallery/9.jpg',
+                        thumbnailWidth: '220px',
+                        thumbnailHeight: '220px',
+                    },
+                ]
+            }
         },
+
         mounted() {
             this.getStory();
-            console.log('Component mounted.')
+            console.log('Component mounted.');
         },
+
         methods: {
             getStory(){
                 let  _this = this

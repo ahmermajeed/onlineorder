@@ -14189,7 +14189,7 @@ ul {
 }
 
 .header-bottom {
-  background-image: url(/images/banner1.jpeg?da53eb62b6028fc953efa975f08347a5);
+  background-image: url(/images/banner-image-masala.png?04a92dc8a770e70136bbd902b46d7596);
   background-repeat: no-repeat;
   background-size: cover;
   height: 570px;
@@ -14198,7 +14198,7 @@ ul {
 @media (max-width: 767.98px) {
   .header-bottom {
     background-size: contain;
-    height: 170px;
+    height: 190px;
   }
 }
 
@@ -16462,6 +16462,88 @@ span.address {
   font-weight: bold;
   font-size: 21px;
   color: #2c1f0f;
+}
+
+.resturant-image img {
+  width: 100%;
+  height: 500px;
+}
+
+@media (max-width: 767.98px) {
+  .resturant-image img {
+    height: auto;
+  }
+}
+
+.resturant-detail {
+  padding: 60px 0;
+}
+
+.resturant-detail h3 {
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 40px;
+  font-weight: bold;
+}
+
+.resturant-detail p {
+  font-size: 16px;
+}
+
+.resturant-gallery img {
+  width: 100%;
+}
+
+@media (max-width: 767.98px) {
+  .resturant-gallery img {
+    margin-bottom: 20px;
+  }
+}
+
+.resturant-gallery {
+  padding: 40px 0 0 0;
+}
+
+.resturant-detail .order-now {
+  margin: 0 auto;
+  padding: 30px 0 0 0;
+}
+
+.resturant-detail .order-now a {
+  padding: 10px 70px;
+  font-size: 17px;
+}
+
+.masala-gallery {
+  text-align: center;
+  padding: 60px 0;
+}
+
+.masala-gallery h3 {
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 40px;
+  font-weight: bold;
+}
+
+.lightbox img {
+  transition: transform 0.2s;
+}
+
+.lightbox img:hover {
+  /* IE 9 */
+  /* Safari 3-8 */
+  transform: scale(1.5);
+}
+
+@media (max-width: 767.98px) {
+  .lightbox img:hover {
+    transform: none;
+  }
+}
+
+.lightbox img {
+  border: 2px solid #fff;
 }
 
 /***************Deal-section-end*******************/
