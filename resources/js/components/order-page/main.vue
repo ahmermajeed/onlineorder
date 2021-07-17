@@ -10,7 +10,7 @@
                                 <div class="lp-sidebar-title cate-heading">
                                     <h3>Categories</h3>
                                 </div>
-                                
+
                                 <div class="list-group list-group-flush cate-list">
                                     <a href="#"   @click.prevent="getProductAgainstCategories(false)" class="list-group-item">All<span class="float-right badge badge-light round"></span> </a>
 
@@ -121,15 +121,15 @@
                                                     <strong>{{extra.group_name}}:</strong> {{extra.choice}}
                                                 </div>
                                             </td>
-<!-- 
+<!--
                                             <td  v-if="!cart.extras" class="p-0">£ {{priceFormat(cart.price * cart.quantity) }}</td> -->
-                                            
+
                                             <!-- <td >£{{priceFormat(cart.single_product_total_amount)}} </td> -->
-                                               
+
                                          <!--    <td class="order-quty">
 
-                                           
-                                                
+
+
                                             </td> -->
                                             <td>
                                                 <span v-if="!cart.extras" class="p-0">
@@ -147,22 +147,22 @@
                                                             <a class="icon-up"  href="#" @click.prevent="quantityAddInCart(product_index)"> <i class="icon-plus"  ></i></a>
                                                             <span class="text-center">{{ cart.quantity}}  <!-- <i>X</i> --></span>
                                                             <a  class="icon-down"  href="#"  @click.prevent="quantityMinusInCart(product_index)"> <i class="icon-subtract"></i></a>
-                                                        </div> 
+                                                        </div>
                                                    </span>
-                                                
-                                            </td>
-                                     
-                                            
 
-                                            
+                                            </td>
+
+
+
+
                                         </tr>
                                     </table>
                                 </div>
                                 <div class="cart-btn mt-3 mb-3 text-center">
                                      <button class="anima-btn custom-btn move-eff btn btn-rounded-danger" @click="placeOrder()"><span>Checkout</span> <!-- <i class="fas fa-long-arrow-alt-right"></i> --></button>
-                                </div> 
+                                </div>
                             </div>
-                            
+
                         </div>
                         <div class="mobile-cart-button" v-bind:class="{ cartheight: cart_height }" v-if="getAllCartArray.length > 1">
                 <div class="inner">
@@ -172,7 +172,7 @@
                     <span class="products-value">£{{priceFormat(total_amount)}}</span>
                     <span class="text" @click="opencartlist()">Checkout</span>
 
-                    
+
                 </div>
                 <ul v-for="(cart, product_index) in getAllCartArray"  v-if="product_index  > 0">
                     <li>
@@ -205,8 +205,8 @@
         </section>
         <div class="loading" v-if="loading">Loading&#8230;</div>
         <div
-            class="container-fluid" 
-            :class="{'cart-menu-fixed': scrolled}"  
+            class="container-fluid"
+            :class="{'cart-menu-fixed': scrolled}"
             v-on="handleScroll()"
             v-if="$mq === 'laptop'">
             <div class="row full">
@@ -239,9 +239,9 @@
                     </svg>{{getAllCartArray.length - 1}}
                      <span class="products-value">£{{priceFormat(total_amount)}}</span>
                 </span>
-                   
+
                     <span class="text chek-out-btn btn btn-rounded-danger" @click="opencartlist()">Checkout</span>
-                    
+
                 </div>
 
                 <div class="mb-cart-box">
@@ -279,7 +279,7 @@
 
 
           <div
-            class="container-fluid cart-menu-fixed" 
+            class="container-fluid cart-menu-fixed"
             v-if="$mq === 'mobile'">
             <div class="row full">
 
@@ -311,9 +311,9 @@
                     </svg>{{getAllCartArray.length - 1}}
                      <span class="products-value">£{{priceFormat(total_amount)}}</span>
                 </span>
-                   
+
                     <span class="text chek-out-btn btn btn-rounded-danger" @click="opencartlist()">Checkout</span>
-                    
+
                 </div>
 
                 <div class="mb-cart-box">
@@ -497,9 +497,20 @@
             },
 
             getCategories(){
+
+                console.log("1");
                 let  _this = this;
                 _this.loading  = true;
-                axios.get('/api/categories')
+
+                var order_type = localStorage.getItem('order_type');
+                if( order_type === 'Delivery'){
+                    order_type = 'delivery'
+                }else {
+                    order_type = 'collection'
+                }
+
+
+                axios.get('/api/categories'+'?price_type='+order_type)
                     .then((response) => {
                         _this.categories =  response.data.data;
                         _this.loading  = false;
@@ -523,12 +534,26 @@
             },
 
             getProductAgainstCategories(id){
+
+                console.log("3");
                 let  _this = this;
                 _this.loading  = true;
-                var url = '/api/categories';
-                if(id){
-                    url = url + '?id=' + id;
+
+                var order_type = localStorage.getItem('order_type');
+                if( order_type === 'Delivery'){
+                    order_type = 'delivery'
+                }else {
+                    order_type = 'collection'
                 }
+                var url = '/api/categories';
+
+
+                if(id){
+                    url = url + '?id=' + id + '&price_type='+order_type;
+                }else {
+                    url =  url +'?price_type='+order_type;
+                }
+
                 axios.get(url)
                     .then((response) => {
                         _this.products =  response.data.data
@@ -1051,7 +1076,7 @@
         background:#fff;
     }
 
-    
+
     #cart-stiky > img {
         max-width:100%;
     }
@@ -1066,7 +1091,7 @@
         background: #ccc;
     }
 
-    
+
 
     .cart .order .table-holder {
         overflow-y: scroll;
@@ -1903,7 +1928,7 @@
         float:right;
     }
 
-    
+
     @-webkit-keyframes spinner {
         0% {
             -webkit-transform: rotate(0deg);
@@ -2204,7 +2229,7 @@
     }
     .cart-menu-fixed .offset-categories.mobile-screen {
         position: absolute;
-        top: 120px;    
+        top: 120px;
     }
 
     .cart-menu-fixed .offset-categories{
