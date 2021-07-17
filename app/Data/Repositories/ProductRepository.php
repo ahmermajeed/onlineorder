@@ -43,10 +43,18 @@ class ProductRepository
      * @param $id
      * @return array|null
      */
-    public function findById($id)
+    public function findById($id,$requestData)
     {
+
         $data = array();
-        $query = $this->model->with('groups')->find($id);
+        if(isset($requestData['price_type'])){
+
+              $query =  $this->model->select('*',$requestData['price_type'].' as price')->with('groups')->find($id);
+        }
+        else {
+               $query = $this->model->with('groups')->find($id);
+        }
+
 
         if ($query != NULL) {
             $data = $query;

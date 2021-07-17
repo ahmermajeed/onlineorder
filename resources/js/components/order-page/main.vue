@@ -573,6 +573,14 @@
                 let  _this = this;
                 _this.loading  = true;
                 let url = '/api/products/'+id;
+
+                var order_type = localStorage.getItem('order_type');
+                if( order_type === 'Delivery'){
+                    order_type = 'delivery'
+                }else {
+                    order_type = 'collection'
+                }
+                url =  url +'?price_type='+order_type;
                 axios.get(url)
                     .then((response) => {
                         _this.list =  response.data.data;

@@ -104,10 +104,33 @@ class ProductController extends Controller
         return response()->json($output, Response::HTTP_OK);
     }
 
-    public function show($id)
+    public function show(Request $request, $id)
     {
-        $data = $this->_repository->findById($id);
+        $requestData = $request->all();
+        $data = $this->_repository->findById($id, $requestData)->toArray();
+        if (isset($requestData['price_type']) && !empty($requestData['price_type'])) {
+            $sizeCount = count($data['sizes']);
+            $groupCount = count($data['groups']);
+            if ($groupCount > 0) {
+                if (isset($data['groups'])) {
+                    foreach ($data['groups'] as $pkey => $groups) {
+                        foreach ($groups['choices'] as $key => $choice) {
+                            if (count($data['groups'][$pkey]['choices']) > 0) {
+                                $data['groups'][$pkey]['choices'][$key]['price'] = $choice[$requestData['price_type']];
+                            }
+                        }
+                    }
 
+                }
+            }
+
+            if ($sizeCount > 0) {
+                foreach ($data['sizes'] as $sKey => $p_size) {
+                    $data['sizes'][$sKey]['price'] = $p_size[$requestData['price_type']];
+                }
+            }
+
+        }
         $output = ['data' => $data, 'message' => __("messages.success")];
         return response()->json($output, Response::HTTP_OK);
     }
