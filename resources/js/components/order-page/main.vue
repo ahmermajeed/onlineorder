@@ -159,7 +159,7 @@
                                     </table>
                                 </div>
                                 <div class="cart-btn mt-3 mb-3 text-center">
-                                     <button class="anima-btn custom-btn move-eff btn btn-rounded-danger" @click="placeOrder()"><span>Checkout</span> <!-- <i class="fas fa-long-arrow-alt-right"></i> --></button>
+<!--                                     <button class="anima-btn custom-btn move-eff btn btn-rounded-danger" @click="placeOrder()"><span>Checkout</span> &lt;!&ndash; <i class="fas fa-long-arrow-alt-right"></i> &ndash;&gt;</button>-->
                                 </div>
                             </div>
 
@@ -170,7 +170,7 @@
                         <path fill="#707070" d="M12 2.75a4.75 4.75 0 014.744 4.5h3.103a1 1 0 01.99 1.141l-1.714 12a1 1 0 01-.99.859H5.867a1 1 0 01-.99-.859l-1.714-12a1 1 0 01.99-1.141h3.103A4.75 4.75 0 0112 2.75zm5.559 14.75H6.44a.4.4 0 00-.396.457l.208 1.45a.4.4 0 00.396.343H17.35a.4.4 0 00.396-.343l.208-1.45a.4.4 0 00-.396-.457zm1.25-8.75H5.19a.4.4 0 00-.396.457l.922 6.45a.4.4 0 00.396.343h11.775a.4.4 0 00.396-.343l.922-6.45a.4.4 0 00-.396-.457zM12 4.25a3.251 3.251 0 00-3.193 2.638.305.305 0 00.3.362h5.796a.297.297 0 00.292-.35A3.251 3.251 0 0012 4.25z"></path>
                     </svg>{{getAllCartArray.length - 1}}</span>
                     <span class="products-value">£{{priceFormat(total_amount)}}</span>
-                    <span class="text" @click="opencartlist()">Checkout</span>
+<!--                    <span class="text" @click="opencartlist()">Checkout</span>-->
 
 
                 </div>
@@ -240,7 +240,7 @@
                      <span class="products-value">£{{priceFormat(total_amount)}}</span>
                 </span>
 
-                    <span class="text chek-out-btn btn btn-rounded-danger" @click="opencartlist()">Checkout</span>
+<!--                    <span class="text chek-out-btn btn btn-rounded-danger" @click="opencartlist()">Checkout</span>-->
 
                 </div>
 
@@ -312,7 +312,7 @@
                      <span class="products-value">£{{priceFormat(total_amount)}}</span>
                 </span>
 
-                    <span class="text chek-out-btn btn btn-rounded-danger" @click="opencartlist()">Checkout</span>
+<!--                    <span class="text chek-out-btn btn btn-rounded-danger" @click="opencartlist()">Checkout</span>-->
 
                 </div>
 
