@@ -16,3 +16,4 @@ Vue.component('add-deal', require('./components/order-page/popup/add-deal.vue').
 Vue.component('edit-deal', require('./components/order-page/popup/edit-deal.vue').default);
 
 Vue.component('food-allergy', require('./components/order-page/popup/food-allergy.vue').default);
+Vue.component('reservation-table', require('./components/common-components/reservation-table.vue').default);

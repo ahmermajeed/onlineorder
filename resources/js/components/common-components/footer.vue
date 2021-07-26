@@ -26,6 +26,7 @@
                                     <ul>
                                       <li><a href="/">Home</a></li>
                                       <li><a href="/feedback">Feedback</a></li>
+                                      <li><a href="/reservation">Reservation</a></li>
                                       <li><a href="#" @click.prevent="openPostalCode">Order Online</a></li>
                                     </ul>
                                 </div>

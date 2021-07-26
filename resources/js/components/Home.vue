@@ -375,6 +375,8 @@
 
         </section>
 
+        <reservation-table></reservation-table>
+
 
         <section class="masala-gallery deliver-area">
             <div class="row">
