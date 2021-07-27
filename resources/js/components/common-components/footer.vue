@@ -27,9 +27,6 @@
                                       <li><a href="/">Home</a></li>
                                       <li><a href="/feedback">Feedback</a></li>
                                       <li><a href="/reservation">Reservation</a></li>
-                                      <li class="nav-item">
-                                          <a href="#" class="nav-link" @click="openMenu">Our Menu</a>
-                                      </li>
                                       <li><a href="#" @click.prevent="openPostalCode">Order Online</a></li>
                                     </ul>
                                 </div>
@@ -77,8 +74,6 @@
 
         </footer>
         <postal-code-popup  @HideModalValue="hideModal"   :showModalProp="showPostalCode"></postal-code-popup>
-
-        <download-menu @HideModalValue="hideModal" :showModalProp="showPopup" :isMenu="menu" :isAllergy="allergy" ></download-menu>
     </div>
 </template>
 
@@ -88,8 +83,6 @@
         data: function () {
             return {
                 showPostalCode: false,
-                menu: false,
-
             };
         },
         mounted() {
@@ -98,13 +91,8 @@
             openPostalCode() {
                 this.showPostalCode = true;
             },
-            hideModal() {
+             hideModal() {
                 this.showPostalCode = false;
-            },
-            openMenu() {
-                this.showPopup = true;
-                this.menu = true;
-                this.allergy = false;
             },
 
         }
