@@ -55,6 +55,9 @@
                                         <li class="nav-item "> <router-link :to="{ path: '/feedback'}"><a class="nav-link js-scroll-trigger" >Feedback</a></router-link></li>
                                         <li class="nav-item "> <router-link :to="{ path: '/reservation'}"><a class="nav-link js-scroll-trigger" >Reservation</a></router-link></li>
                                         <li class="nav-item">
+                                            <a href="#" class="nav-link" @click="openMenu">Our Menu</a>
+                                        </li>
+                                        <li class="nav-item">
                                             <div class="order-now">
                                                 <a href="#" class="btn btn-rounded-default btn-rounded-danger"  @click.prevent="openPostalCode"> Order Online</a>
                                             </div>
