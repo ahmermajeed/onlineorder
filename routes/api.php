@@ -87,5 +87,7 @@ Route::post('register', 'UserController@register');
 
 Route::resource('tableReservation', 'Api\TableReservationController');
 
+Route::resource('tableCategories', 'Api\TableCategoryController');
+
 /** Printer Routes */
 Route::resource('printers', 'Api\PrintersController');
