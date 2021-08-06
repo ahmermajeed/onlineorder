@@ -22,7 +22,7 @@ Route::post('create-user', 'UserController@createNewUser');
 
 Route::put('update-user/{id}', 'UserController@updateUser');
 
-Route::get('get-all-roles', 'RolesController@index');
+Route::get('get-all-roles', 'Api\RolesController@index');
 
 Route::group(['prefix' => 'auth'], function () {
     Route::post('login', 'Auth\LoginController@login');
