@@ -98,18 +98,18 @@ class UserController extends Controller
             return response()->json($output, $code);
         }
 
-        $userId = User::where('id', $id)
+        $update = User::where('id', $id)
             ->update([
                 'name' => $requestData['name'],
                 'password' => Hash::make($requestData['password']),
             ]);
 
-        if($userId) {
+        if($update) {
             UserRole::where('user_id', $id)
                 ->update(['role_id' => $requestData['id_role']]);
             }
 
-        $user = User::find($userId);
+        $user = User::find($id);
 
         $output = ['data' => $user, 'message' => 'Success'];
 
