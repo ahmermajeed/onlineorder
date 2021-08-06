@@ -18,6 +18,12 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
 
+Route::post('create-user', 'UserController@createNewUser');
+
+Route::put('update-user/{id}', 'UserController@updateUser');
+
+Route::get('get-all-roles', 'RolesController@index');
+
 Route::group(['prefix' => 'auth'], function () {
     Route::post('login', 'Auth\LoginController@login');
 });
