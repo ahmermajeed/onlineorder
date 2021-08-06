@@ -48,13 +48,6 @@ class UserController extends Controller
     {
         $requestData = $request->all();
 
-        /*$validator = $request->validate([
-            'name' => ['required', 'string', 'max:255'],
-            'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
-            'password' => ['required', 'string'],
-            'id_role' => ['required'],
-        ]);*/
-
         $validator = Validator::make($request->all(),[
             'name' => ['required', 'string', 'max:255'],
             'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
@@ -75,7 +68,7 @@ class UserController extends Controller
         ]);
 
         if($userId) {
-            $userId = UserRole::insertGetId([
+            UserRole::insertGetId([
                 'user_id' => $userId,
                 'role_id' => $requestData['id_role']
             ]);
@@ -111,7 +104,7 @@ class UserController extends Controller
         ])->where('id', $id);
 
         if($userId) {
-            $userId = UserRole::where('user_id', $id)
+            UserRole::where('user_id', $id)
                 ->update(['role_id' => $requestData['id_role']]);
             }
 
