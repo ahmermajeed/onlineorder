@@ -76,8 +76,8 @@ class UserController extends Controller
 
         if($userId) {
             $userId = UserRole::insertGetId([
-                'id_user' => $userId,
-                'id_role' => $requestData['id_role']
+                'user_id' => $userId,
+                'role_id' => $requestData['id_role']
             ]);
 
         }
@@ -93,9 +93,8 @@ class UserController extends Controller
     {
         $requestData = $request->all();
 
-        $validator = $request->validate([
+        $validator = Validator::make($request->all(),[
             'name' => ['required', 'string', 'max:255'],
-            'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
             'password' => ['required', 'string'],
             'id_role' => ['required'],
         ]);
@@ -108,18 +107,30 @@ class UserController extends Controller
 
         $userId = User::update([
             'name' => $requestData['name'],
-            'email' => $requestData['email'],
             'password' => Hash::make($requestData['password']),
-        ])->where('id_user', $id);
+        ])->where('id', $id);
 
         if($userId) {
-            $userId = UserRole::where('id_user', $id)
-                ->update(['id_role' => $requestData['id_role']]);
+            $userId = UserRole::where('user_id', $id)
+                ->update(['role_id' => $requestData['id_role']]);
             }
 
         $user = User::find($userId);
 
         $output = ['data' => $user, 'message' => 'Success'];
+
+        return response()->json($output, Response::HTTP_OK);
+    }
+
+    public function deleteUser($id)
+    {
+        $userId = User::where('id', $id)->delete();
+
+        if($userId) {
+            $userId = UserRole::where('user_id', $id)->delete();
+        }
+
+        $output = ['data' => [], 'message' => 'Success'];
 
         return response()->json($output, Response::HTTP_OK);
     }

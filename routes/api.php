@@ -22,6 +22,8 @@ Route::post('create-user', 'UserController@createNewUser');
 
 Route::put('update-user/{id}', 'UserController@updateUser');
 
+Route::put('delete-user/{id}', 'UserController@deleteUser');
+
 Route::get('get-all-roles', 'Api\RolesController@index');
 
 Route::group(['prefix' => 'auth'], function () {
