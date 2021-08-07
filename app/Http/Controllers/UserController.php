@@ -129,5 +129,14 @@ class UserController extends Controller
         return response()->json($output, Response::HTTP_OK);
     }
 
+    public function getAll()
+    {
+        $users = User::with('roles')->get();
+
+        $output = ['data' => $users, 'message' => 'Success'];
+
+        return response()->json($output, Response::HTTP_OK);
+    }
+
 
 }
