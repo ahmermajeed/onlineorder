@@ -65,6 +65,7 @@ class UserController extends Controller
             'name' => $requestData['name'],
             'email' => $requestData['email'],
             'password' => Hash::make($requestData['password']),
+            'admin_app_user' => 1
         ]);
 
         if($userId) {
@@ -131,7 +132,7 @@ class UserController extends Controller
 
     public function getAll()
     {
-        $users = User::with('roles')->get();
+        $users = User::with('roles')->where('admin_app_user', 1)->get();
 
         $output = ['data' => $users, 'message' => 'Success'];
 
