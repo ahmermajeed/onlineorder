@@ -97,7 +97,11 @@
                        <div class="col-sm-12 cash-delivery">
                            <h3>Payment</h3>
                            <label class="customradiobutton radioiconed radio-inline mr-3">
-                               <input type="radio" value="COD"  @change.prevent="showCard(false)"  v-model="form.payment_type" ><i class="fas fa-wallet"></i> Cash on Delivery
+                               <input type="radio" value="COD"  @change.prevent="showCard(false)"  v-model="form.payment_type" ><i class="fas fa-wallet"></i> Cash
+                           </label>
+
+                           <label class="customradiobutton radioiconed radio-inline mr-3">
+                               <input type="radio" value="credit_card" v-model="form.payment_type" @change.prevent="showCard(true)" ><i class="fas fa-credit-card"></i> Credit/Debit Card
                            </label>
                        </div>
 
