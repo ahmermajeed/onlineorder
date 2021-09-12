@@ -120,7 +120,7 @@ ul {
     }
 }
 .header-top-section {
-    background-color: #e64a4e;
+    background-color: #f48a32;
     padding: 12px 0px 12px 0px;
 
     a {
@@ -490,7 +490,7 @@ ul {
             background-image: linear-gradient(
                 to right,
                 #632c91 0%,
-                #9c2122 100%
+                #e06c0b 100%
             );
             background-repeat: repeat-x;
             a {
@@ -578,7 +578,7 @@ ul {
 }
 
 .deliver-area {
-    background-image: url('images/theme-1/offer-main.jpg');
+    /*background-image: url('images/theme-1/offer-main.jpg');*/
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -587,13 +587,15 @@ ul {
         padding-left: 20px;
     }
     .card-offer {
-        background-image: url('images/theme-1/ratings-img.png');
+        /*background-image: url('images/theme-1/ratings-img.png');*/
         background-repeat: no-repeat;
         border-radius: 8px;
         color: #fff;
-        padding: 75px 40px 30px 40px;
+        padding: 30px 40px 30px 40px;
+        background: #1f1106;
+        border: 2px solid #a96c3d;
         @include media-breakpoint-down(lg) {
-            padding: 75px 25px 30px 25px;
+            padding: 30px 25px 30px 25px;
         }
         @include media-breakpoint-only(md) {
             margin-top: 30px;
@@ -606,11 +608,14 @@ ul {
         .card-content {
             overflow: hidden;
             h3 {
+                color: #f48a32;
                 @include media-breakpoint-down(lg) {
                     font-size: 22px;
                 }
             }
             p {
+                color: #fff !important;
+                min-height: 110px;
                 @include media-breakpoint-down(lg) {
                     font-size: 16px;
                 }
@@ -641,6 +646,7 @@ ul {
 }
 
 .card-offer:before {
+    display: none;
     content: '';
     position: absolute;
     background-image: url(/images/theme-1/before-leafs.png?0dd26c8…);
@@ -2246,7 +2252,7 @@ span.cart-count {
     width: 23px;
     height: 23px;
     line-height: 2.2;
-    color: #e64a4e;
+    color: #f48a32;
     padding: 0px 4px;
     vertical-align: top;
     top: 13px;
@@ -2344,15 +2350,15 @@ span.cart-count {
     font-size: 32px;
 }
 .order-page-menu path {
-    fill: #9c2122;
+    fill: #e06c0b;
 }
 .order-page-menu span.cart-count {
     position: relative;
     top: -44px;
     left: 25px;
-    border: 1px solid #9c2122;
+    border: 1px solid #e06c0b;
     display: block;
-    color: #9c2122;
+    color: #e06c0b;
     @include media-breakpoint-down(sm) {
         display: inline-block !important;
         top: -7px;
@@ -2541,10 +2547,10 @@ span.address {
     display: inline-block;
     width: 130px;
     padding: 10px;
-    border: solid 2px #e64a4e;
+    border: solid 2px #f48a32;
     transition: all 0.3s;
     color: #fff;
-    background: linear-gradient(to right, #e64a4e 0%, #9c2122 100%);
+    background: linear-gradient(to right, #f48a32 0%, #e06c0b 100%);
     cursor: pointer;
 }
 
