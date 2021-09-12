@@ -101,187 +101,195 @@
     </div>
 </template>
 <script>
-    export default {
-        props: ['showModalProp','list','has_sizes','editList','editIndex'],
-        data: function () {
-            return {
-                errorMessage: '',
-                successMessage: '',
-                isError: false,
-                product_quantity:1,
-                main_array : [],
-                productData: {},
-                total_amount_of_single_product : 0,
-                product_array:{},
-                cart:[],
-                error_message:''
-            };
-        },
-        methods: {
+export default {
+  props: ['showModalProp','list','has_sizes','editList','editIndex'],
+  data: function () {
+    return {
+      errorMessage: '',
+      successMessage: '',
+      isError: false,
+      product_quantity:1,
+      main_array : [],
+      productData: {},
+      total_amount_of_single_product : 0,
+      product_array:{},
+      error_message:'',
+      totalPrice : 0
+    };
+  },
+  methods: {
 
-            scrollToTop() {
-                $('div#add-product').stop().animate({
-                    scrollTop: 0
-                }, 'slow', 'swing');
-            },
+    scrollToTop() {
+      $('div#add-product').stop().animate({
+        scrollTop: 0
+      }, 'slow', 'swing');
+    },
 
-            priceFormat (num) {
-                return  parseFloat(num).toFixed(2);
-            },
+    priceFormat (num) {
+      return  parseFloat(num).toFixed(2);
+    },
 
-            showModal() {
-                this.$refs.myModalRef.show();
-                this.total_amount_of_single_product = this.priceFormat(this.list.price);
-                this.product_quantity = this.editList.quantity;
-                let vm = this;
-                for (var choice in this.editList.extras) {
-                    let index = this.editList.extras[choice]['group_name'];
-                    this.productData[index] = this.editList.extras[choice]['choice']+'##@@'+this.priceFormat(this.editList.extras[choice]['price']);
-                }
-            },
-            onHidden() {
-                this.$emit('HideModalValue');
-            },
-            hideModal() {
-                var self = this;
-                self.total_amount_of_single_product= 0;
-                self.product_quantity =1;
-                this.productData = {};
-                this.main_array=[];
-                this.error_message = '';
-                this.$refs.myModalRef.hide();
-            },
-            addToCart()
-            {
-                this.error_message = '';
-                this.product_array = {};
-                let total_amount = 0;
-                total_amount = this.total_amount_of_single_product * this.product_quantity;
-                let extras = [];
-                this.product_array = {
-                    'product_id':this.list.id,
-                    'quantity' :  this.product_quantity,
-                    'product_name':this.list.name,
-                    'price':this.total_amount_of_single_product,
-                    'special_instructions':this.productData.special_instruction,
-                    'single_product_total_amount':total_amount,
-                };
+    showModal() {
 
-                let group_check = [];
+      this.$refs.myModalRef.show();
+      this.product_quantity = this.editList.quantity;
 
-                for (var key in this.productData) {
-                    if(key != undefined){
-                        if(key != 'special_instruction'){
-                            let choice =  this.productData[key].split("##@@");
-                            extras.push({group_name:key,choice:choice[0],'price':choice[1]})
-                            group_check.push(key)
-                        }
-                    }
-                }
+      this.totalPrice = this.editList.price * this.editList.quantity;
 
+      for (var choice in this.editList.extras) {
+        let index = this.editList.extras[choice]['group_name'];
+        this.productData[index] = this.editList.extras[choice]['choice']+'##@@'+this.priceFormat(this.editList.extras[choice]['price']);
+      }
+    },
+    onHidden() {
+      this.$emit('HideModalValue');
+    },
+    hideModal() {
+      var self = this;
+      self.total_amount_of_single_product= 0;
+      self.product_quantity =1;
+      this.productData = {};
+      this.main_array=[];
+      this.error_message = '';
+      this.$refs.myModalRef.hide();
+      this.$bvModal.hide('edit-product');
 
+    },
+    addToCart()
+    {
+      let old_quantity =  this.$store.state.cartItems[this.editIndex]['quantity'];
 
-                let checkMandatory = this.checkMandatory();
+      this.$store.state.cartItems.splice(this.editIndex, 1);
+      this.$store.state.cartItemsCount -= old_quantity;
 
-                if(checkMandatory.length > 0 ){
-                    for( var cm in checkMandatory) {
-                        if(group_check.indexOf(checkMandatory[cm]) === -1) {
-                            this.error_message  = checkMandatory[cm] + ' is Required'
-                            this.scrollToTop();
-                            return;
-                        }
-                    }
-                }
+      this.error_message = '';
+      this.product_array = {};
+      let total_amount = 0;
+      total_amount = this.total_amount_of_single_product * this.product_quantity;
+      let extras = [];
+      this.product_array = {
+        'product_id':this.list.id,
+        'quantity' :  this.product_quantity,
+        'product_name':this.list.name,
+        'price':this.total_amount_of_single_product,
+        'special_instructions':this.productData.special_instruction,
+        'single_product_total_amount':total_amount,
+      };
 
-                if(extras.length > 0 ){
-                    this.product_array.extras = extras;
-                }
+      let group_check = [];
 
-                // let cart_data =  this.$store.getters.getAllCartArray;
-                this.$store.getters.getAllCartArray[this.editIndex]  = this.product_array;
-
-                // if(cart_data.length === 0){
-                //     this.$store.commit('setAllCartArray', this.product_array);
-                // }else {
-                //     let _this = this;
-                //     let old = this.$store.getters.getAllCartArray;
-                //     old.push(this.product_array);
-                //     this.$store.commit('setAllCartArray', old);
-                // }
-                this.hideModal();
-
-            },
-            validateBeforeSubmit() {
-
-
-                this.productData =
-                this.errorBag.clear();
-                this.$validator.validateAll().then((result) => {
-                    if (result && !this.errorBag.all().length) {
-                        if(this.productData.name === "") {
-                            this.errorBag.add({
-                                msg: 'The Name is required.',
-                                rule: 'required',
-                            });
-                            this.errorMessage = this.errorBag.all()[0];
-
-                        }
-                    }
-                    //his.errorMessage = this.errorBag.all()[0];
-                });
-            },
-
-            plusQuantity(){
-                this.quantity = this.product_quantity ++;
-            },
-            minusQuantity(){
-                if(this.product_quantity  > 1){
-                    this.quantity = this.product_quantity --;
-                }
-            },
-            checkMandatory(){
-                let _this = this;
-                let  mandatory = [];
-                if(this.has_sizes){
-                    mandatory.push('size')
-                }
-                if(this.list.groups.length > 0 ){
-                    for( let group in  this.list.groups){
-                        if(this.list.groups[group].type == 'Mandatory'){
-                            mandatory.push(_this.list.groups[group].name)
-                        }
-                    }
-                }
-                return mandatory;
-            },
-
-            productSum(array_key,value){
-                setTimeout(()=>{
-                    let total = 0;
-                    let vm  = this;
-                    if(!this.has_sizes){
-                        total =  parseFloat(this.list.price);
-                    }
-                    for (var key in this.productData) {
-                        let price =  this.productData[key].split("##@@");
-                        total +=  parseFloat(price[1]) ;
-                    }
-                    this.total_amount_of_single_product = total;
-                },200);
-            },
-
-
-
-        },
-        watch: {
-            showModalProp(value) {
-                if (value) {
-                    this.showModal();
-                }
-                if (!value) {
-                    this.hideModal();
-                }
-            }
+      for (var key in this.productData) {
+        if(key != undefined){
+          if(key != 'special_instruction'){
+            let choice =  this.productData[key].split("##@@");
+            extras.push({group_name:key,choice:choice[0],'price':choice[1]})
+            group_check.push(key)
+          }
         }
+      }
+
+      let checkMandatory = this.checkMandatory();
+
+      if(checkMandatory.length > 0 ){
+        for( var cm in checkMandatory) {
+          if(group_check.indexOf(checkMandatory[cm]) === -1) {
+            this.error_message  = checkMandatory[cm] + ' is Required'
+            this.scrollToTop();
+            return;
+          }
+        }
+      }
+
+      if(extras.length > 0 ){
+        this.product_array.extras = extras;
+      }
+
+      this.$store.commit('addToCart', this.product_array);
+
+      this.hideModal();
+
+    },
+    validateBeforeSubmit() {
+
+
+      this.productData =
+          this.errorBag.clear();
+      this.$validator.validateAll().then((result) => {
+        if (result && !this.errorBag.all().length) {
+          if(this.productData.name === "") {
+            this.errorBag.add({
+              msg: 'The Name is required.',
+              rule: 'required',
+            });
+            this.errorMessage = this.errorBag.all()[0];
+
+          }
+        }
+        //his.errorMessage = this.errorBag.all()[0];
+      });
+    },
+
+    plusQuantity(){
+      this.product_quantity ++;
+      this.productSum()
+    },
+
+    minusQuantity(){
+      if(this.product_quantity  > 1){
+        this.product_quantity --;
+        this.productSum()
+      }
+    },
+    checkMandatory(){
+      let _this = this;
+      let  mandatory = [];
+      if(this.has_sizes){
+        mandatory.push('size')
+      }
+      if(this.list.groups.length > 0 ){
+        for( let group in  this.list.groups){
+          if(this.list.groups[group].type == 'Mandatory'){
+            mandatory.push(_this.list.groups[group].name)
+          }
+        }
+      }
+      return mandatory;
+    },
+
+    productSum(){
+      setTimeout(()=>{
+        let total = 0;
+        let vm  = this;
+        if(!this.has_sizes){
+          total =  parseFloat(this.list.price);
+        }
+        for (var key in this.productData) {
+          let price =  this.productData[key].split("##@@");
+          total +=  parseFloat(price[1]) ;
+        }
+        this.total_amount_of_single_product = total;
+        this.totalPrice = total * this.product_quantity
+      },200);
+    },
+
+  },
+  watch: {
+    showModalProp(value) {
+      if (value) {
+        this.showModal();
+      }
+      if (!value) {
+        this.hideModal();
+      }
     }
+  }/*,
+        computed: {
+
+          totalPrice() {
+            let price = this.total_amount_of_single_product * this.product_quantity;
+            return price;
+          }
+        }*/
+
+}
 </script>

@@ -18,32 +18,20 @@
 
                <div class="col-sm-12  col-md-10 ">
                    <div class="row section-border order-check">
-
-
                        <div class="col-12">
-
-
                        </div>
-
-
-
                        <div class="col-sm-12">
-                           <label>{{orderType}} Date</label>
-                           <select class="form-control" v-model="form.deliveryTime">
-                               <option>As soon as possible</option>
-                               <option v-for="slot in slots">{{slot}}</option>
+                           <label>{{form.order_type}} Date</label>
+                           <select v-model="form.deliveryTime" class="form-control">
+                             <option value="">Please select {{form.order_type}} Date</option>
+                             <option v-for="slot in slots">{{slot}}</option>
                            </select>
                            <br>
                        </div>
-          
-
 
                        <div class="col-12">
 
-
-
-                           <div class="row" v-show="orderType != 'Pickup'">
-
+                           <div class="row" v-show="form.order_type == 'Delivery'">
 
                                <div class="col-12">
                                    <h3> Delivery Details</h3>
@@ -155,7 +143,7 @@
            </div>
        </div>
 
-       <div class="col-xs-12 full cart col-lg-4 col-md-4 col-sm-12 cart  checkout-cart-desktop"   v-if="getAllCartArray.length > 1"  >
+       <div class="col-xs-12 full cart col-lg-4 col-md-4 col-sm-12 cart  checkout-cart-desktop"   v-if="cartItems.length > 0"  >
            <div class="order cart-box" id="cart-stiky">
                <h3>Your Order </h3>
                <div class="check-out-list">
@@ -165,7 +153,7 @@
 
                        <table class=tbl_cart_list>
                             <h4>Order Details</h4>
-                           <tr v-for="(cart, product_index) in getAllCartArray"  v-if="product_index  > 0">
+                           <tr v-for="(cart, product_index) in cartItems">
                                <!-- <td class=highlighted>
                                </td> -->
 
@@ -180,7 +168,7 @@
                                </td>
 
                                <td class="amount" v-if="!cart.extras">£ {{priceFormat(cart.price * cart.quantity) }}</td>
-                               <td class="text-right" v-if="cart.extras">£{{priceFormat(cart.single_product_total_amount)}} </td>
+                               <td class="text-right" v-if="cart.extras">£{{priceFormat(cart.single_product_total_amount)}}</td>
                            </tr>
                        </table>
                    </div>
@@ -189,12 +177,13 @@
                            <li class="fees"></li>
                            <li>
                                <span>Sub Total</span>
-                               <span>£{{priceFormat(total_amount)}}</span>
+                               <span>£{{priceFormat(totalPrice)}}</span>
                            </li>
 
                            <li>
-                               <span>Discount</span>
-                               <span>  {{discountedAmount}} </span>
+                             <span>Discount</span>
+                             <span><a v-if="discountedAmount > 0" href="#" @click.prevent="removeCoupon"><i
+                                 class="fa fa-trash"></i></a> - {{discountedAmount}} </span>
                            </li>
 
                            <li>
@@ -219,247 +208,465 @@
 </template>
 
 <script>
-    export default {
-        data: function () {
-            return {
-                loading:false,
-                cat_count: false,
-                total_amount:0,
-                card : false,
-                order_card : false,
-                form: {
-                    address: '',
-                    street: '',
-                    town: null,
-                    postal_code:'',
-                    land_mark:'',
-                    email:'',
-                    number:'',
-                    name:'',
-                    payment_type:'',
-                    order_type:'',
-                    card_holder_name:'',
-                    card_number:'',
-                    expiration_month:'',
-                    expiration_year:'',
-                    cvc:'',
-                    deliveryTime: '',
-                    asap: ''
-                },
-                foods: [{ text: 'Select One', value: null }, 'Carrots', 'Beans', 'Tomatoes', 'Corn'],
-                show: true,
-                errorMessage:[],
-                validForm:true,
-                sendRequest:false,
-                offers:[],
-                discountedAmount:0,
-                discountedPercentAge:10,
-                finalAmount:0,
-                orderType:'',
-                interval: 45,
-                slots:[]
-            };
-        },
-        created(){
-            this.getTimeSlots();
-        },
-        
-        mounted() {
-            if(this.$store.getters.getAllCartArray.length > 0) {
-                let total = 0;
-                for( var key in this.$store.getters.getAllCartArray ) {
-                    var value = this.$store.getters.getAllCartArray[key];
+
+import {loadStripe} from '@stripe/stripe-js';
+
+export default {
+  components: {},
+  data: function () {
+    return {
+      stripe: {},
+      cardElement: {},
+      loading: false,
+      cat_count: false,
+      coupon_code: "",
+      coupon_error: "",
+      card: false,
+      order_card: false,
+      interval: 45,
+      form: {
+        address: '',
+        street: '',
+        town: null,
+        postal_code: '',
+        land_mark: '',
+        email: '',
+        number: '',
+        name: '',
+        payment_type: '',
+        order_type: this.$store.getters.getOrderType,
+        deliveryTime: '',
+        asap: ''
+      },
+      foods: [{text: 'Select One', value: null}, 'Carrots', 'Beans', 'Tomatoes', 'Corn'],
+      show: true,
+      errorMessage: [],
+      validForm: true,
+      sendRequest: false,
+      offers: [],
+      generatedToken: '',
+      discountedAmount: 0,
+      discountedPercentAge: 10,
+      slots: [],
+      delivery_fees: this.$store.getters.getDeliveryCharges == 'undefined' ? 0 : this.$store.getters.getDeliveryCharges,
+      coupon_applied: false,
+      hostedFieldInstance: false,
+      threeDSecure: false,
+      nonce: "",
+      error: "",
+      amount: 10,
+    };
+  },
+  mounted() {
+
+    /*this.stripe = await loadStripe("pk_live_51JXnRCH71X9RL0xsfpADqGumBYievOp6seZLdfsz9eIBoUQ01CxE1rcIXeuJV8O3oD6mR02JvJ7LPZAq67Af5ury00CfCvKdld");
+
+    const elements = this.stripe.elements();
+    this.cardElement = elements.create('card', {
+      classes: {
+        base: 'form-control'
+      }
+    });
+
+    this.cardElement.mount('#card-element');*/
+
+    this.form.order_type = this.$store.getters.getOrderType;
+
+    if (this.form.order_type == "Pickup")
+      this.interval = 30;
+    else
+      this.interval = 45
+
+    this.getTimeSlots()
+
+    this.scrollToMain();
+    this.getOffers();
+
+    // this.generateToken();
+  },
+  methods: {
+    getOffers() {
+      let _this = this;
+      _this.loading = true;
+      axios.get('/api/offer')
+          .then((response) => {
+            _this.offers = response.data.data;
+
+            _this.loading = false;
+          });
+    },
+
+    generateToken() {
+      let _this = this;
+      _this.loading = true;
+      axios.get('/api/generate-braintree-token')
+          .then((response) => {
+            _this.generatedToken = response.data.data;
+            _this.loading = false;
+          });
+    },
+
+    getTimeSlots() {
+      let _this = this;
+      _this.loading = true;
+      axios.get('/api/get-time-slots/' + _this.interval)
+          .then((response) => {
+            _this.slots = response.data;
+
+            _this.loading = false;
+          });
+    },
+
+    applyCoupon() {
+
+      let _this = this;
+
+      let data = {
+        'coupon_code': _this.coupon_code,
+        'total_amount': _this.finalAmount
+      };
+
+      _this.loading = true;
+
+      if (this.coupon_code === "") {
+        _this.coupon_error = 'please enter a valid coupon code';
+        _this.loading = false;
+
+        setTimeout(() => {
+          _this.coupon_error = "";
+        }, 2000);
+
+        return;
+      }
+
+      axios({
+        method: 'post',
+        url: '/api/apply-coupon',
+        data: data
+      })
+          .then(function (response) {
+            _this.loading = false;
+            //handle success
+            _this.discountedAmount = response.data.data
+            _this.coupon_applied = true
+          })
+          .catch(function (response) {
+            //handle error
+            _this.loading = false;
+            _this.coupon_error = response.response.data.error.message;
+            setTimeout(() => {
+              _this.coupon_error = "";
+            }, 2000);
+          });
+    },
+
+    removeCoupon() {
+
+      let _this = this;
+
+      _this.coupon_applied = false;
+      _this.discountedAmount = 0;
+      _this.coupon_code = "";
+
+    },
+
+    priceFormat(num) {
+      return parseFloat(num).toFixed(2);
+    },
+
+    showCard(val) {
+      this.card = val;
+    },
+
+    showOrderType(val) {
+      this.order_card = val;
+    },
+
+    scrollToMain() {
+      let element = document.getElementById("error_msg");
+      element.scrollIntoView({behavior: "instant", block: "start"});
+    },
+
+    scrollToTop() {
+      let element = document.getElementById("error_msg");
+      element.scrollIntoView({behavior: "instant", block: "start"});
+    },
+
+    async placeOrder() {
+      let error = [];
+      let _this = this;
+      //  if (this.form.order_type != '') {
+      if (this.form.email === "") {
+        error.push('Please Add Your Email Address');
+      }
+
+      if (this.form.deliveryTime === "") {
+        error.push('Please select delivery/pickup date and time');
+      }
+
+      if (this.form.name === "") {
+        error.push('Please Add Your Name');
+      }
+      if (this.form.number === "") {
+        error.push('Please Add Your Number');
+      }
+      if (this.form.order_type === 'Delivery') {
+        if (this.form.address === "") {
+          error.push('Please Add Your Delivery Address');
+        }
+        if (this.form.street === "") {
+          error.push('Please Add Your Street Adress');
+        }
+        if (this.form.town === "") {
+          error.push('Please Add Your Town Name');
+        }
+        if (this.form.postal_code === "") {
+          error.push('Please Add Your Postcode');
+        }
+      }
+
+      if (this.form.payment_type === "") {
+        error.push('Please Add Your Payment Type');
+      }
+      /*} else {
+          error.push('Please Choose Your Order Type');
+      }*/
+      this.errorMessage = error;
+
+      if (this.errorMessage.length > 0) {
+        _this.scrollToTop();
+      } else {
+        let vm = this;
+        if (this.form.order_type == 'Pickup') {
+          vm.form.address = '---';
+          vm.form.street = '---';
+          vm.form.postal_code = '---';
+        }
+
+        let data = {
+          'user_id': 11,
+          'total_amount_with_fee': this.finalAmount,
+          'delivery_fees': this.delivery_fees,
+          'discounted_amount': this.discountedAmount,
+          'payment': vm.form.payment_type,
+          'delivery_address': vm.form.address + " " + vm.form.street + " " + vm.form.postal_code,
+          // 'delivery_address': "===",
+          'order_details': vm.cartItems,
+          'user_data': this.form,
+          'order_type': this.form.order_type,
+          'payment_method_id' : ''
+        };
+
+        if (this.validForm) {
+          vm.loading = true;
+
+          if (this.form.payment_type === "credit_card") {
+
+            /** For Paypal **/
+
+            /*if (this.hostedFieldInstance) {
+              this.error = "";
+              this.nonce = "";
+              this.hostedFieldInstance.tokenize().then(payload => {
+
+                this.nonce = payload.nonce;
+
+                this.threeDSecure.verifyCard({
+                  amount: this.finalAmount,
+                  nonce: this.nonce,
+                  customer: {
+                    email: this.form.email,
+                    mobilePhoneNumber: this.form.number,
+                    billingAddress: {
+                      firstName: this.form.name,
+                      streetAddress: this.form.address,
+                      locality: this.form.street,
+                      region: this.form.town,
+                      postal_code: this.form.postal_code,
+                      phoneNumber: this.form.number
+                    }
+                  },
+                  addFrame: function (err, iframe) {
+                    vm.loading = false;
+                    // Set up your UI and add the iframe.
+                    document.getElementById("verifyCard").appendChild(iframe);
+                  },
+                  removeFrame: function () {
+                    vm.loading = false;
+                    // Remove UI that you added in addFrame.
+                    document.getElementById("verifyCard").innerHTML = ""
+                  }
+
+                }).then(pp => {
+                  this.loading = false;
+
+                  data.payment_method_id = pp.nonce;
+
+                  vm.sendPlaceOrder(data)
+
+                }).catch(err => {
+                  this.loading = false;
+                  this.error = err.message;
+                });
+
+              })
+              .catch(err => {
+                console.error(err);
+                this.error = err.message;
+              })
+            }*/
+
+
+            const {paymentMethod, error} = await this.stripe.createPaymentMethod(
+                'card', this.cardElement, {
+                  billing_details: {
+                    name: this.form.name,
+                    email: this.form.email,
+                    address: {
+                      line1: this.form.address,
+                      city: this.form.street,
+                      state: this.form.town,
+                      postal_code: this.form.postal_code
+                    }
+                  }
                 }
+            );
+
+            if (error) {
+              vm.loading = false;
+              //  alert(error.message)
+              console.log(error)
+            } else {
+
+              data.payment_method_id = paymentMethod.id;
+
+              axios({
+                method: 'post',
+                url: '/api/stripe-order',
+                data: data
+              })
+                  .then(function (response) {
+                    vm.loading = false;
+                    //handle success
+                    console.log(response);
+                    vm.$router.push({name: 'thankyou'});
+
+                    vm.$store.state.cartItems =  [];
+                    vm.$store.state.cartItemsCount = 0;
+
+                  })
+                  .catch(function (response) {
+                    //handle error
+                    vm.loading = false;
+
+                    vm.stripe.confirmCardPayment(response.response.data.error.payment_data.client_secret, {
+                      payment_method: response.response.data.error.payment_data.payment_method,
+                    }).then(function(result) {
+                      vm.sendPlaceOrder(data)
+                    });
+
+                  });
             }
-            var twentyMinutesLater = new Date();
-            twentyMinutesLater.setMinutes(twentyMinutesLater.getMinutes() + 50);
 
-            this.form.deliveryTime = twentyMinutesLater;
+          } else {
+            vm.sendPlaceOrder(data)
+          }
+        }
+      }
+    },
 
-            this.orderType = this.$store.getters.getOrderType;
+    sendPlaceOrder(data) {
 
-            this.scrollToMain();
-            this.getOffers();
+      let self = this;
 
-        },
-        methods: {
-           getOffers(){
-                let  _this = this;
-                _this.loading  = true;
-                axios.get('/api/offer')
-                    .then((response) => {
-                        _this.offers =  response.data.data;
+      console.log(data)
 
-                        _this.loading  = false;
-                    });
-            },
+      axios({
+        method: 'post',
+        url: '/api/placeOrder',
+        data: data
+      })
+          .then(function (response) {
+            self.loading = false;
+            //handle success
 
-            priceFormat (num) {
-                return  parseFloat(num).toFixed(2);
-            },
-            showCard(val){
-                this.card = val;
-            },
-            showOrderType(val){
-                this.order_card = val;
-            },
-            scrollToMain() {
-                let element = document.getElementById("error_msg");
-                element.scrollIntoView({behavior: "instant", block: "start"});
-            },
+            console.log(response);
 
-            scrollToTop() {
-                let element = document.getElementById("error_msg");
-                element.scrollIntoView({behavior: "instant", block: "start"});
-            },
+            self.$store.state.cartItems =  [];
+            self.$store.state.cartItemsCount = 0;
 
-            placeOrder() {
-                let error = [];
-                let _this = this;
-                if (this.form.order_type != '') {
-                    if (this.form.email === "") {
-                        error.push('Please Add Your Email Address');
-                    }
-                    if (this.form.name === "") {
-                        error.push('Please Add Your Name');
-                    }
-                    if (this.form.number === "") {
-                        error.push('Please Add Your Number');
-                    }
-                    if (this.form.order_type === 'Delivery') {
-                        if (this.form.address === "") {
-                            error.push('Please Add Your Delivery Address');
-                        }
-                        if (this.form.street === "") {
-                            error.push('Please Add Your Street Adress');
-                        }
-                        if (this.form.town === "") {
-                            error.push('Please Add Your Town Name');
-                        }
-                        if (this.form.postal_code === "") {
-                            error.push('Please Add Your Postal Code');
-                        }
-                        if (this.form.deliveryTime === "") {
-                            error.push('Please select delivery date and time');
-                        }
-                    }
+            self.$router.push({name: 'thankyou'});
 
-                    if (this.form.payment_type === "") {
-                        error.push('Please Add Your Payment Type');
-                    } else if (this.form.payment_type == 'Credit/Debit Card') {
-                        if (this.form.card_holder_name === "") {
-                            error.push('Please Add Card Holder Name');
-                        }
-                        if (this.form.card_number === "") {
-                            error.push('Please Add Card Number');
-                        }
-                        if (this.form.expiration_month === "") {
-                            error.push('Please Add Your Expiration Month');
-                        }
+          })
+          .catch(function (response) {
+            //handle error
+            self.loading = false;
+            alert(response.response.data.error.message);
+            console.log(response.response.data.error.message);
 
-                        if (this.form.expiration_year === "") {
-                            error.push('Please Add Expiration Year');
-                        }
-                        if (this.form.cvc === "") {
-                            error.push('Please Add Your Cvc');
-                        }
-                    }
+          });
 
-                }
-                this.errorMessage = error;
+    },
 
-                if (this.errorMessage.length > 0) {
-                    _this.scrollToTop();
-                } else {
-                    let vm = this;
-                    if (vm.orderType == 'Pickup') {
-                        vm.form.address = '---';
-                        vm.form.street = '---';
-                        vm.form.postal_code = '---';
-                    }
+    payWithCreditCard() {
 
-                    let data = {
-                        'user_id': 11,
-                        'total_amount_with_fee': this.total_amount - this.discountedAmount,
-                        'delivery_fees': '0',
-                        'discounted_amount': this.discountedAmount,
-                        'payment': 'cod',
-                        'delivery_address': vm.form.address + " " + vm.form.street + " " + vm.form.postal_code,
-                        'order_details': this.$store.getters.getAllCartArray,
-                        'user_data': this.form,
-                        'order_type': vm.orderType
-                    };
-                    console.log(data);
-                    setTimeout(() => {
-                        if (this.validForm) {
-                            vm.loading = true;
-                            let cart = this.$store.getters.getAllCartArray.splice(0, 1);
-                            axios({
-                                method: 'post',
-                                url: '/api/placeOrder',
-                                data: data
-                            })
-                                .then(function (response) {
-                                    vm.loading = false;
-                                    //handle success
-                                    console.log(response);
-                                    vm.$router.push({name: 'thankyou'});
-                                    //vm.$store.commit('setAllCartArray', {});
-
-                                })
-                                .catch(function (response) {
-                                    //handle error
-                                    console.log(response);
-
-                                });
-                        }
-
-                    }, 1000);
-                }
-            },
-
-            getTimeSlots() {
-                let _this = this;
-                _this.loading = true;
-                axios.get('/api/get-time-slots/' + _this.interval)
-                    .then((response) => {
-                        _this.slots = response.data;
-
-                        _this.loading = false;
-                    });
-            },
-
-
-
-
-        },
-        computed: {
-            getAllCartArray() {
-                if(this.$store.getters.getAllCartArray.length > 1 ){
-
-                    let sum = 0;
-                    let count = 0;
-                    this.$store.getters.getAllCartArray.forEach(function(item) {
-                        count++;
-                        if(count > 1){
-                            sum += item.single_product_total_amount;
-                        }
-                    });
-                    this.total_amount = sum;
-                    if(sum  >= 15){
-                        this.discountedAmount =  (sum/100 * this.discountedPercentAge).toFixed(2)
-                    }
-
-                    this.finalAmount =   this.total_amount - this.discountedAmount
-
-                }
-                return this.$store.getters.getAllCartArray;
-            },
-        },
     }
+  },
+  computed: {
+
+    cartItems () {
+      return this.$store.state.cartItems;
+    },
+
+    totalPrice () {
+      let price = 0;
+      this.$store.state.cartItems.map(el => {
+        price += el['quantity'] * el['price'];
+      })
+      return price;
+    },
+
+    finalAmount () {
+
+      let final_amount = 0
+      if (localStorage.getItem('order_type') === "Pickup") {
+        final_amount = this.totalPrice - this.discountedAmount;
+      } else {
+        final_amount = this.totalPrice + this.delivery_fees - this.discountedAmount;
+      }
+
+      return final_amount;
+
+    }
+
+    /*getAllCartArray() {
+      if (this.$store.getters.getAllCartArray.length > 1) {
+
+        let sum = 0;
+        let count = 0;
+        this.$store.getters.getAllCartArray.forEach(function (item) {
+          count++;
+          if (count > 1) {
+            sum += item.single_product_total_amount;
+          }
+        });
+        this.total_amount = sum;
+        if (sum >= 1500000000) {
+          this.discountedAmount = (sum / 100 * this.discountedPercentAge).toFixed(2)
+        }
+
+        if (localStorage.getItem('order_type') === "Pickup") {
+          this.finalAmount = this.total_amount - this.discountedAmount;
+        } else {
+          this.finalAmount = this.total_amount + this.delivery_fees - this.discountedAmount;
+        }
+
+      }
+      return this.$store.getters.getAllCartArray;
+    },*/
+  }
+}
 </script>
-
-
 <style>
     
 </style>
