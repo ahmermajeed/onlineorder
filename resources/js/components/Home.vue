@@ -272,81 +272,43 @@
                         <div class="menus-pattern-second">
                             <div class="menu-second-before"></div>
                             <div class="second-menu title-styl">
-                                <h2>Chicken</h2>
-                                <div class="menu-content">
-                                    <div class="row ">
-                                        <div class="col-4">
-                                            <p>Menu:</p>
-                                        </div>
-                                        <div class="col-2 text-center">
-                                            <span class="badge badge-warning">1Pcs</span>
-                                        </div>
-                                        <div class="col-2 text-center">
-                                            <span class="badge badge-danger">2Pcs</span>
-                                        </div>
-                                        <div class="col-2 text-center">
-                                            <span class="badge badge-warning">3Pcs</span>
-                                        </div>
-                                        <div class="col-2 text-center">
-                                            <span class="badge badge-warning">5Pcs</span>
-                                        </div>
+                                <h2>Pizzas</h2>
 
-                                    </div>
-                                </div>
                                 <div class="menu-item">
                                     <div class="box-borders">
                                         <div class="row">
-                                            <div class="col-4">
-                                                <p>Chicken</p>
+                                            <div class="col-10">
+                                                <p>Donner Kebab</p>
                                             </div>
                                             <div class="col-2 text-center">
-                                                <span>£1.20</span>
-                                            </div>
-                                            <div class="col-2  text-center">
-                                                <span>£2.20</span>
-                                            </div>
-                                            <div class="col-2  text-center">
-                                                <span>£3.00</span>
-                                            </div>
-                                            <div class="col-2  text-center">
-                                                <span>£4.95</span>
+                                                <span>£4.00</span>
                                             </div>
                                         </div>
-                                    </div>
+                                    </div>  
 
                                     <div class="box-borders">
                                         <div class="row">
-                                            <div class="col-4">
-                                              <p>Spicy Chicken</p>
+                                            <div class="col-10">
+                                                <p>Chicken Tikka Kebab</p>
                                             </div>
                                             <div class="col-2 text-center">
-                                                <span>£1.20</span>
-                                            </div>
-                                            <div class="col-2  text-center">
-                                                <span>£2.20</span>
-                                            </div>
-                                            <div class="col-2  text-center">
-                                                <span>£3.10</span>
-                                            </div>
-                                            <div class="col-2  text-center">
-                                                <span>-</span>
+                                                <span>£4.40</span>
                                             </div>
                                         </div>
                                     </div>                                  
                                 </div>
                             </div>
-
                             <div class="second-menu title-styl">
-                                <h2>Side Order</h2>
+                                <h2>Desserts</h2>
 
                                 <div class="menu-item">
                                     <div class="box-borders">
                                         <div class="row">
                                             <div class="col-10">
-                                                <p>Hot Apple Pie</p>
+                                                <p>Chocolate Fudge Cake Slice</p>
                                             </div>
                                             <div class="col-2 text-center">
-                                                <span>£0.99</span>
+                                                <span>£2.50</span>
                                             </div>
                                         </div>
                                     </div>  
@@ -354,24 +316,13 @@
                                     <div class="box-borders">
                                         <div class="row">
                                             <div class="col-10">
-                                                <p>BBQ Beans</p>
+                                                <p>Ben & Jerry Chocolate Fudge Ice Cream (500ml)</p>
                                             </div>
                                             <div class="col-2 text-center">
-                                                <span>£0.95</span>
+                                                <span>£5.00</span>
                                             </div>
                                         </div>
-                                    </div>  
-
-                                    <div class="box-borders">
-                                        <div class="row">
-                                            <div class="col-10">
-                                                <p>Corn on the Cob</p>
-                                            </div>
-                                            <div class="col-2 text-center">
-                                                <span>£1.20</span>
-                                            </div>
-                                        </div>
-                                    </div>                                 
+                                    </div>                               
                                 </div>
                             </div>
                         </div>
@@ -466,7 +417,7 @@
         <reservation></reservation>
 
 
-        <section class="section-fullwidth deal-section">
+        <!-- <section class="section-fullwidth deal-section">
             <div class="container">
                 <div class="deal-content">
                     <div class="offers-head">
@@ -496,7 +447,7 @@
 
                 </div>
             </div>
-        </section>
+        </section> -->
 
         <section class="section-fullwidth reservation">
             <div class="container">
@@ -508,7 +459,7 @@
                             <div class="form-box">
                                 <div class="title">
                                     <h3>Contact us</h3>
-                                    <p>Worcestershire Country 31A Comberton Hill,<br> Kidderminster DY10 1QN, UK</p>
+                                    <p>Office no 3 Beckshaw House Law Street Cleckheaton</p>
 
                                 </div>
                                 <form>
