@@ -38,7 +38,7 @@
                             <div class="col-6 col-md-3">
                                 <router-link :to="{ path: '/'}">
                                      <a class="navbar-brand js-scroll-trigger main-logo" href="javascript:;">
-                                        <img src="/images/tasty-land/logo.webp">
+                                        <img src="/images/tasty-land/sen-logo.png">
                                     </a>
                                 </router-link>
                             </div>
