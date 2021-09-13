@@ -110,11 +110,11 @@
 
                             <div class="lp-sidebar-body">
                                 <div class="img-box text-center">
-                                    <h5 v-if="getAllCartArray.length == 1" class="mt-2">No item in your cart</h5>
+                                    <h5 v-if="cartItems.length == 0" class="mt-2">No item in your cart</h5>
                                 </div>
                                 <div class="table-holder">
                                     <table class="tbl_cart_list">
-                                        <tr class="section-border" v-for="(cart, product_index) in getAllCartArray"  v-if="product_index  > 0">
+                                        <tr class="section-border" v-for="(cart, product_index) in cartItems">
                                             <td class="order-name">
                                                 <div class="cart-order">{{cart.product_name}}</div>
                                                 <div  class="strong-open"  v-if="cart.extras" v-for="(extra, extra_index) in cart.extras" >
@@ -140,13 +140,13 @@
                                                 </span>
                                                 <span class="mealactions">
                                                        <a href="#"  @click.prevent="updateProduct(cart.product_id,cart,product_index)"> <i v-b-tooltip.hover title="Edit Meal"  class="icon-edit-1"></i></a>
-                                                       <a href="#" class="close-icon" @click.prevent="removeFromCart(product_index)"> <i v-b-tooltip.hover title="Remove Meal" class="icon-delete" ></i></a>
+                                                       <a href="#" class="close-icon" @click.prevent="removeFromCart(cart)"> <i v-b-tooltip.hover title="Remove Meal" class="icon-delete" ></i></a>
                                                    </span>
                                                    <span class="order-quty">
                                                        <div class="priec-order">
-                                                            <a class="icon-up"  href="#" @click.prevent="quantityAddInCart(product_index)"> <i class="icon-plus"  ></i></a>
+                                                            <a class="icon-up"  href="#" @click.prevent="quantityAddInCart(product_index, cart)"> <i class="icon-plus"  ></i></a>
                                                             <span class="text-center">{{ cart.quantity}}  <!-- <i>X</i> --></span>
-                                                            <a  class="icon-down"  href="#"  @click.prevent="quantityMinusInCart(product_index)"> <i class="icon-subtract"></i></a>
+                                                            <a  class="icon-down"  href="#"  @click.prevent="quantityMinusInCart(cart)"> <i class="icon-subtract"></i></a>
                                                         </div> 
                                                    </span>
                                                 
@@ -164,22 +164,22 @@
                             </div>
                             
                         </div>
-                        <div class="mobile-cart-button" v-bind:class="{ cartheight: cart_height }" v-if="getAllCartArray.length > 1">
+                        <div class="mobile-cart-button" v-bind:class="{ cartheight: cart_height }" v-if="cartItems.length > 0">
                 <div class="inner">
                     <span class="products-count"><svg xmlns="http://www.w3.org/2000/svg" class="svg-stroke-container" width="24" height="24">
                         <path fill="#707070" d="M12 2.75a4.75 4.75 0 014.744 4.5h3.103a1 1 0 01.99 1.141l-1.714 12a1 1 0 01-.99.859H5.867a1 1 0 01-.99-.859l-1.714-12a1 1 0 01.99-1.141h3.103A4.75 4.75 0 0112 2.75zm5.559 14.75H6.44a.4.4 0 00-.396.457l.208 1.45a.4.4 0 00.396.343H17.35a.4.4 0 00.396-.343l.208-1.45a.4.4 0 00-.396-.457zm1.25-8.75H5.19a.4.4 0 00-.396.457l.922 6.45a.4.4 0 00.396.343h11.775a.4.4 0 00.396-.343l.922-6.45a.4.4 0 00-.396-.457zM12 4.25a3.251 3.251 0 00-3.193 2.638.305.305 0 00.3.362h5.796a.297.297 0 00.292-.35A3.251 3.251 0 0012 4.25z"></path>
-                    </svg>{{getAllCartArray.length - 1}}</span>
+                    </svg>{{cartItems.length}}</span>
                     <span class="products-value">£{{priceFormat(total_amount)}}</span>
                     <span class="text" @click="opencartlist()">Checkout</span>
 
                     
                 </div>
-                <ul v-for="(cart, product_index) in getAllCartArray"  v-if="product_index  > 0">
+                <ul v-for="(cart, product_index) in cartItems">
                     <li>
                         <span class="qty">{{ cart.quantity}}
                             <span class="qtyincrement">
-                                <a href="#"  @click.prevent="quantityAddInCart(product_index)"> <i class="fa fa-plus-square-o"></i></a>
-                                <a href="#" @click.prevent="quantityMinusInCart(product_index)"> <i class="fa fa-minus-square-o" @click="quantityMinusInCart(product_index)"></i></a>
+                                <a href="#"  @click.prevent="quantityAddInCart(product_index, cart)"> <i class="fa fa-plus-square-o"></i></a>
+                                <a href="#" @click.prevent="quantityMinusInCart(cart)"> <i class="fa fa-minus-square-o" @click="quantityMinusInCart(product_index)"></i></a>
                             </span>
                         </span>
                         <span class="meal">
@@ -190,7 +190,7 @@
                         </span>
                            <span class="mealactions">
                                 <i v-b-tooltip.hover title="Edit Meal"  class="fas fa-pen"></i>
-                                <a href="#" @click.prevent="removeFromCart(product_index)"> <i v-b-tooltip.hover title="Remove Meal" class="icon-delete"></i></a>
+                                <a href="#" @click.prevent="removeFromCart(cart)"> <i v-b-tooltip.hover title="Remove Meal" class="icon-delete"></i></a>
                             </span>
                         <span class="price">£{{priceFormat(cart.single_product_total_amount)}}</span>
                     </li>
@@ -229,11 +229,11 @@
                         </div>
                     </div>
             </div>
-            <div class="mobile-cart-button" v-bind:class="{ cartheight: cart_height }" v-if="getAllCartArray.length > 1">
+            <div class="mobile-cart-button" v-bind:class="{ cartheight: cart_height }" v-if="cartItems.length > 0">
                 <div class="inner">
                     <span class="products-count"><svg xmlns="http://www.w3.org/2000/svg" class="svg-stroke-container" width="24" height="24">
                         <path fill="#707070" d="M12 2.75a4.75 4.75 0 014.744 4.5h3.103a1 1 0 01.99 1.141l-1.714 12a1 1 0 01-.99.859H5.867a1 1 0 01-.99-.859l-1.714-12a1 1 0 01.99-1.141h3.103A4.75 4.75 0 0112 2.75zm5.559 14.75H6.44a.4.4 0 00-.396.457l.208 1.45a.4.4 0 00.396.343H17.35a.4.4 0 00.396-.343l.208-1.45a.4.4 0 00-.396-.457zm1.25-8.75H5.19a.4.4 0 00-.396.457l.922 6.45a.4.4 0 00.396.343h11.775a.4.4 0 00.396-.343l.922-6.45a.4.4 0 00-.396-.457zM12 4.25a3.251 3.251 0 00-3.193 2.638.305.305 0 00.3.362h5.796a.297.297 0 00.292-.35A3.251 3.251 0 0012 4.25z"></path>
-                    </svg>{{getAllCartArray.length - 1}}
+                    </svg>{{cartItems.length}}
                      <span class="products-value">£{{priceFormat(total_amount)}}</span>
                 </span>
                    
@@ -277,12 +277,12 @@
                 </div> -->
 
                 <div class="mb-cart-box">
-                    <ul class="cart-list"  v-for="(cart, product_index) in getAllCartArray" v-if="product_index  > 0">
+                    <ul class="cart-list"  v-for="(cart, product_index) in cartItems">
                         <li>
                         <span class="qty mob">
-                            <i style="font-size: 17px;" @click="quantityAddInCart(product_index)">+</i>
+                            <i style="font-size: 17px;" @click="quantityAddInCart(product_index, cart)">+</i>
                                <span>{{ cart.quantity}}</span>
-                            <i style="font-size: 17px;" @click="quantityMinusInCart(product_index)">-</i>
+                            <i style="font-size: 17px;" @click="quantityMinusInCart(cart)">-</i>
 
                         </span>
                             <span class="meal">
@@ -295,7 +295,7 @@
                             <span class="mealactions">
 
                                 <a href="#"  @click="updateProduct(cart.product_id,cart,product_index)"><i v-b-tooltip.hover title="Edit Meal" class="fas fa-pen"> </i></a>
-                               <a href="#" @click.prevent="removeFromCart(product_index)"> <i v-b-tooltip.hover title="Remove Meal" class="fa fa-times"></i></a>
+                               <a href="#" @click.prevent="removeFromCart(cart)"> <i v-b-tooltip.hover title="Remove Meal" class="fa fa-times"></i></a>
                             </span>
                             <span class="price">£{{priceFormat(cart.single_product_total_amount)}}</span>
                         </li>
@@ -309,22 +309,15 @@
             </div>
         </div>
 
-
         <food-allergy @HideModalValue="hideModal" :showModalProp="foodAllergyModal"></food-allergy>
 
         <add-product @HideModalValue="hideModal" :showModalProp="product" :list="list" :has_sizes="has_sizes"></add-product>
 
-
         <edit-product @HideModalValue="hideModal" :showModalProp="editProduct" :list="list" :editList="editList" :has_sizes="has_sizes" :editIndex="editIndex"> </edit-product>
-
 
         <add-deal @HideModalValue="hideModal" :showModalProp="dealsModal" :deals_data="deals_data"></add-deal>
 
-
-
         <edit-deal @HideModalValue="hideModal" :showModalProp="editDeal" :deals_data="deals_data" :editDealsData="editDealsData" :editIndex="editIndex"> </edit-deal>
-
-
 
         <footer-menu></footer-menu>
     </div>
@@ -332,334 +325,328 @@
 </template>
 
 <script>
-    export default {
-        data: function () {
-            return {
-                loading:false,
-                categories:[],
-                products:[],
-                product:false,
-                editProduct:false,
-                list:{},
-                editList:{},
-                has_sizes:false,
-                cat_count: false,
-                total_amount:0,
-                cart_height:false,
-                limitPosition: 380,
-                scrolled: false,
-                editIndex:'',
-                deals:[],
-                deals_data:{},
-                dealsModal:false,
-                editDeal:false,
-                editDealsData:{},
-                foodAllergyModal: false,
-                showPostal : false,
-                errorMessage:'',
-                orderType:'',
-                error_message:''
-            };
-        },
-        mounted() {
-            this.getCategories();
-            this.getProductAgainstCategories(false);
-            this.getDeals(false)
-            if(this.$store.getters.getAllCartArray.length > 0) {
-                let total = 0;
-                for( var key in this.$store.getters.getAllCartArray ) {
-                    var value = this.$store.getters.getAllCartArray[key];
-                }
-            }
+export default {
+  data: function () {
+    return {
+      loading: false,
+      categories: [],
+      products: [],
+      product: false,
+      editProduct: false,
+      list: {},
+      editList: {},
+      has_sizes: false,
+      cat_count: false,
+      total_amount: 0,
+      cart_height: false,
+      limitPosition: 380,
+      scrolled: false,
+      editIndex: '',
+      deals: [],
+      deals_data: {},
+      dealsModal: false,
+      editDeal: false,
+      editDealsData: {},
+      foodAllergyModal: false,
+      orderType: '',
+      postalCode: '',
+      showPostal : false,
+      errorMessage: '',
+      totalNumberofDeals:0,
+      ShopClose:true,
+    };
+  },
+  mounted() {
+    this.getCategories();
+    this.getProductAgainstCategories(false);
+    this.getDeals(false)
 
-            this.orderType = this.$store.getters.getOrderType;
+    this.orderType = this.$store.getters.getOrderType;
 
-            this.postalCode = this.$store.getters.getPostalCode;
+    this.postalCode = this.$store.getters.getPostalCode;
 
-            if(this.orderType == "Delivery") {
-                this.showPostal = true
-            }
-
-            this.scrollToMain();
-            window.addEventListener("scroll", this.handleScroll);
-
-
-        },
-        methods: {
-
-            showPostalCode() {
-                let self = this;
-
-                if(self.orderType == "Delivery")
-                    self.showPostal = true
-                else
-                    self.showPostal = false
-            },
-
-            scrollToMain() {
-                let element = document.getElementById("product-scroll");
-                element.scrollIntoView({behavior: "instant", block: "start"});
-            },
-
-            updateProduct(id,cart,index){
-
-
-
-                let  _this = this;
-                var url = '';
-                if(cart.product_type === "deal")
-                {
-                    this.editDealsData = cart;
-                    _this.loading  = true;
-                     url = '/api/deals/'+id;
-
-                }else {
-
-                    this.editList = cart;
-                    _this.loading  = true;
-                    url = '/api/products/'+id;
-                }
-                axios.get(url)
-                    .then((response) => {
-                        if (cart.product_type === 'deal') {
-
-                            _this.deals_data = response.data.data;
-                            _this.loading = false;
-                            _this.editIndex = index;
-                            _this.editDeal = true;
-
-                        } else {
-
-                            _this.list = response.data.data;
-                            _this.has_sizes = _this.list.sizes.length > 0;
-                            _this.loading = false;
-                            _this.editIndex = index;
-                            _this.editProduct = true;
-
-                        }
-                    });
-            },
-            priceFormat (num) {
-                return  parseFloat(num).toFixed(2);
-            },
-            addProduct() {
-                this.product = true;
-            },
-            hideModal() {
-                this.product = false;
-                this.editProduct= false;
-                this.dealsModal= false;
-                this.list = {};
-                this.deals_data = {};
-                this.editDeal = false;
-                this.editDealsData ={};
-                this.foodAllergyModal = false;
-            },
-
-            getCategories(){
-                let  _this = this;
-                _this.loading  = true;
-                axios.get('/api/categories')
-                    .then((response) => {
-                        _this.categories =  response.data.data;
-                        _this.loading  = false;
-                        if(_this.categories.length > 7){
-                            _this.cat_count = true;
-                        }
-                    });
-            },
-
-            getDeals(){
-                let  _this = this;
-                _this.loading  = true;
-                axios.get('/api/deals')
-                    .then((response) => {
-                        // console.log( response.data.data);
-                        _this.products = [];
-                        _this.deals = response.data.data;
-
-                        _this.loading  = false;
-                    });
-            },
-
-            getProductAgainstCategories(id){
-                let  _this = this;
-                _this.loading  = true;
-                var url = '/api/categories';
-                if(id){
-                    url = url + '?id=' + id;
-                }
-                axios.get(url)
-                    .then((response) => {
-                        _this.products =  response.data.data
-                        _this.loading  = false;
-
-                    });
-            },
-            opencartlist(){
-                this.cart_height = !this.cart_height;
-                if(this.cart_height == true) {
-                    document.querySelector("body").style.overflow = 'hidden';
-                } else {
-                    document.querySelector("body").style.overflow = 'auto';
-                }
-            },
-            viewProduct(id){
-                let  _this = this;
-                _this.loading  = true;
-                let url = '/api/products/'+id;
-                axios.get(url)
-                    .then((response) => {
-                        _this.list =  response.data.data;
-                        _this.has_sizes = _this.list.sizes.length > 0;
-                        _this.loading  = false;
-                        _this.product = true;
-                    });
-            },
-
-            viewDeal(id){
-                let  _this = this;
-                _this.loading  = true;
-                let url = '/api/deals/'+id;
-                axios.get(url)
-                    .then((response) => {
-                        _this.deals_data =  response.data.data;
-                        _this.loading  = false;
-                        _this.dealsModal = true;
-                    });
-            },
-
-
-              placeOrder(){
-                 let vm = this;
-
-                 if (this.orderType == '') {
-                     vm.errorMessage = 'Please Select Order Type';
-                     setTimeout(function(){ vm.errorMessage = ""; }, 2000);
-                 } else if(this.orderType == 'Delivery' && this.postalCode == "") {
-                     vm.errorMessage = 'Please Enter Your Postcode';
-                     setTimeout(function(){ vm.errorMessage = ""; }, 2000);
-
-                 } else {
-
-                     if(this.orderType === 'Pickup'){
-                         vm.$router.push({name: 'check-out'});
-                     }else {
-                         axios({
-                             method: 'post',
-                             url: '/api/check-postal',
-                             data: {
-                                 order_type: this.orderType,
-                                 postal_code:this.postalCode
-                             },
-                         }).then(function (response) {
-
-                             if(response.data.error === undefined){
-                                 vm.errorMessage = response.data.data.amount;
-                                 vm.$store.commit('setDeliveryCharges', response.data.data.amount);
-                                 vm.$store.commit('setOrderType', vm.orderType);
-                                 vm.$store.commit('setPostalCode', vm.postalCode);
-                                 vm.$router.push({name: 'check-out'})
-
-                             }else {
-                                 vm.errorMessage = 'We are not providing food in your area';
-                             }
-                         })
-                             .catch(function (response) {
-                                 //handle error
-                                 console.log(response);
-                             });
-
-                     }
-
-                 }
-            },
-
-
-            removeFromCart(index){
-                console.log('tets');
-                let cart_data = this.$store.getters.getAllCartArray;
-                cart_data.splice(index,1);
-                this.updateCart();
-
-            },
-            quantityAddInCart(index){
-
-                    this.$store.getters.getAllCartArray[index].single_product_total_amount  =  parseFloat(this.$store.getters.getAllCartArray[index].single_product_total_amount) + parseFloat(this.$store.getters.getAllCartArray[index].price);
-                    this.$store.getters.getAllCartArray[index].quantity ++;
-                    this.updateCart();
-                //this.getAllCartArray();
-            },
-            quantityMinusInCart(index){
-                let quantity = this.$store.getters.getAllCartArray[index].quantity;
-                 if(quantity >= 2){
-                    this.$store.getters.getAllCartArray[index].quantity --;
-                    this.$store.getters.getAllCartArray[index].single_product_total_amount =  parseFloat(this.$store.getters.getAllCartArray[index].single_product_total_amount) - parseFloat(this.$store.getters.getAllCartArray[index].price);
-                     this.updateCart();
-                 } else {
-                     this.removeFromCart(index)
-                 }
-            },
-
-            updateCart() {
-                if(this.$store.getters.getAllCartArray.length > 1 ){
-                    let sum = 0;
-                    let count = 0;
-                    this.$store.getters.getAllCartArray.forEach(function(item) {
-                        count++;
-                        if(count > 1){
-
-                            console.log(item.single_product_total_amount)
-
-                            sum += item.single_product_total_amount;
-                        }
-                    });
-                    this.total_amount = sum;
-                }
-                return this.$store.getters.getAllCartArray;
-            },
-            handleScroll() {
-
-                if (this.limitPosition < window.scrollY) {
-                    this.scrolled = true;
-                    // move up!
-                }
-
-                if (this.limitPosition > window.scrollY) {
-                    this.scrolled = false;
-                    // move down
-                }
-            },
-
-            foodAllergyPopup() {
-                this.foodAllergyModal = true;
-            },
-
-        },
-        computed: {
-            getAllCartArray() {
-                let self = this;
-                if(this.$store.getters.getAllCartArray.length > 1 ){
-                    let sum = 0;
-                    let count = 0;
-                    this.$store.getters.getAllCartArray.forEach(function(item) {
-                        count++;
-                        if(count > 1){
-                            sum += item.single_product_total_amount;
-                        }
-                    });
-                    this.total_amount = sum;
-                }
-                return this.$store.getters.getAllCartArray;
-            },
-        },
-        destroyed() {
-            window.removeEventListener("scroll", this.handleScroll);
-        },
-
-
-
+    if(this.orderType == "Delivery") {
+      this.showPostal = true
     }
+
+    this.scrollToMain();
+    window.addEventListener("scroll", this.handleScroll);
+
+
+  },
+  created(){
+    this.checkShoptime()
+  },
+  methods: {
+
+    checkShoptime(){
+      var d = new Date();
+      var n = d.getHours();
+      let vm = this;
+      /* if(n > 10){
+           vm.ShopClose =false
+       }*/
+    },
+
+    showPostalCode() {
+      let self = this;
+
+      if(self.orderType == "Delivery")
+        self.showPostal = true
+      else
+        self.showPostal = false
+    },
+
+    scrollToMain() {
+      let element = document.getElementById("product-scroll");
+      element.scrollIntoView({behavior: "instant", block: "start"});
+    },
+
+    updateProduct(id, cart, index) {
+      let _this = this;
+      var url = '';
+      if (cart.product_type === "deal") {
+        this.editDealsData = cart;
+        _this.loading = true;
+        url = '/api/deals/' + id;
+
+      } else {
+
+        this.editList = cart;
+        _this.loading = true;
+        url = '/api/products/' + id;
+      }
+      axios.get(url)
+          .then((response) => {
+            if (cart.product_type === 'deal') {
+
+              _this.deals_data = response.data.data;
+              _this.loading = false;
+              _this.editIndex = index;
+              _this.editDeal = true;
+
+            } else {
+
+              _this.list = response.data.data;
+              _this.has_sizes = _this.list.sizes.length > 0;
+              _this.loading = false;
+              _this.editIndex = index;
+              _this.editProduct = true;
+
+            }
+          });
+    },
+
+    priceFormat(num) {
+      return parseFloat(num).toFixed(2);
+    },
+
+    addProduct() {
+      this.product = true;
+    },
+
+    hideModal() {
+      this.product = false;
+      this.editProduct = false;
+      this.dealsModal = false;
+      this.list = {};
+      this.deals_data = {};
+      this.editDeal = false;
+      this.editDealsData = {};
+      this.foodAllergyModal = false;
+    },
+
+    getCategories() {
+      let _this = this;
+      _this.loading = true;
+      axios.get('/api/categories')
+          .then((response) => {
+            _this.categories = response.data.data;
+            _this.loading = false;
+            if (_this.categories.length > 7) {
+              _this.cat_count = true;
+            }
+          });
+    },
+
+    getDeals() {
+      let _this = this;
+      _this.loading = true;
+      axios.get('/api/deals')
+          .then((response) => {
+            // console.log( response.data.data);
+            _this.products = [];
+            _this.deals = response.data.data;
+            _this.totalNumberofDeals =  _this.deals.length
+            _this.loading = false;
+          });
+    },
+
+    getProductAgainstCategories(id) {
+
+      let _this = this;
+      _this.deals = [];
+      _this.loading = true;
+      var url = '/api/categories';
+      if (id) {
+        url = url + '?id=' + id;
+      }
+      axios.get(url)
+          .then((response) => {
+            _this.products = response.data.data
+            _this.loading = false;
+
+
+          });
+
+      if(!id){
+        _this.getDeals();
+      }
+
+    },
+
+    opencartlist() {
+      this.cart_height = !this.cart_height;
+      if (this.cart_height == true) {
+        document.querySelector("body").style.overflow = 'hidden';
+      } else {
+        document.querySelector("body").style.overflow = 'auto';
+      }
+    },
+
+    viewProduct(id) {
+      let _this = this;
+      _this.loading = true;
+      let url = '/api/products/' + id;
+      axios.get(url)
+          .then((response) => {
+            _this.list = response.data.data;
+            _this.has_sizes = _this.list.sizes.length > 0;
+            _this.loading = false;
+            _this.product = true;
+          });
+    },
+
+    viewDeal(id) {
+      let _this = this;
+      _this.loading = true;
+      let url = '/api/deals/' + id;
+      axios.get(url)
+          .then((response) => {
+            _this.deals_data = response.data.data;
+            _this.loading = false;
+            _this.dealsModal = true;
+          });
+    },
+
+    placeOrder() {
+
+      let vm = this;
+
+      if (this.orderType == '') {
+        vm.errorMessage = 'Please Select Order Type';
+        setTimeout(function(){ vm.errorMessage = ""; }, 2000);
+      } else if(this.orderType == 'Delivery' && this.postalCode == "") {
+        vm.errorMessage = 'Please Enter Your Postcode';
+        setTimeout(function(){ vm.errorMessage = ""; }, 2000);
+
+      } else {
+
+        axios({
+          method: 'post',
+          url: '/api/check-postal',
+          data: {
+            order_type: this.orderType,
+            postal_code:this.postalCode
+          },
+        }).then(function (response) {
+
+          if(response.data.error === undefined){
+            vm.errorMessage = response.data.data.amount;
+            vm.$store.commit('setDeliveryCharges', response.data.data.fix_delivery_charges);
+            vm.$store.commit('setOrderType', vm.orderType);
+            vm.$store.commit('setPostalCode', vm.postalCode);
+            vm.$router.push({name: 'check-out'})
+
+          }else {
+            vm.errorMessage = 'We are not providing food in your area';
+          }
+        })
+            .catch(function (response) {
+              //handle error
+              console.log(response);
+            });
+      }
+
+    },
+
+    removeFromCart(index) {
+
+      let product = index;
+      product.removalQuantity = index.quantity;
+
+      this.$store.commit('removeFromCart', product);
+    },
+
+    quantityAddInCart(index, cart) {
+      this.$store.state.cartItems[index]['quantity'] += 1;
+      this.$store.state.cartItemsCount += 1;
+    },
+
+    quantityMinusInCart(index) {
+      index.removalQuantity = 1;
+      this.$store.commit('removeFromCart', index);
+    },
+
+    /*updateCart() {
+        if (this.$store.getters.getAllCartArray.length > 1) {
+            let sum = 0;
+            let count = 0;
+            this.$store.getters.getAllCartArray.forEach(function (item) {
+                count++;
+                if (count > 1) {
+
+                    console.log(item.single_product_total_amount)
+
+                    sum += item.single_product_total_amount;
+                }
+            });
+            this.total_amount = sum;
+        }
+
+        return this.$store.getters.getAllCartArray;
+
+      }, */
+
+    handleScroll() {
+      if (this.limitPosition < window.scrollY) {
+        this.scrolled = true;
+        // move up!
+      }
+
+      if (this.limitPosition > window.scrollY) {
+        this.scrolled = false;
+        // move down
+      }
+    },
+
+    foodAllergyPopup() {
+      this.foodAllergyModal = true;
+    },
+
+  },
+  computed: {
+
+    cartItems () {
+      return this.$store.state.cartItems;
+    },
+  },
+  destroyed() {
+    window.removeEventListener("scroll", this.handleScroll);
+  },
+
+
+}
 </script>
 <style>
     .cover {
