@@ -8,17 +8,20 @@
                             <div class="col-lg-3 col-md-3 footer-section-1 footer-space order-1">
                                 <h3>Opening Hours</h3>
                                 <ul class="Opening">
-                                    <li><a href="#"><span><i class="icon-smartphone-1"></i></span> 01562 74 7727</a></li>
-                                    <li><a href="#"><span><i class="icon-mail-2"></i></span>Info@Tastyland.Co.Uk</a></li>
+                                    <li><a href="#"><span><i class="icon-smartphone-1"></i></span>
+                                        0330 133 0247</a></li>
+                                    <li><a href="#"><span><i class="icon-mail-2"></i></span>info@matrixepos.co.Uk</a></li>
                                     <li><a href="#" class="address-link">
                                         <span><i class="icon-placeholder"></i></span>
-                                        <span class="address">Worcestershire Country 31A Comberton Hill, Kidderminster DY10 1QN, UK</span>
+                                        <span class="address">Unit 18, 14-20 George St,
+Birmingham, B12 9RG,
+United Kingdom</span>
                                     </a></li>
                                 </ul>
                             </div>
                             <div class="col-lg-6 col-md-6 footer-section-2 order-3 order-md-2">
                                 <div class="text-center">
-                                   <a href="#"><img src="/images/tasty-land/logo.jpg"></a>
+                                   <a href="#"><img src="https://www.matrixepos.co.uk/wp-content/uploads/2021/04/logo-trans.png"></a>
                                 </div>
                                 <div class="footer-menu text-center">
                                     <ul>

@@ -13,7 +13,7 @@
                                     <ul>
                                          <li class="mail-space"><i class="icon-mail-2"></i>
                                             <span>
-                                                <a href="mailto:info@tasty-land.com">Info@Tastyland.Co.Uk</a>
+                                                <a href="mailto:info@tasty-land.com">Info@matrixepos.co.uk</a>
                                             </span>
                                         </li>
                                     </ul>
@@ -38,7 +38,7 @@
                             <div class="col-6 col-md-3">
                                 <router-link :to="{ path: '/'}">
                                      <a class="navbar-brand js-scroll-trigger main-logo" href="javascript:;">
-                                        <img src="/images/tasty-land/logo.jpg">
+                                        <img src="https://www.matrixepos.co.uk/wp-content/uploads/2021/04/logo-trans.png">
                                     </a>
                                 </router-link>
                             </div>
@@ -54,7 +54,7 @@
                                         <li class="nav-item "> <router-link :to="{ path: '/feedback'}"><a class="nav-link js-scroll-trigger" >Feedback</a></router-link></li>
 
                                         <li class="nav-item "> <router-link :to="{ path: '/reservation-table'}"><a class="nav-link js-scroll-trigger" >Reservation</a></router-link></li>
-                                        
+
                                         <li class="nav-item">
                                             <div class="order-now">
                                                 <a href="#" class="btn btn-rounded-default btn-rounded-danger"  @click.prevent="openPostalCode"> Order Online</a>
@@ -95,7 +95,7 @@
                                                                 <div class="total"><strong>Total: </strong>£{{priceFormat(total_amount)}}</div>
                                                                     <router-link  class="view-cart-menu" :to="{ path: '/online-order/'+postal_code}"> View Menu </router-link>
                                                             </div>
-                                                            
+
                                                         </div>
                                                     </div>
                                                 </div>
@@ -110,7 +110,7 @@
                 </div>
             </div>
             <!-- </nav> -->
-            <div class="header-bottom section-fullwidth" 
+            <div class="header-bottom section-fullwidth"
             v-if="this.$route.name !='online-order' &&
                   this.$route.name !='reservation-table'">
                 <div class="container">
@@ -118,7 +118,7 @@
                         <div class="col-lg-4 col-xl-5">
 
                         </div>
-                   
+
                     </div>
                 </div>
             </div>
