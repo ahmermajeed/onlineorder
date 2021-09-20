@@ -21,9 +21,9 @@
                        <div class="col-12">
                        </div>
                        <div class="col-sm-12">
-                           <label>{{form.order_type}} Date</label>
+                           <label>{{form.order_type}} Time</label>
                            <select v-model="form.deliveryTime" class="form-control">
-                             <option value="">Please select {{form.order_type}} Date</option>
+                             <option value="">Please select {{form.order_type}} Time</option>
                              <option v-for="slot in slots">{{slot}}</option>
                            </select>
                            <br>
@@ -401,7 +401,7 @@ export default {
       }
 
       if (this.form.deliveryTime === "") {
-        error.push('Please select delivery/pickup date and time');
+        error.push('Please select delivery/pickup time');
       }
 
       if (this.form.name === "") {
