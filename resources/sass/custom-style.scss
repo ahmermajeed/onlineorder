@@ -410,6 +410,11 @@ ul {
     }
 }
 
+.main-ftr .inner-ftr .logo img {
+    max-width: 250px;
+    margin-top: 20px;
+}
+
 .copyright {
     border-top: 1px solid #cccccc;
 
@@ -1727,7 +1732,7 @@ ul {
             p {
                 font-size: 16px;
             }
-            /*h4 { 
+            /*h4 {
                     width: 50%;
                     float: left;
                     line-height: 25px;
@@ -2423,7 +2428,7 @@ span.address {
 
 .select-time, .select-person {
     .form-group {
-        position: relative;    
+        position: relative;
         span {
             position: absolute;
             top: 36px;
@@ -2476,7 +2481,7 @@ span.address {
     }
 }
 .vuejs-countdown {
-    display: inline-block;   
+    display: inline-block;
     .digit {
         font-size: 14px !important;
     }
@@ -2577,4 +2582,7 @@ span.address {
     margin-bottom: 20px;
     font-size: 35px;
 }
+
+
+
 /*************** Reservation-section-end *******************/

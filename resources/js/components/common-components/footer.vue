@@ -18,7 +18,7 @@
                             </div>
                             <div class="col-lg-6 col-md-6 footer-section-2 order-3 order-md-2">
                                 <div class="text-center">
-                                   <a href="#"><img src="/images/tasty-land/sen-logo.png"></a>
+                                   <a href="#" class="logo"><img src="/images/tasty-land/sen-logo.png" ></a>
                                 </div>
                                 <div class="footer-menu text-center">
                                     <ul>
