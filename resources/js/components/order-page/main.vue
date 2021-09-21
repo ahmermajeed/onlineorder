@@ -15,7 +15,7 @@
                                     <a href="#"   @click.prevent="getProductAgainstCategories(false)" class="list-group-item">All<span class="float-right badge badge-light round"></span> </a>
 
                                     <a href="#" class="list-group-item"  v-for="(item, index) in categories"  @click.prevent="getProductAgainstCategories(item.id)" > {{item.name}}  <span class="float-right badge badge-light round">{{item.products.length}}</span> </a>
-                                    <a href="#"   @click.prevent="getDeals(false)" class="list-group-item">Deals<span class="float-right badge badge-light round">{{deals.length}}</span> </a>
+                                    <a href="#"   @click.prevent="getDeals(1)" class="list-group-item">Deals<span class="float-right badge badge-light round">{{totalNumberofDeals}}</span> </a>
                             </div>  <!-- list-group .// -->
                             </div>
                         </div>
@@ -214,7 +214,7 @@
                                 <ul class="nav nav-tabs">
                                     <li><a href="#"  @click.prevent="getProductAgainstCategories(false)" >All</a></li>
                                     <li  v-for="(item, index) in categories"><a href="#" @click.prevent="getProductAgainstCategories(item.id)">{{item.name}}</a></li>
-                                    <li> <a href="#"   @click.prevent="getDeals(false)">DEALS </a></li>
+                                    <li> <a href="#"   @click.prevent="getDeals(1)">DEALS </a></li>
 
                                 </ul>
                             </div>
@@ -359,7 +359,7 @@ export default {
   mounted() {
     this.getCategories();
     this.getProductAgainstCategories(false);
-    this.getDeals(false)
+   // this.getDeals()
 
     this.orderType = this.$store.getters.getOrderType;
 
@@ -469,13 +469,19 @@ export default {
           });
     },
 
-    getDeals() {
+    getDeals(deal) {
+
       let _this = this;
-      _this.loading = true;
+      if (deal == 1) {
+        _this.loading = true;
+      }
       axios.get('/api/deals')
           .then((response) => {
             // console.log( response.data.data);
-            _this.products = [];
+            if (deal == 1) {
+              _this.products = [];
+            }
+
             _this.deals = response.data.data;
             _this.totalNumberofDeals =  _this.deals.length
             _this.loading = false;
@@ -496,13 +502,12 @@ export default {
             _this.products = response.data.data
             _this.loading = false;
 
-
+            setTimeout(function () {
+              if(!id){
+                _this.getDeals(false);
+              }
+            }, 2000)
           });
-
-      if(!id){
-        _this.getDeals();
-      }
-
     },
 
     opencartlist() {
