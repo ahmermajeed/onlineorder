@@ -68,6 +68,67 @@
                       </div>
                     </div>
                   </div>
+                  <div class="row timing-area mt-5">
+                      <div class="col-12 text-center">
+                          <h2>Opening Timing</h2>
+                      </div>
+                      <div class="col-md-6 col-12">
+                          <div class="bx-time">
+                          <h3>Delivery</h3>
+                          <ul>
+                              <li>
+                                  <span>Monday</span><span>11:00 - 23:45</span>
+                              </li>
+                              <li>
+                                  <span>Tuesday</span><span>11:00 - 23:45</span>
+                              </li>
+                              <li>
+                                  <span>Wednesday</span><span>11:00 - 23:45</span>
+                              </li>
+                              <li>
+                                  <span>Thursday</span><span>11:00 - 23:45</span>
+                              </li>
+                              <li>
+                                  <span>Friday</span><span>11:00 - 23:45</span>
+                              </li>
+                              <li>
+                                  <span>Saturday</span><span>11:00 - 23:45</span>
+                              </li>
+                              <li>
+                                  <span>Sunday</span><span>11:00 - 23:45</span>
+                              </li>
+                          </ul>
+                        </div>
+                      </div>
+                      <div class="col-md-6 col-12">
+                        <div class="bx-time">
+                          <h3>Collection</h3>
+                          <ul>
+                              <li>
+                                  <span>Monday</span><span>11:00 - 23:45</span>
+                              </li>
+                              <li>
+                                  <span>Tuesday</span><span>11:00 - 23:45</span>
+                              </li>
+                              <li>
+                                  <span>Wednesday</span><span>11:00 - 23:45</span>
+                              </li>
+                              <li>
+                                  <span>Thursday</span><span>11:00 - 23:45</span>
+                              </li>
+                              <li>
+                                  <span>Friday</span><span>11:00 - 23:45</span>
+                              </li>
+                              <li>
+                                  <span>Saturday</span><span>11:00 - 23:45</span>
+                              </li>
+                              <li>
+                                  <span>Sunday</span><span>11:00 - 23:45</span>
+                              </li>
+                          </ul>
+                        </div>
+                      </div>
+                  </div>
             </div>
         </section>
 

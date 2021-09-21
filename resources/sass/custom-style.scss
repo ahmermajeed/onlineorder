@@ -237,7 +237,36 @@ ul {
         }
     }
 }
+/********************Time List ******************************/
+.timing-area{
+    h2{
+        font-size: 34px;
+        line-height: 1;
+        margin-bottom: 40px;
+        text-transform: uppercase;
+        color: #f48a32;
+    }
+    .bx-time{
+        background: #eeeeeeab;
+        padding: 40px;
+        border-radius: 10px;
+        h3{
+            font-size: 22px;
+            font-weight: bold;
+        }
+        ul{
+            list-style: none;
+            li{
+                display: flex;
+                justify-content: space-between;
+                border-bottom: 1px dashed #c9c9c9;
+                padding: 10px 0;
+            }
+        }
+    }
 
+
+}
 /********************footer start****************************/
 .main-ftr {
     padding-top: 50px;
@@ -399,6 +428,11 @@ ul {
 
     .inner-ftr {
         padding-bottom: 13px;
+        .logo{
+            img{
+                max-width: 200px;
+            }
+        }
     }
 
     a {
@@ -408,6 +442,7 @@ ul {
     strong a {
         color: $red !important;
     }
+
 }
 
 .copyright {

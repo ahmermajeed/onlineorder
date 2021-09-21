@@ -13990,6 +13990,38 @@ ul {
   pointer-events: inherit;
 }
 
+/********************Time List ******************************/
+
+.timing-area h2 {
+  font-size: 34px;
+  line-height: 1;
+  margin-bottom: 40px;
+  text-transform: uppercase;
+  color: #f48a32;
+}
+
+.timing-area .bx-time {
+  background: #eeeeeeab;
+  padding: 40px;
+  border-radius: 10px;
+}
+
+.timing-area .bx-time h3 {
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.timing-area .bx-time ul {
+  list-style: none;
+}
+
+.timing-area .bx-time ul li {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px dashed #c9c9c9;
+  padding: 10px 0;
+}
+
 /********************footer start****************************/
 
 .main-ftr {
@@ -14151,6 +14183,10 @@ ul {
 
 .main-ftr .inner-ftr {
   padding-bottom: 13px;
+}
+
+.main-ftr .inner-ftr .logo img {
+  max-width: 200px;
 }
 
 .main-ftr a {
