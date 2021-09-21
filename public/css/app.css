@@ -14197,6 +14197,11 @@ ul {
   color: #f48a32 !important;
 }
 
+.main-ftr .inner-ftr .logo img {
+  max-width: 250px;
+  margin-top: 20px;
+}
+
 .copyright {
   border-top: 1px solid #cccccc;
 }
@@ -15737,7 +15742,7 @@ ul {
 }
 
 .modal-content .modal-body .info-item {
-  /*h4 { 
+  /*h4 {
           width: 50%;
           float: left;
           line-height: 25px;

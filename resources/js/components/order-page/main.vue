@@ -15,7 +15,7 @@
                                     <a href="#"   @click.prevent="getProductAgainstCategories(false)" class="list-group-item">All<span class="float-right badge badge-light round"></span> </a>
 
                                     <a href="#" class="list-group-item"  v-for="(item, index) in categories"  @click.prevent="getProductAgainstCategories(item.id)" > {{item.name}}  <span class="float-right badge badge-light round">{{item.products.length}}</span> </a>
-                                    <a href="#"   @click.prevent="getDeals(false)" class="list-group-item">Deals<span class="float-right badge badge-light round">{{deals.length}}</span> </a>
+                                    <a href="#"   @click.prevent="getDeals(1)" class="list-group-item">Deals<span class="float-right badge badge-light round">{{totalNumberofDeals}}</span> </a>
                             </div>  <!-- list-group .// -->
                             </div>
                         </div>
@@ -168,8 +168,8 @@
                 <div class="inner">
                     <span class="products-count"><svg xmlns="http://www.w3.org/2000/svg" class="svg-stroke-container" width="24" height="24">
                         <path fill="#707070" d="M12 2.75a4.75 4.75 0 014.744 4.5h3.103a1 1 0 01.99 1.141l-1.714 12a1 1 0 01-.99.859H5.867a1 1 0 01-.99-.859l-1.714-12a1 1 0 01.99-1.141h3.103A4.75 4.75 0 0112 2.75zm5.559 14.75H6.44a.4.4 0 00-.396.457l.208 1.45a.4.4 0 00.396.343H17.35a.4.4 0 00.396-.343l.208-1.45a.4.4 0 00-.396-.457zm1.25-8.75H5.19a.4.4 0 00-.396.457l.922 6.45a.4.4 0 00.396.343h11.775a.4.4 0 00.396-.343l.922-6.45a.4.4 0 00-.396-.457zM12 4.25a3.251 3.251 0 00-3.193 2.638.305.305 0 00.3.362h5.796a.297.297 0 00.292-.35A3.251 3.251 0 0012 4.25z"></path>
-                    </svg>{{cartItems.length}}</span>
-                    <span class="products-value">£{{priceFormat(total_amount)}}</span>
+                    </svg>{{count}}</span>
+                    <span class="products-value">£{{priceFormat(totalPrice)}}</span>
                     <span class="text" @click="opencartlist()">Checkout</span>
 
                     
@@ -214,7 +214,7 @@
                                 <ul class="nav nav-tabs">
                                     <li><a href="#"  @click.prevent="getProductAgainstCategories(false)" >All</a></li>
                                     <li  v-for="(item, index) in categories"><a href="#" @click.prevent="getProductAgainstCategories(item.id)">{{item.name}}</a></li>
-                                    <li> <a href="#"   @click.prevent="getDeals(false)">DEALS </a></li>
+                                    <li> <a href="#"   @click.prevent="getDeals(1)">DEALS </a></li>
 
                                 </ul>
                             </div>
@@ -233,8 +233,8 @@
                 <div class="inner">
                     <span class="products-count"><svg xmlns="http://www.w3.org/2000/svg" class="svg-stroke-container" width="24" height="24">
                         <path fill="#707070" d="M12 2.75a4.75 4.75 0 014.744 4.5h3.103a1 1 0 01.99 1.141l-1.714 12a1 1 0 01-.99.859H5.867a1 1 0 01-.99-.859l-1.714-12a1 1 0 01.99-1.141h3.103A4.75 4.75 0 0112 2.75zm5.559 14.75H6.44a.4.4 0 00-.396.457l.208 1.45a.4.4 0 00.396.343H17.35a.4.4 0 00.396-.343l.208-1.45a.4.4 0 00-.396-.457zm1.25-8.75H5.19a.4.4 0 00-.396.457l.922 6.45a.4.4 0 00.396.343h11.775a.4.4 0 00.396-.343l.922-6.45a.4.4 0 00-.396-.457zM12 4.25a3.251 3.251 0 00-3.193 2.638.305.305 0 00.3.362h5.796a.297.297 0 00.292-.35A3.251 3.251 0 0012 4.25z"></path>
-                    </svg>{{cartItems.length}}
-                     <span class="products-value">£{{priceFormat(total_amount)}}</span>
+                    </svg>{{count}}
+                     <span class="products-value">£{{priceFormat(totalPrice)}}</span>
                 </span>
                    
                     <span class="text chek-out-btn btn btn-rounded-danger" @click="opencartlist()">Checkout</span>
@@ -359,7 +359,7 @@ export default {
   mounted() {
     this.getCategories();
     this.getProductAgainstCategories(false);
-    this.getDeals(false)
+   // this.getDeals()
 
     this.orderType = this.$store.getters.getOrderType;
 
@@ -469,13 +469,19 @@ export default {
           });
     },
 
-    getDeals() {
+    getDeals(deal) {
+
       let _this = this;
-      _this.loading = true;
+      if (deal == 1) {
+        _this.loading = true;
+      }
       axios.get('/api/deals')
           .then((response) => {
             // console.log( response.data.data);
-            _this.products = [];
+            if (deal == 1) {
+              _this.products = [];
+            }
+
             _this.deals = response.data.data;
             _this.totalNumberofDeals =  _this.deals.length
             _this.loading = false;
@@ -496,13 +502,12 @@ export default {
             _this.products = response.data.data
             _this.loading = false;
 
-
+            setTimeout(function () {
+              if(!id){
+                _this.getDeals(false);
+              }
+            }, 2000)
           });
-
-      if(!id){
-        _this.getDeals();
-      }
-
     },
 
     opencartlist() {
@@ -640,6 +645,19 @@ export default {
     cartItems () {
       return this.$store.state.cartItems;
     },
+
+    totalPrice () {
+      let price = 0;
+      this.$store.state.cartItems.map(el => {
+        price += el['quantity'] * el['price'];
+      })
+      return price;
+    },
+
+    count () {
+      return this.$store.state.cartItemsCount;
+    }
+
   },
   destroyed() {
     window.removeEventListener("scroll", this.handleScroll);
