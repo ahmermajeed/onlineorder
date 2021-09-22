@@ -1287,6 +1287,18 @@ $duration: 50s;
         }
     }
 }
+/************** filter-page-style2 *******************/
+
+.filter-page-style2{
+    .lp-sidebar-left{
+        @include media-breakpoint-down(sm){
+            display: none;
+        }
+        .sidebar-area{
+               
+        }
+    }
+}
 
 /************** MENU LIST FOR MOBIILE ****************/
 .for-mobile-only{
@@ -1588,6 +1600,7 @@ $duration: 50s;
                 border-radius: 0;
                 width: 100%;
                 top: 0;
+                background: #fff;
                 @include media-breakpoint-down(sm){
                     position: fixed;  
                 }
@@ -1618,6 +1631,123 @@ $duration: 50s;
                 }
                 .btn{
 
+                }
+            }
+        }
+    }
+    &.order-product{
+        .modal-dialog{
+            max-width: 450px;
+            border-radius: 8px;
+            overflow: hidden;
+            @include media-breakpoint-down(sm){
+                border-radius: 0 !important;
+            }
+            .modal-body{
+                max-height: 400px;
+                overflow-y: scroll;
+                padding: 0 !important;
+                overflow-x: hidden;
+                padding-top: 40px !important;
+                @include media-breakpoint-down(sm){
+                    padding-top: 90px !important;
+                    max-height: inherit !important;
+                }
+                .info-item{
+                    border-bottom: none !important;
+                }
+                .sub-cat{
+                    h4{
+                        background: #f1f1f1;
+                        padding: 20px;
+                        font-size: 16px;
+                    }
+                    .selectionlist{
+                        li{
+                            padding: 15px 20px;
+                            border-bottom: 1px solid #f1f1f1;
+                        }
+                    }
+                }
+                .input-holder{
+                    padding: 20px;
+                }
+                .count-footer{
+                    border: none !important;
+                    .increment-buttons {
+                        @include media-breakpoint-down(sm){
+                            border-bottom: none !important;
+                        }
+                        .select-num{
+                            display: flex;
+                            width: 100%;
+                            flex: 0 0 100%;
+                            align-items: center;
+                            justify-content: center;
+                            padding: 30px 0 40px 0;
+                            .qunt-btn{
+                                background: none;
+                                border: none;
+                                border-radius: 0;
+                                width: auto;
+                                float: inherit;
+                                display: flex;
+                                align-items: center;
+                                button{
+                                    i{
+                                        font-size: 22px;
+                                    }
+                                    background: none;
+                                }
+                                .btn-badge-count{
+                                    font-size: 28px;
+                                    font-weight: bold;
+                                    width: 60px;
+                                    max-width: 60px;
+                                }
+                            }
+                        }
+                    }
+                    
+                }
+            }
+            .modal-ftr{
+                background: #fff;
+                box-shadow: 0px 7px 14px #000;
+                padding: 15px 20px;
+                .btn{
+                   width: 100%;
+                border-radius: 0;
+                padding: 10px;
+                box-shadow: none !important;
+                display: flex;
+                justify-content: space-between;
+                }
+            }
+            .see-missed{
+                padding: 40px;
+                background: #eafafd;
+                text-align: center;
+                @include media-breakpoint-down(sm){
+                    margin-bottom: 70px;
+                }
+                a{
+                    display: flex;
+                    flex-direction: column;
+                    margin-bottom: 20px;
+                    align-items: center;
+                    .i-box{
+                        background: #8ed5e3;
+                        width: 50px;
+                        height: 50px;
+                        line-height: 50px;
+                        border-radius: 50%;
+                        margin-bottom: 10px;
+                        color: #fff;
+                    }
+                    p{
+                        font-size: 14px;
+                    }
                 }
             }
         }

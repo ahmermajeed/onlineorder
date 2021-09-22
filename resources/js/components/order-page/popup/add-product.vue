@@ -1,6 +1,6 @@
 <template>
     <div>
-        <b-modal id="add-product " centered @hidden="onHidden" :hide-footer=true title-tag="h4" ok-variant="primary" ref="myModalRef" custom-modal no-close-on-backdrop modal-class="postal-code-modal custom-modal order-product">
+        <b-modal id="add-product " centered  hide-footer @hidden="onHidden" title-tag="h4" ok-variant="primary" ref="myModalRef" custom-modal no-close-on-backdrop modal-class="postal-code-modal custom-modal order-product custom-btm-popup">
             <b-alert show variant="danger" v-if="error_message" style="text-transform: capitalize;">{{error_message}}</b-alert>
             <template #modal-title>{{list.name}}</template>
             <div class="add-popup">
@@ -12,8 +12,8 @@
             
             <div class="description">
                 <div class="info-item section-border ">
-                    <h4 class="text-left">Description</h4>
-                    <p class="pb-2">{{list.description}}</p>
+                    <!-- <h4 class="text-left">Description</h4> -->
+                    <p class="pb-2 text-center">{{list.description}}</p>
                 </div>
                 
 
@@ -21,38 +21,6 @@
                 <p v-if="list.food_allergy">{{list.food_allergy}} </p>
 
                 <form action="" method="">
-
-<!--                    <div>-->
-<!--                    <h4>Gourmet Fries</h4>-->
-<!--                    <ul class="selectionlist">-->
-<!--                        <li>-->
-<!--                            <label>One-->
-<!--                                <input type="checkbox" checked="checked">-->
-<!--                                <span class="checkmark"></span>-->
-<!--                            </label>-->
-<!--                        </li>-->
-<!--                        <li>-->
-<!--                            <label>Two-->
-<!--                                <input type="checkbox">-->
-<!--                                <span class="checkmark"></span>-->
-<!--                            </label>-->
-<!--                        </li>-->
-<!--                        <li>-->
-<!--                            <label>Three-->
-<!--                                <input type="checkbox">-->
-<!--                                <span class="checkmark"></span>-->
-<!--                            </label>-->
-<!--                        </li>-->
-<!--                        <li>-->
-<!--                            <label>Four-->
-<!--                                <input type="checkbox">-->
-<!--                                <span class="checkmark"></span>-->
-<!--                            </label>-->
-<!--                        </li>-->
-<!--                    </ul>-->
-<!--                    </div>-->
-
-
                     <div v-if="has_sizes" class="addcart-form  mb-3">
                         <!-- <h4>Sizes</h4> -->
                         <ul class="selectionlist radio-list" >
@@ -87,12 +55,12 @@
                         <textarea class="form-control" rows="3" cols="12"  v-model="productData['special_instruction']"></textarea>
 
                     </div>
-                    <div class="row count-footer section-border">
-                        <div class="col-lg-6 col-md-6 col-sm-12 increment-buttons ">
+                    <div class="count-footer section-border">
+                        <div class="increment-buttons ">
                             <div class="cont-section">
-                                <div class=" quantity-head text-left">
+                                <!-- <div class=" quantity-head text-left">
                                     <h4>Quantity</h4>
-                                </div>
+                                </div> -->
                                 <div class="select-num text-right">
                                     <div class="qunt-btn">
                                         <button type="button" class="btn-plus"  @click.prevent="plusQuantity()" >
@@ -109,22 +77,29 @@
                             </div>
                         </div>
 
-                        <div class="col-lg-6 col-md-6 col-sm-12 text-right ">
+                        <!-- <div class="col-lg-6 col-md-6 col-sm-12 text-right ">
                             <div class="priec-add">
                                 <h4 class="text-left">Total Amount : </h4>
                                <span class="text-right">{{priceFormat(total_amount_of_single_product * product_quantity)}}</span>
                             </div>
-                               
-                        </div>
+                        </div> -->
                     </div>
-                    <div class="row mt-3">
-                        <div class="col text-right">
-                            <button  @click.prevent="addToCart()" class="custom-btn add-count-button btn btn-rounded-danger">Add</button>
-                        </div>
+                    <div class="see-missed">
+                      <a href="#0">
+                        <span class="i-box">
+                          <i class="icon-up-arrow"></i>
+                        </span>
+                        see what you missed
+                      </a>
+                      <p>Make sure you pick all your options for this item. You’re almost there</p>
+                    </div>
+                    <div class="modal-ftr">
+                      <button  @click.prevent="addToCart()" class="custom-btn add-count-button btn btn-rounded-danger">Add to Order  <span class="text-right">£ {{priceFormat(total_amount_of_single_product * product_quantity)}}</span></button>
                     </div>
                 </form>
 
             </div>
+            
         </b-modal>
     </div>
 </template>

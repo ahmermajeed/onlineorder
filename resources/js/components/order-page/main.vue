@@ -1,7 +1,7 @@
 <template>
     <div>
         <header-menu></header-menu>
-        <section class="inner-section main-popup-section" id="product-scroll">
+        <section class="inner-section main-popup-section filter-page-style2" id="product-scroll">
             <div class="container" >
                 <div class="row">
                     <div class=" col-lg-3 col-md-4 col-sm-12 listing-page-sidebar lp-sidebar-left">
