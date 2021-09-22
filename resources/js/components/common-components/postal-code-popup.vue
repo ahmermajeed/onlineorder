@@ -12,7 +12,7 @@
             ref="myModalRef" 
             custom-modal 
             no-close-on-backdrop 
-            modal-class="postal-code-modal custom-modal">
+            modal-class="postal-code-modal custom-modal custom-btm-popup">
 
       
 

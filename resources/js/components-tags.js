@@ -9,6 +9,7 @@ Vue.component('edit-product', require('./components/order-page/popup/edit-produc
 
 Vue.component('download-menu', require('./components/common-components/download-menu.vue').default);
 Vue.component('postal-code-popup', require('./components/common-components/postal-code-popup.vue').default);
+Vue.component('order-popup', require('./components/order-popup.vue').default);
 
 
 Vue.component('add-deal', require('./components/order-page/popup/add-deal.vue').default);
