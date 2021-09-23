@@ -1,16 +1,16 @@
 <template>
     <div>
-        <b-modal id="edit-product" centered @hidden="onHidden" :hide-footer=true title-tag="h4" ok-variant="primary" ref="myModalRef" no-close-on-backdrop class="custom-modal ">
+        <b-modal id="edit-product" centered @hidden="onHidden" :hide-footer=true title-tag="h4" ok-variant="primary" ref="myModalRef" no-close-on-backdrop modal-class="custom-modal order-product custom-btm-popup">
             <b-alert show variant="danger" v-if="error_message" style="text-transform: capitalize;">{{error_message}}</b-alert>
-            <h3>Name : {{list.name}}</h3>
-            <div class="product-gallery" >
-                <h4 v-if="!has_sizes">Price :  £ {{list.price}}  </h4>
+            <template #modal-title>{{list.name}}</template>
+            <div class="product-gallery text-center" >
+                <h4 v-if="!has_sizes">Price: £ {{list.price}}</h4>
 
             </div>
             <div class="description">
-                <div class="info-item section-border mb-3">
-                    <h4 class="text-left float-none">Description</h4>
-                    <p>{{list.description}}</p>
+                <div class="info-item section-border">
+                    <!-- <h4 class="text-left float-none">Description</h4> -->
+                    <p class="pb-2 text-center">{{list.description}}</p>
                 </div>
                 
 
@@ -35,7 +35,7 @@
                     </div>
 
 
-                    <div  v-for="(item, index) in list.groups">
+                    <div class="sub-cat mt-3"  v-for="(item, index) in list.groups">
                         <h4>{{item.name}}</h4>
                         <ul class="selectionlist radio-list" >
                             <li v-for="(choice,choice_index) in item.choices" >
@@ -57,12 +57,12 @@
                         <textarea class="form-control" rows="3" cols="12"  v-model="productData['special_instruction']"></textarea>
 
                     </div>
-                    <div class="row count-footer section-border">
-                        <div class="col-lg-6 col-md-6 col-sm-12 increment-buttons ">
+                    <div class="count-footer section-border">
+                        <div class="increment-buttons ">
                             <div class="cont-section">
-                                <div class=" quantity-head text-left">
+                                <!-- <div class=" quantity-head text-left">
                                     <h4>Quantity</h4>
-                                </div>
+                                </div> -->
                                 <div class="select-num text-right">
                                     <div class="qunt-btn">
                                         <button type="button" class="btn-plus"  @click.prevent="plusQuantity()" >
@@ -81,18 +81,16 @@
                             </div>
                         </div>
 
-                        <div class="col-lg-6 col-md-6 col-sm-12 text-right ">
+                        <!-- <div class="col-lg-6 col-md-6 col-sm-12 text-right ">
                             <div class="priec-add">
                                 <h4 class="text-left">Total Amount : </h4>
                                <span class="text-right">{{priceFormat(total_amount_of_single_product * product_quantity)}}</span>
                             </div>
                                
-                        </div>
+                        </div> -->
                     </div>
-                    <div class="row mt-3">
-                        <div class="col text-right">
-                            <button  @click.prevent="addToCart()" class="custom-btn add-count-button btn btn-rounded-danger">Update</button>
-                        </div>
+                    <div class="modal-ftr">
+                        <button  @click.prevent="addToCart()" class="custom-btn add-count-button btn btn-rounded-danger">Update <span class="text-right">{{priceFormat(total_amount_of_single_product * product_quantity)}}</span></button>
                     </div>
                 </form>
 

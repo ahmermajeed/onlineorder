@@ -744,7 +744,6 @@
           </div>
         </section>
         <footer-menu></footer-menu>
-        <order-popup></order-popup>
         <postal-code-popup  @HideModalValue="hideModal"   :showModalProp="showPostalCode"></postal-code-popup>
     </div>
 </template>
