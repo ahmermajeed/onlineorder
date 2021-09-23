@@ -260,7 +260,7 @@
             </div>
             </div>
         </section>
-        <section class="section-fullwidth menu-box">
+        <section class="section-fullwidth menu-box menu-box-style2">
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-lg-6 col-md-12 col-sm-12 px-0">
