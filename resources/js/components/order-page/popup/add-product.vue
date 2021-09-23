@@ -1,6 +1,6 @@
 <template>
     <div>
-        <b-modal id="add-product" centered hide-footer @hidden="onHidden" title-tag="h4" ok-variant="primary" ref="myModalRef" custom-modal no-close-on-backdrop modal-class="postal-code-modal custom-modal order-product custom-btm-popup">
+        <b-modal id="add-product" centered ok-only ok-title="Add to Order" :ok-disabled="mandatory" @ok="addToCart()" @hidden="onHidden" title-tag="h4" ok-variant="primary" ref="myModalRef" custom-modal no-close-on-backdrop modal-class="postal-code-modal custom-modal order-product custom-btm-popup">
             <b-alert show variant="danger" v-if="error_message" style="text-transform: capitalize;">{{error_message}}</b-alert>
             <template #modal-title>{{list.name}}</template>
             <div class="add-popup">
@@ -91,9 +91,9 @@
                       </a>
                       <p>Make sure you pick all your options for this item. You’re almost there</p>
                     </div>
-                    <div class="modal-ftr">
+<!--                    <div class="modal-ftr">
                       <button :disabled='mandatory' @click.prevent="addToCart()" class="custom-btn add-count-button btn btn-rounded-danger">Add to Order  <span class="text-right">£ {{priceFormat(total_amount_of_single_product * product_quantity)}}</span></button>
-                    </div>
+                    </div>-->
                 </form>
 
             </div>
