@@ -1,6 +1,6 @@
 <template>
     <div>
-        <b-modal id="add-product " centered  hide-footer @hidden="onHidden" title-tag="h4" ok-variant="primary" ref="myModalRef" custom-modal no-close-on-backdrop modal-class="postal-code-modal custom-modal order-product custom-btm-popup">
+        <b-modal id="add-product" centered hide-footer @hidden="onHidden" title-tag="h4" ok-variant="primary" ref="myModalRef" custom-modal no-close-on-backdrop modal-class="postal-code-modal custom-modal order-product custom-btm-popup">
             <b-alert show variant="danger" v-if="error_message" style="text-transform: capitalize;">{{error_message}}</b-alert>
             <template #modal-title>{{list.name}}</template>
             <div class="add-popup">
@@ -12,21 +12,19 @@
             
             <div class="description">
                 <div class="info-item section-border ">
-                    <!-- <h4 class="text-left">Description</h4> -->
                     <p class="pb-2 text-center">{{list.description}}</p>
                 </div>
                 
-
                 <h5 v-if="list.food_allergy">Allergy Information</h5>
                 <p v-if="list.food_allergy">{{list.food_allergy}} </p>
 
                 <form action="" method="">
-                    <div v-if="has_sizes" class="addcart-form  mb-3">
+                    <div v-if="has_sizes" class="sub-cat addcart-form mb-3">
                         <!-- <h4>Sizes</h4> -->
                         <ul class="selectionlist radio-list" >
                             <li v-for="(item, index) in list.sizes" >
                                 <label>
-                                    <input type="radio" :value="item.size+'##@@'+priceFormat(item.price)"    v-model="productData['size']"  @click="productSum('size',priceFormat(item.price))">
+                                    <input type="radio" :value="item.size+'##@@'+priceFormat(item.price)" v-model="productData['size']"  @click="productSum('size',priceFormat(item.price))">
                                     <span class="checkmark"></span>
                                     {{item.size}}
                                     
@@ -84,8 +82,8 @@
                             </div>
                         </div> -->
                     </div>
-                    <div class="see-missed">
-                      <a href="#0">
+                    <div class="see-missed" v-show="mandatory">
+                      <a href="#" @click="scrollToTop">
                         <span class="i-box">
                           <i class="icon-up-arrow"></i>
                         </span>
@@ -94,7 +92,7 @@
                       <p>Make sure you pick all your options for this item. You’re almost there</p>
                     </div>
                     <div class="modal-ftr">
-                      <button  @click.prevent="addToCart()" class="custom-btn add-count-button btn btn-rounded-danger">Add to Order  <span class="text-right">£ {{priceFormat(total_amount_of_single_product * product_quantity)}}</span></button>
+                      <button :disabled='mandatory' @click.prevent="addToCart()" class="custom-btn add-count-button btn btn-rounded-danger">Add to Order  <span class="text-right">£ {{priceFormat(total_amount_of_single_product * product_quantity)}}</span></button>
                     </div>
                 </form>
 
@@ -104,6 +102,8 @@
     </div>
 </template>
 <script>
+import Thankyou from "../../Thankyou";
+
 export default {
   props: ['showModalProp','list','has_sizes'],
   data: function () {
@@ -116,15 +116,18 @@ export default {
       productData: {},
       total_amount_of_single_product : 0,
       product_array:{},
-      error_message:''
+      error_message:'',
+      mandatory: false
     };
   },
   methods: {
 
     scrollToTop() {
-      $('div#add-product').stop().animate({
+      $('div#tt').stop().animate({
         scrollTop: 0
       }, 'slow', 'swing');
+
+      return;
     },
 
     priceFormat (num) {
@@ -134,6 +137,13 @@ export default {
     showModal() {
       this.$refs.myModalRef.show();
       this.total_amount_of_single_product = this.priceFormat(this.list.price);
+
+      let checkMandatory = this.checkMandatory();
+
+      if(checkMandatory.length > 0 ){
+        this.mandatory = true
+      }
+
     },
     onHidden() {
       this.$emit('HideModalValue');
@@ -241,6 +251,32 @@ export default {
       return mandatory;
     },
 
+    checkValidate() {
+
+      let group_check = [];
+      let self = this;
+
+      for (var key in this.productData) {
+        if(key != undefined){
+          if(key != 'special_instruction'){
+              group_check.push(key)
+          }
+        }
+      }
+
+      let checkMandatory = this.checkMandatory();
+
+      if(checkMandatory.length > 0 ){
+        for( var cm in checkMandatory) {
+          if(group_check.indexOf(checkMandatory[cm]) === -1) {
+            self.mandatory = true
+          } else {
+            self.mandatory = false
+          }
+        }
+      }
+    },
+
     productSum(array_key,value){
       setTimeout(()=>{
         let total = 0;
@@ -253,6 +289,9 @@ export default {
           total +=  parseFloat(price[1]) ;
         }
         this.total_amount_of_single_product = total;
+
+        this.checkValidate();
+
       },300);
     },
   },
