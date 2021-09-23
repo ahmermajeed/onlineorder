@@ -34,7 +34,7 @@
                         </ul>
                     </div>
 
-                    <div class="sub-cat mt-3" v-for="(item, index) in list.groups">
+                    <div id="missed-item" class="sub-cat mt-3" v-for="(item, index) in list.groups">
                     <h4>{{item.name}}</h4>
                     <ul class="selectionlist radio-list" >
                         <li v-for="(choice,choice_index) in item.choices">
@@ -83,7 +83,7 @@
                         </div> -->
                     </div>
                     <div class="see-missed" v-show="mandatory">
-                      <a href="#" @click="scrollToTop">
+                      <a href="#missed-item" @click="scrollToTop">
                         <span class="i-box">
                           <i class="icon-up-arrow"></i>
                         </span>
