@@ -1,24 +1,23 @@
 <template>
     <div>
-        <b-modal id="add-deal" centered @hidden="onHidden" :hide-footer=true title-tag="h4" ok-variant="primary" ref="myModalRef" custom-modal no-close-on-backdrop class="custom-modal order-product custom-btm-popup">
+        <b-modal id="add-deal" centered @hidden="onHidden" :hide-footer=true title-tag="h4" ok-variant="primary" ref="myModalRef" custom-modal no-close-on-backdrop modal-class="custom-modal order-product custom-btm-popup">
             <b-alert show variant="danger" v-if="error_message" style="text-transform: capitalize;">{{error_message}}</b-alert>
 
+            <template #modal-title>{{deals_data.name}}</template>
+            <!-- <h3>{{deals_data.name}}</h3> -->
 
-            <h3>{{deals_data.name}}</h3>
-
-            <div class="product-gallery" >
+            <div class="product-gallery text-center" >
                 <h4> £ {{deals_data.price}}  </h4>
             </div> 
             <div class="description">
-                <div class="info-item section-border mb-4 ">
-                    <h4 class="text-left float-none">Description</h4>
-                    <p>{{deals_data.description}}</p>
+                <div class="info-item mb-4 ">
+                    <!-- <h4 class="text-left float-none">Description</h4> -->
+                    <p class="text-center">{{deals_data.description}}</p>
                 </div>
-                
             </div>
 
 
-            <div  v-for="(item, index) in dealsProducts" class="addcart-form  section-border mb-3">
+            <div class="sub-cat mt-3"  v-for="(item, index) in dealsProducts" class="addcart-form  section-border mb-3">
                 <div v-for="(n,index) in item.quantity">
                     <h4>{{item.name}} {{n}} </h4>
                     <div  v-for="(product, index) in item.products">
@@ -44,12 +43,12 @@
             </div>
 
 
-                    <div class="row count-footer section-border">
-                        <div class="col-lg-6 col-md-6 col-sm-12 increment-buttons ">
+                    <div class="count-footer section-border">
+                        <div class="increment-buttons ">
                             <div class="cont-section">
-                                <div class=" quantity-head text-left">
+                                <!-- <div class=" quantity-head text-left">
                                     <h4>Quantity</h4>
-                                </div>
+                                </div> -->
                                 <div class="select-num text-right">
                                     <div class="qunt-btn">
                                         <button type="button" class="btn-plus"  @click.prevent="plusQuantity()" >
@@ -66,18 +65,17 @@
                             </div>
                         </div>
 
-                        <div class="col-lg-6 col-md-6 col-sm-12 text-right ">
+                        <!-- <div class="col-lg-6 col-md-6 col-sm-12 text-right ">
                             <div class="priec-add">
                                 <h4 class="text-left">Total Amount : </h4>
                                <span class="text-right">{{priceFormat(total_amount_of_single_product * product_quantity)}}</span>
                             </div>
-                               
-                        </div>
+                        </div> -->
                     </div>
 
             <div class="row mt-3">
                 <div class="col text-right">
-                    <button  @click.prevent="addToCart()" class="custom-btn add-count-button btn btn-rounded-danger">Update</button>
+                    <button  @click.prevent="addToCart()" class="custom-btn add-count-button btn btn-rounded-danger">Update <span class="text-right">£ {{priceFormat(total_amount_of_single_product * product_quantity)}}</span></button>
                 </div>
             </div>
 
