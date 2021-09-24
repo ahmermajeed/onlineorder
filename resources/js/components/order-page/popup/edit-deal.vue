@@ -17,8 +17,8 @@
             </div>
 
 
-            <div class="sub-cat mt-3"  v-for="(item, index) in dealsProducts" class="addcart-form  section-border mb-3">
-                <div v-for="(n,index) in item.quantity">
+            <div v-for="(item, index) in dealsProducts" class="addcart-form  section-border mb-3">
+                <div class="sub-cat mt-3" v-for="(n,index) in item.quantity">
                     <h4>{{item.name}} {{n}} </h4>
                     <div  v-for="(product, index) in item.products">
                         <ul class="selectionlist radio-list">
