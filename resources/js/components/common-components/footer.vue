@@ -32,6 +32,7 @@
                                 </div>
                                 <div class="icons text-center">
                                     <ul>
+                                        <li class="facebook"><a href="#"><i class="icon-facebook "></i></a></li>
                                         <li class="linked"><a href="#"><i class="icon-linkedin"></i></a></li>
                                         <li class="twitter"><a href="#"><i class="icon-twitter"></i></a></li>
                                         <li class="pinterest"><a href="#"><i class="icon-pinterest-logo"></i></a></li>

@@ -15,7 +15,7 @@
                                     <a href="#"   @click.prevent="getProductAgainstCategories(false)" class="list-group-item">All<span class="float-right badge badge-light round"></span> </a>
 
                                     <a href="#" class="list-group-item"  v-for="(item, index) in categories"  @click.prevent="getProductAgainstCategories(item.id)" > {{item.name}}  <span class="float-right badge badge-light round">{{item.products.length}}</span> </a>
-                                    <a href="#"   @click.prevent="getDeals(1)" class="list-group-item">Deals<span class="float-right badge badge-light round">{{totalNumberofDeals}}</span> </a>
+                                    <a href="#focus"   @click.prevent="getDeals(1)" class="list-group-item">Deals<span class="float-right badge badge-light round">{{totalNumberofDeals}}</span> </a>
                             </div>  <!-- list-group .// -->
                             </div>
                         </div>
@@ -23,7 +23,7 @@
                     <div class="col-lg-5 col-md-8 col-sm-12">
                         <div class="product-list order-product">
                             <!--                            for products-->
-                            <div class="product"  v-for="(item, index) in products" v-if="item.products.length">
+                            <div id="focus" class="product"  v-for="(item, index) in products" v-if="item.products.length">
                                  <div class="row">
                                         <div class="col-md-12">
 
