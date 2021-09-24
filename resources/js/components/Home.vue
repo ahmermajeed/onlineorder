@@ -1,7 +1,7 @@
 <template>
     <div>
         <header-menu></header-menu>
-        <div class="timing-ticker">
+        <div class="timing-ticker d-none">
             <div class="heading">
                 <h3>Opening Timing</h3>
             </div>
@@ -98,6 +98,50 @@
                   </div>
                 </div>
                 </div>
+            </div>
+        </div>
+        <div class="timing-ticker-area">
+            <div class="heading">
+                <h3>Opening Timing</h3>
+            </div>
+            <div class="timing">
+                <ul>
+                    <li>
+                      <span class="day">Monday</span>
+                      <span class="delivery">11:42</span>
+                      <span class="collection">09:20</span>
+                    </li>
+                    <li>
+                      <span class="day">Tuesday</span>
+                      <span class="delivery">11:42</span>
+                      <span class="collection">09:20</span>
+                    </li>
+                    <li>
+                      <span class="day">Wednesday</span>
+                      <span class="delivery">11:42</span>
+                      <span class="collection">09:20</span>
+                    </li>
+                    <li>
+                      <span class="day">Thursday</span>
+                      <span class="delivery">11:42</span>
+                      <span class="collection">09:20</span>
+                    </li>
+                    <li>
+                      <span class="day">Friday</span>
+                      <span class="delivery">11:42</span>
+                      <span class="collection">09:20</span>
+                    </li>
+                    <li>
+                      <span class="day">Saturday</span>
+                      <span class="delivery">11:42</span>
+                      <span class="collection">09:20</span>
+                    </li>
+                    <li>
+                      <span class="day">Sunday</span>
+                      <span class="delivery">11:42</span>
+                      <span class="collection">09:20</span>
+                    </li>
+                </ul>
             </div>
         </div>
         <section class="section-fullwidth deliver-area ">
@@ -230,7 +274,6 @@
                   </div> -->
             </div>
         </section>
-
         <section class="rating-area">
             <div class="container">
             <div class="rating-img">
@@ -261,176 +304,174 @@
             </div>
         </section>
         <section class="section-fullwidth menu-box menu-box-style2">
-            <div class="container-fluid">
+            <div class="container">
                 <div class="row">
-                    <div class="col-lg-6 col-md-12 col-sm-12 px-0">
+                    <div class="col-lg-4 col-md-12 col-sm-12 px-0">
                         <div class="menus-pattern-first">
-                            <div class="menu-first-before"></div>
-                                <div class="first-menu title-styl">
+                              <div class="first-menu title-styl">
 
 
-                                    <h2>Burgers</h2>
-                                    <div class="menu-content">
-                                        <div class="row">
-                                            <div class="col-8">
-                                                <p>Meal</p>
-                                            </div>
-                                            <div class="col-2 text-right">
-                                                <span class="badge badge-pill badge-danger">Regular</span>
-                                            </div>   
-                                            <div class="col-2 text-right">
-                                                <span class="badge badge-pill badge-danger">Meal</span>
-                                            </div>   
+                                  <h2>Burgers</h2>
+                                  <div class="menu-content">
+                                      <div class="row">
+                                          <div class="col-8">
+                                              <p>Meal</p>
                                           </div>
-                                    </div>
-                                    <div class="menu-item">
-
-                                        <div class="box-borders">
-                                            <div class="row">
-                                                <div class="col-8">
-                                                    <p>Plain Burger</p>
-                                                </div>
-                                                <div class="col-2 text-right">
-                                                    <span>1/4lb</span>
-                                                </div>
-                                                <div class="col-2 text-right">
-                                                    <span>£3.00</span>
-                                                </div>
-                                            </div>
+                                          <div class="col-2 text-right">
+                                              <span class="badge badge-pill badge-danger">Regular</span>
+                                          </div>   
+                                          <div class="col-2 text-right">
+                                              <span class="badge badge-pill badge-danger">Meal</span>
+                                          </div>   
                                         </div>
+                                  </div>
+                                  <div class="menu-item">
 
-                                        <div class="box-borders">
-                                            <div class="row">
-                                                <div class="col-8">
-                                                    <p>Cheese Burger</p>
-                                                </div>
-                                                <div class="col-2 text-right">
-                                                    <span>1/4lb</span>
-                                                </div>
-                                                <div class="col-2 text-right">
-                                                    <span>£3.20</span>
-                                                </div>
-                                            </div>
-                                        </div>
+                                      <div class="box-borders">
+                                          <div class="row">
+                                              <div class="col-8">
+                                                  <p>Plain Burger</p>
+                                              </div>
+                                              <div class="col-2 text-right">
+                                                  <span>1/4lb</span>
+                                              </div>
+                                              <div class="col-2 text-right">
+                                                  <span>£3.00</span>
+                                              </div>
+                                          </div>
+                                      </div>
 
-                                        <div class="box-borders">
-                                            <div class="row">
-                                                <div class="col-8">
-                                                    <p>Coleslaw Burger</p>
-                                                </div>
-                                                <div class="col-2 text-right">
-                                                    <span>1/4lb</span>
-                                                </div>
-                                                <div class="col-2 text-right">
-                                                    <span>£3.20</span>
-                                                </div>
-                                            </div>
-                                        </div>
+                                      <div class="box-borders">
+                                          <div class="row">
+                                              <div class="col-8">
+                                                  <p>Cheese Burger</p>
+                                              </div>
+                                              <div class="col-2 text-right">
+                                                  <span>1/4lb</span>
+                                              </div>
+                                              <div class="col-2 text-right">
+                                                  <span>£3.20</span>
+                                              </div>
+                                          </div>
+                                      </div>
 
-                                        <div class="box-borders">
-                                            <div class="row">
-                                                <div class="col-8">
-                                                    <p>Chilli Burger</p>
-                                                </div>
-                                                <div class="col-2 text-right">
-                                                    <span>1/4lb</span>
-                                                </div>
-                                                <div class="col-2 text-right">
-                                                    <span>£3.20</span>
-                                                </div>
-                                            </div>
-                                        </div>
+                                      <div class="box-borders">
+                                          <div class="row">
+                                              <div class="col-8">
+                                                  <p>Coleslaw Burger</p>
+                                              </div>
+                                              <div class="col-2 text-right">
+                                                  <span>1/4lb</span>
+                                              </div>
+                                              <div class="col-2 text-right">
+                                                  <span>£3.20</span>
+                                              </div>
+                                          </div>
+                                      </div>
 
-                                        <div class="box-borders">
-                                            <div class="row">
-                                                <div class="col-8">
-                                                    <p>Garlic Burger</p>
-                                                </div>
-                                                <div class="col-2 text-right">
-                                                    <span>1/4lb</span>
-                                                </div>
-                                                <div class="col-2 text-right">
-                                                    <span>£3.20</span>
-                                                </div>
-                                            </div>
-                                        </div>
+                                      <div class="box-borders">
+                                          <div class="row">
+                                              <div class="col-8">
+                                                  <p>Chilli Burger</p>
+                                              </div>
+                                              <div class="col-2 text-right">
+                                                  <span>1/4lb</span>
+                                              </div>
+                                              <div class="col-2 text-right">
+                                                  <span>£3.20</span>
+                                              </div>
+                                          </div>
+                                      </div>
 
-                                        <div class="box-borders">
-                                            <div class="row">
-                                                <div class="col-8">
-                                                    <p>Hawaiian Burger</p>
-                                                </div>
-                                                <div class="col-2 text-right">
-                                                    <span>1/4lb</span>
-                                                </div>
-                                                <div class="col-2 text-right">
-                                                    <span>£3.20</span>
-                                                </div>
-                                            </div>
-                                        </div>
+                                      <div class="box-borders">
+                                          <div class="row">
+                                              <div class="col-8">
+                                                  <p>Garlic Burger</p>
+                                              </div>
+                                              <div class="col-2 text-right">
+                                                  <span>1/4lb</span>
+                                              </div>
+                                              <div class="col-2 text-right">
+                                                  <span>£3.20</span>
+                                              </div>
+                                          </div>
+                                      </div>
 
-                                        <div class="box-borders">
-                                            <div class="row">
-                                                <div class="col-8">
-                                                    <p>American Burger</p>
-                                                </div>
-                                                <div class="col-2 text-right">
-                                                    <span>1/4lb</span>
-                                                </div>
-                                                <div class="col-2 text-right">
-                                                    <span>£3.20</span>
-                                                </div>
-                                            </div>
-                                        </div>
+                                      <div class="box-borders">
+                                          <div class="row">
+                                              <div class="col-8">
+                                                  <p>Hawaiian Burger</p>
+                                              </div>
+                                              <div class="col-2 text-right">
+                                                  <span>1/4lb</span>
+                                              </div>
+                                              <div class="col-2 text-right">
+                                                  <span>£3.20</span>
+                                              </div>
+                                          </div>
+                                      </div>
 
-                                        <div class="box-borders">
-                                            <div class="row">
-                                                <div class="col-8">
-                                                    <p>BBQ Burger</p>
-                                                </div>
-                                                <div class="col-2 text-right">
-                                                    <span>1/4lb</span>
-                                                </div>
-                                                <div class="col-2 text-right">
-                                                    <span>£3.20</span>
-                                                </div>
-                                            </div>
-                                        </div>    
+                                      <div class="box-borders">
+                                          <div class="row">
+                                              <div class="col-8">
+                                                  <p>American Burger</p>
+                                              </div>
+                                              <div class="col-2 text-right">
+                                                  <span>1/4lb</span>
+                                              </div>
+                                              <div class="col-2 text-right">
+                                                  <span>£3.20</span>
+                                              </div>
+                                          </div>
+                                      </div>
 
-                                        <div class="box-borders">
-                                            <div class="row">
-                                                <div class="col-8">
-                                                    <p>Donner Burger</p>
-                                                </div>
-                                                <div class="col-2 text-right">
-                                                    <span>1/4lb</span>
-                                                </div>
-                                                <div class="col-2 text-right">
-                                                    <span>£3.20</span>
-                                                </div>
-                                            </div>
-                                        </div>
+                                      <div class="box-borders">
+                                          <div class="row">
+                                              <div class="col-8">
+                                                  <p>BBQ Burger</p>
+                                              </div>
+                                              <div class="col-2 text-right">
+                                                  <span>1/4lb</span>
+                                              </div>
+                                              <div class="col-2 text-right">
+                                                  <span>£3.20</span>
+                                              </div>
+                                          </div>
+                                      </div>    
 
-                                        <div class="box-borders">
-                                            <div class="row">
-                                                <div class="col-8">
-                                                    <p>Vegetarian Burger</p>
-                                                </div>
-                                                <div class="col-2 text-right">
-                                                    <span>1/4lb</span>
-                                                </div>
-                                                <div class="col-2 text-right">
-                                                    <span>£3.20</span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
+                                      <div class="box-borders">
+                                          <div class="row">
+                                              <div class="col-8">
+                                                  <p>Donner Burger</p>
+                                              </div>
+                                              <div class="col-2 text-right">
+                                                  <span>1/4lb</span>
+                                              </div>
+                                              <div class="col-2 text-right">
+                                                  <span>£3.20</span>
+                                              </div>
+                                          </div>
+                                      </div>
+
+                                      <div class="box-borders">
+                                          <div class="row">
+                                              <div class="col-8">
+                                                  <p>Vegetarian Burger</p>
+                                              </div>
+                                              <div class="col-2 text-right">
+                                                  <span>1/4lb</span>
+                                              </div>
+                                              <div class="col-2 text-right">
+                                                  <span>£3.20</span>
+                                              </div>
+                                          </div>
+                                      </div>
+                                  </div>
+                              </div>
                         </div>
                     </div>
-                    <div class="col-lg-6 col-md-12 col-sm-12 px-0">
+                    <div class="col-lg-4 col-md-12 col-sm-12 px-0">
                         <div class="menus-pattern-second">
-                            <div class="menu-second-before"></div>
                             <div class="second-menu title-styl">
                                 <h2>Pizzas</h2>
 
@@ -458,6 +499,10 @@
                                     </div>                                  
                                 </div>
                             </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-12 col-sm-12 px-0">
+                        <div class="menus-pattern-second">
                             <div class="second-menu title-styl">
                                 <h2>Desserts</h2>
 

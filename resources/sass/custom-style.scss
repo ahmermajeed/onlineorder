@@ -401,6 +401,85 @@ $duration: 50s;
   }
 
 }
+
+.timing-ticker-area{
+    display: flex;
+    align-items: center;
+    background: #4b2117;
+    @include media-breakpoint-down(sm){
+        flex-direction: column;
+        padding: 0 0 20px 0;
+    }
+    .heading{
+        background: orange;
+        padding:25px 25px;
+        line-height: 1;
+        margin-right: 20px;
+        @include media-breakpoint-down(sm){
+            width: 100%;
+            margin-right: 0;
+            margin-bottom: 20px;
+            text-align: center;
+            padding: 10px 0;
+        }
+        h3{
+            font-size: 18px;
+            font-weight: bold;
+            text-transform: uppercase;
+            line-height: 1;
+            margin: 0;
+        }
+    }
+    .timing{
+        @include media-breakpoint-down(sm){
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 100%;
+            padding: 0 20px;
+        }
+        ul{
+            display: flex;
+            list-style: none;
+            color: #fff;
+            font-weight: 600;
+            @include media-breakpoint-down(sm){
+                flex-direction: column;
+                width: 100%;
+            }
+            li{
+                margin: 0 10px;
+                @include media-breakpoint-down(sm){
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    margin-bottom: 10px;
+                }
+                span{
+                    font-size: 13px;
+                    &.day{
+                        margin-right: 10px;
+                        @include media-breakpoint-down(sm){
+                            width: 60%;
+                        }
+                    }
+                    &.delivery{
+                        background: orange;
+                        color: #000;
+                        padding: 5px;
+                        border-radius: 4px;
+                    }
+                    &.collection{
+                        background: #f48a32;
+                        color: #fff;
+                        padding: 5px;
+                        border-radius: 4px;
+                    }
+                }
+            }
+        }
+    }
+}
 /********************footer start****************************/
 .main-ftr {
     padding-top: 50px;
@@ -618,7 +697,7 @@ $duration: 50s;
     background-size: cover;
     height: 570px;
     @include media-breakpoint-down(sm) {
-        background-size: contain;
+        background-size: cover;
         height: 170px;
     }
     .contact-bnner {
@@ -1158,7 +1237,38 @@ $duration: 50s;
 }
 
 .menu-box-style2{
-
+    padding:50px 0 0 0;
+    .menus-pattern-first{
+        background: none !important;
+        @include media-breakpoint-down(sm){
+            height: auto;
+        }
+    }
+    .menus-pattern-second{
+        background: none !important;
+        padding: 0;
+        margin: 0;
+        @include media-breakpoint-down(sm){
+            min-height: inherit;
+            height: auto;
+        }
+    }
+    .title-styl{
+        background: none !important;
+        border-radius: 0 !important;
+        box-shadow: none !important;
+        padding: 30px !important;
+        margin: 0 !important;
+        h2{
+            text-align: center;
+            font-size: 28px;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+    }
+    .badge{
+        font-size: 10px;
+    }
 }
 
 .deal-section {
