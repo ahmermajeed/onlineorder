@@ -2758,7 +2758,7 @@ input[type="color"].form-control:disabled {
 @font-face {
   font-family: "icomoon";
   src: url(/fonts/icomoon.eot?b6cc6942285aca3abcf3620ac9b1c835);
-  src: url(/fonts/icomoon.eot?b6cc6942285aca3abcf3620ac9b1c835) format("embedded-opentype"), url(/fonts/icomoon.ttf?25b0a48b5d6bc56156bcb092e15a1b99) format("truetype"), url(/fonts/icomoon.woff?8776db60df3cd9bf957582b97b65afde) format("woff"), url(/fonts/icomoon.svg?3680262bd1f62fb0e7c0e62272bd5550) format("svg");
+  src: url(/fonts/icomoon.eot?b6cc6942285aca3abcf3620ac9b1c835) format("embedded-opentype"), url(/fonts/icomoon.ttf?25b0a48b5d6bc56156bcb092e15a1b99) format("truetype"), url(/fonts/icomoon.woff?8776db60df3cd9bf957582b97b65afde) format("woff"), url(/fonts/icomoon.svg?b0c7dedc1a8d1c31acace5c1fa34c37c) format("svg");
   font-weight: normal;
   font-style: normal;
   font-display: block;
