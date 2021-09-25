@@ -17432,5 +17432,15 @@ span.address {
   font-size: 14px;
 }
 
+.order-conmfirm thead {
+  background: transparent;
+  color: grey;
+}
+
+.item-detail .more-info {
+  font-size: 12px;
+  color: grey;
+}
+
 /*************** Reservation-section-end *******************/
 

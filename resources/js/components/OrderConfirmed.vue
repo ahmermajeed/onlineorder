@@ -1,19 +1,93 @@
 <template>
     <div>
-        <header-menu></header-menu>
-        <section class="hero-sec">            
-        </section>
 
         <section class="order-information mt-5">
             <div class="container">
-                <div class="row">
-                    <div class="col-12">
-                        <h3 class="mb-3">Order Confirmed</h3>
-                    <div>
-               </div>
+                <div class="order-confirm-header">
+                    <img src="/images/tasty-land/sen-logo.png" alt="">
                 </div>
-        	</div>
-        </div>
+                    <div class="order-confirm">
+                        <h3 class="mb-3">Your Order Confirmed!</h3>
+                        <p><strong>Hi Whitney,</strong></p>
+                        <p>Your order has been confirmed and will be shipping soon.</p>
+                    </div>
+                    <div class="order-detail">
+                        <table class="table">
+                            <thead>
+                              <tr>
+                                <th scope="col">#</th>
+                                <th scope="col">First</th>
+                                <th scope="col">Last</th>
+                                <th scope="col">Handle</th>
+                              </tr>
+                            </thead>
+                          <tbody>
+                            <tr>
+                              <td>Otto</td>
+                              <td>Thornton</td>
+                              <td>the Bird</td>
+                              <td>the Bird</td>
+                            </tr>
+                          </tbody>
+                        </table>
+                    </div>
+                    <div class="item-detail">
+                        <table class="table">
+                          <tbody>
+                            <tr>
+                              <td><img src="/images/tasty-land/bee-hive.jpg" style="width: 90px;" alt=""></td>
+                              <td>
+                                <p>Complete Bee Hive Starter Kit</p>
+                                <p class="more-info">BeeCastle Hives</p>
+                            </td>
+                              <td>Qty 1</td>
+                              <td>$199.99</td>
+                            </tr>
+                          </tbody>
+                        </table>
+                    </div>
+                    <div class="bill-info">
+                        <table class="table">
+                          <tbody>
+                            <tr>                             
+                              <td>Sub Total</td>
+                              <td>$199.99</td>
+                            </tr>
+                            <tr>
+                              <td>Express Shipping</td>
+                              <td>$6.99</td>
+                            </tr>
+                            <tr>
+                                <td>Taxes</td>
+                                <td>$13.99</td>
+                            </tr>
+                            <tr>
+                                <td>Discount(SAVE20)</td>
+                                <td>-20% ($39.99)</td>
+                            </tr>
+                          </tbody>
+                        </table>
+                    </div>
+                    <div class="total-bill-info">
+                       <table class="table">
+                         <tbody>
+                           <tr>                             
+                             <td>Sub Total</td>
+                             <td>$180.98</td>
+                           </tr>
+                         </tbody>
+                       </table> 
+                    </div>
+                    <div class="shipping-info">
+                        <p>We'll send you shipping confirmation when your item(s) are on the way! We appreciate your business, and hope you enjoy your purchase.</p>
+                        <p>Thank you!</p>
+                        <p>Beekeeper Supplies</p>
+                    </div>
+                    <div class="order-confirm-footer">
+                        <p>Question? Contact our <a href="javascript:;">Customer Support </a></p>
+                        <p>&copy; Beekeeper Supplies</p>
+                    </div>
+               </div>
     </section>
 
         <footer-menu></footer-menu>
