@@ -17377,5 +17377,90 @@ span.address {
   font-size: 35px;
 }
 
+.order-information .cell-1 {
+  border-collapse: separate;
+  border-spacing: 0 4em;
+  background: #ffffff;
+  border-bottom: 3px solid #efefef;
+  background-clip: padding-box;
+  cursor: pointer;
+}
+
+.order-information thead {
+  background: #f48a32;
+  color: #fff;
+}
+
+.order-information .table-elipse {
+  cursor: pointer;
+}
+
+.order-information #demo {
+  transition: all 0.3s ease-in-out;
+}
+
+.order-information .row-child {
+  background-color: #ebf4fb;
+  color: #0a5385;
+}
+
+.product-detail {
+  padding: 30px;
+}
+
+.product-detail td {
+  padding: 0;
+}
+
+.product-detail td:first-child {
+  width: 40%;
+  padding-bottom: 10px;
+}
+
+.product-detail td:last-child {
+  padding-bottom: 0px;
+}
+
+.product-detail {
+  padding-bottom: 0;
+}
+
+.order-information .nav-pills .nav-pills .show > .nav-link {
+  background-color: #f48a32 !important;
+}
+
+.order-information .nav-pills .nav-link {
+  color: #f48a32;
+}
+
+.nav-pills .nav-link.active {
+  color: #fff;
+  background-color: #f48a32 !important;
+}
+
+.order-information td,
+.order-information th {
+  font-size: 14px;
+}
+
+.order-information .btn.cstm-btn.btn-primary {
+  background-color: #f48a32 !important;
+  border-color: #f48a32 !important;
+}
+
+.card-text label {
+  font-size: 14px;
+}
+
+.order-conmfirm thead {
+  background: transparent;
+  color: grey;
+}
+
+.item-detail .more-info {
+  font-size: 12px;
+  color: grey;
+}
+
 /*************** Reservation-section-end *******************/
 
