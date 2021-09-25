@@ -1,146 +1,117 @@
 <template>
     <div>
         <header-menu></header-menu>
-        <div class="timing-ticker d-none">
-            <div class="heading">
-                <h3>Opening Timing</h3>
-            </div>
-            <div class="timing">
-                <div class="ticker-wrap">
-                <div class="ticker">
-                  <div class="ticker__item">
-                        <span class="day">
-                            Monday
-                        </span>
-                        <span class="delivery">
-                            11:00 - 23:30
-                        </span>
-                        <span class="collection">
-                            12:00 - 20:20
-                        </span>
-                  </div>
-                  <div class="ticker__item">
-                        <span class="day">
-                            Monday
-                        </span>
-                        <span class="delivery">
-                            11:00 - 23:30
-                        </span>
-                        <span class="collection">
-                            12:00 - 20:20
-                        </span>
-                  </div>
-                  <div class="ticker__item">
-                        <span class="day">
-                            Tuesday
-                        </span>
-                        <span class="delivery">
-                            11:00 - 23:30
-                        </span>
-                        <span class="collection">
-                            12:00 - 20:20
-                        </span>
-                  </div>
-                  <div class="ticker__item">
-                        <span class="day">
-                            Wednesday
-                        </span>
-                        <span class="delivery">
-                            11:00 - 23:30
-                        </span>
-                        <span class="collection">
-                            12:00 - 20:20
-                        </span>
-                  </div>
-                  <div class="ticker__item">
-                        <span class="day">
-                            Thursday
-                        </span>
-                        <span class="delivery">
-                            11:00 - 23:30
-                        </span>
-                        <span class="collection">
-                            12:00 - 20:20
-                        </span>
-                  </div>
-                  <div class="ticker__item">
-                        <span class="day">
-                            Friday
-                        </span>
-                        <span class="delivery">
-                            11:00 - 23:30
-                        </span>
-                        <span class="collection">
-                            12:00 - 20:20
-                        </span>
-                  </div>
-                  <div class="ticker__item">
-                        <span class="day">
-                            Saturday
-                        </span>
-                        <span class="delivery">
-                            11:00 - 23:30
-                        </span>
-                        <span class="collection">
-                            12:00 - 20:20
-                        </span>
-                  </div>
-                  <div class="ticker__item">
-                        <span class="day">
-                            Sunday
-                        </span>
-                        <span class="delivery">
-                            11:00 - 23:30
-                        </span>
-                        <span class="collection">
-                            12:00 - 20:20
-                        </span>
-                  </div>
-                </div>
-                </div>
-            </div>
-        </div>
+<!--        <div class="timing-ticker d-none">-->
+<!--            <div class="heading">-->
+<!--                <h3>Opening Timing</h3>-->
+<!--            </div>-->
+<!--            <div class="timing">-->
+<!--                <div class="ticker-wrap">-->
+<!--                <div class="ticker">-->
+<!--                  <div class="ticker__item">-->
+<!--                        <span class="day">-->
+<!--                            Mon-->
+<!--                        </span>-->
+<!--                        <span class="delivery">-->
+<!--                            11:00 - 23:30-->
+<!--                        </span>-->
+<!--                        <span class="collection">-->
+<!--                            12:00 - 20:20-->
+<!--                        </span>-->
+<!--                  </div>-->
+<!--                  <div class="ticker__item">-->
+<!--                        <span class="day">-->
+<!--                            Tue-->
+<!--                        </span>-->
+<!--                        <span class="delivery">-->
+<!--                            11:00 - 23:30-->
+<!--                        </span>-->
+<!--                        <span class="collection">-->
+<!--                            12:00 - 20:20-->
+<!--                        </span>-->
+<!--                  </div>-->
+<!--                  <div class="ticker__item">-->
+<!--                        <span class="day">-->
+<!--                            Wed-->
+<!--                        </span>-->
+<!--                        <span class="delivery">-->
+<!--                            11:00 - 23:30-->
+<!--                        </span>-->
+<!--                        <span class="collection">-->
+<!--                            12:00 - 20:20-->
+<!--                        </span>-->
+<!--                  </div>-->
+<!--                  <div class="ticker__item">-->
+<!--                        <span class="day">-->
+<!--                            Thru-->
+<!--                        </span>-->
+<!--                        <span class="delivery">-->
+<!--                            11:00 - 23:30-->
+<!--                        </span>-->
+<!--                        <span class="collection">-->
+<!--                            12:00 - 20:20-->
+<!--                        </span>-->
+<!--                  </div>-->
+<!--                  <div class="ticker__item">-->
+<!--                        <span class="day">-->
+<!--                            Fr-->
+<!--                        </span>-->
+<!--                        <span class="delivery">-->
+<!--                            11:00 - 23:30-->
+<!--                        </span>-->
+<!--                        <span class="collection">-->
+<!--                            12:00 - 20:20-->
+<!--                        </span>-->
+<!--                  </div>-->
+<!--                  <div class="ticker__item">-->
+<!--                        <span class="day">-->
+<!--                            Sat-->
+<!--                        </span>-->
+<!--                        <span class="delivery">-->
+<!--                            11:00 - 23:30-->
+<!--                        </span>-->
+<!--                        <span class="collection">-->
+<!--                            12:00 - 20:20-->
+<!--                        </span>-->
+<!--                  </div>-->
+<!--                  <div class="ticker__item">-->
+<!--                        <span class="day">-->
+<!--                            Sun-->
+<!--                        </span>-->
+<!--                        <span class="delivery">-->
+<!--                            11:00 - 23:30-->
+<!--                        </span>-->
+<!--                        <span class="collection">-->
+<!--                            12:00 - 20:20-->
+<!--                        </span>-->
+<!--                  </div>-->
+<!--                  <div class="ticker__item">-->
+<!--                        <span class="day">-->
+<!--                            Sunday-->
+<!--                        </span>-->
+<!--                        <span class="delivery">-->
+<!--                            11:00 - 23:30-->
+<!--                        </span>-->
+<!--                        <span class="collection">-->
+<!--                            12:00 - 20:20-->
+<!--                        </span>-->
+<!--                  </div>-->
+<!--                </div>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--        </div>-->
         <div class="timing-ticker-area">
             <div class="heading">
-                <h3>Opening Timing</h3>
+                <h3>Shop Hours</h3>
             </div>
             <div class="timing">
                 <ul>
-                    <li>
-                      <span class="day">Monday</span>
-                      <span class="delivery">11:42</span>
-                      <span class="collection">09:20</span>
+                    <li  v-for="timing  in info.timing"  >
+                      <span class="day">{{timing.day}}</span>
+                      <span class="delivery">{{timing.start_time}}</span>
+                      <span class="collection">{{timing.end_time}}</span>
                     </li>
-                    <li>
-                      <span class="day">Tuesday</span>
-                      <span class="delivery">11:42</span>
-                      <span class="collection">09:20</span>
-                    </li>
-                    <li>
-                      <span class="day">Wednesday</span>
-                      <span class="delivery">11:42</span>
-                      <span class="collection">09:20</span>
-                    </li>
-                    <li>
-                      <span class="day">Thursday</span>
-                      <span class="delivery">11:42</span>
-                      <span class="collection">09:20</span>
-                    </li>
-                    <li>
-                      <span class="day">Friday</span>
-                      <span class="delivery">11:42</span>
-                      <span class="collection">09:20</span>
-                    </li>
-                    <li>
-                      <span class="day">Saturday</span>
-                      <span class="delivery">11:42</span>
-                      <span class="collection">09:20</span>
-                    </li>
-                    <li>
-                      <span class="day">Sunday</span>
-                      <span class="delivery">11:42</span>
-                      <span class="collection">09:20</span>
-                    </li>
+
                 </ul>
             </div>
         </div>
@@ -164,7 +135,7 @@
                                     </div>
                                 </div>
                            </div>
-                          
+
 
                       </div>
                     </div>
@@ -319,10 +290,10 @@
                                           </div>
                                           <div class="col-2 text-right">
                                               <span class="badge badge-pill badge-danger">Regular</span>
-                                          </div>   
+                                          </div>
                                           <div class="col-2 text-right">
                                               <span class="badge badge-pill badge-danger">Meal</span>
-                                          </div>   
+                                          </div>
                                         </div>
                                   </div>
                                   <div class="menu-item">
@@ -437,7 +408,7 @@
                                                   <span>£3.20</span>
                                               </div>
                                           </div>
-                                      </div>    
+                                      </div>
 
                                       <div class="box-borders">
                                           <div class="row">
@@ -485,7 +456,7 @@
                                                 <span>£4.00</span>
                                             </div>
                                         </div>
-                                    </div>  
+                                    </div>
 
                                     <div class="box-borders">
                                         <div class="row">
@@ -496,7 +467,7 @@
                                                 <span>£4.40</span>
                                             </div>
                                         </div>
-                                    </div>                                  
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -516,7 +487,7 @@
                                                 <span>£2.50</span>
                                             </div>
                                         </div>
-                                    </div>  
+                                    </div>
 
                                     <div class="box-borders">
                                         <div class="row">
@@ -527,7 +498,7 @@
                                                 <span>£5.00</span>
                                             </div>
                                         </div>
-                                    </div>                               
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -555,7 +526,7 @@
                                             <li>4 Large Fries,B eans</li>
                                             <li>1.5ltr Bottle of Drink</li>
                                         </ul>
-                                                                                
+
                                         <div class="row pries-bar mt-3">
                                             <div class="col-8 order-btn">
                                                 <button type="button" class="btn btn-outline-secondary" @click.prevent="openPostalCode">Order Now!</button>
@@ -580,7 +551,7 @@
                                 <div class="row">
                                     <div class="col-lg-4 col-md-2">
 
-                                
+
                                     </div>
                                     <div class="col-lg-8 col-md-10">
                                         <h3>
@@ -617,7 +588,7 @@
             </div> -->
         </section>
 
-        
+
 
         <reservation></reservation>
 
@@ -702,92 +673,7 @@
                 </div>
             </div>
         </section>
-        <section class="menu-list d-none for-mobile-only">
-          <div class="accordion" role="tablist">
-              <b-card no-body class="mb-1">
-                <b-card-header header-tag="header" class="p-1" role="tab">
-                  <b-button block v-b-toggle.accordion-1>Doner Box
-                    <span class="icon-up-arrow"></span>
-                  <span class="icon-down-arrow"></span>
-                  </b-button>
-                  
-                </b-card-header>
-                <b-collapse id="accordion-1" visible accordion="my-accordion" role="tabpanel">
-                  <b-card-body>
-                    <p>The Boss Box for one – A choice of our Original German Doner Kebab, KCal Kebab, Durum or Lahmacun Wrap, served with a portion of our Doner Spring Rolls or Chilli Cheese Bites, a side of Fries, 3 Signature Sauces and a Beverage.  Go on – Be The Boss.</p>
-                    <ul class="dish-list">
-                      <li class="box">
-                        <a href="#0" v-b-modal.modal-order>
-                          <h3>GDK box kebab</h3>
-                          <p>from £12.99</p>
-                        </a>
-                      </li>
-                      <li class="box">
-                        <a href="#0" v-b-modal.modal-order>
-                          <h3>GDK box kebab</h3>
-                          <p>from £12.99</p>
-                        </a>
-                      </li>
-                      <li class="box">
-                        <a href="#">
-                          <h3>GDK box kebab</h3>
-                          <p>from £12.99</p>
-                        </a>
-                      </li>
-                      <li class="box">
-                        <a href="#">
-                          <h3>GDK box kebab</h3>
-                          <p>from £12.99</p>
-                        </a>
-                      </li>
-                      <li class="box">
-                        <a href="#">
-                          <h3>GDK box kebab</h3>
-                          <p>from £12.99</p>
-                        </a>
-                      </li>
-                      <li class="box">
-                        <a href="#">
-                          <h3>GDK box kebab</h3>
-                          <p>from £12.99</p>
-                        </a>
-                      </li>
-                    </ul>
-                  </b-card-body>
-                </b-collapse>
-              </b-card>
 
-              <b-card no-body class="mb-1">
-                <b-card-header header-tag="header" class="p-1" role="tab">
-                  <b-button block v-b-toggle.accordion-2>Pizza
-                    <span class="icon-up-arrow"></span>
-                  <span class="icon-down-arrow"></span>
-                  </b-button>
-                  
-                </b-card-header>
-                <b-collapse id="accordion-2" accordion="my-accordion" role="tabpanel">
-                  <b-card-body>
-                    <b-card-text>{{ text }}</b-card-text>
-                  </b-card-body>
-                </b-collapse>
-              </b-card>
-
-              <b-card no-body class="mb-1">
-                <b-card-header header-tag="header" class="p-1" role="tab">
-                  <b-button block v-b-toggle.accordion-3>GDK Signature Sauce Dips
-                    <span class="icon-up-arrow"></span>
-                    <span class="icon-down-arrow"></span>
-                  </b-button>
-                  
-                </b-card-header>
-                <b-collapse id="accordion-3" accordion="my-accordion" role="tabpanel">
-                  <b-card-body>
-                    <b-card-text>{{ text }}</b-card-text>
-                  </b-card-body>
-                </b-collapse>
-              </b-card>
-          </div>
-        </section>
         <footer-menu></footer-menu>
         <postal-code-popup  @HideModalValue="hideModal"   :showModalProp="showPostalCode"></postal-code-popup>
     </div>
@@ -811,10 +697,7 @@
         },
         data: function () {
             return {
-                images: [
-                    '../../images/mainbanner1.jpeg',
-                    '../../images/image00003.jpg',
-                ],
+                images: [],
                 stories: [],
                 index: null,
                 showPopup: false,
@@ -846,9 +729,14 @@
                 this.showPostalCode = false;
             },
 
-            
+
             },
-     
+        computed:{
+            info(){
+                return this.$store.state.general_data;
+            },
+        }
+
     }
 </script>
 

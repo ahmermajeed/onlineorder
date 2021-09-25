@@ -24,4 +24,6 @@ class GeneralSettingRepository
         $data->fill($request)->save();
         return $data;
     }
+
+
 }
