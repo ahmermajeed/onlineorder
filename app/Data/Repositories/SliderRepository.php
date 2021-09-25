@@ -24,10 +24,7 @@ class SliderRepository
     {
 
         $data = array();
-        $model = $this->model;
-
-
-
+        $model = $this->model->orderBy('sort','asc');
         if(isset($input['gallery_id'])){
             $model = $model->where('gallery_id',$input['gallery_id']);
         }

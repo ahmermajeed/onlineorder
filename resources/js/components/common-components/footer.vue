@@ -6,13 +6,13 @@
                     <div class="container">
                         <div class="row">
                             <div class="col-lg-3 col-md-3 footer-section-1 footer-space order-1">
-                                <h3>Opening Hours</h3>
+                                <h3>Contact Info</h3>
                                 <ul class="Opening">
-                                    <li><a href="#"><span><i class="icon-smartphone-1"></i></span> 01274-955460</a></li>
-                                    <li><a href="#"><span><i class="icon-mail-2"></i></span>info@sentinelepos.co.uk</a></li>
+                                    <li><a href="#"><span><i class="icon-smartphone-1"></i></span> {{info.phone_number}}</a></li>
+                                    <li><a href="#"><span><i class="icon-mail-2"></i></span> {{info.email}}</a></li>
                                     <li><a href="#" class="address-link">
                                         <span><i class="icon-placeholder"></i></span>
-                                        <span class="address">Office no 3 Beckshaw House Law Street Cleckheaton</span>
+                                        <span class="address">{{info.address.full_address}}</span>
                                     </a></li>
                                 </ul>
                             </div>
@@ -32,31 +32,31 @@
                                 </div>
                                 <div class="icons text-center">
                                     <ul>
-                                        <li class="facebook"><a href="#"><i class="icon-facebook "></i></a></li>
-                                        <li class="linked"><a href="#"><i class="icon-linkedin"></i></a></li>
-                                        <li class="twitter"><a href="#"><i class="icon-twitter"></i></a></li>
-                                        <li class="pinterest"><a href="#"><i class="icon-pinterest-logo"></i></a></li>
-                                        <li class="google-plus"><a href="#"><i class="icon-google-plus-logo"></i></a></li>
-                                        <li class="wifi"><a href="#"><i class="icon-rss-feed-symbol"></i></a></li>
+<!--                                        <li class="facebook"><a href="#"><i class="icon-facebook "></i></a></li>-->
+<!--                                        <li class="linked"><a href="#"><i class="icon-linkedin"></i></a></li>-->
+<!--                                        <li class="twitter"><a href="#"><i class="icon-twitter"></i></a></li>-->
+<!--                                        <li class="pinterest"><a href="#"><i class="icon-pinterest-logo"></i></a></li>-->
+<!--                                        <li class="google-plus"><a href="#"><i class="icon-google-plus-logo"></i></a></li>-->
+<!--                                        <li class="wifi"><a href="#"><i class="icon-rss-feed-symbol"></i></a></li>-->
+
+
+
+                                        <li class="facebook" v-if="info.general_setting.facebook"> <a  :href="info.general_setting.facebook" ><i class="icon-facebook"></i></a></li>
+                                        <li class="icon-instagram-symbol" v-if="info.general_setting.instagram"><a :href="info.general_setting.instagram"><i class="icon-instagram-symbol"></i></a></li>
+                                        <li class="twitter" v-if="info.general_setting.twitter"><a  :href="info.general_setting.twitter"><i class="icon-twitter"></i></a></li>
+
+
                                     </ul>
 
                                 </div>
                             </div>
                             <div class="col-lg-3 col-md-3 footer-section-3 footer-space order-2 order-md-3">
-                                <h3>Opening Hours</h3>
+                                <h3>Working Hours</h3>
                                 <ul class="Opening-hours">
-                                    <li>
-                                        <strong><a href="#">Monday - Friday</a></strong>
+                                    <li  v-for="timing  in info.timing"  >
+                                        <strong><a href="#">{{timing.day}} : {{timing.start_time}} - {{timing.end_time}}</a></strong>
                                     </li>
-                                    <li>
-                                        <a href="#">9AM - 6PM</a>
-                                    </li>
-                                    <li>
-                                        <strong><a href="#">Saturday - Sunday</a></strong>
-                                    </li>
-                                    <li>
-                                        <a href="#">9AM - 1PM</a>
-                                    </li>
+
                                 </ul>
                             </div>
                         </div>
@@ -92,7 +92,11 @@
              hideModal() {
                 this.showPostalCode = false;
             },
-
+        },
+        computed:{
+            info(){
+                return this.$store.state.general_data;
+            },
         }
     }
 </script>

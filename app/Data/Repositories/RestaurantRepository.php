@@ -3,7 +3,9 @@
 namespace App\Data\Repositories;
 
 use App\Data\Models\Gallery;
+use App\Data\Models\GeneralSettings;
 use App\Data\Models\Restaurant;
+use App\Data\Models\RestaurantTiming;
 use function App\Helpers\paginator;
 
 class RestaurantRepository
@@ -23,6 +25,9 @@ class RestaurantRepository
     public function findByAll()
     {
         $data = $this->model->first();
+        $data['address']['full_address'] = $data->address->full_address;
+        $data['general_setting'] = GeneralSettings::first()->toArray();
+        $data['timing'] = RestaurantTiming::all()->toArray();
         return $data;
     }
 

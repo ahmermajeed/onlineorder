@@ -12,11 +12,11 @@ const store = new Vuex.Store({
 
         cartItemsCount: 0,
         cartItems: [],
-
         delivery_charges:'',
         postal_code: localStorage.getItem('postal_code') ? localStorage.getItem('postal_code') : '',
         order_type: localStorage.getItem('order_type') ? localStorage.getItem('order_type') : '',
         user_data: localStorage.getItem('user_data') ? localStorage.getItem('user_data') : '',
+        general_data:  localStorage.getItem('general_data') ?  JSON.parse(localStorage.getItem('general_data')) : '',
     },
 
     // You can use it as a state getter function (probably the best solution)
@@ -53,6 +53,11 @@ const store = new Vuex.Store({
             } else {
                 return state.user_data;
             }
+        },
+
+
+        getGeneralData(state){
+                return state.general_data;
         }
 
     },
@@ -118,10 +123,13 @@ const store = new Vuex.Store({
         setUserData(state,data){
             localStorage.setItem('user_data',data);
             state.order_type = localStorage.getItem('user_data');
+        },
+
+        setGeneralData(state,data){
+            state.general_data = data;
         }
 
     },
-
     plugins: [createPersistedState()]
 });
 
