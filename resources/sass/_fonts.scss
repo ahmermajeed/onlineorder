@@ -25,6 +25,9 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-youtube:before {
+  content: "\e912";
+}
 .icon-up-arrow:before {
   content: "\e910";
 }

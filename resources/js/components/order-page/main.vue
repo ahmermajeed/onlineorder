@@ -16,12 +16,12 @@
 
                                     <a href="#" class="list-group-item"  v-for="(item, index) in categories"  @click.prevent="getProductAgainstCategories(item.id)" > {{item.name}}  <span class="float-right badge badge-light round">{{item.products.length}}</span> </a>
                                     <a href="#focus"   @click.prevent="getDeals(1)" class="list-group-item">Deals<span class="float-right badge badge-light round">{{totalNumberofDeals}}</span> </a>
-                            </div>  <!-- list-group .// -->
+                                </div>  <!-- list-group .// -->
                             </div>
                         </div>
                     </div>
                     <div class="col-lg-5 col-md-8 col-sm-12">
-                        <div class="product-list order-product">
+                        <div class="product-list order-product product-list-scroll">
                             <!--                            for products-->
                             <div id="focus" class="product"  v-for="(item, index) in products" v-if="item.products.length">
                                  <div class="row">
@@ -69,6 +69,102 @@
                             </div>
 
                         </div>
+                         <section class="menu-list d-none for-mobile-only">
+                          <div class="accordion" role="tablist">
+                              <b-card no-body class="mb-1">
+                                <b-card-header header-tag="header" class="p-1" role="tab">
+                                  <b-button block v-b-toggle.accordion-1>Doner Box
+                                    <span class="icon-up-arrow"></span>
+                                  <span class="icon-down-arrow"></span>
+                                  </b-button>
+                                  
+                                </b-card-header>
+                                <b-collapse id="accordion-1" visible accordion="my-accordion" role="tabpanel">
+                                  <b-card-body>
+                                    <p>The Boss Box for one – A choice of our Original German Doner Kebab, KCal Kebab, Durum or Lahmacun Wrap, served with a portion of our Doner Spring Rolls or Chilli Cheese Bites, a side of Fries, 3 Signature Sauces and a Beverage.  Go on – Be The Boss.</p>
+                                    <div class="product-list order-product">
+                            <!--                            for products-->
+                            <div id="focus" class="product"  v-for="(item, index) in products" v-if="item.products.length">
+                                 <div class="row">
+                                        <div class="col-md-12">
+
+                                            <h2 class="mb-4" style="color: #01a9fb; margin-bottom: 25px;" >{{item.name}}</h2>
+                                        </div>
+                                        <div class="col-md-12 mb-4 pb-1" v-for="(product, product_index) in item.products" style="border-bottom: 1px dashed #ccc;">
+                                            <div class="p-d prouct-item">
+                                                <h3>{{product.name}}</h3>
+                                               <p>{{product.description}}.</p>
+
+                                            </div>
+                                            <div class="p-cart product-dec">
+                                                <p style="font-size: 12px;" v-if="product.sizes.length"  v-for="(size, size_index) in product.sizes" > {{size.size}} : £{{size.price}}</p>
+                                                <p  v-if="!product.sizes.length" ><span>£</span>{{product.price}}</p>
+                                                <a href="#" class="custom-btn2  btn btn-outline-success"  @click.prevent="viewProduct(product.id)">
+                                                    Add to cart <i class="fas fa-long-arrow-alt-right"></i></i>
+                                                </a>
+                                            </div>
+                                        </div>
+                                 </div>
+                            </div>
+
+                            <!--                            for Deals-->
+                            <div class="product deals-pro"  v-for="(item, index) in deals" >
+                                <div class="row">
+                                    <div class="col-md-12">
+
+                                        <h2 class="mb-4" style="color: #01a9fb; margin-bottom: 25px;" >{{item.name}}</h2>
+                                    </div>
+                                    <div class="col-md-12 mb-4 pb-1"  style="border-bottom: 1px dashed #ccc;">
+                                        <div class="p-d">
+                                            <h3>{{item.description}}</h3>
+                                            <p>{{item.description}}.</p>
+
+                                        </div>
+                                        <div class="p-cart">
+                                            <p><span>£</span>{{item.price}}</p>
+                                              <a href="#" class="custom-btn2 btn btn-outline-success"  @click.prevent="viewDeal(item.id)"> Add to cart <i class="fas fa-long-arrow-alt-right"></i></i>
+                                               </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                                  </b-card-body>
+                                </b-collapse>
+                              </b-card>
+
+                              <b-card no-body class="mb-1">
+                                <b-card-header header-tag="header" class="p-1" role="tab">
+                                  <b-button block v-b-toggle.accordion-2>Pizza
+                                    <span class="icon-up-arrow"></span>
+                                  <span class="icon-down-arrow"></span>
+                                  </b-button>
+                                  
+                                </b-card-header>
+                                <b-collapse id="accordion-2" accordion="my-accordion" role="tabpanel">
+                                  <b-card-body>
+                                    <b-card-text>{{ text }}</b-card-text>
+                                  </b-card-body>
+                                </b-collapse>
+                              </b-card>
+
+                              <b-card no-body class="mb-1">
+                                <b-card-header header-tag="header" class="p-1" role="tab">
+                                  <b-button block v-b-toggle.accordion-3>GDK Signature Sauce Dips
+                                    <span class="icon-up-arrow"></span>
+                                    <span class="icon-down-arrow"></span>
+                                  </b-button>
+                                  
+                                </b-card-header>
+                                <b-collapse id="accordion-3" accordion="my-accordion" role="tabpanel">
+                                  <b-card-body>
+                                    <b-card-text>{{ text }}</b-card-text>
+                                  </b-card-body>
+                                </b-collapse>
+                              </b-card>
+                          </div>
+                        </section>
                     </div>
                     <div class=" col-lg-4 col-md-12 col-sm-12 cart  check-card add-card listing-page-sidebar lp-sidebar-right">
                         <div class="cart-box order" id="cart-stiky">

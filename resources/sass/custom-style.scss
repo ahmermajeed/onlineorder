@@ -448,7 +448,7 @@ $duration: 50s;
                 width: 100%;
             }
             li{
-                margin: 0 10px;
+                margin: 0 8px;
                 @include media-breakpoint-down(sm){
                     display: flex;
                     align-items: center;
@@ -456,9 +456,9 @@ $duration: 50s;
                     margin-bottom: 10px;
                 }
                 span{
-                    font-size: 13px;
+                    font-size: 12px;
                     &.day{
-                        margin-right: 10px;
+                        margin-right:5px;
                         @include media-breakpoint-down(sm){
                             width: 60%;
                         }
@@ -466,13 +466,13 @@ $duration: 50s;
                     &.delivery{
                         background: orange;
                         color: #000;
-                        padding: 5px;
+                        padding: 5px 3px;
                         border-radius: 4px;
                     }
                     &.collection{
                         background: #f48a32;
                         color: #fff;
-                        padding: 5px;
+                        padding: 5px 3px;
                         border-radius: 4px;
                     }
                 }
@@ -581,6 +581,7 @@ $duration: 50s;
                     display: inline-block;
                     line-height: 36px;
                     text-align: center;
+                    background: #4b2117;
                 }
             }
         }
@@ -692,12 +693,9 @@ $duration: 50s;
     height: 570px;
 }
 .header-bottom {
-    background-image: url('images/tasty-land/banner.jpeg');
-    background-repeat: no-repeat;
-    background-size: cover;
+    background: #ccc;
     height: 570px;
     @include media-breakpoint-down(sm) {
-        background-size: cover;
         height: 170px;
     }
     .contact-bnner {
@@ -1677,7 +1675,18 @@ $duration: 50s;
             }
         }
     }
-
+    .product-list-scroll{
+        height: 500px;
+        overflow-y: scroll;
+        -ms-overflow-style: none;  /* IE and Edge */
+        scrollbar-width: none;
+        &::-webkit-scrollbar {
+          display: none;
+        }
+        @include media-breakpoint-down(sm){
+            display: none;
+        }
+    }
     .add-card {
         /*background: #f5f8fa;
         border: 1px solid #e1e1e1;

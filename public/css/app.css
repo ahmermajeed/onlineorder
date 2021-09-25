@@ -2757,8 +2757,8 @@ input[type="color"].form-control:disabled {
 }@charset "UTF-8";
 @font-face {
   font-family: "icomoon";
-  src: url(/fonts/icomoon.eot?b6cc6942285aca3abcf3620ac9b1c835);
-  src: url(/fonts/icomoon.eot?b6cc6942285aca3abcf3620ac9b1c835) format("embedded-opentype"), url(/fonts/icomoon.ttf?25b0a48b5d6bc56156bcb092e15a1b99) format("truetype"), url(/fonts/icomoon.woff?8776db60df3cd9bf957582b97b65afde) format("woff"), url(/fonts/icomoon.svg?b0c7dedc1a8d1c31acace5c1fa34c37c) format("svg");
+  src: url(/fonts/icomoon.eot?03e9c1021e0578eac5b3225d75a35455);
+  src: url(/fonts/icomoon.eot?03e9c1021e0578eac5b3225d75a35455) format("embedded-opentype"), url(/fonts/icomoon.ttf?ef2c04a929051a457b17fe73d2bfbb8e) format("truetype"), url(/fonts/icomoon.woff?4cd9de708c59161e073fa960cbeb439e) format("woff"), url(/fonts/icomoon.svg?d16489279b45bee113ad06ed45fbcd36) format("svg");
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -2777,6 +2777,10 @@ input[type="color"].form-control:disabled {
   /* Better Font Rendering =========== */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-youtube:before {
+  content: "\E912";
 }
 
 .icon-up-arrow:before {
@@ -14228,7 +14232,7 @@ ul {
 }
 
 .timing-ticker-area .timing ul li {
-  margin: 0 10px;
+  margin: 0 8px;
 }
 
 @media (max-width: 767.98px) {
@@ -14241,11 +14245,11 @@ ul {
 }
 
 .timing-ticker-area .timing ul li span {
-  font-size: 13px;
+  font-size: 12px;
 }
 
 .timing-ticker-area .timing ul li span.day {
-  margin-right: 10px;
+  margin-right: 5px;
 }
 
 @media (max-width: 767.98px) {
@@ -14257,14 +14261,14 @@ ul {
 .timing-ticker-area .timing ul li span.delivery {
   background: orange;
   color: #000;
-  padding: 5px;
+  padding: 5px 3px;
   border-radius: 4px;
 }
 
 .timing-ticker-area .timing ul li span.collection {
   background: #f48a32;
   color: #fff;
-  padding: 5px;
+  padding: 5px 3px;
   border-radius: 4px;
 }
 
@@ -14372,6 +14376,7 @@ ul {
   display: inline-block;
   line-height: 36px;
   text-align: center;
+  background: #4b2117;
 }
 
 .main-ftr .icons .facebook a {
@@ -14488,15 +14493,12 @@ ul {
 }
 
 .header-bottom {
-  background-image: url(/images/banner.jpeg?8eb62afe918b2b7bd637110e18881447);
-  background-repeat: no-repeat;
-  background-size: cover;
+  background: #ccc;
   height: 570px;
 }
 
 @media (max-width: 767.98px) {
   .header-bottom {
-    background-size: cover;
     height: 170px;
   }
 }
@@ -15643,6 +15645,24 @@ ul {
 .main-popup-section .order-product .deals-pro .p-cart p {
   display: inline-block;
   font-weight: 700;
+}
+
+.main-popup-section .product-list-scroll {
+  height: 500px;
+  overflow-y: scroll;
+  -ms-overflow-style: none;
+  /* IE and Edge */
+  scrollbar-width: none;
+}
+
+.main-popup-section .product-list-scroll::-webkit-scrollbar {
+  display: none;
+}
+
+@media (max-width: 767.98px) {
+  .main-popup-section .product-list-scroll {
+    display: none;
+  }
 }
 
 .main-popup-section .add-card {
