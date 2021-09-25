@@ -79,6 +79,17 @@ const router = new VueRouter({
             name: 'reservation-table',
             component: require('./components/Reservation.vue').default,
         },
+        {
+            path: '/order-detail',
+            name: 'order-detail',
+            component: require('./components/OrderDetail.vue').default,
+        },
+
+        {
+            path: '/order-confirmed',
+            name: 'order-confirmed',
+            component: require('./components/OrderConfirmed.vue').default,
+        },
     ],
 
 });
