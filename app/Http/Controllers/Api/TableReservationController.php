@@ -10,6 +10,9 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Validator;
 use Symfony\Component\HttpFoundation\Response;
+use App\Http\Requests\CustomerReservationRequest;
+
+
 
 class TableReservationController extends Controller
 {
@@ -79,6 +82,23 @@ class TableReservationController extends Controller
     }
 
     public function destroy($id) {
+
+    }
+
+    public function customerReservation(CustomerReservationRequest $request)
+    {
+        $data = $this->_repository->makeCustomerReservation($request->all());
+
+        if (empty($data)) {
+            $code   = 401;
+            $output = ['error' => ['code' => $code, 'message' => "We are unable to process your request. Please try later"]];
+
+            return response()->json($output, $code);
+        } 
+        
+        $output = ['data' => $data, 'message' => "Your reservation has been updated successfully "];
+
+        return response()->json($output, Response::HTTP_OK);
 
     }
 }

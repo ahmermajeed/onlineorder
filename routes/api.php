@@ -18,6 +18,9 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
 
+Route::post('reservation', 'Api\TableReservationController@customerReservation');
+
+
 Route::group(['prefix' => 'auth'], function () {
     Route::post('login', 'Auth\LoginController@login');
 });
@@ -89,3 +92,8 @@ Route::resource('tableReservation', 'Api\TableReservationController');
 
 /** Printer Routes */
 Route::resource('printers', 'Api\PrintersController');
+
+
+
+
+

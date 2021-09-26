@@ -4,6 +4,8 @@ namespace App\Data\Repositories;
 
 use App\Data\Models\Category;
 use App\Data\Models\TableReservation;
+use App\Data\Models\CustomerReservation;
+use Carbon\Carbon;
 
 class TableReservationRepository
 {
@@ -58,5 +60,23 @@ class TableReservationRepository
     {
         $data = $this->model->create($request);
         return $data;
+    }
+
+    /**
+     * Customer Reservation
+     */
+    Public function makeCustomerReservation($params = []) 
+    {
+        $params['booking_date'] = Carbon::parse($params['booking_date']);
+        $params['booking_time'] = Carbon::parse($params['booking_time']);
+        
+        $isCustomerExists = CustomerReservation::where('email', $params['email'])->first();
+
+        if (!empty($isCustomerExists) ) {
+            ##Todo : Create Customer Password
+        }
+        $customer = CustomerReservation::create($params);
+
+        return $customer; 
     }
 }
