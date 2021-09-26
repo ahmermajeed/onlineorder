@@ -18,7 +18,7 @@
                             </div>
                             <div class="col-lg-6 col-md-6 footer-section-2 order-3 order-md-2">
                                 <div class="text-center">
-                                    <a href="#" class="logo"><img src="/images/tasty-land/sen-logo.png"></a>
+                                    <a href="#" class="logo"><img src="https://admin-aisha-cafe.softdemo.co.uk/images/header_logo/1632671897.png"></a>
                                 </div>
                                 <div class="footer-menu text-center">
                                     <ul>
@@ -42,10 +42,11 @@
 
 
                                         <li v-if="info.general_setting.facebook"> <a  :href="info.general_setting.facebook" ><i class="icon-facebook"></i></a></li>
+                                        <li v-if="info.general_setting.youtube"><a  :href="info.general_setting.youtube"><i class="icon-youtube"></i></a></li>
                                        <li v-if="info.general_setting.instagram"><a :href="info.general_setting.instagram"><i class="icon-instagram-symbol"></i></a></li>
                                        <li v-if="info.general_setting.twitter"><a  :href="info.general_setting.twitter"><i class="icon-twitter"></i></a></li>
-                                       <li v-if="info.general_setting.twitter"><a  :href="info.general_setting.twitter"><i class="icon-pinterest-logo"></i></a></li>
-                                       <li v-if="info.general_setting.twitter"><a  :href="info.general_setting.twitter"><i class="icon-youtube"></i></a></li>
+                                       <li v-if="info.general_setting.pinterest"><a  :href="info.general_setting.pinterest"><i class="icon-pinterest-logo"></i></a></li>
+
 
 
                                     </ul>
@@ -67,7 +68,7 @@
 
                 <div class="copyright text-center">
                     <div class="container">
-                        <p>Copyright © 2021 | All rights reserved</p>
+                        <p>{{info.general_setting.copyright_text}}</p>
                     </div>
                 </div>
             </div>

@@ -23,10 +23,11 @@
                                 <div class="header-icon float-right">
                                     <ul>
                                        <li v-if="info.general_setting.facebook"> <a  :href="info.general_setting.facebook" ><i class="icon-facebook"></i></a></li>
+                                        <li v-if="info.general_setting.youtube"><a  :href="info.general_setting.youtube"><i class="icon-youtube"></i></a></li>
                                        <li v-if="info.general_setting.instagram"><a :href="info.general_setting.instagram"><i class="icon-instagram-symbol"></i></a></li>
                                        <li v-if="info.general_setting.twitter"><a  :href="info.general_setting.twitter"><i class="icon-twitter"></i></a></li>
-                                       <li v-if="info.general_setting.twitter"><a  :href="info.general_setting.twitter"><i class="icon-pinterest-logo"></i></a></li>
-                                       <li v-if="info.general_setting.twitter"><a  :href="info.general_setting.twitter"><i class="icon-youtube"></i></a></li>
+                                       <li v-if="info.general_setting.pinterest"><a  :href="info.general_setting.pinterest"><i class="icon-pinterest-logo"></i></a></li>
+
                                    </ul>
                                 </div>
                             </div>
@@ -138,19 +139,21 @@
                 </div>
             </div>
             <!-- </nav> -->
-            <div class="header-bottom section-fullwidth"
+            <slider></slider>
+            <!-- <div class="header-bottom section-fullwidth"
+
                  v-if="this.$route.name !='online-order' &&
                   this.$route.name !='reservation-table'">
-                  <slider></slider>
-                <!-- <div class="container">
+                  
+                <div class="container">
                     <div class="row">
                         <div class="col-lg-4 col-xl-5">
 
                         </div>
 
                     </div>
-                </div> -->
-            </div>
+                </div>
+            </div> -->
 
         </header>
 
