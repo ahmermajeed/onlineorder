@@ -691,8 +691,10 @@ export default {
     },
 
     quantityAddInCart(index, cart) {
+
       this.$store.state.cartItems[index]['quantity'] += 1;
       this.$store.state.cartItemsCount += 1;
+
     },
 
     quantityMinusInCart(index) {
