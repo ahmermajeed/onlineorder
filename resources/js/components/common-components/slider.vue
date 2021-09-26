@@ -28,7 +28,7 @@
         },
         methods: {
             getSlider(){
-                let  _this = this
+                let  _this = this;
                 _this.loading  = true;
                 axios.get('/api/slider')
                     .then((response) => {
@@ -39,17 +39,12 @@
         },
         data: function () {
             return {
-                images: [
-                    'https://cdn.ekuep.com/img/cms/snd-2021/New/SND_Ekuep_Dektop_EN.png',
-
-                ],
                 sliders: [],
-                index: null
+
             };
         },
         mounted() {
             this.getSlider();
-            console.log('Component mounted.')
         }
     }
 </script>

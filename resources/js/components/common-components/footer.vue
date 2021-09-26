@@ -68,7 +68,7 @@
 
                 <div class="copyright text-center">
                     <div class="container">
-                        <p>Copyright © 2021 | All rights reserved</p>
+                        <p>{{info.general_setting.copyright_text}}</p>
                     </div>
                 </div>
             </div>
