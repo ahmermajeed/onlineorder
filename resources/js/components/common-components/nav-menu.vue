@@ -139,19 +139,21 @@
                 </div>
             </div>
             <!-- </nav> -->
-            <div class="header-bottom"
+            <slider></slider>
+            <!-- <div class="header-bottom section-fullwidth"
+
                  v-if="this.$route.name !='online-order' &&
                   this.$route.name !='reservation-table'">
-                  <slider></slider>
-                <!-- <div class="container">
+                  
+                <div class="container">
                     <div class="row">
                         <div class="col-lg-4 col-xl-5">
 
                         </div>
 
                     </div>
-                </div> -->
-            </div>
+                </div>
+            </div> -->
 
         </header>
 
