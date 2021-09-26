@@ -474,7 +474,7 @@ $duration: 50s;
                 span{
                     font-size: 11px;
                     &.day{
-                        margin-right:4px;
+                        margin-right:5px;
                         @include media-breakpoint-down(sm){
                             width: 60%;
                         }
