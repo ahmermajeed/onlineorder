@@ -17442,5 +17442,79 @@ span.address {
   color: grey;
 }
 
+.order-confirm-header {
+  text-align: center;
+  background: #f9fbfc;
+  padding: 50px 20px;
+  margin-bottom: 40px;
+}
+
+.order-confirm-header img {
+  width: 250px;
+}
+
+.order-confirm h3 {
+  color: #364152;
+  font-weight: bold;
+}
+
+.order-confirm p {
+  color: #495362;
+}
+
+.order-confirm p strong {
+  font-size: 22px !important;
+  font-weight: 100;
+}
+
+.sepeartor-line {
+  border-bottom: 2px solid #dee2e6 !important;
+  margin: 40px 0;
+}
+
+.order-detail thead {
+  background: transparent;
+  color: #495362;
+}
+
+.shipping-info p {
+  color: #495362;
+}
+
+.shipping-info p strong {
+  font-size: 16px;
+}
+
+.order-confirm-footer {
+  background: #f9fbfc;
+  padding: 20px 0;
+}
+
+.order-confirm-footer p {
+  display: inline-block;
+}
+
+.order-confirm-footer .copyright-text {
+  color: #bec2cb;
+  float: right;
+}
+
+.bill-info ul li,
+.total-bill-info ul li {
+  list-style: none;
+  margin-bottom: 10px;
+}
+
+.bill-info ul li .list-detail,
+.total-bill-info ul li .list-detail {
+  display: inline-block;
+  width: 49%;
+}
+
+.bill-info ul li .discount-value,
+.total-bill-info ul li .discount-value {
+  color: #29bfaf;
+}
+
 /*************** Reservation-section-end *******************/
 

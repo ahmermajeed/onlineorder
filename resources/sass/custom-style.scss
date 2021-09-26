@@ -3254,4 +3254,74 @@ span.address {
     font-size: 12px;
     color: grey;
 }
+.order-confirm-header {
+    text-align: center;
+    background: #f9fbfc;
+    padding: 50px 20px;
+    margin-bottom: 40px;
+    img {
+        width: 250px;
+    }
+}
+.order-confirm {
+    h3 {
+        color: #364152;
+        font-weight: bold;
+    }
+    p {
+        color: #495362;
+        strong {
+            font-size: 22px !important;
+            font-weight: 100;
+        }
+    }
+}
+.sepeartor-line {
+    border-bottom: 2px solid #dee2e6 !important;
+    margin: 40px 0;
+}
+.order-detail {
+    thead {
+        background: transparent;
+        color: #495362;
+    }
+}
+.shipping-info {
+    p {
+        color: #495362;
+        strong {
+            font-size: 16px;
+        }
+    }
+}
+.order-confirm-footer {
+    background: #f9fbfc;
+    padding: 20px 0;
+    p {
+        display: inline-block;
+    }
+    .copyright-text {
+        color: #bec2cb;
+        float: right;
+    }
+    
+}
+.bill-info {
+    ul {
+        li {
+            list-style: none;
+            margin-bottom: 10px;
+            .list-detail {
+                display: inline-block;
+                width: 49%;
+            }
+            .discount-value {
+                color: #29bfaf;
+            }
+        }
+    }
+}
+.total-bill-info {
+    @extend .bill-info;
+}
 /*************** Reservation-section-end *******************/
