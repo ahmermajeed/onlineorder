@@ -464,7 +464,7 @@ $duration: 50s;
                 width: 100%;
             }
             li{
-                margin: 0 8px;
+                margin: 0 4px;
                 @include media-breakpoint-down(sm){
                     display: flex;
                     align-items: center;
@@ -472,9 +472,9 @@ $duration: 50s;
                     margin-bottom: 10px;
                 }
                 span{
-                    font-size: 12px;
+                    font-size: 11px;
                     &.day{
-                        margin-right:5px;
+                        margin-right:4px;
                         @include media-breakpoint-down(sm){
                             width: 60%;
                         }
