@@ -1,5 +1,5 @@
 <template>
-    <div>  
+    <div>
         <hooper style="height: 400px" >
             <slide v-for="(item, index) in sliders">
                 <img :src="item.image">
@@ -7,18 +7,18 @@
             <hooper-navigation slot="hooper-addons"></hooper-navigation>
         </hooper>
         <div class="space-70"></div>
-    </div> 
-</template> 
+    </div>
+</template>
 
 <script>
     import VueGallery from 'vue-gallery';
     import {
         Hooper,
-        Slide, 
+        Slide,
         Navigation as HooperNavigation
     } from 'hooper';
- 
-    import 'hooper/dist/hooper.css';  
+
+    import 'hooper/dist/hooper.css';
     export default {
         components: {
             Hooper,
@@ -40,14 +40,8 @@
         data: function () {
             return {
                 images: [
-                    'https://dummyimage.com/800/ffffff/000000',
-                    'https://dummyimage.com/1600/ffffff/000000',
-                    'https://dummyimage.com/1280/000000/ffffff',
-                    'https://dummyimage.com/400/000000/ffffff',
-                    'https://dummyimage.com/800/ffffff/000000',
-                    'https://dummyimage.com/1600/ffffff/000000',
-                    'https://dummyimage.com/1280/000000/ffffff',
-                    'https://dummyimage.com/400/000000/ffffff'
+                    'https://cdn.ekuep.com/img/cms/snd-2021/New/SND_Ekuep_Dektop_EN.png',
+
                 ],
                 sliders: [],
                 index: null

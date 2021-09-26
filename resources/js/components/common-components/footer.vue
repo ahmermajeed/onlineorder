@@ -42,10 +42,11 @@
 
 
                                         <li v-if="info.general_setting.facebook"> <a  :href="info.general_setting.facebook" ><i class="icon-facebook"></i></a></li>
+                                        <li v-if="info.general_setting.youtube"><a  :href="info.general_setting.youtube"><i class="icon-youtube"></i></a></li>
                                        <li v-if="info.general_setting.instagram"><a :href="info.general_setting.instagram"><i class="icon-instagram-symbol"></i></a></li>
                                        <li v-if="info.general_setting.twitter"><a  :href="info.general_setting.twitter"><i class="icon-twitter"></i></a></li>
-                                       <li v-if="info.general_setting.twitter"><a  :href="info.general_setting.twitter"><i class="icon-pinterest-logo"></i></a></li>
-                                       <li v-if="info.general_setting.twitter"><a  :href="info.general_setting.twitter"><i class="icon-youtube"></i></a></li>
+                                       <li v-if="info.general_setting.pinterest"><a  :href="info.general_setting.pinterest"><i class="icon-pinterest-logo"></i></a></li>
+
 
 
                                     </ul>
