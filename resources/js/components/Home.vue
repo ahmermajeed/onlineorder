@@ -151,9 +151,9 @@
             <div class="container">
             <div class="rating-img">
                 <div class="row">
-                    <div class="col-lg-6 col-md-6 col-sm-12 px-0">
+                    <div class="col-lg-12 col-md-12 col-sm-12 px-0">
                         <div class="rating-content">
-                            <div class="row">
+                            <div class="row left">
                                 <div class="col-lg-2  col-sm-3 col-md-3 px-1 payment-type">
                                     <p class="rounded-circle">Cash<br> only</p>
 
@@ -177,236 +177,291 @@
             </div>
         </section>
         <section class="section-fullwidth menu-box menu-box-style2">
-            <div class="container">
+            <div class="container-fluid">
+                <h2 class="main-title">Our Top Dishes</h2>
                 <div class="row">
-                    <div class="col-lg-4 col-md-12 col-sm-12 px-0">
-                        <div class="menus-pattern-first">
-                              <div class="first-menu title-styl">
-
-
-                                  <h2>Burgers</h2>
-                                  <div class="menu-content">
-                                      <div class="row">
-                                          <div class="col-8">
-                                              <p>Meal</p>
-                                          </div>
-                                          <div class="col-2 text-right">
-                                              <span class="badge badge-pill badge-danger">Regular</span>
-                                          </div>
-                                          <div class="col-2 text-right">
-                                              <span class="badge badge-pill badge-danger">Meal</span>
-                                          </div>
-                                        </div>
-                                  </div>
-                                  <div class="menu-item">
-
-                                      <div class="box-borders">
-                                          <div class="row">
-                                              <div class="col-8">
-                                                  <p>Plain Burger</p>
-                                              </div>
-                                              <div class="col-2 text-right">
-                                                  <span>1/4lb</span>
-                                              </div>
-                                              <div class="col-2 text-right">
-                                                  <span>£3.00</span>
-                                              </div>
-                                          </div>
-                                      </div>
-
-                                      <div class="box-borders">
-                                          <div class="row">
-                                              <div class="col-8">
-                                                  <p>Cheese Burger</p>
-                                              </div>
-                                              <div class="col-2 text-right">
-                                                  <span>1/4lb</span>
-                                              </div>
-                                              <div class="col-2 text-right">
-                                                  <span>£3.20</span>
-                                              </div>
-                                          </div>
-                                      </div>
-
-                                      <div class="box-borders">
-                                          <div class="row">
-                                              <div class="col-8">
-                                                  <p>Coleslaw Burger</p>
-                                              </div>
-                                              <div class="col-2 text-right">
-                                                  <span>1/4lb</span>
-                                              </div>
-                                              <div class="col-2 text-right">
-                                                  <span>£3.20</span>
-                                              </div>
-                                          </div>
-                                      </div>
-
-                                      <div class="box-borders">
-                                          <div class="row">
-                                              <div class="col-8">
-                                                  <p>Chilli Burger</p>
-                                              </div>
-                                              <div class="col-2 text-right">
-                                                  <span>1/4lb</span>
-                                              </div>
-                                              <div class="col-2 text-right">
-                                                  <span>£3.20</span>
-                                              </div>
-                                          </div>
-                                      </div>
-
-                                      <div class="box-borders">
-                                          <div class="row">
-                                              <div class="col-8">
-                                                  <p>Garlic Burger</p>
-                                              </div>
-                                              <div class="col-2 text-right">
-                                                  <span>1/4lb</span>
-                                              </div>
-                                              <div class="col-2 text-right">
-                                                  <span>£3.20</span>
-                                              </div>
-                                          </div>
-                                      </div>
-
-                                      <div class="box-borders">
-                                          <div class="row">
-                                              <div class="col-8">
-                                                  <p>Hawaiian Burger</p>
-                                              </div>
-                                              <div class="col-2 text-right">
-                                                  <span>1/4lb</span>
-                                              </div>
-                                              <div class="col-2 text-right">
-                                                  <span>£3.20</span>
-                                              </div>
-                                          </div>
-                                      </div>
-
-                                      <div class="box-borders">
-                                          <div class="row">
-                                              <div class="col-8">
-                                                  <p>American Burger</p>
-                                              </div>
-                                              <div class="col-2 text-right">
-                                                  <span>1/4lb</span>
-                                              </div>
-                                              <div class="col-2 text-right">
-                                                  <span>£3.20</span>
-                                              </div>
-                                          </div>
-                                      </div>
-
-                                      <div class="box-borders">
-                                          <div class="row">
-                                              <div class="col-8">
-                                                  <p>BBQ Burger</p>
-                                              </div>
-                                              <div class="col-2 text-right">
-                                                  <span>1/4lb</span>
-                                              </div>
-                                              <div class="col-2 text-right">
-                                                  <span>£3.20</span>
-                                              </div>
-                                          </div>
-                                      </div>
-
-                                      <div class="box-borders">
-                                          <div class="row">
-                                              <div class="col-8">
-                                                  <p>Donner Burger</p>
-                                              </div>
-                                              <div class="col-2 text-right">
-                                                  <span>1/4lb</span>
-                                              </div>
-                                              <div class="col-2 text-right">
-                                                  <span>£3.20</span>
-                                              </div>
-                                          </div>
-                                      </div>
-
-                                      <div class="box-borders">
-                                          <div class="row">
-                                              <div class="col-8">
-                                                  <p>Vegetarian Burger</p>
-                                              </div>
-                                              <div class="col-2 text-right">
-                                                  <span>1/4lb</span>
-                                              </div>
-                                              <div class="col-2 text-right">
-                                                  <span>£3.20</span>
-                                              </div>
-                                          </div>
-                                      </div>
-                                  </div>
-                              </div>
+                    <div class="col-lg-3 col-md-12 col-sm-12 px-5">
+                        <h3>Pizza</h3>
+                        <div class="menu-box">
+                          <ul class="dish-list">
+                            <li class="box">
+                              <a href="#0">
+                                <h3>Four Season</h3>
+                              </a>
+                              <p class="dis">
+                                Tuna, Sweetcorn, Onions & Italian Herbs.
+                              </p>
+                              <span>from £12.99</span>
+                            </li>
+                            <li class="box">
+                              <a href="#0">
+                                <h3>Four Season</h3>
+                              </a>
+                              <p class="dis">
+                                Tuna, Sweetcorn, Onions & Italian Herbs.
+                              </p>
+                              <span>from £12.99</span>
+                            </li>
+                            <li class="box">
+                              <a href="#0">
+                                <h3>Four Season</h3>
+                              </a>
+                              <p class="dis">
+                                Tuna, Sweetcorn, Onions & Italian Herbs.
+                              </p>
+                              <span>from £12.99</span>
+                            </li>
+                            <li class="box">
+                              <a href="#0">
+                                <h3>Four Season</h3>
+                              </a>
+                              <p class="dis">
+                                Tuna, Sweetcorn, Onions & Italian Herbs.
+                              </p>
+                              <span>from £12.99</span>
+                            </li>
+                            <li class="box">
+                              <a href="#0">
+                                <h3>Four Season</h3>
+                              </a>
+                              <p class="dis">
+                                Tuna, Sweetcorn, Onions & Italian Herbs.
+                              </p>
+                              <span>from £12.99</span>
+                            </li>
+                            <li class="box">
+                              <a href="#0">
+                                <h3>Four Season</h3>
+                              </a>
+                              <p class="dis">
+                                Tuna, Sweetcorn, Onions & Italian Herbs.
+                              </p>
+                              <span>from £12.99</span>
+                            </li>
+                            <li class="box">
+                              <a href="#0">
+                                <h3>Four Season</h3>
+                              </a>
+                              <p class="dis">
+                                Tuna, Sweetcorn, Onions & Italian Herbs.
+                              </p>
+                              <span>from £12.99</span>
+                            </li>
+                          </ul>
                         </div>
                     </div>
-                    <div class="col-lg-4 col-md-12 col-sm-12 px-0">
-                        <div class="menus-pattern-second">
-                            <div class="second-menu title-styl">
-                                <h2>Pizzas</h2>
-
-                                <div class="menu-item">
-                                    <div class="box-borders">
-                                        <div class="row">
-                                            <div class="col-10">
-                                                <p>Donner Kebab</p>
-                                            </div>
-                                            <div class="col-2 text-center">
-                                                <span>£4.00</span>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="box-borders">
-                                        <div class="row">
-                                            <div class="col-10">
-                                                <p>Chicken Tikka Kebab</p>
-                                            </div>
-                                            <div class="col-2 text-center">
-                                                <span>£4.40</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+                    <div class="col-lg-3 col-md-12 col-sm-12 px-5">
+                        <h3>Pizza</h3>
+                        <div class="menu-box">
+                          <ul class="dish-list">
+                            <li class="box">
+                              <a href="#0">
+                                <h3>Four Season</h3>
+                              </a>
+                              <p class="dis">
+                                Tuna, Sweetcorn, Onions & Italian Herbs.
+                              </p>
+                              <span>from £12.99</span>
+                            </li>
+                            <li class="box">
+                              <a href="#0">
+                                <h3>Four Season</h3>
+                              </a>
+                              <p class="dis">
+                                Tuna, Sweetcorn, Onions & Italian Herbs.
+                              </p>
+                              <span>from £12.99</span>
+                            </li>
+                            <li class="box">
+                              <a href="#0">
+                                <h3>Four Season</h3>
+                              </a>
+                              <p class="dis">
+                                Tuna, Sweetcorn, Onions & Italian Herbs.
+                              </p>
+                              <span>from £12.99</span>
+                            </li>
+                            <li class="box">
+                              <a href="#0">
+                                <h3>Four Season</h3>
+                              </a>
+                              <p class="dis">
+                                Tuna, Sweetcorn, Onions & Italian Herbs.
+                              </p>
+                              <span>from £12.99</span>
+                            </li>
+                            <li class="box">
+                              <a href="#0">
+                                <h3>Four Season</h3>
+                              </a>
+                              <p class="dis">
+                                Tuna, Sweetcorn, Onions & Italian Herbs.
+                              </p>
+                              <span>from £12.99</span>
+                            </li>
+                            <li class="box">
+                              <a href="#0">
+                                <h3>Four Season</h3>
+                              </a>
+                              <p class="dis">
+                                Tuna, Sweetcorn, Onions & Italian Herbs.
+                              </p>
+                              <span>from £12.99</span>
+                            </li>
+                            <li class="box">
+                              <a href="#0">
+                                <h3>Four Season</h3>
+                              </a>
+                              <p class="dis">
+                                Tuna, Sweetcorn, Onions & Italian Herbs.
+                              </p>
+                              <span>from £12.99</span>
+                            </li>
+                          </ul>
                         </div>
                     </div>
-                    <div class="col-lg-4 col-md-12 col-sm-12 px-0">
-                        <div class="menus-pattern-second">
-                            <div class="second-menu title-styl">
-                                <h2>Desserts</h2>
-
-                                <div class="menu-item">
-                                    <div class="box-borders">
-                                        <div class="row">
-                                            <div class="col-10">
-                                                <p>Chocolate Fudge Cake Slice</p>
-                                            </div>
-                                            <div class="col-2 text-center">
-                                                <span>£2.50</span>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="box-borders">
-                                        <div class="row">
-                                            <div class="col-10">
-                                                <p>Ben & Jerry Chocolate Fudge Ice Cream (500ml)</p>
-                                            </div>
-                                            <div class="col-2 text-center">
-                                                <span>£5.00</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+                    <div class="col-lg-3 col-md-12 col-sm-12 px-5">
+                        <h3>Pizza</h3>
+                        <div class="menu-box">
+                          <ul class="dish-list">
+                            <li class="box">
+                              <a href="#0">
+                                <h3>Four Season</h3>
+                              </a>
+                              <p class="dis">
+                                Tuna, Sweetcorn, Onions & Italian Herbs.
+                              </p>
+                              <span>from £12.99</span>
+                            </li>
+                            <li class="box">
+                              <a href="#0">
+                                <h3>Four Season</h3>
+                              </a>
+                              <p class="dis">
+                                Tuna, Sweetcorn, Onions & Italian Herbs.
+                              </p>
+                              <span>from £12.99</span>
+                            </li>
+                            <li class="box">
+                              <a href="#0">
+                                <h3>Four Season</h3>
+                              </a>
+                              <p class="dis">
+                                Tuna, Sweetcorn, Onions & Italian Herbs.
+                              </p>
+                              <span>from £12.99</span>
+                            </li>
+                            <li class="box">
+                              <a href="#0">
+                                <h3>Four Season</h3>
+                              </a>
+                              <p class="dis">
+                                Tuna, Sweetcorn, Onions & Italian Herbs.
+                              </p>
+                              <span>from £12.99</span>
+                            </li>
+                            <li class="box">
+                              <a href="#0">
+                                <h3>Four Season</h3>
+                              </a>
+                              <p class="dis">
+                                Tuna, Sweetcorn, Onions & Italian Herbs.
+                              </p>
+                              <span>from £12.99</span>
+                            </li>
+                            <li class="box">
+                              <a href="#0">
+                                <h3>Four Season</h3>
+                              </a>
+                              <p class="dis">
+                                Tuna, Sweetcorn, Onions & Italian Herbs.
+                              </p>
+                              <span>from £12.99</span>
+                            </li>
+                            <li class="box">
+                              <a href="#0">
+                                <h3>Four Season</h3>
+                              </a>
+                              <p class="dis">
+                                Tuna, Sweetcorn, Onions & Italian Herbs.
+                              </p>
+                              <span>from £12.99</span>
+                            </li>
+                          </ul>
                         </div>
                     </div>
-
+                    <div class="col-lg-3 col-md-12 col-sm-12 px-5">
+                        <h3>Pizza</h3>
+                        <div class="menu-box">
+                          <ul class="dish-list">
+                            <li class="box">
+                              <a href="#0">
+                                <h3>Four Season</h3>
+                              </a>
+                              <p class="dis">
+                                Tuna, Sweetcorn, Onions & Italian Herbs.
+                              </p>
+                              <span>from £12.99</span>
+                            </li>
+                            <li class="box">
+                              <a href="#0">
+                                <h3>Four Season</h3>
+                              </a>
+                              <p class="dis">
+                                Tuna, Sweetcorn, Onions & Italian Herbs.
+                              </p>
+                              <span>from £12.99</span>
+                            </li>
+                            <li class="box">
+                              <a href="#0">
+                                <h3>Four Season</h3>
+                              </a>
+                              <p class="dis">
+                                Tuna, Sweetcorn, Onions & Italian Herbs.
+                              </p>
+                              <span>from £12.99</span>
+                            </li>
+                            <li class="box">
+                              <a href="#0">
+                                <h3>Four Season</h3>
+                              </a>
+                              <p class="dis">
+                                Tuna, Sweetcorn, Onions & Italian Herbs.
+                              </p>
+                              <span>from £12.99</span>
+                            </li>
+                            <li class="box">
+                              <a href="#0">
+                                <h3>Four Season</h3>
+                              </a>
+                              <p class="dis">
+                                Tuna, Sweetcorn, Onions & Italian Herbs.
+                              </p>
+                              <span>from £12.99</span>
+                            </li>
+                            <li class="box">
+                              <a href="#0">
+                                <h3>Four Season</h3>
+                              </a>
+                              <p class="dis">
+                                Tuna, Sweetcorn, Onions & Italian Herbs.
+                              </p>
+                              <span>from £12.99</span>
+                            </li>
+                            <li class="box">
+                              <a href="#0">
+                                <h3>Four Season</h3>
+                              </a>
+                              <p class="dis">
+                                Tuna, Sweetcorn, Onions & Italian Herbs.
+                              </p>
+                              <span>from £12.99</span>
+                            </li>
+                          </ul>
+                        </div>
+                    </div>
                 </div>
+                <button class="btn">Order Now</button>
                 <div class="menus pattern ">
 
                 </div>
