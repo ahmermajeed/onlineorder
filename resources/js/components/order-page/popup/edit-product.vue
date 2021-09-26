@@ -303,23 +303,6 @@ export default {
             if(itm != "size") delete vm.productData[itm];
           });
 
-
-          /*if (this.productData['size'] != "size") {
-            console.log(this.productData)
-         }
-
-          this.productData.keys(this.productData).filter(key =>
-              key !== 'size').reduce((obj, key) =>
-              {
-
-                console.log(this.productData[key]);
-
-
-                obj[key] = this.productData[key];
-                return obj;
-              }, {}
-          );*/
-
         }
 
         if(!this.has_sizes){

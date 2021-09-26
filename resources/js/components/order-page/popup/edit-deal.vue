@@ -1,6 +1,6 @@
 <template>
     <div>
-        <b-modal id="add-deal" centered @hidden="onHidden" :hide-footer=true title-tag="h4" ok-variant="primary" ref="myModalRef" custom-modal no-close-on-backdrop modal-class="custom-modal order-product custom-btm-popup">
+        <b-modal id="add-deal" centered @hidden="onHidden" ok-only ok-title="Update to Order" @ok="addToCart()"  title-tag="h4" ok-variant="primary" ref="myModalRef" custom-modal no-close-on-backdrop modal-class="custom-modal order-product custom-btm-popup">
             <b-alert show variant="danger" v-if="error_message" style="text-transform: capitalize;">{{error_message}}</b-alert>
 
             <template #modal-title>{{deals_data.name}}</template>
@@ -51,14 +51,17 @@
                                 </div> -->
                                 <div class="select-num text-right">
                                     <div class="qunt-btn">
-                                        <button type="button" class="btn-plus"  @click.prevent="plusQuantity()" >
-                                            <i class="icon-plus"></i>
-                                        </button>
-                                      
-                                        <span class="btn-badge-count">{{product_quantity}}</span>   
-                                         <button type="button" class="btn-minus" @click.prevent="minusQuantity()">
-                                       <i class="icon-subtract"></i>
-                                        </button>
+
+                                      <button type="button" class="btn-minus" @click.prevent="minusQuantity()">
+                                        <i class="icon-subtract"></i>
+                                      </button>
+
+                                        <span class="btn-badge-count">{{product_quantity}}</span>
+
+
+                                      <button type="button" class="btn-plus"  @click.prevent="plusQuantity()" >
+                                        <i class="icon-plus"></i>
+                                      </button>
                                     </div>
                                     
                                 </div>
@@ -74,9 +77,9 @@
                     </div>
 
             <div class="row mt-3">
-                <div class="col text-right">
+<!--                <div class="col text-right">
                     <button  @click.prevent="addToCart()" class="custom-btn add-count-button btn btn-rounded-danger">Update <span class="text-right">£ {{priceFormat(total_amount_of_single_product * product_quantity)}}</span></button>
-                </div>
+                </div>-->
             </div>
 
         </b-modal>

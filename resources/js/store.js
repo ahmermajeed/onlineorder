@@ -72,8 +72,16 @@ const store = new Vuex.Store({
             if(state.cartItems.length > 0) {
                 let bool = state.cartItems.some(i => i.product_id === item.product_id)
                 if(bool) {
-                    let itemIndex = state.cartItems.findIndex(el => el.product_id === item.product_id)
-                    state.cartItems[itemIndex]['quantity'] += item.quantity;
+
+                    let bool1 = state.cartItems.some(i => i.product_type === item.product_type)
+
+                    if(bool1) {
+                        let itemIndex = state.cartItems.findIndex(el => el.product_id === item.product_id)
+                        state.cartItems[itemIndex]['quantity'] += item.quantity;
+                    } else {
+                        state.cartItems.push(item)
+                    }
+
                 } else {
                     state.cartItems.push(item)
                 }
