@@ -260,4 +260,14 @@ class OrderController extends Controller
         $output = ['data' => ['total_sales' => $data, 'most_sale_item' => "Margherita Pizza", 'tota_orders' => 15], 'message' => "your order has been placed successfully "];
         return response()->json($output, Response::HTTP_OK);
     }
+
+    public function getOrderDetails($id){
+        $data = $this->_repository->findById($id);
+        $output = [
+            'data' =>$data,
+            'pagination' => !empty($data['pagination']) ? $data['pagination'] : false,
+            'message' => "Orders Retrieved Successfully",
+        ];
+        return response()->json($output, Response::HTTP_OK);
+    }
 }

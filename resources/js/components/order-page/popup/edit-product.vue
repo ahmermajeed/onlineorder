@@ -1,6 +1,6 @@
 <template>
     <div>
-        <b-modal id="edit-product" ok-only ok-title="Update to Order" @ok="addToCart()" centered @hidden="onHidden" title-tag="h4" ok-variant="primary" ref="myModalRef" no-close-on-backdrop modal-class="custom-modal order-product custom-btm-popup">
+        <b-modal id="edit-product" ok-only :ok-title="'Update to Order £ '+priceFormat(total_amount_of_single_product * product_quantity)" @ok="addToCart()" centered @hidden="onHidden" title-tag="h4" ok-variant="primary" ref="myModalRef" no-close-on-backdrop modal-class="custom-modal order-product custom-btm-popup">
             <b-alert show variant="danger" v-if="error_message" style="text-transform: capitalize;">{{error_message}}</b-alert>
             <template #modal-title>{{list.name}}</template>
             <div class="product-gallery text-center" >
@@ -302,23 +302,6 @@ export default {
           Object.keys(this.productData).forEach(function(itm){
             if(itm != "size") delete vm.productData[itm];
           });
-
-
-          /*if (this.productData['size'] != "size") {
-            console.log(this.productData)
-         }
-
-          this.productData.keys(this.productData).filter(key =>
-              key !== 'size').reduce((obj, key) =>
-              {
-
-                console.log(this.productData[key]);
-
-
-                obj[key] = this.productData[key];
-                return obj;
-              }, {}
-          );*/
 
         }
 

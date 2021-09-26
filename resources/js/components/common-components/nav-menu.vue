@@ -139,12 +139,13 @@
                 </div>
             </div>
             <!-- </nav> -->
-            <slider></slider>
+            <slider v-if="this.$route.name !='online-order' &&
+                  this.$route.name !='reservation-table'"></slider>
             <!-- <div class="header-bottom section-fullwidth"
 
                  v-if="this.$route.name !='online-order' &&
                   this.$route.name !='reservation-table'">
-                  
+
                 <div class="container">
                     <div class="row">
                         <div class="col-lg-4 col-xl-5">
