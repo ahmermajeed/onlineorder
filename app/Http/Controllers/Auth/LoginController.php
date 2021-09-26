@@ -120,7 +120,7 @@ class LoginController extends Controller
 
          $user = User::find($data->id);
 
-        $output = ['access_token' => $data->access_token, 'printer_ip' => $data->printer_ip, 'printer_ip_1' => $data->printer_ip_1, 'printer_ip_2' => $data->printer_ip_2, 'printer_ip_3' => $data->printer_ip_3, 'printer_ip_4' => $data->printer_ip_4, 'printer_ip_5' => $data->printer_ip_5, 'shop_status' => $data->shop_status, 'data' => $user, 'message' => 'Success'];
+        $output = ['access_token' => $data->access_token,  "is_bluetooth" => 1 ,'printer_ip' => $data->printer_ip, 'printer_ip_1' => $data->printer_ip_1, 'printer_ip_2' => $data->printer_ip_2, 'printer_ip_3' => $data->printer_ip_3, 'printer_ip_4' => $data->printer_ip_4, 'printer_ip_5' => $data->printer_ip_5, 'shop_status' => $data->shop_status, 'data' => $user, 'message' => 'Success'];
         // HTTP_OK = 200;
         return response()->json($output, Response::HTTP_OK);
     }
