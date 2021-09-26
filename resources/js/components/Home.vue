@@ -84,67 +84,6 @@
                       </div>
                     </div>
                   </div>
-                  <!-- <div class="row timing-area mt-5">
-                      <div class="col-12 text-center">
-                          <h2>Opening Timing</h2>
-                      </div>
-                      <div class="col-md-6 col-12 mb-4">
-                          <div class="bx-time">
-                          <h3>Delivery</h3>
-                          <ul>
-                              <li>
-                                  <span>Monday</span><span class="time">11:00 - 23:45</span>
-                              </li>
-                              <li>
-                                  <span>Tuesday</span><span class="time">11:00 - 23:45</span>
-                              </li>
-                              <li>
-                                  <span>Wednesday</span><span class="time">11:00 - 23:45</span>
-                              </li>
-                              <li>
-                                  <span>Thursday</span><span class="time">11:00 - 23:45</span>
-                              </li>
-                              <li>
-                                  <span>Friday</span><span class="time">11:00 - 23:45</span>
-                              </li>
-                              <li>
-                                  <span>Saturday</span><span class="time">11:00 - 23:45</span>
-                              </li>
-                              <li>
-                                  <span>Sunday</span><span class="time">11:00 - 23:45</span>
-                              </li>
-                          </ul>
-                        </div>
-                      </div>
-                      <div class="col-md-6 col-12">
-                        <div class="bx-time">
-                          <h3>Collection</h3>
-                          <ul>
-                              <li>
-                                  <span>Monday</span><span class="time">11:00 - 23:45</span>
-                              </li>
-                              <li>
-                                  <span>Tuesday</span><span class="time">11:00 - 23:45</span>
-                              </li>
-                              <li>
-                                  <span>Wednesday</span><span class="time">11:00 - 23:45</span>
-                              </li>
-                              <li>
-                                  <span>Thursday</span><span class="time">11:00 - 23:45</span>
-                              </li>
-                              <li>
-                                  <span>Friday</span><span class="time">11:00 - 23:45</span>
-                              </li>
-                              <li>
-                                  <span>Saturday</span><span class="time">11:00 - 23:45</span>
-                              </li>
-                              <li>
-                                  <span>Sunday</span><span class="time">11:00 - 23:45</span>
-                              </li>
-                          </ul>
-                        </div>
-                      </div>
-                  </div> -->
             </div>
         </section>
         <section class="rating-area">
@@ -178,290 +117,28 @@
         </section>
         <section class="section-fullwidth menu-box menu-box-style2">
             <div class="container-fluid">
-                <h2 class="main-title">Our Top Dishes</h2>
+                <h2 class="main-title">Our  Dishes</h2>
                 <div class="row">
-                    <div class="col-lg-3 col-md-12 col-sm-12 px-5">
-                        <h3>Pizza</h3>
+                    <div class="col-lg-3 col-md-12 col-sm-12 px-5"   v-for="(item, index) in categories" v-if="index < 4">
+                        <h3> {{item.name}}</h3>
                         <div class="menu-box">
                           <ul class="dish-list">
-                            <li class="box">
-                              <a href="#0">
-                                <h3>Four Season</h3>
-                              </a>
-                              <p class="dis">
-                                Tuna, Sweetcorn, Onions & Italian Herbs.
-                              </p>
-                              <span>from £12.99</span>
-                            </li>
-                            <li class="box">
-                              <a href="#0">
-                                <h3>Four Season</h3>
-                              </a>
-                              <p class="dis">
-                                Tuna, Sweetcorn, Onions & Italian Herbs.
-                              </p>
-                              <span>from £12.99</span>
-                            </li>
-                            <li class="box">
-                              <a href="#0">
-                                <h3>Four Season</h3>
-                              </a>
-                              <p class="dis">
-                                Tuna, Sweetcorn, Onions & Italian Herbs.
-                              </p>
-                              <span>from £12.99</span>
-                            </li>
-                            <li class="box">
-                              <a href="#0">
-                                <h3>Four Season</h3>
-                              </a>
-                              <p class="dis">
-                                Tuna, Sweetcorn, Onions & Italian Herbs.
-                              </p>
-                              <span>from £12.99</span>
-                            </li>
-                            <li class="box">
-                              <a href="#0">
-                                <h3>Four Season</h3>
-                              </a>
-                              <p class="dis">
-                                Tuna, Sweetcorn, Onions & Italian Herbs.
-                              </p>
-                              <span>from £12.99</span>
-                            </li>
-                            <li class="box">
-                              <a href="#0">
-                                <h3>Four Season</h3>
-                              </a>
-                              <p class="dis">
-                                Tuna, Sweetcorn, Onions & Italian Herbs.
-                              </p>
-                              <span>from £12.99</span>
-                            </li>
-                            <li class="box">
-                              <a href="#0">
-                                <h3>Four Season</h3>
-                              </a>
-                              <p class="dis">
-                                Tuna, Sweetcorn, Onions & Italian Herbs.
-                              </p>
-                              <span>from £12.99</span>
+                            <li class="box"   v-for="(product, product_index) in item.products" v-if="product_index < 5">
+                                <a href="#0">
+                                    <h3>{{product.name}}</h3>
+                                </a>
+                                <p class="dis">
+                                    {{product.description}}
+                                </p>
+                                <span style="font-size: 12px;" v-if="product.sizes.length"  v-for="(size, size_index) in product.sizes" > {{size.size}} : £{{size.price}}</span>
+                                <span  v-if="!product.sizes.length" ><span>£</span>{{product.price}}</span>
                             </li>
                           </ul>
                         </div>
                     </div>
-                    <div class="col-lg-3 col-md-12 col-sm-12 px-5">
-                        <h3>Pizza</h3>
-                        <div class="menu-box">
-                          <ul class="dish-list">
-                            <li class="box">
-                              <a href="#0">
-                                <h3>Four Season</h3>
-                              </a>
-                              <p class="dis">
-                                Tuna, Sweetcorn, Onions & Italian Herbs.
-                              </p>
-                              <span>from £12.99</span>
-                            </li>
-                            <li class="box">
-                              <a href="#0">
-                                <h3>Four Season</h3>
-                              </a>
-                              <p class="dis">
-                                Tuna, Sweetcorn, Onions & Italian Herbs.
-                              </p>
-                              <span>from £12.99</span>
-                            </li>
-                            <li class="box">
-                              <a href="#0">
-                                <h3>Four Season</h3>
-                              </a>
-                              <p class="dis">
-                                Tuna, Sweetcorn, Onions & Italian Herbs.
-                              </p>
-                              <span>from £12.99</span>
-                            </li>
-                            <li class="box">
-                              <a href="#0">
-                                <h3>Four Season</h3>
-                              </a>
-                              <p class="dis">
-                                Tuna, Sweetcorn, Onions & Italian Herbs.
-                              </p>
-                              <span>from £12.99</span>
-                            </li>
-                            <li class="box">
-                              <a href="#0">
-                                <h3>Four Season</h3>
-                              </a>
-                              <p class="dis">
-                                Tuna, Sweetcorn, Onions & Italian Herbs.
-                              </p>
-                              <span>from £12.99</span>
-                            </li>
-                            <li class="box">
-                              <a href="#0">
-                                <h3>Four Season</h3>
-                              </a>
-                              <p class="dis">
-                                Tuna, Sweetcorn, Onions & Italian Herbs.
-                              </p>
-                              <span>from £12.99</span>
-                            </li>
-                            <li class="box">
-                              <a href="#0">
-                                <h3>Four Season</h3>
-                              </a>
-                              <p class="dis">
-                                Tuna, Sweetcorn, Onions & Italian Herbs.
-                              </p>
-                              <span>from £12.99</span>
-                            </li>
-                          </ul>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-12 col-sm-12 px-5">
-                        <h3>Pizza</h3>
-                        <div class="menu-box">
-                          <ul class="dish-list">
-                            <li class="box">
-                              <a href="#0">
-                                <h3>Four Season</h3>
-                              </a>
-                              <p class="dis">
-                                Tuna, Sweetcorn, Onions & Italian Herbs.
-                              </p>
-                              <span>from £12.99</span>
-                            </li>
-                            <li class="box">
-                              <a href="#0">
-                                <h3>Four Season</h3>
-                              </a>
-                              <p class="dis">
-                                Tuna, Sweetcorn, Onions & Italian Herbs.
-                              </p>
-                              <span>from £12.99</span>
-                            </li>
-                            <li class="box">
-                              <a href="#0">
-                                <h3>Four Season</h3>
-                              </a>
-                              <p class="dis">
-                                Tuna, Sweetcorn, Onions & Italian Herbs.
-                              </p>
-                              <span>from £12.99</span>
-                            </li>
-                            <li class="box">
-                              <a href="#0">
-                                <h3>Four Season</h3>
-                              </a>
-                              <p class="dis">
-                                Tuna, Sweetcorn, Onions & Italian Herbs.
-                              </p>
-                              <span>from £12.99</span>
-                            </li>
-                            <li class="box">
-                              <a href="#0">
-                                <h3>Four Season</h3>
-                              </a>
-                              <p class="dis">
-                                Tuna, Sweetcorn, Onions & Italian Herbs.
-                              </p>
-                              <span>from £12.99</span>
-                            </li>
-                            <li class="box">
-                              <a href="#0">
-                                <h3>Four Season</h3>
-                              </a>
-                              <p class="dis">
-                                Tuna, Sweetcorn, Onions & Italian Herbs.
-                              </p>
-                              <span>from £12.99</span>
-                            </li>
-                            <li class="box">
-                              <a href="#0">
-                                <h3>Four Season</h3>
-                              </a>
-                              <p class="dis">
-                                Tuna, Sweetcorn, Onions & Italian Herbs.
-                              </p>
-                              <span>from £12.99</span>
-                            </li>
-                          </ul>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-12 col-sm-12 px-5">
-                        <h3>Pizza</h3>
-                        <div class="menu-box">
-                          <ul class="dish-list">
-                            <li class="box">
-                              <a href="#0">
-                                <h3>Four Season</h3>
-                              </a>
-                              <p class="dis">
-                                Tuna, Sweetcorn, Onions & Italian Herbs.
-                              </p>
-                              <span>from £12.99</span>
-                            </li>
-                            <li class="box">
-                              <a href="#0">
-                                <h3>Four Season</h3>
-                              </a>
-                              <p class="dis">
-                                Tuna, Sweetcorn, Onions & Italian Herbs.
-                              </p>
-                              <span>from £12.99</span>
-                            </li>
-                            <li class="box">
-                              <a href="#0">
-                                <h3>Four Season</h3>
-                              </a>
-                              <p class="dis">
-                                Tuna, Sweetcorn, Onions & Italian Herbs.
-                              </p>
-                              <span>from £12.99</span>
-                            </li>
-                            <li class="box">
-                              <a href="#0">
-                                <h3>Four Season</h3>
-                              </a>
-                              <p class="dis">
-                                Tuna, Sweetcorn, Onions & Italian Herbs.
-                              </p>
-                              <span>from £12.99</span>
-                            </li>
-                            <li class="box">
-                              <a href="#0">
-                                <h3>Four Season</h3>
-                              </a>
-                              <p class="dis">
-                                Tuna, Sweetcorn, Onions & Italian Herbs.
-                              </p>
-                              <span>from £12.99</span>
-                            </li>
-                            <li class="box">
-                              <a href="#0">
-                                <h3>Four Season</h3>
-                              </a>
-                              <p class="dis">
-                                Tuna, Sweetcorn, Onions & Italian Herbs.
-                              </p>
-                              <span>from £12.99</span>
-                            </li>
-                            <li class="box">
-                              <a href="#0">
-                                <h3>Four Season</h3>
-                              </a>
-                              <p class="dis">
-                                Tuna, Sweetcorn, Onions & Italian Herbs.
-                              </p>
-                              <span>from £12.99</span>
-                            </li>
-                          </ul>
-                        </div>
-                    </div>
+
                 </div>
-                <button class="btn">Order Now</button>
+                <button class="btn"  @click.prevent="openPostalCode">Order Now</button>
                 <div class="menus pattern ">
 
                 </div>
@@ -661,11 +338,13 @@
                 menu: false,
                 showPostalCode: false,
                 allergy: false,
+                categories:[],
             };
         },
         mounted() {
             this.getStory();
-            console.log('Component mounted.')
+            this.getCategories();
+
         },
         methods: {
             getStory(){
@@ -684,6 +363,16 @@
 
             hideModal() {
                 this.showPostalCode = false;
+            },
+
+
+            getCategories() {
+                let _this = this;
+                _this.loading = true;
+                axios.get('/api/categories')
+                    .then((response) => {
+                        _this.categories = response.data.data;
+                    });
             },
 
 
