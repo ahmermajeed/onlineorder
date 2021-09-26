@@ -17526,7 +17526,7 @@ span.address {
 }
 
 .item-detail .more-info {
-  font-size: 12px;
+  font-size: 16px;
   color: grey;
 }
 
@@ -17596,12 +17596,35 @@ span.address {
 .bill-info ul li .list-detail,
 .total-bill-info ul li .list-detail {
   display: inline-block;
+  font-size: 18px;
   width: 49%;
 }
 
 .bill-info ul li .discount-value,
 .total-bill-info ul li .discount-value {
   color: #29bfaf;
+}
+
+@media (max-width: 767.98px) {
+  .product-order-detail img {
+    margin-bottom: 15px;
+  }
+}
+
+.product-order-detail p {
+  margin-left: 10px;
+}
+
+@media (max-width: 767.98px) {
+  .product-order-detail p {
+    margin-left: 0;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .text-left-mob {
+    text-align: left !important;
+  }
 }
 
 /*************** Reservation-section-end *******************/

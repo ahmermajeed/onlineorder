@@ -45,19 +45,21 @@
                         <div class="sepeartor-line"></div>
                     </div>
                     <div class="item-detail container">
-                        <table class="table">
-                          <tbody>
-                            <tr>
-                              <td><img src="/images/tasty-land/bee-hive.jpg" style="width: 90px;" alt=""></td>
-                              <td>
-                                <p>Complete Bee Hive Starter Kit</p>
-                                <p class="more-info">BeeCastle Hives</p>
-                            </td>
-                              <td>Qty 1</td>
-                              <td>$199.99</td>
-                            </tr>
-                          </tbody>
-                        </table>
+                        <div class="row">
+                            <div class="col-md-1">
+                                <img src="/images/tasty-land/bee-hive.jpg" style="width: 90px;" alt="">
+                            </div>
+                            <div class="col-md-7 product-order-detail">
+                              <p>Complete Bee Hive Starter Kit</p>
+                              <p class="more-info">BeeCastle Hives</p>  
+                            </div>
+                            <div class="col-md-2">
+                                <p>Qty 1</p>
+                            </div>
+                            <div class="col-md-2">
+                                <p class="text-right text-left-mob">$199.99</p>
+                            </div>
+                        </div>
                     </div>
                     <div class="container">
                         <div class="sepeartor-line"></div>

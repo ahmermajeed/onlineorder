@@ -3315,7 +3315,7 @@ span.address {
     color: grey;
 }
 .item-detail .more-info {
-    font-size: 12px;
+    font-size: 16px;
     color: grey;
 }
 .order-confirm-header {
@@ -3377,6 +3377,7 @@ span.address {
             margin-bottom: 10px;
             .list-detail {
                 display: inline-block;
+                font-size: 18px;
                 width: 49%;
             }
             .discount-value {
@@ -3387,5 +3388,24 @@ span.address {
 }
 .total-bill-info {
     @extend .bill-info;
+}
+.product-order-detail {
+    img {
+        @include media-breakpoint-down(sm) {
+            margin-bottom: 15px;
+        }
+    }
+    p {
+        margin-left: 10px;
+        @include media-breakpoint-down(sm) {
+         margin-left: 0;
+        }
+    }
+}
+
+.text-left-mob {
+    @include media-breakpoint-down(sm) {
+        text-align: left !important;
+    }
 }
 /*************** Reservation-section-end *******************/
