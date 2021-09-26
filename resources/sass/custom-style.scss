@@ -240,6 +240,22 @@ ul {
         }
     }
 }
+
+.hooper{
+    @include media-breakpoint-down(sm){
+        height: auto !important;
+    }
+    .hooper-list{
+        li{
+            img{
+                @include media-breakpoint-down(sm){
+                    height: auto;
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
 /********************Time List ******************************/
 .timing-area{
     h2{
@@ -1471,9 +1487,30 @@ $duration: 50s;
 }
 
 /************** MENU LIST FOR MOBIILE ****************/
+#error_msg{
+    list-style: none;
+    li{
+        background: #fff;
+        border: 1px solid;
+        padding: 0 10px;
+        margin-bottom: 10px;
+    }
+}
 .for-mobile-only{
+    margin-bottom: 30px;
     @include media-breakpoint-down(sm){
         display: block !important;
+    }
+    .product{
+        .box-a{
+            border: 1px solid #ddd !important;
+            border-radius: 5px;
+            padding: 15px !important;
+            a.custom-btn2{
+                margin-bottom: 0 !important;
+                float: left;
+            }
+        }
     }
     .card{
         margin-bottom: 0 !important;
@@ -1515,7 +1552,7 @@ $duration: 50s;
         .card-body{
             p{
                 font-size: 16px;
-                margin-bottom: 30px;
+                margin-bottom: 0;
             }
             ul.dish-list{
                 list-style: none;
@@ -1698,7 +1735,7 @@ $duration: 50s;
             p {
                 display: inline;
                 padding-right: 25px;
-                font-size: 12px;
+                font-size: 18px;
                 font-weight: 800;
 
                 @include media-breakpoint-down(sm) {
@@ -1712,14 +1749,15 @@ $duration: 50s;
         }
 
         .btn-outline-success {
-            padding: 4px 10px 2px 10px;
+            padding: 4px 10px 4px 10px;
             border-radius: 32px;
             color: #fff !important;
-            background-color: #41ad49;
+            background-color: #9b3d23;
             border: none;
             float: right;
             font-size: 12px;
-            box-shadow: 0px 8px 15px 0px rgba(0, 0, 0, 0.2);
+            box-shadow: none !important;
+            margin-bottom: 30px;
         }
         .deals-pro {
             .p-cart {
@@ -1930,7 +1968,8 @@ $duration: 50s;
                     box-shadow: none !important;
                     display: flex;
                     justify-content: space-between;
-                    background:#f48a32;
+                    background:#e5b052;
+                    border: none;
                     &.disabled{
                         background: #ccc;
                         pointer-events: none;
@@ -2601,8 +2640,7 @@ $duration: 50s;
                         text-align: right;
                     }
                     tr {
-                        border-top: 1px dashed !important;
-                        border-bottom: 1px dashed !important;
+                        border: 1px dashed !important;
                     }
                     .tbl_cart_list {
                         border: none;

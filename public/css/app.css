@@ -14002,6 +14002,19 @@ ul {
   pointer-events: inherit;
 }
 
+@media (max-width: 767.98px) {
+  .hooper {
+    height: auto !important;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .hooper .hooper-list li img {
+    height: auto;
+    width: 100%;
+  }
+}
+
 /********************Time List ******************************/
 
 .timing-area h2 {
@@ -15421,10 +15434,36 @@ ul {
 
 /************** MENU LIST FOR MOBIILE ****************/
 
+#error_msg {
+  list-style: none;
+}
+
+#error_msg li {
+  background: #fff;
+  border: 1px solid;
+  padding: 0 10px;
+  margin-bottom: 10px;
+}
+
+.for-mobile-only {
+  margin-bottom: 30px;
+}
+
 @media (max-width: 767.98px) {
   .for-mobile-only {
     display: block !important;
   }
+}
+
+.for-mobile-only .product .box-a {
+  border: 1px solid #ddd !important;
+  border-radius: 5px;
+  padding: 15px !important;
+}
+
+.for-mobile-only .product .box-a a.custom-btn2 {
+  margin-bottom: 0 !important;
+  float: left;
 }
 
 .for-mobile-only .card {
@@ -15472,7 +15511,7 @@ ul {
 
 .for-mobile-only .card .card-body p {
   font-size: 16px;
-  margin-bottom: 30px;
+  margin-bottom: 0;
 }
 
 .for-mobile-only .card .card-body ul.dish-list {
@@ -15681,7 +15720,7 @@ ul {
 .main-popup-section .order-product .product-dec p {
   display: inline;
   padding-right: 25px;
-  font-size: 12px;
+  font-size: 18px;
   font-weight: 800;
 }
 
@@ -15698,14 +15737,15 @@ ul {
 }
 
 .main-popup-section .order-product .btn-outline-success {
-  padding: 4px 10px 2px 10px;
+  padding: 4px 10px 4px 10px;
   border-radius: 32px;
   color: #fff !important;
-  background-color: #41ad49;
+  background-color: #9b3d23;
   border: none;
   float: right;
   font-size: 12px;
-  box-shadow: 0px 8px 15px 0px rgba(0, 0, 0, 0.2);
+  box-shadow: none !important;
+  margin-bottom: 30px;
 }
 
 .main-popup-section .order-product .deals-pro .p-cart {
@@ -15946,7 +15986,8 @@ ul {
   box-shadow: none !important;
   display: flex;
   justify-content: space-between;
-  background: #f48a32;
+  background: #e5b052;
+  border: none;
 }
 
 .custom-btm-popup.order-product .modal-dialog .modal-footer .btn.disabled {
@@ -16722,8 +16763,7 @@ ul {
 }
 
 .check-out-page .checkout-cart-desktop .cart-box .check-out-list .table-holder tr {
-  border-top: 1px dashed !important;
-  border-bottom: 1px dashed !important;
+  border: 1px dashed !important;
 }
 
 .check-out-page .checkout-cart-desktop .cart-box .check-out-list .table-holder .tbl_cart_list {
