@@ -450,6 +450,7 @@ export default {
       errorMessage: '',
       totalNumberofDeals:0,
       ShopClose:true,
+      text: ''
     };
   },
   mounted() {
