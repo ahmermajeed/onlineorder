@@ -24,29 +24,50 @@
                         <ul class="selectionlist radio-list" >
                             <li v-for="(item, index) in list.sizes" >
                                 <label>
-                                    <input type="radio" :value="item.size+'##@@'+priceFormat(item.price)" v-model="productData['size']"  @click="productSum('size',priceFormat(item.price))">
+                                    <input type="radio" :value="item.size+'##@@'+priceFormat(item.price)" v-model="productData['size']"  @click="productSum('size',priceFormat(item.price), item)">
                                     <span class="checkmark"></span>
                                     {{item.size}}
-                                    
+
                                 </label>
-                                <span style="float:right"> £  {{item.price}}</span>
+
+                                <span style="float:right" v-if="item.price <= 0"> Free</span>
+                                <span style="float:right" v-else>£  {{item.price}}</span>
+
                             </li>
+
                         </ul>
+
                     </div>
 
-                    <div id="missed-item" class="sub-cat mt-3" v-for="(item, index) in list.groups">
-                    <h4>{{item.name}}</h4>
-                    <ul class="selectionlist radio-list" >
-                        <li v-for="(choice,choice_index) in item.choices">
-                            <label>
-                                 <input type="radio"  :value="choice.name+'##@@'+priceFormat(choice.price)"   v-model="productData[item.name]" @click="productSum(item.name,priceFormat(choice.price))">
-                                {{choice.name}}
-                               
-                                <span class="checkmark"></span>
-                            </label>
-                            <span style="float:right"> £  {{choice.price}}</span>
+                    <div v-if="sizeGroups.length > 0" v-bind:id="item.group.type == 'Mandatory' ? 'missed-item' : ''" v-bind:name="item.group.name" class="sub-cat mt-3" v-for="(item, index) in sizeGroups">
+                      <h4>{{item.group.name}}</h4>
+                      <ul class="selectionlist radio-list" >
+                        <li v-for="(choice,choice_index) in item.group.choices">
+                          <label>
+                            <input type="radio"  :value="choice.name+'##@@'+priceFormat(choice.price)" v-model="productData[item.group.name]" @click="productSum(item.group.name,priceFormat(choice.price), item)">
+                              {{choice.name}}
+                            <span class="checkmark"></span>
+                          </label>
+                          <span style="float:right" v-if="choice.price <= 0"> Free</span>
+                          <span style="float:right" v-else>£  {{choice.price}}</span>
                         </li>
-                    </ul>
+                      </ul>
+                    </div>
+
+                    <div v-bind:id="item.type == 'Mandatory' ? 'missed-item' : ''" v-bind:name="item.name" class="sub-cat mt-3" v-for="(item, index) in list.groups">
+                      <h4>{{item.name}}</h4>
+                      <ul class="selectionlist radio-list" >
+                          <li v-for="(choice,choice_index) in item.choices">
+                              <label>
+                                   <input type="radio"  :value="choice.name+'##@@'+priceFormat(choice.price)" v-model="productData[item.name]" @click="productSum(item.name,priceFormat(choice.price), item)">
+                                  {{choice.name}}
+
+                                  <span class="checkmark"></span>
+                              </label>
+                              <span style="float:right" v-if="choice.price <= 0"> Free</span>
+                              <span style="float:right" v-else>£  {{choice.price}}</span>
+                          </li>
+                      </ul>
                     </div>
                     <div class="input-holder">
                         <h4>Special instructions <span class="required-text"> *</span></h4>
@@ -61,14 +82,13 @@
                                 </div> -->
                                 <div class="select-num text-right">
                                     <div class="qunt-btn">
-                                        <button type="button" class="btn-plus"  @click.prevent="plusQuantity()" >
-                                            <i class="icon-plus"></i>
-                                        </button>
-                                        
-                                        <span class="btn-badge-count">{{product_quantity}}</span>   
-                                        <button type="button" class="btn-minus" @click.prevent="minusQuantity()">
-                                       <i class="icon-subtract"></i>
-                                        </button>
+                                      <button type="button" class="btn-minus" @click.prevent="minusQuantity()">
+                                        <i class="icon-subtract"></i>
+                                      </button>
+                                        <span class="btn-badge-count">{{product_quantity}}</span>
+                                      <button type="button" class="btn-plus"  @click.prevent="plusQuantity()" >
+                                        <i class="icon-plus"></i>
+                                      </button>
                                     </div>
                                     
                                 </div>
@@ -117,7 +137,8 @@ export default {
       total_amount_of_single_product : 0,
       product_array:{},
       error_message:'',
-      mandatory: false
+      mandatory: false,
+      sizeGroups : []
     };
   },
   methods: {
@@ -136,6 +157,7 @@ export default {
 
     showModal() {
       this.$refs.myModalRef.show();
+      this.sizeGroups = []
       this.total_amount_of_single_product = this.priceFormat(this.list.price);
 
       let checkMandatory = this.checkMandatory();
@@ -157,6 +179,7 @@ export default {
       this.error_message = '';
       this.$refs.myModalRef.hide();
       this.$bvModal.hide('add-product');
+      this.sizeGroups = [];
     },
     addToCart()
     {
@@ -248,12 +271,22 @@ export default {
           }
         }
       }
+
+      /*if(this.sizeGroups.length > 0 ){
+        for( let group in  this.sizeGroups){
+          if(this.sizeGroups[group].group.type == 'Mandatory'){
+              mandatory.push(this.sizeGroups[group].group.name)
+          }
+        }
+      }*/
+
       return mandatory;
     },
 
     checkValidate() {
 
       let group_check = [];
+      let size_group_check = [];
       let self = this;
 
       for (var key in this.productData) {
@@ -264,23 +297,42 @@ export default {
         }
       }
 
+      /*for (var key1 in this.sizeGroups) {
+
+        if(key1 != undefined){
+          if(key1 != 'special_instruction'){
+            size_group_check.push(this.sizeGroups[key1].group.name)
+          }
+        }
+      }*/
+
       let checkMandatory = this.checkMandatory();
 
       if(checkMandatory.length > 0 ){
         for( var cm in checkMandatory) {
+
           if(group_check.indexOf(checkMandatory[cm]) === -1) {
             self.mandatory = true
           } else {
-            self.mandatory = false
+              self.mandatory = false
+              $('div[name="'+checkMandatory[cm]+'"]').removeAttr('id');
           }
+
         }
       }
     },
 
-    productSum(array_key,value){
+    productSum(array_key,value, item){
+
       setTimeout(()=>{
+
         let total = 0;
         let vm  = this;
+
+        if(item.size_groups) {
+          this.sizeGroups = item.size_groups
+        }
+
         if(!this.has_sizes){
           total =  parseFloat(this.list.price);
         }

@@ -41,9 +41,11 @@
 
 
 
-                                        <li class="facebook" v-if="info.general_setting.facebook"> <a  :href="info.general_setting.facebook" ><i class="icon-facebook"></i></a></li>
-                                        <li class="icon-instagram-symbol" v-if="info.general_setting.instagram"><a :href="info.general_setting.instagram"><i class="icon-instagram-symbol"></i></a></li>
-                                        <li class="twitter" v-if="info.general_setting.twitter"><a  :href="info.general_setting.twitter"><i class="icon-twitter"></i></a></li>
+                                        <li v-if="info.general_setting.facebook"> <a  :href="info.general_setting.facebook" ><i class="icon-facebook"></i></a></li>
+                                       <li v-if="info.general_setting.instagram"><a :href="info.general_setting.instagram"><i class="icon-instagram-symbol"></i></a></li>
+                                       <li v-if="info.general_setting.twitter"><a  :href="info.general_setting.twitter"><i class="icon-twitter"></i></a></li>
+                                       <li v-if="info.general_setting.twitter"><a  :href="info.general_setting.twitter"><i class="icon-pinterest-logo"></i></a></li>
+                                       <li v-if="info.general_setting.twitter"><a  :href="info.general_setting.twitter"><i class="icon-youtube"></i></a></li>
 
 
                                     </ul>

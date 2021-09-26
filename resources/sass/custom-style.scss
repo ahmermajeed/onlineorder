@@ -448,7 +448,7 @@ $duration: 50s;
                 width: 100%;
             }
             li{
-                margin: 0 10px;
+                margin: 0 8px;
                 @include media-breakpoint-down(sm){
                     display: flex;
                     align-items: center;
@@ -456,9 +456,9 @@ $duration: 50s;
                     margin-bottom: 10px;
                 }
                 span{
-                    font-size: 13px;
+                    font-size: 12px;
                     &.day{
-                        margin-right: 10px;
+                        margin-right:5px;
                         @include media-breakpoint-down(sm){
                             width: 60%;
                         }
@@ -466,13 +466,13 @@ $duration: 50s;
                     &.delivery{
                         background: orange;
                         color: #000;
-                        padding: 5px;
+                        padding: 5px 3px;
                         border-radius: 4px;
                     }
                     &.collection{
                         background: #f48a32;
                         color: #fff;
-                        padding: 5px;
+                        padding: 5px 3px;
                         border-radius: 4px;
                     }
                 }
@@ -581,6 +581,7 @@ $duration: 50s;
                     display: inline-block;
                     line-height: 36px;
                     text-align: center;
+                    background: #4b2117;
                 }
             }
         }
@@ -692,12 +693,9 @@ $duration: 50s;
     height: 570px;
 }
 .header-bottom {
-    background-image: url('images/tasty-land/banner.jpeg');
-    background-repeat: no-repeat;
-    background-size: cover;
+    background: #ccc;
     height: 570px;
     @include media-breakpoint-down(sm) {
-        background-size: cover;
         height: 170px;
     }
     .contact-bnner {
@@ -921,9 +919,7 @@ $duration: 50s;
 }
 
 .rating-area {
-    background-image: url('images/tasty-land/deliverys.jpg');
-    background-repeat: no-repeat;
-    background-position: top;
+    background: #4b2117;
     color: #fff;
     padding: 40px 0px 40px 0px;
 
@@ -938,11 +934,15 @@ $duration: 50s;
     }
 
     .rating-content {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
         @include media-breakpoint-only(md) {
             padding-top: 25px;
         }
 
         @include media-breakpoint-down(sm) {
+            flex-direction: column;
             padding: 0px 30px 0px 30px;
 
             .payment-type {
@@ -953,6 +953,12 @@ $duration: 50s;
             .delivry-content {
                 display: inline-block;
                 width: 70%;
+            }
+        }
+        .left{
+            flex: 0 0 50%;
+            @include media-breakpoint-down(sm){
+                flex: 0 0 100%;
             }
         }
     }
@@ -981,7 +987,7 @@ $duration: 50s;
         }
 
         strong {
-            color: #000;
+            color: #f48a32;
             line-height: 45px;
 
             @include media-breakpoint-down(sm) {
@@ -1014,10 +1020,7 @@ $duration: 50s;
 }
 
 .menu-box {
-    background-image: url('images/theme-1/menu-banner.jpg');
-    background-repeat: no-repeat;
-    background-position: top;
-    background-size: cover;
+    background: #fbeeeb;
     overflow: hidden;
     .menus-pattern-second {
         background-image: url('images/theme-1/pizzas-baner.jpg');
@@ -1234,10 +1237,60 @@ $duration: 50s;
             }
         }
     }
+    h3{
+        font-size: 25px;
+        font-weight: bold;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+    .menu-box{
+        .box{
+            margin-bottom: 15px;
+            text-align: center;
+            a{
+                color: #000;
+                h3{
+                    font-size: 16px;
+                    margin: 0;
+                }
+            }
+            p{
+                font-size: 14px;
+            }
+        }
+    }
 }
 
 .menu-box-style2{
-    padding:50px 0 0 0;
+    padding:80px 0 80px 0;
+    text-align: center;
+    .main-title{
+        text-align: center;
+        font-size: 35px;
+        font-weight: bold;
+        margin-bottom: 70px;
+        text-transform: uppercase;
+        position: relative;
+        &:after{
+            position:absolute;
+            content: "";
+            bottom: -20px;
+            width: 50px;
+            height: 5px;
+            background: #000;
+            left: 0;
+            right: 0;
+            margin: 0 auto;
+        }
+    }
+    .btn{
+        background: #f48a32;
+        padding: 15px 80px;
+        font-size: 20px;
+        color: #fff;
+        text-transform: uppercase;
+        margin-top: 40px;
+    }
     .menus-pattern-first{
         background: none !important;
         @include media-breakpoint-down(sm){
@@ -1677,7 +1730,18 @@ $duration: 50s;
             }
         }
     }
-
+    .product-list-scroll{
+        height: 500px;
+        overflow-y: scroll;
+        -ms-overflow-style: none;  /* IE and Edge */
+        scrollbar-width: none;
+        &::-webkit-scrollbar {
+          display: none;
+        }
+        @include media-breakpoint-down(sm){
+            display: none;
+        }
+    }
     .add-card {
         /*background: #f5f8fa;
         border: 1px solid #e1e1e1;
