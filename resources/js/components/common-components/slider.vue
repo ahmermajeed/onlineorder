@@ -1,6 +1,7 @@
 <template>
-    <div>
-        <hooper style="height: 400px" >
+<<<<<<< HEAD
+    <div>  
+        <hooper style="height: 570px" >
             <slide v-for="(item, index) in sliders">
                 <img :src="item.image">
             </slide>

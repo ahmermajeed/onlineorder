@@ -46,10 +46,7 @@
                     </div>
                     <div class="item-detail container">
                         <div class="row">
-                            <div class="col-md-1">
-                                <img src="/images/tasty-land/bee-hive.jpg" style="width: 90px;" alt="">
-                            </div>
-                            <div class="col-md-7 product-order-detail">
+                            <div class="col-md-8 product-order-detail">
                               <p>Complete Bee Hive Starter Kit</p>
                               <p class="more-info">BeeCastle Hives</p>  
                             </div>
