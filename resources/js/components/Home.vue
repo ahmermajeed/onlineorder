@@ -23,8 +23,8 @@
                     <div class="col-md-4 col-12">
                        <div class="card-offer text-center">
                            <div class="card-content">
-                             <h3>Curry Deal 1</h3>
-                             <p class="mb-3">Portion Of Samosas Or Seekh Kebabs Nan Or Rice, 2 Chappattis, Any Curry Worth £5.50</p>
+                             <h3>Gourmet Beef Burger</h3>
+                             <p class="mb-3">100% Beef Patty with cheese, onions, pickles, mustard & tomato ketchup. Served With Chips & Drink.</p>
                            </div>
                            <div class="row pries-bar">
                                 <div class="col-12 col-lg-8 order-btn">
@@ -33,7 +33,7 @@
                                 </div>
                                 <div class="col-12 col-lg-4 pt-2 pt-lg-0">
                                     <div class="pries">
-                                        <p>£8.99</p>
+                                        <p>£6.50</p>
                                     </div>
                                 </div>
                            </div>
@@ -44,9 +44,9 @@
                     <div class="col-md-4 col-12">
                        <div class="card-offer text-center">
                            <div class="card-content">
-                              <h3>Curry Deal 2</h3>
+                              <h3>Samosa Chaat</h3>
                              <p class="mb-3">
-                                Special Meal For Two 2 Popadoms, 2 Seekh Kebabs, Onion Bhajis, Chicken Masala, Chicken Or Lamb Karahi, 2 Chappattis, 1 Rice & Nan
+                                 1 Veg Samosa With Chickpeas, Fresh Onions, Tomato, & Green Chilli, Served with salad & sauce.
                              </p>
                            </div>
                            <div class="row pries-bar">
@@ -56,7 +56,8 @@
                                 </div>
                                 <div class="col-12 col-lg-4 pt-2 pt-lg-0">
                                     <div class="pries">
-                                        <p>£15.99</p>
+                                        <p>£3.00
+                                        </p>
                                     </div>
                                 </div>
                            </div>
@@ -67,8 +68,9 @@
                        <div class="card-offer text-center">
                            <div class="card-content">
 
-                             <h3>Pizza Deal</h3>
-                             <p class="mb-3">Any Three 11” Pizzas Of Your Choice Only</p>
+                             <h3>Chicken Tikka Salad
+                             </h3>
+                             <p class="mb-3">Tandoori chicken tikka, fresh mix salad with drizzle of vinegar & pinch of lemon juice with seasoning of black pepper</p>
                            </div>
                            <div class="row pries-bar">
                                 <div class="col-12 col-lg-8 order-btn">
@@ -77,7 +79,7 @@
                                 </div>
                                 <div class="col-12 col-lg-4 pt-2 pt-lg-0">
                                     <div class="pries">
-                                        <p>£15.99</p>
+                                        <p>£6.00</p>
                                     </div>
                                 </div>
                            </div>
@@ -94,7 +96,7 @@
                         <div class="rating-content">
                             <div class="row left">
                                 <div class="col-lg-2  col-sm-3 col-md-3 px-1 payment-type">
-                                    <p class="rounded-circle">Cash<br> only</p>
+                                    <p class="rounded-circle">Delivery<br> only</p>
 
                                 </div>
                                 <div class="col-lg-10 col-sm-9 col-md-9 px-1 delivry-content">
@@ -105,8 +107,8 @@
 
                             </div>
                             <div class="located-num">
-                                <strong>0203 950 1750</strong>
-                                <p>Centenary Way, Manchester M50 1RF, <br>United Kingdom</p>
+                                <strong>{{info.phone_number}}</strong>
+                                <p>{{info.address.full_address}}</p>
                             </div>
                         </div>
                     </div>

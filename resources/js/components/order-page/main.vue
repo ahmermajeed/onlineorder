@@ -38,10 +38,10 @@
                                             <div class="p-cart product-dec">
                                                 <p style="font-size: 12px;" v-if="product.sizes.length"  v-for="(size, size_index) in product.sizes" > {{size.size}} : £{{size.price}}</p>
                                                 <p  v-if="!product.sizes.length" ><span>£</span>{{product.price}}</p>
-                                                <a href="#" class="custom-btn2  btn btn-outline-success"  @click.prevent="viewProduct(product.id)">
-                                                    Add to cart <i class="fas fa-long-arrow-alt-right"></i></i>
-                                                </a>
                                             </div>
+                                            <a href="#" class="custom-btn2  btn btn-outline-success"  @click.prevent="viewProduct(product.id)">
+                                                Add to cart <i class="fas fa-long-arrow-alt-right"></i></i>
+                                            </a>
                                         </div>
                                  </div>
                             </div>
@@ -81,7 +81,6 @@
                                 </b-card-header>
                                 <b-collapse id="accordion-1" visible accordion="my-accordion" role="tabpanel">
                                   <b-card-body>
-                                    <p>The Boss Box for one – A choice of our Original German Doner Kebab, KCal Kebab, Durum or Lahmacun Wrap, served with a portion of our Doner Spring Rolls or Chilli Cheese Bites, a side of Fries, 3 Signature Sauces and a Beverage.  Go on – Be The Boss.</p>
                                     <div class="product-list order-product">
                             <!--                            for products-->
                             <div id="focus" class="product"  v-for="(item, index) in products" v-if="item.products.length">
@@ -90,7 +89,7 @@
 
                                             <h2 class="mb-4" style="color: #01a9fb; margin-bottom: 25px;" >{{item.name}}</h2>
                                         </div>
-                                        <div class="col-md-12 mb-4 pb-1" v-for="(product, product_index) in item.products" style="border-bottom: 1px dashed #ccc;">
+                                        <div class="col-md-12 mb-4 pb-1 box-a" v-for="(product, product_index) in item.products" style="border-bottom: 1px dashed #ccc;">
                                             <div class="p-d prouct-item">
                                                 <h3>{{product.name}}</h3>
                                                <p>{{product.description}}.</p>
@@ -99,10 +98,10 @@
                                             <div class="p-cart product-dec">
                                                 <p style="font-size: 12px;" v-if="product.sizes.length"  v-for="(size, size_index) in product.sizes" > {{size.size}} : £{{size.price}}</p>
                                                 <p  v-if="!product.sizes.length" ><span>£</span>{{product.price}}</p>
-                                                <a href="#" class="custom-btn2  btn btn-outline-success"  @click.prevent="viewProduct(product.id)">
-                                                    Add to cart <i class="fas fa-long-arrow-alt-right"></i></i>
-                                                </a>
                                             </div>
+                                            <a href="#" class="custom-btn2  btn btn-outline-success"  @click.prevent="viewProduct(product.id)">
+                                                    Add to cart <i class="fas fa-long-arrow-alt-right"></i></i>
+                                            </a>
                                         </div>
                                  </div>
                             </div>
@@ -302,7 +301,7 @@
         <div class="loading" v-if="loading">Loading&#8230;</div>
         <div class="container-fluid"
         :class="{'cart-menu-fixed': scrolled}"  v-on="handleScroll()">
-            <div class="row full">
+            <!-- <div class="row full">
 
                     <div class="offset-categories">
                         <div id="categories-tabs">
@@ -324,7 +323,7 @@
                             </div>
                         </div>
                     </div>
-            </div>
+            </div> -->
             <div class="mobile-cart-button" v-bind:class="{ cartheight: cart_height }" v-if="cartItems.length > 0">
                 <div class="inner">
                     <span class="products-count"><svg xmlns="http://www.w3.org/2000/svg" class="svg-stroke-container" width="24" height="24">
@@ -691,8 +690,10 @@ export default {
     },
 
     quantityAddInCart(index, cart) {
+
       this.$store.state.cartItems[index]['quantity'] += 1;
       this.$store.state.cartItemsCount += 1;
+
     },
 
     quantityMinusInCart(index) {

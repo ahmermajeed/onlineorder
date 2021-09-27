@@ -89,3 +89,8 @@ Route::resource('tableReservation', 'Api\TableReservationController');
 
 /** Printer Routes */
 Route::resource('printers', 'Api\PrintersController');
+
+
+
+/** Get All Orders */
+Route::get('getOrderDetails/{id}', 'Api\OrderController@getOrderDetails');

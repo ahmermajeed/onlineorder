@@ -1,6 +1,6 @@
 <template>
     <div>
-        <b-modal id="add-deal" centered @hidden="onHidden" :hide-footer=true title-tag="h4" ok-variant="primary" ref="myModalRef" custom-modal no-close-on-backdrop modal-class="custom-modal order-product custom-btm-popup">
+        <b-modal id="add-deal" centered @hidden="onHidden" ok-only :ok-title="'Add to Order £ '+priceFormat(total_amount_of_single_product * product_quantity)" :ok-disabled="mandatory" @ok="addToCart()" title-tag="h4" ok-variant="primary" ref="myModalRef" custom-modal no-close-on-backdrop modal-class="custom-modal order-product custom-btm-popup">
             <b-alert show variant="danger" v-if="error_message" style="text-transform: capitalize;">{{error_message}}</b-alert>
             <template #modal-title>{{deals_data.name}}</template>
              <!-- <h3>{{deals_data.name}}</h3> -->
@@ -64,15 +64,14 @@
                                 </div> -->
                                 <div class="select-num text-right">
                                     <div class="qunt-btn">
-                                        <button type="button" class="btn-plus"  @click.prevent="plusQuantity()" >
-                                            <i class="icon-plus"></i>
-                                        </button>
-                                      
-                                        <span class="btn-badge-count">{{product_quantity}}</span> 
 
-                                        <button type="button" class="btn-minus" @click.prevent="minusQuantity()">
-                                       <i class="icon-subtract"></i>
-                                        </button>
+                                      <button type="button" class="btn-minus" @click.prevent="minusQuantity()">
+                                        <i class="icon-subtract"></i>
+                                      </button>
+                                          <span class="btn-badge-count">{{product_quantity}}</span>
+                                      <button type="button" class="btn-plus"  @click.prevent="plusQuantity()" >
+                                        <i class="icon-plus"></i>
+                                      </button>
                                      
                                     </div>
                                     
@@ -97,9 +96,9 @@
                       <p>Make sure you pick all your options for this item. You’re almost there</p>
                     </div> 
             <div class="row mt-3" >
-                <div class="col text-right">
+<!--                <div class="col text-right">
                     <button  @click.prevent="addToCart()" class="custom-btn add-count-button btn btn-rounded-danger">Add <span class="text-right">£ {{priceFormat(total_amount_of_single_product * product_quantity)}}</span></button>
-                </div>
+                </div>-->
             </div>
 
         </b-modal>
@@ -119,8 +118,8 @@ export default {
       total_amount_of_single_product : 0,
       product_array:{},
       error_message:'',
-      dealsProducts:[]
-
+      dealsProducts:[],
+      mandatory: false,
     };
   },
   methods: {
@@ -140,6 +139,12 @@ export default {
       }
       this.$refs.myModalRef.show();
       this.total_amount_of_single_product = this.priceFormat(this.deals_data.price);
+
+    // let checkMandatory = this.checkMandatory();
+
+      /* if(checkMandatory.length > 0 ){
+        this.mandatory = true
+      }*/
     },
     onHidden() {
       this.dealsProducts = [];
@@ -231,6 +236,7 @@ export default {
       if(this.has_sizes){
         mandatory.push('size')
       }
+
       if(this.list.groups.length > 0 ){
         for( let group in  this.list.groups){
           if(this.list.groups[group].type == 'Mandatory'){

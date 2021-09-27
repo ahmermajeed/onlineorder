@@ -60,13 +60,15 @@ class OrderRepository
     public function findById($id)
     {
         $data = array();
-        $query = $this->model->find($id);
 
+        $query = $this->model->where('id',$id)->first();
         if ($query != NULL) {
             $data = $query;
         } else {
             $data = null;
         }
+
+        dd($data);
 
         return $data;
     }
