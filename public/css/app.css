@@ -17669,5 +17669,11 @@ span.address {
   }
 }
 
+.order-confirm-footer img {
+  width: 140px;
+  margin-right: 10px;
+  margin-top: -6px;
+}
+
 /*************** Reservation-section-end *******************/
 
