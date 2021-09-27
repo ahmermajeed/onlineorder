@@ -25,7 +25,7 @@ class RestaurantRepository
     public function findByAll()
     {
         $data = $this->model->first();
-        $data['address']['full_address'] = $data->address->full_address;
+        $data['address']['full_address'] =  'Test';//$data->address->full_address;
         $data['general_setting'] = GeneralSettings::first()->toArray();
         $data['timing'] = RestaurantTiming::all()->toArray();
         return $data;
