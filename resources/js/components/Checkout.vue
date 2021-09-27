@@ -632,11 +632,15 @@ export default {
       if (localStorage.getItem('order_type') === "Pickup") {
         final_amount = this.totalPrice - this.discountedAmount;
       } else {
-        final_amount = this.totalPrice + this.delivery_fees - this.discountedAmount;
+
+        if(this.delivery_fees == null || this.delivery_fees == "null") {
+            final_amount = this.totalPrice - this.discountedAmount;
+        } else {
+          final_amount = this.totalPrice + this.delivery_fees - this.discountedAmount;
+        }
       }
 
       return final_amount;
-
     }
 
     /*getAllCartArray() {
