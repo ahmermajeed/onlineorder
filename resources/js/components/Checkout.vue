@@ -638,11 +638,9 @@ export default {
         } else {
           final_amount = this.totalPrice + this.delivery_fees - this.discountedAmount;
         }
-
       }
 
       return final_amount;
-
     }
 
     /*getAllCartArray() {
