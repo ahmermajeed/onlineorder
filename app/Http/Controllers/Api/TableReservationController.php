@@ -96,9 +96,27 @@ class TableReservationController extends Controller
             return response()->json($output, $code);
         } 
         
-        $output = ['data' => $data, 'message' => "Your reservation has been updated successfully "];
+        $output = ['data' => $data, 'message' => "Your reservation has been created successfully"];
 
         return response()->json($output, Response::HTTP_OK);
 
     }
+
+    public function getDayTime() 
+    {
+        $data = $this->_repository->fetchDayTime();
+
+        $output = ['data' => $data, 'message' => ""];
+
+        return response()->json($output, Response::HTTP_OK);
+    }
+
+    // public function getNoOfPerson() 
+    // {
+    //     $data = $this->_repository->fetchDayTime();
+    //     $output = ['data' => $data, 'message' => ""];
+    //     return response()->json($output, Response::HTTP_OK);
+    // }
+
+    
 }

@@ -27,9 +27,9 @@ class CustomerReservationRequest extends BaseAPIRequest
             "firstname"    => 'required',
             "lastname"     => 'required',
             "phone"        => 'required',
-            "email"        => 'required',
-            "booking_date" => 'required',
-            "persons"      => 'required',
+            "email"        => 'required|email',
+            "booking_date" => 'required|after_or_equal:'.date('Y-m-d'),
+            "persons"      => 'required|integer',
             "booking_time" => 'required',
         ];
 

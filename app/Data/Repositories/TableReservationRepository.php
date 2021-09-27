@@ -5,7 +5,11 @@ namespace App\Data\Repositories;
 use App\Data\Models\Category;
 use App\Data\Models\TableReservation;
 use App\Data\Models\CustomerReservation;
+use App\Data\Models\RestaurantTiming;
+use App\Data\Models\Users;
 use Carbon\Carbon;
+use App\Jobs\SendCustomerCredentialsJob;
+use App\Jobs\SendRetainingCustomerJob;
 
 class TableReservationRepository
 {
@@ -24,7 +28,6 @@ class TableReservationRepository
      */
     public function findByAll($pagination = false, $perPage = 10, $input = [])
     {
-
         $data = array();
         $model = $this->model;
 
@@ -72,11 +75,41 @@ class TableReservationRepository
         
         $isCustomerExists = CustomerReservation::where('email', $params['email'])->first();
 
-        if (!empty($isCustomerExists) ) {
-            ##Todo : Create Customer Password
+        if (empty($isCustomerExists) ) {
+            $password = rand();
+            $user = [
+                'name'         => $params['firstname'].' '.$params['lastname'],
+                'email'        => $params['email'],  
+                'password'     => bcrypt($password),
+                "phone_number" => $params['phone'],
+            ];
+            Users::create($user);
+
+            SendCustomerCredentialsJob::dispatch($user);
+        } else {
+            $user = Users::where('email', $params['email'])->first();
+
+            SendRetainingCustomerJob::dispatch($user);
         }
         $customer = CustomerReservation::create($params);
 
         return $customer; 
     }
+
+    /**
+     * Fetch Dates of restaurnts
+     */
+    public function fetchDayTime() 
+    {
+        $restuarantTime = RestaurantTiming::get();
+
+        return $restuarantTime;
+    }
+
+    // public function fetchNoOfPersons() 
+    // {
+    //     $persons = RestaurantTiming::get();
+
+    //     return $restuarantTime;
+    // }
 }

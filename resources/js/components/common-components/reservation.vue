@@ -9,23 +9,26 @@
 
 		            <div class="row">
 		                <div class="col-md-12">
+							<div class="alert alert-success" role="alert" v-if="successMessage">
+								{{ successMessage }}
+							</div>
+							<div class="alert alert-danger" role="alert" v-if="errorMessage">
+								{{ errorMessage}}
+							</div>
 							<form @submit.prevent="onCustomerReservation()">
 								<div class="form-details">
 									<div class="row">
 										<div class="col-md-3">
 											<div class="form-group">
 												<label for="">Enter Booking Date</label>
-												<!-- v-model="formData.booking_date" -->
-												<date-picker placeholder="Enter Booking Date" v-model="formData.booking_date" 
-												:default-value="new Date()" ></date-picker>
+												<datepicker placeholder="Enter Booking Date" @selected="selectedFromDate"
+													:highlighted="highlighted" :format="customFormatter"
+													class="form-control-datepicker"
+													:value="formData.booking_date" :disabled-dates="disabledDates">
+												</datepicker>
 											</div>                      
 										</div>
-										<!-- <div class="col-md-3 select-time">
-											<div class="form-group">
-												<label for="">Enter Booking Time</label>
-												<date-picker v-model="time2" type="time" placeholder="Enter Booking Time"></date-picker>
-											</div>                      
-										</div> -->
+										
 										<div class="col-md-3 select-person">
 											<div class="form-group">
 												<label for="">Enter No. of Persons</label>
@@ -160,17 +163,18 @@
 </template>
 <script>
 
-    import DatePicker from 'vue2-datepicker';
+    // import DatePicker from 'vue2-datepicker';
     import Countdown from 'vuejs-countdown';
     import 'vue2-datepicker/index.css';
-
+	import Datepicker from 'vuejs-datepicker';
 
     export default {
         components: {
-            DatePicker, 
+            Datepicker, 
             Countdown,
+			// DatepickerV
         },
-        data() {
+		data() {
             return {
                 dinerDetails    : false,
                 dinerDetailsTime: '',
@@ -191,12 +195,32 @@
                 },
 				timeSlot : [],
 				successMessage : null,
-				errorMessage : null
+				errorMessage : null,
+				highlighted: {
+                    "daysOfMonth": [
+                        parseInt(moment(new Date()).format('DD'))
+                    ]
+                },
+				disabledDates: {
+					to: new Date(), // Disable all dates up to specific date
+				},
+				restaurantTimes : [],
+				selectedTime : null
             };
         },
         mounted() {
+			this.getRestaurantTime();
 		},
         methods: {
+		 	selectedToDate(date){
+                this.formData.to_date = moment(date).format('YYYY-MM-DD');
+            },
+            selectedFromDate(date){
+                this.formData.from_date = moment(date).format('YYYY-MM-DD');
+            },
+            customFormatter(date) {
+                return moment(date).format('DD, MMM YYYY');
+            },
 			showDinerDetail() {
 				let self = this;
 				if(self.formData.booking_time != null) {
@@ -209,7 +233,6 @@
 			onCustomerReservation() {
 				var self 	 = this;
 
-				console.log(self.formData);
 				axios.post('api/reservation', self.formData).then(response => {
 				    self.loading 		= false;
 				    response 			= response.data;
@@ -227,14 +250,36 @@
 			},
 
 			checkDate() {
-				this.calcTime();
-			},
-			calcTime() {
-				this.timeSection = true; 
-				let fromtime = '12:00:00';
-				let totime 	 = '23:59:00';
+				var self 	 = this;
+				let day = moment(this.formData.booking_date).format('dddd');
 
-				this.timeSlot = this.returnTimesInBetween(fromtime, totime);
+				this.restaurantTimes.forEach(function(item, index) {
+					if (day == item.day) {
+						self.selectedTime  = item
+					}
+				});
+				
+				if (Object.keys(self.selectedTime).length > 0) {
+					if (self.selectedTime.shop_close == 1) {
+						this.calcTime(self.selectedTime.start_time, self.selectedTime.end_time );
+					} else {
+						self.errorMessage = 'Sorry!!! Restaurant Is Close.';
+					}
+				} else {
+					self.errorMessage = 'Please Select Proper Booking Date.';
+				}
+
+				setTimeout(function () {
+					self.errorMessage = '';
+				}, 2000);
+				
+			},
+			calcTime(startTime = 0, endTime = 0) {
+				this.timeSection = true; 
+				if (startTime == 0 || endTime == 0) {
+					return false;
+				}
+				this.timeSlot = this.returnTimesInBetween(startTime, endTime);
 			},
 			returnTimesInBetween(start, end) {
 				var timesInBetween = [];
@@ -264,7 +309,22 @@
 				});
 
 				return time;
-			}
+			},
+			getRestaurantTime() {
+				var self 	 = this;
+				axios.get('api/restuarant_time').then(response => {
+				    response 			= response.data;
+					self.restaurantTimes = response.data
+				}).catch(error => {
+					self.errorMessage = 'Something went wrong.';
+					
+					setTimeout(function () {
+						self.errorMessage = '';
+					}, 2000);
+				});
+			},
+			
+
         },
     }
 </script>
