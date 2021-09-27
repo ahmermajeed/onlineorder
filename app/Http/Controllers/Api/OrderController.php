@@ -114,7 +114,7 @@ class OrderController extends Controller
 
             $this->sendNotification($data);
         }
-
+        $requestData['order_id'] = $data['order_id'];
         $output = ['data' => $requestData, 'message' => "your order has been placed successfully "];
         return response()->json($output, Response::HTTP_OK);
     }

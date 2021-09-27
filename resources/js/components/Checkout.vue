@@ -588,14 +588,9 @@ export default {
       })
           .then(function (response) {
             self.loading = false;
-            //handle success
-
-            console.log(response);
-
             self.$store.state.cartItems =  [];
             self.$store.state.cartItemsCount = 0;
-
-            self.$router.push({name: 'thankyou'});
+            self.$router.push({path: '/order-confirmed/'+response.data.data.order_id});
 
           })
           .catch(function (response) {
@@ -668,5 +663,5 @@ export default {
 }
 </script>
 <style>
-    
+
 </style>

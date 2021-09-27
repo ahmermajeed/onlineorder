@@ -1,9 +1,9 @@
 require('./bootstrap');
 window.Vue = require('vue');
-      
-import Vue from 'vue' 
+
+import Vue from 'vue'
 import VueRouter from 'vue-router'
-import Vuex from 'vuex'; 
+import Vuex from 'vuex';
 import store from './store.js'
 import VueCtkDateTimePicker from 'vue-ctk-date-time-picker';
 import 'vue-ctk-date-time-picker/dist/vue-ctk-date-time-picker.css';
@@ -86,8 +86,7 @@ const router = new VueRouter({
         },
 
         {
-            path: '/order-confirmed',
-            name: 'order-confirmed',
+            path: '/order-confirmed/:id',
             component: require('./components/OrderConfirmed.vue').default,
         },
     ],
