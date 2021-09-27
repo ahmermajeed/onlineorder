@@ -2640,7 +2640,7 @@ $duration: 50s;
                         text-align: right;
                     }
                     tr {
-                        border: 1px dashed !important;
+                        border-bottom:1px dashed !important;
                     }
                     .tbl_cart_list {
                         border: none;
@@ -2664,17 +2664,19 @@ $duration: 50s;
     .inner {
         padding: 17px;
         border-bottom: 1px solid #cccccc;
-        background: #f5f8fa;
+        background: #fab333;
         .products-value {
             margin-left: 30px;
         }
         .chek-out-btn {
             min-width: 110px;
+            background: #000;
+            background-image: linear-gradient(to right, #000 0%, #000 100%);
             btn {
                 font-weight: normal;
             }
             span {
-                color: #fff !important;
+                color: #000 !important;
             }
         }
     }
@@ -2716,6 +2718,21 @@ $duration: 50s;
     }
 }
 
+input.form-control.input-valid {
+    border-bottom: 1px solid red !important;
+    &::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+      color: red;
+    }
+    &::-moz-placeholder { /* Firefox 19+ */
+      color: red;
+    }
+    &:-ms-input-placeholder { /* IE 10+ */
+      color: red;
+    }
+    &:-moz-placeholder { /* Firefox 18- */
+      color: red;
+    }
+}
 /***************check out end **********************/
 
 /***************Deal-section-start*******************/

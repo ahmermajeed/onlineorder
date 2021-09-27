@@ -43,7 +43,7 @@
 
                                <div class="col-sm-6">
                                    <label>Street *</label>
-                                   <input type="text"  v-model="form.street" class="form-control" placeholder="street">
+                                   <input type="text" id="input-valid" :state="true"  v-model="form.street" class="form-control" placeholder="street">
                                </div>
                                <div class="col-sm-6">
                                    <label  class="col-form-label">Town *</label>
@@ -66,16 +66,16 @@
                        </div>
                        <div class="col-sm-4">
                            <label  class="col-form-label">Name</label>
-                           <input type="text" class="form-control" placeholder="Enter Name" v-model="form.name">
+                           <input type="text"  class="form-control input-valid" required placeholder="Enter Name" v-model="form.name">
                        </div>
                        <div class="col-sm-4">
                            <label  class="col-form-label">Email</label>
-                           <input type="text" class="form-control"  v-model="form.email" placeholder="abc@example.com">
+                           <input type="text" class="form-control" required  v-model="form.email" placeholder="abc@example.com">
                        </div>
 
                        <div class="col-sm-4">
                            <label  class="col-form-label">Number</label>
-                           <input type="text" class="form-control"  v-model="form.number" placeholder="Enter Number">
+                           <input type="text" class="form-control" required  v-model="form.number" placeholder="Enter Number">
                        </div>
 
 

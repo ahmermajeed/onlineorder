@@ -374,23 +374,22 @@
                 <div class="mb-cart-box">
                     <ul class="cart-list"  v-for="(cart, product_index) in cartItems">
                         <li>
-                        <span class="qty mob">
-                            <i style="font-size: 17px;" @click="quantityAddInCart(product_index, cart)">+</i>
-                               <span>{{ cart.quantity}}</span>
-                            <i style="font-size: 17px;" @click="quantityMinusInCart(cart)">-</i>
-
-                        </span>
-                            <span class="meal">
-                            {{cart.product_name}}
-                            <ul v-if="cart.extras" v-for="(extra, extra_index) in cart.extras">
-                                <li><b>{{extra.group_name}}:</b> {{extra.choice}}</li>
-                            </ul>
-                        </span>
-
-                            <span class="mealactions">
-
-                                <a href="#"  @click="updateProduct(cart.product_id,cart,product_index)"><i v-b-tooltip.hover title="Edit Meal" class="fas fa-pen"> </i></a>
-                               <a href="#" @click.prevent="removeFromCart(cart)"> <i v-b-tooltip.hover title="Remove Meal" class="fa fa-times"></i></a>
+                            <span class="m-box">
+                              <span class="meal">
+                                <h5>{{cart.product_name}}</h5>
+                                <ul v-if="cart.extras" v-for="(extra, extra_index) in cart.extras">
+                                    <li><b>{{extra.group_name}}:</b> {{extra.choice}}</li>
+                                </ul>
+                              </span>
+                              <span class="mealactions">
+                                  <a href="#"  @click="updateProduct(cart.product_id,cart,product_index)"><i v-b-tooltip.hover title="Edit Meal" class="fas fa-pen"> </i></a>
+                                 <a href="#" @click.prevent="removeFromCart(cart)"> <i v-b-tooltip.hover title="Remove Meal" class="fa fa-times"></i></a>
+                              </span>
+                            </span>
+                            <span class="qty mob">
+                                <i style="font-size: 17px;" @click="quantityAddInCart(product_index, cart)">+</i>
+                                   <span>{{ cart.quantity}}</span>
+                                <i style="font-size: 17px;" @click="quantityMinusInCart(cart)">-</i>
                             </span>
                             <span class="price">£{{priceFormat(cart.single_product_total_amount)}}</span>
                         </li>
@@ -1132,7 +1131,7 @@ export default {
     
 
     .cart .order .table-holder {
-        overflow-y: scroll;
+        overflow-y: scroll !important;
         max-height: 50vh;
     }
     .cart .order .table-holder::-webkit-scrollbar {
@@ -2248,6 +2247,11 @@ export default {
         }
         .cartheight .confirm-btn{
             text-align:center;
+            position: fixed;
+            width: 100%;
+            bottom: 30px;
+            background: #fff;
+            box-shadow: 0px -4px 5px #0000000f;
         }
         .cartheight .confirm-btn .anima-btn{
             color: #000 !important;
@@ -2290,6 +2294,10 @@ export default {
     }
 
     @media (max-width: 767px) {
+        .cartheight .mb-cart-box{
+          overflow-y: scroll !important;
+          height: 77vh;
+        }
         .cart-menu-fixed .offset-categories {
             width: 100%;
             z-index: 2;
@@ -2307,12 +2315,32 @@ export default {
         span.price {
             position: relative;
             top: -4px;
+            font-size: 18px;
         }
         .mb-cart-box ul li span.qty {
             flex: 0 0 50px;
             min-width: 50px;
             position: relative;
-            padding-left: 25px;
+            padding-left:0;
+            border: 1px solid #ddd;
+            display: flex;
+            align-items: center;
+            border-radius: 4px;
+            justify-content: space-between;
+            padding:0 10px;
+            margin-bottom: 15px;
+            margin-top: 15px;
+        }
+
+        .mb-cart-box ul li span.qty i{
+            font-style: normal;
+            font-size: 26px !important;
+            background: #ccc;
+            width: 30px;
+            text-align: center;
+            border-radius: 50%;
+            height: 30px;
+            line-height: 30px;
         }
         .mb-cart-box svg {
             -webkit-filter: brightness(0);
@@ -2349,11 +2377,25 @@ export default {
         }
         .cartheight .mb-cart-box ul.cart-list {
             list-style: none;
-            border-bottom: 1px dashed #ccc;
+            border: 1px solid #ccc;
             margin-bottom: 10px;
         }
         .mb-cart-box ul li {
-            text-align: center;
+          text-align: left;
+          display: flex;
+          padding: 15px;
+          flex-direction: column;
+        }
+        .mb-cart-box ul li .m-box{
+          display: flex;
+          justify-content: space-between;
+        }
+        .mb-cart-box ul li .m-box h5{
+          font-size: 18px;
+          font-weight: bold;
+        }
+        .mb-cart-box ul li .m-box ul li{
+          padding: 0;
         }
     }
 

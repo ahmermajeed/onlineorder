@@ -8,7 +8,7 @@
                 <div class="header-top-section">
                     <div class="container">
                         <div class="row">
-                            <div class="col-7 col-md-6">
+                            <div class="col-6">
                                 <div class="add-info">
                                     <ul>
                                         <li class="mail-space"><i class="icon-mail-2"></i>
@@ -19,7 +19,7 @@
                                     </ul>
                                 </div>
                             </div>
-                            <div class="col-5 col-md-6">
+                            <div class="col-6">
                                 <div class="header-icon float-right">
                                     <ul>
                                        <li v-if="info.general_setting.facebook"> <a  :href="info.general_setting.facebook" ><i class="icon-facebook"></i></a></li>
