@@ -108,7 +108,7 @@
                             </div>
                             <div class="located-num">
                                 <strong>{{info.phone_number}}</strong>
-                                <p>{{info.address.full_address}}</p>
+<!--                                <p>{{info.address.full_address}}</p>-->
                             </div>
                         </div>
                     </div>
