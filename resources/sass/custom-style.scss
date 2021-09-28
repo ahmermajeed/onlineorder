@@ -2017,7 +2017,7 @@ $duration: 50s;
     .feedback-banner {
         padding: 80px 0px 30px 0px;
 
-        .feed-banner-first {
+        /*.feed-banner-first {
             background-image: url(/images/theme-1/feed-back-img-two.jpg);
             background-repeat: no-repeat;
             background-position: top;
@@ -2045,11 +2045,11 @@ $duration: 50s;
             @include media-breakpoint-down(sm) {
                 margin-left: 40px;
             }
-        }
+        }*/
     }
 
     .form-feedback-section {
-        position: absolute;
+        /*position: absolute;*/
         top: 19%;
         left: 11%;
 
@@ -2136,9 +2136,9 @@ $duration: 50s;
                     text-align: right;
 
                     @include media-breakpoint-down(sm) {
-                        width: 33%;
+                        width: 32%;
                         float: none;
-                        text-align: right;
+                        text-align: center;
                         margin-top: 15px;
                     }
 
@@ -2718,7 +2718,7 @@ $duration: 50s;
     }
 }
 
-input.form-control.input-valid {
+.form-control.input-valid {
     border-bottom: 1px solid red !important;
     &::-webkit-input-placeholder { /* Chrome/Opera/Safari */
       color: red;
@@ -2732,6 +2732,13 @@ input.form-control.input-valid {
     &:-moz-placeholder { /* Firefox 18- */
       color: red;
     }
+}
+
+select.form-control.input-valid {
+    border: 1px solid red !important;
+}
+.radio-inline.input-valid {
+    border: 1px solid red !important;
 }
 /***************check out end **********************/
 

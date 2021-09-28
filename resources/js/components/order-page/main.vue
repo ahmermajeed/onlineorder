@@ -239,9 +239,10 @@
                                                    </span>
                                                    <span class="order-quty">
                                                        <div class="priec-order">
-                                                            <a class="icon-up"  href="#" @click.prevent="quantityAddInCart(product_index, cart)"> <i class="icon-plus"  ></i></a>
-                                                            <span class="text-center">{{ cart.quantity}}  <!-- <i>X</i> --></span>
                                                             <a  class="icon-down"  href="#"  @click.prevent="quantityMinusInCart(cart)"> <i class="icon-subtract"></i></a>
+                                                            <span class="text-center">{{ cart.quantity}}  <!-- <i>X</i> --></span>
+                                                            <a class="icon-up"  href="#" @click.prevent="quantityAddInCart(product_index, cart)"> <i class="icon-plus"  ></i></a>
+                                                            
                                                         </div> 
                                                    </span>
                                                 
@@ -387,9 +388,9 @@
                               </span>
                             </span>
                             <span class="qty mob">
-                                <i style="font-size: 17px;" @click="quantityAddInCart(product_index, cart)">+</i>
-                                   <span>{{ cart.quantity}}</span>
                                 <i style="font-size: 17px;" @click="quantityMinusInCart(cart)">-</i>
+                                <span>{{ cart.quantity}}</span>
+                                <i style="font-size: 17px;" @click="quantityAddInCart(product_index, cart)">+</i>
                             </span>
                             <span class="price">£{{priceFormat(cart.single_product_total_amount)}}</span>
                         </li>
@@ -2131,6 +2132,7 @@ export default {
             font-size: inherit;
             text-rendering: auto;
             -webkit-font-smoothing: antialiased;
+            display: none;
         }
         .mobile-cart-button.cartheight .inner span.text:after{
             margin-left:5px;
