@@ -22,7 +22,7 @@
                     </div>
                     <div class="col-lg-5 col-md-8 col-sm-12">
                         <div class="product-list order-product product-list-scroll">
-                            <!--                            for products-->
+                            <!-- for products -->
                             <div id="focus" class="product"  v-for="(item, index) in products" v-if="item.products.length">
                                  <div class="row">
                                         <div class="col-md-12">
@@ -46,7 +46,7 @@
                                  </div>
                             </div>
 
-                            <!--                            for Deals-->
+                            <!-- for Deals -->
                             <div class="product deals-pro"  v-for="(item, index) in deals" >
                                 <div class="row">
                                     <div class="col-md-12">
@@ -67,101 +67,53 @@
                                     </div>
                                 </div>
                             </div>
-
                         </div>
+
                          <section class="menu-list d-none for-mobile-only">
                           <div class="accordion" role="tablist">
-                              <b-card no-body class="mb-1">
-                                <b-card-header header-tag="header" class="p-1" role="tab">
-                                  <b-button block v-b-toggle.accordion-1>Doner Box
+
+                              <b-card no-body class="mb-1" v-for="(cat, index) in categories">
+                                <b-card-header header-tag="header" class="p-1" role="tab" @click.prevent="getProductAgainstCategories(cat.id)">
+                                  <b-button block v-b-toggle="'accordion-' +index">{{ cat.name }}
                                     <span class="icon-up-arrow"></span>
                                   <span class="icon-down-arrow"></span>
                                   </b-button>
                                   
                                 </b-card-header>
-                                <b-collapse id="accordion-1" visible accordion="my-accordion" role="tabpanel">
+                                <b-collapse :id="'accordion-'+index" visible accordion="my-accordion" role="tabpanel" >
                                   <b-card-body>
                                     <div class="product-list order-product">
-                            <!--                            for products-->
-                            <div id="focus" class="product"  v-for="(item, index) in products" v-if="item.products.length">
-                                 <div class="row">
-                                        <div class="col-md-12">
 
-                                            <h2 class="mb-4" style="color: #01a9fb; margin-bottom: 25px;" >{{item.name}}</h2>
-                                        </div>
-                                        <div class="col-md-12 mb-4 pb-1 box-a" v-for="(product, product_index) in item.products" style="border-bottom: 1px dashed #ccc;">
-                                            <div class="p-d prouct-item">
-                                                <h3>{{product.name}}</h3>
-                                               <p>{{product.description}}.</p>
+                                  <!-- for products-->
 
-                                            </div>
-                                            <div class="p-cart product-dec">
-                                                <p style="font-size: 12px;" v-if="product.sizes.length"  v-for="(size, size_index) in product.sizes" > {{size.size}} : £{{size.price}}</p>
-                                                <p  v-if="!product.sizes.length" ><span>£</span>{{product.price}}</p>
-                                            </div>
-                                            <a href="#" class="custom-btn2  btn btn-outline-success"  @click.prevent="viewProduct(product.id)">
-                                                    Add to cart <i class="fas fa-long-arrow-alt-right"></i></i>
-                                            </a>
-                                        </div>
-                                 </div>
-                            </div>
+                                    <div id="focus" class="product"  v-for="(item, index) in products" v-if="item.products.length">
+                                       <div class="row">
+                                              <div class="col-md-12">
 
-                            <!--                            for Deals-->
-                            <div class="product deals-pro"  v-for="(item, index) in deals" >
-                                <div class="row">
-                                    <div class="col-md-12">
+                                                  <h2 class="mb-4" style="color: #01a9fb; margin-bottom: 25px;" >{{item.name}}</h2>
+                                              </div>
+                                              <div class="col-md-12 mb-4 pb-1 box-a" v-for="(product, product_index) in item.products" style="border-bottom: 1px dashed #ccc;">
+                                                  <div class="p-d prouct-item">
+                                                      <h3>{{product.name}}</h3>
+                                                     <p>{{product.description}}.</p>
 
-                                        <h2 class="mb-4" style="color: #01a9fb; margin-bottom: 25px;" >{{item.name}}</h2>
-                                    </div>
-                                    <div class="col-md-12 mb-4 pb-1"  style="border-bottom: 1px dashed #ccc;">
-                                        <div class="p-d">
-                                            <h3>{{item.description}}</h3>
-                                            <p>{{item.description}}.</p>
+                                                  </div>
+                                                  <div class="p-cart product-dec">
+                                                      <p style="font-size: 12px;" v-if="product.sizes.length"  v-for="(size, size_index) in product.sizes" > {{size.size}} : £{{size.price}}</p>
+                                                      <p  v-if="!product.sizes.length" ><span>£</span>{{product.price}}</p>
+                                                  </div>
+                                                  <a href="#" class="custom-btn2  btn btn-outline-success"  @click.prevent="viewProduct(product.id)">
+                                                          Add to cart <i class="fas fa-long-arrow-alt-right"></i></i>
+                                                  </a>
+                                              </div>
+                                       </div>
+                                  </div>
 
-                                        </div>
-                                        <div class="p-cart">
-                                            <p><span>£</span>{{item.price}}</p>
-                                              <a href="#" class="custom-btn2 btn btn-outline-success"  @click.prevent="viewDeal(item.id)"> Add to cart <i class="fas fa-long-arrow-alt-right"></i></i>
-                                               </a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                        </div>
+                                  </div>
                                   </b-card-body>
                                 </b-collapse>
                               </b-card>
-
-                              <b-card no-body class="mb-1">
-                                <b-card-header header-tag="header" class="p-1" role="tab">
-                                  <b-button block v-b-toggle.accordion-2>Pizza
-                                    <span class="icon-up-arrow"></span>
-                                  <span class="icon-down-arrow"></span>
-                                  </b-button>
-                                  
-                                </b-card-header>
-                                <b-collapse id="accordion-2" accordion="my-accordion" role="tabpanel">
-                                  <b-card-body>
-                                    <b-card-text>{{ text }}</b-card-text>
-                                  </b-card-body>
-                                </b-collapse>
-                              </b-card>
-
-                              <b-card no-body class="mb-1">
-                                <b-card-header header-tag="header" class="p-1" role="tab">
-                                  <b-button block v-b-toggle.accordion-3>GDK Signature Sauce Dips
-                                    <span class="icon-up-arrow"></span>
-                                    <span class="icon-down-arrow"></span>
-                                  </b-button>
-                                  
-                                </b-card-header>
-                                <b-collapse id="accordion-3" accordion="my-accordion" role="tabpanel">
-                                  <b-card-body>
-                                    <b-card-text>{{ text }}</b-card-text>
-                                  </b-card-body>
-                                </b-collapse>
-                              </b-card>
+                            
                           </div>
                         </section>
                     </div>
@@ -588,6 +540,7 @@ export default {
 
       let _this = this;
       _this.deals = [];
+      _this.products = [];
       _this.loading = true;
       var url = '/api/categories';
       if (id) {
