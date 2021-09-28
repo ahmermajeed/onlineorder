@@ -8,21 +8,22 @@
             <div class="row">
        <div class="col-sm-12 checkoutpage col-lg-8 col-md-8 col-sm-8 checkout-cart-form">
            <div class="row">
+<!--
                <div class="col-sm-12 offset-sm-0 col-md-10 offset-md-1">
 
                <ul id="error_msg" >
                    <li  v-for="(errorMessage) in errorMessage" style="color: red;" >{{errorMessage}}</li>
                </ul>
                </div>
+-->
 
-
-               <div class="col-sm-12  col-md-10 ">
+               <div class="col-sm-12  col-md-10" id="mainSection">
                    <div class="row section-border order-check">
                        <div class="col-12">
                        </div>
                        <div class="col-sm-12">
                            <label>{{form.order_type}} Time</label>
-                           <select v-model="form.deliveryTime" class="form-control">
+                           <select v-model="form.deliveryTime" class="form-control" id="delivery_time">
                              <option value="">Please select {{form.order_type}} Time</option>
                              <option v-for="slot in slots">{{slot}}</option>
                            </select>
@@ -38,21 +39,21 @@
                                </div>
                                <div class="col-sm-6">
                                    <label>Address </label>
-                                   <input type="text"  name="address" required   v-model="form.address" class="form-control" placeholder="Address">
+                                   <input type="text" id="address" name="address" required v-model="form.address" class="form-control" placeholder="Address">
                                </div>
 
                                <div class="col-sm-6">
                                    <label>Street *</label>
-                                   <input type="text" id="input-valid" :state="true"  v-model="form.street" class="form-control" placeholder="street">
+                                   <input type="text" id="street" required :state="true"  v-model="form.street" class="form-control" placeholder="street">
                                </div>
                                <div class="col-sm-6">
                                    <label  class="col-form-label">Town *</label>
-                                   <input type="text"  v-model="form.town" class="form-control" placeholder="abc town">
+                                   <input type="text" id="town" required v-model="form.town" class="form-control" placeholder="abc town">
                                </div>
 
                                <div class="col-sm-6 mb-2">
                                    <label  class="col-form-label">Postal Code *</label>
-                                   <input type="text"   v-model="form.postal_code" class="form-control" placeholder="wc2h 9ah">
+                                   <input type="text" id="postalcode" required v-model="form.postal_code" class="form-control" placeholder="wc2h 9ah">
                                </div>
                            </div>
 
@@ -66,18 +67,17 @@
                        </div>
                        <div class="col-sm-4">
                            <label  class="col-form-label">Name</label>
-                           <input type="text"  class="form-control input-valid" required placeholder="Enter Name" v-model="form.name">
+                           <input type="text" class="form-control" id="name" required placeholder="Enter Name" v-model="form.name">
                        </div>
                        <div class="col-sm-4">
                            <label  class="col-form-label">Email</label>
-                           <input type="text" class="form-control" required  v-model="form.email" placeholder="abc@example.com">
+                           <input type="text" class="form-control" required id="email" v-model="form.email" placeholder="abc@example.com">
                        </div>
 
                        <div class="col-sm-4">
                            <label  class="col-form-label">Number</label>
-                           <input type="text" class="form-control" required  v-model="form.number" placeholder="Enter Number">
+                           <input type="text" class="form-control" required id="phone" v-model="form.number" placeholder="Enter Number">
                        </div>
-
 
                    </div>
 
@@ -85,10 +85,9 @@
                        <div class="col-sm-12 cash-delivery">
                            <h3>Payment</h3>
                            <label class="customradiobutton radioiconed radio-inline mr-3">
-                               <input type="radio" value="COD"  @change.prevent="showCard(false)"  v-model="form.payment_type" ><i class="fas fa-wallet"></i> Cash on Delivery
+                               <input type="radio" value="COD" id="payment_type" required @change.prevent="showCard(false)"  v-model="form.payment_type" ><i class="fas fa-wallet"></i> Cash on Delivery
                            </label>
                        </div>
-
 
                        <div class="col-12">
                            <div class="row" v-show="card">
@@ -102,7 +101,7 @@
                                        <div class="form-group">
                                            <label>Card number</label>
                                            <div class="input-group">
-                                               <input type="text" class="form-control" name="cardNumber" placeholder="" v-model="form.card_number">
+                                               <input type="text" required class="form-control" name="cardNumber" placeholder="" v-model="form.card_number">
                                                <div class="input-group-append">
                                            <span class="input-group-text text-muted">
 
@@ -116,15 +115,15 @@
                                                <div class="form-group">
                                                    <label><span class="hidden-xs">Expiration</span> </label>
                                                    <div class="input-group">
-                                                       <input type="number" class="form-control"    min="0"  placeholder="MM" name="" v-model="form.expiration_month">
-                                                       <input type="number" class="form-control"   min="0"  placeholder="YY" name="" v-model="form.expiration_year">
+                                                       <input type="number" class="form-control"  required  min="0"  placeholder="MM" name="" v-model="form.expiration_month">
+                                                       <input type="number" class="form-control" required  min="0"  placeholder="YY" name="" v-model="form.expiration_year">
                                                    </div>
                                                </div>
                                            </div>
                                            <div class="col-sm-4">
                                                <div class="form-group">
                                                    <label data-toggle="tooltip" title="" data-original-title="3 digits code on back side of the card">CVV <i class="fa fa-question-circle"></i></label>
-                                                   <input type="number"  min="0" class="form-control" required="" v-model="form.cvc">
+                                                   <input type="number" required min="0" class="form-control" required="" v-model="form.cvc">
                                                </div> <!-- form-group.// -->
                                            </div>
                                        </div> <!-- row.// -->
@@ -147,7 +146,6 @@
            <div class="order cart-box" id="cart-stiky">
                <h3>Your Order </h3>
                <div class="check-out-list">
-
 
                    <div class="table-holder">
 
@@ -383,12 +381,15 @@ export default {
     },
 
     scrollToMain() {
-      let element = document.getElementById("error_msg");
+      let element = document.getElementById("mainSection");
       element.scrollIntoView({behavior: "instant", block: "start"});
     },
 
     scrollToTop() {
-      let element = document.getElementById("error_msg");
+      var element = document.getElementById("mainSection");
+
+      console.log(element)
+
       element.scrollIntoView({behavior: "instant", block: "start"});
     },
 
@@ -397,36 +398,45 @@ export default {
       let _this = this;
       //  if (this.form.order_type != '') {
       if (this.form.email === "") {
-        error.push('Please Add Your Email Address');
+        error.push('Please Enter Your Email');
+        $("#email").addClass('input-valid');
       }
 
       if (this.form.deliveryTime === "") {
         error.push('Please select delivery/pickup time');
+        $("#delivery_time").addClass('input-valid');
       }
 
       if (this.form.name === "") {
-        error.push('Please Add Your Name');
+        error.push('Please Enter Your Name');
+        $("#name").addClass('input-valid');
       }
       if (this.form.number === "") {
-        error.push('Please Add Your Number');
+        error.push('Please Enter Your Number');
+        $("#phone").addClass('input-valid');
       }
       if (this.form.order_type === 'Delivery') {
         if (this.form.address === "") {
-          error.push('Please Add Your Delivery Address');
+          error.push('Please Enter Your Address');
+          $("#address").addClass('input-valid');
         }
         if (this.form.street === "") {
-          error.push('Please Add Your Street Adress');
+          error.push('Please Enter Your Street');
+          $("#street").addClass('input-valid');
         }
-        if (this.form.town === "") {
-          error.push('Please Add Your Town Name');
+        if (this.form.town === "" || this.form.town === null) {
+          error.push('Please Enter Your Town');
+          $("#town").addClass('input-valid');
         }
         if (this.form.postal_code === "") {
-          error.push('Please Add Your Postcode');
+          error.push('Please Enter Your Postal Code');
+          $("#postalcode").addClass('input-valid');
         }
       }
 
       if (this.form.payment_type === "") {
-        error.push('Please Add Your Payment Type');
+        error.push('Please Enter Your Payment Type');
+        $("#payment_type").addClass('input-valid');
       }
       /*} else {
           error.push('Please Choose Your Order Type');
