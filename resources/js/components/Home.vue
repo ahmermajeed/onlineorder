@@ -204,7 +204,7 @@
             </div>
         </section> -->
         <section class="section-fullwidth menu-box menu-box-style2">
-            <div class="container-fluid">
+            <div class="container">
                 <div class="row main-title">
                     <div class="col-12">
                         <h3>Our  Dishes</h3>
@@ -212,8 +212,8 @@
                 </div>
                 <!-- <h2 class="main-title">Our  Dishes</h2> -->
                 <div class="row">
-                    <div class="col-lg-3 col-md-12 col-sm-12 px-5"   v-for="(item, index) in categories" v-if="index < 4">
-                        <h3> {{item.name}}</h3>
+                    <div class="col-lg-4 col-md-12 col-sm-12"   v-for="(item, index) in categories" v-if="index < 3">
+                        <h3 class="sub-title"> {{item.name}}</h3>
                         <div class="menu-box">
                           <ul class="dish-list">
                             <li class="box"   v-for="(product, product_index) in item.products" v-if="product_index < 5">

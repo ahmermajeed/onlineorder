@@ -14097,6 +14097,7 @@ ul {
   background: rgba(0, 0, 0, 0.5);
   transition: background-color 2s ease-out;
   left: 0;
+  z-index: 2;
 }
 
 .menu-gallery .menubox .ctabox .btn {
@@ -14380,7 +14381,8 @@ ul {
 
 .main-ftr {
   padding-top: 50px;
-  background-image: url(/images/footer-banner.png?f1274c8cd8e3cf9c0daf0c5f41ba1ed3);
+  /*background-image: url(../../../images/theme-1/footer-banner.png);*/
+  background: #fff;
 }
 
 .main-ftr li {
@@ -15260,15 +15262,17 @@ ul {
 }
 
 .menu-box h3 {
-  font-size: 25px;
+  /*font-size: 25px;
   font-weight: bold;
   text-align: center;
-  margin-bottom: 20px;
+  margin-bottom: 20px;*/
 }
 
 .menu-box .menu-box .box {
   margin-bottom: 15px;
-  text-align: center;
+  text-align: left;
+  background: #fff;
+  padding: 15px;
 }
 
 .menu-box .menu-box .box a {
@@ -15278,36 +15282,58 @@ ul {
 .menu-box .menu-box .box a h3 {
   font-size: 16px;
   margin: 0;
+  background: #fff;
+  padding: 0;
 }
 
 .menu-box .menu-box .box p {
   font-size: 14px;
 }
 
+.menu-box .menu-box .box span {
+  background: #e5b052;
+  padding: 4px 10px;
+  border-radius: 4px;
+  display: inline-block;
+  margin-top: 10px;
+}
+
+.menu-box .menu-box .box span span {
+  padding: 0;
+  margin: 0;
+}
+
 .menu-box-style2 {
-  padding: 80px 0 80px 0;
+  padding: 60px 0 60px 0;
   text-align: center;
+  /*.main-title{
+      text-align: center;
+      font-size: 35px;
+      font-weight: bold;
+      margin-bottom: 70px;
+      text-transform: uppercase;
+      position: relative;
+      &:after{
+          position:absolute;
+          content: "";
+          bottom: -20px;
+          width: 50px;
+          height: 5px;
+          background: #000;
+          left: 0;
+          right: 0;
+          margin: 0 auto;
+      }
+  }*/
 }
 
-.menu-box-style2 .main-title {
-  text-align: center;
-  font-size: 35px;
-  font-weight: bold;
-  margin-bottom: 70px;
-  text-transform: uppercase;
-  position: relative;
-}
-
-.menu-box-style2 .main-title:after {
-  position: absolute;
-  content: "";
-  bottom: -20px;
-  width: 50px;
-  height: 5px;
+.menu-box-style2 .sub-title {
   background: #000;
-  left: 0;
-  right: 0;
+  color: #fff;
+  padding: 10px;
+  border-radius: 5px 5px 0 0;
   margin: 0 auto;
+  width: 85%;
 }
 
 .menu-box-style2 .btn {
@@ -17417,10 +17443,11 @@ span.address {
 /*************** Reservation-section-start *******************/
 
 .reservation-section {
-  background-image: url(/images/reservation-banner.png?db6744435654c50747b44748774492c8);
+  /*background-image: url('images/tasty-land/reservation-banner.png');
   background-repeat: no-repeat;
   background-size: cover;
-  background-attachment: fixed;
+  background-attachment: fixed;*/
+  background: #000;
 }
 
 .reservation-section h2 {
