@@ -2,7 +2,7 @@
     <div>
         <header-menu></header-menu>
 
-        <div class="timing-ticker-area">
+       <!--  <div class="timing-ticker-area">
             <div class="heading">
                 <h3>Shop Hours</h3>
             </div>
@@ -16,8 +16,94 @@
 
                 </ul>
             </div>
-        </div>
-        <section class="section-fullwidth deliver-area ">
+        </div> -->
+        <section class="about-section">
+            <div class="container">
+                <div class="row main-title">
+                    <div class="col-12">
+                        <h3>Welcome to Aisha Cafe</h3>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-5 col-12">
+                        <div class="imgbox">
+                            <img src="https://cdn.pixabay.com/photo/2018/02/13/11/52/food-3150583_960_720.jpg">
+                        </div>
+                    </div>
+                    <div class="col-md-7 col-12">
+                        <div class="contentbox">
+                            <p>Suspendisse turpis diam, laoreet at efficitur quis, tincidunt non quam. Maecenas feugiat nec lacus vel gravida. Fusce eu placerat elit. Mauris scelerisque a augue id vestibulum. Maecenas ac massa a diam molestie pulvinar. Integer eu ligula blandit, ultricies orci quis, convallis risus. Praesent rhoncus velit sit amet libero ultrices, nec cursus lorem rhoncus. Pellentesque sit amet erat ac urna placerat consequat. Pellentesque mattis massa ante, vitae interdum magna finibus blandit. Vivamus in augue ac urna posuere pharetra et posuere eros.</p>
+                            <p>Curabitur sit amet lectus urna. Vestibulum magna lectus, efficitur a velit vel, suscipit dapibus lacus. Integer sit amet tristique nisl. Vivamus condimentum id velit ac tristique. Pellentesque lobortis lacus sem, sed blandit metus placerat quis. </p>
+                            <p>
+                            Phasellus sollicitudin sodales nibh, id vulputate ante euismod sed. Nunc vitae nisi mattis, rutrum massa vel, commodo libero. Aliquam sit amet congue nunc. Cras tristique sollicitudin enim, ut tempor ex finibus id. Nullam interdum, magna sed scelerisque volutpat, elit nisi viverra metus, sit amet ultricies mauris augue tincidunt felis.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="menu-gallery">
+            <div class="container">
+                <div class="row main-title">
+                    <div class="col-12">
+                        <h3>Our Menu</h3>
+                    </div>
+                </div>
+                <div class="row mb-4">
+                    <div class="col-lg-4 col-md-6">
+                        <div class="menubox">
+                            <img src="https://cdn.pixabay.com/photo/2016/06/26/22/45/india-1481494__340.jpg">
+                            <div class="ctabox">
+                                <button type="button" class="btn btn-outline-secondary" @click.prevent="openPostalCode">Order Now!</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="menubox">
+                            <img src="https://cdn.pixabay.com/photo/2017/06/16/11/38/breakfast-2408818__340.jpg">
+                            <div class="ctabox">
+                                <button type="button" class="btn btn-outline-secondary" @click.prevent="openPostalCode">Order Now!</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="menubox">
+                            <img src="https://cdn.pixabay.com/photo/2018/12/04/16/49/tandoori-3856045__340.jpg">
+                            <div class="ctabox">
+                                <button type="button" class="btn btn-outline-secondary" @click.prevent="openPostalCode">Order Now!</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                 <div class="row mb-4">
+                    <div class="col-lg-4 col-md-6">
+                        <div class="menubox">
+                            <img src="https://cdn.pixabay.com/photo/2016/06/26/22/45/india-1481494__340.jpg">
+                            <div class="ctabox">
+                                <button type="button" class="btn btn-outline-secondary" @click.prevent="openPostalCode">Order Now!</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="menubox">
+                            <img src="https://cdn.pixabay.com/photo/2017/06/16/11/38/breakfast-2408818__340.jpg">
+                            <div class="ctabox">
+                                <button type="button" class="btn btn-outline-secondary" @click.prevent="openPostalCode">Order Now!</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="menubox">
+                            <img src="https://cdn.pixabay.com/photo/2018/12/04/16/49/tandoori-3856045__340.jpg">
+                            <div class="ctabox">
+                                <button type="button" class="btn btn-outline-secondary" @click.prevent="openPostalCode">Order Now!</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- <section class="section-fullwidth deliver-area ">
             <div class="container">
                   <div class="row">
                     <div class="col-md-4 col-12">
@@ -87,8 +173,8 @@
                     </div>
                   </div>
             </div>
-        </section>
-        <section class="rating-area">
+        </section> -->
+        <!-- <section class="rating-area">
             <div class="container">
             <div class="rating-img">
                 <div class="row">
@@ -108,18 +194,23 @@
                             </div>
                             <div class="located-num">
                                 <strong>{{info.phone_number}}</strong>
-<!--                                <p>{{info.address.full_address}}</p>-->
-                            </div>
+                         <p>{{info.address.full_address}}</p>
                         </div>
+                    </div>
                     </div>
                 </div>
 
             </div>
             </div>
-        </section>
+        </section> -->
         <section class="section-fullwidth menu-box menu-box-style2">
             <div class="container-fluid">
-                <h2 class="main-title">Our  Dishes</h2>
+                <div class="row main-title">
+                    <div class="col-12">
+                        <h3>Our  Dishes</h3>
+                    </div>
+                </div>
+                <!-- <h2 class="main-title">Our  Dishes</h2> -->
                 <div class="row">
                     <div class="col-lg-3 col-md-12 col-sm-12 px-5"   v-for="(item, index) in categories" v-if="index < 4">
                         <h3> {{item.name}}</h3>
@@ -261,7 +352,7 @@
             </div>
         </section> -->
 
-        <section class="section-fullwidth reservation">
+       <!--  <section class="section-fullwidth reservation">
             <div class="container">
                 <div class="table-booked pattern">
                     <div class="row">
@@ -308,7 +399,7 @@
                     </div>
                 </div>
             </div>
-        </section>
+        </section> -->
 
         <footer-menu></footer-menu>
         <postal-code-popup  @HideModalValue="hideModal"   :showModalProp="showPostalCode"></postal-code-popup>
