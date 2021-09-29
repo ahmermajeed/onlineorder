@@ -29,7 +29,7 @@ class SendRetainingCustomer extends Mailable
      */
     public function build()
     {
-        return $this->subject('Your Login Credentials')->with(['data' => $this->data])->view('email.send-retaining-customer-email');
+        return $this->subject('Reservation Email')->with(['data' => $this->data])->view('email.send-retaining-customer-email');
 
     }
 }

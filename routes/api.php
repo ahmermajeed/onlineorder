@@ -20,7 +20,7 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 
 Route::post('reservation', 'Api\TableReservationController@customerReservation');
 Route::get('restuarant_time', 'Api\TableReservationController@getDayTime');
-// Route::get('no_of_persons', 'Api\TableReservationController@getNoOfPerson');
+Route::get('no_of_persons', 'Api\TableReservationController@getNoOfPerson');
 
 
 

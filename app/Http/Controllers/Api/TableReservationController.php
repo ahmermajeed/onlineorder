@@ -90,7 +90,7 @@ class TableReservationController extends Controller
         $data = $this->_repository->makeCustomerReservation($request->all());
 
         if (empty($data)) {
-            $code   = 401;
+            $code   = 406;
             $output = ['error' => ['code' => $code, 'message' => "We are unable to process your request. Please try later"]];
 
             return response()->json($output, $code);
@@ -111,12 +111,11 @@ class TableReservationController extends Controller
         return response()->json($output, Response::HTTP_OK);
     }
 
-    // public function getNoOfPerson() 
-    // {
-    //     $data = $this->_repository->fetchDayTime();
-    //     $output = ['data' => $data, 'message' => ""];
-    //     return response()->json($output, Response::HTTP_OK);
-    // }
+    public function getNoOfPerson() 
+    {
+        $data   = $this->_repository->fetchNoOfPersons();
+        $output = ['data' => $data, 'message' => ""];
 
-    
+        return response()->json($output, Response::HTTP_OK);
+    }
 }

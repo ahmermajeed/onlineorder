@@ -29,7 +29,7 @@ class SendCustomerCredentials extends Mailable
      */
     public function build()
     {
-        return $this->subject('Your Login Credentials')->with(['data' => $this->data])->view('email.send-customer-credentials-email');
+        return $this->subject('Reservation Email')->with(['data' => $this->data])->view('email.send-customer-credentials-email');
 
     }
 }

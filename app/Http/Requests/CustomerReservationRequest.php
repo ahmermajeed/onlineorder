@@ -26,7 +26,7 @@ class CustomerReservationRequest extends BaseAPIRequest
         $rules = [
             "firstname"    => 'required',
             "lastname"     => 'required',
-            "phone"        => 'required',
+            "phone"        => ['required', 'regex:/^(\+44\s?7\d{3}|\(?07\d{3}\)?)\s?\d{3}\s?\d{3}$/'],
             "email"        => 'required|email',
             "booking_date" => 'required|after_or_equal:'.date('Y-m-d'),
             "persons"      => 'required|integer',

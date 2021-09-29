@@ -9,36 +9,36 @@
 
 		            <div class="row">
 		                <div class="col-md-12">
-							<div class="alert alert-success" role="alert" v-if="successMessage">
-								{{ successMessage }}
+							<div id="messages">
+								<div class="alert alert-success" role="alert" v-if="successMessage">
+									{{ successMessage }}
+								</div>
+								<div class="alert alert-danger" role="alert" v-if="errorMessage">
+									{{ errorMessage}}
+								</div>
 							</div>
-							<div class="alert alert-danger" role="alert" v-if="errorMessage">
-								{{ errorMessage}}
-							</div>
-							<form @submit.prevent="onCustomerReservation()">
+							<form @submit.prevent="validateBeforeSubmit()">
 								<div class="form-details">
 									<div class="row">
 										<div class="col-md-3">
 											<div class="form-group">
-												<label for="">Enter Booking Date</label>
+												<label for="">Enter Booking Date <span style="color:red">*</span></label>
 												<datepicker placeholder="Enter Booking Date" @selected="selectedFromDate"
 													:highlighted="highlighted" :format="customFormatter"
 													class="form-control-datepicker"
-													:value="formData.booking_date" :disabled-dates="disabledDates">
+													v-model="formData.booking_date"
+													:disabled-dates="disabledDates">
 												</datepicker>
 											</div>                      
 										</div>
 										
-										<div class="col-md-3 select-person">
+										<div class="col-md-4 select-person">
 											<div class="form-group">
-												<label for="">Enter No. of Persons</label>
+												<label for="">Enter No. of Persons <span style="color:red">*</span></label>
 												<span><i class="fas fa-user-friends"></i></span>
-												<select  class="form-control" id="" v-model="formData.persons">
-												<option value="1">1 person</option>
-												<option value="2">2 people</option>
-												<option value="3">3 people</option>
-												<option value="4">4 people</option>
-												<option value="5">5 people</option>
+												<select  class="form-control" id="" v-model="formData.persons" >
+													<option value="null" selected disabled>Select No Of Persons</option>
+													<option v-for="(person, index) in noOfperson"  :value="person">{{ person }}</option>
 												</select>   
 											</div>                      
 										</div>
@@ -52,41 +52,40 @@
 								</div>
 
 								<div class="select-reservation-time boxed" id="hide"  v-if="timeSection">
-									<h6>Select a Time:</h6>
+									<h6>Select a Time: <span style="color:red">*</span></h6>
 									<div class="form-group" v-for="(slot, index) in timeSlot">
 										<input class="inputTime" type="radio" :id="'time' + index" name="time" :value="slot" @change="showDinerDetail" v-model="formData.booking_time">
 										<label class="labelTime" :for="'time' + index"><i class="fas fa-clock mr-2"></i>{{ slot }}</label>
 									</div>
 								</div>
 
-								<!--  -->
 								<div class="diner-details" v-if="dinerDetails">
-									<p class="count-down-timer">We’re holding this table for you for
+									<!-- <p class="count-down-timer">We’re holding this table for you for
 										<Countdown deadline="June 19, 2021"></Countdown>
-									</p>
+									</p> -->
 									<h3>Diner Details</h3>
 									<div class="row">
 										<div class="col-md-3">
 											<div class="form-group">
-												<label for="">First Name</label>
+												<label for="">First Name <span style="color:red">*</span></label>
 												<input type="text" class="form-control" placeholder="Enter your First Name" v-model="formData.firstname">
 											</div>
 										</div>
 										<div class="col-md-3">
 											<div class="form-group">
-												<label for="">Last Name</label>
+												<label for="">Last Name <span style="color:red">*</span></label>
 												<input type="text" class="form-control" placeholder="Enter your Last Name" v-model="formData.lastname">
 											</div>
 										</div>
 										<div class="col-md-3">
 											<div class="form-group">
-												<label for="">Phone Number</label>
-												<input type="number" class="form-control" placeholder="Enter your Phone Number" v-model="formData.phone">
+												<label for="">Phone Number <span style="color:red">*</span></label>
+												<input type="number" class="form-control" placeholder="XXXX XXX XXX" v-model="formData.phone">
 											</div>
 										</div>
 										<div class="col-md-3">
 											<div class="form-group">
-												<label for="">Email Address</label>
+												<label for="">Email Address <span style="color:red">*</span></label>
 												<input type="email" class="form-control" placeholder="Enter your Email Address" v-model="formData.email">
 											</div>
 										</div>
@@ -145,12 +144,6 @@
 										<div class="col-md-12 reservation-agreement">
 											<p>By clicking “Complete reservation” you agree to the <a href="javascript:;">OpenTable Terms of Use</a> and <a href="javascript:;">Privacy Policy</a>. Standard text message rates may apply. You may opt out of receiving text messages at any time.</p>
 										</div>
-										<div class="alert alert-success" role="alert" v-if="successMessage">
-											{{ successMessage }}
-										</div>
-										<div class="alert alert-danger" role="alert" v-if="errorMessage">
-											{{ errorMessage}}
-										</div>
 									</div>
 								</div>
 							</form>
@@ -162,17 +155,13 @@
 	</div>
 </template>
 <script>
-
-    // import DatePicker from 'vue2-datepicker';
     import Countdown from 'vuejs-countdown';
-    import 'vue2-datepicker/index.css';
 	import Datepicker from 'vuejs-datepicker';
 
     export default {
         components: {
             Datepicker, 
             Countdown,
-			// DatepickerV
         },
 		data() {
             return {
@@ -194,8 +183,8 @@
 					reservations_reminder   : 0
                 },
 				timeSlot : [],
-				successMessage : null,
-				errorMessage : null,
+				successMessage: null,
+				errorMessage  : null,
 				highlighted: {
                     "daysOfMonth": [
                         parseInt(moment(new Date()).format('DD'))
@@ -204,12 +193,14 @@
 				disabledDates: {
 					to: new Date(), // Disable all dates up to specific date
 				},
-				restaurantTimes : [],
-				selectedTime : null
+				restaurantTimes: [],
+				selectedTime   : null,
+				noOfperson     : [],
             };
         },
         mounted() {
 			this.getRestaurantTime();
+			this.getRestaurantPersons();
 		},
         methods: {
 		 	selectedToDate(date){
@@ -234,25 +225,34 @@
 				var self 	 = this;
 
 				axios.post('api/reservation', self.formData).then(response => {
+					console.log('response');
+					console.log(response);
+
 				    self.loading 		= false;
 				    response 			= response.data;
 				    self.successMessage = response.message;
-					console.log(self.successMessage);
-				    setTimeout(function () {
+					setTimeout(function () {
 				        self.successMessage = '';
+						self.resetForm
 				    }, 2000);
 
 				}).catch(error => {
-				    this.loading = false;
-				    error = error.response.data;
-				    let errors = error.error;
+					
+					if (Object.keys(error.response.data).length > 0) {
+						self.errorMessage = error.response.data.error.message;
+						self.scrollToTop();
+						setTimeout(function () {
+							self.errorMessage = '';
+						}, 5000);
+						
+						return;
+					}
+					
 				});
 			},
-
 			checkDate() {
 				var self 	 = this;
 				let day = moment(this.formData.booking_date).format('dddd');
-
 				this.restaurantTimes.forEach(function(item, index) {
 					if (day == item.day) {
 						self.selectedTime  = item
@@ -268,7 +268,6 @@
 				} else {
 					self.errorMessage = 'Please Select Proper Booking Date.';
 				}
-
 				setTimeout(function () {
 					self.errorMessage = '';
 				}, 2000);
@@ -323,8 +322,100 @@
 					}, 2000);
 				});
 			},
-			
+			getRestaurantPersons() {
+				var self 	 = this;
+				axios.get('api/no_of_persons').then(response => {
+				    response 	   = response.data;
+					let persons = response.data;
 
+					for (let i = 1; i <= persons; i++) {
+						self.noOfperson.push(i);
+					}
+				}).catch(error => {
+					self.errorMessage = 'Something went wrong.';
+					
+					setTimeout(function () {
+						self.errorMessage = '';
+					}, 2000);
+				});
+			},
+			validateBeforeSubmit() {
+				var self 	 = this;
+				let error 	 = false;
+				if (self.formData.booking_date == null) {
+					self.errorMessage = 'Booking Date is required';
+					error = true;
+					self.scrollToTop();
+					return;
+				}
+				if (self.formData.booking_time == null) {
+					self.errorMessage = 'Booking Time is required';
+					error = true;
+					self.scrollToTop();
+					return;
+				}
+				
+				if (self.formData.firstname == null || self.formData.firstname == '') {
+					self.errorMessage = 'First Name is required';
+					error = true;
+					self.scrollToTop();
+					return;
+				}
+				if (self.formData.lastname == null || self.formData.lastname == '') {
+					self.errorMessage = 'Last Name is required';
+					error = true;
+					self.scrollToTop();
+					return;
+				}
+				if (self.formData.phone == null || self.formData.phone == '') {
+					self.errorMessage = 'Phone is required';
+					error = true;
+					self.scrollToTop();
+					return;
+				}
+				if (self.formData.email == null || self.formData.email == '') {
+					self.errorMessage = 'Email is required';
+					error = true;
+					self.scrollToTop();
+					return;
+				}
+				if (!this.validateEmail(self.formData.email)) {
+					self.errorMessage = 'Email is must be a valid email';
+					error = true;
+					self.scrollToTop();
+					return;
+				}
+
+				if (error == false) {
+					self.onCustomerReservation();
+				} 
+			},
+			validateEmail(email) {
+                var re = /\S+@\S+\.\S+/;
+                return re.test(email);
+            },
+			resetForm() {
+				var self 	 = this;
+				self.formData = {
+                    booking_date			: new Date(),
+                    persons     			: null,
+					booking_time 			: null,
+                    firstname   			: '',
+                    lastname    			: '',
+                    phone       			: '',
+					email                   : '',
+					special_occasion        : '',
+					special_request         : '',
+					restaurant_newsletter   : 0,
+					opentable_newsletter    : 0,
+					reservations_reminder   : 0
+                };
+			},
+			scrollToTop() {
+                $('html, body').animate({
+					scrollTop: $("div#messages").offset().top
+				}, 2000);
+            },
         },
     }
 </script>
