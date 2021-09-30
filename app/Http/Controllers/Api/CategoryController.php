@@ -30,18 +30,7 @@ class CategoryController extends Controller
         $data = $this->_repository->findByAll($pagination,$per_page,$requestData);
 
         foreach ($data['data'] as $key => $d) {
-
-            if (Cache::has('product-data-' . $d['id'])) {
-
-                $cached = Cache::get('product-data-' . $d['id']);
-
-                $d['products'] = $cached;
-
-            } else {
-                $d['products'] = Products::where('id_category', $d['id'])->get()->toArray();
-
-                Cache::put('product-data-' . $d['id'], $d['products']);
-            }
+             $d['products'] = Products::where('id_category', $d['id'])->get()->toArray();
         }
 
         $output = [
