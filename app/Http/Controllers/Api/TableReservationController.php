@@ -88,7 +88,6 @@ class TableReservationController extends Controller
     public function customerReservation(CustomerReservationRequest $request)
     {
         $data = $this->_repository->makeCustomerReservation($request->all());
-
         if (empty($data)) {
             $code   = 406;
             $output = ['error' => ['code' => $code, 'message' => "We are unable to process your request. Please try later"]];

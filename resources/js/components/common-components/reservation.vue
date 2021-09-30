@@ -231,10 +231,11 @@
 				    self.loading 		= false;
 				    response 			= response.data;
 				    self.successMessage = response.message;
+					self.scrollToTop();
 					setTimeout(function () {
 				        self.successMessage = '';
 						self.resetForm
-				    }, 2000);
+				    }, 3000);
 
 				}).catch(error => {
 					
@@ -264,13 +265,15 @@
 						this.calcTime(self.selectedTime.start_time, self.selectedTime.end_time );
 					} else {
 						self.errorMessage = 'Sorry!!! Restaurant Is Close.';
+						self.scrollToTop();
 					}
 				} else {
 					self.errorMessage = 'Please Select Proper Booking Date.';
+					self.scrollToTop();
 				}
 				setTimeout(function () {
 					self.errorMessage = '';
-				}, 2000);
+				}, 3000);
 				
 			},
 			calcTime(startTime = 0, endTime = 0) {
@@ -316,10 +319,10 @@
 					self.restaurantTimes = response.data
 				}).catch(error => {
 					self.errorMessage = 'Something went wrong.';
-					
+					self.scrollToTop();
 					setTimeout(function () {
 						self.errorMessage = '';
-					}, 2000);
+					}, 3000);
 				});
 			},
 			getRestaurantPersons() {
@@ -333,10 +336,10 @@
 					}
 				}).catch(error => {
 					self.errorMessage = 'Something went wrong.';
-					
+					self.scrollToTop();
 					setTimeout(function () {
 						self.errorMessage = '';
-					}, 2000);
+					}, 3000);
 				});
 			},
 			validateBeforeSubmit() {
