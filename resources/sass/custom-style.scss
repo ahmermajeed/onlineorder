@@ -116,19 +116,22 @@ ul {
     background: #e5b052;
 }
 /***************** Header Start ****************/
-header{
-    &.masthead{
-        position: fixed;
-        width: 100%;
-        z-index: 9;
-        background: #fff;
-        transition: transform .3s ease,-webkit-transform .3s ease;
-    }
-    &.smooth-scroll{
-        -webkit-transform: translateY(-100%);
-        transform: translateY(-100%);
+.remove-overflow{
+    header{
+        &.masthead{
+            position: fixed;
+            width: 100%;
+            z-index: 9;
+            background: #fff;
+            transition: transform .3s ease,-webkit-transform .3s ease;
+        }
+        &.smooth-scroll{
+            -webkit-transform: translateY(-100%);
+            transform: translateY(-100%);
+        }
     }
 }
+
 /***************** Header End ****************/
 .pries p {
     font-size: 20px;
