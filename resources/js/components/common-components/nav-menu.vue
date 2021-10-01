@@ -378,9 +378,11 @@
         if (scroll >= 200) {
             $(".masthead").addClass("smooth-scroll");
             $(".filter-page-style2").addClass("fixed-scroll");
+            $("html").addClass("remove-overflow");
         } else {
             $(".masthead").removeClass("smooth-scroll");
             $(".filter-page-style2").removeClass("fixed-scroll");
+            $("html").removeClass("remove-overflow");
         }
     });
 </script>

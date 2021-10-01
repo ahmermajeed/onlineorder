@@ -1,6 +1,31 @@
 <template>
     <div>
         <header-menu></header-menu>
+        <div class="filter-page-head">
+          <div class="container">
+            <div class="row">
+              <div class="col-md-2 col-12">
+                <h3>Aisha Cafe</h3>
+              </div>
+              <div class="col-md-9 col-12">
+                <ul class="d-flex">
+                  <li>
+                    <span><i class="icon-star"></i> 5</span>
+                    9 reviews
+                  </li>
+                  <li>
+                    <span><i class="icon-shopping-cart"></i> 25 mins</span>
+                    collection
+                  </li>
+                  <li>
+                    <span><i class="icon-scooter"></i> 30 mins</span>
+                    delivery
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
         <section class="inner-section main-popup-section filter-page-style2" id="product-scroll">
             <div class="container" >
                 <div class="row">
@@ -21,6 +46,9 @@
                         </div>
                     </div>
                     <div class="col-lg-5 col-md-8 col-sm-12">
+                        <div class="search-bar">
+                          <input type="search" name="" placeholder="Search Item">
+                        </div>
                         <div class="product-list order-product product-list-scroll">
                             <!-- for products -->
                             <div id="focus" class="product"  v-for="(item, index) in products" v-if="item.products.length">

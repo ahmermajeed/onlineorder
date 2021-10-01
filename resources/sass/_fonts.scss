@@ -25,6 +25,15 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-shopping-cart:before {
+  content: "\e913";
+}
+.icon-scooter:before {
+  content: "\e914";
+}
+.icon-star:before {
+  content: "\e915";
+}
 .icon-youtube:before {
   content: "\e912";
 }

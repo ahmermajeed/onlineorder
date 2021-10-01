@@ -1621,22 +1621,45 @@ $duration: 50s;
     }
 }
 /************** filter-page-style2 *******************/
-
+.remove-overflow{
+    overflow: inherit;
+}
 .filter-page-style2{
+    background: #f0f0f0;
     &.fixed-scroll{
-      .sidebar-area{
-        top: 100px;
-      }  
+      
     }
     .sidebar-area{
         position: sticky;
-        top: 20px;
+        top:40px;
+        border-radius: 5px;
+        background: #fff;
+        .lp-sidebar-title{
+            
+            h3{
+                font-size: 18px;
+            }
+        }
+        .cate-list{
+            padding: 0 !important;
+            a{
+                padding:5px 20px 5px 20px !important;
+            }
+        }
+    }
+    .lp-sidebar-right{
+        background: none !important;
+        .cart-box{
+            border-radius: 5px;
+        }
     }
     .product-list-scroll{
         position: sticky !important;
+        top: 20px;
     }
     .cart-box{
         position: sticky !important;
+        top: 40px !important;
     }
     .lp-sidebar-left{
         @include media-breakpoint-down(sm){
@@ -1800,10 +1823,52 @@ $duration: 50s;
         }
     }
 }
+.filter-page-head {
+    padding-top: 180px;
+    background: #e6e6e6;
+    padding-bottom: 25px;
+    .row{
+        align-items: center;
+        ul{
+            list-style: none;
+            li{
+                padding: 0 20px;
+                display: flex;
+                flex-direction: column;
+                color:#333;
+                font-size: 14px;
+                &:first-child{
+                    @include media-breakpoint-down(sm){
+                        padding-left: 0;
+                    }   
+                }
+                span{
+                    font-size: 12px;
+                    color: #000;
+                    i{
+                        color:#e5b052;
+                    }
+                }
 
+            }
+        }
+    }
+}
 .main-popup-section {
-    padding: 180px 0px 80px 0px;
-
+    padding: 40px 0 80px 0;
+    &.fixed-scroll{
+        padding: 0 0px 80px 0px;
+    }
+    .search-bar{
+        input{
+            width: 100%;
+            margin: 0 0 30px 0;
+            background: #fff;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 4px;
+        }
+    }
     .sidebar-area {
         border: 1px solid #e1e1e1;
         border-radius: 20px;
@@ -1932,13 +1997,13 @@ $duration: 50s;
         }
     }
     .product-list-scroll{
-        height: 500px;
+        /*height: 500px;
         overflow-y: scroll;
-        -ms-overflow-style: none;  /* IE and Edge */
+        -ms-overflow-style: none;
         scrollbar-width: none;
         &::-webkit-scrollbar {
           display: none;
-        }
+        }*/
         @include media-breakpoint-down(sm){
             display: none;
         }
