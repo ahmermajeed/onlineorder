@@ -8,6 +8,7 @@ use App\Data\Models\ProductSizes;
 use App\Data\Repositories\ProductRepository;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Cache;
 use Validator;
 use Symfony\Component\HttpFoundation\Response;
 
@@ -99,7 +100,17 @@ class ProductController extends Controller
 
     public function show($id)
     {
-        $data = $this->_repository->findById($id);
+        if (Cache::has('product-detail-'.$id)) {
+            /*Cache::forget('product-detail-'.$id);
+            exit;*/
+            $cached = Cache::get('product-detail-'.$id);
+            $data = $cached;
+
+        } else {
+            $data = $this->_repository->findById($id);
+            Cache::store("file")->put('product-detail-'.$id, $data);
+        }
+
         $output = ['data' => $data, 'message' => __("messages.success")];
         return response()->json($output, Response::HTTP_OK);
     }
