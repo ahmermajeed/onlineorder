@@ -112,7 +112,9 @@ ul {
     padding: 0;
 }
 
-
+.btn-outline-success:not(:disabled):not(.disabled):active{
+    background: #e5b052;
+}
 /***************** Header Start ****************/
 header{
     &.masthead{
@@ -1979,7 +1981,7 @@ $duration: 50s;
             padding: 4px 10px 4px 10px;
             border-radius: 32px;
             color: #fff !important;
-            background-color: #9b3d23;
+            background-color: #e5b052;
             border: none;
             float: right;
             font-size: 12px;
