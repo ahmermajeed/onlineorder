@@ -437,6 +437,8 @@
         mounted() {
             this.getStory();
             this.getCategories();
+            document.documentElement.classList.remove("remove-overflow") ;
+
 
         },
         methods: {
