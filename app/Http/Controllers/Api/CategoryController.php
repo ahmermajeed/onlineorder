@@ -31,16 +31,16 @@ class CategoryController extends Controller
 
         foreach ($data['data'] as $key => $d) {
 
-            if (Cache::has('product-data-' . $d['id'])) {
+            if (Cache::has('product-data-'.$d['id'])) {
 
-                $cached = Cache::get('product-data-' . $d['id']);
-
+                /*Cache::forget('product-data-'.$d['id']);
+                exit;*/
+                $cached = Cache::get('product-data-'.$d['id']);
                 $d['products'] = $cached;
 
             } else {
                 $d['products'] = Products::where('id_category', $d['id'])->get()->toArray();
-
-                Cache::put('product-data-' . $d['id'], $d['products']);
+                Cache::store("file")->put('product-data-'.$d['id'], $d['products']);
             }
         }
 
