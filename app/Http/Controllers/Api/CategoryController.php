@@ -7,6 +7,8 @@ use App\Data\Models\Products;
 use App\Data\Repositories\CategoryRepository;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+//use Illuminate\Support\Facades\Cache;
+use Illuminate\Support\Facades\Cache;
 use Validator;
 use Symfony\Component\HttpFoundation\Response;
 
@@ -27,8 +29,19 @@ class CategoryController extends Controller
         $per_page = self::PER_PAGE;
         $data = $this->_repository->findByAll($pagination,$per_page,$requestData);
 
-        foreach ($data['data'] as $d) {
-            $d['products'] = Products::where('id_category', $d['id'])->get();
+        foreach ($data['data'] as $key => $d) {
+
+            if (Cache::has('product-data-' . $d['id'])) {
+
+                $cached = Cache::get('product-data-' . $d['id']);
+
+                $d['products'] = $cached;
+
+            } else {
+                $d['products'] = Products::where('id_category', $d['id'])->get()->toArray();
+
+                Cache::put('product-data-' . $d['id'], $d['products']);
+            }
         }
 
         $output = [
