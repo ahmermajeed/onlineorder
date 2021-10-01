@@ -2760,7 +2760,7 @@ input[type="color"].form-control:disabled {
 @font-face {
   font-family: "icomoon";
   src: url(/fonts/icomoon.eot?03e9c1021e0578eac5b3225d75a35455);
-  src: url(/fonts/icomoon.eot?03e9c1021e0578eac5b3225d75a35455) format("embedded-opentype"), url(/fonts/icomoon.ttf?ef2c04a929051a457b17fe73d2bfbb8e) format("truetype"), url(/fonts/icomoon.woff?4cd9de708c59161e073fa960cbeb439e) format("woff"), url(/fonts/icomoon.svg?f0165bd2b7d68585839e6f19d42fba3c) format("svg");
+  src: url(/fonts/icomoon.eot?03e9c1021e0578eac5b3225d75a35455) format("embedded-opentype"), url(/fonts/icomoon.ttf?ef2c04a929051a457b17fe73d2bfbb8e) format("truetype"), url(/fonts/icomoon.woff?4cd9de708c59161e073fa960cbeb439e) format("woff"), url(/fonts/icomoon.svg?d16489279b45bee113ad06ed45fbcd36) format("svg");
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -13876,6 +13876,22 @@ ul {
   padding: 0;
 }
 
+/***************** Header Start ****************/
+
+header.masthead {
+  position: fixed;
+  width: 100%;
+  z-index: 9;
+  background: #fff;
+  transition: transform 0.3s ease;
+}
+
+header.smooth-scroll {
+  transform: translateY(-100%);
+}
+
+/***************** Header End ****************/
+
 .pries p {
   font-size: 20px;
   font-weight: 600;
@@ -14060,10 +14076,22 @@ ul {
   padding-bottom: 60px;
 }
 
+@media (max-width: 767.98px) {
+  .menu-gallery .row.mb-4 {
+    margin-bottom: 0 !important;
+  }
+}
+
 .menu-gallery .menubox {
   overflow: hidden;
   cursor: pointer;
   position: relative;
+}
+
+@media (max-width: 767.98px) {
+  .menu-gallery .menubox {
+    margin-bottom: 20px;
+  }
 }
 
 .menu-gallery .menubox:hover .ctabox {
@@ -14399,7 +14427,14 @@ ul {
   padding: 10px;
   background-color: #fff;
   border-radius: 4px;
-  box-shadow: 0px 10px 15px 0px rgba(0, 0, 0, 0.2);
+}
+
+.main-ftr .footer-section-1 span.icon {
+  border: 1px solid #ddd;
+}
+
+.main-ftr .footer-section-1 span.icon i {
+  color: #000;
 }
 
 .main-ftr .footer-section-1 .Opening {
@@ -14420,13 +14455,13 @@ ul {
 }
 
 .main-ftr .footer-menu {
-  padding-top: 35px;
+  padding-top: 10px;
 }
 
 .main-ftr .footer-menu ul {
-  border-top: 1px solid #393839;
+  /*border-top: 1px solid #393839;
   border-bottom: 1px solid #393839;
-  padding: 9px 0px 9px 0px;
+  padding: 9px 0px 9px 0px;*/
 }
 
 @media (max-width: 767.98px) {
@@ -14436,13 +14471,15 @@ ul {
 }
 
 .main-ftr .footer-menu li {
-  display: inline-block;
-  padding-left: 25px;
+  /*display: inline-block;*/
+  padding-left: 0;
+  margin-bottom: 15px;
+  text-align: left;
 }
 
 @media (max-width: 767.98px) {
   .main-ftr .footer-menu li {
-    padding-left: 11px;
+    /*padding-left: 11px;*/
   }
 }
 
@@ -14456,6 +14493,12 @@ ul {
   font-weight: bold;
   margin-bottom: 0px;
   padding: 15px 0px 20px 0px;
+}
+
+.main-ftr .icons {
+  margin: 30px 0 10px 0;
+  padding-top: 20px;
+  border-top: 1px solid #ccc;
 }
 
 .main-ftr .icons i {
@@ -14532,8 +14575,17 @@ ul {
   padding-bottom: 5px;
 }
 
+.main-ftr .Opening-hours li strong {
+  font-weight: 400;
+  color: #000;
+}
+
+.main-ftr .Opening-hours li strong a {
+  color: #000 !important;
+}
+
 .main-ftr .footer-space {
-  padding-top: 85px;
+  padding-top: 20px;
 }
 
 @media (max-width: 767.98px) {
@@ -14565,6 +14617,8 @@ ul {
 
 .copyright {
   border-top: 1px solid #cccccc;
+  background: #000;
+  color: #fff;
 }
 
 .copyright p {
@@ -15331,8 +15385,8 @@ ul {
   background: #000;
   color: #fff;
   padding: 10px;
-  border-radius: 5px 5px 0 0;
-  margin: 0 auto;
+  border-radius: 5px;
+  margin: 0 auto 20px;
   width: 85%;
 }
 
@@ -15543,6 +15597,26 @@ ul {
 
 /************** filter-page-style2 *******************/
 
+.filter-page-style2.fixed-scroll .sidebar-area {
+  top: 100px;
+}
+
+.filter-page-style2 .sidebar-area {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 20px;
+}
+
+.filter-page-style2 .product-list-scroll {
+  position: -webkit-sticky !important;
+  position: sticky !important;
+}
+
+.filter-page-style2 .cart-box {
+  position: -webkit-sticky !important;
+  position: sticky !important;
+}
+
 @media (max-width: 767.98px) {
   .filter-page-style2 .lp-sidebar-left {
     display: none;
@@ -15724,7 +15798,7 @@ ul {
 }
 
 .main-popup-section {
-  padding: 80px 0px 80px 0px;
+  padding: 180px 0px 80px 0px;
 }
 
 .main-popup-section .sidebar-area {
