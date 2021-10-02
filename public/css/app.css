@@ -13895,7 +13895,7 @@ ul {
 /***************** Header Start ****************/
 
 .remove-overflow header.masthead {
-  position: fixed;
+  /*position: fixed;*/
   width: 100%;
   z-index: 9;
   background: #fff;
@@ -15842,7 +15842,7 @@ ul {
 }
 
 .filter-page-head {
-  padding-top: 180px;
+  padding-top: 25px;
   background: #e6e6e6;
   padding-bottom: 25px;
 }
