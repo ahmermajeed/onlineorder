@@ -14,11 +14,11 @@
 <!--                    9 reviews-->
 <!--                  </li>-->
                   <li>
-                    <span><i class="icon-shopping-cart"></i> 25 mins</span>
+                    <span><i class="icon-shopping-cart"></i> {{info.general_setting.min_collection_time}} mins</span>
                     Collection
                   </li>
                   <li>
-                    <span><i class="icon-scooter"></i> 30 mins</span>
+                    <span><i class="icon-scooter"></i> {{info.general_setting.min_delivery_time}}  mins </span>
                     Delivery
                   </li>
                 </ul>
@@ -531,6 +531,7 @@ export default {
       this.editDeal = false;
       this.editDealsData = {};
       this.foodAllergyModal = false;
+      document.documentElement.classList.remove("onlypopup") ;
     },
 
     getCategories() {
@@ -608,6 +609,9 @@ export default {
             _this.loading = false;
             _this.product = true;
           });
+
+
+        document.documentElement.className = 'onlypopup' ;
     },
 
     viewDeal(id) {
@@ -620,6 +624,8 @@ export default {
             _this.loading = false;
             _this.dealsModal = true;
           });
+
+        document.documentElement.className = 'onlypopup' ;
     },
 
     placeOrder() {
