@@ -20,6 +20,7 @@
         "laravel/ui": "^2.0",
         "league/omnipay": "^3.0",
         "omnipay/paypal": "^3.0",
+        "laravel/cashier": "^12.15",
         "stripe/stripe-php": "^7.37"
     },
     "require-dev": {

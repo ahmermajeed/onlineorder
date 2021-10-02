@@ -88,55 +88,29 @@
                                <input type="radio" value="COD" id="payment_type" required @change.prevent="showCard(false)"  v-model="form.payment_type" ><i class="fas fa-wallet"></i> Cash on Delivery
                            </label>
                        </div>
-
-                       <div class="col-12">
-                           <div class="row" v-show="card">
-                               <div class="col-sm-7">
-                                   <form role="form">
-                                       <div class="form-group">
-                                           <label>Full name (on the card)</label>
-                                           <input type="text" class="form-control" name="username" placeholder="" required="" v-model="form.card_holder_name">
-                                       </div> <!-- form-group.// -->
-
-                                       <div class="form-group">
-                                           <label>Card number</label>
-                                           <div class="input-group">
-                                               <input type="text" required class="form-control" name="cardNumber" placeholder="" v-model="form.card_number">
-                                               <div class="input-group-append">
-                                           <span class="input-group-text text-muted">
-
-                                           </span>
-                                               </div>
-                                           </div>
-                                       </div> <!-- form-group.// -->
-
-                                       <div class="row">
-                                           <div class="col-sm-8">
-                                               <div class="form-group">
-                                                   <label><span class="hidden-xs">Expiration</span> </label>
-                                                   <div class="input-group">
-                                                       <input type="number" class="form-control"  required  min="0"  placeholder="MM" name="" v-model="form.expiration_month">
-                                                       <input type="number" class="form-control" required  min="0"  placeholder="YY" name="" v-model="form.expiration_year">
-                                                   </div>
-                                               </div>
-                                           </div>
-                                           <div class="col-sm-4">
-                                               <div class="form-group">
-                                                   <label data-toggle="tooltip" title="" data-original-title="3 digits code on back side of the card">CVV <i class="fa fa-question-circle"></i></label>
-                                                   <input type="number" required min="0" class="form-control" required="" v-model="form.cvc">
-                                               </div> <!-- form-group.// -->
-                                           </div>
-                                       </div> <!-- row.// -->
-                                   </form>
-                               </div>
-                           </div>
-                           <div class="row mt-3">
-                               <div class="col-sm-4" >
-                                   <button class="subscribe btn btn-rounded-danger btn-block" type="button" @click="placeOrder()"> Confirm  </button>
-                               </div>
-
-                           </div>
+                       <div class="col-sm-12 cash-delivery">
+                         <label class="customradiobutton radioiconed radio-inline mr-3">
+                           <input v-model="form.payment_type" type="radio" value="credit_card"
+                                  @change.prevent="showCard(true)"><i class="fas fa-credit-card"></i> Credit/Debit Card
+                         </label>
                        </div>
+
+                      <div class="col-12">
+                       <div v-show="card" class="row">
+                         <div class="col-sm-12">
+                           <div id="card-element"></div>
+                         </div>
+                       </div>
+                       <div class="row mt-3">
+                         <div class="col-sm-4">
+                           <button class="subscribe btn btn-rounded-danger btn-block" type="button" @click="placeOrder()">
+                             Confirm
+                           </button>
+                         </div>
+                       </div>
+                     </div>
+
+
                    </div>
                </div>
            </div>
@@ -255,9 +229,9 @@ export default {
       amount: 10,
     };
   },
-  mounted() {
+  async mounted() {
 
-    /*this.stripe = await loadStripe("pk_live_51JXnRCH71X9RL0xsfpADqGumBYievOp6seZLdfsz9eIBoUQ01CxE1rcIXeuJV8O3oD6mR02JvJ7LPZAq67Af5ury00CfCvKdld");
+    this.stripe = await loadStripe("pk_test_S7WpzetVyucJWjY37ogd9Cmj");
 
     const elements = this.stripe.elements();
     this.cardElement = elements.create('card', {
@@ -266,7 +240,7 @@ export default {
       }
     });
 
-    this.cardElement.mount('#card-element');*/
+    this.cardElement.mount('#card-element');
 
     this.form.order_type = this.$store.getters.getOrderType;
 

@@ -8,8 +8,13 @@ use App\Data\Models\UserDevices;
 use App\Data\Repositories\OrderRepository;
 use App\Http\Controllers\Controller;
 use App\PayPal;
+use App\User;
 use Edujugon\PushNotification\PushNotification;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Str;
+use Laravel\Cashier\Exceptions\IncompletePayment;
+use Laravel\Cashier\Exceptions\PaymentActionRequired;
 use Omnipay\Common\CreditCard;
 use Omnipay\Omnipay;
 use Validator;
@@ -79,11 +84,7 @@ class OrderController extends Controller
             'order_details.*.price' => 'required|numeric',
             'order_details.*.product_id' => 'required|numeric',
             'order_details.*.product_name' => 'required',
-            'order_details.*.quantity' => 'required',
-            'card_no' => 'required_if:payment,credit_card',
-            'ccExpiryMonth' => 'required_if:payment,credit_card',
-            'ccExpiryYear' => 'required_if:payment,credit_card',
-            'cvvNumber' => 'required_if:payment,credit_card'
+            'order_details.*.quantity' => 'required'
         ]);
 
         if ($validator->fails()) {
@@ -92,18 +93,82 @@ class OrderController extends Controller
             return response()->json($output, $code);
         }
 
-        if ($requestData['payment'] == "credit_card") {
-            $charge = $this->stripeCharge($requestData);
+        $data = $this->_repository->placeOrder($requestData);
 
-            if($charge['status'] == "succeeded")
-                $data = $this->_repository->placeOrder($requestData);
-            else
-                $code = 401;
-            $output = ['error' => ['code' => 401, 'message' => $charge['message']]];
+        if ($data) {
+
+            $requestData['user_id'] = $data['user_id'];
+            $requestData['phone_number'] = $data['phone_number'];
+            $requestData['total_amount'] = $requestData['total_amount_with_fee'];
+
+            $this->sendNotification($data);
+        }
+
+        $requestData['order_id'] = $data['order_id'];
+        $output = ['data' => $requestData, 'message' => "your order has been placed successfully "];
+        return response()->json($output, Response::HTTP_OK);
+    }
+
+    public function stripePayment(Request $request)
+    {
+        $requestData = $request->all();
+
+        $validator = Validator::make($requestData, [
+            'user_id' => 'required',
+            'total_amount_with_fee' => 'required',
+            'delivery_fees' => 'required',
+            'payment' => 'required',
+            'delivery_address' => 'required',
+            'order_details' => 'required|array',
+            'order_details.*.price' => 'required|numeric',
+            'order_details.*.product_id' => 'required|numeric',
+            'order_details.*.product_name' => 'required',
+            'order_details.*.quantity' => 'required'
+        ]);
+
+        $user = User::firstOrCreate(
+            [
+                "email" => $requestData['user_data']['email']
+            ],
+            [
+                "password" => Hash::make(Str::random(12)),
+                "name" =>  $requestData['user_data']['name'],
+                "phone_number" => $requestData['user_data']['number']
+            ]
+        );
+
+        if ($validator->fails()) {
+            $code = 401;
+            $output = ['error' => ['code' => $code, 'message' => $validator->errors()->first()]];
             return response()->json($output, $code);
+        }
 
-        } else {
+        try {
+
+            $payment = $user->charge(
+                $requestData['total_amount_with_fee']*100,
+                $requestData['payment_method_id']
+            );
+
+            $payment = $payment->asStripePaymentIntent();
+
             $data = $this->_repository->placeOrder($requestData);
+
+        } catch (IncompletePayment $e) {
+
+            if ($e instanceof PaymentActionRequired) {
+
+                $code = 401;
+                $output = ['error' => ['code' => 402, 'payment_data' => $e->payment]];
+                return response()->json($output, $code);
+
+            } else {
+
+                $code = 401;
+                $output = ['error' => ['code' => 401, 'message' => $e->getMessage()]];
+                return response()->json($output, $code);
+            }
+
         }
 
         if ($data) {
@@ -114,7 +179,7 @@ class OrderController extends Controller
 
             $this->sendNotification($data);
         }
-        $requestData['order_id'] = $data['order_id'];
+
         $output = ['data' => $requestData, 'message' => "your order has been placed successfully "];
         return response()->json($output, Response::HTTP_OK);
     }
