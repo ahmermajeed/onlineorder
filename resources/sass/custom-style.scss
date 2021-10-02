@@ -238,6 +238,7 @@ ul {
         }
 
         .navbar-collapse {
+
             @include media-breakpoint-down(md) {
                 position: fixed;
                 left: 0;
@@ -255,8 +256,12 @@ ul {
                     transform: translate(0, -50%);
                 }
             }
+            @include media-breakpoint-down(sm){
+                height: 100vh !important;
+            }
             &.show {
                 pointer-events: inherit;
+
             }
         }
     }
@@ -265,6 +270,7 @@ ul {
 .hooper{
     @include media-breakpoint-down(sm){
         height: auto !important;
+        display: none !important;
     }
     .hooper-list{
         li{
@@ -274,6 +280,16 @@ ul {
                     width: 100%;
                 }
             }
+        }
+    }
+}
+.hero-for-mobile{
+    display: none;
+    @include media-breakpoint-down(sm){
+        display: block;
+        img{
+            width: 100%;
+            height: auto;
         }
     }
 }
