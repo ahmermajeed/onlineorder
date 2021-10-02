@@ -9,17 +9,17 @@
               </div>
               <div class="col-md-9 col-12">
                 <ul class="d-flex">
-                  <li>
-                    <span><i class="icon-star"></i> 5</span>
-                    9 reviews
-                  </li>
+<!--                  <li>-->
+<!--                    <span><i class="icon-star"></i> 5</span>-->
+<!--                    9 reviews-->
+<!--                  </li>-->
                   <li>
                     <span><i class="icon-shopping-cart"></i> 25 mins</span>
-                    collection
+                    Collection
                   </li>
                   <li>
                     <span><i class="icon-scooter"></i> 30 mins</span>
-                    delivery
+                    Delivery
                   </li>
                 </ul>
               </div>
@@ -46,9 +46,9 @@
                         </div>
                     </div>
                     <div class="col-lg-5 col-md-8 col-sm-12">
-                        <div class="search-bar">
-                          <input type="search" name="" placeholder="Search Item">
-                        </div>
+<!--                        <div class="search-bar">-->
+<!--                          <input type="search" name="" placeholder="Search Item">-->
+<!--                        </div>-->
                         <div class="product-list order-product product-list-scroll">
                             <!-- for products -->
                             <div id="focus" class="product"  v-for="(item, index) in products" v-if="item.products.length">
@@ -434,7 +434,7 @@ export default {
   },
   mounted() {
     this.getCategories();
-    this.getProductAgainstCategories(false);
+    this.getProductAgainstCategories(1);
    // this.getDeals()
 
     this.orderType = this.$store.getters.getOrderType;
@@ -721,6 +721,11 @@ export default {
 
   },
   computed: {
+
+
+      info(){
+          return this.$store.state.general_data;
+      },
 
     cartItems () {
       return this.$store.state.cartItems;

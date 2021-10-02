@@ -63,10 +63,10 @@
                                                         class="nav-link js-scroll-trigger">Feedback</a></router-link>
                                             </li>
 
-                                            <li class="nav-item ">
-                                                <router-link :to="{ path: '/reservation-table'}"><a
-                                                        class="nav-link js-scroll-trigger">Reservation</a></router-link>
-                                            </li>
+<!--                                            <li class="nav-item ">-->
+<!--                                                <router-link :to="{ path: '/reservation-table'}"><a-->
+<!--                                                        class="nav-link js-scroll-trigger">Reservation</a></router-link>-->
+<!--                                            </li>-->
 
                                             <li class="nav-item">
                                                 <div class="order-now">
@@ -140,7 +140,8 @@
             </div>
             <!-- </nav> -->
             <slider v-if="this.$route.name !='online-order' &&
-                  this.$route.name !='reservation-table'"></slider>
+                  this.$route.name !='reservation-table'  &&
+                  this.$route.name !='check-out'"></slider>
             <!-- <div class="header-bottom section-fullwidth"
 
                  v-if="this.$route.name !='online-order' &&
