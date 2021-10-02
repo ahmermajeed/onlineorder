@@ -279,7 +279,7 @@
                 </div>
             </div>
         </section>
-        <div class="loading" v-if="loading">Loading&#8230;</div>
+        <!-- <div class="loading" v-if="loading">Loading&#8230;</div> -->
         <div class="container-fluid"
         :class="{'cart-menu-fixed': scrolled}"  v-on="handleScroll()">
             <!-- <div class="row full">

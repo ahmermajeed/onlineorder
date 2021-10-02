@@ -143,7 +143,9 @@
                   this.$route.name !='reservation-table'  &&
                   this.$route.name !='check-out'">
             </slider>
-            <div class="hero-for-mobile">
+            <div class="hero-for-mobile" v-if="this.$route.name !='online-order' &&
+                  this.$route.name !='reservation-table'  &&
+                  this.$route.name !='check-out'">
                 <img src="https://i.ibb.co/VD4yK5S/hero-img.png">
             </div>
             <!-- <div class="header-bottom section-fullwidth"
