@@ -4,7 +4,10 @@
         <section class="order-information">
             <div class="">
                 <div class="order-confirm-header">
+
+                    <router-link :to="{ path: '/'}">
                     <img :src="info.general_setting.header_logo">
+                    </router-link>
 
 <!--                    {{order_details}}-->
 
@@ -81,8 +84,9 @@
                     </div>
                     <div class="order-confirm-footer">
                         <div class="container">
+                            <router-link :to="{ path: '/'}">
                             <img :src="info.general_setting.header_logo" alt="" width="50px">
-
+                            </router-link>
 
                         <p>Question? Contact our      <a :href="`mailto:${info.email}`" > Customer Support </a></p>
                         <p class="copyright-text">{{info.general_setting.copyright_text}}</p>

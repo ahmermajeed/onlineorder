@@ -116,19 +116,22 @@ ul {
     background: #e5b052;
 }
 /***************** Header Start ****************/
-header{
-    &.masthead{
-        position: fixed;
-        width: 100%;
-        z-index: 9;
-        background: #fff;
-        transition: transform .3s ease,-webkit-transform .3s ease;
-    }
-    &.smooth-scroll{
-        -webkit-transform: translateY(-100%);
-        transform: translateY(-100%);
+.remove-overflow{
+    header{
+        &.masthead{
+            /*position: fixed;*/
+            width: 100%;
+            z-index: 9;
+            background: #fff;
+            transition: transform .3s ease,-webkit-transform .3s ease;
+        }
+        &.smooth-scroll{
+            -webkit-transform: translateY(-100%);
+            transform: translateY(-100%);
+        }
     }
 }
+
 /***************** Header End ****************/
 .pries p {
     font-size: 20px;
@@ -235,6 +238,7 @@ header{
         }
 
         .navbar-collapse {
+
             @include media-breakpoint-down(md) {
                 position: fixed;
                 left: 0;
@@ -252,8 +256,12 @@ header{
                     transform: translate(0, -50%);
                 }
             }
+            @include media-breakpoint-down(sm){
+                height: 100vh !important;
+            }
             &.show {
                 pointer-events: inherit;
+
             }
         }
     }
@@ -262,6 +270,7 @@ header{
 .hooper{
     @include media-breakpoint-down(sm){
         height: auto !important;
+        display: none !important;
     }
     .hooper-list{
         li{
@@ -271,6 +280,16 @@ header{
                     width: 100%;
                 }
             }
+        }
+    }
+}
+.hero-for-mobile{
+    display: none;
+    @include media-breakpoint-down(sm){
+        display: block;
+        img{
+            width: 100%;
+            height: auto;
         }
     }
 }
@@ -1826,7 +1845,7 @@ $duration: 50s;
     }
 }
 .filter-page-head {
-    padding-top: 180px;
+    padding-top: 25px;
     background: #e6e6e6;
     padding-bottom: 25px;
     .row{

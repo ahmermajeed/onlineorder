@@ -63,10 +63,10 @@
                                                         class="nav-link js-scroll-trigger">Feedback</a></router-link>
                                             </li>
 
-                                            <li class="nav-item ">
-                                                <router-link :to="{ path: '/reservation-table'}"><a
-                                                        class="nav-link js-scroll-trigger">Reservation</a></router-link>
-                                            </li>
+<!--                                            <li class="nav-item ">-->
+<!--                                                <router-link :to="{ path: '/reservation-table'}"><a-->
+<!--                                                        class="nav-link js-scroll-trigger">Reservation</a></router-link>-->
+<!--                                            </li>-->
 
                                             <li class="nav-item">
                                                 <div class="order-now">
@@ -140,7 +140,12 @@
             </div>
             <!-- </nav> -->
             <slider v-if="this.$route.name !='online-order' &&
-                  this.$route.name !='reservation-table'"></slider>
+                  this.$route.name !='reservation-table'  &&
+                  this.$route.name !='check-out'">
+            </slider>
+            <div class="hero-for-mobile">
+                <img src="https://i.ibb.co/VD4yK5S/hero-img.png">
+            </div>
             <!-- <div class="header-bottom section-fullwidth"
 
                  v-if="this.$route.name !='online-order' &&
@@ -343,7 +348,26 @@
         },
         mounted() {
             this.getGeneralSetting();
-            console.log(this.info)
+
+            // if (this.$route.name === 'online-order') {
+            //     $(document).scroll(function () {
+            //         var scroll = $(document).scrollTop();
+            //         if (scroll >= 200) {
+            //             $(".masthead").addClass("smooth-scroll");
+            //             $(".filter-page-style2").addClass("fixed-scroll");
+            //             $("html").addClass("remove-overflow");
+            //         } else {
+            //             $(".masthead").removeClass("smooth-scroll");
+            //             $(".filter-page-style2").removeClass("fixed-scroll");
+            //             $("html").removeClass("remove-overflow");
+            //         }
+            //     });
+            // } else {
+            //     $(".masthead").removeClass("smooth-scroll");
+            //     $(".filter-page-style2").removeClass("fixed-scroll");
+            //     $("html").removeClass("remove-overflow");
+            // }
+
         },
         computed: {
             loggedIn() {
@@ -372,17 +396,5 @@
 
         }
     }
-    $(document).scroll(function() {    
-        var scroll = $(document).scrollTop();
 
-        if (scroll >= 200) {
-            $(".masthead").addClass("smooth-scroll");
-            $(".filter-page-style2").addClass("fixed-scroll");
-            $("html").addClass("remove-overflow");
-        } else {
-            $(".masthead").removeClass("smooth-scroll");
-            $(".filter-page-style2").removeClass("fixed-scroll");
-            $("html").removeClass("remove-overflow");
-        }
-    });
 </script>

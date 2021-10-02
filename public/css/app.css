@@ -13894,15 +13894,15 @@ ul {
 
 /***************** Header Start ****************/
 
-header.masthead {
-  position: fixed;
+.remove-overflow header.masthead {
+  /*position: fixed;*/
   width: 100%;
   z-index: 9;
   background: #fff;
   transition: transform 0.3s ease;
 }
 
-header.smooth-scroll {
+.remove-overflow header.smooth-scroll {
   transform: translateY(-100%);
 }
 
@@ -14032,6 +14032,12 @@ header.smooth-scroll {
   }
 }
 
+@media (max-width: 767.98px) {
+  .header-bottom-section .main-menu .navbar-collapse {
+    height: 100vh !important;
+  }
+}
+
 .header-bottom-section .main-menu .navbar-collapse.show {
   pointer-events: inherit;
 }
@@ -14039,6 +14045,7 @@ header.smooth-scroll {
 @media (max-width: 767.98px) {
   .hooper {
     height: auto !important;
+    display: none !important;
   }
 }
 
@@ -14046,6 +14053,21 @@ header.smooth-scroll {
   .hooper .hooper-list li img {
     height: auto;
     width: 100%;
+  }
+}
+
+.hero-for-mobile {
+  display: none;
+}
+
+@media (max-width: 767.98px) {
+  .hero-for-mobile {
+    display: block;
+  }
+
+  .hero-for-mobile img {
+    width: 100%;
+    height: auto;
   }
 }
 
@@ -15842,7 +15864,7 @@ header.smooth-scroll {
 }
 
 .filter-page-head {
-  padding-top: 180px;
+  padding-top: 25px;
   background: #e6e6e6;
   padding-bottom: 25px;
 }

@@ -21,22 +21,18 @@
             <div class="container">
                 <div class="row main-title">
                     <div class="col-12">
-                        <h3>Welcome to Aisha Cafe</h3>
+                        <h3>{{stories.main_title}}</h3>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-md-5 col-12">
                         <div class="imgbox">
-                            <img src="https://cdn.pixabay.com/photo/2018/02/13/11/52/food-3150583_960_720.jpg">
+                            <img :src="stories.image">
                         </div>
                     </div>
                     <div class="col-md-7 col-12">
                         <div class="contentbox">
-                            <p>Suspendisse turpis diam, laoreet at efficitur quis, tincidunt non quam. Maecenas feugiat nec lacus vel gravida. Fusce eu placerat elit. Mauris scelerisque a augue id vestibulum. Maecenas ac massa a diam molestie pulvinar. Integer eu ligula blandit, ultricies orci quis, convallis risus. Praesent rhoncus velit sit amet libero ultrices, nec cursus lorem rhoncus. Pellentesque sit amet erat ac urna placerat consequat. Pellentesque mattis massa ante, vitae interdum magna finibus blandit. Vivamus in augue ac urna posuere pharetra et posuere eros.</p>
-                            <p>Curabitur sit amet lectus urna. Vestibulum magna lectus, efficitur a velit vel, suscipit dapibus lacus. Integer sit amet tristique nisl. Vivamus condimentum id velit ac tristique. Pellentesque lobortis lacus sem, sed blandit metus placerat quis. </p>
-                            <p>
-                            Phasellus sollicitudin sodales nibh, id vulputate ante euismod sed. Nunc vitae nisi mattis, rutrum massa vel, commodo libero. Aliquam sit amet congue nunc. Cras tristique sollicitudin enim, ut tempor ex finibus id. Nullam interdum, magna sed scelerisque volutpat, elit nisi viverra metus, sit amet ultricies mauris augue tincidunt felis.
-                            </p>
+                           {{stories.description}}
                         </div>
                     </div>
                 </div>
@@ -317,7 +313,7 @@
 
 
 
-        <reservation></reservation>
+<!--        <reservation></reservation>-->
 
 
         <!-- <section class="section-fullwidth deal-section">
@@ -437,6 +433,8 @@
         mounted() {
             this.getStory();
             this.getCategories();
+            document.documentElement.classList.remove("remove-overflow") ;
+
 
         },
         methods: {

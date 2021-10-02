@@ -27,6 +27,9 @@ class GeneralSettings extends Model
         'printer_ip_5',
         'shop_status',
         'stripe_publishable_key',
-        'stripe_secret_key'
+        'stripe_secret_key',
+        'min_collection_time',
+        'min_delivery_time'
+
     ];
 }

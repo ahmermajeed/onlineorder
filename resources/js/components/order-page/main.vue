@@ -9,17 +9,17 @@
               </div>
               <div class="col-md-9 col-12">
                 <ul class="d-flex">
+<!--                  <li>-->
+<!--                    <span><i class="icon-star"></i> 5</span>-->
+<!--                    9 reviews-->
+<!--                  </li>-->
                   <li>
-                    <span><i class="icon-star"></i> 5</span>
-                    9 reviews
+                    <span><i class="icon-shopping-cart"></i> {{info.general_setting.min_collection_time}} mins</span>
+                    Collection
                   </li>
                   <li>
-                    <span><i class="icon-shopping-cart"></i> 25 mins</span>
-                    collection
-                  </li>
-                  <li>
-                    <span><i class="icon-scooter"></i> 30 mins</span>
-                    delivery
+                    <span><i class="icon-scooter"></i> {{info.general_setting.min_delivery_time}}  mins </span>
+                    Delivery
                   </li>
                 </ul>
               </div>
@@ -35,7 +35,7 @@
                                 <div class="lp-sidebar-title cate-heading">
                                     <h3>Categories</h3>
                                 </div>
-                                
+
                                 <div class="list-group list-group-flush cate-list">
                                     <a href="#"   @click.prevent="getProductAgainstCategories(false)" class="list-group-item">All<span class="float-right badge badge-light round"></span> </a>
 
@@ -46,9 +46,9 @@
                         </div>
                     </div>
                     <div class="col-lg-5 col-md-8 col-sm-12">
-                        <div class="search-bar">
-                          <input type="search" name="" placeholder="Search Item">
-                        </div>
+<!--                        <div class="search-bar">-->
+<!--                          <input type="search" name="" placeholder="Search Item">-->
+<!--                        </div>-->
                         <div class="product-list order-product product-list-scroll">
                             <!-- for products -->
                             <div id="focus" class="product"  v-for="(item, index) in products" v-if="item.products.length">
@@ -106,7 +106,7 @@
                                     <span class="icon-up-arrow"></span>
                                   <span class="icon-down-arrow"></span>
                                   </b-button>
-                                  
+
                                 </b-card-header>
                                 <b-collapse :id="'accordion-'+index" visible accordion="my-accordion" role="tabpanel" >
                                   <b-card-body>
@@ -141,7 +141,7 @@
                                   </b-card-body>
                                 </b-collapse>
                               </b-card>
-                            
+
                           </div>
                         </section>
                     </div>
@@ -196,15 +196,15 @@
                                                     <strong>{{extra.group_name}}:</strong> {{extra.choice}}
                                                 </div>
                                             </td>
-<!-- 
+<!--
                                             <td  v-if="!cart.extras" class="p-0">£ {{priceFormat(cart.price * cart.quantity) }}</td> -->
-                                            
+
                                             <!-- <td >£{{priceFormat(cart.single_product_total_amount)}} </td> -->
-                                               
+
                                          <!--    <td class="order-quty">
 
-                                           
-                                                
+
+
                                             </td> -->
                                             <td>
                                                 <span v-if="!cart.extras" class="p-0">
@@ -222,23 +222,23 @@
                                                             <a  class="icon-down"  href="#"  @click.prevent="quantityMinusInCart(cart)"> <i class="icon-subtract"></i></a>
                                                             <span class="text-center">{{ cart.quantity}}  <!-- <i>X</i> --></span>
                                                             <a class="icon-up"  href="#" @click.prevent="quantityAddInCart(product_index, cart)"> <i class="icon-plus"  ></i></a>
-                                                            
-                                                        </div> 
-                                                   </span>
-                                                
-                                            </td>
-                                     
-                                            
 
-                                            
+                                                        </div>
+                                                   </span>
+
+                                            </td>
+
+
+
+
                                         </tr>
                                     </table>
                                 </div>
                                 <div class="cart-btn mt-3 mb-3 text-center">
                                      <button class="anima-btn custom-btn move-eff btn btn-rounded-danger" @click="placeOrder()"><span>Checkout</span> <!-- <i class="fas fa-long-arrow-alt-right"></i> --></button>
-                                </div> 
+                                </div>
                             </div>
-                            
+
                         </div>
                         <div class="mobile-cart-button" v-bind:class="{ cartheight: cart_height }" v-if="cartItems.length > 0">
                 <div class="inner">
@@ -248,7 +248,7 @@
                     <span class="products-value">£{{priceFormat(totalPrice)}}</span>
                     <span class="text" @click="opencartlist()">Checkout</span>
 
-                    
+
                 </div>
                 <ul v-for="(cart, product_index) in cartItems">
                     <li>
@@ -312,24 +312,24 @@
                     </svg>{{count}}
                      <span class="products-value">£{{priceFormat(totalPrice)}}</span>
                 </span>
-                   
+
                     <span class="text chek-out-btn btn btn-rounded-danger" @click="opencartlist()">Checkout</span>
-                    
+
                    <!--   <button class=" chek-out-btn anima-btn custom-btn move-eff btn btn-rounded-danger " @click="opencartlist()"><span>Checkout</span><i class="fas fa-long-arrow-alt-right"></i></button>  -->
                 </div>
 <!--                 <div class="mb-cart-box">
                 <ul class="border-all" v-for="(cart, product_index) in getAllCartArray"  v-if="product_index  > 0">
                     <li>
-                       
+
                         <span class="meal">
                              <span class="qty">
                                <i class="fa fa-angle-up" @click="quantityAddInCart(product_index)"></i>
-                              
+
                                <i class="fa fa-angle-down" @click="quantityMinusInCart(product_index)"></i>
                         </span>
                          <h3> {{ cart.quantity}} {{cart.product_name}}</h3>
-                        
-                           
+
+
                             <ul class="" v-if="cart.extras" v-for="(extra, extra_index) in cart.extras">
                                 <li><h3 class="font-weight:800px;">{{extra.group_name}}:
                                 {{extra.choice}}</h3> </li>
@@ -337,17 +337,17 @@
 
                                 <a href="#"  @click="updateProduct(cart.product_id,cart,product_index)"><i v-b-tooltip.hover title="Edit Meal" class="fas fa-pen">
 
-</i></a>       
+</i></a>
                             <span class="price">£{{priceFormat(cart.single_product_total_amount)}}</span>
                               <a href="#"  @click.prevent="removeFromCart(product_index)"> <i                                 v-b-tooltip.hover title="Remove Meal" class="icon-delete"></i></a>
 
-                               
+
                             </span>
-                                
+
                             </ul>
-                            
+
                         </span>
-                       
+
                     </li>
                 </ul>
                 </div> -->
@@ -434,7 +434,7 @@ export default {
   },
   mounted() {
     this.getCategories();
-    this.getProductAgainstCategories(false);
+    this.getProductAgainstCategories(1);
    // this.getDeals()
 
     this.orderType = this.$store.getters.getOrderType;
@@ -447,9 +447,10 @@ export default {
 
     this.scrollToMain();
     window.addEventListener("scroll", this.handleScroll);
-
+    document.documentElement.className = 'remove-overflow' ;
 
   },
+
   created(){
     this.checkShoptime()
   },
@@ -530,6 +531,7 @@ export default {
       this.editDeal = false;
       this.editDealsData = {};
       this.foodAllergyModal = false;
+      document.documentElement.classList.remove("onlypopup") ;
     },
 
     getCategories() {
@@ -607,6 +609,9 @@ export default {
             _this.loading = false;
             _this.product = true;
           });
+
+
+        document.documentElement.className = 'onlypopup' ;
     },
 
     viewDeal(id) {
@@ -619,6 +624,8 @@ export default {
             _this.loading = false;
             _this.dealsModal = true;
           });
+
+        document.documentElement.className = 'onlypopup' ;
     },
 
     placeOrder() {
@@ -720,6 +727,11 @@ export default {
 
   },
   computed: {
+
+
+      info(){
+          return this.$store.state.general_data;
+      },
 
     cartItems () {
       return this.$store.state.cartItems;
@@ -1095,7 +1107,7 @@ export default {
         background:#fff;
     }
 
-    
+
     #cart-stiky > img {
         max-width:100%;
     }
@@ -1110,7 +1122,7 @@ export default {
         background: #ccc;
     }
 
-    
+
 
     .cart .order .table-holder {
         overflow-y: scroll !important;
@@ -1947,7 +1959,7 @@ export default {
         float:right;
     }
 
-    
+
     @-webkit-keyframes spinner {
         0% {
             -webkit-transform: rotate(0deg);
