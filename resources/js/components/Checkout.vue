@@ -273,13 +273,14 @@ export default {
     if (this.form.order_type == "Pickup")
       this.interval = 30;
     else
-      this.interval = 45
+      this.interval = 45;
 
-    this.getTimeSlots()
+    this.getTimeSlots();
 
     this.scrollToMain();
     this.getOffers();
 
+    document.documentElement.classList.remove("remove-overflow") ;
     // this.generateToken();
   },
   methods: {
