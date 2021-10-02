@@ -2760,7 +2760,7 @@ input[type="color"].form-control:disabled {
 @font-face {
   font-family: "icomoon";
   src: url(/fonts/icomoon.eot?76635d63bce16256f86327d58b6321b8);
-  src: url(/fonts/icomoon.eot?76635d63bce16256f86327d58b6321b8) format("embedded-opentype"), url(/fonts/icomoon.ttf?5fa4d4ce9add11a85d13c7c47caa6b07) format("truetype"), url(/fonts/icomoon.woff?568a82c6c1998690e9ec7f07d2be5b24) format("woff"), url(/fonts/icomoon.svg?d985cec9ced340166aa66f0157d2ec3b) format("svg");
+  src: url(/fonts/icomoon.eot?76635d63bce16256f86327d58b6321b8) format("embedded-opentype"), url(/fonts/icomoon.ttf?5fa4d4ce9add11a85d13c7c47caa6b07) format("truetype"), url(/fonts/icomoon.woff?568a82c6c1998690e9ec7f07d2be5b24) format("woff"), url(/fonts/icomoon.svg?18a6e7236a4ff9e8383fe0c191ad6aaa) format("svg");
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -14032,6 +14032,12 @@ ul {
   }
 }
 
+@media (max-width: 767.98px) {
+  .header-bottom-section .main-menu .navbar-collapse {
+    height: 100vh !important;
+  }
+}
+
 .header-bottom-section .main-menu .navbar-collapse.show {
   pointer-events: inherit;
 }
@@ -14039,6 +14045,7 @@ ul {
 @media (max-width: 767.98px) {
   .hooper {
     height: auto !important;
+    display: none !important;
   }
 }
 
@@ -14046,6 +14053,21 @@ ul {
   .hooper .hooper-list li img {
     height: auto;
     width: 100%;
+  }
+}
+
+.hero-for-mobile {
+  display: none;
+}
+
+@media (max-width: 767.98px) {
+  .hero-for-mobile {
+    display: block;
+  }
+
+  .hero-for-mobile img {
+    width: 100%;
+    height: auto;
   }
 }
 
