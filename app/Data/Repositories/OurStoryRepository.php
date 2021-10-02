@@ -23,16 +23,7 @@ class OurStoryRepository
     {
 
         $data = array();
-        $model = $this->model;
-
-        if ($pagination) {
-            $model = $model->paginate($perPage);
-            $data['data'] = $model->items();
-            $data = paginator($data, $model);
-        } else {
-            $data['data'] = $model->get();
-        }
-
+        $data['data'] = $this->model->first();
         return $data;
     }
 }
