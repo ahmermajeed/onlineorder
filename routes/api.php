@@ -61,6 +61,9 @@ Route::resource('deals', 'Api\DealController');
 /** Place Order */
 Route::post('placeOrder', 'Api\OrderController@placeOrder');
 
+/** Stripe Order */
+Route::post('stripe-order', 'Api\OrderController@stripePayment');
+
 Route::post('get-total-sales', 'Api\OrderController@getTotalSales');
 
 /** CMS Pages */
