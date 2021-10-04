@@ -127,13 +127,11 @@ class DeliveryChargesController extends Controller
 
         }
 
-        if($show_asap == 1) {
-            array_push($returnArray, "As soon as possible");
-        }
-
-        asort($returnArray);
-
         $final_array = $this->_repository->array_flatten($returnArray);
+
+        if($show_asap == 1) {
+            array_unshift($final_array, "As soon as possible");
+        }
 
         return $final_array;
     }
