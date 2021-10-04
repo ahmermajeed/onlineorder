@@ -4,3 +4,15 @@ node_modules/.cache/babel-loader/911e22fd4a569c5f0a15e5b86eee3ed4.json.gz
 papag-live.zip
 vendor
 /vendor
+/node_modules
+/public/hot
+/public/storage
+/storage/*.key
+/.idea
+.env.backup
+.phpunit.result.cache
+Homestead.json
+Homestead.yaml
+npm-debug.log
+yarn-error.log
+.idea/workspace.xml
