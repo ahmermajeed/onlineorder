@@ -75,37 +75,42 @@ class TableReservationRepository
         $params['booking_date'] = Carbon::parse($params['booking_date']);
         $params['booking_time'] = Carbon::parse($params['booking_time']);
 
+        $customer = null;
+
+        try {
         
+            $isCustomerExists = CustomerReservation::where('email', $params['email'])->first();
 
-        $isCustomerExists = CustomerReservation::where('email', $params['email'])->first();
+            $customer = CustomerReservation::create($params);
+            if (empty($isCustomerExists) ) {
+                $password = rand();
+                $user = [
+                    'name'         => $params['firstname'].' '.$params['lastname'],
+                    'email'        => $params['email'],  
+                    'password'     => bcrypt($password),
+                    "phone_number" => $params['phone'],
+                ];
+                Users::create($user);
+                $user['password']     = $password;
+                $user['booking_date'] = $params['booking_date'];
+                $user['booking_time'] = $params['booking_time'];
+                $user['persons']      = $params['persons'];
 
-        if (empty($isCustomerExists) ) {
-            $password = rand();
-            $user = [
-                'name'         => $params['firstname'].' '.$params['lastname'],
-                'email'        => $params['email'],  
-                'password'     => bcrypt($password),
-                "phone_number" => $params['phone'],
-            ];
-            Users::create($user);
-            $user['password']     = $password;
-            $user['booking_date'] = $params['booking_date'];
-            $user['booking_time'] = $params['booking_time'];
-            $user['persons']      = $params['persons'];
+                // Send email to customer about reservation with login credentials.
+                SendCustomerCredentialsJob::dispatch($user);
+            } else {
+                $user = Users::where('email', $params['email'])->first();
+                
+                // Send email to customer about reservation without login credentials.
+                SendRetainingCustomerJob::dispatch($user);
+            }
 
-            // Send email to customer about reservation with login credentials.
-            SendCustomerCredentialsJob::dispatch($user);
-        } else {
-            $user = Users::where('email', $params['email'])->first();
-            
-            // Send email to customer about reservation without login credentials.
-            SendRetainingCustomerJob::dispatch($user);
+            // Send email to admin about customer Reservation.
+            SendReservationAdminEmailJob::dispatch($user);
+
+        } catch (Exception $ex) { 
+            \Log::error($ex->getMessage());
         }
-        $customer = CustomerReservation::create($params);
-
-        // Send email to admin about customer Reservation.
-        SendReservationAdminEmailJob::dispatch($user);
-
         return $customer; 
     }
 
