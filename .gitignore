@@ -2,5 +2,23 @@ online-front.zip
 node_modules/.cache/babel-loader/911e22fd4a569c5f0a15e5b86eee3ed4.json.gz
 .env
 papag-live.zip
+<<<<<<< HEAD
 vendor
 /vendor
+=======
+/node_modules
+/public/hot
+/public/storage
+/storage/*.key
+/.idea
+/vendor
+.env
+.env.backup
+.phpunit.result.cache
+Homestead.json
+Homestead.yaml
+npm-debug.log
+yarn-error.log
+.idea/workspace.xml
+vendor/
+>>>>>>> Danial-Customer-Reservation

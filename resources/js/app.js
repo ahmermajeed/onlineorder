@@ -8,7 +8,13 @@ import store from './store.js'
 import VueCtkDateTimePicker from 'vue-ctk-date-time-picker';
 import 'vue-ctk-date-time-picker/dist/vue-ctk-date-time-picker.css';
 
+import Datepicker from 'vuejs-datepicker';
+
+Vue.use(Datepicker);
+
 Vue.use(VueRouter);
+
+window.moment = require('moment');
 
 import BootstrapVue from 'bootstrap-vue';
 import { ModalPlugin } from 'bootstrap-vue'

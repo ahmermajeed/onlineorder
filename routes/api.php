@@ -18,6 +18,12 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
 
+Route::post('reservation', 'Api\TableReservationController@customerReservation');
+Route::get('restuarant_time', 'Api\TableReservationController@getDayTime');
+Route::get('no_of_persons', 'Api\TableReservationController@getNoOfPerson');
+
+
+
 Route::group(['prefix' => 'auth'], function () {
     Route::post('login', 'Auth\LoginController@login');
 });
@@ -95,5 +101,8 @@ Route::resource('printers', 'Api\PrintersController');
 
 
 
+
 /** Get All Orders */
 Route::get('getOrderDetails/{id}', 'Api\OrderController@getOrderDetails');
+
+
