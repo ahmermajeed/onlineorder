@@ -2759,13 +2759,8 @@ input[type="color"].form-control:disabled {
 /*@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap');*/
 @font-face {
   font-family: "icomoon";
-<<<<<<< HEAD
   src: url(/fonts/icomoon.eot?76635d63bce16256f86327d58b6321b8);
-  src: url(/fonts/icomoon.eot?76635d63bce16256f86327d58b6321b8) format("embedded-opentype"), url(/fonts/icomoon.ttf?5fa4d4ce9add11a85d13c7c47caa6b07) format("truetype"), url(/fonts/icomoon.woff?568a82c6c1998690e9ec7f07d2be5b24) format("woff"), url(/fonts/icomoon.svg?18a6e7236a4ff9e8383fe0c191ad6aaa) format("svg");
-=======
-  src: url(/fonts/icomoon.eot?03e9c1021e0578eac5b3225d75a35455);
-  src: url(/fonts/icomoon.eot?03e9c1021e0578eac5b3225d75a35455) format("embedded-opentype"), url(/fonts/icomoon.ttf?ef2c04a929051a457b17fe73d2bfbb8e) format("truetype"), url(/fonts/icomoon.woff?4cd9de708c59161e073fa960cbeb439e) format("woff"), url(/fonts/icomoon.svg?f0165bd2b7d68585839e6f19d42fba3c) format("svg");
->>>>>>> Danial-Customer-Reservation
+  src: url(/fonts/icomoon.eot?76635d63bce16256f86327d58b6321b8) format("embedded-opentype"), url(/fonts/icomoon.ttf?5fa4d4ce9add11a85d13c7c47caa6b07) format("truetype"), url(/fonts/icomoon.woff?568a82c6c1998690e9ec7f07d2be5b24) format("woff"), url(/fonts/icomoon.svg?d985cec9ced340166aa66f0157d2ec3b) format("svg");
   font-weight: normal;
   font-style: normal;
   font-display: block;
