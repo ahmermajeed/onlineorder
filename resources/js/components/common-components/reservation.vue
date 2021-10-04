@@ -80,7 +80,7 @@
 										<div class="col-md-3">
 											<div class="form-group">
 												<label for="">Phone Number <span style="color:red">*</span></label>
-												<input type="number" class="form-control" placeholder="XXXX XXX XXX" v-model="formData.phone">
+												<input type="number" class="form-control" placeholder="07XXXXXXXXX" v-model="formData.phone" >
 											</div>
 										</div>
 										<div class="col-md-3">
