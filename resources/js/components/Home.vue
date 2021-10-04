@@ -313,7 +313,7 @@
 
 
 
-        <reservation></reservation>
+<!--        <reservation></reservation>-->
 
 
         <!-- <section class="section-fullwidth deal-section">
