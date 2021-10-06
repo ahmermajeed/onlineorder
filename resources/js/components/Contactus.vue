@@ -79,8 +79,50 @@
                                                         @click.prevent="
                                                             openPostalCode
                                                         "
-                                                        >Order Online</a
+                                                        >Order</a
                                                     >
+                                                </li>
+                                                <li>
+                                                <div class="cart-icon" v-click-outside="onClickOutside">
+                                                    <a href="#" v-on:click="openCart = !openCart">
+                                                        <i class="fa fa-shopping-cart"></i>
+                                                        <span class="cart-count">{{getAllCartArray.length-1}}</span>
+                                                    </a>
+
+                                                    <div class="show-cart" v-if="openCart" id="hide">
+                                                        <div class="card-body">
+                                                            <div class="row">
+                                                                    <div class="col-md-12 item-row scroll style-3">
+                                                                        <div class="row selected-item-row" v-for="(cart, product_index) in getAllCartArray" v-if="product_index  > 0">
+                                                                            <div class="col-md-8">
+                                                                                <div class="item-list">
+                                                                                    <h5>{{cart.product_name}}</h5>
+                                                                                    <p v-if="cart.extras" v-for="(extra, extra_index) in cart.extras"><b>{{extra.group_name}} : </b>{{extra.choice}}</p>
+                                                                                    <span class="item-quantity"><strong>Qunatity: </strong>{{ cart.quantity}}</span>
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="col-md-4">
+                                                                                <div class="edit-options">
+                                                                                    <span class="remove-item mr-2"  v-b-tooltip.hover title="remove" @click.prevent="removeFromCart(product_index)"><i class="fa fa-times"></i></span>
+                                                                                    <span class="edit-item" v-b-tooltip.hover title="edit" @click="updateProduct(cart.product_id,cart,product_index)"><i class="fas fa-pen"></i></span>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                        <p v-if="getAllCartArray.length == 1" class="empty-cart">No item in cart</p>
+                                                                    </div>
+
+                                                            </div>
+                                                            <div class="view-total-menu" v-if="getAllCartArray.length !== 1">
+                                                                <div class="col-md-12">
+                                                                    <div class="total"><strong>Total: </strong>£{{priceFormat(total_amount)}}</div>
+                                                                        <router-link  class="view-cart-menu" :to="{ path: '/online-order/'+postal_code}"> View Menu </router-link>
+                                                                </div>
+                                                                
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
                                                 </li>
                                             </ul>
                                         </div>
@@ -237,17 +279,7 @@
                                         </div>
                                     </div>
                                 </div>
-                           <!--      <ul>
-                                    <li>
-                                        <i class="fa fa-phone-square"></i>
-                                    </li>
-                                    <li>
-                                        <i class="fa fa-envelop"></i><a href="mailto:">0121 337 7378</a>
-                                    </li>                                
-                                    <li>
-                                        <i class="fa-map-marker"></i>223-225 Edward Road, Balsall Heath, B12 9LH, Birmingham
-                                    </li>
-                                </ul> -->
+                           
                             </div>
                         </div>
                     </div>
@@ -416,64 +448,165 @@
     </div>
 </template>
 <script>
-export default {
-    data() {
-        return {
-            postal_code: '',
-            error_message: '',
-            showPopup: false,
-            showPostalCode: false,
-            menu: false,
-            allergy: false,
-        }
-    },
-    methods: {
-        hideModal() {
-            this.showPopup = false
-            this.showPostalCode = false
+import vClickOutside from 'v-click-outside'
+
+    export default {
+
+        directives: {
+           clickOutside: vClickOutside.directive
+         },
+
+        data() {
+            return {
+                postal_code: '',
+                error_message: '',
+                showPopup: false,
+                showPostalCode: false,
+                menu: false,
+                allergy: false,
+                openCart: false,
+                orderType: '',
+                openCart: false,
+                total_amount: 0,
+                editProduct: false,
+                list: {},
+                editList: {},
+                has_sizes: false,
+                editIndex: '',
+                editDeal: false,
+                deals_data: {},
+                editDealsData: {},
+            }
         },
 
-        openMenu() {
-            this.showPopup = true
-            this.menu = true
-            this.allergy = false
+        computed: {
+            loggedIn(){
+                return this.$store.getters.getUserData ;
+            },
+            getAllCartArray() {
+                let self = this;
+                if (this.$store.getters.getAllCartArray.length > 1) {
+                    let sum = 0;
+                    let count = 0;
+                    this.$store.getters.getAllCartArray.forEach(function (item) {
+                        count++;
+                        if (count > 1) {
+                            sum += item.single_product_total_amount;
+                        }
+                    });
+                    this.total_amount = sum;
+                }
+                return this.$store.getters.getAllCartArray;
+            },
         },
 
-        openAllergy() {
-            this.showPopup = true
-            this.allergy = true
-            this.menu = false
-        },
-        openPostalCode() {
-            this.showPopup = false
-            this.allergy = false
-            this.menu = false
-            this.showPostalCode = true
-        },
+        methods: {
 
-        openSearchBox() {
-            $('.search > a').on('click', function() {
-                $(this)
-                    .parent()
-                    .addClass('show_search')
-            })
-            $('.search_close').on('click', function() {
-                $('.search_close')
-                    .closest('.search')
-                    .removeClass('show_search')
-            })
-        },
+            onClickOutside (event) {
+                this.openCart = false
+            },
 
-        responsiveMenu() {
-            $('.ice_menu_wraper a.toggle').on('click', function() {
-                $('.ice_menu').addClass('in')
-            })
-            $('.toggle.close').on('click', function() {
-                $(this)
-                    .closest('.ice_menu')
-                    .removeClass('in')
-            })
-        },
-    },
+            hideModal() {
+                this.showPopup = false;
+                this.showPostalCode = false;
+            },
+
+            openMenu() {
+                this.showPopup = true;
+                this.menu = true;
+                this.allergy = false;
+            },
+
+            openAllergy() {
+                this.showPopup = true;
+                this.allergy = true;
+                this.menu = false;
+            },
+            openPostalCode() {
+                this.showPopup = false;
+                this.allergy = false;
+                this.menu = false;
+                this.showPostalCode = true;
+            },
+
+            openSearchBox() {
+                $(".search > a").on("click", function(){
+                    $(this).parent().addClass('show_search');
+                });
+                $(".search_close").on("click", function(){
+                    $('.search_close').closest('.search').removeClass('show_search');
+                }); 
+            },
+
+            responsiveMenu() {
+                $(".ice_menu_wraper a.toggle").on("click", function(){
+                 $(".ice_menu").addClass("in");
+                });
+                $(".toggle.close").on("click", function(){
+                  $(this).closest(".ice_menu").removeClass("in");
+                });
+            },
+
+            priceFormat(num) {
+                return parseFloat(num).toFixed(2);
+            },
+
+            removeFromCart(index) {
+                let cart_data = this.$store.getters.getAllCartArray;
+                cart_data.splice(index, 1);
+                this.updateCart();
+            },
+
+               updateProduct(id, cart, index) {
+                let _this = this;
+                var url = '';
+                if (cart.product_type === "deal") {
+                    this.editDealsData = cart;
+                    _this.loading = true;
+                    url = '/api/deals/' + id;
+
+                } else {
+
+                    this.editList = cart;
+                    _this.loading = true;
+                    url = '/api/products/' + id;
+                }
+                axios.get(url)
+                    .then((response) => {
+                        if (cart.product_type === 'deal') {
+
+                            _this.deals_data = response.data.data;
+                            _this.loading = false;
+                            _this.editIndex = index;
+                            _this.editDeal = true;
+
+                        } else {
+
+                            _this.list = response.data.data;
+                            _this.has_sizes = _this.list.sizes.length > 0;
+                            _this.loading = false;
+                            _this.editIndex = index;
+                            _this.editProduct = true;
+
+                        }
+                    });
+            },
+
+            updateCart() {
+                let self = this;
+                if (this.$store.getters.getAllCartArray.length > 1) {
+                    let sum = 0;
+                    let count = 0;
+                    this.$store.getters.getAllCartArray.forEach(function (item) {
+                        count++;
+                        if (count >= 1) {
+                            sum += item.single_product_total_amount;
+                        }
+                    });
+                    self.total_amount = sum;
+                }
+                return this.$store.getters.getAllCartArray;
+            },
+    }
 }
 </script>

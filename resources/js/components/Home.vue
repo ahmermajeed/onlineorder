@@ -36,7 +36,7 @@
 											</router-link>
 											</li>
 											<li>
-			                                <router-link :to="{ path: '/contact'}">
+			                                <router-link :to="{ path: '/contact-us'}">
 												<a href="javascript:;">Contact</a>
 											</router-link>
 											</li>
