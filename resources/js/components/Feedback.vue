@@ -633,12 +633,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="overlay">
-                    <img
-                        src="images/footer/ice.png"
-                        alt="icecream-parlour-footer-overlay"
-                    />
-                </div>
+            
             </div>
             <div class="ice_copyright_wrapper text-center">
                 <div class="container">
