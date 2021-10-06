@@ -87,6 +87,11 @@ const router = new VueRouter({
             name: 'blog',
             component: require('./components/Blog.vue').default,
         },
+        {
+            path: '/allergy',
+            name: 'allergy',
+            component: require('./components/Allergy.vue').default,
+        },
     ],
 });
     

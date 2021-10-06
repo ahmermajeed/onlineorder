@@ -381,7 +381,7 @@ input:focus, textarea:focus, select:focus, button:focus {
     
 }
 .header_wrapper .ice_menu_wraper{
-    width: calc(100% - 225px);
+    width: calc(100% - 165px);
     float: left;
     padding-left: 45px;
     margin-top: 15px;
@@ -416,7 +416,7 @@ input:focus, textarea:focus, select:focus, button:focus {
 .ice_menu > ul > li {
     display: inline-block;
 	position:relative;
-	padding: 21px 25px;
+	padding: 18px 13px;
 }
 .ice_menu > ul > li:after {
     content: '';
@@ -445,7 +445,7 @@ input:focus, textarea:focus, select:focus, button:focus {
     text-decoration: none;
     text-transform: uppercase;
     color: #fff;
-    font-size: 18px;
+    font-size: 13px;
     font-family: 'Philosopher', sans-serif;
     line-height: 24px;
 }
@@ -939,7 +939,7 @@ a.search_close:after {
 	background-color: #ffffff;
 	padding-bottom: 15px;
 	margin-bottom: 30px;
-	height: 440px;
+	height: auto;
 }
 .special_section .special_img{
 	width: 100%;

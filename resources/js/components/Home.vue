@@ -35,7 +35,22 @@
 												<a href="javascript:;">about</a>
 											</router-link>
 											</li>
-											<li><a href="javascript:;" @click.prevent="openPostalCode">Order Online</a></li>
+											<li>
+			                                <router-link :to="{ path: '/contact'}">
+												<a href="javascript:;">Contact</a>
+											</router-link>
+											</li>
+											<li>
+			                                <router-link :to="{ path: '/feedback'}">
+												<a href="javascript:;">Feedback</a>
+											</router-link>
+											</li>
+											<li>
+			                                <router-link :to="{ path: '/allergy'}">
+												<a href="javascript:;">Allergy</a>
+											</router-link>
+											</li>
+											<li><a href="javascript:;" @click.prevent="openPostalCode">Order</a></li>
 											<li>
 											<div class="cart-icon" v-click-outside="onClickOutside">
 											    <a href="#" v-on:click="openCart = !openCart">
@@ -130,7 +145,6 @@
 									<img src="images/special/7.jpg" alt="icecream-parlour-special" class="img-responsive">
 								</div>
 								<h2 class="ice_sub_heading"><a href="javascript:;"><i class="icon-check-alt"></i> VIP Shakes </a></h2>
-								<p>A large selection of delicious shakes inspired by different chocolate bars and/or candy.</p>
 							</div>
 						</div>
 						<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 pull-left">
@@ -139,7 +153,6 @@
 									<img src="images/special/9.jpg" alt="icecream-parlour-special2" class="img-responsive">
 								</div>
 								<h2 class="ice_sub_heading"><a href="javascript:;"><i class="icon-check-alt"></i> Waffles</a></h2>
-								<p>A tasty variety of waffles accompanied with a scoop of vanilla ice cream.</p>
 							</div>
 						</div>
 						<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 pull-left">
@@ -148,7 +161,6 @@
 									<img src="images/special/3.jpg" alt="icecream-parlour-special2" class="img-responsive">
 								</div>
 								<h2 class="ice_sub_heading"><a href="javascript:;"><i class="icon-check-alt"></i> Cookie Dough</a></h2>
-								<p>Delicious cookie dough available in 10 different flavours. A scoop of vanilla ice cream is also included.</p>
 							</div>
 						</div>
 						<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 col-lg-offset-0 col-md-offset-0 col-sm-offset-3 col-sx-offset-0 pull-left">
@@ -157,7 +169,6 @@
 									<img src="images/special/8.jpg" alt="icecream-parlour-special3" class="img-responsive">
 								</div>
 								<h2 class="ice_sub_heading"><a href="javascript:;"><i class="icon-check-alt"></i> Pancakes</a></h2>
-								<p>Fluffy and delicious stacks of pancakes available in a variety of flavors.</p>
 							</div>
 						</div>
 					</div>

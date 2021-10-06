@@ -59,6 +59,21 @@
 													</router-link>
 												</li>
 												<li>
+				                                <router-link :to="{ path: '/contact-us'}">
+													<a href="javascript:;">Contact</a>
+												</router-link>
+												</li>
+												<li>
+				                                <router-link :to="{ path: '/feedback'}">
+													<a href="javascript:;">Feedback</a>
+												</router-link>
+												</li>
+												<li>
+				                                <router-link :to="{ path: '/allergy'}">
+													<a href="javascript:;">Allergy</a>
+												</router-link>
+												</li>
+												<li>
 													<a
 														href="javascript:;"
 														@click.prevent="

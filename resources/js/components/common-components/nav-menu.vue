@@ -60,6 +60,21 @@
                                                 <a class="nav-link js-scroll-trigger">About</a>
                                             </router-link>
                                         </li> 
+                                        <li class="nav-item active">
+                                        <router-link :to="{ path: '/contact-us'}">
+                                            <a href="javascript:;" class="nav-link js-scroll-trigger">Contact</a>
+                                        </router-link>
+                                        </li>
+                                        <li class="nav-item active">
+                                        <router-link :to="{ path: '/feedback'}">
+                                            <a href="javascript:;" class="nav-link js-scroll-trigger">Feedback</a>
+                                        </router-link>
+                                        </li>
+                                        <li class="nav-item active">
+                                        <router-link :to="{ path: '/allergy'}">
+                                            <a href="javascript:;" class="nav-link js-scroll-trigger">Allergy</a>
+                                        </router-link>
+                                        </li>
                                         <li>
                                      <div class="cart-icon order-page-menu" v-click-outside="onClickOutside">
                                          <a href="#" v-on:click="openCart = !openCart">
