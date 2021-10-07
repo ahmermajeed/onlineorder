@@ -95,6 +95,14 @@ const router = new VueRouter({
             path: '/order-confirmed/:id',
             component: require('./components/OrderConfirmed.vue').default,
         },
+        {
+            path: '/allergy',
+            component: require('./components/Allergy.vue').default,
+        },
+        {
+            path: '/current-offers',
+            component: require('./components/CurrentOffers.vue').default,
+        },
     ],
 
 });

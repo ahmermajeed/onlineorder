@@ -2265,8 +2265,8 @@ $duration: 50s;
     .feedback-banner {
         padding: 80px 0px 30px 0px;
 
-        /*.feed-banner-first {
-            background-image: url(/images/theme-1/feed-back-img-two.jpg);
+        .feed-banner-first {
+            background-image: url(/images/feed-back-img-two.png);
             background-repeat: no-repeat;
             background-position: top;
             border-top-right-radius: 80px;
@@ -2293,12 +2293,12 @@ $duration: 50s;
             @include media-breakpoint-down(sm) {
                 margin-left: 40px;
             }
-        }*/
+        }
     }
 
     .form-feedback-section {
-        /*position: absolute;*/
-        top: 19%;
+        position: absolute;
+        top: 12%;
         left: 11%;
 
         @include media-breakpoint-only(md) {
@@ -3728,3 +3728,61 @@ span.address {
     }
 }
 /*************** Reservation-section-end *******************/
+
+
+/***************contact-us-start*******************/
+.contact-maps {
+    width: 100%;   
+}
+.inner-section .form-feedback-section.contact-form {
+    top: 27%;
+}
+.contact-details {
+    height: 300px;
+    box-shadow: 20px 7px 29px 5px rgb(0 0 0 / 30%);
+    width: 100%;
+    background: #000;
+    color: #fff;
+    padding: 30px;
+    @include media-breakpoint-down(sm) {
+        height: 630px;
+    }
+}
+.contact-details .box {
+    border: 1px solid #efefef;
+    border-radius: 18px;
+    padding: 20px;
+    text-align: center;
+    height: 140px;
+    box-shadow: 0px 0px 5px 1px #ccc;
+    @include media-breakpoint-down(sm) {
+        margin-bottom: 30px;
+    }
+}
+.contact-details h1 {
+    color: #fff;
+    text-align: center;
+    margin-bottom: 30px;
+}
+.box img {
+       width: 42px;
+    margin-bottom: 15px;
+}
+.box p {
+    color: #fff;
+    font-size: 16px;
+}
+.box p a {
+    color: #fff;
+    font-size: 16px;
+}
+/***************contact-us-end*******************/
+
+/***************allergy-start*******************/
+.allergy-info {
+    background: #000;
+    color: #fff;
+    padding: 50px;
+    height: 230px;
+}
+/***************allergy-end*******************/

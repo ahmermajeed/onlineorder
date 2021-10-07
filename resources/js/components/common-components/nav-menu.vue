@@ -62,6 +62,22 @@
                                                 <router-link :to="{ path: '/feedback'}"><a
                                                         class="nav-link js-scroll-trigger">Feedback</a></router-link>
                                             </li>
+                                            <li class="nav-item">
+                                                <router-link :to="{ path: '/contact-us'}">
+                                                    <a class="nav-link js-scroll-trigger">Contact</a>
+                                                </router-link>
+                                            </li>
+                                            <li class="nav-item">
+                                                <router-link :to="{ path: '/allergy'}">
+                                                    <a class="nav-link js-scroll-trigger">Allergy</a>
+                                                </router-link>
+                                            </li>
+                                            <li class="nav-item">
+                                                <router-link :to="{ path: '/offers'}">
+                                                    <a class="nav-link js-scroll-trigger">Offers</a>
+                                                </router-link>
+                                            </li>
+
 
 <!--                                            <li class="nav-item ">-->
 <!--                                                <router-link :to="{ path: '/reservation-table'}"><a-->
