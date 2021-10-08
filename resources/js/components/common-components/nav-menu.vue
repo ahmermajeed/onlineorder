@@ -45,6 +45,10 @@
                                 </router-link>
                             </div>
                             <div class="col-6 col-md-9 right">
+                                <a href="#" class="cart-icon-mb" v-on:click="openCart = !openCart">
+                                    <i class="fa fa-shopping-cart"></i>
+                                    <span class="cart-count">{{count}}</span>
+                                </a>
                                 <nav class="navbar navbar-expand-lg navbar-light justify-content-end main-menu p-0 mt-2">
                                     <button class="navbar-toggler" type="button" data-toggle="collapse"
                                             data-target="#navbarResponsiv" aria-controls="navbarResponsiv"

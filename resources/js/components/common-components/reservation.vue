@@ -20,7 +20,7 @@
 							<form @submit.prevent="validateBeforeSubmit()">
 								<div class="form-details">
 									<div class="row">
-										<div class="col-md-3">
+										<div class="col-md-4">
 											<div class="form-group">
 												<label for="">Enter Booking Date <span style="color:red">*</span></label>
 												<datepicker placeholder="Enter Booking Date" @selected="selectedFromDate"
@@ -35,14 +35,14 @@
 										<div class="col-md-4 select-person">
 											<div class="form-group">
 												<label for="">Enter No. of Persons <span style="color:red">*</span></label>
-												<span><i class="fas fa-user-friends"></i></span>
-												<select  class="form-control" id="" v-model="formData.persons" >
+												<span class="f-icon"><i class="fas fa-user-friends"></i></span>
+												<select  class="form-control select-box" id="" v-model="formData.persons" >
 													<option value="null" selected disabled>Select No Of Persons</option>
 													<option v-for="(person, index) in noOfperson"  :value="person">{{ person }}</option>
 												</select>   
 											</div>                      
 										</div>
-										<div class="col-md-3">
+										<div class="col-md-4">
 											<label for="">&nbsp;</label>
 											<a class="btn btn-rounded-danger btn-block" v-on:click="checkDate()">
 												Book Your Table
@@ -53,9 +53,11 @@
 
 								<div class="select-reservation-time boxed" id="hide"  v-if="timeSection">
 									<h6>Select a Time: <span style="color:red">*</span></h6>
-									<div class="form-group" v-for="(slot, index) in timeSlot">
-										<input class="inputTime" type="radio" :id="'time' + index" name="time" :value="slot" @change="showDinerDetail" v-model="formData.booking_time">
-										<label class="labelTime" :for="'time' + index"><i class="fas fa-clock mr-2"></i>{{ slot }}</label>
+									<div class="time-avaiable">
+										<div class="form-group" v-for="(slot, index) in timeSlot">
+											<input class="inputTime" type="radio" :id="'time' + index" name="time" :value="slot" @change="showDinerDetail" v-model="formData.booking_time">
+											<label class="labelTime" :for="'time' + index"><i class="fas fa-clock mr-2"></i>{{ slot }}</label>
+										</div>
 									</div>
 								</div>
 
@@ -103,7 +105,7 @@
 												</select>
 											</div>
 										</div>
-										<div class="col-md-3">
+										<div class="col-md-9">
 											<div class="form-group">
 												<label for="">Add a special request:</label>
 												<textarea class="form-control" placeholder="Add a special request (optional)" rows="1" v-model="formData.special_request">
@@ -134,7 +136,7 @@
 												</label>
 											</div>
 										</div>
-										<div class="col-md-3">
+										<div class="col-md-5">
 											<label for="">&nbsp;</label>
 											<button class="btn btn-rounded-danger btn-block" type="submit">
 												Complete Reservation
