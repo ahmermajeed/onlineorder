@@ -113,7 +113,7 @@ ul {
 }
 
 .btn-outline-success:not(:disabled):not(.disabled):active{
-    background: #e5b052;
+    background: #a7160a;
 }
 /***************** Header Start ****************/
 .remove-overflow{
@@ -374,7 +374,7 @@ ul {
             content: "";
             width: 100%;
             height: 100%;
-            border: 5px solid #fcce25;
+            border: 5px solid #ffcc00;
             left: 0;
             transform: translate(10px, 10px);
         }
@@ -756,7 +756,7 @@ $duration: 50s;
                     display: inline-block;
                     line-height: 36px;
                     text-align: center;
-                    background: #4b2117;
+                    background: #a7160a;
                 }
             }
         }
@@ -1045,7 +1045,7 @@ $duration: 50s;
         .card-content {
             overflow: hidden;
             h3 {
-                color: #e5b052;
+                color: #a7160a;
                 font-size: 24px;
                 font-weight: bold;
                 @include media-breakpoint-down(lg) {
@@ -1173,7 +1173,7 @@ $duration: 50s;
         }
 
         strong {
-            color: #e5b052;
+            color: #a7160a;
             line-height: 45px;
             @include media-breakpoint-down(sm) {
                 font-size: 25px;
@@ -1448,11 +1448,12 @@ $duration: 50s;
                 font-size: 14px;
             }
             span{
-                background: #e5b052;
+                background: #ffcc00;
                 padding: 4px 10px;
                 border-radius: 4px;
                 display: inline-block;
                 margin-top: 10px;
+                color: #000;
                 span{
                     padding: 0;
                     margin: 0;
@@ -1493,7 +1494,7 @@ $duration: 50s;
         width: 85%;
     }
     .btn{
-        background: #e5b052;
+        background: #a7160a;
         padding: 15px 80px;
         font-size: 20px;
         color: #fff;
@@ -1891,7 +1892,7 @@ $duration: 50s;
                     font-size: 12px;
                     color: #000;
                     i{
-                        color:#e5b052;
+                        color:#a7160a;
                     }
                 }
 
@@ -2024,7 +2025,7 @@ $duration: 50s;
             padding: 4px 10px 4px 10px;
             border-radius: 32px;
             color: #fff !important;
-            background-color: #e5b052;
+            background-color: #a7160a;
             border: none;
             float: right;
             font-size: 12px;
@@ -2240,7 +2241,7 @@ $duration: 50s;
                     box-shadow: none !important;
                     display: flex;
                     justify-content: space-between;
-                    background:#e5b052;
+                    background:#a7160a;
                     border: none;
                     &.disabled{
                         background: #ccc;
@@ -2936,7 +2937,7 @@ $duration: 50s;
     .inner {
         padding: 17px;
         border-bottom: 1px solid #cccccc;
-        background: #fab333;
+        background: #ffcc00;
         .products-value {
             margin-left: 30px;
         }
