@@ -5,7 +5,7 @@
           <div class="container">
             <div class="row">
               <div class="col-md-2 col-12">
-                <h3>site_name
+                <h3>
                     {{info.general_setting.site_name}}</h3>
               </div>
               <div class="col-md-9 col-12">
