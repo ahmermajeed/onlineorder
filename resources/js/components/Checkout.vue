@@ -1,5 +1,6 @@
 <template>
     <div>
+      <div class="for-checkout-only">
         <header-menu></header-menu>
 
         <section class="inner-section check-out-page">
@@ -169,6 +170,7 @@
         </section>
         <footer-menu></footer-menu>
 
+    </div>
     </div>
 </template>
 

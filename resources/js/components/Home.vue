@@ -227,7 +227,7 @@
                     </div>
 
                 </div>
-                <button class="btn"  @click.prevent="openPostalCode">Order Now</button>
+                <button class="btn"  @click.prevent="openPostalCode">See More</button>
                 <div class="menus pattern ">
 
                 </div>
