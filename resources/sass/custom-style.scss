@@ -30,6 +30,12 @@ strong {
     font-size: 40px;
 }
 
+input, select, button, textarea{
+    -webkit-appearance: none;
+   -moz-appearance: none;
+        appearance: none;
+}
+
 .badge {
     font-size: 12px;
 
