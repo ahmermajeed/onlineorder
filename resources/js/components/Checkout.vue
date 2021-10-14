@@ -1,5 +1,6 @@
 <template>
     <div>
+      <div class="for-checkout-only">
         <header-menu></header-menu>
 
         <section class="inner-section check-out-page">
@@ -8,14 +9,7 @@
             <div class="row">
        <div class="col-sm-12 checkoutpage col-lg-8 col-md-8 col-sm-8 checkout-cart-form">
            <div class="row">
-<!--
-               <div class="col-sm-12 offset-sm-0 col-md-10 offset-md-1">
 
-               <ul id="error_msg" >
-                   <li  v-for="(errorMessage) in errorMessage" style="color: red;" >{{errorMessage}}</li>
-               </ul>
-               </div>
--->
 
                <div class="col-sm-12  col-md-10" id="mainSection">
                    <div class="row section-border order-check">
@@ -176,6 +170,7 @@
         </section>
         <footer-menu></footer-menu>
 
+    </div>
     </div>
 </template>
 

@@ -17,6 +17,7 @@
       
 
             <div class="form-cart order-selection">
+                <img src="images/order-food.png">
                 <label><span>Choose your order type:</span></label>
                 <div class="switch-field" >
                     <input type="radio" id="radio-one" @change="showPostalCode" v-model="order_type" name="switch-one" value="Delivery"/>

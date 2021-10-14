@@ -30,6 +30,24 @@ strong {
     font-size: 40px;
 }
 
+input, select, button, textarea{
+    -webkit-appearance: none;
+   -moz-appearance: none;
+        appearance: none;
+}
+
+input[type=radio]{
+    -webkit-appearance: radio;
+   -moz-appearance: radio;
+        appearance: radio;
+}
+
+input[type=checkbox]{
+    -webkit-appearance: checkbox;
+   -moz-appearance: checkbox;
+        appearance: checkbox;
+}
+
 .badge {
     font-size: 12px;
 
@@ -131,6 +149,7 @@ ul {
         }
     }
 }
+
 
 /***************** Header End ****************/
 .pries p {
@@ -262,6 +281,29 @@ ul {
             &.show {
                 pointer-events: inherit;
 
+            }
+        }
+    }
+    .right{
+        @include media-breakpoint-down(sm){
+            display: flex;
+            align-items: flex-end;
+            justify-content: flex-end;
+        }
+        .cart-icon-mb{
+            display: none;
+            @include media-breakpoint-down(sm){
+                display: flex;
+                font-size: 30px;
+                margin-right:5px;
+                color: #000;
+                position: relative;
+            }
+            .cart-count{
+                @include media-breakpoint-down(sm){
+                    top: 0;
+                    left: -10px;
+                }
             }
         }
     }
@@ -2080,8 +2122,14 @@ $duration: 50s;
             }
             .modal-body{
                 @include media-breakpoint-down(sm){
-                    padding-top: 90px !important;
+                    padding-top: 170px !important;
                     position: unset;
+                }
+                .description{
+                    @include media-breakpoint-down(sm){
+                        padding: 15px;
+                        width: 100%;
+                    }
                 }
 
             }
@@ -2519,11 +2567,49 @@ $duration: 50s;
 
 /*********************about end************************/
 .custom-modal {
+    @include media-breakpoint-down(sm){
+        padding-right: 0;
+    }
     .modal-header {
         padding: 10px 1rem;
     }
     .modal-body {
         padding: 1.5rem 1rem;
+        @include media-breakpoint-down(sm){
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        .order-selection{
+            @include media-breakpoint-down(sm){
+                width: 100%;
+            }
+            img{
+                display: none;
+                @include media-breakpoint-down(sm){
+                    display: block;
+                    margin: 0 auto;
+                }
+            }
+            label{
+                @include media-breakpoint-down(sm){
+                    margin: 30px 0;
+                }
+                span{
+                    @include media-breakpoint-down(sm){
+                        font-size: 20px;
+                        display: inline-block;
+                    }
+                }
+            }
+            .switch-field{
+                @include media-breakpoint-down(sm){
+                    margin: 0 auto;
+                    width: max-content;
+                }
+            }
+        }
     }
 }
 .error {
@@ -2904,7 +2990,13 @@ $duration: 50s;
         }
     }
 }
-
+.for-checkout-only{
+    footer{
+        @include media-breakpoint-down(sm){
+            display: none;
+        }  
+    } 
+}
 .mobile-cart-button {
     padding: 0px !important;
     background-color: #fff !important;
@@ -2915,6 +3007,9 @@ $duration: 50s;
         background: #fab333;
         .products-value {
             margin-left: 30px;
+            @include media-breakpoint-down(sm){
+                font-size: 16px;
+            }
         }
         .chek-out-btn {
             min-width: 110px;
@@ -3382,6 +3477,60 @@ span.address {
     h2 {
         color: #fff;
         margin-bottom: 20px;
+    }
+    form{
+        margin-top: 20px;
+        .form-group{
+            label{
+                span{
+                    position: static;
+                    font-size: 13px;
+                }
+            }
+            input{
+                width: 100%;
+                padding: 15px 20px;
+                border-radius: 3px;
+                border: none;
+                line-height: 1;
+                color: #000;
+            }
+            .form-control{
+                width: 100%;
+                padding: 15px 20px;
+                border-radius: 3px;
+                border: none;
+                line-height: 1;
+                height: auto;
+                color: #000;
+                min-height: 51px;
+                &.select-box{
+                    padding: 15px 40px;
+                }
+                option{
+                    color: #000;
+                }
+            }
+            .f-icon{
+                top: 42px;
+            }
+        }
+        .btn{
+            height: 52px;
+            line-height: 39px;
+            text-transform: uppercase;
+            font-size: 20px;
+            font-weight: 500;
+        }
+        .time-avaiable{
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+            .form-group{
+                margin-right: 5px;
+            }
+        }
+
     }
 }
 

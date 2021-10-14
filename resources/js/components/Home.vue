@@ -227,7 +227,7 @@
                     </div>
 
                 </div>
-                <button class="btn"  @click.prevent="openPostalCode">Order Now</button>
+                <button class="btn"  @click.prevent="openPostalCode">See More</button>
                 <div class="menus pattern ">
 
                 </div>
@@ -313,7 +313,7 @@
 
 
 
-<!--        <reservation></reservation>-->
+        <reservation></reservation>
 
 
         <!-- <section class="section-fullwidth deal-section">
