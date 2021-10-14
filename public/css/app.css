@@ -13812,6 +13812,18 @@ textarea {
   appearance: none;
 }
 
+input[type=radio] {
+  -webkit-appearance: radio;
+  -moz-appearance: radio;
+  appearance: radio;
+}
+
+input[type=checkbox] {
+  -webkit-appearance: checkbox;
+  -moz-appearance: checkbox;
+  appearance: checkbox;
+}
+
 .badge {
   font-size: 12px;
 }
@@ -16173,8 +16185,15 @@ ul {
 
 @media (max-width: 767.98px) {
   .custom-btm-popup .modal-dialog-centered .modal-content .modal-body {
-    padding-top: 90px !important;
+    padding-top: 170px !important;
     position: unset;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .custom-btm-popup .modal-dialog-centered .modal-content .modal-body .description {
+    padding: 15px;
+    width: 100%;
   }
 }
 

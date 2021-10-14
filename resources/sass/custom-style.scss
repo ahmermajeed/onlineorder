@@ -36,6 +36,18 @@ input, select, button, textarea{
         appearance: none;
 }
 
+input[type=radio]{
+    -webkit-appearance: radio;
+   -moz-appearance: radio;
+        appearance: radio;
+}
+
+input[type=checkbox]{
+    -webkit-appearance: checkbox;
+   -moz-appearance: checkbox;
+        appearance: checkbox;
+}
+
 .badge {
     font-size: 12px;
 
@@ -2110,8 +2122,14 @@ $duration: 50s;
             }
             .modal-body{
                 @include media-breakpoint-down(sm){
-                    padding-top: 90px !important;
+                    padding-top: 170px !important;
                     position: unset;
+                }
+                .description{
+                    @include media-breakpoint-down(sm){
+                        padding: 15px;
+                        width: 100%;
+                    }
                 }
 
             }
