@@ -335,4 +335,21 @@ class OrderController extends Controller
         ];
         return response()->json($output, Response::HTTP_OK);
     }
+
+    public function getKitchenOrders(Request $request)
+    {
+        $requestData = $request->all();
+        $pagination = !empty($requestData['pagination']) ? $requestData['pagination'] : false;
+        $per_page = self::PER_PAGE;
+
+        $data = $this->_repository->getKitchenOrders($pagination, $per_page, $requestData);
+
+        $output = [
+            'data' => $data,
+            'pagination' => !empty($data['pagination']) ? $data['pagination'] : false,
+            'message' => "Orders Retrieved Successfully",
+        ];
+        return response()->json($output, Response::HTTP_OK);
+    }
+
 }
