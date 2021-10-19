@@ -95,6 +95,12 @@ const router = new VueRouter({
             path: '/order-confirmed/:id',
             component: require('./components/OrderConfirmed.vue').default,
         },
+
+        {
+            path: '/kitchen-screen',
+            component: require('./components/KitchenScreen.vue').default,
+        },
+
     ],
 
 });
