@@ -73,13 +73,13 @@ class DeliveryChargesController extends Controller
 
             $getSpecificDate = $dayDate->format('Y-m-d');
 
-            if($todayDay == $days['day']) {
+            if ($todayDay == $days['day']) {
                 $getSpecificDate = $today->format('Y-m-d');
             }
 
             $specific = RestaurantTimingSpecific::where('specific_date', $getSpecificDate)->first();
 
-            if($specific) {
+            if ($specific) {
 
                 $days['start_time'] = $specific['start_time'];
                 $days['end_time'] = $specific['end_time'];
@@ -88,14 +88,14 @@ class DeliveryChargesController extends Controller
 
             $time = array();// Define output
 
-            if($todayDay == $days['day']) {
+            if ($todayDay == $days['day']) {
 
                 $current_timestamp = Carbon::now()->timestamp;
                 $current_date_time = Carbon::now()->format('H:30:00');
 
                 $StartTime = strtotime($days['start_time']); //Get Timestamp
 
-                if($current_timestamp >= $StartTime) {
+                if ($current_timestamp >= $StartTime) {
 
                     $current_date_time = Carbon::parse($current_date_time)->addMinutes(30)->format("H:i:s");
 
@@ -119,7 +119,7 @@ class DeliveryChargesController extends Controller
                     $show_asap = 1;
                 }
 
-                $time[] = $days['day']. " ".$getSpecificDate." at ". date("G:i", $StartTime);
+                $time[] = $days['day'] . " " . $getSpecificDate ." ".date("G:i", $StartTime);
                 $StartTime += $AddMins;  // Endtime check
             }
 
@@ -129,7 +129,16 @@ class DeliveryChargesController extends Controller
 
         $final_array = $this->_repository->array_flatten($returnArray);
 
-        if($show_asap == 1) {
+        $compare_function = function ($a, $b) {
+            $a_timestamp = strtotime($a); // convert a (string) date/time to a (int) timestamp
+            $b_timestamp = strtotime($b);
+            // new feature in php 7
+            return $a_timestamp <=> $b_timestamp;
+        };
+
+        usort($final_array, $compare_function);
+
+        if ($show_asap == 1) {
             array_unshift($final_array, "As soon as possible");
         }
 
