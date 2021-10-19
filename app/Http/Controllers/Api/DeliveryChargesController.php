@@ -60,7 +60,7 @@ class DeliveryChargesController extends Controller
     {
         $returnArray = array();
 
-        $show_asap = 0;
+        $show_asap = 1;
 
         $available_days = RestaurantTiming::where('shop_close', 1)->get(); // 1 matlb shop khuli ha
 
