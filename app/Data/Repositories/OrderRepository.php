@@ -134,6 +134,8 @@ class OrderRepository
 
     public function getKitchenOrders($pagination = false,$perPage = 10, $input = [])
     {
+        $return = array();
+
         $getCurrentDay = Carbon::today()->format('l');
         $getCurrentDate = Carbon::today()->format('Y-m-d');
 
@@ -155,7 +157,13 @@ class OrderRepository
             ->whereBetween('created_at', [$start_time, $end_time])
             ->get()->toArray();
 
-        return $data;
+        $return['orders'] = $data;
+        $return['accepted_orders'] = $this->model->where('status', 'Accepted')->whereBetween('created_at', [$start_time, $end_time])->count();
+        $return['preparing_orders'] = $this->model->where('status', 'Preparing')->whereBetween('created_at', [$start_time, $end_time])->count();
+        $return['completed_orders'] = $this->model->where('status', 'Completed')->whereBetween('created_at', [$start_time, $end_time])->count();
+        $return['new_orders'] = $this->model->where('status', 'Order Placed')->whereBetween('created_at', [$start_time, $end_time])->count();
+
+        return $return;
     }
 
 }
