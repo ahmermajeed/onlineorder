@@ -3938,5 +3938,7 @@ nav.collapse.show .navbar-collapse {
     height: 0;
 }
 .mobile-cart-icon {
-    display: none;
+    @include media-breakpoint-down(sm) {
+        display: none;
+    }
 }

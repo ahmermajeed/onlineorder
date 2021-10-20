@@ -18279,7 +18279,9 @@ nav.collapse.show .navbar-collapse {
   height: 0;
 }
 
-.mobile-cart-icon {
-  display: none;
+@media (max-width: 767.98px) {
+  .mobile-cart-icon {
+    display: none;
+  }
 }
 
