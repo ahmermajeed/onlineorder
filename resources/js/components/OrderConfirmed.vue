@@ -22,15 +22,15 @@
                         <table class="table">
                             <thead>
                               <tr>
-                                <th scope="col">Order Date</th>
+                                <th scope="col">Date</th>
                                 <th scope="col">Order No.</th>
                                 <th scope="col">Payment</th>
-                                <th scope="col">Order Type</th>
+                                <th scope="col">Type</th>
                               </tr>
                             </thead>
                           <tbody>
                             <tr>
-                              <td>{{returnDateFormat(order_details.created_at)}}</td>
+                              <td width="105">{{returnDateFormat(order_details.created_at)}}</td>
                               <td>{{order_details.reference}}</td>
                               <td>{{order_details.payment}}</td>
                               <td>{{order_details.order_type}}</td>
@@ -43,34 +43,31 @@
                     </div>
                     <div class="item-detail container">
                         <div class="row" v-for="(item, index) in order_details.details">
-                            <div class="col-md-8 product-order-detail">
+                            <div class="col-md-8">
+                                <div class="product-order-detail">
                               <p>{{item.product_name}}</p>
                               <p class="more-info" v-if="item.extras" v-html="getExtrasData(item.extras)"> </p>
+                              </div>
                             </div>
                             <div class="col-md-2">
                                 <p>{{item.special_instructions}}</p>
                             </div>
                             <div class="col-md-2">
-                                <p class="text-right text-left-mob">£ {{item.price}}</p>
+                                <p class="text-right text-left-mob item-price">£ {{item.price}}</p>
                             </div>
                         </div>
                     </div>
-                    <div class="container">
-                        <div class="sepeartor-line"></div>
-                    </div>
+                    
                     <div class="bill-info container">
                         <ul>
                             <li>
-                                <div class="list-detail">Total</div>
+                                <div class="list-detail"><strong>Total:</strong></div>
                                 <div class="list-detail text-right"> £ {{order_details.total_amount_with_fee}}</div>
                             </li>
 
                         </ul>
                     </div>
 
-                    <div class="container">
-                        <div class="sepeartor-line"></div>
-                    </div>
 
 
                     <div class="container">

@@ -279,32 +279,11 @@
                 </div>
             </div>
         </section>
-        <!-- <div class="loading" v-if="loading">Loading&#8230;</div> -->
-        <div class="container-fluid"
-        :class="{'cart-menu-fixed': scrolled}"  v-on="handleScroll()">
-            <!-- <div class="row full">
 
-                    <div class="offset-categories">
-                        <div id="categories-tabs">
-                            <div class="desktop-tabs">
-                                <ul class="nav nav-tabs">
-                                    <li><a href="#"  @click.prevent="getProductAgainstCategories(false)" >All</a></li>
-                                    <li  v-for="(item, index) in categories"><a href="#" @click.prevent="getProductAgainstCategories(item.id)">{{item.name}}</a></li>
-                                    <li> <a href="#"   @click.prevent="getDeals(1)">DEALS </a></li>
-
-                                </ul>
-                            </div>
-                            <div class="form-group product-search">
-                                <div class=input-group>
-                                    <div class=input-group-addon>
-                                        <i class="fa fa-search"></i>
-                                    </div>
-                                    <input class="form-control" placeholder="Search">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-            </div> -->
+        <div 
+            class="container-fluid"
+            :class="{'cart-menu-fixed': scrolled}"  
+            v-on="handleScroll()">
             <div class="mobile-cart-button" v-bind:class="{ cartheight: cart_height }" v-if="cartItems.length > 0">
                 <div class="inner">
                     <span class="products-count"><svg xmlns="http://www.w3.org/2000/svg" class="svg-stroke-container" width="24" height="24">
@@ -314,43 +293,7 @@
                 </span>
 
                     <span class="text chek-out-btn btn btn-rounded-danger" @click="opencartlist()">Checkout</span>
-
-                   <!--   <button class=" chek-out-btn anima-btn custom-btn move-eff btn btn-rounded-danger " @click="opencartlist()"><span>Checkout</span><i class="fas fa-long-arrow-alt-right"></i></button>  -->
                 </div>
-<!--                 <div class="mb-cart-box">
-                <ul class="border-all" v-for="(cart, product_index) in getAllCartArray"  v-if="product_index  > 0">
-                    <li>
-
-                        <span class="meal">
-                             <span class="qty">
-                               <i class="fa fa-angle-up" @click="quantityAddInCart(product_index)"></i>
-
-                               <i class="fa fa-angle-down" @click="quantityMinusInCart(product_index)"></i>
-                        </span>
-                         <h3> {{ cart.quantity}} {{cart.product_name}}</h3>
-
-
-                            <ul class="" v-if="cart.extras" v-for="(extra, extra_index) in cart.extras">
-                                <li><h3 class="font-weight:800px;">{{extra.group_name}}:
-                                {{extra.choice}}</h3> </li>
-                                <span class="mealactions">
-
-                                <a href="#"  @click="updateProduct(cart.product_id,cart,product_index)"><i v-b-tooltip.hover title="Edit Meal" class="fas fa-pen">
-
-</i></a>
-                            <span class="price">£{{priceFormat(cart.single_product_total_amount)}}</span>
-                              <a href="#"  @click.prevent="removeFromCart(product_index)"> <i                                 v-b-tooltip.hover title="Remove Meal" class="icon-delete"></i></a>
-
-
-                            </span>
-
-                            </ul>
-
-                        </span>
-
-                    </li>
-                </ul>
-                </div> -->
 
                 <div class="mb-cart-box">
                     <ul class="cart-list"  v-for="(cart, product_index) in cartItems">
@@ -2261,6 +2204,7 @@ export default {
         .cartheight .confirm-btn .move-eff span{
             top: 3px;
             left: 0;
+            font-size: 18px;
         }
 
     }
