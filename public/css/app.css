@@ -18090,6 +18090,7 @@ span.address {
 .item-detail .more-info {
   font-size: 16px;
   color: grey;
+  margin-bottom: 20px;
 }
 
 .order-confirm-header {
@@ -18282,6 +18283,17 @@ nav.collapse.show .navbar-collapse {
 @media (max-width: 767.98px) {
   .mobile-cart-icon {
     display: none;
+  }
+}
+
+.bill-info strong,
+.total-bill-info strong {
+  font-size: 18px;
+}
+
+@media (max-width: 767.98px) {
+  .mob-text-left {
+    text-align: left !important;
   }
 }
 

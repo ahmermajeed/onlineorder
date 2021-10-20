@@ -30,7 +30,7 @@
                             </thead>
                           <tbody>
                             <tr>
-                              <td width="105">{{returnDateFormat(order_details.created_at)}}</td>
+                              <td>{{returnDateFormat(order_details.created_at)}}</td>
                               <td>{{order_details.reference}}</td>
                               <td>{{order_details.payment}}</td>
                               <td>{{order_details.order_type}}</td>
@@ -57,16 +57,39 @@
                             </div>
                         </div>
                     </div>
-                    
-                    <div class="bill-info container">
-                        <ul>
-                            <li>
-                                <div class="list-detail"><strong>Total:</strong></div>
-                                <div class="list-detail text-right"> £ {{order_details.total_amount_with_fee}}</div>
-                            </li>
 
-                        </ul>
+
+                 
+
+                    <div class="item-detail container">
+                        <div class="row">
+                            <div class="col-md-10">
+                                <div class="product-order-detail">
+                                    <p>Total:</p>
+                              </div>
+                            </div>
+                         
+                            <div class="col-md-2">
+                                <p class="text-right text-left-mob item-price">£ {{order_details.total_amount_with_fee}}</p>
+                            </div>
+                        </div>
                     </div>
+
+
+               
+                    
+             <!--        <div class="bill-info container">
+                        <div class="row">
+                            <div class="col-md-12">
+                               <ul>
+                                   <li>
+                                       <div class="list-detail"><strong>Total:</strong></div>
+                                       <div class="list-detail text-right"> £ {{order_details.total_amount_with_fee}}</div>
+                                   </li>
+                               </ul> 
+                            </div>
+                        </div>
+                    </div> -->
 
 
 
@@ -75,7 +98,6 @@
                     </div>
 
                     <div class="shipping-info container">
-<!--                        <p class="mb-2">We'll send you shipping confirmation when your item(s) are on the way! We appreciate your business, and hope you enjoy your purchase.</p>-->
                         <p class="mb-1"><strong>Thank you!</strong></p>
                         <p class="mb-4">{{info.general_setting.site_name}}</p>
                     </div>
