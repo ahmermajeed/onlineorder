@@ -104,3 +104,4 @@ Route::get('getOrderDetails/{id}', 'Api\OrderController@getOrderDetails');
 
 Route::get('getKitchenOrders', 'Api\OrderController@getKitchenOrders');
 
+Route::resource('feedback', 'Api\FeedbackController');
