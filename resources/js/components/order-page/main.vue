@@ -279,11 +279,10 @@
                 </div>
             </div>
         </section>
+        <!-- <div class="loading" v-if="loading">Loading&#8230;</div> -->
+        <div class="container-fluid"
+        >
 
-        <div 
-            class="container-fluid"
-            :class="{'cart-menu-fixed': scrolled}"  
-            v-on="handleScroll()">
             <div class="mobile-cart-button" v-bind:class="{ cartheight: cart_height }" v-if="cartItems.length > 0">
                 <div class="inner">
                     <span class="products-count"><svg xmlns="http://www.w3.org/2000/svg" class="svg-stroke-container" width="24" height="24">
@@ -293,7 +292,9 @@
                 </span>
 
                     <span class="text chek-out-btn btn btn-rounded-danger" @click="opencartlist()">Checkout</span>
+
                 </div>
+
 
                 <div class="mb-cart-box">
                     <ul class="cart-list"  v-for="(cart, product_index) in cartItems">
@@ -2062,7 +2063,7 @@ export default {
         }
         .mobile-cart-button .inner span.text:after{
             margin-left:5px;
-            content: "\f105";
+            content: "";
             display: inline-block;
             font: normal normal normal 14px/1 Font Awesome 5 Free;
             font-size: inherit;
@@ -2072,7 +2073,7 @@ export default {
         }
         .mobile-cart-button.cartheight .inner span.text:after{
             margin-left:5px;
-            content: "\f107";
+            content: "";
             display: inline-block;
             font: normal normal normal 14px/1 Font Awesome 5 Free;
             font-size: inherit;
@@ -2204,7 +2205,7 @@ export default {
         .cartheight .confirm-btn .move-eff span{
             top: 3px;
             left: 0;
-            font-size: 18px;
+            font-size: 16px;
         }
 
     }

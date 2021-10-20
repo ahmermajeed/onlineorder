@@ -200,7 +200,7 @@ ul {
             padding: 0px 11px 0px 11px;
             display: inline-block;
             @include media-breakpoint-down(sm) {
-                padding: 0px 5px 0px 5px;
+                padding: 0px 3px 0px 3px;
             }
         }
 
@@ -3055,8 +3055,8 @@ $duration: 50s;
             color: #fff !important;
             margin: 0px;
             border: none !important;
-            border-radius: 20px !important;
-            padding: 20px 120px !important;
+            border-radius: 8px !important;
+            padding: 10px 105px !important;
         }
     }
 }
@@ -3914,5 +3914,26 @@ body.disable-scroll {
     color: #e5b052 !important;
 }
 .section-border.order-check select {
-    width: 70%;
+    width: 70%; 
+}
+nav.collapse {
+    display: block !important;
+}
+nav.collapse.show {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 99;
+    margin-top: 0 !important;
+}
+nav.collapse.show .navbar-toggler {
+    top: 80px;
+    right: 30px;
+    position: absolute;
+}
+nav.collapse.show .navbar-collapse {
+    position: relative;
+    height: 0;
 }
