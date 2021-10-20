@@ -39,7 +39,7 @@ class FeedbackController extends Controller
             'status' => true,
             'created' => true,
             'data' => $data,
-            'message' => 'Thanks For your Feed back'
+            'message' => 'Thanks For your Feedback'
         ]);
     }
 

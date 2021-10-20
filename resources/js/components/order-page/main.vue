@@ -152,11 +152,11 @@
                                 <img src="../../../images/cart.png">
                             </div>
 
-                            <div class="food-allergy" @click="foodAllergyPopup">
-                                <p>
-                                <img src="/images/information.png" alt="">
-                                </i>Click here if you or someone you are ordering for has a food allergy</p>
-                            </div>
+<!--                            <div class="food-allergy" @click="foodAllergyPopup">-->
+<!--                                <p>-->
+<!--                                <img src="/images/information.png" alt="">-->
+<!--                                </i>Click here if you or someone you are ordering for has a food allergy</p>-->
+<!--                            </div>-->
 
                             <form class="form-cart">
                                  <div class="switch-field">
@@ -328,7 +328,7 @@
             </div>
         </div>
 
-        <food-allergy @HideModalValue="hideModal" :showModalProp="foodAllergyModal"></food-allergy>
+<!--        <food-allergy @HideModalValue="hideModal" :showModalProp="foodAllergyModal"></food-allergy>-->
 
         <add-product @HideModalValue="hideModal" :showModalProp="product" :list="list" :has_sizes="has_sizes"></add-product>
 

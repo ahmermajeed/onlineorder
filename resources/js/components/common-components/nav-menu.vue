@@ -21,6 +21,7 @@
                             </div>
                             <div class="col-5">
                                 <div class="header-icon float-right">
+
                                     <ul>
                                        <li v-if="info.general_setting.facebook"> <a  :href="info.general_setting.facebook" ><i class="icon-facebook"></i></a></li>
                                         <li v-if="info.general_setting.youtube"><a  :href="info.general_setting.youtube"><i class="icon-youtube"></i></a></li>
@@ -123,10 +124,12 @@
                                                                 <div class="col-md-12">
                                                                     <div class="total"><strong>Total: </strong>£{{priceFormat(totalPrice)}}
                                                                     </div>
-                                                                    <router-link class="view-cart-menu"
-                                                                                 :to="{ path: '/online-order/'+postal_code}">
-                                                                        View Menu
-                                                                    </router-link>
+
+                                                                        <a href="" @click="gotoMenu">
+                                                                            View Menu
+                                                                        </a>
+
+
                                                                 </div>
 
                                                             </div>
@@ -213,15 +216,11 @@
             }
         },
         methods: {
-
-
             getGeneralSetting() {
                 var vm = this;
                 axios.get('api/restaurant_info')
                     .then((response) => {
                         vm.$store.commit('setGeneralData', response.data.data);
-                        //vm.info.email = response.data.data.email;
-                        //console.log(vm.info.email);
 
                     });
             },
@@ -275,6 +274,10 @@
                 location.reload();
             },
 
+            gotoMenu(){
+
+                this.$router.push({path: 'online-order' + this.postal_code});
+            },
             checkPostCode() {
                 let vm = this;
                 if (this.postal_code == '') {
@@ -352,7 +355,9 @@
                     });
             },
         },
-        mounted() {
+        created() {
+
+            console.log("here");
             this.getGeneralSetting();
 
             // if (this.$route.name === 'online-order') {
