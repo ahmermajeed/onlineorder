@@ -14005,7 +14005,6 @@ ul {
 
 .header-bottom-section .main-menu a {
   font-size: 14px;
-  color: #000 !important;
 }
 
 .header-bottom-section .main-menu ul {
@@ -16740,7 +16739,7 @@ ul {
 
 @media (max-width: 767.98px) {
   .custom-modal .modal-body .order-selection label span {
-    font-size: 20px;
+    font-size: 18px;
     display: inline-block;
   }
 }
@@ -17268,6 +17267,7 @@ ul {
   margin: 0px;
   border: none !important;
   border-radius: 20px !important;
+  padding: 20px 120px !important;
 }
 
 .form-control.input-valid {
@@ -17588,6 +17588,9 @@ span.cart-count {
   span.cart-count {
     top: 9px;
     left: 35px;
+    border: 1px solid #ccc;
+    text-align: center;
+    line-height: 1.6;
   }
 }
 
@@ -18096,8 +18099,20 @@ span.address {
   margin-bottom: 40px;
 }
 
+@media (max-width: 767.98px) {
+  .order-confirm-header {
+    padding: 30px 20px;
+  }
+}
+
 .order-confirm-header img {
   width: 250px;
+}
+
+@media (max-width: 767.98px) {
+  .order-confirm-header img {
+    width: 110px;
+  }
 }
 
 .order-confirm h3 {
@@ -18107,11 +18122,12 @@ span.address {
 
 .order-confirm p {
   color: #495362;
+  margin-bottom: 20px;
 }
 
 .order-confirm p strong {
   font-size: 22px !important;
-  font-weight: 100;
+  font-weight: initial;
 }
 
 .sepeartor-line {
@@ -18137,6 +18153,12 @@ span.address {
   padding: 20px 0;
 }
 
+@media (max-width: 767.98px) {
+  .order-confirm-footer {
+    text-align: center;
+  }
+}
+
 .order-confirm-footer p {
   display: inline-block;
 }
@@ -18144,6 +18166,12 @@ span.address {
 .order-confirm-footer .copyright-text {
   color: #bec2cb;
   float: right;
+}
+
+@media (max-width: 767.98px) {
+  .order-confirm-footer .copyright-text {
+    float: none;
+  }
 }
 
 .bill-info ul li,
@@ -18157,6 +18185,11 @@ span.address {
   display: inline-block;
   font-size: 18px;
   width: 49%;
+}
+
+.bill-info ul li .list-detail strong,
+.total-bill-info ul li .list-detail strong {
+  font-size: 16px;
 }
 
 .bill-info ul li .discount-value,
@@ -18181,6 +18214,14 @@ span.address {
 }
 
 @media (max-width: 767.98px) {
+  .item-price {
+    margin-bottom: 20px;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 20px;
+  }
+}
+
+@media (max-width: 767.98px) {
   .text-left-mob {
     text-align: left !important;
   }
@@ -18192,5 +18233,24 @@ span.address {
   margin-top: -6px;
 }
 
+@media (max-width: 767.98px) {
+  .order-confirm-footer img {
+    width: 100px;
+    margin-bottom: 20px;
+  }
+}
+
 /*************** Reservation-section-end *******************/
+
+body.disable-scroll {
+  position: fixed;
+}
+
+.router-link-exact-active a {
+  color: #e5b052 !important;
+}
+
+.section-border.order-check select {
+  width: 70%;
+}
 

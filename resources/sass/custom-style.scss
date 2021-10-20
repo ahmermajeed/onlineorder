@@ -223,7 +223,6 @@ ul {
 
         a {
             font-size: 14px;
-            color: #000 !important;
         }
 
         ul {
@@ -2598,7 +2597,7 @@ $duration: 50s;
                 }
                 span{
                     @include media-breakpoint-down(sm){
-                        font-size: 20px;
+                        font-size: 18px;
                         display: inline-block;
                     }
                 }
@@ -3057,6 +3056,7 @@ $duration: 50s;
             margin: 0px;
             border: none !important;
             border-radius: 20px !important;
+            padding: 20px 120px !important;
         }
     }
 }
@@ -3332,6 +3332,9 @@ span.cart-count {
     @include media-breakpoint-down(sm) {
         top: 9px;
         left: 35px;
+        border: 1px solid #ccc;
+        text-align: center;
+        line-height: 1.6;
     }
 }
 span.cart-count.product-list-cart {
@@ -3784,8 +3787,14 @@ span.address {
     background: #f9fbfc;
     padding: 50px 20px;
     margin-bottom: 40px;
+    @include media-breakpoint-down(sm) {
+        padding: 30px 20px;
+    }
     img {
         width: 250px;
+        @include media-breakpoint-down(sm) {
+            width: 110px;
+        }
     }
 }
 .order-confirm {
@@ -3795,9 +3804,10 @@ span.address {
     }
     p {
         color: #495362;
+        margin-bottom: 20px;
         strong {
             font-size: 22px !important;
-            font-weight: 100;
+            font-weight: initial;
         }
     }
 }
@@ -3822,12 +3832,18 @@ span.address {
 .order-confirm-footer {
     background: #f9fbfc;
     padding: 20px 0;
+        @include media-breakpoint-down(sm) {
+            text-align: center;
+        }
     p {
         display: inline-block;
     }
     .copyright-text {
         color: #bec2cb;
         float: right;
+        @include media-breakpoint-down(sm) {
+            float: none;
+        }
     }
     
 }
@@ -3840,6 +3856,9 @@ span.address {
                 display: inline-block;
                 font-size: 18px;
                 width: 49%;
+                strong {
+                    font-size: 16px;
+                }
             }
             .discount-value {
                 color: #29bfaf;
@@ -3859,8 +3878,15 @@ span.address {
     p {
         margin-left: 10px;
         @include media-breakpoint-down(sm) {
-         margin-left: 0;
+            margin-left: 0;
         }
+    }
+}
+.item-price {
+    @include media-breakpoint-down(sm) {
+        margin-bottom: 20px;
+        border-bottom: 1px solid #ccc;
+        padding-bottom: 20px;
     }
 }
 
@@ -3874,6 +3900,19 @@ span.address {
         width: 140px;
         margin-right: 10px;
         margin-top: -6px;
+        @include media-breakpoint-down(sm) {
+            width: 100px;
+            margin-bottom: 20px;
+        }
     }
 }
 /*************** Reservation-section-end *******************/
+body.disable-scroll {
+    position: fixed;
+}
+.router-link-exact-active a {
+    color: #e5b052 !important;
+}
+.section-border.order-check select {
+    width: 70%;
+}
