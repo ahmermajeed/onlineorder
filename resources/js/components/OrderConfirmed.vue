@@ -53,7 +53,7 @@
                                 <p>{{item.special_instructions}}</p>
                             </div>
                             <div class="col-md-2">
-                                <p class="text-right text-left-mob item-price">£ {{item.price}}</p>
+                                <p class="text-right text-left-mob item-price">£ {{priceFormat(item.price)}}</p>
                             </div>
                         </div>
                     </div>
@@ -62,7 +62,7 @@
                         <ul>
                             <li>
                                 <div class="list-detail"><strong>Total:</strong></div>
-                                <div class="list-detail text-right"> £ {{order_details.total_amount_with_fee}}</div>
+                                <div class="list-detail text-right"> £ {{priceFormat(order_details.total_amount_with_fee)}}</div>
                             </li>
 
                         </ul>
@@ -145,6 +145,9 @@
 
                 html ="<span>" + arr.join(',') +"</span>";
                 return html;
+            },
+            priceFormat(num) {
+              return parseFloat(num).toFixed(2);
             }
         },
         computed: {
