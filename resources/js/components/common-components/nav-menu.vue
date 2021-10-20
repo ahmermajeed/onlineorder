@@ -79,7 +79,7 @@
                                                 </div>
                                             </li>
                                             <li>
-                                                <div class="cart-icon order-page-menu" v-click-outside="onClickOutside">
+                                                <div class="cart-icon order-page-menu mobile-cart-icon" v-click-outside="onClickOutside">
                                                     <a href="#" v-on:click="openCart = !openCart">
                                                         <i class="fa fa-shopping-cart"></i>
                                                         <span class="cart-count">{{count}}</span>

@@ -14086,7 +14086,7 @@ ul {
 
 @media (max-width: 767.98px) {
   .header-bottom-section .right .cart-icon-mb .cart-count {
-    top: 0;
+    top: -10px;
     left: -10px;
   }
 }
@@ -18277,5 +18277,9 @@ nav.collapse.show .navbar-toggler {
 nav.collapse.show .navbar-collapse {
   position: relative;
   height: 0;
+}
+
+.mobile-cart-icon {
+  display: none;
 }
 

@@ -300,7 +300,7 @@ ul {
             }
             .cart-count{
                 @include media-breakpoint-down(sm){
-                    top: 0;
+                    top: -10px;
                     left: -10px;
                 }
             }
@@ -3936,4 +3936,7 @@ nav.collapse.show .navbar-toggler {
 nav.collapse.show .navbar-collapse {
     position: relative;
     height: 0;
+}
+.mobile-cart-icon {
+    display: none;
 }
