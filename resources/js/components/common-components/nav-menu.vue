@@ -46,7 +46,7 @@
                                 </router-link>
                             </div>
                             <div class="col-6 col-md-9 right">
-                                <a href="#" class="cart-icon-mb" v-on:click="openCart = !openCart">
+                                <a href="#" class="cart-icon-mb" v-on:click="opencartlist">
                                     <i class="fa fa-shopping-cart"></i>
                                     <span class="cart-count">{{count}}</span>
                                 </a>
@@ -170,6 +170,53 @@
                 </div>
             </div> -->
 
+          <div class="container-fluid"
+          >
+
+            <div class="mobile-cart-button" v-bind:class="{ cartheight: cart_height }" v-if="cartItems.length > 0">
+              <div class="inner">
+                    <span class="products-count"><svg xmlns="http://www.w3.org/2000/svg" class="svg-stroke-container" width="24" height="24">
+                        <path fill="#707070" d="M12 2.75a4.75 4.75 0 014.744 4.5h3.103a1 1 0 01.99 1.141l-1.714 12a1 1 0 01-.99.859H5.867a1 1 0 01-.99-.859l-1.714-12a1 1 0 01.99-1.141h3.103A4.75 4.75 0 0112 2.75zm5.559 14.75H6.44a.4.4 0 00-.396.457l.208 1.45a.4.4 0 00.396.343H17.35a.4.4 0 00.396-.343l.208-1.45a.4.4 0 00-.396-.457zm1.25-8.75H5.19a.4.4 0 00-.396.457l.922 6.45a.4.4 0 00.396.343h11.775a.4.4 0 00.396-.343l.922-6.45a.4.4 0 00-.396-.457zM12 4.25a3.251 3.251 0 00-3.193 2.638.305.305 0 00.3.362h5.796a.297.297 0 00.292-.35A3.251 3.251 0 0012 4.25z"></path>
+                    </svg>{{count}}
+                     <span class="products-value">£{{priceFormat(totalPrice)}}</span>
+                </span>
+
+                <span class="text chek-out-btn btn btn-rounded-danger" @click="opencartlist()">Checkout</span>
+
+              </div>
+
+
+              <div class="mb-cart-box">
+                <ul class="cart-list"  v-for="(cart, product_index) in cartItems">
+                  <li>
+                            <span class="m-box">
+                              <span class="meal">
+                                <h5>{{cart.product_name}}</h5>
+                                <ul v-if="cart.extras" v-for="(extra, extra_index) in cart.extras">
+                                    <li><b>{{extra.group_name}}:</b> {{extra.choice}}</li>
+                                </ul>
+                              </span>
+                              <span class="mealactions">
+                                  <a href="#"  @click="updateProduct(cart.product_id,cart,product_index)"><i v-b-tooltip.hover title="Edit Meal" class="fas fa-pen"> </i></a>
+                                 <a href="#" @click.prevent="removeFromCart(cart)"> <i v-b-tooltip.hover title="Remove Meal" class="fa fa-times"></i></a>
+                              </span>
+                            </span>
+                    <span class="qty mob">
+                                <i style="font-size: 17px;" @click="quantityMinusInCart(cart)">-</i>
+                                <span>{{ cart.quantity}}</span>
+                                <i style="font-size: 17px;" @click="quantityAddInCart(product_index, cart)">+</i>
+                            </span>
+                    <span class="price">£{{priceFormat(cart.single_product_total_amount)}}</span>
+                  </li>
+                </ul>
+              </div>
+
+              <div class="confirm-btn">
+                <button class="anima-btn btn btn-rounded-danger btn move-eff" @click="moveToCheckOutMobile()"><span>Confirm Order</span></button>
+              </div>
+            </div>
+          </div>
+
         </header>
 
         <download-menu @HideModalValue="hideModal" :showModalProp="showPopup" :isMenu="menu"
@@ -212,6 +259,7 @@
                 editDeal: false,
                 deals_data: {},
                 editDealsData: {},
+                cart_height : false
                 //info:{},
             }
         },
@@ -227,6 +275,15 @@
 
             onClickOutside(event) {
                 this.openCart = false
+            },
+
+            opencartlist() {
+              this.cart_height = !this.cart_height;
+              if (this.cart_height == true) {
+                document.querySelector("body").style.overflow = 'hidden';
+              } else {
+                document.querySelector("body").style.overflow = 'auto';
+              }
             },
 
             hideModal() {
@@ -306,7 +363,17 @@
 
             },
 
+            quantityAddInCart(index, cart) {
 
+              this.$store.state.cartItems[index]['quantity'] += 1;
+              this.$store.state.cartItemsCount += 1;
+
+            },
+
+            quantityMinusInCart(index) {
+              index.removalQuantity = 1;
+              this.$store.commit('removeFromCart', index);
+            },
 
             priceFormat(num) {
                 return parseFloat(num).toFixed(2);
@@ -354,6 +421,10 @@
                         }
                     });
             },
+
+          moveToCheckOutMobile() {
+            this.$router.push({name: 'check-out'})
+          },
         },
         created() {
 

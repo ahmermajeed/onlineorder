@@ -1,7 +1,7 @@
 <template>
     <div>
 
-        <section class="order-information">
+        <section class="order-information" id="product-scroll">
             <div class="">
                 <div class="order-confirm-header">
 
@@ -13,7 +13,7 @@
 
                 </div>
                     <div class="order-confirm container">
-                        <h3 class="mb-3">Your Order Recieved!</h3>
+                        <h3 class="mb-3" style="color: green">Your Order Recieved!</h3>
                         <p><strong>Hi {{user_detail.name}} ,</strong></p>
                         <p class="mb-3">Thanks for an order.</p>
                     </div>
@@ -110,6 +110,8 @@
         },
 
         mounted() {
+
+            this.scrollToMain();
             this.getGeneralSetting();
             this.getOrderDetails();
         },
@@ -151,7 +153,11 @@
             },
             priceFormat(num) {
               return parseFloat(num).toFixed(2);
-            }
+            },
+            scrollToMain() {
+              let element = document.getElementById("product-scroll");
+              element.scrollIntoView({behavior: "instant", block: "start"});
+            },
         },
         computed: {
             info() {
