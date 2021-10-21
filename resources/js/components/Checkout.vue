@@ -16,11 +16,15 @@
                        <div class="col-12">
                        </div>
                        <div class="col-sm-12">
-                           <label>{{form.order_type}} Time</label>
-                           <select v-model="form.deliveryTime" class="form-control" id="delivery_time">
-                             <option value="">Please select {{form.order_type}} Time</option>
-                             <option v-for="slot in slots">{{slot}}</option>
-                           </select>
+                            <label>{{form.order_type}} Time</label>
+                            <select v-model="form.deliveryTime" class="form-control" id="delivery_time">
+                                <option value="">Please select {{form.order_type}} Time</option>
+                                <option v-for="slot in slots">{{slot}}</option>
+                            </select>
+<!--                             <selectize v-model="selected" :settings="settings">
+                              <option :value="1">One</option>
+                              <option :value="2">Two</option>
+                            </selectize> -->
                            <br>
                        </div>
 
@@ -177,11 +181,16 @@
 <script>
 
 import {loadStripe} from '@stripe/stripe-js';
+import Selectize from 'vue2-selectize'
 
 export default {
-  components: {},
+  components: {
+    Selectize
+  },
   data: function () {
     return {
+        settings: {},
+        selected: 1,
       stripe: {},
       cardElement: {},
       loading: false,

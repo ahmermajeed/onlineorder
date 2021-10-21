@@ -7,6 +7,7 @@ import Vuex from 'vuex';
 import store from './store.js'
 import VueCtkDateTimePicker from 'vue-ctk-date-time-picker';
 import 'vue-ctk-date-time-picker/dist/vue-ctk-date-time-picker.css';
+import "selectize/dist/css/selectize.bootstrap3.css";
 
 import Datepicker from 'vuejs-datepicker';
 
