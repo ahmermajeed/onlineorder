@@ -3261,8 +3261,8 @@ a.circle span.cnt {
     width: 250px;
     left: -180px;
     top: 15px;
-    background: $btn-color1;
-    border: 1px solid $btn-color1;
+    background: $primary-color;
+    border: 1px solid $primary-color;
     border-radius: 8px;
     z-index: 1;
     @include media-breakpoint-down(sm) {
@@ -3323,7 +3323,7 @@ a.circle span.cnt {
     border: 1px solid #bad1e2;
     width: 100%;
     float: left;
-    padding: 10px;
+    padding: 8px;
     margin-top: 10px;
 }
 span.cart-count {
