@@ -67,7 +67,7 @@
                                                 <p style="font-size: 12px;" v-if="product.sizes.length"  v-for="(size, size_index) in product.sizes" > {{size.size}} : £{{size.price}}</p>
                                                 <p  v-if="!product.sizes.length" ><span>£</span>{{product.price}}</p>
                                             </div>
-                                            <a href="#" class="custom-btn2  btn btn-outline-success"  @click.prevent="viewProduct(product.id)">
+                                            <a href="#" class="custom-btn2  btn btn-rounded-danger"  @click.prevent="viewProduct(product.id)">
                                                 Add to cart <i class="fas fa-long-arrow-alt-right"></i></i>
                                             </a>
                                         </div>
