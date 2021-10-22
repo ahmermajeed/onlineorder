@@ -2248,7 +2248,7 @@ export default {
         }
         .mealactions a {
             margin-right: 24px;
-            margin-right: 7px;
+            margin-right: 6px;
             position: relative;
             top: -6px;;
         }
