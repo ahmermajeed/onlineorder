@@ -15437,6 +15437,7 @@ ul {
   border-radius: 4px;
   display: inline-block;
   margin-top: 10px;
+  color: #fff;
 }
 
 .menu-box .menu-box .box span span {
@@ -18295,5 +18296,34 @@ nav.collapse.show .navbar-collapse {
   .mob-text-left {
     text-align: left !important;
   }
+}
+
+.testimonial-section {
+  text-align: center;
+}
+
+.testimonial-section h4 {
+  margin-bottom: 40px;
+}
+
+.testimonial-section img {
+  margin-bottom: 10px;
+}
+
+.testimonial-section .customer-name {
+  color: #e5b052;
+  font-weight: bold;
+}
+
+.review-box {
+  border: 1px solid #ccc;
+  padding: 30px;
+  border-radius: 28px;
+  background: #fff7d7;
+  height: 300px;
+}
+
+.review-box p {
+  font-size: 16px;
 }
 

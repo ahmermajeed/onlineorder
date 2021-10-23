@@ -1470,6 +1470,7 @@ $duration: 50s;
                 border-radius: 4px;
                 display: inline-block;
                 margin-top: 10px;
+                color: #fff;
                 span{
                     padding: 0;
                     margin: 0;
@@ -3950,4 +3951,27 @@ nav.collapse.show .navbar-collapse {
     @include media-breakpoint-down(sm) {
         text-align: left !important;
     }    
+}
+.testimonial-section {
+    text-align: center;
+    h4 {
+        margin-bottom: 40px;
+    }
+    img {
+        margin-bottom: 10px;
+    }
+    .customer-name {
+        color: #e5b052;
+        font-weight: bold;
+    }
+}
+.review-box {
+    border: 1px solid #ccc;
+    padding: 30px;
+    border-radius: 28px;
+    background: #fff7d7;
+    height: 300px;
+    p {
+        font-size: 16px;
+    }
 }
