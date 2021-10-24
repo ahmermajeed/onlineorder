@@ -596,7 +596,7 @@ export default {
 
           if(response.data.error === undefined){
             vm.errorMessage = response.data.data.amount;
-            vm.$store.commit('setDeliveryCharges', response.data.data.fix_delivery_charges);
+            vm.$store.commit('setDeliveryCharges', response.data.data.amount);
             vm.$store.commit('setOrderType', vm.orderType);
             vm.$store.commit('setPostalCode', vm.postalCode);
             vm.$router.push({name: 'check-out'})

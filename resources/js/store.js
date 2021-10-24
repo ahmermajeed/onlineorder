@@ -12,7 +12,7 @@ const store = new Vuex.Store({
 
         cartItemsCount: 0,
         cartItems: [],
-        delivery_charges:'',
+        delivery_charges: localStorage.getItem('delivery_charges') ? localStorage.getItem('delivery_charges') : '',
         postal_code: localStorage.getItem('postal_code') ? localStorage.getItem('postal_code') : '',
         order_type: localStorage.getItem('order_type') ? localStorage.getItem('order_type') : '',
         user_data: localStorage.getItem('user_data') ? localStorage.getItem('user_data') : '',
