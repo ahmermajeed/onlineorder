@@ -381,6 +381,7 @@ ul {
         overflow: hidden;
         cursor: pointer;
         position: relative;
+        margin-bottom: 30px;
         @include media-breakpoint-down(sm){
             margin-bottom: 20px;
         }
@@ -3973,8 +3974,16 @@ nav.collapse.show .navbar-collapse {
     padding: 30px;
     border-radius: 28px;
     background: #fff7d7;
-    height: 300px;
+    height: 260px;
+    margin-bottom: 20px;
     p {
-        font-size: 16px;
+        font-size: 13px;
+        margin-bottom: 20px;
     }
+    a {
+        color: #e5b052;
+    }
+}
+.testimonial-text {
+    font-size: 16px;
 }
