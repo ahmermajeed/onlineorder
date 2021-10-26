@@ -100,7 +100,8 @@
                 </div>
             </div>
         </section>
-
+        <!-- Testimonials -->
+        <testimonials></testimonials>
         <footer-menu></footer-menu>
     </div>
 </template>

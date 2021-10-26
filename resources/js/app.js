@@ -101,6 +101,10 @@ const router = new VueRouter({
             path: '/kitchen-screen',
             component: require('./components/KitchenScreen.vue').default,
         },
+        {
+            path: '/gallery',
+            component: require('./components/Gallery.vue').default,
+        },
 
     ],
 
