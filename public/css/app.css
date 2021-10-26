@@ -14173,6 +14173,7 @@ ul {
   overflow: hidden;
   cursor: pointer;
   position: relative;
+  height: 240px;
 }
 
 @media (max-width: 767.98px) {

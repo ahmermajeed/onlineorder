@@ -157,7 +157,7 @@
             <div class="hero-for-mobile" v-if="this.$route.name !='online-order' &&
                   this.$route.name !='reservation-table'  &&
                   this.$route.name !='check-out'">
-                <img src="images/mr.chippy/b1.png">
+                <img src="images/mr.chippy/gallery.png">
             </div>
             <!-- <div class="header-bottom section-fullwidth"
 
