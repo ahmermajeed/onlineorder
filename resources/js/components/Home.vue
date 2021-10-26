@@ -2,21 +2,6 @@
     <div>
         <header-menu></header-menu>
 
-       <!--  <div class="timing-ticker-area">
-            <div class="heading">
-                <h3>Shop Hours</h3>
-            </div>
-            <div class="timing">
-                <ul>
-                    <li  v-for="timing  in info.timing"  >
-                      <span class="day">{{timing.day}}</span>
-                      <span class="delivery">{{timing.start_time}}</span>
-                      <span class="collection">{{timing.end_time}}</span>
-                    </li>
-
-                </ul>
-            </div>
-        </div> -->
         <section class="about-section">
             <div class="container">
                 <div class="row main-title">
@@ -48,7 +33,7 @@
                 <div class="row mb-4">
                     <div class="col-lg-4 col-md-6">
                         <div class="menubox">
-                            <img src="https://cdn.pixabay.com/photo/2016/06/26/22/45/india-1481494__340.jpg">
+                            <img src="/images/mr.chippy/gallery.png">
                             <div class="ctabox">
                                 <button type="button" class="btn btn-outline-secondary" @click.prevent="openPostalCode">Order Now!</button>
                             </div>
@@ -56,7 +41,7 @@
                     </div>
                     <div class="col-lg-4 col-md-6">
                         <div class="menubox">
-                            <img src="https://cdn.pixabay.com/photo/2017/06/16/11/38/breakfast-2408818__340.jpg">
+                            <img src="/images/mr.chippy/gallery1.png">
                             <div class="ctabox">
                                 <button type="button" class="btn btn-outline-secondary" @click.prevent="openPostalCode">Order Now!</button>
                             </div>
@@ -64,7 +49,7 @@
                     </div>
                     <div class="col-lg-4 col-md-6">
                         <div class="menubox">
-                            <img src="https://cdn.pixabay.com/photo/2018/12/04/16/49/tandoori-3856045__340.jpg">
+                            <img src="/images/mr.chippy/gallery2.png">
                             <div class="ctabox">
                                 <button type="button" class="btn btn-outline-secondary" @click.prevent="openPostalCode">Order Now!</button>
                             </div>
@@ -74,7 +59,7 @@
                  <div class="row mb-4">
                     <div class="col-lg-4 col-md-6">
                         <div class="menubox">
-                            <img src="https://cdn.pixabay.com/photo/2016/06/26/22/45/india-1481494__340.jpg">
+                            <img src="/images/mr.chippy/gallery2.png">
                             <div class="ctabox">
                                 <button type="button" class="btn btn-outline-secondary" @click.prevent="openPostalCode">Order Now!</button>
                             </div>
@@ -82,7 +67,7 @@
                     </div>
                     <div class="col-lg-4 col-md-6">
                         <div class="menubox">
-                            <img src="https://cdn.pixabay.com/photo/2017/06/16/11/38/breakfast-2408818__340.jpg">
+                            <img src="/images/mr.chippy/gallery.png">
                             <div class="ctabox">
                                 <button type="button" class="btn btn-outline-secondary" @click.prevent="openPostalCode">Order Now!</button>
                             </div>
@@ -90,7 +75,7 @@
                     </div>
                     <div class="col-lg-4 col-md-6">
                         <div class="menubox">
-                            <img src="https://cdn.pixabay.com/photo/2018/12/04/16/49/tandoori-3856045__340.jpg">
+                            <img src="/images/mr.chippy/gallery1.png">
                             <div class="ctabox">
                                 <button type="button" class="btn btn-outline-secondary" @click.prevent="openPostalCode">Order Now!</button>
                             </div>
@@ -107,7 +92,6 @@
                         <h3>Our  Dishes</h3>
                     </div>
                 </div>
-                <!-- <h2 class="main-title">Our  Dishes</h2> -->
                 <div class="row">
                     <div class="col-lg-4 col-md-12 col-sm-12"   v-for="(item, index) in categories" v-if="index < 3">
                         <h3 class="sub-title"> {{item.name}}</h3>

@@ -46,12 +46,12 @@
                 visible: false,
                 index: 0,   // default: 0
                 imgs: [
-                      '/images/gallery/1.jpeg',
-                      '/images/gallery/2.jpg',
-                      '/images/gallery/3.jpg',
-                      '/images/gallery/4.jpg',
-                      '/images/gallery/5.jpg',
-                      '/images/gallery/6.jpg',
+                      '/images/mr.chippy/gallery.png',
+                      '/images/mr.chippy/gallery1.png',
+                      '/images/mr.chippy/gallery2.png',
+                      '/images/mr.chippy/gallery2.png',
+                      '/images/mr.chippy/gallery.png',
+                      '/images/mr.chippy/gallery1.png',
                     ]
             };
         },

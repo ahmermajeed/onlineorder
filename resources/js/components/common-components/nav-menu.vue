@@ -2,7 +2,6 @@
 
     <div>
         <header class="masthead">
-            <!-- <nav class="navbar navbar-expand-lg navbar-light custom-header" id="mainNav"> -->
 
             <div class="header-top">
                 <div class="header-top-section">

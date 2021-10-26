@@ -3964,3 +3964,34 @@ nav.collapse.show .navbar-collapse {
         text-align: left !important;
     }    
 }
+.testimonial-section {
+    text-align: center;
+    h4 {
+        margin-bottom: 40px;
+    }
+    img {
+        margin-bottom: 10px;
+    }
+    .customer-name {
+        color: #e5b052;
+        font-weight: bold;
+    }
+}
+.review-box {
+    border: 1px solid #ccc;
+    padding: 30px;
+    border-radius: 28px;
+    background: #fff7d7;
+    height: 260px;
+    margin-bottom: 20px;
+    p {
+        font-size: 13px;
+        margin-bottom: 20px;
+    }
+    a {
+        color: #e5b052;
+    }
+}
+.testimonial-text {
+    font-size: 16px;
+}
