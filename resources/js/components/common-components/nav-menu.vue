@@ -2,6 +2,7 @@
 
     <div>
         <header class="masthead">
+            <!-- <nav class="navbar navbar-expand-lg navbar-light custom-header" id="mainNav"> -->
 
             <div class="header-top">
                 <div class="header-top-section">
@@ -156,7 +157,7 @@
             <div class="hero-for-mobile" v-if="this.$route.name !='online-order' &&
                   this.$route.name !='reservation-table'  &&
                   this.$route.name !='check-out'">
-                <img src="https://i.ibb.co/VD4yK5S/hero-img.png">
+                <img src="images/mr.chippy/b1.png">
             </div>
             <!-- <div class="header-bottom section-fullwidth"
 
