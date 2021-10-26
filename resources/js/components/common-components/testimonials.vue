@@ -28,9 +28,7 @@
     	            			<div class="review-box">
     		            			<img src="/images/quotation-marks.png" alt="">
     		            			<p>Went on Sunday afternoon with 20 members of the family and we all enjoyed it. The paratha and achar were lovely and the English breakfast was very filling. We ordered the food and waited 20 mins before it arrived. <a href="javascript:;" @click="openPopup()">Read more...</a></p>
-<!--     		            	<p>             <p>Went on Sunday afternoon with 20 members of the family and we all enjoyed it. The paratha and achar were lovely and the English breakfast was very filling. We ordered the food and waited 20 mins before it arrived. So when you guys go make sure your prepared to wait. The staff were brilliant and the lady that I assume owns it was brilliant host and looked after everyone that was there. Will definitely come back.</p>
-</p>
-    	 -->	            			<p class="customer-name">- atifhaquk</p>
+			            			<p class="customer-name">- atifhaquk</p>
     		            		</div>
     	            		</div>
 		            	</div>
