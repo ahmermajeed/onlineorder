@@ -613,6 +613,11 @@ export default {
     finalAmount () {
 
       let final_amount = 0
+
+      if(this.delivery_fees == null || this.delivery_fees == "null") {
+        this.delivery_fees = 0;
+      }
+
       if (localStorage.getItem('order_type') === "Pickup") {
         final_amount = this.totalPrice - this.discountedAmount;
       } else {

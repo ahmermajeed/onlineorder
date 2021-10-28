@@ -45,7 +45,8 @@
             "App\\": "app/"
         },
         "files": [
-            "app/Helpers/Helper.php"
+            "app/Helpers/Helper.php",
+            "app/External/Gateway.php"
         ],
         "classmap": [
             "database/seeds",
