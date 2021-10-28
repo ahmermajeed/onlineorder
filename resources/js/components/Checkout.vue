@@ -249,11 +249,15 @@ export default {
     this.form.order_type = this.$store.getters.getOrderType;
 
     if (this.form.order_type == "Pickup")
-      this.interval = 30;
+      this.interval = 20;
     else
       this.interval = 45;
 
     this.getTimeSlots();
+
+    if(this.delivery_fees == null || this.delivery_fees == "null") {
+      this.delivery_fees = 0;
+    }
 
     this.scrollToMain();
     this.getOffers();
@@ -619,7 +623,6 @@ export default {
       } else {
 
         if(this.delivery_fees == null || this.delivery_fees == "null") {
-            this.delivery_fees = 0;
             final_amount = this.totalPrice - this.discountedAmount;
         } else {
           final_amount = this.totalPrice + this.delivery_fees - this.discountedAmount;
