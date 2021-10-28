@@ -14177,6 +14177,7 @@ ul {
   overflow: hidden;
   cursor: pointer;
   position: relative;
+  margin-bottom: 30px;
 }
 
 @media (max-width: 767.98px) {
@@ -18324,10 +18325,20 @@ nav.collapse.show .navbar-collapse {
   padding: 30px;
   border-radius: 28px;
   background: #fff7d7;
-  height: 300px;
+  height: 260px;
+  margin-bottom: 20px;
 }
 
 .review-box p {
+  font-size: 13px;
+  margin-bottom: 20px;
+}
+
+.review-box a {
+  color: #e5b052;
+}
+
+.testimonial-text {
   font-size: 16px;
 }
 

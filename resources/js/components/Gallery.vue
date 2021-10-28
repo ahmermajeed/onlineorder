@@ -10,27 +10,17 @@
                     </div>
                 </div>
                 <div class="row mb-4">
-                    <div class="col-lg-4 col-md-6">
-                        <div class="menubox">
-                            <!-- <LightBox :media="media" :showLightBox="true"></LightBox> -->
+                    <div class="col-lg-4 col-md-6"   v-for="(src, index) in imgs"       
+                            :key="index">
+                        <div class="menubox pic"       
+                          
+                            @click="() => showImg(index)">
+                            <img :src="src">
+                        </div>
+                    </div>
 
-                            <img src="/images/gallery/1.jpeg">
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6">
-                        <div class="menubox">
-                            <img src="/images/gallery/2.jpg">
-                            
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6">
-                        <div class="menubox">
-                            <img src="/images/gallery/3.jpg">
-                            
-                        </div>
-                    </div>
                 </div>
-                 <div class="row mb-4">
+            <!--      <div class="row mb-4">
                     <div class="col-lg-4 col-md-6">
                         <div class="menubox">
                             <img src="/images/gallery/4.jpg">
@@ -49,33 +39,50 @@
                          
                         </div>
                     </div>
-                </div>
+                </div> -->
+                  <vue-easy-lightbox
+                    :visible="visible"
+                    :imgs="imgs"
+                    :index="index"
+                    @hide="handleHide"
+                  ></vue-easy-lightbox>
             </div>
         </section>
 
         <footer-menu></footer-menu>
     </div>
 </template>
-<script src="path/to/dist/vue-image-lightbox.js"></script>
 <script>
-    import LightBox from 'vue-image-lightbox'
+    import VueEasyLightbox from 'vue-easy-lightbox'
 
 
     export default {
         components: {
-            LightBox
+            VueEasyLightbox
         },
         data() {
             return {
-                media: [
-                      { // For image
-                        thumb: 'https://cdn.pixabay.com/photo/2016/06/26/22/45/india-1481494__340.jpg',
-                        src: 'https://cdn.pixabay.com/photo/2016/06/26/22/45/india-1481494__340.jpg',
-                      },
-                    
+                visible: false,
+                index: 0,   // default: 0
+                imgs: [
+                      '/images/gallery/1.jpeg',
+                      '/images/gallery/2.jpg',
+                      '/images/gallery/3.jpg',
+                      '/images/gallery/4.jpg',
+                      '/images/gallery/5.jpg',
+                      '/images/gallery/6.jpg',
                     ]
             };
         },
+        methods: {
+            showImg (index) {
+              this.index = index
+              this.visible = true
+            },
+            handleHide () {
+              this.visible = false
+            }
+          }
     }                           
 </script>
 

@@ -101,6 +101,10 @@
             </div>
         </section>
 
+        <!-- testimonials section -->
+        
+        <testimonials></testimonials>
+
         <footer-menu></footer-menu>
     </div>
 </template>

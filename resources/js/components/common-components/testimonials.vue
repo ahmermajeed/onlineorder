@@ -7,13 +7,7 @@
 		            <h4>What our client says about us!</h4>
 		            <div class="testimonial-reviews">
 		            	<div class="row">
-		            		<div class="col-md-4">
-		            			<div class="review-box">
-			            			<img src="/images/quotation-marks.png" alt="">
-			            			<p>Went on Sunday afternoon with 20 members of the family and we all enjoyed it. The paratha and achar were lovely and the English breakfast was very filling. We ordered the food and waited 20 mins before it arrived. </p>
-			            			<p class="customer-name">- atifhaquk</p>
-			            		</div>
-		            		</div>
+
 		            		<div class="col-md-4">
 		            			<div class="review-box">
 
@@ -29,10 +23,48 @@
 			            			<p class="customer-name">- Aqeel S </p>
 			            		</div>
 			            	</div>
+
+    	            		<div class="col-md-4">
+    	            			<div class="review-box">
+    		            			<img src="/images/quotation-marks.png" alt="">
+    		            			<p>Went on Sunday afternoon with 20 members of the family and we all enjoyed it. The paratha and achar were lovely and the English breakfast was very filling. We ordered the food and waited 20 mins before it arrived. <a href="javascript:;" @click="openPopup()">Read more...</a></p>
+			            			<p class="customer-name">- atifhaquk</p>
+    		            		</div>
+    	            		</div>
 		            	</div>
 		            </div>
 		        </div>
 		    </div>
 		</section>
+		<testimonials-popup @HideModalValue="hideModal" :showModalProp="showTestimonialPopup"></testimonials-popup>
 	</div>
 </template>
+
+<script>
+    import vClickOutside from 'v-click-outside'
+
+    export default {
+        directives: {
+            clickOutside: vClickOutside.directive
+        },
+        data() {
+            return {
+                showTestimonialPopup: false,
+            }
+        },
+        methods: {
+
+            hideModal() {
+                this.showTestimonialPopup = false;
+            },
+
+            openPopup() {
+                this.showTestimonialPopup = true;
+            },
+         
+        },
+
+
+    }
+
+</script>
