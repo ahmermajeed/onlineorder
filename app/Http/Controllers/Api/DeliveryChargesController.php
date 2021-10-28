@@ -91,7 +91,7 @@ class DeliveryChargesController extends Controller
             if ($todayDay == $days['day']) {
 
                 $current_timestamp = Carbon::now()->timestamp;
-                $current_date_time = Carbon::now()->format('H:20:00');
+                $current_date_time = Carbon::now()->format('H:40:00');
 
                 $StartTime = strtotime($days['start_time']); //Get Timestamp
 
