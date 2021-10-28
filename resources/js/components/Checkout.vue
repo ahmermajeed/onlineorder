@@ -249,7 +249,7 @@ export default {
     this.form.order_type = this.$store.getters.getOrderType;
 
     if (this.form.order_type == "Pickup")
-      this.interval = 30;
+      this.interval = 20;
     else
       this.interval = 45;
 
