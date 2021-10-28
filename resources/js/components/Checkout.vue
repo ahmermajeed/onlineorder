@@ -260,7 +260,12 @@ export default {
 
     document.documentElement.classList.remove("remove-overflow") ;
     // this.generateToken();
-  },
+
+      if(this.delivery_fees == null || this.delivery_fees == "null") {
+        this.delivery_fees = 0
+      }
+
+    },
   methods: {
     getOffers() {
       let _this = this;
@@ -618,7 +623,6 @@ export default {
       } else {
 
         if(this.delivery_fees == null || this.delivery_fees == "null") {
-            this.delivery_fees = 0;
             final_amount = this.totalPrice - this.discountedAmount;
         } else {
           final_amount = this.totalPrice + this.delivery_fees - this.discountedAmount;
