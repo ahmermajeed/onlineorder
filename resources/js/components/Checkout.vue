@@ -618,6 +618,7 @@ export default {
       } else {
 
         if(this.delivery_fees == null || this.delivery_fees == "null") {
+            this.delivery_fees = 0;
             final_amount = this.totalPrice - this.discountedAmount;
         } else {
           final_amount = this.totalPrice + this.delivery_fees - this.discountedAmount;
