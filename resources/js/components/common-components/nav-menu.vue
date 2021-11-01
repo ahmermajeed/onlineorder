@@ -46,16 +46,33 @@
                                 </router-link>
                             </div>
                             <div class="col-6 col-md-9 right">
+                                <router-link class="cart-icon-mb" :to="{ path: '/'}">
+                                <a class="cart-icon-mb" href="#">
+                                    <i class="fas fa-home"></i>
+                                </a>
+                                </router-link>
+                                <router-link class="cart-icon-mb" :to="{ path: '/feedback'}">
+                                <a class="cart-icon-mb" href="#">
+                                    <i class="fas fa-comment-alt"></i>
+                                </a>
+                                </router-link>
+                                <router-link class="cart-icon-mb" :to="{ path: '/gallery'}">
+                                <a class="cart-icon-mb" href="#">
+                                    <i class="fas fa-images"></i>
+                                </a>
+                                </router-link>
                                 <a href="#" class="cart-icon-mb" v-on:click="opencartlist">
                                     <i class="fa fa-shopping-cart"></i>
                                     <span class="cart-count">{{count}}</span>
                                 </a>
+                                
+
                                 <nav class="navbar navbar-expand-lg navbar-light justify-content-end main-menu p-0 mt-2">
-                                    <button class="navbar-toggler" type="button" data-toggle="collapse"
+                                    <!-- <button class="navbar-toggler" type="button" data-toggle="collapse"
                                             data-target="#navbarResponsiv" aria-controls="navbarResponsiv"
                                             aria-expanded="false" aria-label="Toggle navigation">
                                         <span class="navbar-toggler-icon"></span>
-                                    </button>
+                                    </button> -->
                                     <div class="collapse navbar-collapse justify-content-end" id="navbarResponsiv">
                                         <ul class="nav ">
 
@@ -72,11 +89,6 @@
                                                 <router-link :to="{ path: '/gallery'}"><a
                                                         class="nav-link js-scroll-trigger">Gallery</a></router-link>
                                             </li>
-
-<!--                                            <li class="nav-item ">-->
-<!--                                                <router-link :to="{ path: '/reservation-table'}"><a-->
-<!--                                                        class="nav-link js-scroll-trigger">Reservation</a></router-link>-->
-<!--                                            </li>-->
 
                                             <li class="nav-item">
                                                 <div class="order-now">
