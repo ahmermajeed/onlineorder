@@ -7,7 +7,7 @@
             </div>
             
         </section>
-        <section class="inner-section">
+        <section class="inner-section term-page">
             <div class="container-fluid">
             </div>
             <div class="container">
@@ -40,6 +40,11 @@
                                         <p>If you are a consumer, you will benefit from any mandatory provisions of the law in your country of residence. Nothing in the above clause takes away or reduces your rights as a consumer to rely on those provisions.</p>
 
                                         <p>Any dispute, controversy, proceedings or claim between you and us relating to these Terms and Conditions, or the relationship between you and us (whether contractual or otherwise) shall be subject to the jurisdiction of the courts of England, Wales, Scotland, or Northern Ireland, as determined by your residency.</p>
+
+                                        <p><strong>Nanjoos peri peri</strong></p>
+                                        <p><a href="https://www.nanjoosperiperi.co.uk">www.nanjoosperiperi.co.uk</a></p>
+                                        <p><a href="https://goo.gl/maps/dgvBbmP4sGjHF8gD9" target="_blank">44 osborene street bredbury stockport SK6 2BT</a></p>
+                                        <p><a href="tel:0161 355 6489">0161 355 6489</a></p>
 
                                     </li>
                                 </ul>

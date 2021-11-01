@@ -18371,12 +18371,47 @@ nav.collapse.show .navbar-collapse {
   margin-bottom: 30px;
 }
 
+@media (max-width: 767.98px) {
+  .privacy-banner {
+    display: none;
+  }
+}
+
+.privacy-banner li {
+  list-style: none;
+}
+
 .terms-banner {
   background-image: url(/images/terms.png?6c4b118c7c3b421026674bc5a271f29e);
   background-repeat: no-repeat;
   background-size: cover;
   height: 300px;
   margin-bottom: 30px;
+}
+
+@media (max-width: 767.98px) {
+  .terms-banner {
+    display: none;
+  }
+}
+
+.terms-list li {
+  list-style: none;
+}
+
+.terms-list a {
+  color: #f04e26;
+}
+
+.terms-list strong {
+  font-size: 16px;
+}
+
+@media (max-width: 767.98px) {
+  .term-page h1 {
+    font-size: 22px;
+    margin-top: 20px;
+  }
 }
 
 .footer-menu a {

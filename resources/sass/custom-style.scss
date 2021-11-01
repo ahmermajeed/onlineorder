@@ -4012,6 +4012,12 @@ nav.collapse.show .navbar-collapse {
     background-size: cover;
     height: 300px;   
     margin-bottom: 30px;
+    @include media-breakpoint-down(sm) {
+        display: none;
+    }
+    li {
+        list-style: none;
+    }
 }
 .terms-banner {
     background-image: url('images/gallery/terms.png');
@@ -4019,6 +4025,29 @@ nav.collapse.show .navbar-collapse {
     background-size: cover;
     height: 300px;   
     margin-bottom: 30px;
+    @include media-breakpoint-down(sm) {
+        display: none;
+    }
+    
+}
+.terms-list {
+    li {
+        list-style: none;
+    }
+    a {
+        color: $primary-color;
+    }
+    strong {
+        font-size: 16px;
+    }
+}
+.term-page {
+    h1 {
+        @include media-breakpoint-down(sm) {
+            font-size: 22px;
+            margin-top: 20px;
+        }
+    }
 }
 .footer-menu {
     a {

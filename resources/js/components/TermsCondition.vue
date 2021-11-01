@@ -6,7 +6,7 @@
                 
             </div>
         </section>
-        <section class="inner-section">
+        <section class="inner-section term-page">
             <div class="container">
                 <div class="row">
                     <div class="col-md-12">                    
@@ -14,7 +14,7 @@
                         <h1>Terms and Condition</h1>
 
                         <div class="terms-condition-section">
-                            <p>GRILL N SPICES LTD NUMBER 11262171 registered in England and wales whose registered office is 44 osborne street bredbuty SK6 2BT trading as NANJOOS PERI PERI website address nanjoosperiperi.co.uk also app available on play store and app store.</p>
+                            <p>GRILL N SPICES LTD NUMBER 11262171 registered in England and wales whose registered office is 44 osborne street bredbuty SK6 2BT trading as NANJOOS PERI PERI website address <a href="https://www.nanjoosperiperi.co.uk/" target="_blank">nanjoosperiperi.co.uk</a> also app available on play store and app store.</p>
 
                             <p>These Terms and Conditions govern the sale of all goods by us and will form the basis of the contract between you and us. If you wish to place an order with us, our Website/Application will guide you through the ordering process. Before submitting your order to us, you will be given the opportunity to review and amend it.
                             <br>
