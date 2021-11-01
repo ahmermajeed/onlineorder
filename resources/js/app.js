@@ -107,6 +107,16 @@ const router = new VueRouter({
             path: '/gallery',
             component: require('./components/Gallery.vue').default,
         },
+        {
+            path: '/terms-condition',
+            name:'terms-condition',
+            component: require('./components/TermsCondition.vue').default,
+        },
+        {
+            path: '/privacy-policy',
+            name:'privacy-policy',
+            component: require('./components/PrivacyPolicy.vue').default,
+        },
 
     ],
 

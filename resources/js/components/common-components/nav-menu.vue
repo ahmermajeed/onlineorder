@@ -2,7 +2,6 @@
 
     <div>
         <header class="masthead">
-            <!-- <nav class="navbar navbar-expand-lg navbar-light custom-header" id="mainNav"> -->
 
             <div class="header-top">
                 <div class="header-top-section">
@@ -153,7 +152,9 @@
             <!-- </nav> -->
             <slider v-if="this.$route.name !='online-order' &&
                   this.$route.name !='reservation-table'  &&
-                  this.$route.name !='check-out'">
+                  this.$route.name !='check-out' &&
+                  this.$route.name !='terms-condition' &&
+                  this.$route.name !='privacy-policy'">
             </slider>
             <div class="hero-for-mobile" v-if="this.$route.name !='online-order' &&
                   this.$route.name !='reservation-table'  &&
@@ -175,8 +176,7 @@
                 </div>
             </div> -->
 
-          <div class="container-fluid"
-          >
+          <div class="container-fluid" v-if="this.$route.name !='check-out'">
 
             <div class="mobile-cart-button" v-bind:class="{ cartheight: cart_height }" v-if="cartItems.length > 0">
               <div class="inner">

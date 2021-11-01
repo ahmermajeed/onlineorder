@@ -48,7 +48,7 @@
                 <div class="row mb-4">
                     <div class="col-lg-4 col-md-6">
                         <div class="menubox">
-                            <img src="/images/gallery/1.jpeg">
+                            <img src="/images/gallery/1.png">
                             <div class="ctabox">
                                 <button type="button" class="btn btn-outline-secondary" @click.prevent="openPostalCode">Order Now!</button>
                             </div>
@@ -56,7 +56,7 @@
                     </div>
                     <div class="col-lg-4 col-md-6">
                         <div class="menubox">
-                            <img src="/images/gallery/2.jpg">
+                            <img src="/images/gallery/2.png">
                             <div class="ctabox">
                                 <button type="button" class="btn btn-outline-secondary" @click.prevent="openPostalCode">Order Now!</button>
                             </div>
@@ -64,7 +64,7 @@
                     </div>
                     <div class="col-lg-4 col-md-6">
                         <div class="menubox">
-                            <img src="/images/gallery/3.jpg">
+                            <img src="/images/gallery/3.png">
                             <div class="ctabox">
                                 <button type="button" class="btn btn-outline-secondary" @click.prevent="openPostalCode">Order Now!</button>
                             </div>
@@ -74,7 +74,7 @@
                  <div class="row mb-4">
                     <div class="col-lg-4 col-md-6">
                         <div class="menubox">
-                            <img src="/images/gallery/4.jpg">
+                            <img src="/images/gallery/3.png">
                             <div class="ctabox">
                                 <button type="button" class="btn btn-outline-secondary" @click.prevent="openPostalCode">Order Now!</button>
                             </div>
@@ -82,7 +82,7 @@
                     </div>
                     <div class="col-lg-4 col-md-6">
                         <div class="menubox">
-                            <img src="/images/gallery/5.jpg">
+                            <img src="/images/gallery/2.png">
                             <div class="ctabox">
                                 <button type="button" class="btn btn-outline-secondary" @click.prevent="openPostalCode">Order Now!</button>
                             </div>
@@ -90,7 +90,7 @@
                     </div>
                     <div class="col-lg-4 col-md-6">
                         <div class="menubox">
-                            <img src="/images/gallery/6.jpg">
+                            <img src="/images/gallery/1.png">
                             <div class="ctabox">
                                 <button type="button" class="btn btn-outline-secondary" @click.prevent="openPostalCode">Order Now!</button>
                             </div>

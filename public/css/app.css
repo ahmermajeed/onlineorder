@@ -15443,6 +15443,7 @@ ul {
   display: inline-block;
   margin-top: 10px;
   color: #fff;
+  margin-right: 7px;
 }
 
 .menu-box .menu-box .box span span {
@@ -18352,5 +18353,37 @@ nav.collapse.show .navbar-collapse {
 
 .testimonial-text {
   font-size: 16px;
+}
+
+.terms-condition-section p,
+.privacy-policy p {
+  margin-bottom: 20px;
+  font-size: 15px;
+  color: #1a1a1a;
+  font-weight: 300;
+}
+
+.privacy-banner {
+  background-image: url(/images/privacy.png?ac8114d78c1c7df6c038119535e560b0);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 300px;
+  margin-bottom: 30px;
+}
+
+.terms-banner {
+  background-image: url(/images/terms.png?6c4b118c7c3b421026674bc5a271f29e);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 300px;
+  margin-bottom: 30px;
+}
+
+.footer-menu a {
+  padding: 0;
+}
+
+.footer-menu .router-link-exact-active a {
+  color: #f04e26;
 }
 
