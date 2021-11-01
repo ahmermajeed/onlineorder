@@ -13865,7 +13865,7 @@ a {
 .btn.btn-rounded-danger {
   color: #fff !important;
   background: #e5b052;
-  background-image: linear-gradient(to right, #e5b052 0%, #d4972b 100%);
+  background-image: linear-gradient(to right, #e5b052 0%, #e5b052 100%);
   background-repeat: repeat-x;
 }
 
@@ -14195,7 +14195,7 @@ ul {
   content: "";
   width: 100%;
   height: 100%;
-  border: 5px solid #fcce25;
+  border: 5px solid #e5b052;
   left: 0;
   transform: translate(10px, 10px);
 }
@@ -14543,7 +14543,7 @@ ul {
 }
 
 .main-ftr .footer-section-1 .Opening i {
-  color: #e5b052;
+  color: #e5b052 !important;
 }
 
 .main-ftr .footer-menu {
@@ -14617,7 +14617,7 @@ ul {
   display: inline-block;
   line-height: 36px;
   text-align: center;
-  background: #4b2117;
+  background: #e5b052;
 }
 
 .main-ftr .icons .facebook a {
@@ -17386,10 +17386,10 @@ select.form-control.input-valid {
 }
 
 .form-cart .switch-field input:checked + label {
-  color: #4498b9;
-  background-color: #ebf3f9;
+  color: #e5b052;
+  background-color: #ffeed1;
   box-shadow: none;
-  border: 1px solid #4498b9;
+  border: 1px solid #e5b052;
   font-weight: 700;
 }
 
@@ -17704,7 +17704,7 @@ span.cart-count.product-list-cart {
 }
 
 .order-page-menu path {
-  fill: #16110b;
+  fill: #e5b052;
 }
 
 .order-page-menu span.cart-count {
