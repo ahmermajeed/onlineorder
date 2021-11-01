@@ -95,12 +95,6 @@
                             </div>
                         </div>
 
-                        <!-- <div class="col-lg-6 col-md-6 col-sm-12 text-right ">
-                            <div class="priec-add">
-                                <h4 class="text-left">Total Amount : </h4>
-                               <span class="text-right">{{priceFormat(total_amount_of_single_product * product_quantity)}}</span>
-                            </div>
-                        </div> -->
                     </div>
                     <div class="see-missed" v-show="mandatory">
                       <a href="#missed-item" @click="scrollToTop">
@@ -111,9 +105,6 @@
                       </a>
                       <p>Make sure you pick all your options for this item. You’re almost there</p>
                     </div>
-<!--                    <div class="modal-ftr">
-                      <button :disabled='mandatory' @click.prevent="addToCart()" class="custom-btn add-count-button btn btn-rounded-danger">Add to Order  <span class="text-right">£ {{priceFormat(total_amount_of_single_product * product_quantity)}}</span></button>
-                    </div>-->
                 </form>
 
             </div>

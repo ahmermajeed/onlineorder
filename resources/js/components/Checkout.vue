@@ -1,5 +1,6 @@
 <template>
     <div>
+      <div class="for-checkout-only">
         <header-menu></header-menu>
 
         <section class="inner-section check-out-page">
@@ -15,11 +16,15 @@
                        <div class="col-12">
                        </div>
                        <div class="col-sm-12">
-                           <label>{{form.order_type}} Time</label>
-                           <select v-model="form.deliveryTime" class="form-control" id="delivery_time">
-                             <option value="">Please select {{form.order_type}} Time</option>
-                             <option v-for="slot in slots">{{slot}}</option>
-                           </select>
+                            <label>{{form.order_type}} Time</label>
+                            <select v-model="form.deliveryTime" class="form-control" id="delivery_time">
+                                <option value="">Please select {{form.order_type}} Time</option>
+                                <option v-for="slot in slots">{{slot}}</option>
+                            </select>
+<!--                             <selectize v-model="selected" :settings="settings">
+                              <option :value="1">One</option>
+                              <option :value="2">Two</option>
+                            </selectize> -->
                            <br>
                        </div>
 
@@ -170,16 +175,22 @@
         <footer-menu></footer-menu>
 
     </div>
+    </div>
 </template>
 
 <script>
 
 import {loadStripe} from '@stripe/stripe-js';
+import Selectize from 'vue2-selectize'
 
 export default {
-  components: {},
+  components: {
+    Selectize
+  },
   data: function () {
     return {
+        settings: {},
+        selected: 1,
       stripe: {},
       cardElement: {},
       loading: false,
@@ -238,11 +249,15 @@ export default {
     this.form.order_type = this.$store.getters.getOrderType;
 
     if (this.form.order_type == "Pickup")
-      this.interval = 30;
+      this.interval = 20;
     else
       this.interval = 45;
 
     this.getTimeSlots();
+
+    if(this.delivery_fees == null || this.delivery_fees == "null") {
+      this.delivery_fees = 0;
+    }
 
     this.scrollToMain();
     this.getOffers();
@@ -602,6 +617,7 @@ export default {
     finalAmount () {
 
       let final_amount = 0
+
       if (localStorage.getItem('order_type') === "Pickup") {
         final_amount = this.totalPrice - this.discountedAmount;
       } else {

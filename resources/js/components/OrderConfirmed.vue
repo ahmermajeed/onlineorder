@@ -1,7 +1,7 @@
 <template>
     <div>
 
-        <section class="order-information">
+        <section class="order-information" id="product-scroll">
             <div class="">
                 <div class="order-confirm-header">
 
@@ -13,7 +13,7 @@
 
                 </div>
                     <div class="order-confirm container">
-                        <h3 class="mb-3">Your Order Recieved!</h3>
+                        <h3 class="mb-3" style="color: green">Your Order Recieved!</h3>
                         <p><strong>Hi {{user_detail.name}} ,</strong></p>
                         <p class="mb-3">Thanks for an order.</p>
                     </div>
@@ -22,10 +22,10 @@
                         <table class="table">
                             <thead>
                               <tr>
-                                <th scope="col">Order Date</th>
+                                <th scope="col">Date</th>
                                 <th scope="col">Order No.</th>
                                 <th scope="col">Payment</th>
-                                <th scope="col">Order Type</th>
+                                <th scope="col">Type</th>
                               </tr>
                             </thead>
                           <tbody>
@@ -43,42 +43,42 @@
                     </div>
                     <div class="item-detail container">
                         <div class="row" v-for="(item, index) in order_details.details">
-                            <div class="col-md-8 product-order-detail">
+                            <div class="col-md-8">
+                                <div class="product-order-detail">
                               <p>{{item.product_name}}</p>
                               <p class="more-info" v-if="item.extras" v-html="getExtrasData(item.extras)"> </p>
+                              </div>
                             </div>
                             <div class="col-md-2">
                                 <p>{{item.special_instructions}}</p>
                             </div>
                             <div class="col-md-2">
-                                <p class="text-right text-left-mob">£ {{item.price}}</p>
+                                <p class="text-right text-left-mob item-price">£ {{priceFormat(item.price)}}</p>
                             </div>
                         </div>
                     </div>
-                    <div class="container">
-                        <div class="sepeartor-line"></div>
-                    </div>
-                    <div class="bill-info container">
-                        <ul>
-                            <li>
-                                <div class="list-detail">Total</div>
-                                <div class="list-detail text-right"> £ {{order_details.total_amount_with_fee}}</div>
-                            </li>
+                 
 
-                        </ul>
+                    <div class="item-detail container">
+                        <div class="row">
+                            <div class="col-md-10">
+                                <div class="product-order-detail">
+                                    <p>Total:</p>
+                              </div>
+                            </div>
+                         
+                            <div class="col-md-2">
+                                <p class="text-right text-left-mob item-price"> £ {{priceFormat(order_details.total_amount_with_fee)}}</p>
+                            </div>
+                        </div>
                     </div>
-
-                    <div class="container">
-                        <div class="sepeartor-line"></div>
-                    </div>
-
+                    
 
                     <div class="container">
                         <div class="sepeartor-line"></div>
                     </div>
 
                     <div class="shipping-info container">
-<!--                        <p class="mb-2">We'll send you shipping confirmation when your item(s) are on the way! We appreciate your business, and hope you enjoy your purchase.</p>-->
                         <p class="mb-1"><strong>Thank you!</strong></p>
                         <p class="mb-4">{{info.general_setting.site_name}}</p>
                     </div>
@@ -110,6 +110,8 @@
         },
 
         mounted() {
+
+            this.scrollToMain();
             this.getGeneralSetting();
             this.getOrderDetails();
         },
@@ -148,7 +150,14 @@
 
                 html ="<span>" + arr.join(',') +"</span>";
                 return html;
-            }
+            },
+            priceFormat(num) {
+              return parseFloat(num).toFixed(2);
+            },
+            scrollToMain() {
+              let element = document.getElementById("product-scroll");
+              element.scrollIntoView({behavior: "instant", block: "start"});
+            },
         },
         computed: {
             info() {

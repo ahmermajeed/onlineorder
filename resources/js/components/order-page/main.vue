@@ -5,7 +5,7 @@
           <div class="container">
             <div class="row">
               <div class="col-md-2 col-12">
-                <h3>{{info.general_setting.site_name}}</h3>
+                  <h3>{{info.general_setting.site_name}}</h3>
               </div>
               <div class="col-md-9 col-12">
                 <ul class="d-flex">
@@ -146,17 +146,17 @@
                         </section>
                     </div>
                     <div class=" col-lg-4 col-md-12 col-sm-12 cart  check-card add-card listing-page-sidebar lp-sidebar-right">
-                        <div class="cart-box order" id="cart-stiky">
+            <div class="cart-box order" id="cart-stiky">
                             <div class="lp-sidebar-title cate-heading">
                                 <h3 class="text-left">Your Cart</h3>
                                 <img src="../../../images/cart.png">
                             </div>
 
-                            <div class="food-allergy" @click="foodAllergyPopup">
-                                <p>
-                                <img src="/images/information.png" alt="">
-                                </i>Click here if you or someone you are ordering for has a food allergy</p>
-                            </div>
+<!--                            <div class="food-allergy" @click="foodAllergyPopup">-->
+<!--                                <p>-->
+<!--                                <img src="/images/information.png" alt="">-->
+<!--                                </i>Click here if you or someone you are ordering for has a food allergy</p>-->
+<!--                            </div>-->
 
                             <form class="form-cart">
                                  <div class="switch-field">
@@ -240,7 +240,7 @@
                             </div>
 
                         </div>
-                        <div class="mobile-cart-button" v-bind:class="{ cartheight: cart_height }" v-if="cartItems.length > 0">
+<!--                <div class="mobile-cart-button" v-bind:class="{ cartheight: cart_height }" v-if="cartItems.length > 0">
                 <div class="inner">
                     <span class="products-count"><svg xmlns="http://www.w3.org/2000/svg" class="svg-stroke-container" width="24" height="24">
                         <path fill="#707070" d="M12 2.75a4.75 4.75 0 014.744 4.5h3.103a1 1 0 01.99 1.141l-1.714 12a1 1 0 01-.99.859H5.867a1 1 0 01-.99-.859l-1.714-12a1 1 0 01.99-1.141h3.103A4.75 4.75 0 0112 2.75zm5.559 14.75H6.44a.4.4 0 00-.396.457l.208 1.45a.4.4 0 00.396.343H17.35a.4.4 0 00.396-.343l.208-1.45a.4.4 0 00-.396-.457zm1.25-8.75H5.19a.4.4 0 00-.396.457l.922 6.45a.4.4 0 00.396.343h11.775a.4.4 0 00.396-.343l.922-6.45a.4.4 0 00-.396-.457zM12 4.25a3.251 3.251 0 00-3.193 2.638.305.305 0 00.3.362h5.796a.297.297 0 00.292-.35A3.251 3.251 0 0012 4.25z"></path>
@@ -274,37 +274,15 @@
                 <div class="confirm-btn">
                     <button class="anima-btn move-eff" @click="placeOrder()"><span>Confirm Order</span></button>
                 </div>
-            </div>
+            </div>-->
                     </div>
                 </div>
             </div>
         </section>
         <!-- <div class="loading" v-if="loading">Loading&#8230;</div> -->
-        <div class="container-fluid"
-        :class="{'cart-menu-fixed': scrolled}"  v-on="handleScroll()">
-            <!-- <div class="row full">
 
-                    <div class="offset-categories">
-                        <div id="categories-tabs">
-                            <div class="desktop-tabs">
-                                <ul class="nav nav-tabs">
-                                    <li><a href="#"  @click.prevent="getProductAgainstCategories(false)" >All</a></li>
-                                    <li  v-for="(item, index) in categories"><a href="#" @click.prevent="getProductAgainstCategories(item.id)">{{item.name}}</a></li>
-                                    <li> <a href="#"   @click.prevent="getDeals(1)">DEALS </a></li>
+<!--      <div class="container-fluid">
 
-                                </ul>
-                            </div>
-                            <div class="form-group product-search">
-                                <div class=input-group>
-                                    <div class=input-group-addon>
-                                        <i class="fa fa-search"></i>
-                                    </div>
-                                    <input class="form-control" placeholder="Search">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-            </div> -->
             <div class="mobile-cart-button" v-bind:class="{ cartheight: cart_height }" v-if="cartItems.length > 0">
                 <div class="inner">
                     <span class="products-count"><svg xmlns="http://www.w3.org/2000/svg" class="svg-stroke-container" width="24" height="24">
@@ -315,42 +293,8 @@
 
                     <span class="text chek-out-btn btn btn-rounded-danger" @click="opencartlist()">Checkout</span>
 
-                   <!--   <button class=" chek-out-btn anima-btn custom-btn move-eff btn btn-rounded-danger " @click="opencartlist()"><span>Checkout</span><i class="fas fa-long-arrow-alt-right"></i></button>  -->
                 </div>
-<!--                 <div class="mb-cart-box">
-                <ul class="border-all" v-for="(cart, product_index) in getAllCartArray"  v-if="product_index  > 0">
-                    <li>
 
-                        <span class="meal">
-                             <span class="qty">
-                               <i class="fa fa-angle-up" @click="quantityAddInCart(product_index)"></i>
-
-                               <i class="fa fa-angle-down" @click="quantityMinusInCart(product_index)"></i>
-                        </span>
-                         <h3> {{ cart.quantity}} {{cart.product_name}}</h3>
-
-
-                            <ul class="" v-if="cart.extras" v-for="(extra, extra_index) in cart.extras">
-                                <li><h3 class="font-weight:800px;">{{extra.group_name}}:
-                                {{extra.choice}}</h3> </li>
-                                <span class="mealactions">
-
-                                <a href="#"  @click="updateProduct(cart.product_id,cart,product_index)"><i v-b-tooltip.hover title="Edit Meal" class="fas fa-pen">
-
-</i></a>
-                            <span class="price">£{{priceFormat(cart.single_product_total_amount)}}</span>
-                              <a href="#"  @click.prevent="removeFromCart(product_index)"> <i                                 v-b-tooltip.hover title="Remove Meal" class="icon-delete"></i></a>
-
-
-                            </span>
-
-                            </ul>
-
-                        </span>
-
-                    </li>
-                </ul>
-                </div> -->
 
                 <div class="mb-cart-box">
                     <ul class="cart-list"  v-for="(cart, product_index) in cartItems">
@@ -382,9 +326,9 @@
                     <button class="anima-btn btn btn-rounded-danger btn move-eff" @click="placeOrder()"><span>Confirm Order</span></button>
                 </div>
             </div>
-        </div>
+        </div>-->
 
-        <food-allergy @HideModalValue="hideModal" :showModalProp="foodAllergyModal"></food-allergy>
+<!--        <food-allergy @HideModalValue="hideModal" :showModalProp="foodAllergyModal"></food-allergy>-->
 
         <add-product @HideModalValue="hideModal" :showModalProp="product" :list="list" :has_sizes="has_sizes"></add-product>
 
@@ -652,7 +596,7 @@ export default {
 
           if(response.data.error === undefined){
             vm.errorMessage = response.data.data.amount;
-            vm.$store.commit('setDeliveryCharges', response.data.data.fix_delivery_charges);
+            vm.$store.commit('setDeliveryCharges', response.data.data.amount);
             vm.$store.commit('setOrderType', vm.orderType);
             vm.$store.commit('setPostalCode', vm.postalCode);
             vm.$router.push({name: 'check-out'})
@@ -2119,7 +2063,7 @@ export default {
         }
         .mobile-cart-button .inner span.text:after{
             margin-left:5px;
-            content: "\f105";
+            content: "";
             display: inline-block;
             font: normal normal normal 14px/1 Font Awesome 5 Free;
             font-size: inherit;
@@ -2129,7 +2073,7 @@ export default {
         }
         .mobile-cart-button.cartheight .inner span.text:after{
             margin-left:5px;
-            content: "\f107";
+            content: "";
             display: inline-block;
             font: normal normal normal 14px/1 Font Awesome 5 Free;
             font-size: inherit;
@@ -2261,6 +2205,7 @@ export default {
         .cartheight .confirm-btn .move-eff span{
             top: 3px;
             left: 0;
+            font-size: 16px;
         }
 
     }
@@ -2303,7 +2248,7 @@ export default {
         }
         .mealactions a {
             margin-right: 24px;
-            margin-right: 7px;
+            margin-right: 6px;
             position: relative;
             top: -6px;;
         }

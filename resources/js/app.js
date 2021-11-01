@@ -7,6 +7,9 @@ import Vuex from 'vuex';
 import store from './store.js'
 import VueCtkDateTimePicker from 'vue-ctk-date-time-picker';
 import 'vue-ctk-date-time-picker/dist/vue-ctk-date-time-picker.css';
+import "selectize/dist/css/selectize.bootstrap3.css";
+require('vue-image-lightbox/dist/vue-image-lightbox.min.css')
+
 
 import Datepicker from 'vuejs-datepicker';
 
@@ -95,6 +98,16 @@ const router = new VueRouter({
             path: '/order-confirmed/:id',
             component: require('./components/OrderConfirmed.vue').default,
         },
+
+        {
+            path: '/kitchen-screen',
+            component: require('./components/KitchenScreen.vue').default,
+        },
+        {
+            path: '/gallery',
+            component: require('./components/Gallery.vue').default,
+        },
+
     ],
 
 });

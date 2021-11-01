@@ -1,5 +1,8 @@
 html{
     overflow-x: hidden;
+    &.onlypopup{
+        overflow: hidden;
+    }
 }
 body {
     overflow: inherit !important;
@@ -36,6 +39,19 @@ input, select, button, textarea{
         appearance: none;
 }
 
+
+input[type=radio]{
+    -webkit-appearance: radio;
+   -moz-appearance: radio;
+        appearance: radio;
+}
+
+input[type=checkbox]{
+    -webkit-appearance: checkbox;
+   -moz-appearance: checkbox;
+        appearance: checkbox;
+}
+
 .badge {
     font-size: 12px;
 
@@ -59,20 +75,20 @@ a {
     min-width: 140px;
     &.btn-rounded-default {
         color: #fff !important;
-        background: $btn-color1;
+        background: $primary-color;
         @include gradient-x(
-            $start-color: $btn-color1,
-            $end-color: $btn-color2,
+            $start-color: $primary-color,
+            $end-color: $primary-color,
             $start-percent: 0%,
             $end-percent: 100%
         );
     }
     &.btn-rounded-danger {
         color: #fff !important;
-        background: $btn-color1;
+        background: $primary-color;
         @include gradient-x(
-            $start-color: $btn-color1,
-            $end-color: $btn-color2,
+            $start-color: $primary-color,
+            $end-color: $primary-color,
             $start-percent: 0%,
             $end-percent: 100%
         );
@@ -188,7 +204,7 @@ ul {
             padding: 0px 11px 0px 11px;
             display: inline-block;
             @include media-breakpoint-down(sm) {
-                padding: 0px 5px 0px 5px;
+                padding: 0px 3px 0px 3px;
             }
         }
 
@@ -211,7 +227,6 @@ ul {
 
         a {
             font-size: 14px;
-            color: #000 !important;
         }
 
         ul {
@@ -289,7 +304,7 @@ ul {
             }
             .cart-count{
                 @include media-breakpoint-down(sm){
-                    top: 0;
+                    top: -10px;
                     left: -10px;
                 }
             }
@@ -367,6 +382,7 @@ ul {
         overflow: hidden;
         cursor: pointer;
         position: relative;
+        margin-bottom: 30px;
         @include media-breakpoint-down(sm){
             margin-bottom: 20px;
         }
@@ -380,7 +396,7 @@ ul {
             content: "";
             width: 100%;
             height: 100%;
-            border: 5px solid #ef501f;
+            border: 5px solid $primary-color;
             left: 0;
             transform: translate(10px, 10px);
         }
@@ -692,7 +708,7 @@ $duration: 50s;
             }
 
             i {
-                color: $red;
+                color: $primary-color !important;
             }
         }
     }
@@ -762,7 +778,7 @@ $duration: 50s;
                     display: inline-block;
                     line-height: 36px;
                     text-align: center;
-                    background: #f6e122;
+                    background: $primary-color;
                 }
             }
         }
@@ -1454,11 +1470,12 @@ $duration: 50s;
                 font-size: 14px;
             }
             span{
-                background: #f6e122;
+                background: $primary-color;
                 padding: 4px 10px;
                 border-radius: 4px;
                 display: inline-block;
                 margin-top: 10px;
+                color: #fff;
                 span{
                     padding: 0;
                     margin: 0;
@@ -1499,7 +1516,7 @@ $duration: 50s;
         width: 85%;
     }
     .btn{
-        background: $btn-color1;
+        background: $primary-color;
         padding: 15px 80px;
         font-size: 20px;
         color: #fff;
@@ -2099,7 +2116,7 @@ $duration: 50s;
                 top: 0;
                 background: #fff;
                 @include media-breakpoint-down(sm){
-                    position: fixed;  
+                    /*position: fixed;*/  
                 }
                 .modal-title{
                     margin: 0 !important;
@@ -2110,8 +2127,14 @@ $duration: 50s;
             }
             .modal-body{
                 @include media-breakpoint-down(sm){
-                    padding-top: 90px !important;
+                    padding-top: 170px !important;
                     position: unset;
+                }
+                .description{
+                    @include media-breakpoint-down(sm){
+                        padding: 15px;
+                        width: 100%;
+                    }
                 }
 
             }
@@ -2161,7 +2184,7 @@ $duration: 50s;
                 padding-top: 40px !important;
                 scroll-behavior: smooth;
                 @include media-breakpoint-down(sm){
-                    padding-top: 90px !important;
+                    padding-top: 40px !important;
                     max-height: inherit !important;
                 }
                 .info-item{
@@ -2549,11 +2572,49 @@ $duration: 50s;
 
 /*********************about end************************/
 .custom-modal {
+    @include media-breakpoint-down(sm){
+        padding-right: 0;
+    }
     .modal-header {
         padding: 10px 1rem;
     }
     .modal-body {
         padding: 1.5rem 1rem;
+        @include media-breakpoint-down(sm){
+            /*display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;*/
+        }
+        .order-selection{
+            @include media-breakpoint-down(sm){
+                width: 100%;
+            }
+            img{
+                display: none;
+                @include media-breakpoint-down(sm){
+                    display: block;
+                    margin: 0 auto;
+                }
+            }
+            label{
+                @include media-breakpoint-down(sm){
+                    margin: 30px 0;
+                }
+                span{
+                    @include media-breakpoint-down(sm){
+                        font-size: 18px;
+                        display: inline-block;
+                    }
+                }
+            }
+            .switch-field{
+                @include media-breakpoint-down(sm){
+                    margin: 0 auto;
+                    width: max-content;
+                }
+            }
+        }
     }
 }
 .error {
@@ -2934,7 +2995,13 @@ $duration: 50s;
         }
     }
 }
-
+.for-checkout-only{
+    footer{
+        @include media-breakpoint-down(sm){
+            display: none;
+        }  
+    } 
+}
 .mobile-cart-button {
     padding: 0px !important;
     background-color: #fff !important;
@@ -2945,6 +3012,9 @@ $duration: 50s;
         background: $btn-color1;
         .products-value {
             margin-left: 30px;
+            @include media-breakpoint-down(sm){
+                font-size: 16px;
+            }
         }
         .chek-out-btn {
             min-width: 110px;
@@ -2991,7 +3061,8 @@ $duration: 50s;
             color: #fff !important;
             margin: 0px;
             border: none !important;
-            border-radius: 20px !important;
+            border-radius: 8px !important;
+            padding: 10px 105px !important;
         }
     }
 }
@@ -3094,10 +3165,10 @@ select.form-control.input-valid {
 }
 
 .form-cart .switch-field input:checked + label {
-    color: #4498b9;
-    background-color: #ebf3f9;
+    color: $primary-color;
+    background-color: $primary-color-lt;
     box-shadow: none;
-    border: 1px solid #4498b9;
+    border: 1px solid $primary-color;
     font-weight: 700;
 }
 
@@ -3267,6 +3338,9 @@ span.cart-count {
     @include media-breakpoint-down(sm) {
         top: 9px;
         left: 35px;
+        border: 1px solid #ccc;
+        text-align: center;
+        line-height: 1.6;
     }
 }
 span.cart-count.product-list-cart {
@@ -3356,7 +3430,7 @@ span.cart-count {
     font-size: 32px;
 }
 .order-page-menu path {
-    fill: #16110b;
+    fill: $primary-color;
 }
 .order-page-menu span.cart-count {
     position: relative;
@@ -3713,14 +3787,21 @@ span.address {
 .item-detail .more-info {
     font-size: 16px;
     color: grey;
+    margin-bottom: 20px;
 }
 .order-confirm-header {
     text-align: center;
     background: #f9fbfc;
     padding: 50px 20px;
     margin-bottom: 40px;
+    @include media-breakpoint-down(sm) {
+        padding: 30px 20px;
+    }
     img {
         width: 250px;
+        @include media-breakpoint-down(sm) {
+            width: 110px;
+        }
     }
 }
 .order-confirm {
@@ -3730,9 +3811,10 @@ span.address {
     }
     p {
         color: #495362;
+        margin-bottom: 20px;
         strong {
             font-size: 22px !important;
-            font-weight: 100;
+            font-weight: initial;
         }
     }
 }
@@ -3757,12 +3839,18 @@ span.address {
 .order-confirm-footer {
     background: #f9fbfc;
     padding: 20px 0;
+        @include media-breakpoint-down(sm) {
+            text-align: center;
+        }
     p {
         display: inline-block;
     }
     .copyright-text {
         color: #bec2cb;
         float: right;
+        @include media-breakpoint-down(sm) {
+            float: none;
+        }
     }
     
 }
@@ -3775,6 +3863,9 @@ span.address {
                 display: inline-block;
                 font-size: 18px;
                 width: 49%;
+                strong {
+                    font-size: 16px;
+                }
             }
             .discount-value {
                 color: #29bfaf;
@@ -3794,8 +3885,15 @@ span.address {
     p {
         margin-left: 10px;
         @include media-breakpoint-down(sm) {
-         margin-left: 0;
+            margin-left: 0;
         }
+    }
+}
+.item-price {
+    @include media-breakpoint-down(sm) {
+        margin-bottom: 20px;
+        border-bottom: 1px solid #ccc;
+        padding-bottom: 20px;
     }
 }
 
@@ -3809,6 +3907,84 @@ span.address {
         width: 140px;
         margin-right: 10px;
         margin-top: -6px;
+        @include media-breakpoint-down(sm) {
+            width: 100px;
+            margin-bottom: 20px;
+        }
     }
 }
 /*************** Reservation-section-end *******************/
+body.disable-scroll {
+    position: fixed;
+}
+.router-link-exact-active a {
+    color: $primary-color !important;
+}
+.section-border.order-check select {
+    width: 70%; 
+}
+nav.collapse {
+    display: block !important;
+}
+nav.collapse.show {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 99;
+    margin-top: 0 !important;
+}
+nav.collapse.show .navbar-toggler {
+    top: 80px;
+    right: 30px;
+    position: absolute;
+}
+nav.collapse.show .navbar-collapse {
+    position: relative;
+    height: 0;
+}
+.mobile-cart-icon {
+    @include media-breakpoint-down(sm) {
+        display: none;
+    }
+}
+.bill-info strong {
+    font-size: 18px;   
+}
+.mob-text-left {
+    @include media-breakpoint-down(sm) {
+        text-align: left !important;
+    }    
+}
+.testimonial-section {
+    text-align: center;
+    h4 {
+        margin-bottom: 40px;
+    }
+    img {
+        margin-bottom: 10px;
+    }
+    .customer-name {
+        color: $primary-color;
+        font-weight: bold;
+    }
+}
+.review-box {
+    border: 1px solid #ccc;
+    padding: 30px;
+    border-radius: 28px;
+    background: #fff7d7;
+    height: 260px;
+    margin-bottom: 20px;
+    p {
+        font-size: 13px;
+        margin-bottom: 20px;
+    }
+    a {
+        color: $primary-color;
+    }
+}
+.testimonial-text {
+    font-size: 16px;
+}

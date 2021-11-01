@@ -4,9 +4,11 @@ namespace App\Data\Repositories;
 
 use App\Data\Models\OrderDetail;
 use App\Data\Models\Orders;
+use App\Data\Models\RestaurantTiming;
 use App\Data\Models\UserAddress;
 use App\Mail\OrderPlace;
 use App\User;
+use Carbon\Carbon;
 use Illuminate\Support\Facades\Mail;
 use function App\Helpers\paginator;
 
@@ -85,7 +87,6 @@ class OrderRepository
         $phone_number = User::where('id',$data->user_id)->pluck('phone_number')->first();
         $data->phone_number = !empty($phone_number)?$phone_number:"Number Not Found";
 
-
         return $data;
     }
 
@@ -129,4 +130,39 @@ class OrderRepository
         $totalSale = $this->model->where('status', 'delivered')->sum('total_amount_with_fee');
         return $totalSale;
     }
+
+    public function getKitchenOrders($pagination = false,$perPage = 10, $input = [])
+    {
+        $return = array();
+
+        $getCurrentDay = Carbon::today()->format('l');
+        $getCurrentDate = Carbon::today()->format('Y-m-d');
+
+        $start_time = $getCurrentDate." 00:00:00";
+        $end_time = $getCurrentDate." 23:59:59";
+
+        $availableDay = RestaurantTiming::where('day', $getCurrentDay)->first();
+
+        if (isset($availableDay)) {
+            $start_time = $getCurrentDate. " ".$availableDay['start_time'];
+            $end_time = $getCurrentDate. " ".$availableDay['end_time'];
+        }
+
+        $data = $this->model
+            ->with(['details' => function ($query) {
+                $query->without('product');
+            }])
+            ->orderBy('id', 'desc')
+            ->whereBetween('created_at', [$start_time, $end_time])
+            ->get()->toArray();
+
+        $return['orders'] = $data;
+        $return['accepted_orders'] = $this->model->where('status', 'Accepted')->whereBetween('created_at', [$start_time, $end_time])->count();
+        $return['preparing_orders'] = $this->model->where('status', 'Preparing')->whereBetween('created_at', [$start_time, $end_time])->count();
+        $return['completed_orders'] = $this->model->where('status', 'Completed')->whereBetween('created_at', [$start_time, $end_time])->count();
+        $return['new_orders'] = $this->model->where('status', 'Order Placed')->whereBetween('created_at', [$start_time, $end_time])->count();
+
+        return $return;
+    }
+
 }
