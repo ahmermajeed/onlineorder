@@ -689,7 +689,7 @@ $duration: 50s;
             &.icon{
                 border: 1px solid #ddd;
                 i{
-                    color: #000;
+                    color: #fff;
                 }
             }
         }
@@ -756,7 +756,7 @@ $duration: 50s;
         padding-top: 20px;
         border-top: 1px solid #ccc;
         i {
-            color: #fff;
+            color: #fff !important;
         }
 
         ul {
@@ -1475,6 +1475,7 @@ $duration: 50s;
                 display: inline-block;
                 margin-top: 10px;
                 color: #fff;
+                margin-right: 7px;
                 span{
                     padding: 0;
                     margin: 0;
@@ -3165,7 +3166,7 @@ select.form-control.input-valid {
 
 .form-cart .switch-field input:checked + label {
     color: $primary-color;
-    background-color: $primary-color-lt;
+    background-color: $primary-color-ex-lt;
     box-shadow: none;
     border: 1px solid $primary-color;
     font-weight: 700;
@@ -3317,6 +3318,9 @@ a.circle span.cnt {
     float: left;
     padding: 10px;
     margin-top: 10px;
+    a {
+        font-size: 13px;
+    }
 }
 span.cart-count {
     position: absolute;
@@ -3435,9 +3439,9 @@ span.cart-count {
     position: relative;
     top: -44px;
     left: 25px;
-    border: 1px solid #16110b;
+    border: 1px solid $primary-color;
     display: block;
-    color: #16110b;
+    color: $primary-color;
     @include media-breakpoint-down(sm) {
         display: inline-block !important;
         top: -7px;
@@ -3973,7 +3977,7 @@ nav.collapse.show .navbar-collapse {
     border: 1px solid #ccc;
     padding: 30px;
     border-radius: 28px;
-    background: #fff7d7;
+    background: $primary-color-ex-lt;
     height: 260px;
     margin-bottom: 20px;
     p {
@@ -3983,7 +3987,73 @@ nav.collapse.show .navbar-collapse {
     a {
         color: $primary-color;
     }
+    svg {
+        margin-bottom: 20px; 
+        path {
+            fill: $primary-color;
+        }
+    }
 }
 .testimonial-text {
     font-size: 16px;
+}
+.terms-condition-section,.privacy-policy {
+    p {
+        margin-bottom: 20px;
+        font-size: 15px;
+        color: #1a1a1a;
+        font-weight: 300;
+    }   
+}
+.privacy-banner {
+    background-image: url('images/gallery/privacy.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 300px;   
+    margin-bottom: 30px;
+    @include media-breakpoint-down(sm) {
+        display: none;
+    }
+}
+.terms-banner {
+    background-image: url('images/gallery/terms.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 300px;   
+    margin-bottom: 30px;
+    @include media-breakpoint-down(sm) {
+        display: none;
+    }
+    li {
+        list-style: none;
+    }
+}
+.terms-list {
+    li {
+        list-style: none;
+    }
+    a {
+        color: $primary-color;
+    }
+    strong {
+        font-size: 16px;
+    }
+}
+.term-page {
+    h1 {
+        @include media-breakpoint-down(sm) {
+            font-size: 22px;
+            margin-top: 20px;
+        }
+    }
+}
+.footer-menu {
+    a {
+        padding: 0;
+    }
+    .router-link-exact-active {
+        a {
+            color: $primary-color;
+        }
+    }
 }

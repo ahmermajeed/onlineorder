@@ -2760,7 +2760,7 @@ input[type="color"].form-control:disabled {
 @font-face {
   font-family: "icomoon";
   src: url(/fonts/icomoon.eot?76635d63bce16256f86327d58b6321b8);
-  src: url(/fonts/icomoon.eot?76635d63bce16256f86327d58b6321b8) format("embedded-opentype"), url(/fonts/icomoon.ttf?5fa4d4ce9add11a85d13c7c47caa6b07) format("truetype"), url(/fonts/icomoon.woff?568a82c6c1998690e9ec7f07d2be5b24) format("woff"), url(/fonts/icomoon.svg?18a6e7236a4ff9e8383fe0c191ad6aaa) format("svg");
+  src: url(/fonts/icomoon.eot?76635d63bce16256f86327d58b6321b8) format("embedded-opentype"), url(/fonts/icomoon.ttf?5fa4d4ce9add11a85d13c7c47caa6b07) format("truetype"), url(/fonts/icomoon.woff?568a82c6c1998690e9ec7f07d2be5b24) format("woff"), url(/fonts/icomoon.svg?d985cec9ced340166aa66f0157d2ec3b) format("svg");
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -14526,7 +14526,7 @@ ul {
 }
 
 .main-ftr .footer-section-1 span.icon i {
-  color: #000;
+  color: #fff;
 }
 
 .main-ftr .footer-section-1 .Opening {
@@ -14594,7 +14594,7 @@ ul {
 }
 
 .main-ftr .icons i {
-  color: #fff;
+  color: #fff !important;
 }
 
 @media (max-width: 767.98px) {
@@ -15443,6 +15443,7 @@ ul {
   display: inline-block;
   margin-top: 10px;
   color: #fff;
+  margin-right: 7px;
 }
 
 .menu-box .menu-box .box span span {
@@ -17387,7 +17388,7 @@ select.form-control.input-valid {
 
 .form-cart .switch-field input:checked + label {
   color: #e5b052;
-  background-color: #ffeed1;
+  background-color: #fff8e5;
   box-shadow: none;
   border: 1px solid #e5b052;
   font-weight: 700;
@@ -17572,6 +17573,10 @@ a.circle span.cnt {
   margin-top: 10px;
 }
 
+.view-total-menu a {
+  font-size: 13px;
+}
+
 span.cart-count {
   position: absolute;
   font-size: 11px !important;
@@ -17711,9 +17716,9 @@ span.cart-count.product-list-cart {
   position: relative;
   top: -44px;
   left: 25px;
-  border: 1px solid #16110b;
+  border: 1px solid #e5b052;
   display: block;
-  color: #16110b;
+  color: #e5b052;
 }
 
 @media (max-width: 767.98px) {
@@ -18324,7 +18329,7 @@ nav.collapse.show .navbar-collapse {
   border: 1px solid #ccc;
   padding: 30px;
   border-radius: 28px;
-  background: #fff7d7;
+  background: #fff8e5;
   height: 260px;
   margin-bottom: 20px;
 }
@@ -18338,7 +18343,82 @@ nav.collapse.show .navbar-collapse {
   color: #e5b052;
 }
 
+.review-box svg {
+  margin-bottom: 20px;
+}
+
+.review-box svg path {
+  fill: #e5b052;
+}
+
 .testimonial-text {
   font-size: 16px;
+}
+
+.terms-condition-section p,
+.privacy-policy p {
+  margin-bottom: 20px;
+  font-size: 15px;
+  color: #1a1a1a;
+  font-weight: 300;
+}
+
+.privacy-banner {
+  background-image: url(/images/privacy.png?ac8114d78c1c7df6c038119535e560b0);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 300px;
+  margin-bottom: 30px;
+}
+
+@media (max-width: 767.98px) {
+  .privacy-banner {
+    display: none;
+  }
+}
+
+.terms-banner {
+  background-image: url(/images/terms.png?6c4b118c7c3b421026674bc5a271f29e);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 300px;
+  margin-bottom: 30px;
+}
+
+@media (max-width: 767.98px) {
+  .terms-banner {
+    display: none;
+  }
+}
+
+.terms-banner li {
+  list-style: none;
+}
+
+.terms-list li {
+  list-style: none;
+}
+
+.terms-list a {
+  color: #e5b052;
+}
+
+.terms-list strong {
+  font-size: 16px;
+}
+
+@media (max-width: 767.98px) {
+  .term-page h1 {
+    font-size: 22px;
+    margin-top: 20px;
+  }
+}
+
+.footer-menu a {
+  padding: 0;
+}
+
+.footer-menu .router-link-exact-active a {
+  color: #e5b052;
 }
 

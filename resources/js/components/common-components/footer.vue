@@ -7,13 +7,34 @@
                         <div class="row">
                             <div class="col-lg-4 col-md-4 footer-section-2 footer-space">
                                 <h3>Quick Links</h3>
-                                <div class="footer-menu">
-                                    <ul>
-                                      <li><a href="/">Home</a></li>
-                                      <li><a href="/feedback">Feedback</a></li>
-                                      <li><a href="#" @click.prevent="openPostalCode">Order Online</a></li>
-                                    </ul>
-                                </div>
+                           <div class="footer-menu">
+                               <ul>
+                               <li>
+                                   <router-link :to="{ path: '/'}">
+                                       <a class="nav-link js-scroll-trigger">Home</a>
+                                   </router-link>
+                               </li>
+                               <li>
+                                   <router-link :to="{ path: '/feedback'}">
+                                       <a class="nav-link js-scroll-trigger">Feedback</a>
+                                   </router-link>
+                               </li>
+                               <li>
+                                   <router-link :to="{ path: '/terms-condition'}" 
+                                   @click.native="scrollToTop">
+                                       <a class="nav-link js-scroll-trigger">Terms and Condition</a>
+                                   </router-link>
+                               </li>
+                               <li>         
+                                   <router-link :to="{ path: '/privacy-policy'}" @click.native="scrollToTop">
+                                       <a class="nav-link js-scroll-trigger">Privacy Policy</a>
+                                   </router-link>
+                               </li>
+                               <li>
+                                       <a class="nav-link js-scroll-trigger" @click.prevent="openPostalCode">Order Online</a>
+                               </li>
+                               </ul>
+                           </div>
                             </div>
                             <div class="col-lg-4 col-md-4 footer-section-3 footer-space">
                                 <h3>Working Hours</h3>
@@ -81,6 +102,10 @@
              hideModal() {
                 this.showPostalCode = false;
             },
+            scrollToTop() {
+                           window.scrollTo(0,0);
+                           behavior: 'smooth'
+                      }
         },
         computed:{
             info(){
