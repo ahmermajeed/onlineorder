@@ -196,7 +196,7 @@ class OrderController extends Controller
             'type' => 1,
             'currencyCode' => 826,
             'countryCode' => 826,
-            'amount' => 10001,
+            'amount' => rand(0,4),
             'cardNumber' => '4012001037141112',
             'cardExpiryMonth' => 12,
             'cardExpiryYear' => 25,
