@@ -394,7 +394,7 @@ class OrderController extends Controller
         $requestData = $request->all();
 
         $req = array(
-             'threeDSRef' => $_SESSION['threeDSRef'],
+             'threeDSRef' => "UDNLRVk6dHJhbnNhY3Rpb25JRD0xMzYwNTA4MTImbWVyY2hhbnRJRD0xMzMwMTYmX19saWZlX189MTYzNTk3NTg1Ng==",
              'threeDSResponse' => $requestData,
         );
 
