@@ -163,13 +163,6 @@ class Gateway {
 
             $response['iframe'] = "<iframe name=\"threeds_acs\" style=\"height:420px; width:420px; {$style}\"></iframe>\n";
 
-
-          //  echo "<iframe name=\"threeds_acs\" style=\"height:420px; width:420px; {$style}\"></iframe>\n";
-
-            //echo static::silentPost($response['threeDSURL'], $response['threeDSRequest'], 'threeds_acs');
-
-            //exit;
-
             // Silently POST the 3DS request to the ACS in the IFRAME
             $response['i_form'] = static::silentPost($response['threeDSURL'], $response['threeDSRequest'], 'threeds_acs');
 

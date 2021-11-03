@@ -393,9 +393,44 @@ class OrderController extends Controller
     {
         $requestData = $request->all();
 
-        echo "test";
-        print_r($requestData);
+        $req = array(
+             'threeDSRef' => $_SESSION['threeDSRef'],
+             'threeDSResponse' => $requestData,
+        );
+
+        print_r($req);
         exit;
+        /*
+        $req = array(
+            //'merchantID' => 100856,
+            'merchantID' => 133016,
+            'action' => 'SALE',
+            'type' => 1,
+            'currencyCode' => 826,
+            'countryCode' => 826,
+            'amount' => 10001,
+            'cardNumber' => '4012001037141112',
+            'cardExpiryMonth' => 12,
+            'cardExpiryYear' => 25,
+            'cardCVV' => '083',
+            'customerName' => 'Test Customer',
+            'customerEmail' => 'test@testcustomer.com',
+            'customerAddress' => '16 Test Street',
+            'customerPostCode' => 'TE15 5ST',
+            'orderRef' => 'Test purchase',
+            // The following fields are only mandatory for 3DS v2 direct integration
+            'remoteAddress' => $_SERVER['REMOTE_ADDR'],
+            'threeDSRedirectURL' => 'https://aisha-cafe.softdemo.co.uk/stream-check-out'
+        );*/
+
+        $return = Gateway::directRequest($req);
+
+        if($return['responseCode'] === 65802) {
+            $code = 401;
+            $output = ['error' => ['code' => 402, 'payment_data' => $return]];
+            return response()->json($output, $code);
+        }
+
     }
 
 }
