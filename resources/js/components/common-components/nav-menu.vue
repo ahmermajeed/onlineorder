@@ -46,16 +46,33 @@
                                 </router-link>
                             </div>
                             <div class="col-6 col-md-9 right">
+                                <router-link class="cart-icon-mb" :to="{ path: '/'}">
+                                <a class="cart-icon-mb" href="#">
+                                    <i class="fas fa-home"></i>
+                                </a>
+                                </router-link>
+                                <router-link class="cart-icon-mb" :to="{ path: '/feedback'}">
+                                <a class="cart-icon-mb" href="#">
+                                    <i class="fas fa-comment-alt"></i>
+                                </a>
+                                </router-link>
+                                <router-link class="cart-icon-mb" :to="{ path: '/gallery'}">
+                                <a class="cart-icon-mb" href="#">
+                                    <i class="fas fa-images"></i>
+                                </a>
+                                </router-link>
                                 <a href="#" class="cart-icon-mb" v-on:click="opencartlist">
                                     <i class="fa fa-shopping-cart"></i>
                                     <span class="cart-count">{{count}}</span>
                                 </a>
+                                
+
                                 <nav class="navbar navbar-expand-lg navbar-light justify-content-end main-menu p-0 mt-2">
-                                    <button class="navbar-toggler" type="button" data-toggle="collapse"
+                                    <!-- <button class="navbar-toggler" type="button" data-toggle="collapse"
                                             data-target="#navbarResponsiv" aria-controls="navbarResponsiv"
                                             aria-expanded="false" aria-label="Toggle navigation">
                                         <span class="navbar-toggler-icon"></span>
-                                    </button>
+                                    </button> -->
                                     <div class="collapse navbar-collapse justify-content-end" id="navbarResponsiv">
                                         <ul class="nav ">
 
@@ -72,11 +89,6 @@
                                                 <router-link :to="{ path: '/gallery'}"><a
                                                         class="nav-link js-scroll-trigger">Gallery</a></router-link>
                                             </li>
-
-<!--                                            <li class="nav-item ">-->
-<!--                                                <router-link :to="{ path: '/reservation-table'}"><a-->
-<!--                                                        class="nav-link js-scroll-trigger">Reservation</a></router-link>-->
-<!--                                            </li>-->
 
                                             <li class="nav-item">
                                                 <div class="order-now">
@@ -153,30 +165,18 @@
             <!-- </nav> -->
             <slider v-if="this.$route.name !='online-order' &&
                   this.$route.name !='reservation-table'  &&
-                  this.$route.name !='check-out'">
+                  this.$route.name !='check-out' &&
+                  this.$route.name !='terms-condition' &&
+                  this.$route.name !='privacy-policy'">
             </slider>
             <div class="hero-for-mobile" v-if="this.$route.name !='online-order' &&
                   this.$route.name !='reservation-table'  &&
                   this.$route.name !='check-out'">
                 <img src="https://i.ibb.co/VD4yK5S/hero-img.png">
             </div>
-            <!-- <div class="header-bottom section-fullwidth"
+       
 
-                 v-if="this.$route.name !='online-order' &&
-                  this.$route.name !='reservation-table'">
-
-                <div class="container">
-                    <div class="row">
-                        <div class="col-lg-4 col-xl-5">
-
-                        </div>
-
-                    </div>
-                </div>
-            </div> -->
-
-          <div class="container-fluid"
-          >
+          <div class="container-fluid" v-if="this.$route.name !='check-out'">
 
             <div class="mobile-cart-button" v-bind:class="{ cartheight: cart_height }" v-if="cartItems.length > 0">
               <div class="inner">
