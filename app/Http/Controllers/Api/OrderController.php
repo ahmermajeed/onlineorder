@@ -399,7 +399,7 @@ class OrderController extends Controller
             'type' => 1,
             'currencyCode' => 826,
             'countryCode' => 826,
-            'amount' => rand(0,4),
+            'amount' => 1,
             'cardNumber' => '4012001037141112',
             'cardExpiryMonth' => 12,
             'cardExpiryYear' => 25,
@@ -409,7 +409,7 @@ class OrderController extends Controller
             'customerAddress' => '16 Test Street',
             'customerPostCode' => 'TE15 5ST',
             'orderRef' => 'Test purchase',
-            'threeDSRef' => "UDNLRVk6dHJhbnNhY3Rpb25JRD0xMzYwNTEwNTcmbWVyY2hhbnRJRD0xMzMwMTYmX19saWZlX189MTYzNTk3NTk3Mg==",
+            'threeDSRef' => "UDNLRVk6dHJhbnNhY3Rpb25JRD0xMzYwNTE4NTkmbWVyY2hhbnRJRD0xMzMwMTYmX19saWZlX189MTYzNTk3NjM2NA==",
             'threeDSResponse' => $requestData,
         );
 
