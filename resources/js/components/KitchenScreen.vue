@@ -55,7 +55,9 @@
         <section class="dish-listing">
             <div class="container-fluid">
                 <ol class="dish-wrap">
-                    <li class="dish-box" ondrop="drop(event)" ondragover="allowDrop(event)" v-for="(item, index) in orders" >
+
+                    <li class="dish-box" ondrop="drop(event)" ondragover="allowDrop(event)" v-for="(item, index) in orders.orders" >
+                       
                         <div class="box-status status-done" draggable="true" ondragstart="drag(event)" id="drag1">
                             <div class="d-title">
                                 <div class="top">
@@ -271,6 +273,8 @@
                 axios.get(url)
                     .then((response) => {
                         _this.orders = response.data.data;
+                        console.log(this.orders)
+                       // alert("test");
                         _this.loading = false;
                     });
             },
