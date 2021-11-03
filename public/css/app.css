@@ -14590,7 +14590,7 @@ ul {
 }
 
 .main-ftr .icons i {
-  color: #fff;
+  color: #fff !important;
 }
 
 @media (max-width: 767.98px) {
@@ -15435,11 +15435,12 @@ ul {
 
 .menu-box .menu-box .box span {
   background: #df5429;
-  color: #fff;
   padding: 4px 10px;
   border-radius: 4px;
   display: inline-block;
   margin-top: 10px;
+  color: #fff;
+  margin-right: 7px;
 }
 
 .menu-box .menu-box .box span span {
@@ -17395,10 +17396,10 @@ select.form-control.input-valid {
 }
 
 .form-cart .switch-field input:checked + label {
-  color: #4498b9;
-  background-color: #ebf3f9;
+  color: #df5429;
+  background-color: #ffede7;
   box-shadow: none;
-  border: 1px solid #4498b9;
+  border: 1px solid #df5429;
   font-weight: 700;
 }
 
@@ -17581,6 +17582,10 @@ a.circle span.cnt {
   margin-top: 10px;
 }
 
+.view-total-menu a {
+  font-size: 13px;
+}
+
 span.cart-count {
   position: absolute;
   font-size: 11px !important;
@@ -17713,7 +17718,7 @@ span.cart-count.product-list-cart {
 }
 
 .order-page-menu path {
-  fill: #16110b;
+  fill: #df5429;
 }
 
 .order-page-menu span.cart-count {
@@ -18325,7 +18330,7 @@ nav.collapse.show .navbar-collapse {
 }
 
 .testimonial-section .customer-name {
-  color: #e5b052;
+  color: #df5429;
   font-weight: bold;
 }
 
@@ -18333,7 +18338,7 @@ nav.collapse.show .navbar-collapse {
   border: 1px solid #ccc;
   padding: 30px;
   border-radius: 28px;
-  background: #fff7d7;
+  background: #ffede7;
   height: 260px;
   margin-bottom: 20px;
 }
@@ -18344,10 +18349,85 @@ nav.collapse.show .navbar-collapse {
 }
 
 .review-box a {
-  color: #e5b052;
+  color: #df5429;
+}
+
+.review-box svg {
+  margin-bottom: 20px;
+}
+
+.review-box svg path {
+  fill: #df5429;
 }
 
 .testimonial-text {
   font-size: 16px;
+}
+
+.terms-condition-section p,
+.privacy-policy p {
+  margin-bottom: 20px;
+  font-size: 15px;
+  color: #1a1a1a;
+  font-weight: 300;
+}
+
+.privacy-banner {
+  background-image: url(/images/privacy.png?ac8114d78c1c7df6c038119535e560b0);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 300px;
+  margin-bottom: 30px;
+}
+
+@media (max-width: 767.98px) {
+  .privacy-banner {
+    display: none;
+  }
+}
+
+.terms-banner {
+  background-image: url(/images/terms.png?6c4b118c7c3b421026674bc5a271f29e);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 300px;
+  margin-bottom: 30px;
+}
+
+@media (max-width: 767.98px) {
+  .terms-banner {
+    display: none;
+  }
+}
+
+.terms-banner li {
+  list-style: none;
+}
+
+.terms-list li {
+  list-style: none;
+}
+
+.terms-list a {
+  color: #df5429;
+}
+
+.terms-list strong {
+  font-size: 16px;
+}
+
+@media (max-width: 767.98px) {
+  .term-page h1 {
+    font-size: 22px;
+    margin-top: 20px;
+  }
+}
+
+.footer-menu a {
+  padding: 0;
+}
+
+.footer-menu .router-link-exact-active a {
+  color: #df5429;
 }
 

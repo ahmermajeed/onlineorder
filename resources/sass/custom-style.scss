@@ -753,7 +753,7 @@ $duration: 50s;
         padding-top: 20px;
         border-top: 1px solid #ccc;
         i {
-            color: #fff;
+            color: #fff !important;
         }
 
         ul {
@@ -1468,11 +1468,12 @@ $duration: 50s;
             }
             span{
                 background: $primary-color;
-                color: #fff;
                 padding: 4px 10px;
                 border-radius: 4px;
                 display: inline-block;
                 margin-top: 10px;
+                color: #fff;
+                margin-right: 7px;
                 span{
                     padding: 0;
                     margin: 0;
@@ -3173,10 +3174,10 @@ select.form-control.input-valid {
 }
 
 .form-cart .switch-field input:checked + label {
-    color: #4498b9;
-    background-color: #ebf3f9;
+    color: $primary-color;
+    background-color: $primary-color-ex-lt;
     box-shadow: none;
-    border: 1px solid #4498b9;
+    border: 1px solid $primary-color;
     font-weight: 700;
 }
 
@@ -3326,6 +3327,9 @@ a.circle span.cnt {
     float: left;
     padding: 8px;
     margin-top: 10px;
+    a {
+        font-size: 13px;
+    }
 }
 span.cart-count {
     position: absolute;
@@ -3438,7 +3442,7 @@ span.cart-count {
     font-size: 32px;
 }
 .order-page-menu path {
-    fill: #16110b;
+    fill: $primary-color;
 }
 .order-page-menu span.cart-count {
     position: relative;
@@ -3974,7 +3978,7 @@ nav.collapse.show .navbar-collapse {
         margin-bottom: 10px;
     }
     .customer-name {
-        color: #e5b052;
+        color: $primary-color;
         font-weight: bold;
     }
 }
@@ -3982,7 +3986,7 @@ nav.collapse.show .navbar-collapse {
     border: 1px solid #ccc;
     padding: 30px;
     border-radius: 28px;
-    background: #fff7d7;
+    background: $primary-color-ex-lt;
     height: 260px;
     margin-bottom: 20px;
     p {
@@ -3990,9 +3994,75 @@ nav.collapse.show .navbar-collapse {
         margin-bottom: 20px;
     }
     a {
-        color: #e5b052;
+        color: $primary-color;
+    }
+    svg {
+        margin-bottom: 20px; 
+        path {
+            fill: $primary-color;
+        }
     }
 }
 .testimonial-text {
     font-size: 16px;
+}
+.terms-condition-section,.privacy-policy {
+    p {
+        margin-bottom: 20px;
+        font-size: 15px;
+        color: #1a1a1a;
+        font-weight: 300;
+    }   
+}
+.privacy-banner {
+    background-image: url('images/mr.chippy/privacy.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 300px;   
+    margin-bottom: 30px;
+    @include media-breakpoint-down(sm) {
+        display: none;
+    }
+}
+.terms-banner {
+    background-image: url('images/mr.chippy/terms.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 300px;   
+    margin-bottom: 30px;
+    @include media-breakpoint-down(sm) {
+        display: none;
+    }
+    li {
+        list-style: none;
+    }
+}
+.terms-list {
+    li {
+        list-style: none;
+    }
+    a {
+        color: $primary-color;
+    }
+    strong {
+        font-size: 16px;
+    }
+}
+.term-page {
+    h1 {
+        @include media-breakpoint-down(sm) {
+            font-size: 22px;
+            margin-top: 20px;
+        }
+    }
+}
+.footer-menu {
+    a {
+        padding: 0;
+    }
+    .router-link-exact-active {
+        a {
+            color: $primary-color;
+        }
+    }
 }

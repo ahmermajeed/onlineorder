@@ -152,30 +152,18 @@
             <!-- </nav> -->
             <slider v-if="this.$route.name !='online-order' &&
                   this.$route.name !='reservation-table'  &&
-                  this.$route.name !='check-out'">
+                  this.$route.name !='check-out' &&
+                  this.$route.name !='terms-condition' &&
+                  this.$route.name !='privacy-policy'">
             </slider>
             <div class="hero-for-mobile" v-if="this.$route.name !='online-order' &&
                   this.$route.name !='reservation-table'  &&
                   this.$route.name !='check-out'">
                 <img src="images/mr.chippy/gallery.png">
             </div>
-            <!-- <div class="header-bottom section-fullwidth"
+          
 
-                 v-if="this.$route.name !='online-order' &&
-                  this.$route.name !='reservation-table'">
-
-                <div class="container">
-                    <div class="row">
-                        <div class="col-lg-4 col-xl-5">
-
-                        </div>
-
-                    </div>
-                </div>
-            </div> -->
-
-          <div class="container-fluid"
-          >
+          <div class="container-fluid" v-if="this.$route.name !='check-out'">
 
             <div class="mobile-cart-button" v-bind:class="{ cartheight: cart_height }" v-if="cartItems.length > 0">
               <div class="inner">
