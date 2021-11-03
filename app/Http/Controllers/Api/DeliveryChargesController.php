@@ -97,7 +97,7 @@ class DeliveryChargesController extends Controller
 
                 if ($current_timestamp >= $StartTime) {
 
-                    $current_date_time = Carbon::parse($current_date_time)->addMinutes(30)->format("H:i:s");
+                    $current_date_time = Carbon::parse($current_date_time)->addMinutes(60)->format("H:i:s");
 
                     $StartTime = strtotime($current_date_time);
                     $EndTime = strtotime($days['end_time']); //Get Timestamp

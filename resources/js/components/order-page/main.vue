@@ -146,7 +146,7 @@
                         </section>
                     </div>
                     <div class=" col-lg-4 col-md-12 col-sm-12 cart  check-card add-card listing-page-sidebar lp-sidebar-right">
-                        <div class="cart-box order" id="cart-stiky">
+            <div class="cart-box order" id="cart-stiky">
                             <div class="lp-sidebar-title cate-heading">
                                 <h3 class="text-left">Your Cart</h3>
                                 <img src="../../../images/cart.png">
@@ -240,7 +240,7 @@
                             </div>
 
                         </div>
-                        <div class="mobile-cart-button" v-bind:class="{ cartheight: cart_height }" v-if="cartItems.length > 0">
+<!--                <div class="mobile-cart-button" v-bind:class="{ cartheight: cart_height }" v-if="cartItems.length > 0">
                 <div class="inner">
                     <span class="products-count"><svg xmlns="http://www.w3.org/2000/svg" class="svg-stroke-container" width="24" height="24">
                         <path fill="#707070" d="M12 2.75a4.75 4.75 0 014.744 4.5h3.103a1 1 0 01.99 1.141l-1.714 12a1 1 0 01-.99.859H5.867a1 1 0 01-.99-.859l-1.714-12a1 1 0 01.99-1.141h3.103A4.75 4.75 0 0112 2.75zm5.559 14.75H6.44a.4.4 0 00-.396.457l.208 1.45a.4.4 0 00.396.343H17.35a.4.4 0 00.396-.343l.208-1.45a.4.4 0 00-.396-.457zm1.25-8.75H5.19a.4.4 0 00-.396.457l.922 6.45a.4.4 0 00.396.343h11.775a.4.4 0 00.396-.343l.922-6.45a.4.4 0 00-.396-.457zM12 4.25a3.251 3.251 0 00-3.193 2.638.305.305 0 00.3.362h5.796a.297.297 0 00.292-.35A3.251 3.251 0 0012 4.25z"></path>
@@ -274,14 +274,14 @@
                 <div class="confirm-btn">
                     <button class="anima-btn move-eff" @click="placeOrder()"><span>Confirm Order</span></button>
                 </div>
-            </div>
+            </div>-->
                     </div>
                 </div>
             </div>
         </section>
         <!-- <div class="loading" v-if="loading">Loading&#8230;</div> -->
-        <div class="container-fluid"
-        >
+
+<!--      <div class="container-fluid">
 
             <div class="mobile-cart-button" v-bind:class="{ cartheight: cart_height }" v-if="cartItems.length > 0">
                 <div class="inner">
@@ -326,7 +326,7 @@
                     <button class="anima-btn btn btn-rounded-danger btn move-eff" @click="placeOrder()"><span>Confirm Order</span></button>
                 </div>
             </div>
-        </div>
+        </div>-->
 
 <!--        <food-allergy @HideModalValue="hideModal" :showModalProp="foodAllergyModal"></food-allergy>-->
 
@@ -596,7 +596,7 @@ export default {
 
           if(response.data.error === undefined){
             vm.errorMessage = response.data.data.amount;
-            vm.$store.commit('setDeliveryCharges', response.data.data.fix_delivery_charges);
+            vm.$store.commit('setDeliveryCharges', response.data.data.amount);
             vm.$store.commit('setOrderType', vm.orderType);
             vm.$store.commit('setPostalCode', vm.postalCode);
             vm.$router.push({name: 'check-out'})
@@ -2248,7 +2248,7 @@ export default {
         }
         .mealactions a {
             margin-right: 24px;
-            margin-right: 7px;
+            margin-right: 6px;
             position: relative;
             top: -6px;;
         }

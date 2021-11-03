@@ -87,7 +87,6 @@ class OrderRepository
         $phone_number = User::where('id',$data->user_id)->pluck('phone_number')->first();
         $data->phone_number = !empty($phone_number)?$phone_number:"Number Not Found";
 
-
         return $data;
     }
 

@@ -91,7 +91,7 @@
                             </div>
                             <div class="row">
                                 <div class="col-md-12 text-center">
-                                    <button type="submit" class="custom-btn btn btn-outline-danger">Submit</button>
+                                    <button type="submit" class="btn btn-rounded-default btn-rounded-danger">Submit</button>
                                 </div>
                             </div>
                         </form>
@@ -100,6 +100,10 @@
                 </div>
             </div>
         </section>
+
+        <!-- testimonials section -->
+        
+        <testimonials></testimonials>
 
         <footer-menu></footer-menu>
     </div>
