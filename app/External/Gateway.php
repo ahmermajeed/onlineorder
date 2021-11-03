@@ -168,6 +168,7 @@ class Gateway {
 
             // Remember the threeDSRef as need it when the ACS responds
             $_SESSION['threeDSRef'] = $response['threeDSRef'];
+            $response['threeDSr'] = $response['threeDSRef'];
 
         } else if ((int)$response['responseCode'] === 0) {
             echo "<p>Thank you for your payment.</p>";
