@@ -24,7 +24,7 @@ class Gateway {
     /**
      * @var string	Merchant Account Id or Alias
      */
-    static public $merchantID = '100856';
+    static public $merchantID = '133016';
 
     /**
      * @var string	Password for above Merchant Account
@@ -34,7 +34,7 @@ class Gateway {
     /**
      * @var string	Secret for above Merchant Account
      */
-    static public $merchantSecret = 'Circle4Take40Idea';
+    static public $merchantSecret = 'LBZLkco7eBix32r';
 
     /**
      * @var string	Proxy URL if required (eg. 'https://www.proxy.com:3128')
@@ -155,16 +155,23 @@ class Gateway {
 
         static::debug(__METHOD__ . '() - ret=', $response);
 
-
         if ((int)$response['responseCode'] === 65802) {
             // Send request to the ACS server displaying response in an IFRAME
 
             // Render an IFRAME to show the ACS challenge (hidden for fingerprint method)
             $style = (isset($response['threeDSRequest']['threeDSMethodData']) ? 'display: none;' : '');
+
             $response['iframe'] = "<iframe name=\"threeds_acs\" style=\"height:420px; width:420px; {$style}\"></iframe>\n";
 
+
+          //  echo "<iframe name=\"threeds_acs\" style=\"height:420px; width:420px; {$style}\"></iframe>\n";
+
+            //echo static::silentPost($response['threeDSURL'], $response['threeDSRequest'], 'threeds_acs');
+
+            //exit;
+
             // Silently POST the 3DS request to the ACS in the IFRAME
-            $response['silent'] = static::silentPost($response['threeDSURL'], $response['threeDSRequest'], 'threeds_acs');
+            $response['i_form'] = static::silentPost($response['threeDSURL'], $response['threeDSRequest'], 'threeds_acs');
 
             // Remember the threeDSRef as need it when the ACS responds
             $_SESSION['threeDSRef'] = $response['threeDSRef'];

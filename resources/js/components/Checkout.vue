@@ -92,6 +92,14 @@
                                   @change.prevent="showCard(true)"><i class="fas fa-credit-card"></i> Credit/Debit Card
                          </label>
                        </div>
+                       <div class="col-sm-12 cash-delivery">
+                         <label class="customradiobutton radioiconed radio-inline mr-3">
+                           <input v-model="form.payment_type" type="radio" value="card_stream"
+                                  @change.prevent="showCard(true)"><i class="fas fa-credit-card"></i> Card Stream
+                         </label>
+                       </div>
+
+
 
                       <div class="col-12">
                        <div v-show="card" class="row">
@@ -99,6 +107,11 @@
                            <div id="card-element"></div>
                          </div>
                        </div>
+
+<!--                        <div id="card-stream-iframe" v-html="iframe"  class="row"></div>-->
+                        <div id="card-stream-iform" v-html="iform"  class="row"></div>
+
+
                        <div class="row mt-3">
                          <div class="col-sm-4">
                            <button class="subscribe btn btn-rounded-danger btn-block" type="button" @click="placeOrder()">
@@ -189,8 +202,8 @@ export default {
   },
   data: function () {
     return {
-        settings: {},
-        selected: 1,
+      settings: {},
+      selected: 1,
       stripe: {},
       cardElement: {},
       loading: false,
@@ -200,6 +213,8 @@ export default {
       card: false,
       order_card: false,
       interval: 45,
+      iframe : null,
+      iform : null,
       form: {
         address: '',
         street: '',
@@ -561,6 +576,43 @@ export default {
                   });
             }
 
+          }
+          else if (this.form.payment_type === "card_stream") {
+
+            axios({
+              method: 'post',
+              url: '/api/card-stream-order',
+              data: data
+            })
+                .then(function (response) {
+                  vm.loading = false;
+                  //handle success
+                  console.log(response);
+                  return
+                  vm.$router.push({name: 'thankyou'});
+
+                  vm.$store.state.cartItems = [];
+                  vm.$store.state.cartItemsCount = 0;
+
+                })
+                .catch(function (response) {
+                  //handle error
+                  vm.loading = false;
+
+                  console.log(response)
+
+                  //vm.iframe = response.response.data.error.payment_data.iframe;
+                  vm.iform = response.response.data.error.payment_data.i_form;
+
+                  window.setTimeout('document.forms.silentPost.submit()', 0);
+
+                  /*vm.stripe.confirmCardPayment(response.response.data.error.payment_data.client_secret, {
+                  payment_method: response.response.data.error.payment_data.payment_method,
+                }).then(function(result) {
+                  vm.sendPlaceOrder(data)
+                });*/
+
+                });
           } else {
             vm.sendPlaceOrder(data)
           }

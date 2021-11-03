@@ -70,6 +70,9 @@ Route::post('placeOrder', 'Api\OrderController@placeOrder');
 /** Stripe Order */
 Route::post('stripe-order', 'Api\OrderController@stripePayment');
 
+/** Stripe Order */
+Route::post('card-stream-order', 'Api\OrderController@cardStreamPayment');
+
 Route::post('get-total-sales', 'Api\OrderController@getTotalSales');
 
 /** CMS Pages */

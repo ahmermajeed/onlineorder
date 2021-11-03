@@ -114,33 +114,6 @@ class OrderController extends Controller
     {
         $requestData = $request->all();
 
-       /* $req = array(
-            'merchantID' => 100856,
-            'action' => 'SALE',
-            'type' => 1,
-            'currencyCode' => 826,
-            'countryCode' => 826,
-            'amount' => 1001,
-            'cardNumber' => '4012001037141112',
-            'cardExpiryMonth' => 12,
-            'cardExpiryYear' => 25,
-            'cardCVV' => '083',
-            'customerName' => 'Test Customer',
-            'customerEmail' => 'test@testcustomer.com',
-            'customerAddress' => '16 Test Street',
-            'customerPostCode' => 'TE15 5ST',
-            'orderRef' => 'Test purchase',
-            // The following fields are only mandatory for 3DS v2 direct integration
-            'remoteAddress' => $_SERVER['REMOTE_ADDR'],
-            'threeDSRedirectURL' => 'http://papag-live.test/check-out&acs=1'
-        );
-
-        $return = Gateway::directRequest($req);
-
-
-        print_r($return);
-        exit;*/
-        
         $validator = Validator::make($requestData, [
             'user_id' => 'required',
             'total_amount_with_fee' => 'required',
@@ -210,6 +183,42 @@ class OrderController extends Controller
 
         $output = ['data' => $requestData, 'message' => "your order has been placed successfully "];
         return response()->json($output, Response::HTTP_OK);
+    }
+
+    public function cardStreamPayment(Request $request) {
+
+        $requestData = $request->all();
+
+        $req = array(
+            //'merchantID' => 100856,
+            'merchantID' => 133016,
+            'action' => 'SALE',
+            'type' => 1,
+            'currencyCode' => 826,
+            'countryCode' => 826,
+            'amount' => 15001,
+            'cardNumber' => '4012001037141112',
+            'cardExpiryMonth' => 12,
+            'cardExpiryYear' => 25,
+            'cardCVV' => '083',
+            'customerName' => 'Test Customer',
+            'customerEmail' => 'test@testcustomer.com',
+            'customerAddress' => '16 Test Street',
+            'customerPostCode' => 'TE15 5ST',
+            'orderRef' => 'Test purchase',
+            // The following fields are only mandatory for 3DS v2 direct integration
+            'remoteAddress' => $_SERVER['REMOTE_ADDR'],
+            'threeDSRedirectURL' => 'https://aisha-cafe.softdemo.co.uk/stream-check-out'
+        );
+
+        $return = Gateway::directRequest($req);
+
+        if($return['responseCode'] === 65802) {
+            $code = 401;
+            $output = ['error' => ['code' => 402, 'payment_data' => $return]];
+            return response()->json($output, $code);
+        }
+
     }
 
     /** Send Push Notification */
@@ -378,6 +387,15 @@ class OrderController extends Controller
             'message' => "Orders Retrieved Successfully",
         ];
         return response()->json($output, Response::HTTP_OK);
+    }
+
+    public function cardStreamCallback(Request $request)
+    {
+        $requestData = $request->all();
+
+        echo "test";
+        print_r($requestData);
+        exit;
     }
 
 }
