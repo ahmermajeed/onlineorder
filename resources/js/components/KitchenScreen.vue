@@ -57,7 +57,7 @@
                 <ol class="dish-wrap">
 
                     <li class="dish-box" ondrop="drop(event)" ondragover="allowDrop(event)" v-for="(item, index) in orders.orders" >
-                       
+
                         <div class="box-status status-done" draggable="true" ondragstart="drag(event)" id="drag1">
                             <div class="d-title">
                                 <div class="top">
@@ -78,9 +78,10 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="dishes"  v-for="(product, pindex) in item.details" >
+                            <div class="dishes" >
+
                                 <ul>
-                                    <li>
+                                    <li  v-for="(product, pindex) in item.details" >
                                         <span>{{product.quantity}}</span>
                                         {{product.product_name}}
                                         <p v-if="product.extras" v-html="getExtrasData(product.extras)"> </p>
