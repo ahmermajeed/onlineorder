@@ -394,8 +394,23 @@ class OrderController extends Controller
         $requestData = $request->all();
 
         $req = array(
-             'threeDSRef' => "UDNLRVk6dHJhbnNhY3Rpb25JRD0xMzYwNTEwNTcmbWVyY2hhbnRJRD0xMzMwMTYmX19saWZlX189MTYzNTk3NTk3Mg==",
-             'threeDSResponse' => $requestData,
+            'merchantID' => 133016,
+            'action' => 'SALE',
+            'type' => 1,
+            'currencyCode' => 826,
+            'countryCode' => 826,
+            'amount' => rand(0,4),
+            'cardNumber' => '4012001037141112',
+            'cardExpiryMonth' => 12,
+            'cardExpiryYear' => 25,
+            'cardCVV' => '083',
+            'customerName' => 'Test Customer',
+            'customerEmail' => 'test@testcustomer.com',
+            'customerAddress' => '16 Test Street',
+            'customerPostCode' => 'TE15 5ST',
+            'orderRef' => 'Test purchase',
+            'threeDSRef' => "UDNLRVk6dHJhbnNhY3Rpb25JRD0xMzYwNTEwNTcmbWVyY2hhbnRJRD0xMzMwMTYmX19saWZlX189MTYzNTk3NTk3Mg==",
+            'threeDSResponse' => $requestData,
         );
 
         $return = Gateway::directRequest($req);
