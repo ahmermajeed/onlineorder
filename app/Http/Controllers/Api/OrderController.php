@@ -394,12 +394,18 @@ class OrderController extends Controller
         $requestData = $request->all();
 
         $req = array(
-             'threeDSRef' => "UDNLRVk6dHJhbnNhY3Rpb25JRD0xMzYwNTA4MTImbWVyY2hhbnRJRD0xMzMwMTYmX19saWZlX189MTYzNTk3NTg1Ng==",
+             'threeDSRef' => "UDNLRVk6dHJhbnNhY3Rpb25JRD0xMzYwNTEwNTcmbWVyY2hhbnRJRD0xMzMwMTYmX19saWZlX189MTYzNTk3NTk3Mg==",
              'threeDSResponse' => $requestData,
         );
 
-        print_r($req);
-        exit;
+        $return = Gateway::directRequest($req);
+
+        if($return['responseCode'] === 65802) {
+            $code = 401;
+            $output = ['error' => ['code' => 402, 'payment_data' => $return]];
+            return response()->json($output, $code);
+        }
+
         /*
         $req = array(
             //'merchantID' => 100856,
