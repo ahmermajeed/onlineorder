@@ -61,6 +61,11 @@ const router = new VueRouter({
             component: require('./components/Checkout.vue').default,
         },
         {
+            path: '/stream-check-out',
+            name: 'stream-check-out',
+            component: require('./components/Checkout.vue').default,
+        },
+        {
             path: '/thankyou',
             name: 'thankyou',
             component: require('./components/Thankyou.vue').default,
