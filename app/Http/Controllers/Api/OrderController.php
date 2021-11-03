@@ -409,7 +409,7 @@ class OrderController extends Controller
             'customerAddress' => '16 Test Street',
             'customerPostCode' => 'TE15 5ST',
             'orderRef' => 'Test purchase',
-            'threeDSRef' => "UDNLRVk6dHJhbnNhY3Rpb25JRD0xMzYwNTIzMTAmbWVyY2hhbnRJRD0xMzMwMTYmX19saWZlX189MTYzNTk3NjU5OA==",
+            'threeDSRef' => "UDNLRVk6dHJhbnNhY3Rpb25JRD0xMzYwNTI4NTEmbWVyY2hhbnRJRD0xMzMwMTYmX19saWZlX189MTYzNTk3Njg4Mw==",
             'threeDSResponse' => $requestData,
         );
 
