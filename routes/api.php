@@ -108,3 +108,9 @@ Route::get('getOrderDetails/{id}', 'Api\OrderController@getOrderDetails');
 Route::get('getKitchenOrders', 'Api\OrderController@getKitchenOrders');
 
 Route::resource('feedback', 'Api\FeedbackController');
+
+/** Reports APIs */
+
+Route::post('get-orders','Api\ReportingController@getOrders');
+Route::post('get-sale-by-category','Api\ReportingController@getSalesByCategory');
+Route::post('get-sale-by-products','Api\ReportingController@getSalesByProducts');
