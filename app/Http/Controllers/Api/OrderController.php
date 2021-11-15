@@ -189,6 +189,29 @@ class OrderController extends Controller
 
         $requestData = $request->all();
 
+        $validator = Validator::make($requestData, [
+            'user_id' => 'required',
+            'total_amount_with_fee' => 'required',
+            'delivery_fees' => 'required',
+            'payment' => 'required',
+            'delivery_address' => 'required',
+            'order_details' => 'required|array',
+            'order_details.*.price' => 'required|numeric',
+            'order_details.*.product_id' => 'required|numeric',
+            'order_details.*.product_name' => 'required',
+            'order_details.*.quantity' => 'required'
+        ]);
+
+        if ($validator->fails()) {
+            $code = 401;
+            $output = ['error' => ['code' => $code, 'message' => $validator->errors()->first()]];
+            return response()->json($output, $code);
+        }
+
+        print_r($requestData);
+        exit;
+
+
         $req = array(
             //'merchantID' => 100856,
             'merchantID' => 133016,

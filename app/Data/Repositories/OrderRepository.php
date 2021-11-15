@@ -31,6 +31,14 @@ class OrderRepository
         $data = array();
         $model = $this->model->orderBy('id', 'desc');
 
+        if(isset($input['date_from']) && isset($input['date_to'])) {
+
+            $from = date($input['date_from']);
+            $to = date($input['date_to']);
+
+            $model =  $model->whereBetween('created_at', [$from, $to]);
+        }
+
         if ($pagination) {
             $model = $model->paginate($perPage);
             $data['data'] = $model->items();
@@ -49,8 +57,6 @@ class OrderRepository
             }
 
         }
-
-
 
         return $data;
     }

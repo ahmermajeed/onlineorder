@@ -92,14 +92,12 @@
                                   @change.prevent="showCard(true)"><i class="fas fa-credit-card"></i> Credit/Debit Card
                          </label>
                        </div>
-                       <div class="col-sm-12 cash-delivery">
+<!--                       <div class="col-sm-12 cash-delivery">
                          <label class="customradiobutton radioiconed radio-inline mr-3">
                            <input v-model="form.payment_type" type="radio" value="card_stream"
                                   @change.prevent="showCard(true)"><i class="fas fa-credit-card"></i> Card Stream
                          </label>
-                       </div>
-
-
+                       </div>-->
 
                       <div class="col-12">
                        <div v-show="card" class="row">
@@ -108,9 +106,33 @@
                          </div>
                        </div>
 
-<!--                        <div id="card-stream-iframe" v-html="iframe"  class="row"></div>-->
-                        <div id="card-stream-iform" v-html="iform"  class="row"></div>
+                        <div class="col-12">
 
+                          <div v-show="card" class="row">
+                            <form>
+                              <div class="form-group">
+                                <label>Card number</label>
+                                <input class="form-control">
+                              </div>
+                              <div class="form-group">
+                                <label>Card Expiry</label>
+                                <input class="form-control" v-cardformat:formatCardExpiry>
+                              </div>
+                              <div class="form-group">
+                                <label>Card CVC</label>
+                                <input class="form-control" v-cardformat:formatCardCVC>
+                              </div>
+                              <div class="form-group">
+                                <label>Numeric input</label>
+                                <input class="form-control" v-cardformat:restrictNumeric>
+                              </div>
+                              <button class="btn btn-primary">Submit</button>
+                            </form>
+                          </div>
+
+                        </div>
+
+                       <div id="card-stream-iform" v-html="iform"  class="row"></div>
 
                        <div class="row mt-3">
                          <div class="col-sm-4">
@@ -127,7 +149,7 @@
            </div>
        </div>
 
-       <div class="col-xs-12 full cart col-lg-4 col-md-4 col-sm-12 cart  checkout-cart-desktop"   v-if="cartItems.length > 0"  >
+       <div class="col-xs-12 full cart col-lg-4 col-md-4 col-sm-12 cart  checkout-cart-desktop" v-if="cartItems.length > 0"  >
            <div class="order cart-box" id="cart-stiky">
                <h3>Your Order </h3>
                <div class="check-out-list">
@@ -195,10 +217,13 @@
 
 import {loadStripe} from '@stripe/stripe-js';
 import Selectize from 'vue2-selectize'
+import VueCardFormat from 'vue-credit-card-validation';
+
 
 export default {
   components: {
-    Selectize
+    Selectize,
+    VueCardFormat
   },
   data: function () {
     return {
@@ -578,6 +603,10 @@ export default {
 
           }
           else if (this.form.payment_type === "card_stream") {
+
+            console.log(this.cardElement);
+            return
+
 
             axios({
               method: 'post',
