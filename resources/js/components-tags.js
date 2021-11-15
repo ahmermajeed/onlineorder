@@ -18,3 +18,4 @@ Vue.component('food-allergy', require('./components/order-page/popup/food-allerg
 Vue.component('testimonials-popup', require('./components/order-page/popup/testimonials.vue').default);
 Vue.component('reservation', require('./components/common-components/reservation.vue').default);
 Vue.component('testimonials', require('./components/common-components/testimonials.vue').default);
+Vue.component('confirm-menu-popup', require('./components/order-page/popup/confirm-menu.vue').default);

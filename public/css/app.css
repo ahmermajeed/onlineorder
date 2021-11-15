@@ -18335,3 +18335,40 @@ nav.collapse.show .navbar-collapse {
   color: #e5b052;
 }
 
+/*
+ *  STYLE 3
+ */
+
+.style-3::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  background-color: #F5F5F5;
+}
+
+.style-3::-webkit-scrollbar {
+  width: 4px;
+  background-color: #F5F5F5;
+}
+
+.style-3::-webkit-scrollbar-thumb {
+  background-color: #87986a;
+}
+
+@media (max-width: 767.98px) {
+  section.dish-listing ol.dish-wrap li {
+    width: 100% !important;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .kitchen-screen-header {
+    position: relative !important;
+    overflow-x: scroll;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .section.dish-listing {
+    padding: 40px 0 30px 0;
+  }
+}
+
