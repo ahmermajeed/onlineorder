@@ -10,6 +10,9 @@ import 'vue-ctk-date-time-picker/dist/vue-ctk-date-time-picker.css';
 import "selectize/dist/css/selectize.bootstrap3.css";
 require('vue-image-lightbox/dist/vue-image-lightbox.min.css')
 
+import VueCardFormat from 'vue-credit-card-validation';
+
+Vue.use(VueCardFormat);
 
 import Datepicker from 'vuejs-datepicker';
 
