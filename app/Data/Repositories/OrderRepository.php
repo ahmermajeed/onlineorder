@@ -175,6 +175,8 @@ class OrderRepository
     public function updateProductStatus($data){
 
         $productData = OrderDetail::where(['order_id' => $data['order_id'], 'product_id' => $data['product_id']])->first();
+        dd($productData);
+
         $existingStatus = $productData->product_status;
         $newStatus = '';
 
