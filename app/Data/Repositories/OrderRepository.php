@@ -174,8 +174,8 @@ class OrderRepository
 
     public function updateProductStatus($data){
 
-        $data['order_id'] = 1;
-        $data['product_id'] =4;
+//        $data['order_id'] = 1;
+//        $data['product_id'] =4;
 
         $productData = OrderDetail::where(['order_id' => $data['order_id'],'product_id' => $data['product_id']])->first();
         if(isset($productData->product_status)){
