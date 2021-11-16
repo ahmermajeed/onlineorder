@@ -211,7 +211,7 @@
                 };
                 axios({
                     method: 'post',
-                    url: 'https://aisha-cafe.softdemo.co.uk/api/update-product-status',
+                    url: '/api/update-product-status',
                     data: obj
                 }).then(function (response) {
                     console.log(response);

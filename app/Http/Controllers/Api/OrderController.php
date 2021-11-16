@@ -495,7 +495,7 @@ class OrderController extends Controller
             return response()->json($output, $code);
         }
         $data = $this->_repository->updateProductStatus($requestData);
-        $output = ['data' => $requestData, 'message' => "your order has been placed successfully "];
+        $output = ['data' => $data, 'message' => "your order has been placed successfully "];
         return response()->json($output, Response::HTTP_OK);
     }
 
