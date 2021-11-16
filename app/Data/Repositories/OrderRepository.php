@@ -10,6 +10,7 @@ use App\Mail\OrderPlace;
 use App\User;
 use Carbon\Carbon;
 use Illuminate\Support\Facades\Mail;
+use Stripe\Order;
 use function App\Helpers\paginator;
 
 class OrderRepository
@@ -169,6 +170,48 @@ class OrderRepository
         $return['new_orders'] = $this->model->where('status', 'Order Placed')->whereBetween('created_at', [$start_time, $end_time])->count();
 
         return $return;
+    }
+
+    public function updateProductStatus($data){
+
+        $productData = OrderDetail::where(['order_id' => $data['order_id'], 'product_id' => $data['product_id']])->first();
+        $existingStatus = $productData->product_status;
+        $newStatus = '';
+
+        switch ($existingStatus) {
+            case "ToBePrepared":
+                $newStatus = 'Preparing';
+                break;
+            case "Preparing":
+                $newStatus = 'Prepared';
+                break;
+            case "Prepared":
+                $newStatus = 'ToBePrepared';
+                break;
+        }
+
+        OrderDetail::where(['order_id' => $data['order_id'], 'product_id' => $data['product_id']])->update(['product_status' => $newStatus]);
+
+        $orderDetail =OrderDetail::where('order_id',$data['order_id'])->get()->toArray();
+        $totalProducts = count($orderDetail);
+        $preparedCount = 0;
+
+        foreach ($orderDetail as $value){
+            if($value['product_status'] == 'Prepared'){
+                $preparedCount++;
+            }
+        }
+
+        if($preparedCount == $totalProducts){
+            Order::where('id',$data['order_id'])->update(['status' => 'Prepared']);
+        }
+
+        if($preparedCount < $totalProducts){
+            Order::where('id',$data['order_id'])->update(['status' => 'Preparing']);
+        }
+
+        return  $orderDetail;
+
     }
 
 }

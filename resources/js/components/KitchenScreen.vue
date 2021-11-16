@@ -204,12 +204,11 @@
 
             productEnter(){
                 var ta = document.getElementsByClassName("selectedProduct")[0].id;
-                console.log(ta);
                 var orderData = ta.split("@@");
                 var obj = {
                     order_id:orderData[0],
                     product_id:orderData[1]
-                }
+                };
                 console.log(obj);
 
             },
