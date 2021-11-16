@@ -82,7 +82,7 @@
                             </div>
                             <div class="dishes style-3">
                                 <ul >
-                                    <li  v-for="(product, pindex) in item.details" @click="confirmMenuPopup"   :class="{ 'selectedProduct': mainLiactiveIndex === index &&  productLiactiveIndex === pindex }" :id="item.id+'@@'+product.id"  >
+                                    <li  v-for="(product, pindex) in item.details" @click="confirmMenuPopup"   :class="{ 'selectedProduct': mainLiactiveIndex === index &&  productLiactiveIndex === pindex }" :id="item.id+'@@'+product.product_id"  >
                                         <span>({{product.id}}) {{product.quantity}} X </span>
                                         {{product.product_name}}
                                         <p v-if="product.extras" v-html="getExtrasData(product.extras)"> </p>
