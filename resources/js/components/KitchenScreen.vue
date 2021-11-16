@@ -202,15 +202,21 @@
                 this.orderSelected = 1;
             },
 
-            productEnter(){
+            productEnter() {
                 var ta = document.getElementsByClassName("selectedProduct")[0].id;
                 var orderData = ta.split("@@");
                 var obj = {
-                    order_id:orderData[0],
-                    product_id:orderData[1]
+                    order_id: orderData[0],
+                    product_id: orderData[1]
                 };
-                console.log(obj);
-
+                axios({
+                    method: 'post',
+                    url: 'https://aisha-cafe.softdemo.co.uk/api/update-product-status',
+                    data: obj
+                }).then(function (response) {
+                    console.log(response);
+                    }).catch(function (response) {
+                });
             },
 
             returnDateFormat(value){

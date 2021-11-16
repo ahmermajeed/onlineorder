@@ -116,4 +116,4 @@ Route::post('get-sale-by-category','Api\ReportingController@getSalesByCategory')
 Route::post('get-sale-by-products','Api\ReportingController@getSalesByProducts');
 
 
-Route::post('update-product-status', 'OrderController@updateProductStatus');
+Route::post('update-product-status', 'Api\OrderController@updateProductStatus');
