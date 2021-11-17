@@ -85,6 +85,8 @@
                                     <li  v-for="(product, pindex) in item.details" @click="confirmMenuPopup"   :class="{ 'selectedProduct': mainLiactiveIndex === index &&  productLiactiveIndex === pindex }" :id="item.id+'@@'+product.product_id"  >
                                         <span>({{product.id}}) {{product.quantity}} X </span>
                                         {{product.product_name}}
+
+                                        <span>Product Status {{product.quantity}}</span>
                                         <p v-if="product.extras" v-html="getExtrasData(product.extras)"> </p>
                                         <p v-if="product.special_instructions"> {{product.special_instructions}}</p>
 
@@ -215,6 +217,7 @@
                     data: obj
                 }).then(function (response) {
                     console.log(response);
+                    this.getOrders();
                     }).catch(function (response) {
                 });
             },
