@@ -1,7 +1,7 @@
 <template>
     <div>
 
-        <section class="header">
+        <section class="header kitchen-screen-header">
             <div class="menu">
                 <a href="#">
                     <img src="imgs/menu.png">
@@ -41,32 +41,34 @@
 					</span>
                         </a>
                     </li>
-                    <li>
-                        <a href="#">
-                            Archived
-                            <span>
-						14
-					</span>
-                        </a>
-                    </li>
+
                 </ul>
             </div>
+
+
+
+
+
         </section>
-        <section class="dish-listing">
+
+
+
+
+        <section class="dish-listing"   v-hotkey="mainKeymap">
             <div class="container-fluid">
                 <ol class="dish-wrap">
 
-                    <li class="dish-box" ondrop="drop(event)" ondragover="allowDrop(event)" v-for="(item, index) in orders.orders" >
+                    <li class="dish-box" v-for="(item, index) in orders.orders" :class="{ 'active': mainLiactiveIndex === index }" >
 
-                        <div class="box-status status-done" draggable="true" ondragstart="drag(event)" id="drag1">
+                        <div class="box-status status-done" draggable="true">
                             <div class="d-title">
                                 <div class="top">
                                     <div class="status">
-                                        <span>1</span>
+                                        <span> {{item.id}}</span>
                                         {{item.status}}
                                     </div>
                                     <div class="time">
-                                        {{item.created_at}}
+                                        {{returnDateFormat(item.created_at)}}
                                     </div>
                                 </div>
                                 <div class="bottom">
@@ -78,12 +80,13 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="dishes" >
-
-                                <ul>
-                                    <li  v-for="(product, pindex) in item.details" >
-                                        <span>{{product.quantity}}</span>
+                            <div class="dishes style-3">
+                                <ul >
+                                    <li  v-for="(product, pindex) in item.details" @click="confirmMenuPopup"   :class="{ 'selectedProduct': mainLiactiveIndex === index &&  productLiactiveIndex === pindex }" :id="item.id+'@@'+product.product_id"  >
+                                        <span>({{product.id}}) {{product.quantity}} X </span>
                                         {{product.product_name}}
+
+                                        <span>Product Status {{product.quantity}}</span>
                                         <p v-if="product.extras" v-html="getExtrasData(product.extras)"> </p>
                                         <p v-if="product.special_instructions"> {{product.special_instructions}}</p>
 
@@ -97,161 +100,11 @@
                             <span class="t">table</span>
                         </div>
                     </li>
-<!--                    <li class="dish-box" ondrop="drop(event)" ondragover="allowDrop(event)">-->
-<!--                        <div class="box-status" draggable="true" ondragstart="drag(event)" id="drag2">-->
-<!--                            <div class="d-title">-->
-<!--                                <div class="top">-->
-<!--                                    <div class="status">-->
-<!--                                        <span>1</span>-->
-<!--                                        New-->
-<!--                                    </div>-->
-<!--                                    <div class="time">-->
-<!--                                        8h:40m-->
-<!--                                    </div>-->
-<!--                                </div>-->
-<!--                                <div class="bottom">-->
-<!--                                    <div class="table">-->
-<!--                                        <span>T-01</span>-->
-<!--                                    </div>-->
-<!--                                    <div class="persons">-->
-<!--                                        <span>#9807654 | Jan</span>-->
-<!--                                        <span>04</span>-->
-<!--                                    </div>-->
-<!--                                </div>-->
-<!--                            </div>-->
-<!--                            <div class="dishes">-->
-<!--                                <ul>-->
-<!--                                    <li>-->
-<!--                                        <span>1</span>-->
-<!--                                        Margherita-->
-<!--                                    </li>-->
-<!--                                    <li>-->
-<!--                                        <span>1</span>-->
-<!--                                        Margherita-->
-<!--                                    </li>-->
-<!--                                    <li>-->
-<!--                                        <span>1</span>-->
-<!--                                        Margherita-->
-<!--                                    </li>-->
-<!--                                    <li>-->
-<!--                                        <span>1</span>-->
-<!--                                        Margherita-->
-<!--                                    </li>-->
-<!--                                </ul>-->
-<!--                            </div>-->
-<!--                        </div>-->
-<!--                        <div class="table-count">-->
-<!--                            <span class="no">02</span>-->
-<!--                            <span class="t">table</span>-->
-<!--                        </div>-->
-<!--                    </li>-->
-<!--                    <li class="dish-box" ondrop="drop(event)" ondragover="allowDrop(event)">-->
-<!--                        <div class="box-status status-prepare" draggable="true" ondragstart="drag(event)" id="drag3">-->
-<!--                            <div class="d-title">-->
-<!--                                <div class="top">-->
-<!--                                    <div class="status">-->
-<!--                                        <span>1</span>-->
-<!--                                        Preparing-->
-<!--                                    </div>-->
-<!--                                    <div class="time">-->
-<!--                                        8h:40m-->
-<!--                                    </div>-->
-<!--                                </div>-->
-<!--                                <div class="bottom">-->
-<!--                                    <div class="table">-->
-<!--                                        <span>T-01</span>-->
-<!--                                    </div>-->
-<!--                                    <div class="persons">-->
-<!--                                        <span>#9807654 | Jan</span>-->
-<!--                                        <span>04</span>-->
-<!--                                    </div>-->
-<!--                                </div>-->
-<!--                            </div>-->
-<!--                            <div class="dishes">-->
-<!--                                <ul>-->
-<!--                                    <li>-->
-<!--                                        <span>1</span>-->
-<!--                                        Margherita-->
-<!--                                    </li>-->
-<!--                                    <li>-->
-<!--                                        <span>1</span>-->
-<!--                                        Margherita-->
-<!--                                    </li>-->
-<!--                                    <li>-->
-<!--                                        <span>1</span>-->
-<!--                                        Margherita-->
-<!--                                    </li>-->
-<!--                                    <li>-->
-<!--                                        <span>1</span>-->
-<!--                                        Margherita-->
-<!--                                    </li>-->
-<!--                                </ul>-->
-<!--                            </div>-->
-<!--                        </div>-->
-<!--                        <div class="table-count">-->
-<!--                            <span class="no">03</span>-->
-<!--                            <span class="t">table</span>-->
-<!--                        </div>-->
-<!--                    </li>-->
-<!--                    <li class="dish-box" ondrop="drop(event)" ondragover="allowDrop(event)">-->
-<!--                        <div class="table-count">-->
-<!--                            <span class="no">04</span>-->
-<!--                            <span class="t">table</span>-->
-<!--                        </div>-->
-<!--                    </li>-->
-<!--                    <li class="dish-box" ondrop="drop(event)" ondragover="allowDrop(event)">-->
-<!--                        <div class="table-count">-->
-<!--                            <span class="no">05</span>-->
-<!--                            <span class="t">table</span>-->
-<!--                        </div>-->
-<!--                    </li>-->
-<!--                    <li class="dish-box" ondrop="drop(event)" ondragover="allowDrop(event)">-->
-<!--                        <div class="table-count">-->
-<!--                            <span class="no">06</span>-->
-<!--                            <span class="t">table</span>-->
-<!--                        </div>-->
-<!--                    </li>-->
-<!--                    <li class="dish-box" ondrop="drop(event)" ondragover="allowDrop(event)">-->
-<!--                        <div class="table-count">-->
-<!--                            <span class="no">07</span>-->
-<!--                            <span class="t">table</span>-->
-<!--                        </div>-->
-<!--                    </li>-->
-<!--                    <li class="dish-box" ondrop="drop(event)" ondragover="allowDrop(event)">-->
-<!--                        <div class="table-count">-->
-<!--                            <span class="no">08</span>-->
-<!--                            <span class="t">table</span>-->
-<!--                        </div>-->
-<!--                    </li>-->
-<!--                    <li class="dish-box" ondrop="drop(event)" ondragover="allowDrop(event)">-->
-<!--                        <div class="table-count">-->
-<!--                            <span class="no">09</span>-->
-<!--                            <span class="t">table</span>-->
-<!--                        </div>-->
-<!--                    </li>-->
-<!--                    <li class="dish-box" ondrop="drop(event)" ondragover="allowDrop(event)">-->
-<!--                        <div class="table-count">-->
-<!--                            <span class="no">10</span>-->
-<!--                            <span class="t">table</span>-->
-<!--                        </div>-->
-<!--                    </li>-->
-<!--                    <li class="dish-box" ondrop="drop(event)" ondragover="allowDrop(event)">-->
-<!--                        <div class="table-count">-->
-<!--                            <span class="no">11</span>-->
-<!--                            <span class="t">table</span>-->
-<!--                        </div>-->
-<!--                    </li>-->
-<!--                    <li class="dish-box" ondrop="drop(event)" ondragover="allowDrop(event)">-->
-<!--                        <div class="table-count">-->
-<!--                            <span class="no">12</span>-->
-<!--                            <span class="t">table</span>-->
-<!--                        </div>-->
-<!--                    </li>-->
                 </ol>
             </div>
         </section>
 
-
+        <confirm-menu-popup @HideModalValue="hideModal" :showModalProp="confirmMenuModal"></confirm-menu-popup>
 
     </div>
 </template>
@@ -261,6 +114,12 @@
         data: function () {
             return {
                 orders:[],
+                confirmMenuModal: false,
+                error_message: '',
+                show: true,
+                mainLiactiveIndex:0,
+                productLiactiveIndex:undefined,
+                orderSelected:false,
             };
         },
         methods : {
@@ -275,7 +134,7 @@
                     .then((response) => {
                         _this.orders = response.data.data;
                         console.log(this.orders)
-                       // alert("test");
+                        // alert("test");
                         _this.loading = false;
                     });
             },
@@ -290,11 +149,98 @@
 
                 html ="<span>" + arr.join(',') +"</span>";
                 return html;
-            }
+            },
+            hideModal() {
+                this.confirmMenuModal = false;
+            },
+            confirmMenuPopup() {
+                this.confirmMenuModal = true;
+            },
+
+            toggle () {
+                alert("cal;");
+                this.show = !this.show
+            },
+            shows () {
+                alert("show");
+                this.show = true
+            },
+            hide () {
+                alert("hide");
+                this.show = false
+            },
+
+            mainRight() {
+                var ordersLength = this.orders.orders.length - 1;
+                this.productLiactiveIndex = undefined;
+                this.orderSelected =false;
+                if (this.mainLiactiveIndex < ordersLength ) {
+                    this.mainLiactiveIndex++;
+                }
+            },
+            mainLeft(){
+                this.productLiactiveIndex = undefined;
+                this.orderSelected =false;
+                if( this.mainLiactiveIndex !== 0){
+                    this.mainLiactiveIndex --;
+                }
+
+            },
+            productUp(){
+                if(this.orderSelected){
+                    this.productLiactiveIndex-- ;
+
+                }
+
+            },
+            productDown(){
+                if(this.orderSelected){
+                    this.productLiactiveIndex ++;
+                   // alert('down')
+                }
+            },
+            mainEnter(){
+                this.productLiactiveIndex = 0;
+                this.orderSelected = 1;
+            },
+
+            productEnter() {
+                var ta = document.getElementsByClassName("selectedProduct")[0].id;
+                var orderData = ta.split("@@");
+                var obj = {
+                    order_id: orderData[0],
+                    product_id: orderData[1]
+                };
+                axios({
+                    method: 'post',
+                    url: '/api/update-product-status',
+                    data: obj
+                }).then(function (response) {
+                    console.log(response);
+                    this.getOrders();
+                    }).catch(function (response) {
+                });
+            },
+
+            returnDateFormat(value){
+                return moment(String(value)).format('D-MM- Y hh:mm')
+            },
 
         },
         created(){
-          this.getOrders();
+            this.getOrders();
+        },
+        computed: {
+            mainKeymap () {
+                return {
+                    'up': this.productUp,
+                    'down':this.productDown,
+                    'right':this.mainRight,
+                    'left':this.mainLeft,
+                    'numpad0':this.productEnter,
+                    'enter':this.mainEnter,
+                }
+            },
         }
 
     }
@@ -377,7 +323,6 @@
         overflow-y: hidden;
         margin: 0 5px 20px 5px;
         position: relative;
-
     }
     section.dish-listing ol.dish-wrap li .table-count {
         position: absolute;
@@ -411,12 +356,21 @@
         background: #5ec5bd;
     }
 
-    section.dish-listing ol.dish-wrap li .box-status.status-done .d-title{
-        background: #86ba54;
+    section.dish-listing ol.dish-wrap li .box-status.status-open .d-title{
+        background: #a8def0;
     }
 
     section.dish-listing ol.dish-wrap li .box-status.status-prepare .d-title{
-        background: #ba9554;
+        background: #ffe97f;
+    }
+    section.dish-listing ol.dish-wrap li .box-status.status-prepared .d-title{
+        background: #f4a259;
+    }
+    section.dish-listing ol.dish-wrap li .box-status.status-dispatched .d-title{
+        background: #80b918;
+    }
+    section.dish-listing ol.dish-wrap li .box-status.status-cancelled .d-title{
+        background: #ff9b85;
     }
 
     section.dish-listing ol.dish-wrap li .top {
@@ -429,7 +383,7 @@
 
     section.dish-listing ol.dish-wrap li .top .status{
         color: #fff;
-        font-size: 15px;
+        font-size: 13px;
         font-weight: 300;
     }
 
@@ -444,11 +398,14 @@
         text-align: center;
         color: #000;
         font-weight: bold;
+        margin-right: 4px;
     }
 
     section.dish-listing ol.dish-wrap li .top .time{
-        font-size: 13px;
+        font-size: 12px;
         color: rgba(0, 0, 0, 0.42);
+        position: relative;
+        top: 3px;
     }
 
 
@@ -469,7 +426,7 @@
 
     section.dish-listing ol.dish-wrap li .dishes {
         overflow-y: scroll;
-        height: 140px;
+        height: 100px;
         padding: 10px 10px 0 10px;
     }
 
@@ -499,4 +456,37 @@
         font-weight: bold;
         font-size: 13px;
     }
+    section.dish-listing ol.dish-wrap li.selected {
+        border: 3px solid #e38c8c;
+    }
+    section.dish-listing ol.dish-wrap li .dishes ul li.active {
+        background: #b7e4c7;
+    }
+    section.dish-listing ol.dish-wrap li .dishes ul li.active p {
+        background: #b7e4c7;
+    }
+    section.dish-listing ol.dish-wrap li .dishes ul li.active span {
+        background: #b7e4c7;
+    }
+    section.dish-listing ol.dish-wrap li.active {
+        border: 2px solid #e76f51;
+    }
+
+
+
+    section.dish-listing ol.dish-wrap li .dishes ul li.selectedProduct {
+        background: #e76f51;
+    }
+    section.dish-listing ol.dish-wrap li .dishes ul li.selectedProduct  p {
+        background: #e76f51;
+    }
+    section.dish-listing ol.dish-wrap li .dishes ul li.selectedProduct  span {
+        background: #e76f51;
+    }
+    section.dish-listing ol.dish-wrap li.selectedProduct  {
+        border: 2px solid #0a5385;
+    }
+
+
+
 </style>

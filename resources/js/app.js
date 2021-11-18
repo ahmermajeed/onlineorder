@@ -5,18 +5,22 @@ import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Vuex from 'vuex';
 import store from './store.js'
+import VueHotkey from 'v-hotkey';
 import VueCtkDateTimePicker from 'vue-ctk-date-time-picker';
 import 'vue-ctk-date-time-picker/dist/vue-ctk-date-time-picker.css';
 import "selectize/dist/css/selectize.bootstrap3.css";
-require('vue-image-lightbox/dist/vue-image-lightbox.min.css')
+require('vue-image-lightbox/dist/vue-image-lightbox.min.css');
 
-import VueCardFormat from 'vue-credit-card-validation';
 
-Vue.use(VueCardFormat);
+// import VueCardFormat from 'vue-credit-card-validation';
+//
+// Vue.use(VueCardFormat);
 
 import Datepicker from 'vuejs-datepicker';
 
 Vue.use(Datepicker);
+
+Vue.use(VueHotkey);
 
 Vue.use(VueRouter);
 

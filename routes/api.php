@@ -116,3 +116,6 @@ Route::resource('feedback', 'Api\FeedbackController');
 Route::post('get-orders','Api\ReportingController@getOrders');
 Route::post('get-sale-by-category','Api\ReportingController@getSalesByCategory');
 Route::post('get-sale-by-products','Api\ReportingController@getSalesByProducts');
+
+
+Route::post('update-product-status', 'Api\OrderController@updateProductStatus');

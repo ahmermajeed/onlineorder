@@ -477,4 +477,26 @@ class OrderController extends Controller
 
     }
 
+
+
+    public function updateProductStatus(Request $request)
+    {
+        $requestData = $request->all();
+
+        $validator = Validator::make($requestData, [
+            'order_id' => 'required',
+            'product_id' => 'required',
+
+        ]);
+
+        if ($validator->fails()) {
+            $code = 401;
+            $output = ['error' => ['code' => $code, 'message' => $validator->errors()->first()]];
+            return response()->json($output, $code);
+        }
+        $data = $this->_repository->updateProductStatus($requestData);
+        $output = ['data' => $data, 'message' => "your order has been placed successfully "];
+        return response()->json($output, Response::HTTP_OK);
+    }
+
 }

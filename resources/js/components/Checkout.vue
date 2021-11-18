@@ -217,13 +217,13 @@
 
 import {loadStripe} from '@stripe/stripe-js';
 import Selectize from 'vue2-selectize'
-import VueCardFormat from 'vue-credit-card-validation';
+// import VueCardFormat from 'vue-credit-card-validation';
 
 
 export default {
   components: {
     Selectize,
-    VueCardFormat
+    // VueCardFormat
   },
   data: function () {
     return {
