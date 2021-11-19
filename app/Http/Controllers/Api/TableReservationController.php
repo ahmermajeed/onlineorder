@@ -46,6 +46,8 @@ class TableReservationController extends Controller
             'name' => 'required',
         ]);
 
+        $requestData['id_category'] = 1;
+
         if ($validator->fails()) {
             $code = 401;
             $output = ['error' => ['code' => $code, 'message' => $validator->errors()->first()]];
@@ -93,15 +95,15 @@ class TableReservationController extends Controller
             $output = ['error' => ['code' => $code, 'message' => "We are unable to process your request. Please try later"]];
 
             return response()->json($output, $code);
-        } 
-        
+        }
+
         $output = ['data' => $data, 'message' => "Your reservation has been created successfully"];
 
         return response()->json($output, Response::HTTP_OK);
 
     }
 
-    public function getDayTime() 
+    public function getDayTime()
     {
         $data = $this->_repository->fetchDayTime();
 
@@ -110,7 +112,7 @@ class TableReservationController extends Controller
         return response()->json($output, Response::HTTP_OK);
     }
 
-    public function getNoOfPerson() 
+    public function getNoOfPerson()
     {
         $data   = $this->_repository->fetchNoOfPersons();
         $output = ['data' => $data, 'message' => ""];

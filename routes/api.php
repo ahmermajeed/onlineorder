@@ -133,3 +133,5 @@ Route::post('get-sale-by-products','Api\ReportingController@getSalesByProducts')
 
 
 Route::post('update-product-status', 'Api\OrderController@updateProductStatus');
+
+Route::post('add-table', 'Api\tableReservation@store');
