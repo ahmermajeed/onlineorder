@@ -18,6 +18,20 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
 
+
+
+Route::post('create-user', 'UserController@createNewUser');
+
+Route::put('update-user/{id}', 'UserController@updateUser');
+
+Route::put('delete-user/{id}', 'UserController@deleteUser');
+
+Route::get('get-all-users', 'UserController@getAll');
+
+Route::get('get-all-roles', 'Api\RolesController@index');
+
+
+
 Route::post('reservation', 'Api\TableReservationController@customerReservation');
 Route::get('restuarant_time', 'Api\TableReservationController@getDayTime');
 Route::get('no_of_persons', 'Api\TableReservationController@getNoOfPerson');
