@@ -33,4 +33,20 @@ class DriverController  extends Controller
         ];
         return response()->json($output, Response::HTTP_OK);
     }
+
+
+    public function assignOrder(Request $request)
+    {
+
+
+        $requestData = $request->all();
+        $data = $this->_repository->assignOrderToDriver($requestData);
+        $output = [
+            'data' => $data,
+            'pagination' => !empty($data['pagination']) ? $data['pagination'] : false,
+            'message' => "Drivers Retrieved Successfully",
+        ];
+        return response()->json($output, Response::HTTP_OK);
+    }
+
 }

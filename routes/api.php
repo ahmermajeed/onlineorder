@@ -136,3 +136,4 @@ Route::post('update-product-status', 'Api\OrderController@updateProductStatus');
 
 Route::post('add-table', 'Api\TableReservationController@store');
 Route::get('drivers', 'Api\DriverController@index');
+Route::post('assign-order-to-driver', 'Api\DriverController@assignOrder');

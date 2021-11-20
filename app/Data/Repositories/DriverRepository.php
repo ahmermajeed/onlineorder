@@ -2,6 +2,7 @@
 
 namespace App\Data\Repositories;
 
+use App\Data\Models\AssignOrderToDriver;
 use App\Data\Models\Category;
 use App\Data\Models\Deal;
 use App\Data\Models\DealProducts;
@@ -24,6 +25,16 @@ class DriverRepository
             })->get();
 
         return $drivers;
+    }
+
+
+    public function assignOrderToDriver($data){
+        AssignOrderToDriver::create([
+            'driver_id' => $data['driver_id'],
+            'order_id' => $data['order_id'],
+        ]);
+
+        return $data;
     }
 
 }
